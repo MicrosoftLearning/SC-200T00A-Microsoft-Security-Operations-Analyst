@@ -12,7 +12,7 @@ In this task, you will investigate an incident.
 
 4. In the Search bar of the Azure portal, type *Sentinel*, then select **Azure Sentinel**.
 
-5. Select your Azure Sentinel Workspace.
+5. Select your Azure Sentinel Workspace you created earlier.
 
 6. Select the **Incidents** page.
 
@@ -23,15 +23,15 @@ In this task, you will investigate an incident.
 
 9. Select **View full details** button.
 
-10. On the left side of the page, change the Status to **Active**.
+10. On the left side of the page, change the Status to **Active** and then select **Apply**.
 
-11. In the Tag area, select **+ **and add a tag named **RegKey**.
+11. In the Tag area, select **+** and add a tag named **RegKey** and select **Ok**.
 
 12. On the right side of the page, select the tab **Comments**.
 
 13. Enter in the Comments: *I will research this. *
 
-14. Select the **Comment** button to submit the new comment.
+14. Select the **Comments** button to submit the new comment.
 
 15. Select the **Entities** tab and review.
 
@@ -61,7 +61,7 @@ For the alert shown, notice to the far right there is an option for View Playboo
 
 28.	Select **Insights** and review.
 .
-29.	Select the Base20E Host graphic.
+29.	Select the Base20E Host graphic (your WIN1 device name may vary depending on how it was deployed by your lab hoster).
 
 30.	Select **Timeline** and review.
 
@@ -73,6 +73,6 @@ For the alert shown, notice to the far right there is an option for View Playboo
 
 34.	Select the **Alert** in the graph. A menu should appear around the icon.  Select related alerts.
 
-35.    Explore related Alerts
+35. Explore related Alerts
 
 # Proceed to Exercise 8

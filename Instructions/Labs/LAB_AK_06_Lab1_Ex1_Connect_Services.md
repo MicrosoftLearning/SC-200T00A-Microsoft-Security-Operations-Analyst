@@ -24,17 +24,17 @@ In this task, you will access your Azure Sentinel workspace.
 
 6. In the Search bar of the Azure portal, type *Sentinel*, then select **Azure Sentinel**.
 
-7. Select your Azure Sentinel Workspace.
+7. Select your Azure Sentinel Workspace that you created in the previous lab.
 
 ### Task 2: Connect the Azure Active Directory connector.
 
 In this task, you will connect the Azure Active Directory connector.
 
-1. From the Data Connectors Tab, select the **Azure Active Directory** connector from the list.
+1. In the Configuration area select **Data connectors**.  In the Data Connectors page, select the **Azure Active Directory** connector from the list.
 
 2. Select **Open connector page** on the connector information blade.
 
-3. Select the **Sign-in Logs** and **Audit Logs**, then select **Apply Changes**.
+3. Select the **Sign-in Logs** and **Audit Logs** options from the Configuration area, then select **Apply Changes**.
 
 ### Task 3: Connect the Azure Active Directory Identity Protection connector.
 
@@ -50,9 +50,9 @@ In this task, you will connect the Azure Active Directory Identity Protection co
 
 In this task, you will connect the Azure Defender connector.
 
-1. From the Data Connectors Tab, select the **Azure Defender** connector from the list.
+1. From the Data Connectors tab, select the **Azure Defender** connector from the list.
 
-2. Select Open connector page on the connector information blade.
+2. Select **Open connector page** on the connector information blade.
 
 3. Review the Connecting Options. Don't connect. This is for informational purposes only.
 
@@ -70,7 +70,7 @@ In this task, you will connect the Microsoft Cloud App Security connector.
 
 In this task, you will connect the Microsoft Defender for Office 365 connector.
 
-1. From the Data Connectors Tab, select the M**icrosoft Defender for Office 365** connector from the list.
+1. From the Data Connectors tab, select the **Microsoft Defender for Office 365** connector from the list.
 
 2. Select **Open connector page** on the connector information blade.
 

@@ -14,7 +14,7 @@ In this task, you will create a scheduled query.
 
 5. Select your Azure Sentinel Workspace.
 
-6. Select **Analytics** page.
+6. Select **Analytics** from the Configuration area.
 
 7. Select the **Create** button, and select **Scheduled query rule**.
 
@@ -24,7 +24,7 @@ In this task, you will create a scheduled query.
 
 10. For Severity, select **Medium**
 
-11. Select **Next Set rule logic** button:
+11. Select **Next : Set rule logic >** button:
 
 12. For the rule query, paste in the following KQL statement:
 
@@ -41,7 +41,7 @@ applicationSet = makeset(AppDisplayName) by UserPrincipalName, IPAddress
 
 timestamp = StartTimeUtc, AccountCustomEntity = UserPrincipalName, IPCustomEntity = IPAddress
 
-14. In the Query scheduling area, enter**5** and select **Minutes** for the Run query every option.
+14. Back in the Analytics rule wizard - Create new rule blade in the Query scheduling area, enter **5** and select **Minutes** for the Run query every option.
 
 15. In the Query scheduling area, enter **1** and select **Days** for the Lookup data from the last option.
 
@@ -49,7 +49,7 @@ timestamp = StartTimeUtc, AccountCustomEntity = UserPrincipalName, IPCustomEntit
 
 **Note** Best practices are to manage thresholds in the alert rule KQL query statement.
 
-17. For the Event grouping area, leave the Group all events into a single alert as the selected option.
+17. For the Event grouping area, leave the **Group all events into a single alert** as the selected option.
 
 18. Select the **Next: Incident settings** button.  
 
@@ -59,7 +59,7 @@ timestamp = StartTimeUtc, AccountCustomEntity = UserPrincipalName, IPCustomEntit
 
 21. On the Automated response tab, select the playbook Post-Message-Teams you had previously created.
 
-22. Select the **Next: Review ** button.
+22. Select the **Next: Review** button.
   
 23. Select **Create**.
 
@@ -69,13 +69,13 @@ In this task, you will create a test your new scheduled query rule.
 
 1. In the Search bar of the Azure portal, type *Azure Active Directory*. Then select **Azure Active Directory**.
 
-2. Select **Users **in the Manage area.
+2. Select **Users** in the Manage area.
 
-3. Select User **Christie Cline** in the list. The User Profile page is displayed.
+3. Select User **Christie Cline** in the list. The Christie Cline | Profile page is displayed.
 
 5. Select **Edit**.
 
-6. In the settings area, change Block Sign in to **Yes**.
+6. In the settings area, change **Block sign in** to **Yes**.
 
 7. Now select **Save** from the Command bar.
 
@@ -83,15 +83,15 @@ In this task, you will create a test your new scheduled query rule.
 
 9. Close your browser.
 
-10. Open a browser and navigate to https://portal.office.com and try to login with user ChristieC@**Tenant Email** and password **pass@word1**. <<<Did we establish this password?  I'm pretty sure this password is set in the tenant and should just say "add the tenant password>>>
+10. Open a browser and navigate to https://portal.office.com and try to login with user ChristieC@**Tenant Email domain** and password should be the same as your admin's tenant password.  You should receive a warning that your account has been locked.
 
-11. Close your browser. Wait 10 minutes.
+11. Close your browser. Wait 10 minutes for the alert to process.
 
 13.  In the Edge browser, go to the Azure portal at https://portal.azure.com.
 
-14. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
+14. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider for Admin user and then select **Next**.
 
-15. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
+15. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider for Admin user and then select **Sign in**.
 
 16. In the Search bar of the Azure portal, type *Sentinel*, then select **Azure Sentinel**.
 
@@ -101,10 +101,7 @@ In this task, you will create a test your new scheduled query rule.
 
 19. You should see the newly created Incident.  Select the Incident and review the information in the right blade.
 
-20. Open Microsoft Teams. Goto your SOC Team, ... and see the message post about the incident.
+20. Open Microsoft Teams. Goto your *SOC* Team, ... and see the message post about the incident.
 
 
 # Proceed to Exercise 4
-
-
-

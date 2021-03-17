@@ -20,7 +20,7 @@ In this task, you will explore the configuration of a workbook.
 
 6. Select your Azure Sentinel Workspace.
 
-7. Select **Workbooks** 
+7. Select **Workbooks**.
 
 8. Select **Identity and Access**, then select **View template**.
 
@@ -28,23 +28,23 @@ In this task, you will explore the configuration of a workbook.
 
 10. Select **Workbooks** 
 
-11. Select **Azure AD Sign-on logs**, then select **Save**. 
+11. In the Templates tab search for and select **Azure AD Sign-on logs**, then select **Save**. 
 
-12. Select the location **East US 2**.
+12. Select the location that is appropriate for your location.  The appropriate location usually defaults.
 
 13. Select **View saved workbook**.
 
 14. Select **Edit** in command bar.
 
-15. For Sign-in Location, select **Edit** at the bottom of the grid.
+15. In the Sign-in Location area, select **Edit** at the bottom of the grid.
 
-To format columns, the Column setting panel provides customization options do the following:
+#### To format columns, the Column setting panel provides customization options, do the following:
 
 16. Select **Column Settings** in the Query Command bar.
 
-17. Select the column **Failure Count**.
+17. Select the column **Failure Count|Interrupt Count**.
 
-18. Review the settings, including the Column renderer and  Color palette.
+18. Review the settings, including the Column renderer and Color palette.
 
 19. Select the column **Trend**.
 
@@ -52,7 +52,7 @@ To format columns, the Column setting panel provides customization options do th
 
 21. Select **cancel**.
 
-To have one tile/grid control filter the results in another tile/grid do the following:
+#### To have one tile/grid control filter the results in another tile/grid do the following:
 
 22. Select **Advanced Settings** tab in the Query.
 
@@ -60,7 +60,7 @@ To have one tile/grid control filter the results in another tile/grid do the fol
 
 24. Select **Done Editing** at the bottom of the query.
 
-25. Select **Edit** for the Device Sign-in details table.  
+25. Select **Edit** for the Device Sign-in details table on the right side of the screen.  
 
 26. In the query, locate "LocationDetails".  The query is using the parameter exported from the other query to filter results.
 
@@ -78,7 +78,7 @@ In this task, you will create a new workbook with advanced visualizations.
 
 3. Select **Edit**
 
-Edit Header text:
+#### Edit Header text:
 
 4. Change *New workbook* to *My workbook*.
 
@@ -88,13 +88,13 @@ Edit Header text:
 
 7. Review the KQL statement that provides a union of counts across multiple tables.
 
-8. Select **Done Editing**.
+8. Select the **Done Editing**.
 
-10. Select **Add**, then select **Query**.
+10. Select **...** then select **Add**, then select **Add query**.
 
-11. Enter *SecurityEvent*, then Run Query.
+11. Enter *SecurityEvent*, then select **Run Query**.
 
-12. Change the Timerange to **3** days.
+12. Change the Timerange to **Last 3 days**.
 
 13. Change the Visualization to different options and see the results.
 
@@ -102,13 +102,13 @@ Edit Header text:
 
 15. Select **Style** from the Query tab.
 
-16. Select **Make this item a custom width**.
+16. Select the **Make this item a custom width** box.
 
 17. Set the Percent width to **75** and Max Width to **75**.
 
 18. Select **Advanced Settings** from the Query tab.
 
-Enable Time Range Brushing:
+19. Select **Enable time range brushing** box. 
 
 20. Enter *demoparam* for **Export selected time range as parameter**.
 
@@ -118,7 +118,7 @@ Enable Time Range Brushing:
 
 23. Select **Add**, then **Add query**.
 
-Enter the following KQL for the query:
+Enter the following KQL command for the query:
 
 SecurityEvent
 
@@ -136,11 +136,11 @@ Done Editing for the Query
 
 31. Select **Done Editing for the Workbook**.
 
-32. Select **Save**.
+32. Select **Save** and select **Save** again if prompted.
 
 33. Select **Workbooks** in the Azure Sentinel portal.
 
-34. Select **My workbooks**.
+34. Select the **My workbooks** tab.
 
 35. Select the workbook you just created.
 

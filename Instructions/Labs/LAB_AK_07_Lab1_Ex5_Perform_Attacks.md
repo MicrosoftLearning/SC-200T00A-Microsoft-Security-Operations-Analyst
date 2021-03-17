@@ -6,23 +6,23 @@ In this task, you will perform attacks on a host with Microsoft Defender for End
 
 1. Login to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
-2. In the search of the task bar, enter *Command*.  Command Prompt will be displayed in the search results.  Right-click on the Command Prompt and select **Run as Administrator**.
+2. In the search of the task bar, enter *Command*.  Command Prompt will be displayed in the search results.  Right-click on the Command Prompt and select **Run as Administrator**. Confirm any User Account Control prompts that appear.
 
-3. In the command prompt, enter:
-```Command
+3. In the command prompt, enter the command in each row pressing Enter key after each row:
+```
 cd \
 mkdir temp
 cd temp
 ```
 4. Attack 1 - Copy and run this command:
 
-```Command
+```
 REG ADD "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "SOC Test" /t REG_SZ /F /D "C:\temp\startup.bat"
 ```
 
-5. Attack 2 - Copy and run this command:
+5. Attack 2 - Copy and run this command, enter the command in each row pressing Enter key after each row:
 
-```Command
+```
 net user theusernametoadd /add
 net user theusernametoadd ThePassword1!
 net localgroup administrators theusernametoadd /add
@@ -30,14 +30,14 @@ net localgroup administrators theusernametoadd /add
 
 6. Attack 3 - Copy and run this command:
 
-```Command
+```
 notepad c2.ps1
 ```
-Copy the following PowerShell script into c2.ps1 and select **save**.
+Select **Yes** to create a new file and copy the following PowerShell script into c2.ps1 and select **save**.
 
-**Note** Paste into the Virtual Machine might have a limited length.  Paste this in three sections to ensure all the script is pasted into the Virtual Machine.
+**Note** Paste into the Virtual Machine might have a limited length.  Paste this in three sections to ensure all the script is pasted into the Virtual Machine.  Make sure the script looks as it does in these instructions within the notepad c2.ps1 file.
 
-```PowerShell
+```
 
 
 param(
@@ -94,13 +94,13 @@ Until ($TimeNow -ge $RunEnd)
 
 ```
 
-At the command prompt, enter:
-```Command
+At the command prompt, enter the following, enter the command in each row pressing Enter key after each row:
+```
 powershell
 .\c2.ps1
 ```
 **Note:** You will see resolve errors. This is to be expected.
-Let this command/powershell script run. Don't close the window.  The command needs to generate log entries for some time.
+Let this command/powershell script run in the background. Don't close the window.  The command needs to generate log entries for some hours.  You can proceed to the next task and next exercises while this script runs.
 
 ### Task 2: Attack Windows configured with Sysmon
 
@@ -110,8 +110,8 @@ In this task, you will perform attacks on a host with the Security Events connec
 
 2. In the search of the task bar, enter *CMD*.  Command Prompt will be displayed in the search results.  Right-click on the Command Prompt and select **Run as Administrator**.
 
-3. In the command prompt, enter:
-```Command
+3. In the command prompt, enter the command in each row pressing Enter key after each row:
+```
 cd \
 mkdir temp
 cd \temp
@@ -119,13 +119,13 @@ cd \temp
 
 4. Attack 1 - Copy and run this command:
 
-```Command
+```
 REG ADD "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "SOC Test" /t REG_SZ /F /D "C:\temp\startup.bat"
 ```
 
-5. Attack 2 - Copy and run this command:
+5. Attack 2 - Copy and run this command, enter the command in each row pressing Enter key after each row:
 
-```Command
+```
 net user theusernametoadd /add
 net user theusernametoadd ThePassword1!
 net localgroup administrators theusernametoadd /add

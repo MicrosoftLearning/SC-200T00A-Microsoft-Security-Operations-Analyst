@@ -14,11 +14,11 @@ In this task, you will connect a Threat intelligence provider with the Threat in
 
 5. In the Search bar of the Azure portal, type *Sentinel*, then select **Azure Sentinel**.
 
-6. Select your Azure Sentinel Workspace.
+6. Select your Azure Sentinel Workspace you created earlier.
 
-7. From the Data Connectors Tab, select the **Threat intelligence - TAXII (Preview)** connector.
+7. From the Data Connectors tab, select the **Threat intelligence - TAXII (Preview)** connector.
 
-8. Select **Open connector** page on the connector information blade.
+8. Select **Open connector page** on the connector information blade.
 
 9. In the Configuration area, for the Friendly name enter *PhishURLs*
 
@@ -30,7 +30,7 @@ In this task, you will connect a Threat intelligence provider with the Threat in
 
 13. Enter **guest** for the password.
 
-14. Now select **Add**.  
+14. Now select **Add** button.  
 
 Phishing URLs will be pulled and populate the ThreatIntelligenceIndicator table. 
 

@@ -74,7 +74,7 @@ search in (SecurityEvent,SecurityAlert,A*) "err"
 ```
 
 
-6. The following statement demonstrates filter using the where operator. In the Query Window. Enter the following statement and select **run**: 
+6. The following statements demonstrates filter using the where operator. In the Query Window. Enter the following statement and select **run**: 
 
 **Note** You should "run" after entering the query from each code block below.
 
@@ -154,7 +154,7 @@ SecurityAlert
 
 
 
-10. The following statement demonstrates specifying fields for the result set using the project operators.
+10. The following statements demonstrates specifying fields for the result set using the project operators.
 
 **Note** You should "run"  after entering the query from each code block below.
 
@@ -298,13 +298,9 @@ The SecurityEvent table will be filtered to only include EventID = 4624. Then th
 
 8. The following statement demonstrates the make_list function.
 
-The function returns a dynamic (JSON) array of all the values of Expression in the group.
-
-This KQL query will first filter the EventID with the where operator.  Next, for each Computer, the results are a JSON array of Accounts. The resulting JSON array will include duplicate accounts.
-
+The function returns a dynamic (JSON) array of all the values of Expression in the group. This KQL query will first filter the EventID with the where operator.  Next, for each Computer, the results are a JSON array of Accounts. The resulting JSON array will include duplicate accounts.
 
 In the Query Window. Enter the following statement and select run: 
-
 
 ```KQL
 SecurityEvent
@@ -315,9 +311,7 @@ SecurityEvent
 
 9. The following statement demonstrates the make_list function.
 
-make_list returns a dynamic (JSON) array containing distinct values that Expression takes in the group.
-
-This KQL query will first filter the EventID with the where operator.  Next, for each Computer, the results are a JSON array of unique Accounts. In the Query Window. Enter the following statement and select **run**: 
+make_list returns a dynamic (JSON) array containing distinct values that Expression takes in the group. This KQL query will first filter the EventID with the where operator.  Next, for each Computer, the results are a JSON array of unique Accounts. In the Query Window. Enter the following statement and select **run**: 
 
 
 ```KQL
@@ -357,9 +351,7 @@ SecurityEvent
 
 In this task, you will build multi-table KQL statements.
 
-1. The following statement demonstrates the union operator that takes two or more tables and returns the rows of all of them.
-
-Understanding how results are passed and impacted with the pipe character is essential. Based on the time window set in the Query window:
+1. The following statement demonstrates the union operator that takes two or more tables and returns the rows of all of them. Understanding how results are passed and impacted with the pipe character is essential. Based on the time window set in the Query window:
 
 Query 1 will return all rows of SecurityEvent and all rows of SecurityAlert
 
@@ -530,7 +522,7 @@ Within a Log Analytics table, there are field types defined as Dynamic.  Dynamic
 
 To access the strings within a Dynamic field, use the dot notation.  The Properties_d field from the AzureActivity table is of type dynamic. In this example, you could access the eventCategory with the Properties_d.eventCategory field name.
 
-In the Query Window. Enter the following statement and run: 
+In the Query Window. Enter the following statement and **run**: 
 
 ```KQL
 AzureActivity
@@ -558,7 +550,7 @@ SigninLogs
 
 5. The following statement demonstrates functions to manipulate JSON stored in string fields. Many logs submit data in JSON format, which requires you to know how to transform JSON data to queryable fields. 
 
-In the Query Window. Enter the following statements: 
+In the Query Window. Enter the following statements individually and select **Run**: 
 
 
 

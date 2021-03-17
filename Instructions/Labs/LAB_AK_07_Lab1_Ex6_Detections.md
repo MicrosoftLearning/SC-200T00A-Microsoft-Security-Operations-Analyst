@@ -13,19 +13,17 @@ REG ADD "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "SOC Test" /t RE
 
 2. In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
 
-3. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
+3. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account for admin provided by your lab hosting provider and then select **Next**.
 
-4. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
+4. In the **Enter password** dialog box, copy and paste in the **Tenant Password** for admin provided by your lab hosting provider and then select **Sign in**.
 
 5. In the Search bar of the Azure portal, type *Sentinel*, then select **Azure Sentinel**.
 
-6. Select your Azure Sentinel Workspace.
+6. Select your Azure Sentinel Workspace you created earlier.
 
 7. Select **Logs** from the General section.
 
-8. First, you need to see where the data is stored. Since you just performed the attacks.  
-
-    Set the Log Time Range to Last 24 hours.
+8. First, you need to see where the data is stored. Since you just performed the attacks.  Set the Log Time Range to **Last 24 hours**.
 
 9. Run the following KQL Statement
 
@@ -51,9 +49,9 @@ The results now only show for the Event table.
 
 12. Expand the rows to see all the columns related to the record.  A few of the fields like EventData and ParameterXml have multiple data items stored as structured data.  This makes it difficult to query on specific fields.  
 
-13.  Next, we have to build a KQL statement that parses the data from each row, allowing us to have meaning fields.  In the Azure Sentinel Community on GitHub, there are many examples of Parsers in the Parsers folder.  Open another tab in your browser and navigate to: https://github.com/Azure/Azure-Sentinel
+13.  Next, we have to build a KQL statement that parses the data from each row, allowing us to have meaningful fields.  In the Azure Sentinel Community on GitHub, there are many examples of Parsers in the Parsers folder.  Open another tab in your browser and navigate to: https://github.com/Azure/Azure-Sentinel
 
-14. Select the Parsers folder, then Sysmon folder.  You should be viewing: Azure-Sentinel/Parsers/Sysmon/Sysmon-v12.0.txt
+14. Select the **Parsers** folder, then **Sysmon** folder.  You should be viewing: Azure-Sentinel/Parsers/Sysmon/Sysmon-v12.0.txt
 
 15. Select the Sysmon-v12.0.txt file to view.
 
@@ -86,7 +84,7 @@ let SYSMON_REG_SETVALUE_13=()
 ```
 This looks like a good start.
 
-16. You use the above statement to create your own KQL statement to display all Registry Key Set Value rows.
+16. You use the above statement to create your own KQL statement to display all Registry Key Set Value rows.  Run the following KQL query:
 
 ```KQL
 
@@ -105,9 +103,9 @@ Event
 
 ```
 
-17.  You could continue to build your detection rule from here, but this KQL statement looks like it could be reused in other detection rules KQL statements.  
+17.  You could continue to build your detection rule from here, but this KQL statement looks like it could be reused in other detection rule's KQL statements.  
     
-    In the Log window, select Save, then Save.
+    In the Log window, select **Save**, then **Save**.
     In the Save flyout, enter the following:
 
     Name: Event_Reg_SetValue
@@ -123,9 +121,7 @@ Event
 Event_Reg_SetValue
 
 ```
-Depending on the current data collection, you could receive many rows.  This is expected.  Our next task is how do we filter to our specific scenario.
-
-
+Depending on the current data collection, you could receive many rows.  This is expected.  Our next task is to filter to our specific scenario.
 
 19. Run the following KQL Statement:
 
@@ -136,8 +132,7 @@ Event_Reg_SetValue | search "startup.bat"
 ```
 This returns our specific record that we can now review the data to see what we can change to identify rows.
 
-
-20. From our Threat Intelligence, we know that the Threat Actor is using reg.exe to add the registry key.  The directory is c:\temp. The startup.bat can be a different name.
+20. From our Threat Intelligence, we know that the Threat Actor is using reg.exe to add the registry key.  The directory is c:\temp. The startup.bat can be a different name. Run the following script
 
 ```KQL
 Event_Reg_SetValue 
@@ -156,7 +151,7 @@ Event_Reg_SetValue
 
 This looks like a good detection rule.  
 
-22. It is important to help the SOC Analyst by providing as much context about the alert as you can. This includes projecting Entities for use in the investigation graph.
+22. It is important to help the Security Operations Analyst by providing as much context about the alert as you can. This includes projecting Entities for use in the investigation graph.  Run the following query:
 
 ```KQL
 Event_Reg_SetValue 
@@ -166,7 +161,7 @@ Event_Reg_SetValue
 
 ```
 
-23.  Now that you have a good detection rule, in the Log window with the query, select the New Rule in the Command Bar.  Then select Create Azure Sentinel alert.
+23.  Now that you have a good detection rule, in the Log window with the query, select the **New alert rule** in the Command Bar, and select **Create Azure Sentinel alert**.
 
 24. This starts our Analytics rule wizard.  For the General Tab enter:
 
@@ -179,9 +174,7 @@ Event_Reg_SetValue
 
     Severity: High
 
-Select **Next**. 
-
-Set rule logic.
+Select **Next : Set rule logic**.
 
 25. On the **Set rule logic** tab, the **Rule query and Map entities** should already be populated.
 
@@ -192,29 +185,22 @@ Set rule logic.
 
 **Note** We are purposely generating many incidents for the same data.  This enables the Lab to use these alerts.
 
-27. Leave the rest of the options to the defaults.  Select **Next**.
-
-Incident settings:
+27. Leave the rest of the options to the defaults.  Select **Next : Incident settings** button.
 
 28. For the Incident settings set the following: 
 
 - Incident settings: Enabled
 - Alert grouping: Disabled
 
-Select **Next**.
-
-Automated response:
+Select **Next : Automated response** button.
 
 29. For the Automated response tab set the following:
 
 - Select Post-Message-Teams.
 
-Select **Next** 
+Select **Next : Review** button.
 
-Review:
-
-30. On the Review tab, select **Create**.
-
+30. On the Review tab, select the **Create** button.
 
 
 ### Task 2: Attack 1 Detection with Defender for Endpoint
@@ -270,9 +256,7 @@ DeviceRegistryEvents
 
 This looks like a good detection rule.  
 
-
 8. It is important to help the Security Operations Center Analyst by providing as much context about the alert as you can. This includes projecting Entities for use in the investigation graph.
-
 
 ```KQL
 DeviceRegistryEvents
@@ -283,8 +267,7 @@ DeviceRegistryEvents
 
 
 ```
-
-9.  Now that you have a good detection rule, in the Log window with the query, select the New Rule in the Command Bar.  Then select **Create Azure Sentinel alert**.
+9.  Now that you have a good detection rule, in the Log window with the query, select the **New alert rule** in the Command Bar.  Then select **Create Azure Sentinel alert**.
 
 10. This starts our Analytics rule wizard.  For the General Tab, enter:
 
@@ -297,49 +280,44 @@ DeviceRegistryEvents
 
     Severity: High
 
-11. Select **Next**.
-
-Set rule logic:
+11. Select **Next : Set rule logic** button.
 
 11. On the Set rule logic tab, the Rule query and Map entities should already be populated.
 
 12. For Query scheduling set the following:
 
 - Run Query every: 5 minutes
-- Look data from the last: 1 Day
+- Look data from the last: 1 Days
 
 **Note** We are purposely generating many incidents for the same data.  This enables the Lab to use these alerts.
 
-13. Leave the rest of the options to the defaults.  Select **Next**. 
-
-Incident settings:
+13. Leave the rest of the options to the defaults.  Select **Next : Incident settings**:
 
 14. For the Incident settings set the following: 
 
 - Incident settings: Enabled
 - Alert grouping: Disabled
 
-Select **Next**.
-
-Automated response:
+Select **Next : Automated response**:
 
 15. For the Automated response tab set the following:
 
 - Select Post-Message-Teams.
-- Select Next: Review.
+- Select **Next: Review**.
 
-16. On the Review tab, select **Create**.
+16. On the Review and create tab, select **Create**.
 
 ### Task 3: Attack 2 Detection with SecurityEvent
 
 In this task, you will create a detection for Attack 2 on the host with the Security Events connector and Sysmon installed.
 
-The attack creates a new user and adds the user to the local administrators.  <<<Should the students run this command????>>>
+The attack creates a new user and adds the user to the local administrators.
 ```Command
 net user theusernametoadd /add
 net user theusernametoadd ThePassword1!
 net localgroup administrators theusernametoadd /add
 ```
+
 1. Select **Logs** from the General section of the Azure Sentinel portal.
 
 2. First, you need to see where the data is stored. Since you just performed the attacks.  
@@ -392,7 +370,7 @@ SecurityEvent
 ```
 This looks like a good detection rule.  
 
-**Note** This KQL might not return the expected results because of the small dataset used in the lab. <<<If the student doesn't get the results can they proceed?>>>
+**Note** This KQL might not return the expected results because of the small dataset used in the lab.
 
 7. It is important to help the Security Operations Analyst by providing as much context about the alert as you can. This includes projecting Entities for use in the investigation graph.  Run the following script:
 
@@ -411,7 +389,7 @@ SecurityEvent
 
 ```
 
-8.  Now that you have a good detection rule, in the Log window with the query, select **New Rule** in the Command Bar, then select **Create Azure Sentinel alert**.
+8.  Now that you have a good detection rule, in the Log window with the query, select **New alert rule** in the Command Bar, then select **Create Azure Sentinel alert**.
 
 9. This starts our Analytics rule wizard.  For the General Tab, enter:
 
@@ -420,9 +398,7 @@ SecurityEvent
 - Tactics: Privilege Escalation
 - Severity: High
 
-Select **Next**.
-
-Set rule logic:
+Select **Next : Set rule logic** button.
 
 10. On the Set rule logic tab, the Rule query and Map entities should already be populated.
 
@@ -433,23 +409,19 @@ Set rule logic:
 
 **Note** We are purposely generating many incidents for the same data.  This enables the Lab to use these alerts.
 
-12. Leave the rest of the options to the defaults.  Select **Next**. 
-
-Incident settings:
+12. Leave the rest of the options to the defaults.  Select **Next : Incident settings**:
 
 13. For the Incident settings set the following: 
 
 - Incident settings: Enabled
 - Alert grouping: Disabled
-- Select Next: Automated response
+- Select **Next: Automated response**
 
 14. For the Automated response tab set the following:
 
-- Select Post-Message-Teams.
+- Select **Post-Message-Teams**.
 
-Select **Next**.
-
-Review:
+Select **Next : Review** button.
 
 15. On the Review tab, select **Create**.
 
@@ -457,7 +429,7 @@ Review:
 
 In this task, you will create a detection for Attack 2 on the host with the Microsoft Defender for Endpoint configured.
 
-The attack creates a new user and adds the user to the local administrators. <<<Should the student run this command?  Why is this here>>>   
+The attack creates a new user and adds the user to the local administrators. 
 ```Command
 net user theusernametoadd /add
 net user theusernametoadd ThePassword1!
@@ -486,7 +458,7 @@ DeviceEvents
 
 ```
 
-4. Expand on of the rows to see all the columns related to the record.  The user name we are looking for doesn't show.  The issue is that instead of storing the user name, the security identifier (SID) is stored.  The following KQL will try to match the SID to populate the UserName that was added to the Administrators group.  Run this script:
+4. Expand on of the rows to see all the columns related to the record.  The user name we are looking for doesn't display.  The issue is that instead of storing the user name, the security identifier (SID) is stored.  The following KQL will try to match the SID to populate the UserName that was added to the Administrators group.  Run this script:
 
 ```KQL
 DeviceEvents
@@ -518,7 +490,7 @@ DeviceEvents
 
 ```
 
-5.  Now that you have a good detection rule, in the Log window with the query, select the **New Rule** in the Command Bar.  Then select **Create Azure Sentinel alert**.
+5.  Now that you have a good detection rule, in the Log window with the query, select the **New alert rule** in the Command Bar.  Then select **Create Azure Sentinel alert**.
 
 6. This starts our Analytics rule wizard.  For the General Tab, enter:
 
@@ -527,36 +499,30 @@ DeviceEvents
 - Tactics: Privilege Escalation
 - Severity: High
 
-Select **Next**.
-
-Set rule logic:
+Select **Next : Set rule logic** button.
 
 7. On the Set rule logic tab, the Rule query and Map entities should already be populated.
 
 8. For Query scheduling set the following:
 
-- Run Query every: 5 minutes
-- Look data from the last: 1 Day
+- Run Query every: 5 Minutes
+- Look data from the last: 1 Days
 
 **Note** We are purposely generating many incidents for the same data.  This enables the Lab to use these alerts.
 
-9. Leave the rest of the options to the defaults.  Select **Next**.
-
-Incident settings:
+9. Leave the rest of the options to the defaults.  Select **Next : Incident settings** button.
 
 10. For the Incident settings set the following: 
 
 - Incident settings: Enabled
 - Alert grouping: Disabled
-- Select Next: Automated response
+- Select **Next: Automated response**
 
 11. For the Automated response tab set the following:
 
 Select Post-Message-Teams.
 
-Select **Next**.
-
-Review:
+Select **Next : Review** button.
 
 12. On the Review tab, select **Create**.
 

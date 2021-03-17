@@ -2,7 +2,7 @@
 
 ### Task 1: Understand the Attacks
 
-You will perform no actions in the Section.  It is an explanation of the attacks you will perform. <<<I'm confused do I run the scripts listed in Task1 or not?>>>
+You will perform no actions in this exercise.  This exercise is an explanation of the attacks you will perform.
 
 The attack patterns are based on an open-source project: https://github.com/redcanaryco/atomic-red-team
 

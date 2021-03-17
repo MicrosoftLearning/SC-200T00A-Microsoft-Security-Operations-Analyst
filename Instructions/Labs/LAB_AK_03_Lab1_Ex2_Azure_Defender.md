@@ -10,7 +10,7 @@ In this task, you will load sample security alerts and review the alert details.
 
 1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
-2. In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
+2. In the Edge browser, open the Azure portal at https://portal.azure.com.
 
 3. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
@@ -21,18 +21,21 @@ In this task, you will load sample security alerts and review the alert details.
 6. Select **Security alerts** in the portal menu.
 
 7. Select **Sample Alerts** from the command bar.
+
 **Note** Wait for the sample alerts to load.
 
-8. For each of the alerts listed.  Perform the following actions:
+8. In the Create sample alerts (Preview) pane make sure your subscription is selected.  Make sure all sample alerts are selected and select **Create sample alerts**.  
 
-9. Select the alert: Access from a Tor exit node to a storage blob container
+**Note**This may take a few minutes to complete.
 
-10. Select Full details.
+9. For each of the alerts listed.  Perform the following actions:
 
-11. Review the Alert details.
+    A. Select the alert, information about the alert should appear.  Select **View full details**.
 
-12. Select **Take action**.
+    B. Review the Alert details.
 
-13. Review the Take action information.
+    C. Select the **Take action** tab.
+
+    D. Review the Take action information. Notice the buttons available to take action depending on the type of alert.
 
 ##You have completed the lab.

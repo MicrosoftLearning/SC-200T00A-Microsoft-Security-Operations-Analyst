@@ -20,25 +20,25 @@ In this task, you will create an Azure Sentinel workspace.
 
 6. In the Search bar of the Azure portal, type *Sentinel*, then select **Azure Sentinel**.
 
-7. Select **+ Add**.
+7. Select **+ Create**.
 
 8. Next, select **+ Create a new workspace**.
 
 **Note** First, you create a new Log Analytics Workspace.
 
-9. Select the proper Subscription.
+9. Select your proper Subscription.
 
 10. Select the **Create New** link for the Resource Group and enter a new resource group name of your choosing.
 
-11. Enter a name for your Log Analytics Workspace.
+11. Under Instance details in the name field enter a name for your choosing for the Log Analytics Workspace.
 
 **Note:** This name will also be the Azure Sentinel workspace name.
 
-12. Select the **East US 2** region.  
+12. Select the region that is appropriate for you.  The appropriate region may default or your instructor may have specific advice on which region to select.  
 
 13. Select **Review + Create**.
 
-14. Select **Create**. Wait for the new Log Analytics workspace to appear in the list on the Add Azure Sentinel to a workspace page.  
+14. Select **Create**. Wait for the new Log Analytics workspace to appear in the list on the Add Azure Sentinel to a workspace page.  This may take a minute.
 
 16. Select the newly created workspace when it appears, then select **Add**.
 
@@ -50,7 +50,7 @@ In this task, you will create a watchlist.
 
 1. In the search box at the bottom of the screen, enter *Notepad*.  Select **Notepad** from the results.
 
-2. Type Hostname then enter for a new line.
+2. Type *Hostname* then enter for a new line.
 
 3. In Row 2 through 6, add the following hostnames:
     Host1
@@ -72,11 +72,11 @@ In this task, you will create a watchlist.
     Description: High Value Hosts
     Watchlist alias: HighValueHosts
 
-9. Select, **Next**.
+9. Select, **Next: Source >**.
 
-10. Browse for the *HighValue.csv* file.
+10. Browse for the *HighValue.csv* file you just created.
 
-11. Select **Next: Review and Create**.
+11. Select **Next: Review and Create >**.
 
 12. Select **Create**.
 
@@ -101,7 +101,7 @@ In this task, you will create an indicator.
 
 2. Select **Add New** from the command bar.
 
-3. Review the different indicator types available in the Types dropdown.  Then select domain-name. Enter your initials in the Domain box. An example would be fmg.com.
+3. Review the different indicator types available in the Types dropdown.  Then select **domain-name**. Enter your initials in the Domain box. An example would be fmg.com.
 
 4. For the threat type, select **malicious-activity**.
 
@@ -113,14 +113,14 @@ In this task, you will create an indicator.
 
 **Note** It could take a minute for the indicator to appear.
 
-8. Select **Logs** option in the General area.
+8. Select **Logs** option in the General area.  You may have to disable the "Always show queries" option to get to the query window.
 
 9. Run the following KQL statement.
 
 ```KQL
 ThreatIntelligenceIndicator 
 ```
-Scroll the results to the right to see the DomainName column. You can also use the following KQL statement to just see the DomainName column.
+Scroll the results to the right to see the DomainName column. You can also run the following KQL statement to just see the DomainName column.  
 
 ```KQL
 ThreatIntelligenceIndicator 
