@@ -26,7 +26,7 @@ In this task, you will create a hunting query, bookmark a result, and create a L
 
 7. Select **Logs** 
 
-8. Enter the following KQL Statement:
+8. Enter the following KQL Statement in the New Query 1 space:
 
 let lookback = 2d;
 DeviceEvents
@@ -38,7 +38,7 @@ DeviceEvents
 | where count_ > 5
 | render timechart 
 
-9. The goal of this statement is to provide a visualization to check for a C2 beaconing out on a consistent basis.  Take time to adjust the 3m setting to 30s and more.  Change the count_ > 5 to other threshold counts.
+9. The goal of this statement is to provide a visualization to check for a C2 beaconing out on a consistent basis.  Take time to adjust the 3m setting to 30s and more.  Change the count_ > 5 setting to other threshold counts to witness the impact.
 
 10.  You have now identified DNS requests that are beaconing to a C2 server.  Next, determine which devices are beaconing.  Enter the following KQL Statement:
 
@@ -53,9 +53,9 @@ DeviceEvents
 
 **Note** The generate log data is only from one device.
 
-11. Select the **Hunting** page in the Azure Sentinel portal.
+11. Select the **Hunting** page in the Threat Management area of the Azure Sentinel portal.
 
-12. Select **New Query**
+12. Select **New Query** from the command bar.
 
 13. For the Query enter the following KQL statement:
 
@@ -68,16 +68,16 @@ DeviceEvents
 | summarize cnt=count() by bin(TimeGenerated, 5m), c2, DeviceName
 | where cnt > 15
 
-14. For the Name enter: *C2 Hunt*
+14. For the Name enter type *C2 Hunt*
 
 15. For the Entity Mapping enter:
 
-    Select DeviceName for the Host and then Add
-    Select TimeGenerated for the Timestamp and then Add
+    For the Host select **DeviceName** and then select **Add**.
+    For the Timestamp select **TimeGenerated** and then select **Add**.
 
 16. Select **Create**.
 
-17. Search for your query in the list, *C2 Hunt*.
+17. In the Azure Sentinel | Hunting blade search for the query you just created in the list, *C2 Hunt*.
 
 18. Select **C2 Hunt** in the list.
 
@@ -91,7 +91,7 @@ DeviceEvents
 
 23. Select **Add bookmark**.
 
-24. Select **Create**.
+24. Select **Create** in the pane that appears.
 
 25. Return to the Hunting page in the Azure Sentinel portal.
 
@@ -99,7 +99,7 @@ DeviceEvents
 
 27. Select the bookmark in the results list.
 
-28. Select **Investigate** in the flyout.
+28. Select **Investigate** in the flyout pane.
 
 29. Explore the Investigation graph.
 

@@ -22,37 +22,37 @@ In this task, you will explore using notebooks in Azure Sentinel.
 
 7. In the Azure Sentinel Workspace, select **Notebooks**.
 
-8. Select **A Getting Started Guide For Azure Sentinel ML Notebooks**. Then select **Launch notebook** in the bottom right. 
+8. Next, you need to select an AzureML Workspace. Select **Create new AML workspace**.
 
-9. Next, you need to select an AzureML Workspace. Select **Create new**.
+9.	In the Subscription box, select your subscription.
 
-10.	In the Subscription box, select your subscription.
+10.	Select **Create new** for the Resource group and choose a name for your new resource group. 
 
-11.	Select **Create a new Resource group** and choose a name for your new resource group. 
-
-12.	In the Workspace details section do the following:
+11.	In the Workspace details section do the following:
 - Give your workspace a unique name.
-- Choose your Region
+- Choose your Region (it should default with a reasonable option)
 - Keep the default Storage account, Key vault, and Application insights information.
-- The Container registry option can remain as None.
+- The Container registry option can remain as **None**.
 
-13.	At the bottom of the page, select **Review + create**. Then on the next page, select **Create**. 
+12.	At the bottom of the page, select **Review + create**. Then on the next page, select **Create**. 
 
 **Note:**It may take a few moments to deploy the workspace. 
 
-14.	After the deployment is finished. Return the Azure Sentinel portal.
+13.	After the deployment is finished. Return the Azure Sentinel portal.
 
-15. Select **Notebooks**. 
+14. Select **Notebooks**. 
 
-16. Select **A Getting Started Guide For Azure Sentinel ML Notebooks**, then select **Launch Notebook**.
+15. Select **A Getting Started Guide For Azure Sentinel ML Notebooks**, then select **Save notebook**.  In the pop-up for the name of your notebook let default and select **OK**.
 
-17.	Next to the Compute instance selector at the top of the screen, select the **+** symbol for **New Compute**.
+16. Select the **Launch notebook** button.
+
+17.	Next to the **Compute:** instance selector at the top of the screen, select the **+** symbol for **New Compute**.
 
 18.	Choose your compute settings. Then select **Next**.
 
-19.	Name your Compute instance and select the **Create** button at the bottom of the screen.
+19.	Name your Compute instance and select the **Create** button at the bottom of the screen.  This may take a few minutes.
 
-20.	In the top right of the notebook, select a Kernel to use.
+20.	Once the Compute has been created, in the top right of the notebook, select a kernel to use.
 
 21. Follow the Getting Started tutorial.
 
