@@ -76,23 +76,23 @@ In this task, you will update the new playbook with the proper connection inform
 
 2. Select your Azure Sentinel Workspace.
 
-3. Select the **Playbooks** page.
+3. Select the **Automation** from the Configuration area, and then select the **Playbooks** tab.
 
 4. Click on the **Post-Message-Teams** playbook, 
 
-5. On the Logic App page, select **Edit**.
+5. On the Logic App page for *Post-Message-Teams*, select **Edit**.
 
-6. Click on the first Connections block.  
+6. Click on the first Connections block at the top.  
 
-7. Select **Add new**, and sign in.
+7. Select **Add new**, and sign in with your Azure subscription admin credentials.
 
-8. Click on the second Connection block.  
+8. Click on the second Connection block in the middle.  
 
-9. Select **Add new**, and sign in.
+9. Select **Add new**, and sign in with your Azure subscription admin credentials.
 
 10. Click on the third Connection block.  
 
-11. Select **Add new**, and sign in.
+11. Select **Add new**, and sign in with your Azure subscription admin credentials.
 
 12. In the Post a message block, for the Team, select the **X** at the end of the edit box.  The edit box will be changed to a dropdown with a listing of the Teams.  Select **SOC**.
 

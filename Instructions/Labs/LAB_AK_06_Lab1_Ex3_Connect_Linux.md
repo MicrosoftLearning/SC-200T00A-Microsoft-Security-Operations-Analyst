@@ -46,7 +46,7 @@ In this task, you will connect a Linux host to Azure Sentinel with the Common Ev
 
 12. Paste the command in the terminal window.
 
-13. In the command, change python to python3 and press enter.
+13. In the command, where you see the word "python" change it to "python3" and press enter to execute the command.
 
 
 ### Task 3: Connect a Linux Host using the Syslog connector.
