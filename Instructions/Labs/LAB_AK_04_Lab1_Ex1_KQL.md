@@ -37,7 +37,7 @@ SecurityEvent
 
 ```
 
-2. The following statement demonstrates the use of the let statement to declare a dynamic list. In the Query Window. Enter the following statement and select **run**: 
+2. The following statement demonstrates the use of the let statement to declare a dynamic list. In the Query Window enter the following statement and select **run**: 
 
 
 ```KQL
@@ -45,7 +45,6 @@ let suspiciousAccounts = datatable(account: string) [
     @"\administrator", 
     @"NT AUTHORITY\SYSTEM"
 ];
-
 SecurityEvent | where Account in (suspiciousAccounts)
 ```
 
@@ -56,16 +55,18 @@ let LowActivityAccounts =
     SecurityEvent 
     | summarize cnt = count() by Account 
     | where cnt < 10;
-
 LowActivityAccounts | where Account contains "Mal"
 
 ```
+**Note:** When you run this script you should get no results.
 
-4. The following statement demonstrates searching across all tables and columns for records within the query time range display in the query window. In the Query Window. Enter the following statement and select **run**: 
+4. The following statement demonstrates searching across all tables and columns for records within the query time range display in the query window. In the Query Window before running this script change the Time range to "Last hour". Enter the following statement and select **run**: 
 
 ```KQL
 search "err"
 ```
+
+**Warning:** Make sure you change back the Time range to "Last 24 hours" for the next scripts.
 
 5. The following statement demonstrates searching across tables listed with the "in" clause for records within the query time range display in the query window. In the Query Window. Enter the following statement and select **run**: 
 
@@ -135,6 +136,7 @@ Syslog
 
 ```
 
+**Note:** When you run this script you should get no results.
 
 9. The following statement demonstrates sorting results using the order by operator. In the Query Window. Enter the following statement and select **run**: 
 
@@ -244,7 +246,7 @@ SigninLogs
 
 
 ```
-
+**Note:** When you run this script you should get no results.
 
 5. The following statement demonstrates the arg_max function.
 
@@ -253,7 +255,7 @@ The following statement will return the most current row from the SecurityEvent 
 
 ```KQL
 SecurityEvent 
-| where Computer == "SQL12.NA.contosohotels.com"
+| where Computer == "SQL12.na.contosohotels.com"
 | summarize arg_max(TimeGenerated,*) by Computer
 
 ```
@@ -265,7 +267,7 @@ In this statement, the oldest SecurityEvent for the computer SQL12.NA.contosohot
 
 ```KQL
 SecurityEvent 
-| where Computer == "SQL12.NA.contosohotels.com"
+| where Computer == "SQL12.na.contosohotels.com"
 | summarize arg_min(TimeGenerated,*) by Computer
 
 ```
@@ -456,7 +458,7 @@ SecurityEvent
 
 3. The following statement demonstrates the parse function.  Parse evaluates a string expression and parses its value into one or more calculated columns. The computed columns will have nulls for unsuccessfully parsed strings.
 
-Review the following statement: 
+Review the following statement, but do not run it: 
 
 
 
@@ -530,7 +532,9 @@ AzureActivity
 
 ```
 
-Review the following statement: 
+**Note:** When you run this script you should get no results.
+
+Review the following statement only, do not run it: 
 
 ```KQL
 SigninLogs 
@@ -572,6 +576,7 @@ SecurityAlert
 
 ```KQL
 SecurityAlert
+| where TimeGenerated >= ago(7d)
 | mv-apply entity = todynamic(Entities) on 
 ( where entity.Type == "account" | extend account = strcat (entity.NTDomain, "\\", entity.Name))
 
@@ -580,7 +585,7 @@ SecurityAlert
 
 6. Parsers are functions that define a virtual table with already parsed unstructured strings fields such as Syslog data. The following is a KQL query created by the community for Mailbox forwarding monitoring.  
 
-Review the following statement: 
+Review the following statement, but do not run it: 
 
 ```KQL
 OfficeActivity
@@ -622,6 +627,8 @@ To create a function:
 After running the query, click the Save button, enter the Name: MailboxForward, and select Save As Function from the drop-down.   
 
 The function will be available in KQL by using the function alias:
+
+**Note:** You will not be able to do this in the lademo environment used for data in this lab, but it's an important concept to be used in your environment. 
 
 ```KQL
 MailboxForward

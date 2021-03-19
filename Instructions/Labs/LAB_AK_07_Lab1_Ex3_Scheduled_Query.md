@@ -37,6 +37,8 @@ applicationSet = makeset(AppDisplayName) by UserPrincipalName, IPAddress
 
 **Warning** When using the Paste function to the virtual machine.  Extra | (pipe) characters could be added.  Make sure what is pasted looks like the following KQL statement.
 
+**Note:** If you select the link to "View query results", you should not receive any results.  You should also not receive an error.  
+
 13. Review the Map entities.  The entities are shown as mapped in the query because the query output includes fields:
 
 timestamp = StartTimeUtc, AccountCustomEntity = UserPrincipalName, IPCustomEntity = IPAddress

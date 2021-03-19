@@ -122,6 +122,8 @@ In this task, you will configure device groups that allow for access control and
 
 7. Select **Done**.
 
+8. Device group configuration has changed. Apply changes to check matches and recalculate groupings.
+
 
 ## Proceed to Exercise 2
 

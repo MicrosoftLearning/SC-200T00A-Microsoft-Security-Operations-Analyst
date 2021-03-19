@@ -100,7 +100,7 @@ powershell
 .\c2.ps1
 ```
 **Note:** You will see resolve errors. This is to be expected.
-Let this command/powershell script run in the background. Don't close the window.  The command needs to generate log entries for some hours.  You can proceed to the next task and next exercises while this script runs.
+Let this command/powershell script run in the background. Don't close the window.  The command needs to generate log entries for some hours.  You can proceed to the next task and next exercises while this script runs.  The data created by this task will be used in the Threat Hunting lab later.  This process will not create substantial amounts of data or processing.
 
 ### Task 2: Attack Windows configured with Sysmon
 
