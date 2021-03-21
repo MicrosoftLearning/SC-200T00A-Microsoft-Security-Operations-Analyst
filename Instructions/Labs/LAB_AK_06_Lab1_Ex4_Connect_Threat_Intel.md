@@ -34,6 +34,6 @@ In this task, you will connect a Threat intelligence provider with the Threat in
 
 Phishing URLs will be pulled and populate the ThreatIntelligenceIndicator table. 
 
-##You have completed the lab.
+## You have completed the lab.
 
 
