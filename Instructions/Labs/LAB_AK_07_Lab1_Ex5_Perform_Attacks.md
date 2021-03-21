@@ -1,4 +1,4 @@
-# Module 7 - Lab 1 - Exercise 5 - Perform attacks
+# Module 7 - Lab 1 - Exercise 5 - Conduct attacks
 
 ### Task 1: Attack Windows configured with Defender for Endpoint.
 
