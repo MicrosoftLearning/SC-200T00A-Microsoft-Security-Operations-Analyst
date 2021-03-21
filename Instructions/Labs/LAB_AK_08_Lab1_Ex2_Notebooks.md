@@ -36,7 +36,7 @@ In this task, you will explore using notebooks in Azure Sentinel.
 
 12.	At the bottom of the page, select **Review + create**. Then on the next page, select **Create**. 
 
-**Note:**It may take a few moments to deploy the workspace. 
+**Note:** It may take a few moments to deploy the workspace. 
 
 13.	After the deployment is finished. Return the Azure Sentinel portal.
 
@@ -58,5 +58,5 @@ In this task, you will explore using notebooks in Azure Sentinel.
 
 **Note** If you cannot complete the steps above to access the notebook, you can view it on its GitHub page instead.  See the notebook file here:[Azure Sentinal Notebooks on GitHub](https://github.com/Azure/Azure-Sentinel-Notebooks/blob/8122bca32387d60a8ee9c058ead9d3ab8f4d61e6/A%20Getting%20Started%20Guide%20For%20Azure%20Sentinel%20ML%20Notebooks.ipynb) 
 
-##You have completed the lab.
+## You have completed the lab.
 
