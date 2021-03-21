@@ -1,4 +1,4 @@
-# Module 8 - Lab 1 - Exercise 2 - Using Notebooks with Azure Sentinel
+# Module 8 - Lab 1 - Exercise 2 - Threat Hunting using Notebooks with Azure Sentinel
 
 ## Lab scenario
 
