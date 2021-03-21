@@ -1,4 +1,4 @@
-# Module 8 - Lab 1 - Exercise 1 - Perform Hunting with Azure Sentinel
+# Module 8 - Lab 1 - Exercise 1 - Perform Threat Hunting in Azure Sentinel
 
 ## Lab scenario
 
