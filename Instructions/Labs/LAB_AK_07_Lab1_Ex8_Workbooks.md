@@ -120,7 +120,9 @@ In this task, you will create a new workbook with advanced visualizations.
 
 Enter the following KQL command for the query:
 
+```
 SecurityEvent
+```
 
 25. For Time Range, select **demoparam**.
 
