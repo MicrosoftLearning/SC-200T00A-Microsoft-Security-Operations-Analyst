@@ -8,7 +8,7 @@ You're a Security Operations Analyst working at a company that implemented Azure
 
 **Note**  Because you already experienced the process of exploring data in a previous module, the lab provides a KQL statement to start with.  
 
-### Task 1: Activate a Microsoft Security Rule
+### Task 1: Create a hunting query
 
 In this task, you will create a hunting query, bookmark a result, and create a Livestream.
 
