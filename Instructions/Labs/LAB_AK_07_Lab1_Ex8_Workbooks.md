@@ -146,6 +146,6 @@ Done Editing for the Query
 
 36. Select view saved workbook.
 
-**Note** Remember to try the timeslice by dragging on the grid.
+**Note:** Remember to try the timeslice by dragging on the grid.
 
-##You have completed the lab.
+## You have completed the lab.
