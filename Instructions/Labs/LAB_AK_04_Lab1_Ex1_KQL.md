@@ -634,5 +634,5 @@ The function will be available in KQL by using the function alias:
 MailboxForward
 ```
 
-
+## You have completed the lab.
 
