@@ -330,15 +330,9 @@ net localgroup administrators theusernametoadd /add
 search "administrators"
 ```
 
-4. The results show for three different tables:
-    DeviceProcessEvents
-    DeviceEvents
+4. The results show the following tables:
     Event
     SecurityEvent
-
-    The Device* tables are from Defender for Endpoint (Data Connector - Microsoft 365 Defender).  Event and SecurityEvent is from our Data Connector Security Events. 
-
-    Since we are receiving data from two different sources - Sysmon/SecurityEvent and Defender for Endpoint.  You will need to build two KQL statements that could be unioned later.  In our initial investigation, you will look at each separately.
 
 5. Our first data source is SecurityEvent. Time to research what event ID Windows uses to identify adding a member to a privileged group.  The following EventID and Event are what we are looking for:    
 
@@ -424,107 +418,5 @@ Select **Next : Set rule logic** button.
 Select **Next : Review** button.
 
 15. On the Review tab, select **Create**.
-
-### Task 4: Attack 2 Detection with Defender for Endpoint
-
-In this task, you will create a detection for Attack 2 on the host with the Microsoft Defender for Endpoint configured.
-
-The attack creates a new user and adds the user to the local administrators. 
-```Command
-net user theusernametoadd /add
-net user theusernametoadd ThePassword1!
-net localgroup administrators theusernametoadd /add
-```
-
-1. Select Logs from the General section in the Azure Sentinel portal.
-
-2. First, you need to see where the data is stored. Since you just performed the attacks.  
-
-Set the Log Time Range to Last 24 hours.
-
-3. Run the following KQL statement:
-
-```KQL
-search in (Device*) "administrators"
-```
-
-The following KQL narrows down the record we are looking for:  
-
-```KQL
-DeviceEvents
-| where ActionType == "UserAccountAddedToLocalGroup"
-| where AccountName == "administrators"
-
-
-```
-
-4. Expand on of the rows to see all the columns related to the record.  The user name we are looking for doesn't display.  The issue is that instead of storing the user name, the security identifier (SID) is stored.  The following KQL will try to match the SID to populate the UserName that was added to the Administrators group.  Run this script:
-
-```KQL
-DeviceEvents
-| where ActionType == "UserAccountAddedToLocalGroup"
-| where AccountName == "administrators"
-| extend MSid = tostring( AdditionalFields.MemberSid)
-| join kind=leftouter (
-     DeviceEvents 
-     | summarize count() by AccountSid, DeviceId, AccountName
-     | project Acct1 = AccountSid, MachId1 = DeviceId, UserName1 = AccountName
-) on $left.DeviceId == $right.MachId1, $left.MSid == $right.Acct1 
-```
-This looks like a good detection rule.  
-
-4. It is important to help the SOC Analyst by providing as much context about the alert as you can. This includes projecting Entities for use in the investigation graph.
-
-
-```KQL
-DeviceEvents
-| where ActionType == "UserAccountAddedToLocalGroup"
-| where AccountName == "administrators"
-| extend MSid = tostring( AdditionalFields.MemberSid)
-| join kind=leftouter (
-     DeviceEvents 
-     | summarize count() by AccountSid, DeviceId, AccountName
-     | project Acct1 = AccountSid, MachId1 = DeviceId, UserName1 = AccountName
-) on $left.DeviceId == $right.MachId1, $left.MSid == $right.Acct1 
-| extend timestamp = TimeGenerated, HostCustomEntity = DeviceName, AccountCustomEntity = UserName1
-
-```
-
-5.  Now that you have a good detection rule, in the Log window with the query, select the **New alert rule** in the Command Bar.  Then select **Create Azure Sentinel alert**.
-
-6. This starts our Analytics rule wizard.  For the General Tab, enter:
-
-- Name: D4E Local Administrators User Add 
-- Description: D4E Local Administrators User Add 
-- Tactics: Privilege Escalation
-- Severity: High
-
-Select **Next : Set rule logic** button.
-
-7. On the Set rule logic tab, the Rule query and Map entities should already be populated.
-
-8. For Query scheduling set the following:
-
-- Run Query every: 5 Minutes
-- Look data from the last: 1 Days
-
-**Note** We are purposely generating many incidents for the same data.  This enables the Lab to use these alerts.
-
-9. Leave the rest of the options to the defaults.  Select **Next : Incident settings** button.
-
-10. For the Incident settings set the following: 
-
-- Incident settings: Enabled
-- Alert grouping: Disabled
-- Select **Next: Automated response**
-
-11. For the Automated response tab set the following:
-
-Select Post-Message-Teams.
-
-Select **Next : Review** button.
-
-12. On the Review tab, select **Create**.
-
 
 # Proceed to Exercise 7
