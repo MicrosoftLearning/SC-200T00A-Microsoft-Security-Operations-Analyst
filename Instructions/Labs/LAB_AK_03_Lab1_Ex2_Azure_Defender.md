@@ -38,4 +38,4 @@ In this task, you will load sample security alerts and review the alert details.
 
     D. Review the Take action information. Notice the buttons available to take action depending on the type of alert.
 
-##You have completed the lab.
+## You have completed the lab.
