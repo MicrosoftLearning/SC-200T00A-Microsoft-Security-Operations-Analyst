@@ -35,7 +35,7 @@ SigninLogs
 applicationSet = makeset(AppDisplayName) by UserPrincipalName, IPAddress
 | extend timestamp = StartTimeUtc, AccountCustomEntity = UserPrincipalName, IPCustomEntity = IPAddress
 
-**Warning** When using the Paste function to the virtual machine.  Extra | (pipe) characters could be added.  Make sure what is pasted looks like the following KQL statement.
+**Warning:** When using the Paste function to the virtual machine.  Extra | (pipe) characters could be added.  Make sure what is pasted looks like the following KQL statement.
 
 **Note:** If you select the link to "View query results", you should not receive any results.  You should also not receive an error.  
 
@@ -49,7 +49,7 @@ timestamp = StartTimeUtc, AccountCustomEntity = UserPrincipalName, IPCustomEntit
 
 16. For the Alert threshold area, leave the options unchanged.
 
-**Note** Best practices are to manage thresholds in the alert rule KQL query statement.
+**Note:** Best practices are to manage thresholds in the alert rule KQL query statement.
 
 17. For the Event grouping area, leave the **Group all events into a single alert** as the selected option.
 
@@ -75,35 +75,34 @@ In this task, you will create a test your new scheduled query rule.
 
 3. Select User **Christie Cline** in the list. The Christie Cline | Profile page is displayed.
 
-5. Select **Edit**.
+4. Select **Edit**.
 
-6. In the settings area, change **Block sign in** to **Yes**.
+5. In the settings area, change **Block sign in** to **Yes**.
 
-7. Now select **Save** from the Command bar.
+6. Now select **Save** from the Command bar.
 
-8. In the Azure portal, select the user avatar at the top right and sign out.
+7. In the Azure portal, select the user avatar at the top right and sign out.
 
-9. Close your browser.
+8. Close your browser.
 
-10. Open a browser and navigate to https://portal.office.com and try to login with user ChristieC@**Tenant Email domain** and password should be the same as your admin's tenant password.  You should receive a warning that your account has been locked.
+9. Open a browser and navigate to https://portal.office.com and try to login with user ChristieC@**Tenant Email domain** and password should be the same as your admin's tenant password.  You should receive a warning that your account has been locked.
 
-11. Close your browser. Wait 10 minutes for the alert to process.
+10. Close your browser. Wait 10 minutes for the alert to process.
 
-13.  In the Edge browser, go to the Azure portal at https://portal.azure.com.
+11.  In the Edge browser, go to the Azure portal at https://portal.azure.com.
 
-14. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider for Admin user and then select **Next**.
+12. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider for Admin user and then select **Next**.
 
-15. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider for Admin user and then select **Sign in**.
+13. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider for Admin user and then select **Sign in**.
 
-16. In the Search bar of the Azure portal, type *Sentinel*, then select **Azure Sentinel**.
+14. In the Search bar of the Azure portal, type *Sentinel*, then select **Azure Sentinel**.
 
-17. Select your Azure Sentinel Workspace.
+15. Select your Azure Sentinel Workspace.
 
-18. Select the **Incidents** menu option.
+16. Select the **Incidents** menu option.
 
-19. You should see the newly created Incident.  Select the Incident and review the information in the right blade.
+17. You should see the newly created Incident.  Select the Incident and review the information in the right blade.
 
-20. Open Microsoft Teams. Goto your *SOC* Team, ... and see the message post about the incident.
+18. Open Microsoft Teams. Goto your *SOC* Team, ... and see the message post about the incident.
 
-
-# Proceed to Exercise 4
+## Proceed to Exercise 4

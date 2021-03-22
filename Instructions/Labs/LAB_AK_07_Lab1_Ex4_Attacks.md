@@ -86,8 +86,6 @@ Do {
 Until ($TimeNow -ge $RunEnd)
 ```
 
-
-
 ### Task 2: Understand Detection Modeling.
 
 The attack-detect configuration cycle used in this lab represents all data sources even though you are only focused on two specific data sources.

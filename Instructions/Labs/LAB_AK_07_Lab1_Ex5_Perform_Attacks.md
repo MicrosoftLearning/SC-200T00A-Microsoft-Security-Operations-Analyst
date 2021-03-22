@@ -123,4 +123,4 @@ net user theusernametoadd ThePassword1!
 net localgroup administrators theusernametoadd /add
 ```
 
-# Proceed to Exercise 6
+## Proceed to Exercise 6

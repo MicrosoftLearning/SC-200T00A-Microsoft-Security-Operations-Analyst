@@ -17,7 +17,8 @@ In this task, you will investigate an incident.
 6. Select the **Incidents** page.
 
 7. Review the list of Incidents
-**Note** The analytical rules are generating alerts and incidents on the same specific log entry.  This is done to generate more alerts and incidents to be utilized in the lab.
+
+**Note:** The analytical rules are generating alerts and incidents on the same specific log entry.  This is done to generate more alerts and incidents to be utilized in the lab.
   
 8. Select a Sysmon Startup RegKey incident.
 
@@ -37,42 +38,42 @@ In this task, you will investigate an incident.
 
 16. Select the **Alerts** tab.
 
-For the alert shown, notice to the far right there is an option for View Playbooks.  This allows for the manual execution of a playbook.
+**Note:** For the alert shown, notice to the far right there is an option for View Playbooks.  This allows for the manual execution of a playbook.
 
-18. Select the **Investigate** button.
+17. Select the **Investigate** button.
 
-19. Select the **Sysmon Startup RegKey Alert** graphic.
+18. Select the **Sysmon Startup RegKey Alert** graphic.
 
-20.	Select **Timeline** and review.
+19.	Select **Timeline** and review.
 
-21. Select **Info** and review.
+20. Select **Info** and review.
 
-22.	Select **Entities** and review.
+21.	Select **Entities** and review.
 
-23.	Select **Insights** and review.
+22.	Select **Insights** and review.
 
-24.	Select the **System Account** graphic.
+23.	Select the **System Account** graphic.
 
-25.	Select **Timeline** and review.
+24.	Select **Timeline** and review.
 
-26.	Select **Info** and review.
+25.	Select **Info** and review.
 
-27.	Select **Entities** and review.
+26.	Select **Entities** and review.
 
-28.	Select **Insights** and review.
-.
-29.	Select the Base20E Host graphic (your WIN1 device name may vary depending on how it was deployed by your lab hoster).
+27.	Select **Insights** and review.
 
-30.	Select **Timeline** and review.
+28.	Select the Base20E Host graphic (your WIN1 device name may vary depending on how it was deployed by your lab hoster).
 
-31.	Select **Info** and review.
+29.	Select **Timeline** and review.
 
-32.	Select **Entities** and review.
+30.	Select **Info** and review.
 
-33.	Select **Insights** and review.
+31.	Select **Entities** and review.
 
-34.	Select the **Alert** in the graph. A menu should appear around the icon.  Select related alerts.
+32.	Select **Insights** and review.
 
-35. Explore related Alerts
+33.	Select the **Alert** in the graph. A menu should appear around the icon.  Select related alerts.
 
-# Proceed to Exercise 8
+34. Explore related Alerts.
+
+## Proceed to Exercise 8

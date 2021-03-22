@@ -161,7 +161,7 @@ Event_Reg_SetValue
 
 ```
 
-23.  Now that you have a good detection rule, in the Log window with the query, select the **New alert rule** in the Command Bar, and select **Create Azure Sentinel alert**.
+23. Now that you have a good detection rule, in the Log window with the query, select the **New alert rule** in the Command Bar, and select **Create Azure Sentinel alert**.
 
 24. This starts our Analytics rule wizard.  For the General Tab enter:
 
@@ -231,7 +231,6 @@ search "temp\\startup.bat"
 
     The Device* tables are from Defender for Endpoint (Data Connector - Microsoft 365 Defender).  Event is from our Data Connector Security Events. 
 
-
     Since we are receiving data from two different sources - Sysmon and Defender for Endpoint.  We will need to build two KQL statements that could be unioned later.  But our initial investigation, you will look at each separately.
 
 5. This detection will focus on data from Defender for Endpoint.  Run the following KQL Statement:
@@ -282,30 +281,30 @@ DeviceRegistryEvents
 
 11. Select **Next : Set rule logic** button.
 
-11. On the Set rule logic tab, the Rule query and Map entities should already be populated.
+12. On the Set rule logic tab, the Rule query and Map entities should already be populated.
 
-12. For Query scheduling set the following:
+13. For Query scheduling set the following:
 
 - Run Query every: 5 minutes
 - Look data from the last: 1 Days
 
 **Note** We are purposely generating many incidents for the same data.  This enables the Lab to use these alerts.
 
-13. Leave the rest of the options to the defaults.  Select **Next : Incident settings**:
+14. Leave the rest of the options to the defaults.  Select **Next : Incident settings**:
 
-14. For the Incident settings set the following: 
+15. For the Incident settings set the following: 
 
 - Incident settings: Enabled
 - Alert grouping: Disabled
 
 Select **Next : Automated response**:
 
-15. For the Automated response tab set the following:
+16. For the Automated response tab set the following:
 
 - Select Post-Message-Teams.
 - Select **Next: Review**.
 
-16. On the Review and create tab, select **Create**.
+17. On the Review and create tab, select **Create**.
 
 ### Task 3: Attack 2 Detection with SecurityEvent
 
@@ -364,7 +363,7 @@ SecurityEvent
 ```
 This looks like a good detection rule.  
 
-**Note** This KQL might not return the expected results because of the small dataset used in the lab.
+**Note:** This KQL might not return the expected results because of the small dataset used in the lab.
 
 7. It is important to help the Security Operations Analyst by providing as much context about the alert as you can. This includes projecting Entities for use in the investigation graph.  Run the following script:
 
@@ -383,7 +382,7 @@ SecurityEvent
 
 ```
 
-8.  Now that you have a good detection rule, in the Log window with the query, select **New alert rule** in the Command Bar, then select **Create Azure Sentinel alert**.
+8. Now that you have a good detection rule, in the Log window with the query, select **New alert rule** in the Command Bar, then select **Create Azure Sentinel alert**.
 
 9. This starts our Analytics rule wizard.  For the General Tab, enter:
 
@@ -419,4 +418,4 @@ Select **Next : Review** button.
 
 15. On the Review tab, select **Create**.
 
-# Proceed to Exercise 7
+## Proceed to Exercise 7

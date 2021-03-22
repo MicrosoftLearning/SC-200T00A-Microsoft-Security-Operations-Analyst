@@ -14,7 +14,7 @@ In this task, you will create a hunting query, bookmark a result, and create a L
 
 1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
-2.  In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
+2. In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
 
 3. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
@@ -40,7 +40,7 @@ DeviceEvents
 
 9. The goal of this statement is to provide a visualization to check for a C2 beaconing out on a consistent basis.  Take time to adjust the 3m setting to 30s and more.  Change the count_ > 5 setting to other threshold counts to witness the impact.
 
-10.  You have now identified DNS requests that are beaconing to a C2 server.  Next, determine which devices are beaconing.  Enter the following KQL Statement:
+10. You have now identified DNS requests that are beaconing to a C2 server.  Next, determine which devices are beaconing.  Enter the following KQL Statement:
 
 let lookback = 2d;
 DeviceEvents
@@ -114,20 +114,3 @@ DeviceEvents
 34. Select **Add to livestream**.
 
 # Proceed to Exercise 2
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

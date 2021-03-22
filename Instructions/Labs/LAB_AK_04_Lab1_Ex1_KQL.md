@@ -77,7 +77,7 @@ search in (SecurityEvent,SecurityAlert,A*) "err"
 
 6. The following statements demonstrates filter using the where operator. In the Query Window. Enter the following statement and select **run**: 
 
-**Note** You should "run" after entering the query from each code block below.
+**Note:** You should "run" after entering the query from each code block below.
 
 ```KQL
 SecurityEvent
@@ -154,11 +154,9 @@ SecurityAlert
 
 ```
 
-
-
 10. The following statements demonstrates specifying fields for the result set using the project operators.
 
-**Note** You should "run"  after entering the query from each code block below.
+**Note:** You should "run"  after entering the query from each code block below.
 
 In the Query Window. Enter the following statement and select **run**: 
 
@@ -187,9 +185,6 @@ SecurityAlert
 
 
 ```
-
-
-
 
 ### Task 3: Analyze Results in KQL with the Summarize Operator
 
@@ -297,7 +292,6 @@ Statement 2 will have the most recent login for Accounts that have logged in.
 
 The SecurityEvent table will be filtered to only include EventID = 4624. Then these results will be summarized for the most current login row by Account.
 
-
 8. The following statement demonstrates the make_list function.
 
 The function returns a dynamic (JSON) array of all the values of Expression in the group. This KQL query will first filter the EventID with the where operator.  Next, for each Computer, the results are a JSON array of Accounts. The resulting JSON array will include duplicate accounts.
@@ -329,14 +323,12 @@ In this task, you will use generate visualizations with KQL statements.
 
 1. The following statement demonstrates the render function visualizing results with a barchart. In the Query Window. Enter the following statement and select **run**: 
 
-
 ```KQL
 SecurityEvent 
 | summarize count() by Account
 | render barchart
 
 ```
-
 
 2. The following statement demonstrates the render function visualizing results with a time series.
 
@@ -454,13 +446,9 @@ SecurityEvent
 
 ```
 
-
-
 3. The following statement demonstrates the parse function.  Parse evaluates a string expression and parses its value into one or more calculated columns. The computed columns will have nulls for unsuccessfully parsed strings.
 
 Review the following statement, but do not run it: 
-
-
 
 ```KQL
 let SQlData = Event
@@ -516,7 +504,6 @@ Sqlactivity, FailedLogon, dbfailedLogon, successLogon )
 
 ```
 
-
 4. The following statement demonstrates working with Dynamics Fields:
 
 Within a Log Analytics table, there are field types defined as Dynamic.  Dynamic fields contain a key-value pair such as:
@@ -551,12 +538,9 @@ SigninLogs
 
 ```
 
-
 5. The following statement demonstrates functions to manipulate JSON stored in string fields. Many logs submit data in JSON format, which requires you to know how to transform JSON data to queryable fields. 
 
 In the Query Window. Enter the following statements individually and select **Run**: 
-
-
 
 ```KQL
 SecurityAlert
@@ -581,7 +565,6 @@ SecurityAlert
 ( where entity.Type == "account" | extend account = strcat (entity.NTDomain, "\\", entity.Name))
 
 ```
-
 
 6. Parsers are functions that define a virtual table with already parsed unstructured strings fields such as Syslog data. The following is a KQL query created by the community for Mailbox forwarding monitoring.  
 

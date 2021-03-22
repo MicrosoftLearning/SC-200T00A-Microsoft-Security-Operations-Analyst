@@ -34,7 +34,7 @@ In this task, you will create a Microsoft Teams team for use in the lab.
 
 In this task, you will create a Logic App that will be used as a Playbook in Azure Sentinel.
 
-1.  In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
+1. In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
 
 2. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
@@ -102,5 +102,4 @@ In this task, you will update the new playbook with the proper connection inform
 
 The Logic App will be used in a future lab.
 
-
-# Proceed to Exercise 3
+## Proceed to Exercise 3

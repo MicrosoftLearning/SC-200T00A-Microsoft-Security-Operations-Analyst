@@ -48,7 +48,6 @@ In this task, you will connect a Linux host to Azure Sentinel with the Common Ev
 
 13. In the command, where you see the word "python" change it to "python3" and press enter to execute the command.
 
-
 ### Task 3: Connect a Linux Host using the Syslog connector.
 
 In this task, you will connect a Linux host to Azure Sentinel with the Syslog connector.
@@ -73,7 +72,7 @@ In this task, you will connect a Linux host to Azure Sentinel with the Syslog co
 
 10. Paste the clipboard command that was copied from the connector page.
 
-11.  Open a browser on your local (not a lab virtual machine) and navigate to https://outlook.office.com.
+11. Open a browser on your local (not a lab virtual machine) and navigate to https://outlook.office.com.
 
 12. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
@@ -107,5 +106,4 @@ In this task, you will configure the Syslog collection facilities.
 
 9. Select **Apply**.
 
-
-# Proceed to Exercise 4
+## Proceed to Exercise 4

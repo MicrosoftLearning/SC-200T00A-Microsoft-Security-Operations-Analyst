@@ -20,13 +20,13 @@ In this task, you will set up an Azure Subscription required to complete this la
 
 6. In the Search bar of the Azure portal, type *Subscription*, then select **Subscriptions**.
 
-**Important** You must create the Azure Subscription as the Admin user for the tenant.
+**Important:** You must create the Azure Subscription as the Admin user for the tenant.
 
 7. Select **Add** for a new Subscription.
 
 8. Follow the page instructions to create a new subscription that is appropriate for you.  Most people will choose "Free Trial".
 
-**Note** It could take up to 30 minutes before the subscription can be used. 
+**Note:** It could take up to 30 minutes before the subscription can be used. 
 
 ### Task 2: Create a Log Analytics Workspace.
 
@@ -46,7 +46,7 @@ In this task, you will create a Log Analytics workspace for use with Azure Defen
 
 7. Once the workspace validation has passed, select **Create**.
 
-**Note** Wait for the new workspace to be provisioned, this may take a few minutes.
+**Note:** Wait for the new workspace to be provisioned, this may take a few minutes.
 
 ### Task 3: Enable Azure Defender.
 
@@ -85,7 +85,7 @@ In this task, you will install Azure Arc on an on-premises server.
 
 1. Log in to WINServer virtual machine as Administrator with the password: **Passw0rd!**.  
 
-2.  In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
+2. In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
 
 3. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
@@ -102,6 +102,7 @@ In this task, you will install Azure Arc on an on-premises server.
 9. Select **Next : Resource details >**.
 
 10. Select the Resource group you created earlier. Hint: *rg-AzureDefender*
+
 **Note** If you haven't already created a resource group. Open another tab and create the resource group.
 
 11. Select **Next: Tags >**.
@@ -171,5 +172,3 @@ In this task, you will manually install the required agent on the Windows Server
 **Note** The Server should appear as unprotected.  This is correct as we turned off the Azure Defender plans for Servers. 
 
 # Proceed to Exercise 2
-
-

@@ -14,9 +14,9 @@ In this task, you will access your Azure Sentinel workspace.
 
 1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
-2.  Open the browser, search for, download, and install the new Microsoft Edge browser. Start the new Edge browser.
+2. Open the browser, search for, download, and install the new Microsoft Edge browser. Start the new Edge browser.
 
-3.  In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
+3. In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
 
 4. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
@@ -76,7 +76,6 @@ In this task, you will connect the Microsoft Defender for Office 365 connector.
 
 3. Select **Connect**.
 
-
 ### Task 7: Connect the Microsoft Defender for Identity connector.
 
 In this task, you will connect the Microsoft Defender for Identity connector.
@@ -95,8 +94,7 @@ In this task, you will connect the Microsoft Defender for Endpoint connector.
 
 2. Select Open connector page on the connector information blade.
 
-3. Select **Connect**. 
-
+3. Select **Connect**.
 
 ### Task 9: Connect the Microsoft 365 Defender connector.
 
@@ -110,4 +108,4 @@ In this task, you will connect the Microsoft 365 Defender connector.
 
 4. Select **Apply Changes**.
 
-# Proceed to Exercise 2
+## Proceed to Exercise 2

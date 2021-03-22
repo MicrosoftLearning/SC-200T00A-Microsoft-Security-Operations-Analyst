@@ -10,7 +10,7 @@ In this task, you will explore the configuration of a workbook.
 
 1. Login to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
-2.  In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
+2. In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
 
 3. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
@@ -90,33 +90,33 @@ In this task, you will create a new workbook with advanced visualizations.
 
 8. Select the **Done Editing**.
 
-10. Select **...** then select **Add**, then select **Add query**.
+9. Select **...** then select **Add**, then select **Add query**.
 
-11. Enter *SecurityEvent*, then select **Run Query**.
+10. Enter *SecurityEvent*, then select **Run Query**.
 
-12. Change the Timerange to **Last 3 days**.
+11. Change the Timerange to **Last 3 days**.
 
-13. Change the Visualization to different options and see the results.
+12. Change the Visualization to different options and see the results.
 
-14. Change the Visualization to **Time chart**.
+13. Change the Visualization to **Time chart**.
 
-15. Select **Style** from the Query tab.
+14. Select **Style** from the Query tab.
 
-16. Select the **Make this item a custom width** box.
+15. Select the **Make this item a custom width** box.
 
-17. Set the Percent width to **75** and Max Width to **75**.
+16. Set the Percent width to **75** and Max Width to **75**.
 
-18. Select **Advanced Settings** from the Query tab.
+17. Select **Advanced Settings** from the Query tab.
 
-19. Select **Enable time range brushing** box. 
+18. Select **Enable time range brushing** box. 
 
-20. Enter *demoparam* for **Export selected time range as parameter**.
+19. Enter *demoparam* for **Export selected time range as parameter**.
 
-21. Select **Done Editing**.
+20. Select **Done Editing**.
 
-22. On the displayed grid, click once, hold, and drag.  This will display a selected range.
+21. On the displayed grid, click once, hold, and drag.  This will display a selected range.
 
-23. Select **Add**, then **Add query**.
+22. Select **Add**, then **Add query**.
 
 Enter the following KQL command for the query:
 
@@ -124,29 +124,29 @@ Enter the following KQL command for the query:
 SecurityEvent
 ```
 
-25. For Time Range, select **demoparam**.
+23. For Time Range, select **demoparam**.
 
-26. Change the Visualization to **Grid**.
+24. Change the Visualization to **Grid**.
 
-27. Select the **Style** tab.
+25. Select the **Style** tab.
 
-28. Select **Make this item a custom width**.
+26. Select **Make this item a custom width**.
 
-29. Change percentage width to **25** and maximum width to **25**.
+27. Change percentage width to **25** and maximum width to **25**.
 
 Done Editing for the Query
 
-31. Select **Done Editing for the Workbook**.
+28. Select **Done Editing for the Workbook**.
 
-32. Select **Save** and select **Save** again if prompted.
+29. Select **Save** and select **Save** again if prompted.
 
-33. Select **Workbooks** in the Azure Sentinel portal.
+30. Select **Workbooks** in the Azure Sentinel portal.
 
-34. Select the **My workbooks** tab.
+31. Select the **My workbooks** tab.
 
-35. Select the workbook you just created.
+32. Select the workbook you just created.
 
-36. Select view saved workbook.
+33. Select view saved workbook.
 
 **Note:** Remember to try the timeslice by dragging on the grid.
 

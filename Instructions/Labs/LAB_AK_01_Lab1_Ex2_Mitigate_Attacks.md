@@ -19,7 +19,3 @@ In this task, you will run six simulated attacks to explore the capabilities of 
 **Warning** Do not perform Scenario 6.
 
 ## You have completed the lab.
-
-
-
-

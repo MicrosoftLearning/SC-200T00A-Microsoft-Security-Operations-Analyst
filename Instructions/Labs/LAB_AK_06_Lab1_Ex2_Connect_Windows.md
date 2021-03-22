@@ -22,7 +22,7 @@ In this task, you will create a Windows virtual machine.
 
 9. Create a new Resource Group named **rg-AZWIN01** if you have not done so already.
 
-**Note** This needs to be a new resource group.  You are going to delete the Virtual machine after the exercise.  
+**Note:** This needs to be a new resource group.  You are going to delete the Virtual machine after the exercise.  
 
 10. Set the Virtual Machine name to AZWIN01.
 
@@ -54,7 +54,7 @@ In this task, you will connect an Azure Windows virtual machine to Azure Sentine
 
 5. Select **Open connector page** on the connector information blade.
 
-**Note** The instructions for Install agent on a Windows Virtual Machine and Install agent on a non-Azure Windows Machine may be reversed.  The links take you to the proper location even with the reversed text.
+**Note:** The instructions for Install agent on a Windows Virtual Machine and Install agent on a non-Azure Windows Machine may be reversed.  The links take you to the proper location even with the reversed text.
 
 6. Select the **Install agent on a Windows Virtual Machine** option.
 
@@ -62,18 +62,17 @@ In this task, you will connect an Azure Windows virtual machine to Azure Sentine
 
 8. Select the **AZWIN01** virtual machine in the list that you just created in the previous step, then select **Connect**. Wait until the connecting message disappears.
 
-10. Select **Virtual machines** in the navigation list. You should now see the machine is connected.
+9. Select **Virtual machines** in the navigation list. You should now see the machine is connected.
 
-**Note** The virtual machine is only used in this task.  
+**Note:** The virtual machine is only used in this task.  
 
-11. In the Azure portal search, enter *resource groups*.  Select **Resource Groups**.
+10. In the Azure portal search, enter *resource groups*.  Select **Resource Groups**.
 
-12. Select **rg-AZWIN01** from the list.
+11. Select **rg-AZWIN01** from the list.
 
-13. Select **Delete resource group** from the command bar.
+12. Select **Delete resource group** from the command bar.
 
-14. Enter **rg-AZWIN01** into the "Are you sure you want to delete" pane, then select **Delete**.
-
+13. Enter **rg-AZWIN01** into the "Are you sure you want to delete" pane, then select **Delete**.
 
 ### Task 3: Connect a non-Azure Windows Machine.
 
@@ -81,7 +80,7 @@ In this task, you will connect a non-Azure Windows virtual machine to Azure Sent
 
 1. Login to WIN2 virtual machine as Admin with the password: **Pa55w.rd**.  
 
-2.  Open the browser, search for, download, and install the new Microsoft Edge browser. Start the new Edge browser.
+2. Open the browser, search for, download, and install the new Microsoft Edge browser. Start the new Edge browser.
 
 3. Open a browser and log into the Azure Portal at https://portal.azure.com with your credentials.
 
@@ -97,7 +96,7 @@ In this task, you will connect a non-Azure Windows virtual machine to Azure Sent
 
 9. Select the **Install agent on a non-Azure Windows Virtual Machine**.
 
-**Note** The instructions for Install agent on a Windows Virtual Machine and Install agent on a non-Azure Windows Machine may be reversed. The links take you to the proper location even with the reversed text.
+**Note:** The instructions for Install agent on a Windows Virtual Machine and Install agent on a non-Azure Windows Machine may be reversed. The links take you to the proper location even with the reversed text.
 
 10. Select **Download & install agent for non-Azure Windows Virtual machines**. 
 
@@ -120,7 +119,6 @@ In this task, you will connect a non-Azure Windows virtual machine to Azure Sent
 19. Select **Next** on the Microsoft Update page.
 
 20. Then select **Install**.
-
 
 ### Task 4: Install and collect Sysmon logs.
 
@@ -189,5 +187,4 @@ In this task, you will on-board a device to Microsoft Defender for Endpoint.
 
 10.  In the Microsoft Defender Security Center portal menu, select **Devices inventory** icon from the left navigation. You should now see your device in the list. **Note** It can take up to 5 minutes for the device to be displayed in the portal.
 
-
-# Proceed to Exercise 3
+## Proceed to Exercise 3
