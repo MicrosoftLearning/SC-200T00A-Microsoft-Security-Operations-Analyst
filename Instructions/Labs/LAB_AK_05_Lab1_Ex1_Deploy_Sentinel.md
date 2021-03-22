@@ -126,3 +126,4 @@ Scroll the results to the right to see the DomainName column. You can also run t
 ThreatIntelligenceIndicator 
 | project DomainName
 ```
+## You have completed the lab.
