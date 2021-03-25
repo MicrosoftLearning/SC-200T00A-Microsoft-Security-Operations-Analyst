@@ -167,6 +167,8 @@ You should still be connected to the WIN2 virtual machine.  The following instru
 
 In this task, you will on-board a device to Microsoft Defender for Endpoint.
 
+**Note:** If you completed the labs in the first module of this course you have already performed this task.  If you’re using the same virtual machine from that lab exercise you don’t need to do this task.
+
 1. Login to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
 2. Go to the Microsoft Defender Security Center at (https://securitycenter.microsoft.com) and login with the **Tenant Email** credentials if you are not currently in the portal.
