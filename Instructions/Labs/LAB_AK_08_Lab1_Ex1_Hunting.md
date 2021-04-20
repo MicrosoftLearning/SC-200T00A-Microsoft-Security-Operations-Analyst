@@ -28,6 +28,7 @@ In this task, you will create a hunting query, bookmark a result, and create a L
 
 8. Enter the following KQL Statement in the New Query 1 space:
 
+```KQL
 let lookback = 2d;
 DeviceEvents
 | where TimeGenerated >= ago(lookback) 
@@ -37,11 +38,13 @@ DeviceEvents
 | summarize count() by bin(TimeGenerated, 3m), c2
 | where count_ > 5
 | render timechart 
+```
 
 9. The goal of this statement is to provide a visualization to check for a C2 beaconing out on a consistent basis.  Take time to adjust the 3m setting to 30s and more.  Change the count_ > 5 setting to other threshold counts to witness the impact.
 
 10. You have now identified DNS requests that are beaconing to a C2 server.  Next, determine which devices are beaconing.  Enter the following KQL Statement:
 
+```KQL
 let lookback = 2d;
 DeviceEvents
 | where TimeGenerated >= ago(lookback) 
@@ -50,6 +53,7 @@ DeviceEvents
 | where c2 startswith "sub"
 | summarize cnt=count() by bin(TimeGenerated, 5m), c2, DeviceName
 | where cnt > 15
+```
 
 **Note** The generate log data is only from one device.
 
@@ -59,6 +63,7 @@ DeviceEvents
 
 13. For the Query enter the following KQL statement:
 
+```KQL
 let lookback = 2d;
 DeviceEvents
 | where TimeGenerated >= ago(lookback) 
@@ -67,6 +72,7 @@ DeviceEvents
 | where c2 startswith "sub"
 | summarize cnt=count() by bin(TimeGenerated, 5m), c2, DeviceName
 | where cnt > 15
+```
 
 14. For the Name enter type *C2 Hunt*
 
