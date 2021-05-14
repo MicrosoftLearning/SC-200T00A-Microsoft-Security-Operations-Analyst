@@ -28,12 +28,14 @@ In this task, you will create a scheduled query.
 
 12. For the rule query, paste in the following KQL statement:
 
+```KQL
 SigninLogs
 | where ResultType == "50057"
 | where ResultDescription =~ "User account is disabled. The account has been disabled by an administrator."
 | summarize StartTimeUtc = min(TimeGenerated), EndTimeUtc = max(TimeGenerated), count(), applicationCount = dcount(AppDisplayName), 
 applicationSet = makeset(AppDisplayName) by UserPrincipalName, IPAddress
 | extend timestamp = StartTimeUtc, AccountCustomEntity = UserPrincipalName, IPCustomEntity = IPAddress
+```
 
 **Warning:** When using the Paste function to the virtual machine.  Extra | (pipe) characters could be added.  Make sure what is pasted looks like the following KQL statement.
 
