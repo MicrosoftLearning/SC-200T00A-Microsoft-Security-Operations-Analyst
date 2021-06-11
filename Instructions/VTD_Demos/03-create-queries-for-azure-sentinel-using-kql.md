@@ -1,6 +1,7 @@
 # Module 3 Create queries for Azure Sentinel using Kusto Query Language (KQL)
 
 ## Lab scenario
+
 You are a Security Operations Analyst working at a company that is implementing Azure Sentinel. You are responsible for performing log data analysis to search for malicious activity, display visualizations, and perform threat hunting. To query log data, you use the Kusto Query Language (KQL).
 
 ### Access the KQL testing area.
@@ -25,7 +26,7 @@ In this task, you will access a Log Analytics environment where you can practice
 
 In this task, you will build basic KQL statements.
 
-1. The following statement demonstrates the use of the let statement to declare variables. In the Query Window. Enter the following statement and select **run**: 
+1. The following statement demonstrates the use of the let statement to declare variables. In the Query Window, enter the following statement and select **run**: 
 
 
 ```KQL

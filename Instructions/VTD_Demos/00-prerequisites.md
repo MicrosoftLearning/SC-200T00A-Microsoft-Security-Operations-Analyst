@@ -27,13 +27,15 @@ In this task, you will load sample security alerts and review the alert details.
 
 5. In the Search bar of the Azure portal, type *Security*, then select **Security Center**.
 
+1. If prompted to Upgrade security center, click **Skip** at the bottom.
+
 6. Select **Security alerts** in the portal menu.
 
 7. Select **Sample Alerts** from the command bar.
 
 8. In the Create sample alerts (Preview) pane make sure your subscription is selected.  Make sure all sample alerts are selected and select **Create sample alerts**.  
 
-**Note**This may take a few minutes to complete.
+**Note** This may take a few minutes to complete.
 
 ## Deploy Azure Sentinel Workspace for Demo in Module 4
 
@@ -69,9 +71,9 @@ In this task, you will create an Azure Sentinel workspace.
 
 16. Select the newly created workspace when it appears, then select **Add**.
 
-## Initialize data connectors
+## Initialize data connectors for Azure Sentinel
 
-### Task 1: Access the Azure Sentinel Workspace.
+### Access the Azure Sentinel Workspace.
 
 In this task, you will access your Azure Sentinel workspace.
 
@@ -89,84 +91,91 @@ In this task, you will access your Azure Sentinel workspace.
 
 7. Select your Azure Sentinel Workspace that you created in the previous lab.
 
-### Task 2: Connect the Azure Active Directory connector.
+### Connect a non-Azure Windows Machine.
 
-In this task, you will connect the Azure Active Directory connector.
+In this task, you will connect a non-Azure Windows virtual machine to Azure Sentinel.
 
-1. In the Configuration area select **Data connectors**.  In the Data Connectors page, select the **Azure Active Directory** connector from the list.
+1. Login to WIN2 virtual machine as Admin with the password: **Pa55w.rd**.  
 
-2. Select **Open connector page** on the connector information blade.
+2. Open the browser, search for, download, and install the new Microsoft Edge browser. Start the new Edge browser.
 
-3. Select the **Sign-in Logs** and **Audit Logs** options from the Configuration area, then select **Apply Changes**.
+3. Open a browser and log into the Azure Portal at https://portal.azure.com with your credentials.
 
-### Task 3: Connect the Azure Active Directory Identity Protection connector.
+4. In the Search bar of the Azure Portal, type *Sentinel*, then select **Azure Sentinel**.
 
-In this task, you will connect the Azure Active Directory Identity Protection connector.
+5. Select your Azure Sentinel Workspace.
 
-1. From the Data Connectors Tab, select the **Azure Active Directory Identity Protection** connector from the list.
+6. From the Data Connectors tab, select the **Security Events** connector from the list.
 
-2. Select **Open connector page** on the connector information blade.
+7. Select **Open connector page** on the connector information blade.
 
-3. Select the **Connect** button.
+8. In the Select which events to stream area, select **All Events**, then select **Apply Changes**.
 
-### Task 4: Connect the Azure Defender connector.
+9. Select the **Install agent on a non-Azure Windows Virtual Machine**.
 
-In this task, you will connect the Azure Defender connector.
+**Note:** The instructions for Install agent on a Windows Virtual Machine and Install agent on a non-Azure Windows Machine may be reversed. The links take you to the proper location even with the reversed text.
 
-1. From the Data Connectors tab, select the **Azure Defender** connector from the list.
+10. Select **Download & install agent for non-Azure Windows Virtual machines**. 
 
-2. Select **Open connector page** on the connector information blade.
+11. Select the link for **Download Windows Agent (64 bit)**.
 
-3. Review the Connecting Options. Don't connect. This is for informational purposes only.
+12. Run the .exe file that is downloaded and confirm and User Account Control prompt that may appear.
 
-### Task 5: Connect the Microsoft Cloud App Security connector.
+13. Select **Next** on the Welcome dialog.
 
-In this task, you will connect the Microsoft Cloud App Security connector.
+14. Select **I Agree** on the Microsoft Software License Terms page.  On the Destination prompt select **Next**.
 
-1. From the Data Connectors Tab, select the **Microsoft Cloud App Security** connector from the list.
+15. On the Agent Setup Options prompt, select **Connect the agent to Azure Log Analytics (OMS)** option, then select **Next**.
 
-2. Select **Open connector page** on the connector information blade.
+16. In the browser, copy the **Workspace ID** from the Agents Management page and paste into the Workspace ID in the dialog. 
 
-3. Select **Alerts** and then select **Apply Changes**.
+17. In the browser, copy the **Primary key** from the Agents Management page and paste into the Primary key in the dialog. 
 
-### Task 6: Connect the Microsoft Defender for Office 365 connector.
+18. Select **Next**.
 
-In this task, you will connect the Microsoft Defender for Office 365 connector.
+19. Select **Next** on the Microsoft Update page.
 
-1. From the Data Connectors tab, select the **Microsoft Defender for Office 365** connector from the list.
+20. Then select **Install**.
 
-2. Select **Open connector page** on the connector information blade.
+### Install and collect Sysmon logs.
 
-3. Select **Connect**.
+In this task, you will install and collect Sysmon logs.
 
-### Task 7: Connect the Microsoft Defender for Identity connector.
+You should still be connected to the WIN2 virtual machine.  The following instructions will install Sysmon with the default configuration.  You should research community based configurations for Sysmon to be used on production machines.
 
-In this task, you will connect the Microsoft Defender for Identity connector.
+1. In the browser, go to https://docs.microsoft.com/sysinternals/downloads/sysmon
 
-1. From the Data Connectors Tab, select the **Microsoft Defender for Identity** connector from the list.
+2. Download Sysmon from the page by select **Download Sysmon**.
 
-2. Select **Open connector page** on the connector information blade.
+3. Open the downloaded file and extract the files to a new directory c:\sysmon
 
-3. Review the Connecting Options. Don't connect. This is for informational purposes only.
+4. In the Windows Taskbar for WIN2 search box, enter *command*.  The search results will show command prompt app.  Right-click on the command prompt app and select **Run as Administrator**.  Confirm any User Account Control prompts that appear.
 
-### Task 8: Connect the Microsoft Defender for Endpoint connector.
+5. Enter *cd \sysmon*
 
-In this task, you will connect the Microsoft Defender for Endpoint connector.
+6. type *notepad sysmon.xml* to create a new file.
 
-1. From the Data Connectors Tab, select the **Microsoft Defender for Endpoint** connector from the list.
+7. Open a tab in the browser and navigate to: https://github.com/SwiftOnSecurity/sysmon-config/blob/master/sysmonconfig-export.xml
 
-2. Select Open connector page on the connector information blade.
+8. Copy the contents of that file from Github to the sysmon.xml notepad file you just create and save the file.
 
-3. Select **Connect**.
+9. In the command prompt type the following and press enter:
+    sysmon.exe -accepteula -i sysmon.xml
 
-### Task 9: Connect the Microsoft 365 Defender connector.
+10. In the browser, navigate to the Azure portal at https://portal.azure.com 
 
-In this task, you will connect the Microsoft 365 Defender connector.
+11. In the Search bar of the Azure portal, type *Sentinel*, then select **Azure Sentinel**.
 
-1. From the Data Connectors Tab, select the **Microsoft 365 Defender** connector from the list.
+12. In Azure Sentinel, select **Settings** from the Configuration area and then select **Workspace settings** tab.
 
-2. Select **Open connector page** on the connector information blade.
+13. Make sure your Azure Sentinel Workspace is selected.
 
-3. Select all the checkboxes for Microsoft Defender for Endpoint.
+14. Select **Agents configuration** in Settings.
 
-4. Select **Apply Changes**.
+15. Select the **Windows Event logs** tab.
+
+16. Select **Add windows event log** button.
+
+17. Enter **Microsoft-Windows-Sysmon/Operational** in the Log name field.
+
+18. Select **Apply**.

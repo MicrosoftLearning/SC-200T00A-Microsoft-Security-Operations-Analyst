@@ -38,7 +38,9 @@ In this task, you will create a watchlist.
 
 9. Select, **Next: Source >**.
 
-10. Browse for the `HighValue.csv` file you just created. Once its loaded, select **Hostname** from the **SearchKey field** dropdown box.
+10. Browse for the `HighValue.csv` file you just created. 
+
+1. Once the CSV file is loaded, select **Hostname** from the **SearchKey field** dropdown box.
 
 11. Select **Next: Review and Create >**.
 

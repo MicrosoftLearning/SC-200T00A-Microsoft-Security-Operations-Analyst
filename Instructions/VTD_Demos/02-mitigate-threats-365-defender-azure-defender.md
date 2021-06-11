@@ -8,7 +8,7 @@ You're a Security Operations Analyst working at a company that implemented Azure
 
 In this task, you will load sample security alerts and review the alert details.
 
-1. Return to the **Security Center** > **Security Alerts** screen. If the sample alerts were created as directed in the [pre-requisites section](00-prerequisites.md#Deploy-sample-alerts-for-Demo-in-Module-2), there should be multiple security alerts on this screen.
+1. Go the  **Azure Security Center** > **Security Alerts** screen. If the sample alerts were created as directed in the [pre-requisites section](00-prerequisites.md#Deploy-sample-alerts-for-Demo-in-Module-2), there should be multiple security alerts on this screen.
 
 9. For several of the alerts listed, perform the following actions:
 
