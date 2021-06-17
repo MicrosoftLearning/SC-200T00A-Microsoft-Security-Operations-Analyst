@@ -1,10 +1,8 @@
 # Module 3 Create queries for Azure Sentinel using Kusto Query Language (KQL)
 
-## Lab scenario
+**Note** Successful completion of this demo depends on completing all of the steps in the  [Pre-requisites document](00-prerequisites.md). 
 
-You are a Security Operations Analyst working at a company that is implementing Azure Sentinel. You are responsible for performing log data analysis to search for malicious activity, display visualizations, and perform threat hunting. To query log data, you use the Kusto Query Language (KQL).
-
-### Access the KQL testing area.
+## Access the KQL testing area.
 
 In this task, you will access a Log Analytics environment where you can practice writing KQL statements.
 
@@ -77,8 +75,6 @@ SecurityEvent
 | summarize count() by bin(TimeGenerated, 1d) 
 | render timechart
 ```
-
-
 
 ## You have completed the demo.
 

@@ -1,5 +1,7 @@
 # Module 4 Create queries for Azure Sentinel using Kusto Query Language (KQL)
 
+**Note** Successful completion of this demo depends on completing all of the steps in the  [Pre-requisites document](00-prerequisites.md). 
+
 ## Explore the Azure Sentinel interface
 
 1. Return to the Azure Sentinel instance that you created earlier while completed the [prerequisites section](00-prerequisites.md#deploy-azure-sentinel-workspace-for-demo-in-module-4).
@@ -92,4 +94,4 @@ Scroll the results to the right to see the DomainName column. You can also run t
 ThreatIntelligenceIndicator 
 | project DomainName
 ```
-## You have completed the lab.
+## You have completed the demo.

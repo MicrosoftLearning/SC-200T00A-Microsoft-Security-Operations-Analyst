@@ -1,8 +1,8 @@
 # Module 5 Create detections and perform investigations with Azure Sentinel
 
-Create Detections
+**Note** Successful completion of this demo depends on completing all of the steps in the  [Pre-requisites document](00-prerequisites.md). 
 
-## Task 1: Attack 1 Detection with Sysmon
+## Attack 1 Detection with Sysmon
 
 In this task, you will create a detection for Attack 1 on the host with the Security Events connector and Sysmon installed.
 
@@ -104,3 +104,5 @@ Event_Reg_SetValue
 | extend timestamp = TimeGenerated, HostCustomEntity = Computer, AccountCustomEntity = UserName
 
 ```
+
+## You have completed the Demo.

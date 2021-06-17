@@ -1,6 +1,6 @@
 # Module 6 - Threat hunting in Azure Sentinel
 
-**Note** The log data used in the lab was created in the [pre-requisites section](00-prerequisites.md#conduct-attacks).  
+**Note** Successful completion of this demo depends on completing all of the steps in the  [Pre-requisites document](00-prerequisites.md). 
 
 ## Create a hunting query
 
