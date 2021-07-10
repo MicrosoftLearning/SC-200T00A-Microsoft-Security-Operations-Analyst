@@ -12,11 +12,11 @@ In this task, you will set up an Azure Subscription required to complete this la
 
 2.  Open the browser, search for, download, and install the new Microsoft Edge browser if you didn't do this in the previous labs. Start the new Edge browser.
 
-3.  In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
+3.  In the Edge browser, navigate to the Azure portal at https://portal.azure.com .
 
-4. In the **Sign in** dialog box, copy and paste in the tenant Email account for the admin username provided by your lab hosting provider and then select **Next**.
+4. In the **Sign in** dialog box, copy, and paste in the tenant Email account for the admin username provided by your lab hosting provider and then select **Next**.
 
-5. In the **Enter password** dialog box, copy and paste in the admin's tenant password provided by your lab hosting provider and then select **Sign in**.
+5. In the **Enter password** dialog box, copy, and paste in the admin's tenant password provided by your lab hosting provider and then select **Sign in**.
 
 6. In the Search bar of the Azure portal, type *Subscription*, then select **Subscriptions**.
 
@@ -24,9 +24,9 @@ In this task, you will set up an Azure Subscription required to complete this la
 
 7. Select **Add** for a new Subscription.
 
-8. Follow the page instructions to create a new subscription that is appropriate for you.  Most people will choose "Free Trial".
+8. Follow the page instructions to create a new subscription that is appropriate for you.  Most people will choose "Free Trial" or use an "Azure Pass" offer here.  These labs have been designed to use less than USD $5 of Azure services.
 
-**Note:** It could take up to 30 minutes before the subscription can be used. 
+**Note:** It could take up to 10 minutes before the subscription can be used. 
 
 ### Task 2: Create a Log Analytics Workspace.
 
@@ -40,7 +40,7 @@ In this task, you will create a Log Analytics workspace for use with Azure Defen
 
 4. Enter *rg-AzureDefender*.
 
-5. For the Name, enter something unique like: *uniquename_AzureDefender*
+5. For the Name, enter something unique like: *uniquenameAzureDefender*
 
 6. Select **Review + Create**.
 
@@ -133,7 +133,7 @@ PS C:\Users\Administrators\Downloads
 
 22. Select **R** to Run once and press enter (this may take a minute).
 
-23. Follow the on-screen instructions to complete the device registration.  This will include authentication of the device.
+23. Follow the on-screen instructions in PowerShell to complete the device registration.  This will include authentication of the device.
 
 24. On the Azure Arc portal page, select **Servers**.
 
@@ -151,7 +151,7 @@ In this task, you will manually install the required agent on the Windows Server
 
 3. Select **Configure** under the Add non-Azure servers section.
 
-4. Select **Upgrade** next to the workspace you created earlier.  Hint: uniqueAzureDefender 
+4. Select **Upgrade** next to the workspace you created earlier.  This may take a few minutes.  
 
 5. Select **+ Add Servers** next to the workspace you created earlier.
 
@@ -159,7 +159,7 @@ In this task, you will manually install the required agent on the Windows Server
 
 7. Run the downloaded file.
 
-8. Select **next** until the wizard page for Agent Setup Options appears, Select **Connect the Agent to Log Analytics (OMS)**, then select **Next**.
+8. Select **next** until the wizard page for Agent Setup Options appears, Select **Connect the Agent to Azure Log Analytics (OMS)**, then select **Next**.
 
 9. Copy and paste the Workspace ID and Primary Key from the Azure portal into the wizard page fields as appropriate and select **Next**.
 

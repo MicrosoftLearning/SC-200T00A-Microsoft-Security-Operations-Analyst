@@ -18,6 +18,6 @@ In this task, you will explore the options in the Microsoft 365 security portal.
 
 5. In the **Enter password** dialog box, copy and paste in the admin's tenant password provided by your lab hosting provider and then select **Sign in**.
 
-6. Explore the menu options in the portal.
+6. Explore the menu options in the Microsoft 365 Defender portal.
 
 ## You have completed the lab.

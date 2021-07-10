@@ -10,9 +10,9 @@ In this task, you will create an Azure Sentinel workspace.
 
 1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
-2.  Open the browser, search for, download, and install the new Microsoft Edge browser. Start the new Edge browser.
+2. Open the browser, search for, download, and install the new Microsoft Edge browser. Start the new Edge browser.
 
-3.  In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
+3. In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
 
 4. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
@@ -40,9 +40,9 @@ In this task, you will create an Azure Sentinel workspace.
 
 14. Select **Create**. Wait for the new Log Analytics workspace to appear in the list on the Add Azure Sentinel to a workspace page.  This may take a minute.
 
-16. Select the newly created workspace when it appears, then select **Add**.
+15. Select your newly created workspace when it appears, then select **Add**.
 
-17. Navigate around the newly created Azure Sentinel workspace to become familiar with the user interface options.
+16. Navigate around the newly created Azure Sentinel workspace to become familiar with the user interface options.
 
 ### Task 2: Create a Watchlist.
 
@@ -65,7 +65,7 @@ In this task, you will create a watchlist.
 
 6. In Azure Sentinel, select the **Watchlist** option in the Configuration area.
 
-7. Select **Add New** from the command bar.
+7. Select **Add new** from the command bar.
 
 8. In the Watchlist wizard, enter the following:
     Name: HighValueHosts
@@ -76,15 +76,17 @@ In this task, you will create a watchlist.
 
 10. Browse for the *HighValue.csv* file you just created.
 
-11. Select **Next: Review and Create >**.
+11. In the SearchKey field select **Hostname**.
 
-12. Select **Create**.
+12. Select **Next: Review and Create >**.
 
-13. The screen returns to the watchlists list.
+13. Select **Create**.
 
-14. Select your new watchlist.  On the right tab, select **View in Log Analytics**.
+14. The screen returns to the watchlists list.
 
-15. The following KQL statement is automatically executed with the results displayed.
+15. Select your new watchlist.  On the right tab, select **View in Log Analytics**.
+
+16. The following KQL statement is automatically executed with the results displayed.
 
 ```KQL
 _GetWatchlist('HighValueHosts')
@@ -99,13 +101,13 @@ In this task, you will create an indicator.
 
 1. In Azure Sentinel, Select the **Threat intelligence** option in the Threat management area.
 
-2. Select **Add New** from the command bar.
+2. Select **+ Add New** from the command bar.
 
-3. Review the different indicator types available in the Types dropdown.  Then select **domain-name**. Enter your initials in the Domain box. An example would be fmg.com.
+3. Review the different indicator types available in the Types dropdown. Select the **domain-name**. Enter your initials in the Domain box. An example would be *fmg.com*.
 
 4. For the threat type, select **malicious-activity**.
 
-5. For the name, enter the same value used for the Domain. An example would be fmg.com.
+5. For the name, enter the same value used for the Domain. An example would be *fmg.com*.
 
 6. Set the valid from field to today's date.
 
@@ -113,17 +115,17 @@ In this task, you will create an indicator.
 
 **Note** It could take a minute for the indicator to appear.
 
-8. Select **Logs** option in the General area.  You may have to disable the "Always show queries" option to get to the query window.
+8. Select **Logs** option in the General area.  You may need to disable the "Always show queries" option to get to the query window.
 
 9. Run the following KQL statement.
 
 ```KQL
-ThreatIntelligenceIndicator 
+ThreatIntelligenceIndicator
 ```
 Scroll the results to the right to see the DomainName column. You can also run the following KQL statement to just see the DomainName column.  
 
 ```KQL
-ThreatIntelligenceIndicator 
+ThreatIntelligenceIndicator
 | project DomainName
 ```
 ## You have completed the lab.

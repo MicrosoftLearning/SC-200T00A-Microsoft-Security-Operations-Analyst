@@ -12,15 +12,15 @@ In this task, you will load sample security alerts and review the alert details.
 
 2. In the Edge browser, open the Azure portal at https://portal.azure.com.
 
-3. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
+3. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
-4. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
+4. In the **Enter password** dialog box, copy, and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
 5. In the Search bar of the Azure portal, type *Security*, then select **Security Center**.
 
 6. Select **Security alerts** in the portal menu.
 
-7. Select **Sample Alerts** from the command bar.
+7. Select **Sample Alerts** from the command bar (hint: you may need to select the elipse button from the command bar).
 
 **Note** Wait for the sample alerts to load.
 

@@ -2,7 +2,7 @@
 
 ## Lab scenario
 
-You are a Security Operations Analyst working at a company that is implementing Microsoft Defender for Endpoint. Your manager plans to onboard a few devices to provide insight into required changes to the SecOps team response procedures.
+You are a Security Operations Analyst working at a company that is implementing Microsoft Defender for Endpoint. Your manager plans to onboard a few devices to provide insight into required changes to the Security Operations (SecOps) team response procedures.
 
 To explore the Defender for Endpoint attack mitigation capabilities, you run six simulated attacks.
 
@@ -16,6 +16,6 @@ In this task, you will run six simulated attacks to explore the capabilities of 
 
 3. Complete Scenario 1, Scenario 2, Scenario 3, Scenario 4, Scenario 5, and Scenario 7. Follow the instructions in the provided walkthrough in the portal.
 
-**Warning** Do not perform Scenario 6.
+**Warning** Do not perform Scenario 6 titled "API 'Hello World'".
 
 ## You have completed the lab.

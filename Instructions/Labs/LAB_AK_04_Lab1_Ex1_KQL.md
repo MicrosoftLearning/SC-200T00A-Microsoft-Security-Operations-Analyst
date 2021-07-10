@@ -47,7 +47,7 @@ let suspiciousAccounts = datatable(account: string) [
 SecurityEvent | where Account in (suspiciousAccounts)
 ```
 
-3. The following statement demonstrates the use of the let statement to declare a dynamic table. In the Query Window. Enter the following statement and select **run**: 
+3. The following statement demonstrates the use of the "let" statement to declare a dynamic table. In the Query Window. Enter the following statement and select **run**: 
 
 ```KQL
 let LowActivityAccounts =
@@ -148,9 +148,9 @@ SecurityAlert
 | order by severityOrder desc
 ```
 
-10. The following statements demonstrates specifying fields for the result set using the project operators.
+10. The following statements demonstrate specifying fields for the result set using the project operators.
 
-**Note:** You should "run"  after entering the query from each code block below.
+**Note:** You should "run" after entering the query from each code block below.
 
 In the Query Window. Enter the following statement and select **run**: 
 
@@ -212,7 +212,7 @@ SecurityEvent
 
 4. The following statement is an Azure Sentinel Analytical rule to detect a password spray attempt.
 
-The first three where operators will filter the result set to failed logins to disabled accounts.  Next, the statement "summarize" a distinct count of application name and group by User and IP Address.  Finally, there is a check against a variable created (threshold) to see if the number exceeds the allowed amount. In the Query Window. Enter the following statement and select **run**: 
+The first three "where" operators will filter the result set to failed logins to disabled accounts.  Next, the statement "summarize" a distinct count of application name and group by User and IP Address.  Finally, there is a check against a variable created (threshold) to see if the number exceeds the allowed amount. In the Query Window. Enter the following statement and select **run**: 
 
 
 ```KQL
@@ -336,13 +336,13 @@ Run each Query separately to see the results.
 In the Query Window. Enter the following statements and select **run** for each: 
 
 
-Query 1
+**Query 1**
 ```KQL
 SecurityEvent 
 | union SecurityAlert  
 ```
 
-Query 2
+**Query 2**
 ```KQL
 SecurityEvent 
 | union SecurityAlert  
@@ -350,7 +350,7 @@ SecurityEvent
 | project count_
 ```
 
-Query 3
+**Query 3**
 ```KQL
 SecurityEvent 
 | union (SecurityAlert  | summarize count()) 
@@ -397,7 +397,6 @@ print extract("x=([0-9.]+)", 1, "hello x=45.6|wo") == "45.6"
 2. The following statements use the extract function to pull out the Account Name from the Account field of the SecurityEvent table. In the Query Window. Enter the following statement and select **run**: 
 
 
-
 ```KQL
 let top5 = SecurityEvent
 | where EventID == 4625 and AccountType == 'User'
@@ -415,7 +414,9 @@ SecurityEvent
 | summarize Attempts = count() by Account_Name
 ```
 
-3. The following statement demonstrates the parse function.  Parse evaluates a string expression and parses its value into one or more calculated columns. The computed columns will have nulls for unsuccessfully parsed strings.
+**Note:** This script is separated by a space make sure the entire script is selected before you hit "Run" in the Query window.
+
+3. The following statement demonstrates the parse function. Parse evaluates a string expression and parses its value into one or more calculated columns. The computed columns will have nulls for unsuccessfully parsed strings.
 
 Review the following statement, but do not run it: 
 
@@ -568,7 +569,7 @@ OfficeActivity
 
 To create a function:
 
-After running the query, click the Save button, enter the Name: MailboxForward, and select Save As Function from the drop-down.   
+After running the query, select the **Save** button, enter the Name: MailboxForward, and select **Save As** Function from the drop-down.   
 
 The function will be available in KQL by using the function alias:
 
