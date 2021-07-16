@@ -6,7 +6,7 @@ You will perform no actions in this exercise.  This exercise is an explanation o
 
 The attack patterns are based on an open-source project: https://github.com/redcanaryco/atomic-red-team
 
-**NOTE** Some settings are triggered in a smaller timeframe just for our lab purpose.
+**NOTE** Some settings are triggered in a smaller time-frame just for our lab purpose.
 
 #### Attack 1 - Persistence with Registry Key Add.
 

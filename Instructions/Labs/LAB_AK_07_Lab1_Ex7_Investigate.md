@@ -28,17 +28,17 @@ In this task, you will investigate an incident.
 
 11. In the Tag area, select **+** and add a tag named **RegKey** and select **Ok**.
 
-12. On the right side of the page, select the tab **Comments**.
+12. On the middle of the page, select the tab **Comments**.
 
 13. Enter in the Comments: *I will research this. *
 
-14. Select the **Comments** button to submit the new comment.
+14. Select the **Comment** button to submit the new comment.
 
 15. Select the **Entities** tab and review.
 
 16. Select the **Alerts** tab.
 
-**Note:** For the alert shown, notice to the far right there is an option for View Playbooks.  This allows for the manual execution of a playbook.
+**Note:** For the alert shown, notice to the far right there is an option for **View playbooks**.  This allows for the manual execution of a playbook.
 
 17. Select the **Investigate** button.
 
@@ -52,7 +52,7 @@ In this task, you will investigate an incident.
 
 22.	Select **Insights** and review.
 
-23.	Select the **System Account** graphic.
+23.	Select the Base20E Host graphic (your WIN1 device name may vary depending on how it was deployed by your lab hoster).
 
 24.	Select **Timeline** and review.
 
@@ -62,18 +62,8 @@ In this task, you will investigate an incident.
 
 27.	Select **Insights** and review.
 
-28.	Select the Base20E Host graphic (your WIN1 device name may vary depending on how it was deployed by your lab hoster).
+28.	Select the **Alert** in the graph. A menu should appear around the icon.  Select related alerts.
 
-29.	Select **Timeline** and review.
-
-30.	Select **Info** and review.
-
-31.	Select **Entities** and review.
-
-32.	Select **Insights** and review.
-
-33.	Select the **Alert** in the graph. A menu should appear around the icon.  Select related alerts.
-
-34. Explore related Alerts.
+29. Explore related Alerts.
 
 ## Proceed to Exercise 8

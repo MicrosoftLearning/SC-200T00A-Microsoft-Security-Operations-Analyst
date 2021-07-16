@@ -2,7 +2,7 @@
 
 ## Lab scenario
 
-You're a Security Operations Analyst working at a company that implemented Azure Sentinel. You must learn how to connect log data from the many different data sources in your organization. The organization has data from Microsoft 365, Microsoft 365 Defender, Azure resources, non-azure virtual machines, and network appliances.
+You are a Security Operations Analyst working at a company that implemented Azure Sentinel. You must learn how to connect log data from the many data sources in your organization. The organization has data from Microsoft 365, Microsoft 365 Defender, Azure resources, non-azure virtual machines, and network appliances.
 
 You plan on using the Azure Sentinel data connectors to integrate the log data from the various sources. You need to write a connector plan for management that maps each of the organization's data sources to the proper Azure Sentinel data connector.
 
@@ -14,13 +14,13 @@ In this task, you will access your Azure Sentinel workspace.
 
 1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
-2. Open the browser, search for, download, and install the new Microsoft Edge browser. Start the new Edge browser.
+2. Open the browser, search for, download, and install the new Microsoft Edge browser if you have not already done so. Start the new Edge browser.
 
 3. In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
 
-4. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
+4. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
-5. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
+5. In the **Enter password** dialog box, copy, and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
 6. In the Search bar of the Azure portal, type *Sentinel*, then select **Azure Sentinel**.
 
@@ -44,11 +44,11 @@ In this task, you will connect the Azure Active Directory Identity Protection co
 
 2. Select **Open connector page** on the connector information blade.
 
-3. Select the **Connect** button.
+3. From the Configuration area select the **Connect** button.
 
 ### Task 4: Connect the Azure Defender connector.
 
-In this task, you will connect the Azure Defender connector.
+In this task, you will review the Azure Defender connector.
 
 1. From the Data Connectors tab, select the **Azure Defender** connector from the list.
 
@@ -74,11 +74,11 @@ In this task, you will connect the Microsoft Defender for Office 365 connector.
 
 2. Select **Open connector page** on the connector information blade.
 
-3. Select **Connect**.
+3. In the Configuration area select **Connect**.
 
 ### Task 7: Connect the Microsoft Defender for Identity connector.
 
-In this task, you will connect the Microsoft Defender for Identity connector.
+In this task, you will review the Microsoft Defender for Identity connector.
 
 1. From the Data Connectors Tab, select the **Microsoft Defender for Identity** connector from the list.
 
@@ -92,9 +92,9 @@ In this task, you will connect the Microsoft Defender for Endpoint connector.
 
 1. From the Data Connectors Tab, select the **Microsoft Defender for Endpoint** connector from the list.
 
-2. Select Open connector page on the connector information blade.
+2. Select **Open connector page** on the connector information blade.
 
-3. Select **Connect**.
+3. In the Configuration area select **Connect**.
 
 ### Task 9: Connect the Microsoft 365 Defender connector.
 

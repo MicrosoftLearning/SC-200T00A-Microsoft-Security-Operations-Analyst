@@ -16,11 +16,11 @@ In this task, you will connect a Threat intelligence provider with the Threat in
 
 6. Select your Azure Sentinel Workspace you created earlier.
 
-7. From the Data Connectors tab, select the **Threat intelligence - TAXII (Preview)** connector.
+7. From the Data Connectors tab, select the **Threat intelligence - TAXII** connector.
 
 8. Select **Open connector page** on the connector information blade.
 
-9. In the Configuration area, for the Friendly name enter *PhishURLs*
+9. In the Configuration area, for the **Friendly name** enter *PhishURLs*
 
 10. For the API root URL enter https://limo.anomali.com/api/v1/taxii2/feeds/
 

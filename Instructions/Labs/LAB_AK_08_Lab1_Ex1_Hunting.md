@@ -2,7 +2,7 @@
 
 ## Lab scenario
 
-You're a Security Operations Analyst working at a company that implemented Azure Sentinel. You have received threat intelligence about a Command and Control (C2) technique.  You need to perform a hunt and watch for the threat.
+You are a Security Operations Analyst working at a company that implemented Azure Sentinel. You have received threat intelligence about a Command and Control (C2) technique.  You need to perform a hunt and watch for the threat.
 
 **Note** The log data used in the lab was created in a previous module in the course.  
 

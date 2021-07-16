@@ -22,13 +22,13 @@ In this task, you will explore the configuration of a workbook.
 
 7. Select **Workbooks**.
 
-8. Select **Identity and Access**, then select **View template**.
+8. Select **Identity & Access**, then select **View template**.
 
 9. Review Workbook.
 
 10. Select **Workbooks** 
 
-11. In the Templates tab search for and select **Azure AD Sign-on logs**, then select **Save**. 
+11. In the Templates tab search for and select **Azure AD Sign-in logs**, then select **Save**. 
 
 12. Select the location that is appropriate for your location.  The appropriate location usually defaults.
 
@@ -36,7 +36,7 @@ In this task, you will explore the configuration of a workbook.
 
 14. Select **Edit** in command bar.
 
-15. In the Sign-in Location area, select **Edit** at the bottom of the grid.
+15. In the *Sign-ins by Location* area, select **Edit** at the bottom of the grid.
 
 #### To format columns, the Column setting panel provides customization options, do the following:
 
@@ -48,7 +48,7 @@ In this task, you will explore the configuration of a workbook.
 
 19. Select the column **Trend**.
 
-20. Review the settings, including the Column renderer and  Color palette.
+20. Review the settings, including the Column renderer and Color palette.
 
 21. Select **cancel**.
 
@@ -56,7 +56,7 @@ In this task, you will explore the configuration of a workbook.
 
 22. Select **Advanced Settings** tab in the Query.
 
-23. Review the When items are selected, export parameters.  Notice the LocationDetail field is selected.
+23. Review the When items are selected, export parameters.  Notice the *LocationDetail* field is selected.
 
 24. Select **Done Editing** at the bottom of the query.
 
@@ -74,7 +74,7 @@ In this task, you will create a new workbook with advanced visualizations.
 
 1. Select **Workbooks** in the Azure Sentinel portal.
 
-2. Select **Add workbook**
+2. Select **+ Add workbook**
 
 3. Select **Edit**
 
@@ -90,11 +90,11 @@ In this task, you will create a new workbook with advanced visualizations.
 
 8. Select the **Done Editing**.
 
-9. Select **...** then select **Add**, then select **Add query**.
+9. Select **...** next to the graph area, then select **+ Add**, then select **Add query**.
 
 10. Enter *SecurityEvent*, then select **Run Query**.
 
-11. Change the Timerange to **Last 3 days**.
+11. Change the Time Range to **Last 3 days**.
 
 12. Change the Visualization to different options and see the results.
 
@@ -104,7 +104,7 @@ In this task, you will create a new workbook with advanced visualizations.
 
 15. Select the **Make this item a custom width** box.
 
-16. Set the Percent width to **75** and Max Width to **75**.
+16. Set the Percent width to **75** and Maximum width to **75**.
 
 17. Select **Advanced Settings** from the Query tab.
 
@@ -132,21 +132,21 @@ SecurityEvent
 
 26. Select **Make this item a custom width**.
 
-27. Change percentage width to **25** and maximum width to **25**.
+27. Change percentage width to **25** and maximum width to **25**. 
 
-Done Editing for the Query
+28. Select **Done Editing** for the Query.
 
-28. Select **Done Editing for the Workbook**.
+29. Select **Done Editing** for the Workbook.
 
-29. Select **Save** and select **Save** again if prompted.
+30. Select **Save** and select **Save** again if prompted.
 
-30. Select **Workbooks** in the Azure Sentinel portal.
+31. Select **Workbooks** in the Azure Sentinel portal.
 
-31. Select the **My workbooks** tab.
+32. Select the **My workbooks** tab.
 
-32. Select the workbook you just created.
+33. Select the workbook you just created.
 
-33. Select view saved workbook.
+34. Select **View saved workbook**.
 
 **Note:** Remember to try the timeslice by dragging on the grid.
 

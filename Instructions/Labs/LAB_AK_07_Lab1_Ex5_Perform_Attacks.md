@@ -27,7 +27,7 @@ notepad c2.ps1
 ```
 Select **Yes** to create a new file and copy the following PowerShell script into c2.ps1 and select **save**.
 
-**Note** Paste into the Virtual Machine might have a limited length.  Paste this in three sections to ensure all the script is pasted into the Virtual Machine.  Make sure the script looks as it does in these instructions within the notepad c2.ps1 file.
+**Note** Paste into the virtual machine might have a limited length.  Paste this in three sections to ensure all the script is pasted into the Virtual Machine.  Make sure the script looks as it does in these instructions within the notepad c2.ps1 file.
 
 ```
 

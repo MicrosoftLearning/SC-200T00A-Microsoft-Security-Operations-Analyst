@@ -103,18 +103,13 @@ Event
 
 ```
 
-17.  You could continue to build your detection rule from here, but this KQL statement looks like it could be reused in other detection rule's KQL statements.  
-    
-    In the Log window, select **Save**, then **Save**.
-    In the Save flyout, enter the following:
+17.  You could continue to build your detection rule from here, but this KQL statement looks like it could be reused in other detection rule's KQL statements.  In the Log window, select **Save**, then **Save as function**. In the Save flyout, enter the following and save the function:
 
-    Name: Event_Reg_SetValue
-    Save as: Function
-    Function Alias: Event_Reg_SetValue
+    Function Name: Event_Reg_SetValue
     Category: Sysmon
 
 
-18. Open a new Log Query Tab. Then run the following KQL Statement:
+18. Open a new Log Query tab. Then run the following KQL Statement:
 
 ```KQL
 
@@ -151,7 +146,7 @@ Event_Reg_SetValue
 
 This looks like a good detection rule.  
 
-22. It is important to help the Security Operations Analyst by providing as much context about the alert as you can. This includes projecting Entities for use in the investigation graph.  Run the following query:
+22. It is important to help the Security Operations Analyst by providing as much context about the alert as you can. This includes projecting entities for use in the investigation graph.  Run the following query:
 
 ```KQL
 Event_Reg_SetValue 
@@ -161,7 +156,7 @@ Event_Reg_SetValue
 
 ```
 
-23. Now that you have a good detection rule, in the Log window with the query, select the **New alert rule** in the Command Bar, and select **Create Azure Sentinel alert**.
+23. Now that you have a good detection rule, in the Log window with the query, select the **+ New alert rule** in the Command Bar, and choose **Create Azure Sentinel alert**.
 
 24. This starts our Analytics rule wizard.  For the General Tab enter:
 
@@ -174,7 +169,7 @@ Event_Reg_SetValue
 
     Severity: High
 
-Select **Next : Set rule logic**.
+Select **Next : Set rule logic >**.
 
 25. On the **Set rule logic** tab, the **Rule query and Map entities** should already be populated.
 
@@ -185,18 +180,18 @@ Select **Next : Set rule logic**.
 
 **Note** We are purposely generating many incidents for the same data.  This enables the Lab to use these alerts.
 
-27. Leave the rest of the options to the defaults.  Select **Next : Incident settings** button.
+27. Leave the rest of the options to the defaults.  Select **Next : Incident settings>** button.
 
 28. For the Incident settings set the following: 
 
 - Incident settings: Enabled
 - Alert grouping: Disabled
 
-Select **Next : Automated response** button.
+Select **Next : Automated response>** button.
 
 29. For the Automated response tab set the following:
 
-- Select Post-Message-Teams.
+- Select *PostMessageTeams-OnAlert*.
 
 Select **Next : Review** button.
 
@@ -266,7 +261,7 @@ DeviceRegistryEvents
 
 
 ```
-9.  Now that you have a good detection rule, in the Log window with the query, select the **New alert rule** in the Command Bar.  Then select **Create Azure Sentinel alert**.
+9.  Now that you have a good detection rule, in the Log window with the query, select the **+ New alert rule** in the Command Bar.  Then select **Create Azure Sentinel alert**.
 
 10. This starts our Analytics rule wizard.  For the General Tab, enter:
 
@@ -279,7 +274,7 @@ DeviceRegistryEvents
 
     Severity: High
 
-11. Select **Next : Set rule logic** button.
+11. Select **Next : Set rule logic >** button.
 
 12. On the Set rule logic tab, the Rule query and Map entities should already be populated.
 
@@ -290,18 +285,18 @@ DeviceRegistryEvents
 
 **Note** We are purposely generating many incidents for the same data.  This enables the Lab to use these alerts.
 
-14. Leave the rest of the options to the defaults.  Select **Next : Incident settings**:
+14. Leave the rest of the options to the defaults.  Select **Next : Incident settings >**:
 
 15. For the Incident settings set the following: 
 
 - Incident settings: Enabled
 - Alert grouping: Disabled
 
-Select **Next : Automated response**:
+Select **Next : Automated response >**:
 
 16. For the Automated response tab set the following:
 
-- Select Post-Message-Teams.
+- Select PostMessageTeams-OnAlert.
 - Select **Next: Review**.
 
 17. On the Review and create tab, select **Create**.
@@ -382,7 +377,7 @@ SecurityEvent
 
 ```
 
-8. Now that you have a good detection rule, in the Log window with the query, select **New alert rule** in the Command Bar, then select **Create Azure Sentinel alert**.
+8. Now that you have a good detection rule, in the Log window with the query, select **+ New alert rule** in the Command Bar, then select **Create Azure Sentinel alert**.
 
 9. This starts our Analytics rule wizard.  For the General Tab, enter:
 
@@ -391,7 +386,7 @@ SecurityEvent
 - Tactics: Privilege Escalation
 - Severity: High
 
-Select **Next : Set rule logic** button.
+Select **Next : Set rule logic >** button.
 
 10. On the Set rule logic tab, the Rule query and Map entities should already be populated.
 
@@ -402,19 +397,19 @@ Select **Next : Set rule logic** button.
 
 **Note** We are purposely generating many incidents for the same data.  This enables the Lab to use these alerts.
 
-12. Leave the rest of the options to the defaults.  Select **Next : Incident settings**:
+12. Leave the rest of the options to the defaults.  Select **Next : Incident settings >**:
 
 13. For the Incident settings set the following: 
 
 - Incident settings: Enabled
 - Alert grouping: Disabled
-- Select **Next: Automated response**
+- Select **Next: Automated response >**
 
 14. For the Automated response tab set the following:
 
-- Select **Post-Message-Teams**.
+- Select **PostMessageTeams-OnAlert**.
 
-Select **Next : Review** button.
+Select **Next : Review >** button.
 
 15. On the Review tab, select **Create**.
 

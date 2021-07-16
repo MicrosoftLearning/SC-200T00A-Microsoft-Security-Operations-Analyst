@@ -8,11 +8,11 @@ In this task, you will create a Windows virtual machine.
 
 2. In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
 
-3. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
+3. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
-4. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
+4. In the **Enter password** dialog box, copy, and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
-5. Select **Create a Resource**.
+5. Select **+ Create a Resource**.
 
 6. In the **search the Marketplace** box, enter *Windows 10*. 
 
@@ -22,11 +22,11 @@ In this task, you will create a Windows virtual machine.
 
 9. Create a new Resource Group named **rg-AZWIN01** if you have not done so already.
 
-**Note:** This needs to be a new resource group.  You are going to delete the Virtual machine after the exercise.  
+**Note:** This needs to be a new resource group.  You are going to delete the virtual machine after the exercise.  
 
-10. Set the Virtual Machine name to AZWIN01.
+10. Set the Virtual machine name to AZWIN01.
 
-11. Set the Region to the appropriate region for your area.  The appropriate region may default.
+11. Set the Region to the appropriate region for your area.  The appropriate region will probably default.
 
 12. Enter a Username of your choosing that is acceptable for Azure.
 
@@ -36,11 +36,11 @@ In this task, you will create a Windows virtual machine.
 
 14. Select Licensing confirmation.
 
-15. Select **Review + Create**.
+15. Select **Review + create**.
 
 16. Select **Create**. Wait for the Resource to be created, this may take a few minutes.
 
-### Task 2: Connect an Azure Windows VM.
+### Task 2: Connect an Azure Windows virtual machine.
 
 In this task, you will connect an Azure Windows virtual machine to Azure Sentinel.
 
@@ -54,13 +54,11 @@ In this task, you will connect an Azure Windows virtual machine to Azure Sentine
 
 5. Select **Open connector page** on the connector information blade.
 
-**Note:** The instructions for Install agent on a Windows Virtual Machine and Install agent on a non-Azure Windows Machine may be reversed.  The links take you to the proper location even with the reversed text.
-
-6. Select the **Install agent on a Windows Virtual Machine** option.
+6. Select the **Install agent on Azure Windows Virtual Machine** option.
 
 7. Select **Download & install agent for Azure Windows Virtual machines**.
 
-8. Select the **AZWIN01** virtual machine in the list that you just created in the previous step, then select **Connect**. Wait until the connecting message disappears.
+8. Select the **AZWIN01** virtual machine in the list that you just created in the previous task, then select **Connect**. Wait until the connecting message disappears.
 
 9. Select **Virtual machines** in the navigation list. You should now see the machine is connected.
 
@@ -88,17 +86,15 @@ In this task, you will connect a non-Azure Windows virtual machine to Azure Sent
 
 5. Select your Azure Sentinel Workspace.
 
-6. From the Data Connectors tab, select the **Security Events** connector from the list.
+6. Select **Data connectors** then select the **Security Events** connector from the list.
 
 7. Select **Open connector page** on the connector information blade.
 
 8. In the Select which events to stream area, select **All Events**, then select **Apply Changes**.
 
-9. Select the **Install agent on a non-Azure Windows Virtual Machine**.
+9. Select the **Install agent on a non-Azure Windows Machine**.
 
-**Note:** The instructions for Install agent on a Windows Virtual Machine and Install agent on a non-Azure Windows Machine may be reversed. The links take you to the proper location even with the reversed text.
-
-10. Select **Download & install agent for non-Azure Windows Virtual machines**. 
+10. Select **Download & install agent for non-Azure Windows machines**. 
 
 11. Select the link for **Download Windows Agent (64 bit)**.
 
@@ -118,7 +114,7 @@ In this task, you will connect a non-Azure Windows virtual machine to Azure Sent
 
 19. Select **Next** on the Microsoft Update page.
 
-20. Then select **Install**.
+20. Then select **Install**.  When complete select **Finish**.
 
 ### Task 4: Install and collect Sysmon logs.
 
@@ -157,7 +153,7 @@ You should still be connected to the WIN2 virtual machine.  The following instru
 
 15. Select the **Windows Event logs** tab.
 
-16. Select **Add windows event log** button.
+16. Select **+ Add windows event log** button.
 
 17. Enter **Microsoft-Windows-Sysmon/Operational** in the Log name field.
 
@@ -187,6 +183,6 @@ In this task, you will on-board a device to Microsoft Defender for Endpoint.
 
 9. From the Onboarding page in the Microsoft Defender Security Center portal, copy the detection test script and run in the open **Administrator: Command Prompt** window.
 
-10.  In the Microsoft Defender Security Center portal menu, select **Devices inventory** icon from the left navigation. You should now see your device in the list. **Note** It can take up to 5 minutes for the device to be displayed in the portal.
+10. In the Microsoft Defender Security Center portal menu, select **Devices inventory** icon from the left navigation. You should now see your device in the list. **Note** It can take up to 5 minutes for the device to be displayed in the portal.
 
 ## Proceed to Exercise 3

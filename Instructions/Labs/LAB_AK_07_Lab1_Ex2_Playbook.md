@@ -8,25 +8,25 @@ In this task, you will create a Microsoft Teams team for use in the lab.
 
 2. Open the Microsoft Teams App from the Windows menu.
 
-3. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
+3. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
-4. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
+4. In the **Enter password** dialog box, copy, and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
-5. Select **No, sign in to this app only**.
+5. Select **No, sign in to this app only**.  Update Microsoft Teams if it requires it.
 
 6. In Microsoft Teams, select **Teams**, then at the bottom, select **Join or create a team**.
 
-7. Select **Create a Team** in the main window.
+7. Select the **Create Team** button in the main window.
 
 8. Select **From scratch**.
 
 9. Select **Private**.
 
-10. Give the team the name: **SOC** and select **Create**.
+10. Give the team the name: **SOC** and select the **Create** button.
 
-11. In the Add members to SOC, select **Skip**. 
+11. In the Add members to SOC screen, select the **Skip** button. 
 
-12. Click the **...** next to the team name SOC, and select **Add channel**.
+12. Select the **...** next to the team name SOC, and select **Add channel**.
 
 13. Enter a channel name of *New Alerts* then select **Add**.
 
@@ -52,7 +52,7 @@ In this task, you will create a Logic App that will be used as a Playbook in Azu
 
 9. Select the **Post-Message-Teams** folder.
 
-10. Select **Deploy to Azure** button.
+10. In the *Deploy with alert trigger* area select **Deploy to Azure** button.  Hint: this alert trigger will be used in the next exercise.
 
 11. Select your Azure Subscription.
 
@@ -60,11 +60,9 @@ In this task, you will create a Logic App that will be used as a Playbook in Azu
 
 13. For region, select the appropriate region for your situation.  The default region will likely be optimal.
 
-14. For User Name, enter the user name **Tenant Email**
+14. Select **Review + create**.
 
-15. Select **Review + create**.
-
-16. Now select **create**.
+15. Now select **create**.
 
 **Note** Wait for the deployment to finish before proceeding to the next task.
 
@@ -78,23 +76,15 @@ In this task, you will update the new playbook with the proper connection inform
 
 3. Select the **Automation** from the Configuration area, and then select the **Playbooks** tab.
 
-4. Click on the **Post-Message-Teams** playbook, 
+4. Select the **PostMessageTeams-OnAlert** playbook. 
 
-5. On the Logic App page for *Post-Message-Teams*, select **Edit**.
+5. On the Logic App page for *PostMessageTeams-OnAlert*, select **Edit**.
 
-6. Click on the first Connections block at the top.  
+6. Select the **Connections** block.  
 
 7. Select **Add new**, and sign in with your Azure subscription admin credentials.
 
-8. Click on the second Connection block in the middle.  
-
-9. Select **Add new**, and sign in with your Azure subscription admin credentials.
-
-10. Click on the third Connection block.  
-
-11. Select **Add new**, and sign in with your Azure subscription admin credentials.
-
-12. In the Post a message block, for the Team, select the **X** at the end of the edit box.  The edit box will be changed to a dropdown with a listing of the Teams.  Select **SOC**.
+12. In the **Post a message** block, for the Team, select the **X** at the end of the edit box.  The edit box will be changed to a dropdown with a listing of the Teams.  Select **SOC**.
 
 13. For the Channel, select the **X** at the end of the edit box.  The edit box will be changed to a dropdown with a listing of the Channels.  Select **New Alerts**.
 

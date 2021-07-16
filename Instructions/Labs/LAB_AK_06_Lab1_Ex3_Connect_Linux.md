@@ -10,9 +10,9 @@ In this task, you will access your Azure Sentinel workspace.
 
 3. In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
 
-4. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
+4. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
-5. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
+5. In the **Enter password** dialog box, copy, and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
 6. In the Search bar of the Azure portal, type *Sentinel*, then select **Azure Sentinel**.
 
@@ -26,9 +26,9 @@ In this task, you will connect a Linux host to Azure Sentinel with the Common Ev
 
 2. Select **Open connector page** on the connector information blade.
 
-3. Copy to the clipboard the command shown in 1.2 Install the CEF collector on the Linux machine.
+3. Copy to the clipboard the command shown in *1.2 Install the CEF collector on the Linux machine*.
 
-4. The next steps are specific to limitations in copying from a Virtual Machine in the lab environment. In the browser, navigate to https://outlook.office.com.
+4. The next steps are specific to limitations in copying from a virtual machine in the lab environment. In the browser, navigate to https://outlook.office.com.
 
 5. Create a New Message to *MOD Administrator*.
 
@@ -48,11 +48,11 @@ In this task, you will connect a Linux host to Azure Sentinel with the Common Ev
 
 13. In the command, where you see the word "python" change it to "python3" and press enter to execute the command.
 
-### Task 3: Connect a Linux Host using the Syslog connector.
+### Task 3: Connect a Linux host using the Syslog connector.
 
 In this task, you will connect a Linux host to Azure Sentinel with the Syslog connector.
 
-1. Connect to WIN1, which should already be in the Azure Sentinel portal.  
+1. Connect to WIN1, which should already be in the Azure Sentinel portal for your workspace.  
 
 2. From the Data Connectors tab, select the **Syslog** connector from the list.
 
@@ -64,13 +64,13 @@ In this task, you will connect a Linux host to Azure Sentinel with the Syslog co
 
 6. Select the tab for **Linux servers**.
 
-7. Copy the command in the Download and onboard agent for Linux area.
+7. Copy the command in the *Download and onboard agent for Linux* area to the clipboard.
 
 8. The next steps are specific to limitations in copying from a Virtual Machine in the lab environment. In the browser, navigate to https://outlook.office.com.
 
 9. Create a New Message to *MOD Administrator*.
 
-10. Paste the clipboard command that was copied from the connector page.
+10. Paste the clipboard command that was copied from the connector page into the body of the email message and send it to yourself.
 
 11. Open a browser on your local (not a lab virtual machine) and navigate to https://outlook.office.com.
 
@@ -82,7 +82,7 @@ In this task, you will connect a Linux host to Azure Sentinel with the Syslog co
 
 15. Log in to LIN2 virtual machine as user *root* with the password: **Passw0rd!** or whatever Linux machine credentials your lab provider has assembled for you.  
 
-16. Paste the command in the terminal window and press **enter**.
+16. Paste the command in the terminal window and press **enter**.  You have completed the task. No further labs in this course rely on this connection.
 
 ### Task 4: Configure the facilities you want to collect and their severities for the Syslog connector.
 
@@ -92,18 +92,18 @@ In this task, you will configure the Syslog collection facilities.
 
 2. In Azure Sentinel portal, select **Settings** and then **Workspace settings** from the settings blade.
 
-3. Select **Agents configuration** in the **Settings** area.
+3. Select **Agents configuration** from the **Settings** area.
 
 4. Select the **Syslog** tab.
 
-5. Select the **Add facility** button.
+5. Select the **+ Add facility** button.
 
-6. Select **auth**.
+6. Select **auth** from the drop-down menu for *Facility name*.
 
 7. Select the **Add facility** button.
 
-8. Enter *authpriv* and press the **+**.
+8. Enter *authpriv* from the drop-down menu for *Facility name*.
 
-9. Select **Apply**.
+9. Select **Apply**.  You have completed this task.
 
 ## Proceed to Exercise 4

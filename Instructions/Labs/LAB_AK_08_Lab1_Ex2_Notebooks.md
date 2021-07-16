@@ -2,7 +2,7 @@
 
 ## Lab scenario
 
-You're a Security Operations Analyst working at a company that implemented Azure Sentinel. You need to explore the benefits of threat hunting with Azure Sentinel Notebooks.
+You are a Security Operations Analyst working at a company that implemented Azure Sentinel. You need to explore the benefits of threat hunting with Azure Sentinel Notebooks.
 
 ### Task 1: Explore Notebooks
 
@@ -24,9 +24,9 @@ In this task, you will explore using notebooks in Azure Sentinel.
 
 8. Next, you need to select an AzureML Workspace. Select **Create new AML workspace**.
 
-9.	In the Subscription box, select your subscription.
+9. In the Subscription box, select your subscription.
 
-10.	Select **Create new** for the Resource group and choose a name for your new resource group. 
+10. Select **Create new** for the Resource group and choose a name for your new resource group. 
 
 11.	In the Workspace details section do the following:
 - Give your workspace a unique name.
@@ -42,7 +42,7 @@ In this task, you will explore using notebooks in Azure Sentinel.
 
 14. Select **Notebooks**. 
 
-15. Select **A Getting Started Guide For Azure Sentinel ML Notebooks**, then select **Save notebook**.  In the pop-up for the name of your notebook let default and select **OK**.
+15. Select **A Getting Started Guide For Azure Sentinel ML Notebooks**, then select **Save notebook** button.  In the pop-up for the name of your notebook let default and select **OK**.
 
 16. Select the **Launch notebook** button.
 
