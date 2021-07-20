@@ -123,7 +123,7 @@ In this task, you will install Azure Arc on an on-premises server.
 
 18. Enter: cd Downloads
 The screen should show:
-PS C:\Users\Administrators\Downloads
+PS C:\Users\Administrator\Downloads
 
 19. Type *Set-ExecutionPolicy -ExecutionPolicy Unrestricted* and press enter.
 
