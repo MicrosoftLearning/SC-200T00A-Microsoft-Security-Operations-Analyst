@@ -133,7 +133,7 @@ PS C:\Users\Administrators\Downloads
 
 22. Select **R** to Run once and press enter (this may take a minute).
 
-23. Follow the on-screen instructions in PowerShell to complete the device registration.  This will include authentication of the device.
+23. Follow the instructions on the last line of the output in PowerShell, to complete the device registration.  This will include authentication of the device.
 
 24. On the Azure Arc portal page, select **Servers**.
 
