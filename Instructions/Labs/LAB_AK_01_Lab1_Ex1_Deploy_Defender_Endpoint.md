@@ -47,7 +47,7 @@ In this task, you will onboard a device to Microsoft Defender for Endpoint using
 
 1. Go to the Microsoft Defender Security Center at (https://securitycenter.microsoft.com) and login with the **Tenant Email** credentials if you are not currently in the portal.
 
-2. Select **Settings** from the left menu bar.
+2. Select **Settings** from the left menu bar, then select **Endpoints**.
 
 3. Select **Onboarding** in the Device management section.
 
@@ -72,7 +72,7 @@ In this task, you will onboard a device to Microsoft Defender for Endpoint using
 
 In this task, you will configure roles for use with device groups.
 
-1. In the Microsoft Defender Security Center portal select **Settings** from the left menu bar. 
+1. In the Microsoft Defender Security Center portal select **Settings** from the left menu bar, then select **Endpoints**. 
 
 2. Select **Roles** in the permissions area.
 
@@ -94,7 +94,7 @@ In this task, you will configure roles for use with device groups.
 
 In this task, you will configure device groups that allow for access control and automation configuration.
 
-1. In the Microsoft Defender Security Center portal select **Settings** from the left menu bar. 
+1. In the Microsoft Defender Security Center portal select **Settings** from the left menu bar, then select **Endpoints**. 
 
 2. In the permissions area select **Device groups**.
 
