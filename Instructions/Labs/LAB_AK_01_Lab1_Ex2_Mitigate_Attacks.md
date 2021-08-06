@@ -12,7 +12,7 @@ In this task, you will run six simulated attacks to explore the capabilities of 
 
 1. If you are not already at the Microsoft Defender Security Center in your browser, go to the Microsoft Defender Security Center at (https://securitycenter.microsoft.com) logged in as Admin for your tenant.
 
-2. From the menu, select **Evaluation and tutorials**  and then **Simulations and tutorials** from the left side.
+2. From the menu, select **Evaluation and tutorials**  and then **Tutorials ans simulations** from the left side.
 
 3. Complete Scenario 1, Scenario 2, Scenario 3, Scenario 4, Scenario 5, and Scenario 7. Follow the instructions in the provided walkthrough in the portal.
 
