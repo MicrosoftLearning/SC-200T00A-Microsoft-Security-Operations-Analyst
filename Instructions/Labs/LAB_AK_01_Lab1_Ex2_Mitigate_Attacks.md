@@ -10,12 +10,19 @@ To explore the Defender for Endpoint attack mitigation capabilities, you run six
 
 In this task, you will run six simulated attacks to explore the capabilities of Microsoft Defender for Endpoint.
 
-1. If you are not already at the Microsoft Defender Security Center in your browser, go to the Microsoft Defender Security Center at (https://securitycenter.microsoft.com) logged in as Admin for your tenant.
+1. If you are not already at the Microsoft Defender Security Center in your browser, go to the Microsoft 365 Defender portal at (https://security.microsoft.com) logged in as Admin for your tenant.
 
-2. From the menu, select **Evaluation and tutorials**  and then **Tutorials ans simulations** from the left side.
+2. From the menu, expand **Evaluation and tutorials** and select **Tutorials and simulations**.
 
-3. Complete Scenario 1, Scenario 2, Scenario 3, Scenario 4, Scenario 5, and Scenario 7. Follow the instructions in the provided walkthrough in the portal.
+3. Select the **Tutorials** tab.
 
-**Warning** Do not perform Scenario 6 titled "API 'Hello World'".
+4. Complete the tutorial titled: **Document drops backdoor**
+5. Complete the tutorial titled: **PowerShell script in fileless attack**
+6. Complete the tutorial titled: **Automated investigation (backdoor)**
+7. Complete the tutorial titled: **Automated investigation (fileless attack)**
+8. Complete the tutorial titled: **Live Response tutorial**
+9. Complete the tutorial titled: **Threat & Vulnerability Management (core scenarios)**
+
+**Warning** Do not perform tutorials titled "Custom Detections" or "API 'Hello World'".
 
 ## You have completed the lab.
