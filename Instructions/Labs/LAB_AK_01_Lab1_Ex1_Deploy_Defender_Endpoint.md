@@ -23,7 +23,7 @@ In this task, you will perform the initialization of the Microsoft Defender for 
 
 1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
-2. Open the Microsoft Edge browser, search for "edge browser update", download, and install the new Microsoft Edge browser. This is necessary to ensure you're running the latest version of Microsoft Edge in your hosted virtual machine. Start the new Edge browser.
+2. Open the Microsoft Edge browser.
 
 3. In the Edge browser, go to the Microsoft 365 Defender portal at (https://security.microsoft.com).
 
@@ -37,7 +37,7 @@ In this task, you will perform the initialization of the Microsoft Defender for 
 
 7. On the **Settings** page select **Microsoft 365 Defender**.  Select **Preview features** and make sure preview features are turned on. Return to the **Settings** menu.
 
-8. In **Settings** select **Device discovery**.  In Discovery setup make sure **Standard discovery** is selected.  Return to the **Settings** menu.
+8. On the **Settings** page select **Device discovery**.  In Discovery setup make sure **Standard discovery** is selected.  Return to the **Settings** menu.
 
 **Note**: The Defender for Endpoint setup should be performed automatically by your Microsoft 365 E5 tenant.  You can view the other settings if you like.  You will onboard Devices in the next task.  
 
@@ -45,13 +45,13 @@ In this task, you will perform the initialization of the Microsoft Defender for 
 
 In this task, you will onboard a device to Microsoft Defender for Endpoint using the Security Center.
 
-1. Go to the Microsoft Defender Security Center at (https://securitycenter.microsoft.com) and login with the **Tenant Email** credentials if you are not currently in the portal.
+1. Go to the Microsoft Defender Security Center at (https://security.microsoft.com) and login with the **Tenant Email** credentials if you are not currently in the portal.
 
-2. Select **Settings** from the left menu bar, then select **Endpoints**.
+2. Select **Settings** from the left menu bar, then from the Settings page select **Endpoints**.
 
 3. Select **Onboarding** in the Device management section.
 
-4. In the Onboard a device area select **Download Package** button.
+4. In the Onboard a device area make sure "Local Script (for up to 10 devices)" is displayed in the Deployment method drop-down and select the **Download Package** button.
 
 5. Extract the downloaded zip file to a local folder like the Documents folder.
 
@@ -63,7 +63,7 @@ In this task, you will onboard a device to Microsoft Defender for Endpoint using
 
 8. From the Onboarding page in the portal, copy the detection test script and run it in an open command window.  You may have to open a new **Administrator: Command Prompt** window by typing *CMD* in the windows search bar and choose to **run as Administrator**.
 
-9. In the Microsoft Defender Security Center portal menu, select **Device inventory**. You should now see your device in the list.
+9. In the Microsoft 365 Defender portal in the Endpoints area, select **Device inventory**. You should now see your device in the list.
 
 **Note** It can take up to 5 minutes for the device to be displayed in the portal.
 
@@ -72,15 +72,15 @@ In this task, you will onboard a device to Microsoft Defender for Endpoint using
 
 In this task, you will configure roles for use with device groups.
 
-1. In the Microsoft Defender Security Center portal select **Settings** from the left menu bar, then select **Endpoints**. 
+1. In the Microsoft 365 Defender portal select **Settings** from the left menu bar, then select **Endpoints**. 
 
 2. Select **Roles** in the permissions area.
 
 3. Select the **Turn on roles** button.
 
-4. Select **Add item**.
+4. Select **+ Add item**.
 
-5. In the Add Role dialog enter the following:
+5. In the Add role dialog enter the following:
     Role Name: Tier
     Live Response capabilities: select checkbox
     Advanced: select.
@@ -94,11 +94,11 @@ In this task, you will configure roles for use with device groups.
 
 In this task, you will configure device groups that allow for access control and automation configuration.
 
-1. In the Microsoft Defender Security Center portal select **Settings** from the left menu bar, then select **Endpoints**. 
+1. In the Microsoft 365 Defender portal select **Settings** from the left menu bar, then select **Endpoints**. 
 
 2. In the permissions area select **Device groups**.
 
-3. Select **Add device group**.
+3. Select **+ Add device group**.
 
 4. Enter the following information on the General tab:
 

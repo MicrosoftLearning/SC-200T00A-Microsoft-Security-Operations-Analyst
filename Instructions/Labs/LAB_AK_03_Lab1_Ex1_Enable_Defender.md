@@ -10,9 +10,9 @@ In this task, you will set up an Azure Subscription required to complete this la
 
 1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
-2.  Open the browser, search for, download, and install the new Microsoft Edge browser if you didn't do this in the previous labs. Start the new Edge browser.
+2. Open the Microsoft Edge browser.
 
-3.  In the Edge browser, navigate to the Azure portal at https://portal.azure.com .
+3. In the Edge browser, navigate to the Azure portal at (https://portal.azure.com).
 
 4. In the **Sign in** dialog box, copy, and paste in the tenant Email account for the admin username provided by your lab hosting provider and then select **Next**.
 
@@ -22,9 +22,7 @@ In this task, you will set up an Azure Subscription required to complete this la
 
 **Important:** You must create the Azure Subscription as the Admin user for the tenant.
 
-7. Select **Add** for a new Subscription.
-
-8. Follow the page instructions to create a new subscription that is appropriate for you.  Most people will choose "Free Trial" or use an "Azure Pass" offer here.  These labs have been designed to use less than USD $5 of Azure services.
+7. Utilize the "Azure Pass - Sponsorship" provided by your instructor.  These labs have been designed to use less than USD $10 of Azure services during the class.
 
 **Note:** It could take up to 10 minutes before the subscription can be used. 
 
@@ -44,9 +42,7 @@ In this task, you will create a Log Analytics workspace for use with Azure Defen
 
 6. Select **Review + Create**.
 
-7. Once the workspace validation has passed, select **Create**.
-
-**Note:** Wait for the new workspace to be provisioned, this may take a few minutes.
+7. Once the workspace validation has passed, select **Create**. Wait for the new workspace to be provisioned, this may take a few minutes.
 
 ### Task 3: Enable Azure Defender.
 
@@ -60,11 +56,9 @@ In this task, you will enable and configure Azure Defender.
 
 4. Select **Pricing & settings** from the Management area of the portal menu.
 
-5. Select your Subscription. 
+5. Select your Subscription.
 
-6. Review the resources and fees.  Turn Servers **Off** then select **Save**.  Confirm if prompted.
-
-**Note:** This is for lab purposes only.  It is good to understand which resources will be automatically covered and the fees involved.  The next steps are to disable Azure Defender for Servers.  The purpose of this is to manage the cost in your Azure subscription. Normally, you would leave this enabled.
+6. Review the resources and fees.
 
 7. Select **Auto provisioning** from the Settings area.
 
@@ -72,10 +66,7 @@ In this task, you will enable and configure Azure Defender.
 
 9. Go back to the Security Center portal and select the **Pricing and settings** again.
 
-10. Select the workspace ID you created earlier **uniquename_AzureDefender**
-
-11. Turn Server **Off**, then select **Save** if the Servers plan is not already off.
-
+10. Select the workspace ID you created earlier *uniquenameAzureDefender* to review the pricing.
 
 ### Task 4: Install Azure Arc on an On-Premises Server.
 
@@ -87,11 +78,11 @@ In this task, you will install Azure Arc on an on-premises server.
 
 2. In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
 
-3. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
+3. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
 4. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
-5. In the Search bar of the Azure portal, type *Azure Arc*, then select **Azure Arc**.
+5. In the Search bar of the Azure portal, type *Arc*, then select **Azure Arc**.
 
 6. Select **Servers** from the Azure Arc page menu.
 
@@ -123,7 +114,7 @@ In this task, you will install Azure Arc on an on-premises server.
 
 18. Enter: cd Downloads
 The screen should show:
-PS C:\Users\Administrators\Downloads
+PS C:\Users\Administrator\Downloads
 
 19. Type *Set-ExecutionPolicy -ExecutionPolicy Unrestricted* and press enter.
 
@@ -131,9 +122,9 @@ PS C:\Users\Administrators\Downloads
 
 21. Type *.\OnboardingScript.ps1* and press enter.
 
-22. Select **R** to Run once and press enter (this may take a minute).
+22. Enter **R** to Run once and press enter (this may take a couple minutes).
 
-23. Follow the on-screen instructions in PowerShell to complete the device registration.  This will include authentication of the device.
+23. Follow the instructions on the last line of the output in PowerShell, to complete the device registration.  This will include authentication of the device through a browser.
 
 24. On the Azure Arc portal page, select **Servers**.
 
@@ -149,7 +140,7 @@ In this task, you will manually install the required agent on the Windows Server
 
 2. Select the **Get Started** tab.
 
-3. Select **Configure** under the Add non-Azure servers section.
+3. Select **Configure** under the *Add non-Azure servers* section.
 
 4. Select **Upgrade** next to the workspace you created earlier.  This may take a few minutes.  
 
@@ -159,16 +150,15 @@ In this task, you will manually install the required agent on the Windows Server
 
 7. Run the downloaded file.
 
-8. Select **next** until the wizard page for Agent Setup Options appears, Select **Connect the Agent to Azure Log Analytics (OMS)**, then select **Next**.
+8. Select **Next** until the wizard page for Agent Setup Options appears, Select **Connect the Agent to Azure Log Analytics (OMS)**, then select **Next**.
 
 9. Copy and paste the Workspace ID and Primary Key from the Azure portal into the wizard page fields as appropriate and select **Next**.
 
-10. Continue with the Install. Then select **Finish** when complete.
+10. Continue with the Install. Select **Finish** when complete.
 
 11. Go to the Security Center portal and select **Inventory**.
 
 12. The Server should appear in the list.  You may have to select **Refresh** to see the update and it may take a couple minutes.
 
-**Note** The Server should appear as unprotected.  This is correct as we turned off the Azure Defender plans for Servers. 
 
 # Proceed to Exercise 2
