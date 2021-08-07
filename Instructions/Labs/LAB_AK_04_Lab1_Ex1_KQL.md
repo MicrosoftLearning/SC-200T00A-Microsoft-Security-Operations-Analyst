@@ -115,7 +115,7 @@ SecurityAlert
 ```
 
 
-8. The following statement demonstrates a real-world example that combines the let, dynamics list creation, and creating fields using extend. In the Query Window. Enter the following statement and select run: 
+8. The following statement demonstrates a real-world example that combines the let, dynamics list creation, and creating fields using extend. In the Query Window. Enter the following statement and select **run**: 
 
 ```KQL
 let timeframe = 1d;
@@ -278,7 +278,7 @@ The SecurityEvent table will be filtered to only include EventID = 4624. Then th
 
 The function returns a dynamic (JSON) array of all the values of Expression in the group. This KQL query will first filter the EventID with the where operator.  Next, for each Computer, the results are a JSON array of Accounts. The resulting JSON array will include duplicate accounts.
 
-In the Query Window. Enter the following statement and select run: 
+In the Query Window. Enter the following statement and select **run**: 
 
 ```KQL
 SecurityEvent
@@ -418,7 +418,7 @@ SecurityEvent
 
 3. The following statement demonstrates the parse function. Parse evaluates a string expression and parses its value into one or more calculated columns. The computed columns will have nulls for unsuccessfully parsed strings.
 
-Review the following statement, but do not run it: 
+Review the following statement, but **do not run it**: 
 
 ```KQL
 let SQlData = Event
@@ -489,7 +489,7 @@ AzureActivity
 
 **Note:** When you run this script you should get no results.
 
-Review the following statement only, do not run it: 
+Review the following statement only, **do not run** it: 
 
 ```KQL
 SigninLogs 
@@ -532,7 +532,7 @@ SecurityAlert
 
 6. Parsers are functions that define a virtual table with already parsed unstructured strings fields such as Syslog data. The following is a KQL query created by the community for Mailbox forwarding monitoring.  
 
-Review the following statement, but do not run it: 
+Review the following statement, but **do not run it**: 
 
 ```KQL
 OfficeActivity
