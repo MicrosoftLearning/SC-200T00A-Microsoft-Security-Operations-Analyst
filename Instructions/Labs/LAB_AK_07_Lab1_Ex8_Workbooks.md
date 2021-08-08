@@ -22,17 +22,17 @@ In this task, you will explore the configuration of a workbook.
 
 7. Select **Workbooks**.
 
-8. Select **Identity & Access**, then select **View template**.
+8. Select **Identity & Access**, then select the **View template** button.
 
-9. Review Workbook.
+9. Review the Identity & Access workbook.
 
-10. Select **Workbooks** 
+10. In the **Azure Sentinel | Workbooks** area (hint: scroll to the left) select the **Templates** tab.
 
-11. In the Templates tab search for and select **Azure AD Sign-in logs**, then select **Save**. 
+11. In the Templates tab search for and select **Azure AD Sign-in logs**, then select the **Save** button. 
 
 12. Select the location that is appropriate for your location.  The appropriate location usually defaults.
 
-13. Select **View saved workbook**.
+13. Select the **View saved workbook** button.
 
 14. Select **Edit** in command bar.
 
@@ -40,9 +40,9 @@ In this task, you will explore the configuration of a workbook.
 
 #### To format columns, the Column setting panel provides customization options, do the following:
 
-16. Select **Column Settings** in the Query Command bar.
+16. Select the **Column Settings** button in the Query Command bar.
 
-17. Select the column **Failure Count|Interrupt Count**.
+17. In the *Edit column settings* fly-in select the column **Failure Count|Interrupt Count**.
 
 18. Review the settings, including the Column renderer and Color palette.
 
@@ -54,9 +54,9 @@ In this task, you will explore the configuration of a workbook.
 
 #### To have one tile/grid control filter the results in another tile/grid do the following:
 
-22. Select **Advanced Settings** tab in the Query.
+22. Select the **Advanced Settings** tab in the Query.
 
-23. Review the When items are selected, export parameters.  Notice the *LocationDetail* field is selected.
+23. Review the *When items are selected, export parameters* setting.  Notice the *LocationDetail* field is selected.
 
 24. Select **Done Editing** at the bottom of the query.
 
@@ -92,7 +92,7 @@ In this task, you will create a new workbook with advanced visualizations.
 
 9. Select **...** next to the graph area, then select **+ Add**, then select **Add query**.
 
-10. Enter *SecurityEvent*, then select **Run Query**.
+10. Enter *SecurityEvent* into the query box, then select the **Run Query** button.
 
 11. Change the Time Range to **Last 3 days**.
 
@@ -108,15 +108,11 @@ In this task, you will create a new workbook with advanced visualizations.
 
 17. Select **Advanced Settings** from the Query tab.
 
-18. Select **Enable time range brushing** box. 
+18. Select **Show refresh icon when not editing** box. 
 
-19. Enter *demoparam* for **Export selected time range as parameter**.
+19. Select **Done Editing**.
 
-20. Select **Done Editing**.
-
-21. On the displayed grid, click once, hold, and drag.  This will display a selected range.
-
-22. Select **Add**, then **Add query**.
+20. Select **Add**, then **Add query**.
 
 Enter the following KQL command for the query:
 
@@ -124,30 +120,28 @@ Enter the following KQL command for the query:
 SecurityEvent
 ```
 
-23. For Time Range, select **demoparam**.
+21. For Time Range, select **Last 4 hours**.
 
-24. Change the Visualization to **Grid**.
+22. Change the Visualization to **Grid**.
 
-25. Select the **Style** tab.
+23. Select the **Style** tab.
 
-26. Select **Make this item a custom width**.
+24. Select **Make this item a custom width**.
 
-27. Change percentage width to **25** and maximum width to **25**. 
+25. Change percentage width to **25** and maximum width to **25**. 
 
-28. Select **Done Editing** for the Query.
+26. Select **Done Editing** for the Query.
 
-29. Select **Done Editing** for the Workbook.
+27. Select **Done Editing** for the Workbook.
 
-30. Select **Save** and select **Save** again if prompted.
+28. Select **Save** and select **Save** again if prompted.
 
-31. Select **Workbooks** in the Azure Sentinel portal.
+29. Select **Workbooks** in the Azure Sentinel portal.
 
-32. Select the **My workbooks** tab.
+30. Select the **My workbooks** tab.
 
-33. Select the workbook you just created.
+31. Select the workbook you just created.
 
-34. Select **View saved workbook**.
-
-**Note:** Remember to try the timeslice by dragging on the grid.
+32. Select **View saved workbook**.
 
 ## You have completed the lab.

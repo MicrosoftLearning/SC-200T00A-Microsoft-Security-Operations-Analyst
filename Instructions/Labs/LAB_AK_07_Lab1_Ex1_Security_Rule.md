@@ -10,7 +10,7 @@ In this task, you will activate a Microsoft Security rule.
 
 1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
-2. In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
+2. In the Edge browser, navigate to the Azure portal at (https://portal.azure.com).
 
 3. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
@@ -18,11 +18,11 @@ In this task, you will activate a Microsoft Security rule.
 
 5. In the Search bar of the Azure portal, type *Sentinel*, then select **Azure Sentinel**.
 
-6. Select your Azure Sentinel Workspace.
+6. Select your Azure Sentinel Workspace you created in the previous labs.
 
 7. Select **Analytics** from the Configuration area, then select the **Rule templates** tab.
 
-8. In the search box, enter *defender*.
+8. In the search box on the Rule templates tab, enter *defender*.
 
 9. In the result set, select **Create incidents based on Microsoft Defender for Endpoint alerts**. 
 
@@ -34,6 +34,6 @@ In this task, you will activate a Microsoft Security rule.
 
 13. Select the **Next : Automated response >** button and then select **Next: Review >** button.
 
-14. Select the **Create** button.  The Analytics rule will be saved.
+14. Review the changes made and select the **Create** button.  The Analytics rule will be saved.
 
 # Proceed to Exercise 2

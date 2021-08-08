@@ -2,7 +2,7 @@
 
 ### Task 1: Create a Scheduled Query.
 
-In this task, you will create a scheduled query.
+In this task, you will create a scheduled query and connect it to the Teams channel you created in the previous exercise.
 
 1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
@@ -22,7 +22,7 @@ In this task, you will create a scheduled query.
 
 9. For Tactics, select **Initial Access**.
 
-10. For Severity, select **Medium**
+10. For Severity, select **Medium**.
 
 11. Select **Next : Set rule logic >** button:
 
@@ -57,7 +57,7 @@ applicationSet = makeset(AppDisplayName) by UserPrincipalName, IPAddress
 
 19. Select the **Next: Automated response >** button.
 
-20. On the Automated response tab, select the playbook *PostMessageTeams-OnAlert* you had previously created.
+20. On the Automated response tab in the Alert automation area, select the playbook *PostMessageTeams-OnAlert* you had created in the previous exercise.
 
 22. Select the **Next: Review >** button.
   
@@ -65,17 +65,17 @@ applicationSet = makeset(AppDisplayName) by UserPrincipalName, IPAddress
 
 ### Task 2: Test our new rule.
 
-In this task, you will create a test your new scheduled query rule.
+In this task, you will test your new scheduled query rule.
 
 1. In the Search bar of the Azure portal, type *Azure Active Directory*. Then select **Azure Active Directory**.
 
 2. Select **Users** in the Manage area.
 
-3. Select User **Christie Cline** in the list. The Christie Cline | Profile page is displayed.
+3. Select User **Christie Cline** in the list so the Christie Cline | Profile page is displayed.
 
-4. Select **Edit**.
+4. Select **Edit** from the command bar.
 
-5. In the settings area, change **Block sign in** to **Yes**.
+5. In the Settings area, change **Block sign in** to **Yes**.
 
 6. Now select **Save** from the Command bar.
 
@@ -83,9 +83,9 @@ In this task, you will create a test your new scheduled query rule.
 
 8. Close your browser.
 
-9. Open a browser and navigate to https://portal.office.com and try to login with user ChristieC@**Tenant Email domain** and password should be the same as your admin's tenant password.  You should receive a warning that your account has been locked.
+9. Open a new In-Private browsing session in Microsoft Edge and navigate to https://portal.office.com and try to login with user ChristieC@**Tenant Email domain** and password should be the same as your admin's tenant password.  You should receive a warning that your account has been locked. This is good, the action should trigger an alert.
 
-10. Close your browser. Wait 10 minutes for the alert to process.
+10. Close your browser. The alert triggered by the last step may take 10 minutes to process. You may continue with the next exercise and return to this point later.
 
 11. In the Edge browser, go to the Azure portal at https://portal.azure.com.
 
@@ -101,6 +101,6 @@ In this task, you will create a test your new scheduled query rule.
 
 17. You should see the newly created Incident.  Select the Incident and review the information in the right blade.
 
-18. Open Microsoft Teams. Goto your *SOC* Team, ... and see the message post about the incident.
+18. Open Microsoft Teams by opening a browser tab and going to https://teams.microsoft.com. Go to your *SOC* Team, and see the message post about the incident.
 
 ## Proceed to Exercise 4

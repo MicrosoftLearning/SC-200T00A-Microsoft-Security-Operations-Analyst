@@ -14,7 +14,7 @@ cd \
 mkdir temp
 cd temp
 ```
-4. Attack 1 - Copy and run this command:
+4. Attack 1 - Copy and run this command into the Command Prompt app:
 
 ```
 REG ADD "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "SOC Test" /t REG_SZ /F /D "C:\temp\startup.bat"
@@ -27,7 +27,7 @@ notepad c2.ps1
 ```
 Select **Yes** to create a new file and copy the following PowerShell script into c2.ps1 and select **save**.
 
-**Note** Paste into the virtual machine might have a limited length.  Paste this in three sections to ensure all the script is pasted into the Virtual Machine.  Make sure the script looks as it does in these instructions within the notepad c2.ps1 file.
+**Note** Paste into the virtual machine might have a limited length.  Paste this in three sections to ensure all the script is pasted into the Virtual Machine.  Make sure the script looks as it does in these instructions within the notepad c2.ps1 file and then save the Notepad file.
 
 ```
 
@@ -100,7 +100,7 @@ In this task, you will perform attacks on a host with the Security Events connec
 
 1. Login to WIN2 virtual machine as Admin with the password: **Pa55w.rd**.  
 
-2. In the search of the task bar, enter *CMD*.  Command Prompt will be displayed in the search results.  Right-click on the Command Prompt and select **Run as Administrator**.
+2. In the search of the task bar, enter *CMD*.  Command Prompt will be displayed in the search results.  Right-click on the Command Prompt and select **Run as Administrator**.  Accept and User Account Control prompts that appear.
 
 3. In the command prompt, enter the command in each row pressing Enter key after each row:
 ```
@@ -109,7 +109,7 @@ mkdir temp
 cd \temp
 ```
 
-4. Attack 1 - Copy and run this command:
+4. Attack 1 - Copy and run this command in the Command Prompt app:
 
 ```
 REG ADD "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "SOC Test" /t REG_SZ /F /D "C:\temp\startup.bat"

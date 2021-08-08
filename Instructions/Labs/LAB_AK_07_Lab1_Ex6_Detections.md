@@ -49,7 +49,7 @@ The results now only show for the Event table.
 
 12. Expand the rows to see all the columns related to the record.  A few of the fields like EventData and ParameterXml have multiple data items stored as structured data.  This makes it difficult to query on specific fields.  
 
-13.  Next, we have to build a KQL statement that parses the data from each row, allowing us to have meaningful fields.  In the Azure Sentinel Community on GitHub, there are many examples of Parsers in the Parsers folder.  Open another tab in your browser and navigate to: https://github.com/Azure/Azure-Sentinel
+13. Next, we have to build a KQL statement that parses the data from each row, allowing us to have meaningful fields.  In the Azure Sentinel Community on GitHub, there are many examples of Parsers in the Parsers folder.  Open another tab in your browser and navigate to: https://github.com/Azure/Azure-Sentinel
 
 14. Select the **Parsers** folder, then **Sysmon** folder.  You should be viewing: Azure-Sentinel/Parsers/Sysmon/Sysmon-v12.0.txt
 
@@ -102,6 +102,8 @@ Event
 
 
 ```
+
+     ![Screenshot](../Media/SC200_sysmon_query1.png)
 
 17.  You could continue to build your detection rule from here, but this KQL statement looks like it could be reused in other detection rule's KQL statements.  In the Log window, select **Save**, then **Save as function**. In the Save flyout, enter the following and save the function:
 
@@ -160,7 +162,6 @@ Event_Reg_SetValue
 
 24. This starts our Analytics rule wizard.  For the General Tab enter:
 
-
     Name: Sysmon Startup RegKey
 
     Description: Sysmon Startup Regkey in c:\temp
@@ -171,7 +172,7 @@ Event_Reg_SetValue
 
 Select **Next : Set rule logic >**.
 
-25. On the **Set rule logic** tab, the **Rule query and Map entities** should already be populated.
+25. On the **Set rule logic** tab, the **Rule query** should already be populated.
 
 26. For Query scheduling set the following:
 
@@ -250,7 +251,7 @@ DeviceRegistryEvents
 
 This looks like a good detection rule.  
 
-8. It is important to help the Security Operations Center Analyst by providing as much context about the alert as you can. This includes projecting Entities for use in the investigation graph.
+8. It is important to help the Security Operations Center Analyst by providing as much context about the alert as you can. This includes projecting Entities for use in the investigation graph. Run the following query:
 
 ```KQL
 DeviceRegistryEvents
@@ -261,6 +262,9 @@ DeviceRegistryEvents
 
 
 ```
+
+     ![Screenshot](../Media/SC200_sysmon_query2.png)
+
 9.  Now that you have a good detection rule, in the Log window with the query, select the **+ New alert rule** in the Command Bar.  Then select **Create Azure Sentinel alert**.
 
 10. This starts our Analytics rule wizard.  For the General Tab, enter:
@@ -276,7 +280,7 @@ DeviceRegistryEvents
 
 11. Select **Next : Set rule logic >** button.
 
-12. On the Set rule logic tab, the Rule query and Map entities should already be populated.
+12. On the Set rule logic tab, the **Rule query** should already be populated.
 
 13. For Query scheduling set the following:
 
@@ -328,7 +332,7 @@ search "administrators"
     Event
     SecurityEvent
 
-5. Our first data source is SecurityEvent. Time to research what event ID Windows uses to identify adding a member to a privileged group.  The following EventID and Event are what we are looking for:    
+5. Our first data source is SecurityEvent. Time to research what event ID Windows uses to identify adding a member to a privileged group.  The following EventID and Event are what we are looking for:
 
 4732 - A member was added to a security-enabled local group.
 
@@ -358,9 +362,11 @@ SecurityEvent
 ```
 This looks like a good detection rule.  
 
+     ![Screenshot](../Media/SC200_sysmon_attack3.png)
+
 **Note:** This KQL might not return the expected results because of the small dataset used in the lab.
 
-7. It is important to help the Security Operations Analyst by providing as much context about the alert as you can. This includes projecting Entities for use in the investigation graph.  Run the following script:
+7. It is important to help the Security Operations Analyst by providing as much context about the alert as you can. This includes projecting Entities for use in the investigation graph.  Run the following query:
 
 
 ```KQL
@@ -399,7 +405,7 @@ Select **Next : Set rule logic >** button.
 
 12. Leave the rest of the options to the defaults.  Select **Next : Incident settings >**:
 
-13. For the Incident settings set the following: 
+13. For the Incident settings set the following:
 
 - Incident settings: Enabled
 - Alert grouping: Disabled
