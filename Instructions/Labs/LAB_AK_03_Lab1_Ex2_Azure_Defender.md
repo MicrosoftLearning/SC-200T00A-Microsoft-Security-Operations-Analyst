@@ -10,7 +10,7 @@ In this task, you will load sample security alerts and review the alert details.
 
 1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
-2. In the Edge browser, open the Azure portal at https://portal.azure.com.
+2. In the Edge browser, open the Azure portal at (https://portal.azure.com).
 
 3. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
@@ -20,13 +20,13 @@ In this task, you will load sample security alerts and review the alert details.
 
 6. Select **Security alerts** in the portal menu.
 
-7. Select **Sample Alerts** from the command bar (hint: you may need to select the elipse button from the command bar).
+7. Select **Sample alerts** from the command bar (hint: you may need to select the ellipsis button from the command bar).
 
 **Note** Wait for the sample alerts to load.
 
-8. In the Create sample alerts (Preview) pane make sure your subscription is selected.  Make sure all sample alerts are selected and select **Create sample alerts**.  
+8. In the Create sample alerts (Preview) pane make sure your subscription is selected.  Make sure all sample alerts are selected in the Azure Defender plans area and select **Create sample alerts**.  
 
-**Note**This may take a few minutes to complete.
+**Note** This sample alert creation process may take a few minutes to complete.  Once complete each of the alerts should appear in the Azure Security Center - Security alerts area.
 
 9. For each of the alerts listed.  Perform the following actions:
 

@@ -10,7 +10,7 @@ In this task, you will create an Azure Sentinel workspace.
 
 1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
-2. Open the browser, search for, download, and install the new Microsoft Edge browser. Start the new Edge browser.
+2. Open the Edge browser.
 
 3. In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
 
@@ -30,15 +30,15 @@ In this task, you will create an Azure Sentinel workspace.
 
 10. Select the **Create New** link for the Resource Group and enter a new resource group name of your choosing.
 
-11. Under Instance details in the name field enter a name for your choosing for the Log Analytics Workspace.
+11. Under *Instance details* in the name field enter a name for your choosing for the Log Analytics Workspace.
 
 **Note:** This name will also be the Azure Sentinel workspace name.
 
-12. Select the region that is appropriate for you.  The appropriate region may default or your instructor may have specific advice on which region to select.  
+12. Select the region that is appropriate for you. The appropriate region may default or your instructor may have specific advice on which region to select.  
 
 13. Select **Review + Create**.
 
-14. Select **Create**. Wait for the new Log Analytics workspace to appear in the list on the Add Azure Sentinel to a workspace page.  This may take a minute.
+14. In the Create Log Analytics workspace area select **Create**. Wait for the new Log Analytics workspace to appear in the list on the *Add Azure Sentinel to a workspace* page.  This may take a minute.
 
 15. Select your newly created workspace when it appears, then select **Add**.
 
@@ -46,26 +46,26 @@ In this task, you will create an Azure Sentinel workspace.
 
 ### Task 2: Create a Watchlist.
 
-In this task, you will create a watchlist.
+In this task, you will create a watchlist in Azure Sentinel.
 
-1. In the search box at the bottom of the screen, enter *Notepad*.  Select **Notepad** from the results.
+1. In the search box at the bottom of the Windows 10 screen, enter *Notepad*.  Select **Notepad** from the results.
 
 2. Type *Hostname* then enter for a new line.
 
-3. In Row 2 through 6, add the following hostnames:
+3. In Row 2 through 6 of the notepad, add the following hostnames:
     Host1
     Host2
     Host3
     Host4
     Host5
 
-4. From the menu select, **File - Save As**, Name the file *HighValue.csv*.  Then change the file type to **All files(*.*)**.  Then select **Save**.
+4. From the menu select, **File - Save As**, Name the file *HighValue.csv*.  Then change the file type to **All files(*.*)**.  Then select **Save**.  The file can be saved in the *Documents* folder for the PC.
 
 5. Close Notepad.
 
 6. In Azure Sentinel, select the **Watchlist** option in the Configuration area.
 
-7. Select **Add new** from the command bar.
+7. Select **+ Add new** from the command bar.
 
 8. In the Watchlist wizard, enter the following:
     Name: HighValueHosts
@@ -80,7 +80,7 @@ In this task, you will create a watchlist.
 
 12. Select **Next: Review and Create >**.
 
-13. Select **Create**.
+13. Review the settings you entered and select **Create**.
 
 14. The screen returns to the watchlists list.
 
@@ -97,9 +97,9 @@ You can now use the _GetWatchlist('HighValueHosts') in your own KQL statements t
 
 ### Task 3: Create a Threat Indicator.
 
-In this task, you will create an indicator.
+In this task, you will create an indicator in Azure Sentinel.
 
-1. In Azure Sentinel, Select the **Threat intelligence** option in the Threat management area.
+1. In Azure Sentinel, select the **Threat intelligence** option in the Threat management area.
 
 2. Select **+ Add New** from the command bar.
 
@@ -109,13 +109,13 @@ In this task, you will create an indicator.
 
 5. For the name, enter the same value used for the Domain. An example would be *fmg.com*.
 
-6. Set the valid from field to today's date.
+6. Set the *valid from* field to today's date.
 
 7. Select **apply**.
 
 **Note** It could take a minute for the indicator to appear.
 
-8. Select **Logs** option in the General area.  You may need to disable the "Always show queries" option to get to the query window.
+8. Select the **Logs** option in the General area.  You may need to disable the "Always show queries" option to get to the query window.
 
 9. Run the following KQL statement.
 

@@ -14,7 +14,7 @@ In this task, you will access your Azure Sentinel workspace.
 
 1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
-2. Open the browser, search for, download, and install the new Microsoft Edge browser if you have not already done so. Start the new Edge browser.
+2. Open the Microsoft Edge browser.
 
 3. In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
 
@@ -28,7 +28,7 @@ In this task, you will access your Azure Sentinel workspace.
 
 ### Task 2: Connect the Azure Active Directory connector.
 
-In this task, you will connect the Azure Active Directory connector.
+In this task, you will connect the Azure Active Directory connector to Azure Sentinel.
 
 1. In the Configuration area select **Data connectors**.  In the Data Connectors page, select the **Azure Active Directory** connector from the list.
 
@@ -38,7 +38,7 @@ In this task, you will connect the Azure Active Directory connector.
 
 ### Task 3: Connect the Azure Active Directory Identity Protection connector.
 
-In this task, you will connect the Azure Active Directory Identity Protection connector.
+In this task, you will connect the Azure Active Directory Identity Protection connector to Azure Sentinel.
 
 1. From the Data Connectors Tab, select the **Azure Active Directory Identity Protection** connector from the list.
 
@@ -48,13 +48,15 @@ In this task, you will connect the Azure Active Directory Identity Protection co
 
 ### Task 4: Connect the Azure Defender connector.
 
-In this task, you will review the Azure Defender connector.
+In this task, you will connect the Azure Defender connector.
 
 1. From the Data Connectors tab, select the **Azure Defender** connector from the list.
 
 2. Select **Open connector page** on the connector information blade.
 
-3. Review the Connecting Options. Don't connect. This is for informational purposes only.
+3. In the Configuration area under subscriptions select your Azure subscription.
+
+4. In the Create incidents - Recommended! area, select **Enable**.
 
 ### Task 5: Connect the Microsoft Cloud App Security connector.
 

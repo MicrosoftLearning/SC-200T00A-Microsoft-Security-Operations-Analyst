@@ -2,7 +2,7 @@
 
 ### Task 1: Create a Windows Virtual Machine in Azure.
 
-In this task, you will create a Windows virtual machine.
+In this task, you will create a Windows virtual machine in Azure.
 
 1. Login to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
@@ -14,15 +14,15 @@ In this task, you will create a Windows virtual machine.
 
 5. Select **+ Create a Resource**.
 
-6. In the **search the Marketplace** box, enter *Windows 10*. 
+6. In the **search services and marketplace** box, enter *Windows 10*. 
 
-7. Select the **Create** dropdown for Microsoft Windows 10.  Then select **Windows 10 Enterprise, version 20H2**.
+7. Select the **Create** dropdown for *Microsoft Windows 10*.  Then select **Windows 10 Enterprise, version 20H2**.
 
 8. Select your Subscription.
 
 9. Create a new Resource Group named **rg-AZWIN01** if you have not done so already.
 
-**Note:** This needs to be a new resource group.  You are going to delete the virtual machine after the exercise.  
+**Note:** This should be a new resource group for tracking purposes.  
 
 10. Set the Virtual machine name to AZWIN01.
 
@@ -34,7 +34,7 @@ In this task, you will create a Windows virtual machine.
 
 **Hint:** It might be easiest to use your tenant password.
 
-14. Select Licensing confirmation.
+14. Select the Licensing confirmation.
 
 15. Select **Review + create**.
 
@@ -58,19 +58,9 @@ In this task, you will connect an Azure Windows virtual machine to Azure Sentine
 
 7. Select **Download & install agent for Azure Windows Virtual machines**.
 
-8. Select the **AZWIN01** virtual machine in the list that you just created in the previous task, then select **Connect**. Wait until the connecting message disappears.
+8. Select the **AZWIN01** virtual machine in the list that you just created in the previous task, then select **Connect**. Wait until the *connecting...* message disappears.
 
-9. Select **Virtual machines** in the navigation list. You should now see the machine is connected.
-
-**Note:** The virtual machine is only used in this task.  
-
-10. In the Azure portal search, enter *resource groups*.  Select **Resource Groups**.
-
-11. Select **rg-AZWIN01** from the list.
-
-12. Select **Delete resource group** from the command bar.
-
-13. Enter **rg-AZWIN01** into the "Are you sure you want to delete" pane, then select **Delete**.
+9. Select **Virtual machines** in the navigation list. You should now see the virtual machine has a Log Analytics Connection.
 
 ### Task 3: Connect a non-Azure Windows Machine.
 
@@ -78,9 +68,9 @@ In this task, you will connect a non-Azure Windows virtual machine to Azure Sent
 
 1. Login to WIN2 virtual machine as Admin with the password: **Pa55w.rd**.  
 
-2. Open the browser, search for, download, and install the new Microsoft Edge browser. Start the new Edge browser.
+2. Open the Microsoft Edge browser.
 
-3. Open a browser and log into the Azure Portal at https://portal.azure.com with your credentials.
+3. Open a browser and log into the Azure Portal at https://portal.azure.com with the credentials you've been using in the previous labs.
 
 4. In the Search bar of the Azure Portal, type *Sentinel*, then select **Azure Sentinel**.
 
@@ -98,7 +88,7 @@ In this task, you will connect a non-Azure Windows virtual machine to Azure Sent
 
 11. Select the link for **Download Windows Agent (64 bit)**.
 
-12. Run the .exe file that is downloaded and confirm and User Account Control prompt that may appear.
+12. Run the .exe file that is downloaded and confirm the User Account Control prompt that may appear.
 
 13. Select **Next** on the Welcome dialog.
 
@@ -106,9 +96,9 @@ In this task, you will connect a non-Azure Windows virtual machine to Azure Sent
 
 15. On the Agent Setup Options prompt, select **Connect the agent to Azure Log Analytics (OMS)** option, then select **Next**.
 
-16. In the browser, copy the **Workspace ID** from the Agents Management page and paste into the Workspace ID in the dialog. 
+16. In the browser with Azure Sentinel open, copy the **Workspace ID** from the Agents Management page and paste into the Workspace ID in the dialog. 
 
-17. In the browser, copy the **Primary key** from the Agents Management page and paste into the Primary key in the dialog. 
+17. In the browser with Azure Sentinel open, copy the **Primary key** from the Agents Management page and paste into the Workspace key in the dialog. 
 
 18. Select **Next**.
 
@@ -128,7 +118,7 @@ You should still be connected to the WIN2 virtual machine.  The following instru
 
 3. Open the downloaded file and extract the files to a new directory c:\sysmon
 
-4. In the Windows Taskbar for WIN2 search box, enter *command*.  The search results will show command prompt app.  Right-click on the command prompt app and select **Run as Administrator**.  Confirm any User Account Control prompts that appear.
+4. In the Windows Taskbar for WIN2 search box, enter *command*.  The search results will show Command Prompt app.  Right-click on the Command Prompt app and select **Run as Administrator**.  Confirm any User Account Control prompts that appear.
 
 5. Enter *cd \sysmon*
 
@@ -145,15 +135,15 @@ You should still be connected to the WIN2 virtual machine.  The following instru
 
 11. In the Search bar of the Azure portal, type *Sentinel*, then select **Azure Sentinel**.
 
-12. In Azure Sentinel, select **Settings** from the Configuration area and then select **Workspace settings** tab.
+12. In Azure Sentinel, select **Settings** from the Configuration area and then select **Workspace settings >** tab.
 
 13. Make sure your Azure Sentinel Workspace is selected.
 
-14. Select **Agents configuration** in Settings.
+14. Select **Agents configuration** from the Settings area.
 
 15. Select the **Windows Event logs** tab.
 
-16. Select **+ Add windows event log** button.
+16. Select **Add windows event log** button.
 
 17. Enter **Microsoft-Windows-Sysmon/Operational** in the Log name field.
 
@@ -163,13 +153,13 @@ You should still be connected to the WIN2 virtual machine.  The following instru
 
 In this task, you will on-board a device to Microsoft Defender for Endpoint.
 
-**Note:** If you completed the labs in the first module of this course you have already performed this task.  If you’re using the same virtual machine from that lab exercise you don’t need to do this task.
+**Note:** If you completed the labs in the first module of this course you have already performed this task.  If you’re using the same virtual machine from that lab exercise you can skip this task.
 
 1. Login to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
-2. Go to the Microsoft Defender Security Center at (https://securitycenter.microsoft.com) and login with the **Tenant Email** credentials if you are not currently in the portal.
+2. In the Edge browser, go to the Microsoft 365 Defender portal at (https://security.microsoft.com) and login with the **Tenant Email** credentials if you are not currently in the portal.
 
-3. Select **Settings** from the left menu bar.
+3. Select **Settings** from the left menu bar, then from the Settings page select **Endpoints**.
 
 4. Select **Onboarding** in the Device management section.
 
@@ -181,8 +171,8 @@ In this task, you will on-board a device to Microsoft Defender for Endpoint.
 
 8. Run the WindowsDefenderATPLocalOnboardingScript.cmd file that you just extracted as administrator. **Note** By default the file should be in the c:\users\admin\downloads directory. Answer Y to questions presented by the script. 
 
-9. From the Onboarding page in the Microsoft Defender Security Center portal, copy the detection test script and run in the open **Administrator: Command Prompt** window.
+9. From the Onboarding page in the portal, copy the detection test script and run it in an open command window.  You may have to open a new **Administrator: Command Prompt** window by typing *CMD* in the windows search bar and choose to **run as Administrator**.
 
-10. In the Microsoft Defender Security Center portal menu, select **Devices inventory** icon from the left navigation. You should now see your device in the list. **Note** It can take up to 5 minutes for the device to be displayed in the portal.
+10. In the Microsoft 365 Defender portal in the Endpoints area, select **Device inventory**. You should now see your device in the list.
 
 ## Proceed to Exercise 3

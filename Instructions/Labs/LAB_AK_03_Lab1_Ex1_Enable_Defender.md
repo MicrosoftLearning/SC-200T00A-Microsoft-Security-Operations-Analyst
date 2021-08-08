@@ -104,7 +104,7 @@ In this task, you will install Azure Arc on an on-premises server.
 
 **Note** Wait three minutes for processing.
 
-14. Select the **Download** button. 
+14. Select the **Download** button. Hint: if your browser blocks the download take action in the browser to allow it.
 
 15. Open Windows PowerShell and select **Run as Administrator**.
 
@@ -124,7 +124,7 @@ PS C:\Users\Administrator\Downloads
 
 22. Enter **R** to Run once and press enter (this may take a couple minutes).
 
-23. Follow the instructions on the last line of the output in PowerShell, to complete the device registration.  This will include authentication of the device through a browser.
+23. Follow the instructions on the last line of the output in PowerShell, to complete the device registration.  This will include authentication of the device through a browser.  Look for the (https://microsoft.com/devicelogin) browser prompt that should appear.
 
 24. On the Azure Arc portal page, select **Servers**.
 

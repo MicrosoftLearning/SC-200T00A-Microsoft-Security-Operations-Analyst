@@ -6,7 +6,7 @@ In this task, you will access your Azure Sentinel workspace.
 
 1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
-2. Open the browser, search for, download, and install the new Microsoft Edge browser if you have not already done so. Start the new Edge browser.
+2. Start the Microsoft Edge browser.
 
 3. In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
 
@@ -22,7 +22,7 @@ In this task, you will access your Azure Sentinel workspace.
 
 In this task, you will connect a Linux host to Azure Sentinel with the Common Event Format (CEF) connector.
 
-1. Select **Data connectors** from the Configuration area in Azure Sentinel.  From the Data Connectors tab, select the **Common Event Format** connector from the list.
+1. Select **Data connectors** from the Configuration area in Azure Sentinel.  From the Data Connectors tab, select the **Common Event Format (CEF)** connector from the list.
 
 2. Select **Open connector page** on the connector information blade.
 
