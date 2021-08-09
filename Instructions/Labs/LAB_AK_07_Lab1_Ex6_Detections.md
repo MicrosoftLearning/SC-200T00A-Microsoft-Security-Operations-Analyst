@@ -103,7 +103,7 @@ Event
 
 ```
 
-     ![Screenshot](../Media/SC200_sysmon_query1.png)
+   ![Screenshot](../Media/SC200_sysmon_query1.png)
 
 17.  You could continue to build your detection rule from here, but this KQL statement looks like it could be reused in other detection rule's KQL statements.  In the Log window, select **Save**, then **Save as function**. In the Save flyout, enter the following and save the function:
 
@@ -263,7 +263,7 @@ DeviceRegistryEvents
 
 ```
 
-     ![Screenshot](../Media/SC200_sysmon_query2.png)
+   ![Screenshot](../Media/SC200_sysmon_query2.png)
 
 9.  Now that you have a good detection rule, in the Log window with the query, select the **+ New alert rule** in the Command Bar.  Then select **Create Azure Sentinel alert**.
 
@@ -362,7 +362,7 @@ SecurityEvent
 ```
 This looks like a good detection rule.  
 
-     ![Screenshot](../Media/SC200_sysmon_attack3.png)
+   ![Screenshot](../Media/SC200_sysmon_attack3.png)
 
 **Note:** This KQL might not return the expected results because of the small dataset used in the lab.
 
@@ -414,8 +414,7 @@ Select **Next : Set rule logic >** button.
 14. For the Automated response tab set the following:
 
 - Select **PostMessageTeams-OnAlert**.
-
-Select **Next : Review >** button.
+- Select **Next : Review >** button.
 
 15. On the Review tab, select **Create**.
 
