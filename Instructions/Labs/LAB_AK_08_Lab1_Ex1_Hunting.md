@@ -40,6 +40,8 @@ DeviceEvents
 | render timechart 
 ```
 
+   ![Screenshot](../Media/SC200_hunting1.png)
+
 9. The goal of this statement is to provide a visualization to check for a C2 beaconing out on a consistent basis.  Take time to adjust the 3m setting to 30s and more.  Change the count_ > 5 setting to other threshold counts to witness the impact.
 
 10. You have now identified DNS requests that are beaconing to a C2 server.  Next, determine which devices are beaconing.  Enter the following KQL Statement:
@@ -54,14 +56,15 @@ DeviceEvents
 | summarize cnt=count() by bin(TimeGenerated, 5m), c2, DeviceName
 | where cnt > 15
 ```
+   ![Screenshot](../Media/SC200_hunting2.png)
 
-**Note** The generate log data is only from one device.
+**Note** The generated log data is only from one device.
 
 11. Select the **Hunting** page in the Threat Management area of the Azure Sentinel portal.
 
-12. Select **New Query** from the command bar.
+12. Select **+ New Query** from the command bar.
 
-13. For the Query enter the following KQL statement:
+13. For the **Custom query** enter the following KQL statement:
 
 ```KQL
 let lookback = 2d;
@@ -87,25 +90,25 @@ DeviceEvents
 
 18. Select **C2 Hunt** in the list.
 
-19.  Select the **Run Query** button on the right side of the page.
+19. Select the **Run Query** button on the right side of the page.
 
 20. The result count is displayed at the top of the flyout.
 
-21. Select **View Results**.
+21. Select the **View Results** button.
 
 22. Select the first row in the results. 
 
-23. Select **Add bookmark**.
+23. Select the **Add bookmark** button.
 
-24. Select **Create** in the pane that appears.
+24. In the Add bookmark fly-out Select **Create** in the pane that appears.
 
-25. Return to the Hunting page in the Azure Sentinel portal.
+25. Return to the Hunting page in the Azure Sentinel portal (hint: scroll to the left).
 
 26. Select the **Bookmarks** tab.
 
-27. Select the bookmark in the results list.
+27. Select the bookmark you just created in the results list.
 
-28. Select **Investigate** in the flyout pane.
+28. Select **Investigate** button in the fly-out pane.
 
 29. Explore the Investigation graph.
 

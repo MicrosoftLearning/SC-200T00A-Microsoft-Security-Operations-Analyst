@@ -22,7 +22,7 @@ In this task, you will explore using notebooks in Azure Sentinel.
 
 7. In the Azure Sentinel Workspace, select **Notebooks**.
 
-8. Next, you need to select an AzureML Workspace. Select **Create new AML workspace**.
+8. Next, you need to select an AzureML Workspace. Select **Create new AML workspace** button in the command bar.
 
 9. In the Subscription box, select your subscription.
 
@@ -38,7 +38,7 @@ In this task, you will explore using notebooks in Azure Sentinel.
 
 **Note:** It may take a few moments to deploy the workspace. 
 
-13.	After the deployment is finished. Return the Azure Sentinel portal.
+13.	After the deployment is finished. Return to the Azure Sentinel portal.
 
 14. Select **Notebooks**. 
 
@@ -48,7 +48,7 @@ In this task, you will explore using notebooks in Azure Sentinel.
 
 17.	Next to the **Compute:** instance selector at the top of the screen, select the **+** symbol for **New Compute**.
 
-18.	Choose your compute settings. Then select **Next**.
+18.	Choose your compute settings.  Select the smaller compute available since this is a lab environment.
 
 19.	Name your Compute instance and select the **Create** button at the bottom of the screen.  This may take a few minutes.
 
