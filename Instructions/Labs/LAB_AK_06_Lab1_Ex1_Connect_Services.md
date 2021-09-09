@@ -54,9 +54,11 @@ In this task, you will connect the Azure Defender connector.
 
 2. Select **Open connector page** on the connector information blade.
 
-3. In the Configuration area under subscriptions select your Azure subscription.
+3. In the Configuration area under subscriptions select your Azure subscription and click **Connect**.
 
-4. In the Create incidents - Recommended! area, select **Enable**.
+4. Read the "Connect" message and select **OK** to continue. Your Azure subscription Status should be now *Connected*.
+
+5. In the Create incidents - Recommended! area, select **Enable**.
 
 ### Task 5: Connect the Microsoft Cloud App Security connector.
 
@@ -72,7 +74,7 @@ In this task, you will connect the Microsoft Cloud App Security connector.
 
 In this task, you will connect the Microsoft Defender for Office 365 connector.
 
-1. From the Data Connectors tab, select the **Microsoft Defender for Office 365** connector from the list.
+1. From the Data Connectors tab, select the **Microsoft Defender for Office 365 (Preview)** connector from the list.
 
 2. Select **Open connector page** on the connector information blade.
 
@@ -102,7 +104,7 @@ In this task, you will connect the Microsoft Defender for Endpoint connector.
 
 In this task, you will connect the Microsoft 365 Defender connector.
 
-1. From the Data Connectors Tab, select the **Microsoft 365 Defender** connector from the list.
+1. From the Data Connectors Tab, select the **Microsoft 365 Defender (Preview)** connector from the list.
 
 2. Select **Open connector page** on the connector information blade.
 
