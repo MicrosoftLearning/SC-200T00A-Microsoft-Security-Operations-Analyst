@@ -25,6 +25,8 @@ SecurityEvent
 
 In this task, you will build basic KQL statements.
 
+**Note:**  For each step, clear the previous statement from the Query Window or open a new Query Windows by selecting **+** after the last opened tab (up to 25).
+
 1. The following statement demonstrates the use of the let statement to declare variables. In the Query Window. Enter the following statement and select **run**: 
 
 
@@ -59,7 +61,7 @@ LowActivityAccounts | where Account contains "Mal"
 
 **Note:** When you run this script you should get no results.
 
-4. The following statement demonstrates searching across all tables and columns for records within the query time range display in the query window. In the Query Window before running this script change the Time range to "Last hour". Enter the following statement and select **run**: 
+4. The following statement demonstrates searching across all tables and columns for records within the query time range display in the query window. In the Query Window before running this script change the **Time range** to "Last hour". Enter the following statement and select **run**: 
 
 ```KQL
 search "err"
@@ -250,33 +252,29 @@ SecurityEvent
 | summarize arg_min(TimeGenerated,*) by Computer
 ```
 
-7. The following statements demonstrate the importance of understanding results based on the order of the pipe "|". In the Query Window. Enter the following statements and run each separately: 
+7. The following statements demonstrate the importance of understanding results based on the order of the pipe "|". In the Query Window. Enter the following queries and run each separately: 
 
-Statement 1
+**Query 1** will have Accounts for which the last activity was a login. The SecurityEvent table will first be summarized and return the most current row for each Account.  Then only rows with EventID equals 4624 (login) will be returned.
+
 ```KQL
 SecurityEvent
 | summarize arg_max(TimeGenerated, *) by Account
 | where EventID == "4624"
 ```
 
-Statement 2
+**Query 2** will have the most recent login for Accounts that have logged in.  The SecurityEvent table will be filtered to only include EventID = 4624. Then these results will be summarized for the most current login row by Account.
+
 ```KQL
 SecurityEvent
 | where EventID == "4624"
 | summarize arg_max(TimeGenerated, *) by Account
 ```
 
-Statement 1 will have Accounts for which the last activity was a login.
-
-The SecurityEvent table will first be summarized and return the most current row for each Account.  Then only rows with EventID equals 4624 (login) will be returned.
-
-Statement 2 will have the most recent login for Accounts that have logged in.  
-
-The SecurityEvent table will be filtered to only include EventID = 4624. Then these results will be summarized for the most current login row by Account.
+**Note:**  You can also review the "Total CPU" and "Data used for processed query" by selecting the "Completed." bar and compare the data between both statements.
 
 8. The following statement demonstrates the make_list function.
 
-The function returns a dynamic (JSON) array of all the values of Expression in the group. This KQL query will first filter the EventID with the where operator.  Next, for each Computer, the results are a JSON array of Accounts. The resulting JSON array will include duplicate accounts.
+The make_list function returns a dynamic (JSON) array of all the values of Expression in the group. This KQL query will first filter the EventID with the where operator.  Next, for each Computer, the results are a JSON array of Accounts. The resulting JSON array will include duplicate accounts.
 
 In the Query Window. Enter the following statement and select **run**: 
 
@@ -286,9 +284,9 @@ SecurityEvent
 | summarize make_list(Account) by Computer
 ```
 
-9. The following statement demonstrates the make_list function.
+9. The following statement demonstrates the make_set function.
 
-make_list returns a dynamic (JSON) array containing distinct values that Expression takes in the group. This KQL query will first filter the EventID with the where operator.  Next, for each Computer, the results are a JSON array of unique Accounts. In the Query Window. Enter the following statement and select **run**: 
+The make_set function returns a dynamic (JSON) array containing *distinct* values that Expression takes in the group. This KQL query will first filter the EventID with the where operator.  Next, for each Computer, the results are a JSON array of unique Accounts. In the Query Window. Enter the following statement and select **run**: 
 
 
 ```KQL
@@ -315,7 +313,7 @@ The bin() function rounds values down to an integer multiple of the given bin si
 
 ```KQL
 SecurityEvent 
-| summarize count() by bin(TimeGenerated, 1d) 
+| summarize count() by bin(TimeGenerated, 1h) 
 | render timechart
 ```
 
@@ -323,26 +321,16 @@ SecurityEvent
 
 In this task, you will build multi-table KQL statements.
 
-1. The following statement demonstrates the union operator that takes two or more tables and returns the rows of all of them. Understanding how results are passed and impacted with the pipe character is essential. Based on the time window set in the Query window:
-
-Query 1 will return all rows of SecurityEvent and all rows of SecurityAlert
-
-Query 2 will return one row and column, which is the count of all rows of SecurityEvent and all rows of SecurityAlert
-
-Query 3 will return all rows of SecurityEvent and one row for SecurityAlert.  The row for SecurityAlert will have the count of the SecurityAlert rows.
-
-Run each Query separately to see the results. 
-
-In the Query Window. Enter the following statements and select **run** for each: 
+1. The following statement demonstrates the union operator that takes two or more tables and returns the rows of all of them. Understanding how results are passed and impacted with the pipe character is essential. In the Query Window. Enter the following statements and select **run** for each separately to see the results: 
 
 
-**Query 1**
+**Query 1** will return all rows of SecurityEvent and all rows of SecurityAlert.
 ```KQL
 SecurityEvent 
 | union SecurityAlert  
 ```
 
-**Query 2**
+**Query 2** will return one row and column, which is the count of all rows of SecurityEvent and all rows of SecurityAlert.
 ```KQL
 SecurityEvent 
 | union SecurityAlert  
@@ -350,7 +338,7 @@ SecurityEvent
 | project count_
 ```
 
-**Query 3**
+**Query 3** will return all rows of SecurityEvent and one row for SecurityAlert.  The row for SecurityAlert will have the count of the SecurityAlert rows.
 ```KQL
 SecurityEvent 
 | union (SecurityAlert  | summarize count()) 
@@ -569,11 +557,11 @@ OfficeActivity
 
 To create a function:
 
+**Note:** You will not be able to do this in the lademo environment used for data in this lab, but it's an important concept to be used in your environment. 
+
 After running the query, select the **Save** button, enter the Name: MailboxForward, and select **Save As** Function from the drop-down.   
 
 The function will be available in KQL by using the function alias:
-
-**Note:** You will not be able to do this in the lademo environment used for data in this lab, but it's an important concept to be used in your environment. 
 
 ```KQL
 MailboxForward
