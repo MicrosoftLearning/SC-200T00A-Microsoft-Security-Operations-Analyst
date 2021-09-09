@@ -56,7 +56,7 @@ In this task, you will enable and configure Azure Defender.
 
 4. Select **Pricing & settings** from the Management area of the portal menu.
 
-5. Select your Subscription.
+5. Note that your "Azure Defender plan" is "On".  Select your Subscription. 
 
 6. Review the resources and fees.
 
@@ -84,11 +84,11 @@ In this task, you will install Azure Arc on an on-premises server.
 
 5. In the Search bar of the Azure portal, type *Arc*, then select **Azure Arc**.
 
-6. Select **Servers** from the Azure Arc page menu.
+6. Select **Servers** under "Infrastructure" from the Azure Arc page menu.
 
 7. Select **+ Add**.
 
-8. Select **Generate script** in the Add a single server section.
+8. Select **Generate script** in the "Add a single server" section.
 
 9. Select **Next : Resource details >**.
 
@@ -104,7 +104,7 @@ In this task, you will install Azure Arc on an on-premises server.
 
 **Note** Wait three minutes for processing.
 
-14. Select the **Download** button. Hint: if your browser blocks the download take action in the browser to allow it.
+14. Select the **Download** button. Hint: if your browser blocks the download take action in the browser to allow it. In Edge Browser, select the 3 dots "..." and then "Keep".
 
 15. Open Windows PowerShell and select **Run as Administrator**.
 
@@ -114,7 +114,7 @@ In this task, you will install Azure Arc on an on-premises server.
 
 18. Enter: cd Downloads
 The screen should show:
-PS C:\Users\Administrator\Downloads
+PS C:\Users\Administrator\Downloads>
 
 19. Type *Set-ExecutionPolicy -ExecutionPolicy Unrestricted* and press enter.
 
@@ -124,11 +124,11 @@ PS C:\Users\Administrator\Downloads
 
 22. Enter **R** to Run once and press enter (this may take a couple minutes).
 
-23. Follow the instructions on the last line of the output in PowerShell, to complete the device registration.  This will include authentication of the device through a browser.  Look for the (https://microsoft.com/devicelogin) browser prompt that should appear.
+23. Follow the instructions on the last line of the output in PowerShell, to complete the device registration.  This will include authentication of the device through a browser.  Look for the (https://microsoft.com/devicelogin) browser prompt that should appear and enter the code to authenticate.
 
-24. On the Azure Arc portal page, select **Servers**.
+24. On the Azure portal page, select **Close** and close the **Add servers with Azure Arc**. In the Azure Arc page, select **Servers**.
 
-25. Select **Refresh** until your server name appears.
+25. Select **Refresh** until WINServer server name appears.
 
 **Note** This could take a few minutes.
 
