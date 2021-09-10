@@ -37,7 +37,7 @@ In this task, you will perform the initialization of the Microsoft Defender for 
 
 7. On the **Settings** page select **Microsoft 365 Defender**.  Select **Preview features** and make sure preview features are turned on. Return to the **Settings** menu.
 
-8. On the **Settings** page select **Device discovery**.  In Discovery setup make sure **Standard discovery** is selected.  Return to the **Settings** menu.
+8. On the **Settings** page select **Device discovery**.  In Discovery setup make sure **Standard discovery** is selected.  Return to the **Settings** menu. **Note**: If you don't see the **Device discovery** option under **Settings**, logout by clicking the top-right circle with your account initials and click  **Sign out**. Login again with the **Tenant Email** credentials.
 
 **Note**: The Defender for Endpoint setup should be performed automatically by your Microsoft 365 E5 tenant.  You can view the other settings if you like.  You will onboard Devices in the next task.  
 
@@ -51,7 +51,7 @@ In this task, you will onboard a device to Microsoft Defender for Endpoint using
 
 3. Select **Onboarding** in the Device management section.
 
-4. In the Onboard a device area make sure "Local Script (for up to 10 devices)" is displayed in the Deployment method drop-down and select the **Download Package** button.
+4. In the "1. Onboard a device" area make sure "Local Script (for up to 10 devices)" is displayed in the Deployment method drop-down and select the **Download onboarding package** button.
 
 5. Extract the downloaded zip file to a local folder like the Documents folder.
 
@@ -59,9 +59,9 @@ In this task, you will onboard a device to Microsoft Defender for Endpoint using
 
 **Note** By default, the file should be in the c:\users\admin\downloads directory.
     
-7. Answer **Y** to questions presented by the script. When complete you should see a message in the command screen that says something like "Successfully onboarded machine..." 
+7. Answer **Y** to questions presented by the script and press **Enter**. When complete you should see a message in the command screen that says something like "Successfully onboarded machine...". Press any key to close the window.
 
-8. From the Onboarding page in the portal, copy the detection test script and run it in an open command window.  You may have to open a new **Administrator: Command Prompt** window by typing *CMD* in the windows search bar and choose to **run as Administrator**.
+8. From the Onboarding page in the portal under the "2. Run a detection test" area, copy the detection test script and run it in an open command window.  You may have to open a new **Administrator: Command Prompt** window by typing *CMD* in the windows search bar and choose to **run as Administrator**. The **Administrator: Command Prompt** closes automatically after running the script.
 
 9. In the Microsoft 365 Defender portal in the Endpoints area, select **Device inventory**. You should now see your device in the list.
 
@@ -109,7 +109,7 @@ In this task, you will configure device groups that allow for access control and
 
 6. On the Devices tab for the OS condition select **Windows 10** and select **Next**.
 
-7. On the Preview devices tab you may select Show preview and see your local Windows 10 virtual machine.  Select **Next**.
+7. On the Preview devices tab you may select **Show preview** and see your local Windows 10 virtual machine.  Select **Next**.
 
 8. For the User access tab, select **sg-IT** and then select **Add selected groups** button.
 

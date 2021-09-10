@@ -74,7 +74,7 @@ In this task, you will create a watchlist in Azure Sentinel.
 
 9. Select, **Next: Source >**.
 
-10. Browse for the *HighValue.csv* file you just created.
+10. Select **Browse for files** and browse for the *HighValue.csv* file you just created.
 
 11. In the SearchKey field select **Hostname**.
 
@@ -99,7 +99,7 @@ You can now use the _GetWatchlist('HighValueHosts') in your own KQL statements t
 
 In this task, you will create an indicator in Azure Sentinel.
 
-1. In Azure Sentinel, select the **Threat intelligence** option in the Threat management area.
+1. In Azure Sentinel, select the **Threat intelligence (Preview)** option in the Threat management area.
 
 2. Select **+ Add New** from the command bar.
 
