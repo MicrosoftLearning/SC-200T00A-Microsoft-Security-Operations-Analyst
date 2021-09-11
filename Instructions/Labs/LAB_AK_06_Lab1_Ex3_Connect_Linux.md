@@ -28,7 +28,7 @@ In this task, you will connect a Linux host to Azure Sentinel with the Common Ev
 
 3. Copy to the clipboard the command shown in *1.2 Install the CEF collector on the Linux machine*.
 
-4. Launch your LIN1 virtual machine and login with the username as password provided by your lab hoster. Note the IP address for your LIN1 server. See the screenshot below as an example:
+4. Launch your LIN1 virtual machine and login with the username and password provided by your lab hoster. Note the IP address for your LIN1 server. See the screenshot below as an example:
 
    ![linux login](../Media/LinuxLoginExample.png)
 
@@ -71,7 +71,7 @@ In this task, you will connect a Linux host to Azure Sentinel with the Syslog co
 
 7. Copy the command in the *Download and onboard agent for Linux* area to the clipboard.
 
-8. Launch your LIN2 virtual machine and login with the username as password provided by your lab hoster. Note the IP address for your LIN1 server. See the screenshot below as an example:
+8. Launch your LIN2 virtual machine and login with the username as password provided by your lab hoster. Note the IP address for your LIN2 server. See the screenshot below as an example:
 
    ![linux login](../Media/LinuxLoginExample.png)
 
