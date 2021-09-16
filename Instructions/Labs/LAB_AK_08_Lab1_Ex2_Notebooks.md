@@ -42,7 +42,7 @@ In this task, you will explore using notebooks in Azure Sentinel.
 
 14. Select **Notebooks**. 
 
-15. Select **A Getting Started Guide For Azure Sentinel ML Notebooks**, then select **Save notebook** button.  In the pop-up for the name of your notebook let default and select **OK**.
+15. Select **A Getting Started Guide For Azure Sentinel ML Notebooks**, then select **Clone notebook template** button.  In the pop-up for the name of your notebook let default and select **OK**.
 
 16. Select the **Launch notebook** button.
 
