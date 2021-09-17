@@ -1,4 +1,4 @@
-# Module 2 - Lab 1 - Exercise 1 - Explore Microsoft 365 Defender 
+# Module 1 - Lab 1 - Exercise 1 - Explore Microsoft 365 Defender 
 
 ## Lab scenario
 

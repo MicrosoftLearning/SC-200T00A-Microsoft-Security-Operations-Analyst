@@ -1,4 +1,4 @@
-# Module 1 - Lab 1 - Exercise 1 - Deploy Microsoft Defender for Endpoint
+# Module 2 - Lab 1 - Exercise 1 - Deploy Microsoft Defender for Endpoint
 
 ## Lab scenario
 
