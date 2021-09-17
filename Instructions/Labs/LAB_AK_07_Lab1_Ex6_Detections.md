@@ -32,13 +32,15 @@ search "temp\\startup.bat"
 ```
 
 10. The results show for three different tables:
-    DeviceProcessEvents
-    DeviceRegistryEvents
-    Event
+    - DeviceProcessEvents
+    - DeviceRegistryEvents
+    - Event
 
-    The Device* tables are from Defender for Endpoint (Data Connector - Microsoft 365 Defender).  Event is from our Data Connector Security Events. 
+    The *Device* tables are from Defender for Endpoint (Data Connector - Microsoft 365 Defender).  *Event* is from our Data Connector Security Events. 
 
     Since we are receiving data from two different sources - Sysmon and Defender for Endpoint,  we will need to build two KQL statements that could be unioned later.  In our initial investigation, you will look at each separately.
+
+    **Note:** On rare occasion the data loading process may take longer to load than normal.  When that happens the tables may not appear in the query for some hours.
 
 11. Our first data source is Sysmon from Windows hosts.  Run the following KQL Statement.
 
