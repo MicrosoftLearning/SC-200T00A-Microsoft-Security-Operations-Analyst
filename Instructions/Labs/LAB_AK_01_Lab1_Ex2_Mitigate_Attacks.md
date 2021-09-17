@@ -14,8 +14,8 @@ In this task, you will run two simulated attacks to explore the capabilities of 
 
 2. From the menu, under **Endpoints**, select **Evaluation & tutorials**  and then select **Tutorials & simulations** from the left side.
 
-3. Select the **Tutorials** tab and complete the simulations titled *Automated investigation (backdoor)* and the tutorial titled *Automated investigation (fileless attack)*. Download the document required to run the simulation by selecting **Get simulation file** and follow the instructions under "Run the simulation" in the provided documentation by selecting **Read the walkthrough**. 
+3. Select the **Tutorials** tab and complete the simulations titled *Automated investigation (backdoor)* and the tutorial titled *Automated investigation (fileless attack)*. Read the documentation for the tutorial by selecting **Read the walkthrough** which includes instructions to perform the simulation. 
 
-**Warning** The simulations and tutorials here are an excellent source of learning through practice.  Simulations and tutorials are being added and edited regularly in the portal.  However, some of these simulations & tutorials may interfere with performance of the labs designed for this training course.  Only perform the simulations and tutorials recommended in the instructions provided for this lab.  You may perform the other simulations and tutorials *after* this training course is complete.
+**Warning** The simulations and tutorials here are an excellent source of learning through practice.  Simulations and tutorials are being added and edited regularly in the portal.  However, some of these simulations & tutorials may interfere with performance of the labs designed for this training course.  Only perform the simulations and tutorials recommended in the instructions provided for this lab when using the course provided Azure tenant.  You may perform the other simulations and tutorials *after* this training course is complete with this tenant.
 
 ## You have completed the lab.
