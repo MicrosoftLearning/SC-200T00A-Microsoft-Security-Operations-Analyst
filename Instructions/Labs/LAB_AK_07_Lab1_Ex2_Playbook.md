@@ -80,15 +80,27 @@ In this task, you will update the new playbook you created with the proper conne
 
 5. On the Logic App page for *PostMessageTeams-OnAlert*, select **Edit**.
 
-6. Select the **Connections** block.  
+6. Select the **When a response to an Azure Sentinel alert is triggered** block.
 
-7. Select **Add new**, and sign in with your admin Azure subscription admin credentials when prompted.
+7. Select **Change connection**.
 
-8. In the **Post a message** block, for the Team, select the **X** at the end of the edit box.  The edit box will be changed to a dropdown with a listing of the available teams from Microsoft Teams.  Select **SOC**.
+8. Select **Add new**, and sign in with your Azure subscription admin credentials when prompted.
 
-9. For the Channel, select the **X** at the end of the edit box.  The edit box will be changed to a dropdown with a listing of the Channels.  Select **New Alerts**.
+9. Now select the **Alert - Get incident** block.
 
-10. Select **Save** on the command bar.
+10. Select **Change connection**.
+
+11. Select the connection that has your Azure subscription admin credentials under *Display Name*.
+
+12. Now select the **Connections** block.
+
+13. Select **Add new**, and sign in with your Azure subscription admin credentials when prompted.
+
+14. Now in the **Post a message** block, for the Team select the **X** at the end of the edit box. The edit box will be changed to a dropdown with a listing of the available teams from Microsoft Teams.  Select **SOC**.
+
+15. For the Channel, select the **X** at the end of the edit box.  The edit box will be changed to a dropdown with a listing of the Channels. Select **New Alerts**.
+
+16. Select **Save** on the command bar.
 
 The Logic App will be used in a future lab.
 
