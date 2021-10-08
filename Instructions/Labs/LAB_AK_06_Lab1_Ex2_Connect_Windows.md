@@ -114,7 +114,7 @@ You should still be connected to the WIN2 virtual machine.  The following instru
 
 1. In the browser, go to https://docs.microsoft.com/sysinternals/downloads/sysmon
 
-2. Download Sysmon from the page by select **Download Sysmon**.
+2. Download Sysmon from the page by selecting **Download Sysmon**.
 
 3. Open the downloaded file and extract the files to a new directory c:\sysmon
 
