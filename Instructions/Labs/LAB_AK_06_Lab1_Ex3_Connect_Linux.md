@@ -28,25 +28,30 @@ In this task, you will connect a Linux host to Azure Sentinel with the Common Ev
 
 3. Copy to the clipboard the command shown in *1.2 Install the CEF collector on the Linux machine*.
 
-4. The next steps are specific to limitations in copying from a virtual machine in the lab environment. In the browser, navigate to https://outlook.office.com.
+4. Launch your LIN1 virtual machine and login with the username and password provided by your lab hoster. Note the IP address for your LIN1 server. See the screenshot below as an example:
 
-5. Create a New Message to *MOD Administrator*.
+   ![linux login](../Media/LinuxLoginExample.png)
 
-6. Paste the clipboard command that was copied from the connector page and send the email message.
+5. Go back to the WIN1 virtual machine and launch Windows PowerShell as Administrator.
 
-7. Open an InPrivate browser session on your local (not a lab virtual machine) and navigate to https://outlook.office.com.
+6. Enter the following PowerShell command, adjusting for your specific Linux server information, and press enter:
 
-8. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
+```PowerShell
+ssh <insert your linux IP address here> -l <insert linux user name here>
+```
 
-9. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
+7. When prompted in PowerShell for the user's password enter it and press enter.  Your screen should look something like this:
 
-10. Copy the command that you emailed to yourself.
+   ![linux login](../Media/PSconnectLinux.png)
 
-11. Log in to LIN1 virtual machine as root with the password: **Passw0rd!** or whatever Linux machine credentials your lab provider has assembled for you.
+8. You are now ready to paste in the *1.2 Install the CEF collector on the Linux machine* from the earlier step. Make sure that script from Azure is in the clipboard. In PowerShell right-click the top bar and choose **Edit** and then **Paste**. Once pasted add a **3** to the word *python* as shown below:
 
-12. Paste the command in the terminal window.
+   ![ConnectorScript](../Media/ConnectorScript.png)
 
-13. In the command, where you see the word "python" change it to "python3" and press enter to execute the command.
+
+9. Once the script is pasted in and adjusted press enter. The script will run against your Linux server remotely. When the script processes properly it should look similar to this screen:
+
+   ![ConnectorScript](../Media/LinuxConnected.png)
 
 ### Task 3: Connect a Linux host using the Syslog connector.
 
@@ -66,23 +71,25 @@ In this task, you will connect a Linux host to Azure Sentinel with the Syslog co
 
 7. Copy the command in the *Download and onboard agent for Linux* area to the clipboard.
 
-8. The next steps are specific to limitations in copying from a Virtual Machine in the lab environment. In the browser, navigate to https://outlook.office.com.
+8. Launch your LIN2 virtual machine and login with the username as password provided by your lab hoster. Note the IP address for your LIN2 server. See the screenshot below as an example:
 
-9. Create a New Message to *MOD Administrator*.
+   ![linux login](../Media/LinuxLoginExample.png)
 
-10. Paste the clipboard command that was copied from the connector page into the body of the email message and send it to yourself.
+9. Go back to the WIN1 virtual machine and launch Windows PowerShell as Administrator.
 
-11. Open a browser on your local (not a lab virtual machine) and navigate to https://outlook.office.com.
+10. Enter the following PowerShell command, adjusting for your specific Linux server information, and press enter:
 
-12. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
+```PowerShell
+ssh <insert your linux IP address here> -l <insert linux user name here>
+```
 
-13. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
+11. When prompted in PowerShell for the user's password enter it and press enter.  Your screen should look something like this:
 
-14. Copy the command that you emailed to yourself.
+   ![linux login](../Media/PSconnectLinux.png)
 
-15. Log in to LIN2 virtual machine as user *root* with the password: **Passw0rd!** or whatever Linux machine credentials your lab provider has assembled for you.  
+12. You are now ready to paste in the *Download and onboard agent for Linux* from the earlier step. Make sure that script from Azure is in the clipboard. In PowerShell right-click the top bar and choose **Edit** and then **Paste**.
 
-16. Paste the command in the terminal window and press **enter**.  You have completed the task. No further labs in this course rely on this connection.
+13. Once the script is pasted in press enter. The script will run against your Linux server remotely. You have completed the task. No further labs in this course rely on this connection.
 
 ### Task 4: Configure the facilities you want to collect and their severities for the Syslog connector.
 

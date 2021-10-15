@@ -122,14 +122,16 @@ You should still be connected to the WIN2 virtual machine.  The following instru
 
 5. Enter *cd \sysmon*
 
-6. type *notepad sysmon.xml* to create a new file.
+6. Type *notepad sysmon.xml* to create a new file.
 
 7. Open a tab in the browser and navigate to: https://github.com/SwiftOnSecurity/sysmon-config/blob/master/sysmonconfig-export.xml
 
-8. Copy the contents of that file from Github to the sysmon.xml notepad file you just create and save the file.
+8. Select the **Raw** button and copy the contents of that file from Github to the sysmon.xml notepad file you just create and **save** the file.
 
 9. In the command prompt type the following and press enter:
     sysmon.exe -accepteula -i sysmon.xml
+
+**Note:**  Verify that "Configuration file validated" and "Sysmon started" messages appear in the output.
 
 10. In the browser, navigate to the Azure portal at https://portal.azure.com 
 
@@ -145,7 +147,7 @@ You should still be connected to the WIN2 virtual machine.  The following instru
 
 16. Select **Add windows event log** button.
 
-17. Enter **Microsoft-Windows-Sysmon/Operational** in the Log name field.
+17. Type **Microsoft-Windows-Sysmon/Operational** in the Log name field.
 
 18. Select **Apply**.
 
@@ -153,7 +155,7 @@ You should still be connected to the WIN2 virtual machine.  The following instru
 
 In this task, you will on-board a device to Microsoft Defender for Endpoint.
 
-**Note:** If you completed the labs in the first module of this course you have already performed this task.  If you’re using the same virtual machine from that lab exercise you can skip this task.
+**Note:** If you completed the labs in the first module of this course AND saved your Virtual Machines you have already performed this task.  If you’re using the same virtual machine from that lab exercise you can skip this task.
 
 1. Login to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
