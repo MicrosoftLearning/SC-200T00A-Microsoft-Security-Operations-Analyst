@@ -84,7 +84,7 @@ In this task, you will install Azure Arc on an on-premises server.
 
 5. In the Search bar of the Azure portal, type *Arc*, then select **Azure Arc**.
 
-6. Select **Servers** under "Infrastructure" from the Azure Arc page menu.
+6. Go to azure arc then to infrastructure and then servers.
 
 7. Select **+ Add**.
 
@@ -112,9 +112,7 @@ In this task, you will install Azure Arc on an on-premises server.
 
 17. Enter Passw0rd! for the password if prompted.
 
-18. Enter: cd Downloads
-The screen should show:
-PS C:\Users\Administrator\Downloads>
+18. Enter: cd C:\Users\Administrator\Downloads
 
 19. Type *Set-ExecutionPolicy -ExecutionPolicy Unrestricted* and press enter.
 
