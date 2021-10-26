@@ -1,10 +1,12 @@
+This file contains KQL scripts used in the course SC-200: Security Operations Analyst associate, Module 4 - 
+
+
 # Module 4 - Lab 1 - Exercise 1 - Create queries for Azure Sentinel using Kusto Query Language (KQL)
 
 ## Lab scenario
 You are a Security Operations Analyst working at a company that is implementing Azure Sentinel. You are responsible for performing log data analysis to search for malicious activity, display visualizations, and perform threat hunting. To query log data, you use the Kusto Query Language (KQL).
 
-**Hint:** This lab involves entering many KQL scripts into Azure Sentinel.  If you prefer to paste the scripts in from a text file, that file has been provided for you at this location:  https://github.com/MicrosoftLearning/SC-200T00A-Microsoft-Security-Operations-Analyst/tree/master/Allfiles
-
+**Hint:** This lab involves entering many KQL scripts into Azure Sentinel.  If you prefer to paste the scripts in from a text file, that file has been provided for you at this location:  
 
 ### Task 1: Access the KQL testing area.
 
@@ -571,4 +573,6 @@ MailboxForward
 ```
 
 ## You have completed the lab.
+
+
 
