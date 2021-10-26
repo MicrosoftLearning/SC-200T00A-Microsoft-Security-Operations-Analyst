@@ -132,7 +132,7 @@ PS C:\Users\Administrator\Downloads>
 
 **Note** This could take a few minutes.
 
-### Task 5: Protect an On-Premise Server.
+### Task 5: Protect an On-Premises Server.
 
 In this task, you will manually install the required agent on the Windows Server.
 
