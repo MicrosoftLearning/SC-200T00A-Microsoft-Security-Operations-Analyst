@@ -48,7 +48,7 @@ In this task, you will connect an Azure Windows virtual machine to Azure Sentine
 
 2. Select your Azure Sentinel Workspace you created earlier.
 
-3. From the Data Connectors Tab, select the **Security Events** connector from the list.
+3. From the Data Connectors Tab, select the **Security Events via Legacy Agent** connector from the list.
 
 4. Select your Azure Sentinel Workspace if prompted.
 
@@ -76,7 +76,7 @@ In this task, you will connect a non-Azure Windows virtual machine to Azure Sent
 
 5. Select your Azure Sentinel Workspace.
 
-6. Select **Data connectors** then select the **Security Events** connector from the list.
+6. Select **Data connectors** then select the **Security Events via Legacy Agent** connector from the list.
 
 7. Select **Open connector page** on the connector information blade.
 
