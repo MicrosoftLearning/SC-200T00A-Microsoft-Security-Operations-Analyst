@@ -102,6 +102,26 @@ In this task, you will update the new playbook you created with the proper conne
 
 16. Select **Save** on the command bar.
 
+17. We are now going to grant permissions to the Playbook Logic App to enable retrieval of information about incidents. In the Search bar of the Azure portal, type *Log Analytics*, then select **Log Analytics workspaces**.
+
+18. Select the workspace you created for Sentinel..
+
+19. Select the **Access control (IAM)** on the left menu, then select the **Role assignments** tab.
+
+20. Select **Add** in the top bar menu and then **Add role assignment**.
+
+21. Type *Contributor* in the search field and select the **Contributor** role. Then click the **Next** button at the bottom of the page.
+
+22. In the *Assign access to* field, select **Managed identity**.
+
+23. In *Members*, click on **Select members**.
+
+24. In the blade that appears, in *Managed identity*, choose **Logic app**.
+
+25. Select the *PostMessageTeams-OnAlert* identity and then click on the *Select* button.
+
+26. Click on *Next* and then *Review + Assign*.
+
 The Logic App will be used in a future lab.
 
 ## Proceed to Exercise 3
