@@ -74,7 +74,7 @@ In this task, you will update the new playbook you created with the proper conne
 
 2. Select your Azure Sentinel Workspace.
 
-3. Select the **Automation** from the Configuration area, and then select the **Playbooks** tab.
+3. Select the **Automation** from the Configuration area, and then select the **Active Playbooks** tab.
 
 4. Select the **PostMessageTeams-OnAlert** playbook.
 
