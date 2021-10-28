@@ -102,6 +102,16 @@ In this task, you will update the new playbook you created with the proper conne
 
 16. Select **Save** on the command bar.
 
+17. In Azure Sentinel, select Automation
+
+18. On the Automation rules (Preview tab) scroll down
+
+19. Click Configure Permissions
+
+20. Check the box next to rg-Playbooks
+
+21. Click Apply
+
 The Logic App will be used in a future lab.
 
 ## Proceed to Exercise 3
