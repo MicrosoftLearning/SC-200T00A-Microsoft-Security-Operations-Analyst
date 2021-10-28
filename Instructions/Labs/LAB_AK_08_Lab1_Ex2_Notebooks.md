@@ -22,7 +22,7 @@ In this task, you will explore using notebooks in Azure Sentinel.
 
 7. In the Azure Sentinel Workspace, select **Notebooks**.
 
-8. Next, you need to select an AzureML Workspace. Select **Configurate AML Workspace** and then click  **Create new AML workspace** button in the command bar.
+8. Next, you need to select an AzureML Workspace. Select **Configure Azure Machine Learning** and then click  **Create new AML workspace** button in the command bar.
 
 9. In the Subscription box, select your subscription.
 
