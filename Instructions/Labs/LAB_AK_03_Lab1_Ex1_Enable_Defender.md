@@ -84,25 +84,25 @@ In this task, you will install Azure Arc on an on-premises server.
 
 5. In the Search bar of the Azure portal, type *Arc*, then select **Azure Arc**.
 
-6. Go to azure arc then to infrastructure and then servers.
+6. In the navigation pane under **Infrastructor** select **Servers**
 
 7. Select **+ Add**.
 
 8. Select **Generate script** in the "Add a single server" section.
 
-9. Select **Next : Resource details >**.
+9. Select **Next** to get to the Resource details tab.
 
 10. Select the Resource group you created earlier. Hint: *rg-AzureDefender*
 
 **Note** If you haven't already created a resource group. Open another tab and create the resource group.
 
-11. Select **Next: Tags >**.
+11. Select **Next** to get to the Tags tab.
 
-12. Select **Next: Download and run script >**.
+12. Select **Next** to get to the Download and run script tab.
 
 13. Select **Register**.
 
-**Note** Wait three minutes for processing.
+**Note** Wait three (3) minutes for processing.
 
 14. Select the **Download** button. Hint: if your browser blocks the download take action in the browser to allow it. In Edge Browser, select the 3 dots "..." and then "Keep".
 
@@ -156,7 +156,9 @@ In this task, you will manually install the required agent on the Windows Server
 
 11. Go to the Security Center portal and select **Inventory**.
 
-12. The Server should appear in the list.  You may have to select **Refresh** to see the update and it may take a couple minutes.
+12. The Server should appear in the list.  You may have to select **Refresh** to see the update and it will take a few minutes.
+
+13. You can move on to the next lab, and return later to the **Security Center**. Your server will appear in the **Inventory** section. 
 
 
 # Proceed to Exercise 2
