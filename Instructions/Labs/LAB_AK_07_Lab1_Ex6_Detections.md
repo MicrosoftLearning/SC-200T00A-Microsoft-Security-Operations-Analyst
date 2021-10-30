@@ -51,7 +51,7 @@ The results now only show for the Event table.
 
 12. Expand the rows to see all the columns related to the record.  A few of the fields like EventData and ParameterXml have multiple data items stored as structured data.  This makes it difficult to query on specific fields.  
 
-13. Next, we have to build a KQL statement that parses the data from each row, allowing us to have meaningful fields.  In the Azure Sentinel Community on GitHub, there are many examples of Parsers in the Parsers folder.  Open another tab in your browser and navigate to: https://github.com/Azure/Azure-Sentinel
+13. Next, we have to build a KQL statement that parses the data from each row, allowing us to have meaningful fields.  In the Azure Sentinel Community on GitHub, there are many examples of Parsers in the Parsers folder.  Open another tab in your browser and navigate to: **https://github.com/Azure/Azure-Sentinel**
 
 14. Select the **Parsers** folder, then **Sysmon** folder.  You should be viewing: Azure-Sentinel/Parsers/Sysmon/Sysmon-v12.0.txt
 
