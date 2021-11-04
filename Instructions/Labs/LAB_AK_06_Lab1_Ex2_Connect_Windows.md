@@ -12,7 +12,7 @@ In this task, you will create a Windows virtual machine in Azure.
 
 4. In the **Enter password** dialog box, copy, and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
-5. Select **+ Create a Resource**.
+5. Select **+ Create a Resource**. If you were already in the Azure Portal, you might need to select *Microsoft Azure* from the top bar to go Home.
 
 6. In the **search services and marketplace** box, enter *Windows 10*. 
 
@@ -20,21 +20,21 @@ In this task, you will create a Windows virtual machine in Azure.
 
 8. Select your Subscription.
 
-9. Create a new Resource Group named **rg-AZWIN01** if you have not done so already.
+9. Select **Create new** for *Resource group*, enter rg-AZWIN01 as Name and select **OK**.
 
 **Note:** This should be a new resource group for tracking purposes.  
 
-10. Set the Virtual machine name to AZWIN01.
+10. In *Virtual machine name*, enter AZWIN01.
 
-11. Set the Region to the appropriate region for your area.  The appropriate region will probably default.
+11. Set the *Region* to the appropriate region for your area.  The appropriate region will probably default.
 
-12. Enter a Username of your choosing that is acceptable for Azure.
+12. Enter a *Username* of your choosing that is acceptable for Azure.
 
-13. Enter a Password of your choosing. 
+13. Enter a *Password* of your choosing. 
 
 **Hint:** It might be easiest to use your tenant password.
 
-14. Select the Licensing confirmation.
+14. Select the checkbox below *Licensing*.
 
 15. Select **Review + create**.
 
@@ -50,17 +50,15 @@ In this task, you will connect an Azure Windows virtual machine to Azure Sentine
 
 3. From the Data Connectors Tab, select the **Security Events via Legacy Agent** connector from the list.
 
-4. Select your Azure Sentinel Workspace if prompted.
+4. Select **Open connector page** on the connector information blade.
 
-5. Select **Open connector page** on the connector information blade.
+5. Select the **Install agent on Azure Windows Virtual Machine** option.
 
-6. Select the **Install agent on Azure Windows Virtual Machine** option.
+6. Select **Download & install agent for Azure Windows Virtual machines**.
 
-7. Select **Download & install agent for Azure Windows Virtual machines**.
+7. Select the **AZWIN01** virtual machine in the list that you just created in the previous task, then select **Connect**. Wait until the *connecting...* message disappears.
 
-8. Select the **AZWIN01** virtual machine in the list that you just created in the previous task, then select **Connect**. Wait until the *connecting...* message disappears.
-
-9. Select **Virtual machines** in the navigation list. You should now see the virtual machine has a Log Analytics Connection.
+8. Close the window by selecting the 'x' to go back to **Virtual machines** view. You should now see the virtual machine has a *Log Analytics Connection* to "This workspace".
 
 ### Task 3: Connect a non-Azure Windows Machine.
 
@@ -88,7 +86,7 @@ In this task, you will connect a non-Azure Windows virtual machine to Azure Sent
 
 11. Select the link for **Download Windows Agent (64 bit)**.
 
-12. Run the .exe file that is downloaded and confirm the User Account Control prompt that may appear.
+12. Open the *MMASetup-AMD64.exe* file that is downloaded and select **Yes** to allow the executable to run in the User Account Control window that appears.
 
 13. Select **Next** on the Welcome dialog.
 
@@ -110,32 +108,32 @@ In this task, you will connect a non-Azure Windows virtual machine to Azure Sent
 
 In this task, you will install and collect Sysmon logs.
 
-You should still be connected to the WIN2 virtual machine.  The following instructions will install Sysmon with the default configuration.  You should research community based configurations for Sysmon to be used on production machines.
+You should still be connected to the WIN2 virtual machine. The following instructions will install Sysmon with the default configuration. You should research community-based configurations for Sysmon to be used on production machines.
 
-1. In the browser, go to https://docs.microsoft.com/sysinternals/downloads/sysmon
+1. Open a new tab in the browser, go to https://docs.microsoft.com/sysinternals/downloads/sysmon
 
 2. Download Sysmon from the page by selecting **Download Sysmon**.
 
-3. Open the downloaded file and extract the files to a new directory c:\sysmon
+3. Hover the *Sysmon.zip* and select the folder icon. Right-click the downloaded file and select **Extract All...** enter *C:\Sysmon* under **Files will be extracted to this folder** and select **Extract**. 
 
-4. In the Windows Taskbar for WIN2 search box, enter *command*.  The search results will show Command Prompt app.  Right-click on the Command Prompt app and select **Run as Administrator**.  Confirm any User Account Control prompts that appear.
+4. In the Windows Taskbar for WIN2 search box, enter *command*.  The search results will show Command Prompt app.  Right-click on the Command Prompt app and select **Run as Administrator**.  Select **Yes** to allow the app to run in the User Account Control window that appears.
 
 5. Enter *cd \sysmon*
 
-6. Type *notepad sysmon.xml* to create a new file.
+6. Type *notepad sysmon.xml* to create a new file. Select **Yes** to confirm the file creation.
 
-7. Open a tab in the browser and navigate to: https://github.com/SwiftOnSecurity/sysmon-config/blob/master/sysmonconfig-export.xml
+7. Open a new tab in the browser, go to: https://github.com/SwiftOnSecurity/sysmon-config/blob/master/sysmonconfig-export.xml
 
-8. Select the **Raw** button and copy the contents of that file from Github to the sysmon.xml notepad file you just create and **save** the file.
+8. Select the **Raw** button and copy the contents of that file from GitHub to the sysmon.xml notepad file you just created. Select **File** and then select **Save** to save the file.
 
 9. In the command prompt type the following and press enter:
     sysmon.exe -accepteula -i sysmon.xml
 
-**Note:**  Verify that "Configuration file validated" and "Sysmon started" messages appear in the output.
+**Note:**  Verify that "Configuration file validated" and "Sysmon started" messages appear in the output. If that is not the case, verify that the data is properly copied and the sysmon.xml has been saved.
 
-10. In the browser, navigate to the Azure portal at https://portal.azure.com 
+10. In the browser, navigate back to the Azure portal at https://portal.azure.com 
 
-11. In the Search bar of the Azure portal, type *Sentinel*, then select **Azure Sentinel**.
+11. In the Search bar of the Azure portal, type *Sentinel*, then select **Azure Sentinel** and select your Azure Sentinel Workspace you created earlier.
 
 12. In Azure Sentinel, select **Settings** from the Configuration area and then select **Workspace settings >** tab.
 
@@ -155,7 +153,7 @@ You should still be connected to the WIN2 virtual machine.  The following instru
 
 In this task, you will on-board a device to Microsoft Defender for Endpoint.
 
-**Note:** If you completed the labs in the first module of this course AND saved your Virtual Machines you have already performed this task.  If you’re using the same virtual machine from that lab exercise you can skip this task.
+**IMPORTANT:** If you completed the labs in the first module of this course AND saved your Virtual Machines you have already performed this task.  If you’re using the same virtual machine from that lab exercise you can skip this task.
 
 1. Login to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 

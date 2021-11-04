@@ -32,7 +32,7 @@ In this task, you will connect a Linux host to Azure Sentinel with the Common Ev
 
    ![linux login](../Media/LinuxLoginExample.png)
 
-5. Go back to the WIN1 virtual machine and launch Windows PowerShell as Administrator.
+5. Go back to the WIN1 virtual machine and launch Windows PowerShell as Administrator by right-clicking the Start menu icon and select **Windows PowerShell (Admin)**. Select **Yes** to allow the app to run in the User Account Control window that appears.
 
 6. Enter the following PowerShell command, adjusting for your specific Linux server information, and press enter:
 
@@ -40,7 +40,7 @@ In this task, you will connect a Linux host to Azure Sentinel with the Common Ev
 ssh <insert your linux IP address here> -l <insert linux user name here>
 ```
 
-7. When prompted in PowerShell for the user's password enter it and press enter.  Your screen should look something like this:
+7. Enter *yes* to confirm the connection and then type the user's password and press enter. Your screen should look something like this:
 
    ![linux login](../Media/PSconnectLinux.png)
 
@@ -75,7 +75,9 @@ In this task, you will connect a Linux host to Azure Sentinel with the Syslog co
 
    ![linux login](../Media/LinuxLoginExample.png)
 
-9. Go back to the WIN1 virtual machine and launch Windows PowerShell as Administrator.
+9. Go back to the WIN1 virtual machine and launch a NEW Windows PowerShell as Administrator by right-clicking the Start menu icon and select **Windows PowerShell (Admin)**. Select **Yes** to allow the app to run in the User Account Control window that appears.
+
+**Note:** You can reuse the Windows PowerShell window if the *Installation completed* for the last task by entering *exit* to close the connection to LIN1.
 
 10. Enter the following PowerShell command, adjusting for your specific Linux server information, and press enter:
 
@@ -83,7 +85,7 @@ In this task, you will connect a Linux host to Azure Sentinel with the Syslog co
 ssh <insert your linux IP address here> -l <insert linux user name here>
 ```
 
-11. When prompted in PowerShell for the user's password enter it and press enter.  Your screen should look something like this:
+11. Enter *yes* to confirm the connection and then type the user's password and press enter. Your screen should look something like this:
 
    ![linux login](../Media/PSconnectLinux.png)
 
@@ -107,9 +109,9 @@ In this task, you will configure the Syslog collection facilities.
 
 6. Select **auth** from the drop-down menu for *Facility name*.
 
-7. Select the **Add facility** button.
+7. Select the **+ Add facility** button again.
 
-8. Enter *authpriv* from the drop-down menu for *Facility name*.
+8. Select **authpriv** from the drop-down menu for *Facility name*.
 
 9. Select **Apply**.  You have completed this task.
 

@@ -26,29 +26,31 @@ In this task, you will explore the configuration of a workbook.
 
 9. Review the Identity & Access workbook.
 
-10. In the **Azure Sentinel | Workbooks** area (hint: scroll to the left) select the **Templates** tab.
+10. Close the workbook by selecting the 'x' in the top-right corner. You should be in the **Azure Sentinel | Workbooks | Templates** tab.
 
-11. In the Templates tab search for and select **Azure AD Sign-in logs**, then select the **Save** button. 
+11. In the *Templates* tab search for and select **Azure AD Sign-in logs**, then select the **Save** button. 
 
-12. Select the location that is appropriate for your location.  The appropriate location usually defaults.
+12. Select the location that is appropriate for your location and select **OK**. The appropriate location usually defaults.
 
 13. Select the **View saved workbook** button.
 
 14. Select **Edit** in command bar.
 
-15. In the *Sign-ins by Location* area, select **Edit** at the bottom of the grid.
+15. In the *Sign-ins by Location* area, select **Edit** below the grid.
 
 #### To format columns, the Column setting panel provides customization options, do the following:
 
-16. Select the **Column Settings** button in the Query Command bar.
+16. Select the **Column Settings** button in the right of the Query Command bar.
 
-17. In the *Edit column settings* fly-in select the column **Failure Count|Interrupt Count**.
+**Note:** This button only appears if there is data in the report.
 
-18. Review the settings, including the Column renderer and Color palette.
+17. In the *Edit column settings* blade select the column **Failure Count|Interrupt Count (Heatmap + Formatted)**.
 
-19. Select the column **Trend**.
+18. Review the settings, including the *Column renderer* and *Color palette*.
 
-20. Review the settings, including the Column renderer and Color palette.
+19. Select the column **Trend (Spark line)**.
+
+20. Review the settings, including the *Column renderer* and *Color palette*.
 
 21. Select **cancel**.
 
@@ -56,23 +58,23 @@ In this task, you will explore the configuration of a workbook.
 
 22. Select the **Advanced Settings** tab in the Query.
 
-23. Review the *When items are selected, export parameters* setting.  Notice the *LocationDetail* field is selected.
+23. Review the *When items are selected, export parameters* setting.  Notice the *LocationDetails* field is selected.
 
 24. Select **Done Editing** at the bottom of the query.
 
-25. Select **Edit** for the Device Sign-in details table on the right side of the screen.  
+25. Select **Edit** below the *Device Sign-in details* grid on the right side of the screen.  
 
-26. In the query, locate "LocationDetails".  The query is using the parameter exported from the other query to filter results.
+26. In the query, locate "LocationDetails". The query is using the parameter exported from the other query to filter results.
 
-27. Select **Done Editing** for the query.
+27. Select **Done Editing** at the bottom of the query.
 
-28. Select **Done Editing** for the workbook.
+28. Select **Done Editing** at the top menu for the workbook and close the workbook by selecting the 'x' in the top-right corner. Select **OK** to discard any changes.
 
 ### Task 2: Create a Workbook.
 
 In this task, you will create a new workbook with advanced visualizations.
 
-1. Select **Workbooks** in the Azure Sentinel portal.
+1. Go back to the **Workbooks** area of the Azure Sentinel portal.
 
 2. Select **+ Add workbook**
 
@@ -80,25 +82,25 @@ In this task, you will create a new workbook with advanced visualizations.
 
 #### Edit Header text:
 
-4. Change *New workbook* to *My workbook*.
+4. Select **Edit** below the title of the workbook to change *## New workbook* to *## My workbook*.
 
-5. Select **Done Editing**.
+5. Select **Done Editing** for the Header text.
 
-6. Select **Edit** for the only visible graph.
+6. Select **Edit** below the only visible graph.
 
 7. Review the KQL statement that provides a union of counts across multiple tables.
 
-8. Select the **Done Editing**.
+8. Select the **Done Editing** for the Graph.
 
 9. Select **...** next to the graph area, then select **+ Add**, then select **Add query**.
 
 10. Enter *SecurityEvent* into the query box, then select the **Run Query** button.
 
-11. Change the Time Range to **Last 3 days**.
+11. Change the *Time Range* to **Last 3 days**.
 
-12. Change the Visualization to different options and see the results.
+12. Change the *Visualization* to **Bar chart** and see the results.
 
-13. Change the Visualization to **Time chart**.
+13. Change the *Visualization* to **Time chart** and see the results.
 
 14. Select **Style** from the Query tab.
 
@@ -110,9 +112,9 @@ In this task, you will create a new workbook with advanced visualizations.
 
 18. Select **Show refresh icon when not editing** box. 
 
-19. Select **Done Editing**.
+19. Select **Done Editing** for the new Graph.
 
-20. Select **Add**, then **Add query**.
+20. At the bottom of the Workbook select **Add**, then **Add query**.
 
 Enter the following KQL command for the query:
 
@@ -130,15 +132,15 @@ SecurityEvent
 
 25. Change percentage width to **25** and maximum width to **25**. 
 
-26. Select **Done Editing** for the Query.
+26. Select **Done Editing** for the new Query.
 
 27. Select **Done Editing** for the Workbook.
 
-28. Select **Save** and select **Save** again if prompted.
+28. Select the **Save** icon, change the *Title* to *My Workbook* and select **Save** again.
 
-29. Select **Workbooks** in the Azure Sentinel portal.
+29. Close the workbook by selecting the 'x' at the top-right or select **Workbooks** in the Azure Sentinel portal.
 
-30. Select the **My workbooks** tab.
+30. Select the **My workbooks** tab if needed.
 
 31. Select the workbook you just created.
 

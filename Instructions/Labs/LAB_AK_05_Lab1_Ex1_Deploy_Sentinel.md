@@ -24,11 +24,11 @@ In this task, you will create an Azure Sentinel workspace.
 
 8. Next, select **+ Create a new workspace**.
 
-**Note** First, you create a new Log Analytics Workspace.
+**Note:** First, you create a new Log Analytics Workspace.
 
 9. Select your proper Subscription.
 
-10. Select the **Create New** link for the Resource Group and enter a new resource group name of your choosing.
+10. Select the **Create New** link for the Resource Group and enter a new resource group name of your choosing and select **Ok**.
 
 11. Under *Instance details* in the name field enter a name for your choosing for the Log Analytics Workspace.
 
@@ -40,7 +40,7 @@ In this task, you will create an Azure Sentinel workspace.
 
 14. In the Create Log Analytics workspace area select **Create**. Wait for the new Log Analytics workspace to appear in the list on the *Add Azure Sentinel to a workspace* page.  This may take a minute.
 
-15. Select your newly created workspace when it appears, then select **Add**.
+15. Select your newly created workspace when it appears, then select **Add**. This could take a few minutes.
 
 16. Navigate around the newly created Azure Sentinel workspace to become familiar with the user interface options.
 
@@ -74,9 +74,9 @@ In this task, you will create a watchlist in Azure Sentinel.
 
 9. Select, **Next: Source >**.
 
-10. Select **Browse for files** and browse for the *HighValue.csv* file you just created.
+10. Select **Browse for files** under *Upload file* and browse for the *HighValue.csv* file you just created.
 
-11. In the SearchKey field select **Hostname**.
+11. In the *SearchKey field* select **Hostname**.
 
 12. Select **Next: Review and Create >**.
 
@@ -91,31 +91,34 @@ In this task, you will create a watchlist in Azure Sentinel.
 ```KQL
 _GetWatchlist('HighValueHosts')
 ```
-**Note** It could take a minute for the import to complete.
+
+**Note:** It could take a couple of minutes for the import to complete. You can continue with the following task and come back later to run this command.
 
 You can now use the _GetWatchlist('HighValueHosts') in your own KQL statements to access the list. The column to reference would be *Hostname*.
+
+17. Close the *Logs* window by selecting the 'x' in the top-right and click **OK** to discard the unsaved edits.
 
 ### Task 3: Create a Threat Indicator.
 
 In this task, you will create an indicator in Azure Sentinel.
 
-1. In Azure Sentinel, select the **Threat intelligence (Preview)** option in the Threat management area.
+1. In Azure Sentinel, select the **Threat intelligence** option in the Threat management area.
 
 2. Select **+ Add New** from the command bar.
 
 3. Review the different indicator types available in the Types dropdown. Select the **domain-name**. Enter your initials in the Domain box. An example would be *fmg.com*.
 
-4. For the threat type, select **malicious-activity**.
+4. For the *Threat types*, select **malicious-activity**.
 
-5. For the name, enter the same value used for the Domain. An example would be *fmg.com*.
+5. For the *Name*, enter the same value used for the Domain. An example would be *fmg.com*.
 
-6. Set the *valid from* field to today's date.
+6. Set the *Valid from* field to today's date.
 
-7. Select **apply**.
+7. Select **Apply**.
 
-**Note** It could take a minute for the indicator to appear.
+**Note:** It could take a couple of minute for the indicator to appear.
 
-8. Select the **Logs** option in the General area.  You may need to disable the "Always show queries" option to get to the query window.
+8. Select the **Logs** option in the General area. You may need to disable the "Always show queries" option and close the *Queries* window to get run the statements.
 
 9. Run the following KQL statement.
 
@@ -128,4 +131,5 @@ Scroll the results to the right to see the DomainName column. You can also run t
 ThreatIntelligenceIndicator
 | project DomainName
 ```
+
 ## You have completed the lab.
