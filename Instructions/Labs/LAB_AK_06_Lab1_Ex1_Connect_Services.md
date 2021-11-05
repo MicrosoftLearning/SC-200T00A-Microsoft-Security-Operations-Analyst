@@ -46,11 +46,11 @@ In this task, you will connect the Azure Active Directory Identity Protection co
 
 3. From the Configuration area select the **Connect** button.
 
-### Task 4: Connect the Azure Defender connector.
+### Task 4: Connect the Microsoft Defender for Cloud connector.
 
-In this task, you will connect the Azure Defender connector.
+In this task, you will connect the Microsoft Defender for Cloud connector.
 
-1. From the Data Connectors tab, select the **Azure Defender** connector from the list.
+1. From the Data Connectors tab, select the **Microsoft Defender for Cloud** connector from the list.
 
 2. Select **Open connector page** on the connector information blade.
 
@@ -58,13 +58,13 @@ In this task, you will connect the Azure Defender connector.
 
 4. Read the "Connect" message and select **OK** to continue. Your Azure subscription Status should be now *Connected*.
 
-5. In the Create incidents - Recommended! area, select **Enable**.
+5. Scroll down and in the Create incidents - Recommended! area, select **Enable**.
 
-### Task 5: Connect the Microsoft Cloud App Security connector.
+### Task 5: Connect the Microsoft Defender for Cloud Apps connector.
 
-In this task, you will connect the Microsoft Cloud App Security connector.
+In this task, you will connect the Microsoft Defender for Cloud Apps connector.
 
-1. From the Data Connectors Tab, select the **Microsoft Cloud App Security** connector from the list.
+1. From the Data Connectors Tab, select the **Microsoft Defender for Cloud Apps** connector from the list.
 
 2. Select **Open connector page** on the connector information blade.
 
@@ -108,8 +108,28 @@ In this task, you will connect the Microsoft 365 Defender connector.
 
 2. Select **Open connector page** on the connector information blade.
 
-3. Select all the checkboxes for Microsoft Defender for Endpoint.
+3. Select the *Name* checkbox to select all the checkboxes for Microsoft Defender for Endpoint.
 
 4. Select **Apply Changes**.
+
+### Task 10: Connect the Azure Activity connector.
+
+In this task, you will connect the Azure Activity connector.
+
+1. From the Data Connectors Tab, select the **Azure Activity** connector from the list.
+
+2. Select **Open connector page** on the connector information blade.
+
+3. In the Configuration area select **Launch Azure Policy Assignment Wizard>**.
+
+4. In the **Basics** tab, select the button with the three dots under **Scope** to select your subscription from the drop-down list and click **Select**.
+
+5. Select the **Parameters** tab, choose your Azure Sentinel workspace from the **Primary Log Analytics workspace** drop-down list.
+
+6. Select the **Remediation** tab and mark the **Create a remediation task** checkbox.
+
+7. Select the **Review + Create** button to review the configuration.
+
+8. Select **Create** to finish.
 
 ## Proceed to Exercise 2

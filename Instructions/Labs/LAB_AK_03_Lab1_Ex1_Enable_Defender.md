@@ -1,8 +1,8 @@
-# Module 3 - Lab 1 - Exercise 1 - Enable Azure Defender
+# Module 3 - Lab 1 - Exercise 1 - Enable Microsoft Defender for Cloud
 
 ## Lab scenario
 
-You're a Security Operations Analyst working at a company that is implementing cloud workload protection with Azure Defender.  In this lab you will enable Azure Defender.
+You're a Security Operations Analyst working at a company that is implementing cloud workload protection with Microsoft Defender for Cloud.  In this lab you will enable Microsoft Defender for Cloud.
 
 ### Task 1: Access the Azure portal and set up a Subscription.
 
@@ -10,7 +10,7 @@ In this task, you will set up an Azure Subscription required to complete this la
 
 1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
-2. Open the Microsoft Edge browser.
+2. Open the Microsoft Edge browser or open a new tab if already open.
 
 3. In the Edge browser, navigate to the Azure portal at (https://portal.azure.com).
 
@@ -18,17 +18,17 @@ In this task, you will set up an Azure Subscription required to complete this la
 
 5. In the **Enter password** dialog box, copy, and paste in the admin's tenant password provided by your lab hosting provider and then select **Sign in**.
 
-6. In the Search bar of the Azure portal, type *Subscription*, then select **Subscriptions**.
+6. In the Search bar of the Azure portal, type *Subscription*, then select **Subscriptions**. 
 
-**Important:** You must create the Azure Subscription as the Admin user for the tenant.
+7. If the *"Azure Pass - Sponsorship"* subscription is shown (or equivalent name in your selected language), proceed to Task #2. Otherwise, ask your instructor on how to create the Azure subscription with your tenant admin user credentials.
 
-7. Utilize the "Azure Pass - Sponsorship" provided by your instructor.  These labs have been designed to use less than USD $10 of Azure services during the class.
+**Important:** These labs have been designed to use less than USD $10 of Azure services during the class.
 
 **Note:** It could take up to 10 minutes before the subscription can be used. 
 
 ### Task 2: Create a Log Analytics Workspace.
 
-In this task, you will create a Log Analytics workspace for use with Azure Defender.
+In this task, you will create a Log Analytics workspace for use with Microsoft Defender for Cloud.
 
 1. In the Search bar of the Azure portal, type *Log Analytics*, then select **Log Analytics workspaces**.
 
@@ -36,37 +36,37 @@ In this task, you will create a Log Analytics workspace for use with Azure Defen
 
 3. Select **Create new** for the Resource group.
 
-4. Enter *rg-AzureDefender*.
+4. Enter *RG-Defender* and select **Ok**.
 
-5. For the Name, enter something unique like: *uniquenameAzureDefender*
+5. For the Name, enter something unique like: *uniquenameDefender*.
 
 6. Select **Review + Create**.
 
 7. Once the workspace validation has passed, select **Create**. Wait for the new workspace to be provisioned, this may take a few minutes.
 
-### Task 3: Enable Azure Defender.
+### Task 3: Enable Microsoft Defender for Cloud.
 
-In this task, you will enable and configure Azure Defender.
+In this task, you will enable and configure Microsoft Defender for Cloud.
 
 1. In the Search bar of the Azure portal, type *Security*, then select **Security Center**.
 
-2. On the **Getting started** page of Security Center go to the **Upgrade** section and make sure your subscription is selected, and then select **Upgrade** button.
+2. On the **Getting started** page of Security Center go to the **Upgrade** section and make sure your subscription is selected, and then select **Upgrade** button at the bottom of the page.
 
 3. The next page shows the option to install the agent on virtual machines already in the subscription. Do nothing here.
 
-4. Select **Pricing & settings** from the Management area of the portal menu.
+4. Select **Environment settings** from the Management area of the portal menu.
 
-5. Note that your "Azure Defender plan" is "On".  Select your Subscription. 
+5. Note that your "Defender coverage" includes at least 11 plans. If you don't see it, wait for the *Trial started* notification to appear. After that, select **Refresh** and select your Subscription. 
 
-6. Review the resources and fees.
+6. Review the different Azure resources and fees under the *Microsoft Defender for* and *Pricing* columns.
 
 7. Select **Auto provisioning** from the Settings area.
 
 8. Review the Auto provisioning - Extensions. Confirm that **Log Analytics agent for Azure VMs** is **Off**.
 
-9. Go back to the Security Center portal and select the **Pricing and settings** again.
+9. Close the settings page by selecting the 'x' on the upper right of the page to go back to the **Environment settings** again and select the '>' on the left of your subscription.
 
-10. Select the workspace ID you created earlier *uniquenameAzureDefender* to review the pricing.
+10. Select the Log analytics workspace you created earlier *uniquenameDefender* to review the available options and pricing.
 
 ### Task 4: Install Azure Arc on an On-Premises Server.
 
@@ -76,7 +76,7 @@ In this task, you will install Azure Arc on an on-premises server.
 
 1. Log in to WINServer virtual machine as Administrator with the password: **Passw0rd!**.  
 
-2. In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
+2. Open the Microsoft Edge browser and navigate to the Azure portal at https://portal.azure.com.
 
 3. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
@@ -84,7 +84,7 @@ In this task, you will install Azure Arc on an on-premises server.
 
 5. In the Search bar of the Azure portal, type *Arc*, then select **Azure Arc**.
 
-6. In the navigation pane under **Infrastructor** select **Servers**
+6. In the navigation pane under **Infrastructure** select **Servers**
 
 7. Select **+ Add**.
 
@@ -92,23 +92,23 @@ In this task, you will install Azure Arc on an on-premises server.
 
 9. Select **Next** to get to the Resource details tab.
 
-10. Select the Resource group you created earlier. Hint: *rg-AzureDefender*
+10. Select the Resource group you created earlier. Hint: *RG-Defender*
 
-**Note** If you haven't already created a resource group. Open another tab and create the resource group.
+**Note:** If you haven't already created a resource group. Open another tab and create the resource group.
 
-11. Select **Next** to get to the Tags tab.
+11. Review the *Server details* and *Network connectivity* options. Select **Next** to get to the Tags tab.
 
 12. Select **Next** to get to the Download and run script tab.
 
 13. Select **Register**.
 
-**Note** Wait three (3) minutes for processing.
+**Note:** Wait three (3) minutes for processing.
 
-14. Select the **Download** button. Hint: if your browser blocks the download take action in the browser to allow it. In Edge Browser, select the 3 dots "..." and then "Keep".
+14. Scroll down and select the **Download** button. Hint: if your browser blocks the download take action in the browser to allow it. In Edge Browser, select the 3 dots "..." and then select **Keep**. 
 
-15. Open Windows PowerShell and select **Run as Administrator**.
+15. Right-click the Windows Start button and select **Windows PowerShell (Admin)**.
 
-16. Enter Administrator for the User name if prompted.
+16. Enter Administrator for the Username if prompted.
 
 17. Enter Passw0rd! for the password if prompted.
 
@@ -122,13 +122,13 @@ In this task, you will install Azure Arc on an on-premises server.
 
 22. Enter **R** to Run once and press enter (this may take a couple minutes).
 
-23. Follow the instructions on the last line of the output in PowerShell, to complete the device registration.  This will include authentication of the device through a browser.  Look for the (https://microsoft.com/devicelogin) browser prompt that should appear and enter the code to authenticate.
+23. Follow the instructions on the last line of the output in PowerShell, to complete the device registration.  This will include authentication of the device through a browser.  Copy the url (https://microsoft.com/devicelogin) and enter it in a new Edge browser tab. Go back to the Windows PowerShell window, copy the code to authenticate and paste it in the previously open tab and select **Next**. Select your tenant admin account and select **Continue** in the *Are you trying to sign in to Azure Connected Machine Agent?* window. 
 
-24. On the Azure portal page, select **Close** and close the **Add servers with Azure Arc**. In the Azure Arc page, select **Servers**.
+24. After the message *"Successfully Onboarded Resource to Azure"* appears in the Windows PowerShell window, go to the Azure portal page where you downloaded the script and select **Close**. Close the **Add servers with Azure Arc** to go back to the Azure Arc **Servers** page.
 
 25. Select **Refresh** until WINServer server name appears.
 
-**Note** This could take a few minutes.
+**Note:** This could take a few minutes.
 
 ### Task 5: Protect an On-Premises Server.
 
@@ -138,9 +138,9 @@ In this task, you will manually install the required agent on the Windows Server
 
 2. Select the **Get Started** tab.
 
-3. Select **Configure** under the *Add non-Azure servers* section.
+3. Scroll down and select **Configure** under the *Add non-Azure servers* section.
 
-4. Select **Upgrade** next to the workspace you created earlier.  This may take a few minutes.  
+4. Select **Upgrade** next to the workspace you created earlier.  This might take a few minutes, wait until you see the notification *"Defender plans for workspace were saved successfully"*.
 
 5. Select **+ Add Servers** next to the workspace you created earlier.
 
@@ -148,9 +148,9 @@ In this task, you will manually install the required agent on the Windows Server
 
 7. Run the downloaded file.
 
-8. Select **Next** until the wizard page for Agent Setup Options appears, Select **Connect the Agent to Azure Log Analytics (OMS)**, then select **Next**.
+8. Select **Next** until the wizard page for **Agent Setup Options** appears, Select **Connect the Agent to Azure Log Analytics (OMS)**, then select **Next**.
 
-9. Copy and paste the Workspace ID and Primary Key from the Azure portal into the wizard page fields as appropriate and select **Next**.
+9. Copy and paste the **Workspace ID** and **Primary Key** from the Azure portal into the wizard page fields as appropriate and select **Next**.
 
 10. Continue with the Install. Select **Finish** when complete.
 
@@ -158,7 +158,7 @@ In this task, you will manually install the required agent on the Windows Server
 
 12. The Server should appear in the list.  You may have to select **Refresh** to see the update and it will take a few minutes.
 
-13. You can move on to the next lab, and return later to the **Security Center**. Your server will appear in the **Inventory** section. 
+13. You can move on to the next lab and return later to the **Security Center**. Your server will appear in the **Inventory** section. 
 
 
 # Proceed to Exercise 2

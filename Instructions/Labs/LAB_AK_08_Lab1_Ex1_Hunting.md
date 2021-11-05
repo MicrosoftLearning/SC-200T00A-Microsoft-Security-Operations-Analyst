@@ -2,11 +2,11 @@
 
 ## Lab scenario
 
-You are a Security Operations Analyst working at a company that implemented Azure Sentinel. You have received threat intelligence about a Command and Control (C2) technique.  You need to perform a hunt and watch for the threat.
+You are a Security Operations Analyst working at a company that implemented Azure Sentinel. You have received threat intelligence about a Command and Control (C2 or C&C) technique.  You need to perform a hunt and watch for the threat.
 
-**Note** The log data used in the lab was created in a previous module in the course.  
+**Important:** The log data used in the lab was created in the previous module. See **Attack 3** in WIN1 server in Exercise 5.
 
-**Note**  Because you already experienced the process of exploring data in a previous module, the lab provides a KQL statement to start with.  
+**Note:**  Because you already experienced the process of exploring data in a previous module, the lab provides a KQL statement to start with.  
 
 ### Task 1: Create a hunting query
 
@@ -28,6 +28,8 @@ In this task, you will create a hunting query, bookmark a result, and create a L
 
 8. Enter the following KQL Statement in the New Query 1 space:
 
+**Important:** Please paste any KQL queries first in Notepad and then copy from there to the *New Query 1* Log window to avoid any errors.
+
 ```KQL
 let lookback = 2d;
 DeviceEvents
@@ -42,7 +44,7 @@ DeviceEvents
 
    ![Screenshot](../Media/SC200_hunting1.png)
 
-9. The goal of this statement is to provide a visualization to check for a C2 beaconing out on a consistent basis.  Take time to adjust the 3m setting to 30s and more.  Change the count_ > 5 setting to other threshold counts to witness the impact.
+9. The goal of this statement is to provide a visualization to check for a C2 beaconing out on a consistent basis. Take time to adjust the 3m setting to 30s in the summarize operator and more. Change the count_ > 5 setting to other threshold counts to witness the impact.
 
 10. You have now identified DNS requests that are beaconing to a C2 server.  Next, determine which devices are beaconing.  Enter the following KQL Statement:
 
@@ -56,11 +58,12 @@ DeviceEvents
 | summarize cnt=count() by bin(TimeGenerated, 5m), c2, DeviceName
 | where cnt > 15
 ```
+
    ![Screenshot](../Media/SC200_hunting2.png)
 
-**Note** The generated log data is only from one device.
+**Note:** The generated log data is only from one device.
 
-11. Select the **Hunting** page in the Threat Management area of the Azure Sentinel portal.
+11. Close the Logs window by selecting the 'x' in the top-right of the window and select **OK** to discard the changes. Select your Azure Sentinel workspace again and select the **Hunting** page under the Threat Management area.
 
 12. Select **+ New Query** from the command bar.
 
@@ -79,12 +82,13 @@ DeviceEvents
 
 14. For the Name enter type *C2 Hunt*
 
-15. For the Entity Mapping enter:
+15. In the *Entity mapping (Preview)* select **+ Add new entity**:
 
-    For the Host select **DeviceName** and then select **Add**.
-    For the Timestamp select **TimeGenerated** and then select **Add**.
+    For the *Entity type* drop-down list select **Host**.
+    For the *Identifier* drop-down list select **HostName**.
+    For the *Value* drop-down list select **DeviceName**.
 
-16. Select **Create**.
+16. In the *Tactics & Techniques* select **Command and Control**. Select **Create** to create the hunting query.
 
 17. In the Azure Sentinel | Hunting blade search for the query you just created in the list, *C2 Hunt*.
 
@@ -100,7 +104,7 @@ DeviceEvents
 
 23. Select the **Add bookmark** button.
 
-24. In the Add bookmark fly-out Select **Create** in the pane that appears.
+24. In the Add bookmark blade select **Create**.
 
 25. Return to the Hunting page in the Azure Sentinel portal (hint: scroll to the left).
 
@@ -108,17 +112,17 @@ DeviceEvents
 
 27. Select the bookmark you just created in the results list.
 
-28. Select **Investigate** button in the fly-out pane.
+28. Select the **Investigate** button.
 
 29. Explore the Investigation graph.
 
-30. Return to the Hunting page in the Azure Sentinel portal.
+30. Return to the Hunting page in the Azure Sentinel portal by closing the window selecting the 'x' in the top-right.
 
 31. Select the **Queries** tab
 
-32. Select the **C2 Hunt** query.
+32. Search again for and s elect the **C2 Hunt** query.
 
-33. Select the **...** at the end of the row to open the context menu.
+33. Select the **...** at the end of the row to the right to open the context menu.
 
 34. Select **Add to livestream**.
 

@@ -2,15 +2,26 @@
 
 ## Lab scenario
 
-You are a Security Operations Analyst working at a company that is implementing Microsoft 365 Defender. You start by exploring the features of the Microsoft 365 security portal.
+You are a Security Operations Analyst working at a company that is implementing Microsoft 365 Defender. You start by assigning preset security policies in EOP and Microsoft Defender for Office 365.
 
-### Task 1: Explore the Microsoft 365 security portal
+### Task 1: Obtain Your Microsoft 365 Credentials
 
-In this task, you will explore the options in the Microsoft 365 security portal.
+Once you launch the lab, a free trial tenant will be made available to you to access in the Microsoft virtual Lab environment. This tenant will be automatically assigned a unique username and password. You must retrieve this username and password so that you can sign in to Azure and Microsoft 365 within the Microsoft Virtual Lab environment. 
+
+Because this course can be offered by learning partners using any one of several Authorized Lab Hosting (ALH) providers, the actual steps involved to retrieve the tenant ID associated with your tenant may vary by lab hosting provider. Therefore, your instructor will provide you with the necessary instructions for how to retrieve this information for your course. The information that you should note for later use includes:
+
+- **Tenant suffix ID.** This ID is for the onmicrosoft.com accounts that you will use to sign in to Microsoft 365 throughout the labs. This is in the format of **{username}@ZZZZZZ.onmicrosoft.com**, where ZZZZZZ is your unique tenant suffix ID provided by your lab hosting provider. Record this ZZZZZZ value for later use. When any of the lab steps direct you to sign in to Microsoft 365 portals, you must enter the ZZZZZZ value that you obtained here.
+    
+- **Tenant password.** This is the password for the admin account provided by your lab hosting provider.
+
+
+### Task 2: Apply Microsoft Defender for Office 365 preset security policies
+
+In this task, you will assign preset security policies for EOP and Microsoft Defender for Office 365 in the Microsoft 365 security portal.
 
 1. Login to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
-2. If you are not already at the Microsoft 365 Defender portal in your browser. Start an Edge browser.
+2. Start the Microsoft Edge browser.
 
 3. In the Edge browser, go to the Microsoft 365 Defender portal at (https://security.microsoft.com).
 
@@ -18,6 +29,38 @@ In this task, you will explore the options in the Microsoft 365 security portal.
 
 5. In the **Enter password** dialog box, copy and paste in the admin's tenant password provided by your lab hosting provider and then select **Sign in**.
 
-6. Explore the menu options in the Microsoft 365 Defender portal.
+**Note**: if you receive a message "You can't access this section." wait 5 minutes and try again.  Sometimes the access rules need to propagate the tenant which can take many minutes.  
+
+6. If shown, close the Microsoft 365 Defender quick tour.
+
+6. From the navigation menu, under *Email & Collaboration*, select **Polices & Rules**.
+
+7. On the *Policy & Rules* dashboard, select **Threat Policies**.
+
+8. On the *Policy dashboard*, select **Preset Security Policies**.
+
+9. Under *Standard protection*, select **Edit**.
+
+10. In *EOP protections apply to*, under **Domains** write your tenant's domain name, select it and select **Next**. Notice that this configuration applies policies for anti-spam, outbound spam filter, anti-malware, anti-phishing.
+
+11. In *Defender for Office 365 protections​ apply to*, apply the same configuration as the previous step and select **Next**. Notice that this configuration applies policies for anti-phishing, Safe Attachments, Safe Links.
+
+12. Read the content under *Review and confirm your changes* and select **Confirm** to apply the changes and select **Done** to finish.
+
+13. Under *Strict protection*, select **Edit**.
+
+14. In *EOP protections apply to*, under **Groups** write **Leadership**, select it and select **Next**. Notice that this configuration applies policies for anti-spam, outbound spam filter, anti-malware, anti-phishing.
+
+15. In *Defender for Office 365 protections​ apply to*, apply the same configuration as the previous step and select **Next**. Notice that this configuration applies policies for anti-phishing, Safe Attachments, Safe Links.
+
+16. Read the content under *Review and confirm your changes* and select **Confirm** to apply the changes and select **Done** to finish.
+
+17. On the top middle menu, select **Threat policies** to go back and under *Policies*, select **Safe Attachments**. Notice that both preset policies appears here and the Status is On.
+
+18. In the menu, select **Global Settings**.
+
+19. Read through the available options and select the toggle under **Turn on Defender for Office 365 for SharePoint, OneDrive, and Microsoft Teams** and select **Save**.
+
 
 ## You have completed the lab.
+

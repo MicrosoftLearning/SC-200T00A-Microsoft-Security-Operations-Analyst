@@ -54,7 +54,7 @@ In this task, you will investigate an incident.
 
 23.	Select **Insights** button and review.
 
-24.	Select the Base20E Host graphic (your Windows device name may vary depending on how it was deployed by your lab hoster).
+24.	Select the *WIN2* Host graphic (your Windows device name may vary depending on how it was deployed by your lab hoster).
 
 25.	Select **Timeline** button and review.
 
@@ -64,8 +64,8 @@ In this task, you will investigate an incident.
 
 28.	Select **Insights** button and review.
 
-29.	Select the **Alert** in the graph. A menu should appear around the icon.  Select **related alerts**.
+29.	Hover *WIN2* Host in the graph. A menu should appear around the icon.  Select **Related alerts**.
 
-30. Explore the related Alerts.
+30. Explore the Related Alerts graphs.
 
 ## Proceed to Exercise 8

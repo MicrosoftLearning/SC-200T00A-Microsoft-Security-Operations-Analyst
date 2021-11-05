@@ -2,12 +2,7 @@
 
 ### Task 1: Attack 1 Detection with Sysmon
 
-In this task, you will create a detection for Attack 1 on the host with the Security Events connector and Sysmon installed.
-
-The attack creates a registry key that runs on startup.  
-```Command
-REG ADD "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "SOC Test" /t REG_SZ /F /D "C:\temp\startup.bat"
-```
+In this task, you will create a detection for **Attack 1** on the host with the Security Events connector and Sysmon installed.
 
 1. Login to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
@@ -36,11 +31,11 @@ search "temp\\startup.bat"
     - DeviceRegistryEvents
     - Event
 
-    The *Device* tables are from Defender for Endpoint (Data Connector - Microsoft 365 Defender).  *Event* is from our Data Connector Security Events. 
+    The *Device* tables are from Defender for Endpoint connector and *Event* table populates data from the Sysmon/Operational Windows Event Logs connected through the Agents configuration.
 
-    Since we are receiving data from two different sources - Sysmon and Defender for Endpoint,  we will need to build two KQL statements that could be unioned later.  In our initial investigation, you will look at each separately.
+    Since we are receiving data from two different sources - Sysmon and Defender for Endpoint, we will need to build two KQL statements that could union later. In our initial investigation, you will look at each separately.
 
-    **Note:** On rare occasion the data loading process may take longer to load than normal.  When that happens the tables may not appear in the query for some hours.
+    **Note:** On rare occasions the data loading process may take longer than normal. When that happens, the tables may not appear in the query for some hours. You may continue now if you only see the *Event* table.
 
 11. Our first data source is Sysmon from Windows hosts.  Run the following KQL Statement.
 
@@ -51,16 +46,15 @@ The results now only show for the Event table.
 
 12. Expand the rows to see all the columns related to the record.  A few of the fields like EventData and ParameterXml have multiple data items stored as structured data.  This makes it difficult to query on specific fields.  
 
-13. Next, we have to build a KQL statement that parses the data from each row, allowing us to have meaningful fields.  In the Azure Sentinel Community on GitHub, there are many examples of Parsers in the Parsers folder.  Open another tab in your browser and navigate to: **https://github.com/Azure/Azure-Sentinel**
+13. Next, we have to build a KQL statement that parses the data from each row, allowing us to have meaningful fields. In the Azure Sentinel Community on GitHub, there are many examples of Parsers in the Parsers folder.  Open another tab in your browser and navigate to: **https://github.com/Azure/Azure-Sentinel**
 
-14. Select the **Parsers** folder, then **Sysmon** folder.  You should be viewing: Azure-Sentinel/Parsers/Sysmon/Sysmon-v12.0.txt
+14. Select the **Parsers** folder, then **Sysmon** folder.
 
 15. Select the Sysmon-v12.0.txt file to view.
 
 At the top of the file, you see a Let statement querying the Event table and storing to a variable named EventData.
 
-
-```KQL
+```
 let EventData = Event
 | where Source == "Microsoft-Windows-Sysmon"
 | extend RenderedDescription = tostring(split(RenderedDescription, ":")[0])
@@ -70,9 +64,9 @@ let EventData = Event
 | project-away EventData, EvData  ;
 ```
 
-Further down in the file, you see another let statement  looking at EventID == 13 and using the EventData variable as input.  
+Further down in the file, you see another let statement looking at EventID == 13 and using the EventData variable as input.  
 
-```KQL
+```
 let SYSMON_REG_SETVALUE_13=()
 {
     let processEvents = EventData
@@ -86,10 +80,11 @@ let SYSMON_REG_SETVALUE_13=()
 ```
 This looks like a good start.
 
-16. You use the above statement to create your own KQL statement to display all Registry Key Set Value rows.  Run the following KQL query:
+16. With the above data you create your own KQL statement to display all Registry Key Set Value rows using Sysmon within the Event table. Run the following KQL query:
+
+**Important:** Please paste any KQL queries first in Notepad and then copy from there to the *New Query 1* Log window to avoid any errors.
 
 ```KQL
-
 Event
 | where Source == "Microsoft-Windows-Sysmon"
 | where EventID == 13
@@ -101,33 +96,26 @@ Event
 | extend RuleName = EventDetail.[0].["#text"], EventType = EventDetail.[1].["#text"], UtcTime = EventDetail.[2].["#text"], ProcessGuid = EventDetail.[3].["#text"], 
     ProcessId = EventDetail.[4].["#text"], Image = EventDetail.[5].["#text"], TargetObject = EventDetail.[6].["#text"], Details = EventDetail.[7].["#text"]
     | project-away EventDetail 
-
-
 ```
 
    ![Screenshot](../Media/SC200_sysmon_query1.png)
 
-17.  You could continue to build your detection rule from here, but this KQL statement looks like it could be reused in other detection rule's KQL statements.  In the Log window, select **Save**, then **Save as function**. In the Save flyout, enter the following and save the function:
+17. You could continue to build your detection rule from here, but this KQL statement looks like it could be reused in other detection rule's KQL statements.  In the Log window, select **Save**, then **Save as function**. In the Save flyout, enter the following and save the function:
 
-    Function Name: Event_Reg_SetValue
+    Function Name: Event_Reg_SetValue 
     Category: Sysmon
 
-
-18. Open a new Log Query tab. Then run the following KQL Statement:
+18. Select **Save** and open a new Log Query tab by selecting the '+' sign. Then run the following KQL Statement:
 
 ```KQL
-
 Event_Reg_SetValue
-
 ```
 Depending on the current data collection, you could receive many rows.  This is expected.  Our next task is to filter to our specific scenario.
 
 19. Run the following KQL Statement:
 
 ```KQL
-
 Event_Reg_SetValue | search "startup.bat"
-
 ```
 This returns our specific record that we can now review the data to see what we can change to identify rows.
 
@@ -165,50 +153,41 @@ Event_Reg_SetValue
 24. This starts our Analytics rule wizard.  For the General Tab enter:
 
     Name: Sysmon Startup RegKey
-
     Description: Sysmon Startup Regkey in c:\temp
-
     Tactics: Persistence
-
     Severity: High
 
 Select **Next : Set rule logic >**.
 
-25. On the **Set rule logic** tab, the **Rule query** should already be populated.
+25. On the **Set rule logic** tab, the **Rule query** should already be populated. Select **-> Test with current data** to review the number of alerts you could receive per day with the current configuration.
 
 26. For Query scheduling set the following:
 
 - Run Query every: 5 minutes
 - Look data from the last: 1 Day
 
-**Note** We are purposely generating many incidents for the same data.  This enables the Lab to use these alerts.
+**Note:** We are purposely generating many incidents for the same data. This enables the Lab to use these alerts. With this configuration change, the number of received alerts might change.  Select **-> Test with current data** to review the number of alerts you could receive per day with the changed configuration.
 
 27. Leave the rest of the options to the defaults.  Select **Next : Incident settings>** button.
 
-28. For the Incident settings set the following: 
+28. For the *Incident settings (Preview)* tab, make sure these configurations are set as following: 
 
 - Incident settings: Enabled
 - Alert grouping: Disabled
 
-Select **Next : Automated response>** button.
+Select **Next : Automated response >** button.
 
 29. For the Automated response tab set the following:
 
-- Select *PostMessageTeams-OnAlert*.
+- Select *PostMessageTeams-OnAlert*
 
 Select **Next : Review** button.
 
 30. On the Review tab, select the **Create** button.
 
-
 ### Task 2: Attack 1 Detection with Defender for Endpoint
 
-In this task, you will create a detection for Attack 1 on the host with the Microsoft Defender for Endpoint configured.
-
-The attack creates a registry key that runs on startup.  
-```Command
-REG ADD "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "SOC Test" /t REG_SZ /F /D "C:\temp\startup.bat"
-```
+In this task, you will create a detection for **Attack 1** on the host with the Microsoft Defender for Endpoint configured.
 
 1. In the Azure Sentinel portal, Select **Logs** from the General section.
 
@@ -227,9 +206,11 @@ search "temp\\startup.bat"
     DeviceRegistryEvents
     Event
 
-    The Device* tables are from Defender for Endpoint (Data Connector - Microsoft 365 Defender).  Event is from our Data Connector Security Events. 
+    The *Device* tables are from Defender for Endpoint connector and *Event* table populates data from the Sysmon/Operational Windows Event Logs connected through the Agents configuration.
 
-    Since we are receiving data from two different sources - Sysmon and Defender for Endpoint.  We will need to build two KQL statements that could be unioned later.  But our initial investigation, you will look at each separately.
+    Since we are receiving data from two different sources - Sysmon and Defender for Endpoint.  We will need to build two KQL statements that could union later. But our initial investigation, you will look at each separately.
+
+    **Note:** On rare occasions the data loading process may take longer than normal. When that happens, the tables may not appear in the query for some hours. Continue to Task 3 if you don't see the *Device* tables in the results and come back later to this point.
 
 5. This detection will focus on data from Defender for Endpoint.  Run the following KQL Statement:
 
@@ -242,13 +223,10 @@ search in (Device*) "temp\\startup.bat"
 7. From our Threat Intelligence, we know that the Threat Actor is using reg.exe to add the registry key.  The directory is c:\temp. The startup.bat can be a different name.  Enter this KQL statement:
 
 ```KQL
-
 DeviceRegistryEvents
 | where ActionType == "RegistryValueSet"
 | where InitiatingProcessFileName == "reg.exe"
 | where RegistryValueData startswith "c:\\temp"
-
-
 ```
 
 This looks like a good detection rule.  
@@ -261,8 +239,6 @@ DeviceRegistryEvents
 | where InitiatingProcessFileName == "reg.exe"
 | where RegistryValueData startswith "c:\\temp"
 | extend timestamp = TimeGenerated, HostCustomEntity = DeviceName, AccountCustomEntity = InitiatingProcessAccountName
-
-
 ```
 
    ![Screenshot](../Media/SC200_sysmon_query2.png)
@@ -271,13 +247,9 @@ DeviceRegistryEvents
 
 10. This starts our Analytics rule wizard.  For the General Tab, enter:
 
-
     Name: D4E Startup RegKey
-
     Description: D4E Startup Regkey in c:\temp
-
     Tactics: Persistence
-
     Severity: High
 
 11. Select **Next : Set rule logic >** button.
@@ -289,11 +261,11 @@ DeviceRegistryEvents
 - Run Query every: 5 minutes
 - Look data from the last: 1 Days
 
-**Note** We are purposely generating many incidents for the same data.  This enables the Lab to use these alerts.
+**Note:** We are purposely generating many incidents for the same data.  This enables the Lab to use these alerts.
 
 14. Leave the rest of the options to the defaults.  Select **Next : Incident settings >**:
 
-15. For the Incident settings set the following: 
+15. For the *Incident settings (Preview)* set the following: 
 
 - Incident settings: Enabled
 - Alert grouping: Disabled
@@ -302,21 +274,15 @@ Select **Next : Automated response >**:
 
 16. For the Automated response tab set the following:
 
-- Select PostMessageTeams-OnAlert.
-- Select **Next: Review**.
+- Select *PostMessageTeams-OnAlert*
+
+Select **Next: Review**.
 
 17. On the Review and create tab, select **Create**.
 
 ### Task 3: Attack 2 Detection with SecurityEvent
 
-In this task, you will create a detection for Attack 2 on the host with the Security Events connector and Sysmon installed.
-
-The attack creates a new user and adds the user to the local administrators.
-```Command
-net user theusernametoadd /add
-net user theusernametoadd ThePassword1!
-net localgroup administrators theusernametoadd /add
-```
+In this task, you will create a detection for *Attack 2* on the host with the Security Events connector and Sysmon installed.
 
 1. Select **Logs** from the General section of the Azure Sentinel portal.
 
@@ -334,11 +300,7 @@ search "administrators"
     Event
     SecurityEvent
 
-5. Our first data source is SecurityEvent. Time to research what event ID Windows uses to identify adding a member to a privileged group.  The following EventID and Event are what we are looking for:
-
-4732 - A member was added to a security-enabled local group.
-
-Running the following script:
+5. Our first data source is SecurityEvent. Time to research what event ID Windows uses to identify adding a member to a privileged group. The EventID and Event that we are looking is "4732 - A member was added to a security-enabled local group". Run the following script to confirm:
 
 ```KQL
 SecurityEvent
@@ -347,8 +309,7 @@ SecurityEvent
 
 ```
 
-6. Expand the rows to see all the columns related to the record.  The user name we are looking for doesn't show.  The issue is that instead of storing the user name, the security identifier (SID) is stored.  The following KQL will try to match the SID to populate the TargetUserName that was added to the Administrators group.
-
+6. Expand the rows to see all the columns related to the record.  The username we are looking for doesn't show.  The issue is that instead of storing the username, the security identifier (SID) is stored.  The following KQL will try to match the SID to populate the TargetUserName that was added to the Administrators group.
 
 ```KQL
 SecurityEvent
@@ -362,6 +323,7 @@ SecurityEvent
 ) on $left.MachId == $right.MachId1, $left.Acct == $right.Acct1 
 
 ```
+
 This looks like a good detection rule.  
 
    ![Screenshot](../Media/SC200_sysmon_attack3.png)
@@ -369,7 +331,6 @@ This looks like a good detection rule.
 **Note:** This KQL might not return the expected results because of the small dataset used in the lab.
 
 7. It is important to help the Security Operations Analyst by providing as much context about the alert as you can. This includes projecting Entities for use in the investigation graph.  Run the following query:
-
 
 ```KQL
 SecurityEvent
@@ -382,7 +343,6 @@ SecurityEvent
      | project Acct1 = TargetSid, MachId1 = SourceComputerId, UserName1 = TargetUserName
 ) on $left.MachId == $right.MachId1, $left.Acct == $right.Acct1 
 | extend timestamp = TimeGenerated, HostCustomEntity = Computer, AccountCustomEntity = UserName1
-
 ```
 
 8. Now that you have a good detection rule, in the Log window with the query, select **+ New alert rule** in the Command Bar, then select **Create Azure Sentinel alert**.
@@ -403,20 +363,22 @@ Select **Next : Set rule logic >** button.
 - Run Query every: 5 minutes
 - Look data from the last: 1 Day
 
-**Note** We are purposely generating many incidents for the same data.  This enables the Lab to use these alerts.
+**Note:** We are purposely generating many incidents for the same data.  This enables the Lab to use these alerts.
 
 12. Leave the rest of the options to the defaults.  Select **Next : Incident settings >**:
 
-13. For the Incident settings set the following:
+13. For the *Incident settings (Preview)* set the following:
 
 - Incident settings: Enabled
 - Alert grouping: Disabled
-- Select **Next: Automated response >**
+
+Select **Next: Automated response >**
 
 14. For the Automated response tab set the following:
 
 - Select **PostMessageTeams-OnAlert**.
-- Select **Next : Review >** button.
+
+Select **Next : Review >** button.
 
 15. On the Review tab, select **Create**.
 

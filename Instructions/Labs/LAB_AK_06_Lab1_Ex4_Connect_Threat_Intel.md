@@ -34,6 +34,6 @@ In this task, you will connect a Threat intelligence provider with the Threat in
 
 Phishing URLs will be pulled and populate the ThreatIntelligenceIndicator table.
 
-**Note:** For additional collections open https://limo.anomali.com/api/v1/taxii2/feeds/collections/ in a Browser and review the different IDs available.
+**Note:** For additional collections open https://limo.anomali.com/api/v1/taxii2/feeds/collections/ in a Browser, use the guest username and password to review the different Collection IDs available.
 
 ## You have completed the lab.
