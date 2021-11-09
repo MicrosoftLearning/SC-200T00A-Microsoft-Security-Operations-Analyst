@@ -28,7 +28,7 @@ In this task, you will explore the configuration of a workbook.
 
 10. Close the workbook by selecting the 'x' in the top-right corner. You should be in the **Azure Sentinel | Workbooks | Templates** tab.
 
-11. In the *Templates* tab search for and select **Azure AD Sign-in logs**, then select the **Save** button. 
+11. In the *Templates* tab search for and select **Azure AD Audit logs**, then select the **Save** button from the right pane. 
 
 12. Select the location that is appropriate for your location and select **OK**. The appropriate location usually defaults.
 
@@ -36,7 +36,7 @@ In this task, you will explore the configuration of a workbook.
 
 14. Select **Edit** in command bar.
 
-15. In the *Sign-ins by Location* area, select **Edit** below the grid.
+15. In the *User activities* area, take a look at the colors in the graph for "Operations count" and "Trend". Then select **Edit** below the grid.
 
 #### To format columns, the Column setting panel provides customization options, do the following:
 
@@ -44,31 +44,31 @@ In this task, you will explore the configuration of a workbook.
 
 **Note:** This button only appears if there is data in the report.
 
-17. In the *Edit column settings* blade select the column **Failure Count|Interrupt Count (Heatmap + Formatted)**.
+17. In the *Edit column settings* blade select the column **Operations Count (Heatmap + Formatted)**.
 
-18. Review the settings, including the *Column renderer* and *Color palette*.
+18. Review the settings, specially the options for *Column renderer*. For *Color palette*, select **32-color categorical**.
 
-19. Select the column **Trend (Spark line)**.
+19. Select the column **Trend (Spark line + Formatted)**.
 
-20. Review the settings, including the *Column renderer* and *Color palette*.
+20. Review the settings, For *Column renderer* select **Spark area** and select the color of your choosing in *Color palette*.
 
-21. Select **cancel**.
+21. Select **Save and Close**.
 
 #### To have one tile/grid control filter the results in another tile/grid do the following:
 
-22. Select the **Advanced Settings** tab in the Query.
+22. Select the **Advanced Settings** button in the *Editing query item: query - 2*.
 
-23. Review the *When items are selected, export parameters* setting.  Notice the *LocationDetails* field is selected.
+23. Review the *When items are selected, export parameters* setting. Notice the *UserInfo* field is selected.
 
 24. Select **Done Editing** at the bottom of the query.
 
-25. Select **Edit** below the *Device Sign-in details* grid on the right side of the screen.  
+25. Select **Edit** below the *Top active users* grid on the right side of the screen.  
 
-26. In the query, locate "LocationDetails". The query is using the parameter exported from the other query to filter results.
+26. In the query, locate *UserInfo*. The query is using the parameter exported from the other query to filter results.
 
 27. Select **Done Editing** at the bottom of the query.
 
-28. Select **Done Editing** at the top menu for the workbook and close the workbook by selecting the 'x' in the top-right corner. Select **OK** to discard any changes.
+28. Select **Done Editing** at the top menu for the workbook and select the **Save** icon. Close the workbook by selecting the 'x' in the top-right corner.
 
 ### Task 2: Create a Workbook.
 

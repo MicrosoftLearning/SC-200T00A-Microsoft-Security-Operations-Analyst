@@ -50,7 +50,7 @@ In this task, you will enable and configure Microsoft Defender for Cloud.
 
 1. In the Search bar of the Azure portal, type *Security*, then select **Security Center**.
 
-2. On the **Getting started** page of Security Center go to the **Upgrade** section and make sure your subscription is selected, and then select **Upgrade** button at the bottom of the page.
+2. On the **Getting started** page, go to the **Upgrade** section and make sure your subscription is selected, and then select **Upgrade** button at the bottom of the page.
 
 3. The next page shows the option to install the agent on virtual machines already in the subscription. Do nothing here.
 

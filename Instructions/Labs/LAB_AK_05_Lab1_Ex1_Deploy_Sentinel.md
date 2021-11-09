@@ -52,12 +52,14 @@ In this task, you will create a watchlist in Azure Sentinel.
 
 2. Type *Hostname* then enter for a new line.
 
-3. In Row 2 through 6 of the notepad, add the following hostnames:
-    Host1
-    Host2
-    Host3
-    Host4
-    Host5
+3. In Row 2 through 6 of the notepad, copy the following hostnames, each one in a different line:
+```Notepad
+Host1
+Host2
+Host3
+Host4
+Host5
+```
 
 4. From the menu select, **File - Save As**, Name the file *HighValue.csv*.  Then change the file type to **All files(*.*)**.  Then select **Save**.  The file can be saved in the *Documents* folder for the PC.
 
@@ -106,7 +108,7 @@ In this task, you will create an indicator in Azure Sentinel.
 
 2. Select **+ Add New** from the command bar.
 
-3. Review the different indicator types available in the Types dropdown. Select the **domain-name**. Enter your initials in the Domain box. An example would be *fmg.com*.
+3. Review the different indicator types available in the *Types* dropdown. Select the **domain-name**. Enter your initials in the Domain box. An example would be *fmg.com*.
 
 4. For the *Threat types*, select **malicious-activity**.
 
