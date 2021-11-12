@@ -16,7 +16,7 @@ In this task, you will run two simulated attacks to explore the capabilities of 
 
 3. Select the **Tutorials** tab and under *Automated investigation (backdoor)*, click **Read the walkthrough**. A new browser tab opens which includes instructions to perform the simulation.
 
-4. In the new browser tab, locate the section named **Run the simulation** and follow the steps to run the attack.
+4. In the new browser tab, locate the section named **Run the simulation** and follow the steps to run the attack. The steps should include: from the **Tutorials** tab, under *Automated investigation (backdoor)*, select **Get simulation file** to download the **RS4_WinATP-Intro-Invoice.docm** file. Continue to follow the steps from the browser tab to run the attack.
 
 5. Within the **Tutorials** tab also run the *Automated investigation (fileless attack)* by clicking **Read the walkthrough** and follow the **Run the simulation** section of the document.
 
