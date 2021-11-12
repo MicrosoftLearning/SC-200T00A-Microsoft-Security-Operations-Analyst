@@ -31,7 +31,7 @@ In this task, you will perform the initialization of the Microsoft Defender for 
 
 ### Task 2: Onboard a Device.
 
-In this task, you will onboard a device to Microsoft Defender for Endpoint using the Security Center.
+In this task, you will onboard a device to Microsoft Defender for Endpoint using an onboarding script.
 
 1. If you are not already at the Microsoft 365 Defender portal in your browser, start the Microsoft Edge browser and go to (https://security.microsoft.com) and login with the **Tenant Email** credentials.
 

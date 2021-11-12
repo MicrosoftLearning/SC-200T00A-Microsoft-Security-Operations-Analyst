@@ -16,7 +16,7 @@ In this task, you will load sample security alerts and review the alert details.
 
 4. In the **Enter password** dialog box, copy, and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
-5. In the Search bar of the Azure portal, type *Security*, then select **Security Center**.
+5. In the Search bar of the Azure portal, type *Defender*, then select **Microsoft Defender for Cloud**.
 
 6. Under *General*, select **Security alerts** in the portal menu.
 
