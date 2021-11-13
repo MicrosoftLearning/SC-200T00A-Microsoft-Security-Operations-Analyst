@@ -120,7 +120,7 @@ DeviceEvents
 
 31. Select the **Queries** tab
 
-32. Search again for and s elect the **C2 Hunt** query.
+32. Search again for and select the **C2 Hunt** query.
 
 33. Select the **...** at the end of the row to the right to open the context menu.
 
