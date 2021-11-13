@@ -53,6 +53,7 @@ The results now only show for the Event table.
 15. Select the Sysmon-v12.0.txt file to view.
 
 At the top of the file, you see a Let statement querying the Event table and storing to a variable named EventData.
+**Hint:** The following code snippet is for better understanding the query in step 16, not to be copied and executed.
 
 ```
 let EventData = Event
@@ -65,6 +66,7 @@ let EventData = Event
 ```
 
 Further down in the file, you see another let statement looking at EventID == 13 and using the EventData variable as input.  
+**Hint:** The following code snippet is for better understanding the query in step 16, not to be copied and executed.
 
 ```
 let SYSMON_REG_SETVALUE_13=()
@@ -80,9 +82,9 @@ let SYSMON_REG_SETVALUE_13=()
 ```
 This looks like a good start.
 
-16. With the above data you create your own KQL statement to display all Registry Key Set Value rows using Sysmon within the Event table. Run the following KQL query:
+16. With the two statements above, you create your own KQL statement to display all Registry Key Set Value rows using Sysmon within the Event table. Run the following KQL query:
 
-**Important:** Please paste any KQL queries first in Notepad and then copy from there to the *New Query 1* Log window to avoid any errors.
+**Important:** Please paste any KQL queries first in *Notepad* and then copy from there to the *New Query 1* Log window to avoid any errors.
 
 ```KQL
 Event

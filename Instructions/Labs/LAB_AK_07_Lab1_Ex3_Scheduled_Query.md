@@ -18,32 +18,35 @@ In this task, you will create a scheduled query and connect it to the Teams chan
 
 7. Select the **+ Create** button and select **Scheduled query rule**.
 
-8. In the Analytics rule wizard, on the General tab, enter the Name *Inactive Account sign in attempts*.
+8. In the Analytics rule wizard, on the General tab, enter the Name *Azure AD Role Assignment Audit Trail*.
 
-9. For Tactics, select **Initial Access**.
+9. For Tactics, select **Persistence**.
 
-10. For Severity, select **Medium**.
+10. For Severity, select **Low**.
 
 11. Select **Next : Set rule logic >** button:
 
 12. For the rule query, paste in the following KQL statement:
 
+**Warning:** When using the Paste function to the virtual machine.  Extra | (pipe) characters could be added. Make sure you use Notepad first to paste the following query.
+
 ```KQL
-SigninLogs
-| where ResultType == "50057"
-| where ResultDescription =~ "User account is disabled. The account has been disabled by an administrator."
-| summarize StartTimeUtc = min(TimeGenerated), EndTimeUtc = max(TimeGenerated), count(), applicationCount = dcount(AppDisplayName), 
-applicationSet = makeset(AppDisplayName) by UserPrincipalName, IPAddress
-| extend timestamp = StartTimeUtc, AccountCustomEntity = UserPrincipalName, IPCustomEntity = IPAddress
+AuditLogs 
+| where isnotempty(InitiatedBy.user.userPrincipalName) and Result == 'success' and OperationName contains "member to role" and AADOperationType startswith "Assign"
+| extend InitiatedByUPN = tostring(InitiatedBy.user.userPrincipalName)
+| extend InitiatedFromIP = iff(tostring(AdditionalDetails.[7].value) == '', tostring(AdditionalDetails.[6].value), tostring(AdditionalDetails.[7].value))
+| extend TargetUser = tostring(TargetResources.[2].displayName)
+| extend TargetRoleName = tostring(TargetResources.[0].displayName)
+| project TimeGenerated, InitiatedByUPN, InitiatedFromIP, TargetUser, TargetRoleName, AADOperationType, OperationName
 ```
 
-**Warning:** When using the Paste function to the virtual machine.  Extra | (pipe) characters could be added.  Make sure what is pasted looks like the preceding KQL statement.
+**Note:** If you select the link to "View query results", you should not receive any results nor any errors. If you receive an error, please review that the query appears just like the previous KQL statement.
 
-**Note:** If you select the link to "View query results", you should not receive any results.  You should also not receive an error.  
+13. Back in the "Analytics rule wizard - Create new scheduled rule" blade in the *Alert enrichment (Preview)* area, select *Entity mapping* and select the following values: **Entity Type:** Account, **Identifier:** FullName, **Value:** InitiatedByUPN, then select *Add new entity* and select the following values: **Entity Type:** IP, **Identifier:** Address, **Value:** InitiatedFromIP
 
-13. Back in the Analytics rule wizard - Create new rule blade in the *Query scheduling* area, enter **5** and select **Minutes** for the *Run query every* option.
+14. In the *Query scheduling* area, enter **5** and select **Minutes** for the *Run query every* option and enter **1** and select **Days** for the *Lookup data from the last* option.
 
-14. In the *Query scheduling* area, enter **1** and select **Days** for the *Lookup data from the last* option.
+**Note:** We are purposely generating many incidents for the same data.  This enables the Lab to use these alerts.
 
 15. For the *Alert threshold* area, leave the options unchanged.
 
@@ -69,29 +72,29 @@ In this task, you will test your new scheduled query rule.
 
 1. In the Search bar of the Azure portal, type *Azure Active Directory*. Then select **Azure Active Directory**.
 
-2. Select **Users** in the Manage area.
+2. Select **Users** in the Manage area so the "Users | All users (Preview)" page is displayed.
 
-3. Select User **Christie Cline** in the list so the Christie Cline | Profile page is displayed.
+3. Select user **Christie Cline** in the list so the "Christie Cline | Profile" page is displayed.
 
-4. Select **Edit** from the command bar.
+4. Select **Assigned roles** in the Manage area so the "Christie Cline | Assigned roles" page is displayed.
 
-5. In the Settings area, change **Block sign in** to **Yes**.
+5. Select **+ Add assignments** from the command bar.
 
-6. Now select **Save** from the Command bar.
+6. In the *Add assignments* page, *Membership* tab, under *Select role*, select **User Administrator**. and select **Next >**.
 
-7. In the Azure portal, select the user avatar at the top right and sign out.
+7. Review the default *Assignment type* in the *Settings tab and select **Assign**. If the assignment fails to complete, try again.
 
-8. Close your browser.
+8. Close the "Christie Cline | Assigned roles" and "Users | All users (Preview)" pages by selecting the 'x' in the top-right twice.
 
-9. Open a new In-Private browsing session in Microsoft Edge and navigate to https://portal.office.com and try to login with user ChristieC@**Tenant Email domain** and password should be the same as your admin's tenant password.  You should receive the warning *Your account has been locked*. This is good, the action should trigger an alert.
+9. In the "Contoso | Overview" page, under *Monitoring*, select **Audit logs**.
 
-10. Close your browser. The alert triggered by the last step may take 10 minutes to process. You may continue with the next exercise and return to this point later.
+10. Verify that the "Azure Active Directory" data connector was setup correctly in Sentinel by selecting **Export data settings**.
 
-11. Open a new Edge browser, go to the Azure portal at https://portal.azure.com.
+11. Review that there is a *Diagnostic settings* entry for the *Log Analytics workspace* you created earlier for Sentinel.
 
-12. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider for Admin user and then select **Next**.
+12. Close the page by selecting the 'x' in the top-right.
 
-13. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider for Admin user and then select **Sign in**.
+13. Select **Refresh** until you see the entries for the *Category: RoleManagement* that indicates the change in roles you made earlier.
 
 14. In the Search bar of the Azure portal, type *Sentinel*, then select **Azure Sentinel**.
 
@@ -99,8 +102,10 @@ In this task, you will test your new scheduled query rule.
 
 16. Select the **Incidents** menu option.
 
-17. You should see the newly created Incident. Select the Incident and review the information in the right blade. If you do not see the incident you may continue with the next exercise and review it later.
+**Note:** The alert triggered may take 5+ minutes to process. You may continue with the next exercise and return to this point later. For automatic updating of the Incidents page, select the **Auto-refresh incidents** toggle.
 
-18. Open Microsoft Teams by opening a browser tab and going to https://teams.microsoft.com. Go to the *SOC* Team and see the message post about the incident. If you do not see the message you may continue with the next exercise and review it later.
+17. You should see the newly created Incident. Select the Incident and review the information in the right blade.
+
+18. Open Microsoft Teams by opening a browser tab and going to https://teams.microsoft.com. Go to the *SOC* Team and see the message post about the incident.
 
 ## Proceed to Exercise 4

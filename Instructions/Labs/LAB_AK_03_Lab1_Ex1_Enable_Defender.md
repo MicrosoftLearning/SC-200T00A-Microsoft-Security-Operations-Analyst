@@ -48,9 +48,9 @@ In this task, you will create a Log Analytics workspace for use with Microsoft D
 
 In this task, you will enable and configure Microsoft Defender for Cloud.
 
-1. In the Search bar of the Azure portal, type *Security*, then select **Security Center**.
+1. In the Search bar of the Azure portal, type *Defender*, then select **Microsoft Defender for Cloud**.
 
-2. On the **Getting started** page of Security Center go to the **Upgrade** section and make sure your subscription is selected, and then select **Upgrade** button at the bottom of the page.
+2. On the **Getting started** page, go to the **Upgrade** section and make sure your subscription is selected, and then select **Upgrade** button at the bottom of the page.
 
 3. The next page shows the option to install the agent on virtual machines already in the subscription. Do nothing here.
 
@@ -134,7 +134,7 @@ In this task, you will install Azure Arc on an on-premises server.
 
 In this task, you will manually install the required agent on the Windows Server.
 
-1. Go to the Azure Security Center and select the **Getting Started** page.
+1. Go to the "Microsoft Defender for Cloud" and select the **Getting Started** page.
 
 2. Select the **Get Started** tab.
 
@@ -154,11 +154,11 @@ In this task, you will manually install the required agent on the Windows Server
 
 10. Continue with the Install. Select **Finish** when complete.
 
-11. Go to the Security Center portal and select **Inventory**.
+11. Go to the "Microsoft Defender for Cloud" portal and select **Inventory**.
 
 12. The Server should appear in the list.  You may have to select **Refresh** to see the update and it will take a few minutes.
 
-13. You can move on to the next lab and return later to the **Security Center**. Your server will appear in the **Inventory** section. 
+13. You can move on to the next lab and return later to the **Microsoft Defender for Cloud**. Your server will appear in the **Inventory** section. 
 
 
 # Proceed to Exercise 2
