@@ -22,7 +22,7 @@ In this task, you will investigate an incident.
 
 **Note:** The analytical rules are generating alerts and incidents on the same specific log entry.  This is done to generate more alerts and incidents to be utilized in the lab.
   
-9. Select a Sysmon Startup RegKey incident.
+9. Select a *Sysmon Startup RegKey* incident.
 
 10. Select **View full details** button.
 
