@@ -28,6 +28,8 @@ In this task, you will create a Windows virtual machine in Azure.
 
 11. Set the *Region* to the appropriate region for your area.  The appropriate region will probably default.
 
+12. For *Availability options*, select **No infrastructure redundancy required**.
+
 12. Enter a *Username* of your choosing that is acceptable for Azure.
 
 13. Enter a *Password* of your choosing. 
@@ -127,7 +129,7 @@ You should still be connected to the WIN2 virtual machine. The following instruc
 8. Select the **Raw** button and copy the contents of that file from GitHub to the sysmon.xml notepad file you just created. Select **File** and then select **Save** to save the file.
 
 9. In the command prompt type the following and press enter:
-    sysmon.exe -accepteula -i sysmon.xml
+    **sysmon.exe -accepteula -i sysmon.xml**
 
 **Note:**  Verify that "Configuration file validated" and "Sysmon started" messages appear in the output. If that is not the case, verify that the data is properly copied and the sysmon.xml has been saved.
 
