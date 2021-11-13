@@ -60,13 +60,13 @@ In this task, you will explore the configuration of a workbook.
 
 23. Review the *When items are selected, export parameters* setting.  Notice the *LocationDetails* field is selected.
 
-24. Select **Done Editing** at the bottom of the query.
+24. Select **Done Editing** at the bottom of the query (not the top menu).
 
 25. Select **Edit** below the *Device Sign-in details* grid on the right side of the screen.  
 
 26. In the query, locate "LocationDetails". The query is using the parameter exported from the other query to filter results.
 
-27. Select **Done Editing** at the bottom of the query.
+27. Select **Done Editing** at the bottom of the query (not the top menu).
 
 28. Select **Done Editing** at the top menu for the workbook and close the workbook by selecting the 'x' in the top-right corner. Select **OK** to discard any changes.
 
@@ -84,13 +84,13 @@ In this task, you will create a new workbook with advanced visualizations.
 
 4. Select **Edit** below the title of the workbook to change *## New workbook* to *## My workbook*.
 
-5. Select **Done Editing** for the Header text.
+5. Select **Done Editing** on the bottom menu, for the Header text.
 
 6. Select **Edit** below the only visible graph.
 
 7. Review the KQL statement that provides a union of counts across multiple tables.
 
-8. Select the **Done Editing** for the Graph.
+8. Select the **Done Editing** on the bottom menu, for the Graph.
 
 9. Select **...** next to the graph area, then select **+ Add**, then select **Add query**.
 
@@ -112,7 +112,7 @@ In this task, you will create a new workbook with advanced visualizations.
 
 18. Select **Show refresh icon when not editing** box. 
 
-19. Select **Done Editing** for the new Graph.
+19. Select **Done Editing** on the bottom menu, for the new Graph.
 
 20. At the bottom of the Workbook select **Add**, then **Add query**.
 
@@ -132,7 +132,7 @@ SecurityEvent
 
 25. Change percentage width to **25** and maximum width to **25**. 
 
-26. Select **Done Editing** for the new Query.
+26. Select **Done Editing** on the bottom menu, for the new Query.
 
 27. Select **Done Editing** for the Workbook.
 
