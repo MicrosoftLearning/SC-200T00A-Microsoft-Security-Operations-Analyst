@@ -98,6 +98,7 @@ In this task, you will configure device groups that allow for access control and
 3. Select **+ Add device group**.
 
 4. Enter the following information on the General tab:
+
     |General setting|Value|
     |---|---|
     |Device group name|**Regular**|
