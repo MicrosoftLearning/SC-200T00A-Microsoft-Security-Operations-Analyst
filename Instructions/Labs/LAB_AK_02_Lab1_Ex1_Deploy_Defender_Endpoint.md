@@ -1,3 +1,9 @@
+---
+lab:
+    title: 'Exercise 1 - Deploy Microsoft Defender for Endpoint'
+    module: 'Module 2 - Mitigate threats using Microsoft Defender for Endpoint'
+---
+
 # Module 2 - Lab 1 - Exercise 1 - Deploy Microsoft Defender for Endpoint
 
 ## Lab scenario
@@ -5,6 +11,8 @@
 You are a Security Operations Analyst working at a company that is implementing Microsoft Defender for Endpoint. Your manager plans to onboard a few devices to provide insight into required changes to the Security Operations (SecOps) team response procedures.
 
 You start by initializing the Defender for Endpoint environment. Next, you onboard the initial devices for your deployment by running the onboarding script on the devices. You configure security for the environment. Lastly, you create Device groups and assign the appropriate devices.
+
+>**Important:**  The lab Virtual Machines are used through different modules. SAVE your virtual machines. If you exit the lab without saving, you will be required to re-run some configurations again.
 
 
 ### Task 1: Initialize Microsoft Defender for Endpoint.
@@ -27,7 +35,8 @@ In this task, you will perform the initialization of the Microsoft Defender for 
 
 8. On the **Settings** page select **Device discovery**.  In Discovery setup make sure **Standard discovery** is selected.  Return to the **Settings** menu. **Note**: If you don't see the **Device discovery** option under **Settings**, logout by selecting the top-right circle with your account initials and select **Sign out**. Login again with the **Tenant Email** credentials.
 
-**Note:**: The Defender for Endpoint setup should be performed automatically by your Microsoft 365 E5 tenant.  You can view the other settings if you like.  You will onboard Devices in the next task.  
+>**Note:** The Defender for Endpoint setup should be performed automatically by your Microsoft 365 E5 tenant.  You can view the other settings if you like.  You will onboard Devices in the next task.  
+
 
 ### Task 2: Onboard a Device.
 
@@ -43,9 +52,7 @@ In this task, you will onboard a device to Microsoft Defender for Endpoint using
 
 5. Right-click the downloaded zip file and select **Extract All...**, make sure that *Show extracted files when complete* is checked and select **Extract**.
 
-6. Right-click on the extracted file "WindowsDefenderATPLocalOnboardingScript.cmd" and choose **Run as Administrator**.  If you encounter the Windows SmartScreen, select on **More info** and choose **Run anyway**.
-
-**Note:** By default, the file should be in the c:\users\admin\downloads directory.
+6. Right-click on the extracted file "WindowsDefenderATPLocalOnboardingScript.cmd" and choose **Run as Administrator**.  If you encounter the Windows SmartScreen, select on **More info** and choose **Run anyway**. **Hint:** By default, the file should be in the c:\users\admin\downloads directory.
     
 7. When the "User Account Control" windows is shown, select **Yes** to allow the script to run and answer **Y** to questions presented by the script and press **Enter**. When complete you should see a message in the command screen that says something like "Successfully onboarded machine to Microsoft Defender for Endpoint". Press any key to close the window.
 
@@ -53,7 +60,7 @@ In this task, you will onboard a device to Microsoft Defender for Endpoint using
 
 9. In the Microsoft 365 Defender portal in the Endpoints area, select **Device inventory**. You should now see your device in the list.
 
-**Note:** It can take up to 5 minutes for the device to be displayed in the portal. If the device is not shown, complete the next task and come back to check it back later.
+>**Note:** It can take up to 5 minutes for the device to be displayed in the portal. If the device is not shown, complete the next task and come back to check it back later.
 
 
 ### Task 3: Configure Role
@@ -69,9 +76,11 @@ In this task, you will configure roles for use with device groups.
 4. Select **+ Add item**.
 
 5. In the Add role dialog enter the following:
-    Role Name: Tier
-    Live Response capabilities: select checkbox
-    Advanced: select.
+
+    |General setting|Value|
+    |---|---|
+    |Role name|**Tier 1 Support**|
+    |Permissions|Live Response capabilities - Advanced|
 
 6. Select the **Assigned user groups** tab. Select **sg-IT** and then select **Add selected groups**. Make sure it appears under *Azure AD user groups with this role*.
 
@@ -89,9 +98,10 @@ In this task, you will configure device groups that allow for access control and
 3. Select **+ Add device group**.
 
 4. Enter the following information on the General tab:
-
-- Device group name: Regular
-- Automation level: Full - remediate threats automatically
+    |General setting|Value|
+    |---|---|
+    |Device group name|**Regular**|
+    |Automation level|Full - remediate threats automatically|
 
 5. Select **Next**.
 
@@ -105,6 +115,4 @@ In this task, you will configure device groups that allow for access control and
 
 10. Device group configuration has changed. Select **Apply changes** to check matches and recalculate groupings.
 
-
 ## Proceed to Exercise 2
-

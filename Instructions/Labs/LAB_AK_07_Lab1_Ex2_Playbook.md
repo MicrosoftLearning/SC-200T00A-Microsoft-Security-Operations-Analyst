@@ -1,4 +1,11 @@
+---
+lab:
+    title: 'Exercise 2 - Create a Playbook'
+    module: 'Module 7 - Create detections and perform investigations using Azure Sentinel'
+---
+
 # Module 7 - Lab 1 - Exercise 2 - Create a Playbook
+
 
 ### Task 1: Create a Security Operations Center Team in Microsoft Teams.
 
@@ -30,6 +37,7 @@ In this task, you will create a Microsoft Teams team for use in the lab.
 
 13. Enter a channel name of *New Alerts* then select the **Add** button.
 
+
 ### Task 2: Create a Playbook in Azure Sentinel.
 
 In this task, you will create a Logic App that will be used as a Playbook in Azure Sentinel.
@@ -54,7 +62,7 @@ In this task, you will create a Logic App that will be used as a Playbook in Azu
 
 10. In the readme.md box, go below the second *Quick Deployment* option **Deploy with alert trigger** and select **Deploy to Azure** button.  
 
-**VERY IMPORTANT**: Be aware that they are two different Azure Sentinel triggers to use, Incident and Alert. Make sure you are selecting the Alert (second) one.
+    >**VERY IMPORTANT**: Be aware that they are two different Azure Sentinel triggers to use, Incident and Alert. Make sure you are selecting the Alert (second) one.
 
 11. Make sure your Azure Subscription is selected.
 
@@ -66,7 +74,8 @@ In this task, you will create a Logic App that will be used as a Playbook in Azu
 
 15. Now select **create**.
 
-**Note** Wait for the deployment to finish before proceeding to the next task. It may take a couple minutes to deploy.
+    >**Note:** Wait for the deployment to finish before proceeding to the next task. It may take a couple minutes to deploy.
+
 
 ### Task 3: Update a Playbook in Azure Sentinel.
 
@@ -82,19 +91,19 @@ In this task, you will update the new playbook you created with the proper conne
 
 5. On the Logic App page for *PostMessageTeams-OnAlert*, in the center menu, select **Edit**.
 
-6. Select the block **When a response to an Azure Sentinel alert is triggered**.
+6. Select the *first* block **When a response to an Azure Sentinel alert is triggered**.
 
 7. Select the **Change connection** link.
 
 8. Select **Add new** and select **Sign in**. In the new window, select your Azure subscription admin credentials when prompted.
 
-9. Now select the block **Alert - Get incident**.
+9. Now select the *second* block **Alert - Get incident**.
 
 10. Select the **Change connection** link.
 
 11. Select the connection that has your Azure subscription admin credentials under *Display Name*. **Hint:** admin@ZZZZZZ.onmicrosoft.com.
 
-12. Now select the block **Connections**.
+12. Now select the *third* block **Connections**.
 
 13. Select **Add new** and select your Azure subscription admin credentials when prompted.
 

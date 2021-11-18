@@ -1,4 +1,11 @@
+---
+lab:
+    title: 'Exercise 7 - Investigate Incidents'
+    module: 'Module 7 - Create detections and perform investigations using Azure Sentinel'
+---
+
 # Module 7 - Lab 1 - Exercise 7 - Investigate Incidents
+
 
 ### Task 1: Investigate an incident.
 
@@ -20,7 +27,7 @@ In this task, you will investigate an incident.
 
 8. Review the list of Incidents
 
-**Note:** The analytical rules are generating alerts and incidents on the same specific log entry.  This is done to generate more alerts and incidents to be utilized in the lab.
+    >**Note:** The analytical rules are generating alerts and incidents on the same specific log entry.  This is done to generate more alerts and incidents to be utilized in the lab.
   
 9. Select a Sysmon Startup RegKey incident.
 
@@ -40,7 +47,7 @@ In this task, you will investigate an incident.
 
 17. Select the **Alerts** tab.
 
-**Note:** For the alert shown, notice to the far right there is an option for **View playbooks**.  This allows for the manual execution of a playbook.
+    >**Note:** For the alert shown, notice to the far right there is an option for **View playbooks**.  This allows for the manual execution of a playbook.
 
 18. Select the **Investigate** button.
 
