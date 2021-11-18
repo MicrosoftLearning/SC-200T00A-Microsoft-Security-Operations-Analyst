@@ -88,9 +88,8 @@ let SYSMON_REG_SETVALUE_13=()
     
 };
 ```
-    This looks like a good start.
 
-16. With the two statements above, you create your own KQL statement to display all Registry Key Set Value rows using Sysmon within the Event table. Run the following KQL query:
+16. This looks like a good start. With the two statements above, you create your own KQL statement to display all Registry Key Set Value rows using Sysmon within the Event table. Run the following KQL query:
 
     >**Important:** Please paste any KQL queries first in *Notepad* and then copy from there to the *New Query 1* Log window to avoid any errors.
 
@@ -123,15 +122,11 @@ Event
 Event_Reg_SetValue
 ```
 
-    Depending on the current data collection, you could receive many rows.  This is expected.  Our next task is to filter to our specific scenario.
-
-19. Run the following KQL Statement:
+19. Depending on the current data collection, you could receive many rows. This is expected. Our next task is to filter to our specific scenario. Run the following KQL Statement to return our specific record that we can now review to see what we can change to identify rows:
 
 ```KQL
 Event_Reg_SetValue | search "startup.bat"
 ```
-
-    This returns our specific record that we can now review the data to see what we can change to identify rows.
 
 20. From our Threat Intelligence, we know that the Threat Actor is using reg.exe to add the registry key.  The directory is c:\temp. The startup.bat can be a different name. Run the following script
 
@@ -140,17 +135,13 @@ Event_Reg_SetValue
 | where Image contains "reg.exe"
 ```
 
-    This is a good start.  Next, you need to return results only for c:\temp directory.
-
-21. Next, enter the following KQL statement:
+21. This is a good start.  Next, you need to return results only for c:\temp directory. Next, enter the following KQL statement:
 
 ```KQL
 Event_Reg_SetValue 
 | where Image contains "reg.exe"
 | where Details startswith "C:\\TEMP"
 ```
-
-    This looks like a good detection rule.  
 
 22. It is important to help the Security Operations Analyst by providing as much context about the alert as you can. This includes projecting entities for use in the investigation graph.  Run the following query:
 
@@ -173,9 +164,7 @@ Event_Reg_SetValue
     |Tactics|**Persistence**|
     |Severity|**High**|
 
-Select **Next : Set rule logic >**.
-
-25. On the **Set rule logic** tab, the **Rule query** should already be populated. Select **-> Test with current data** to review the number of alerts you could receive per day with the current configuration.
+25. Select **Next : Set rule logic >**. On the **Set rule logic** tab, the **Rule query** should already be populated. Select **-> Test with current data** to review the number of alerts you could receive per day with the current configuration.
 
 26. For Query scheduling set the following:
 
@@ -195,9 +184,7 @@ Select **Next : Set rule logic >**.
     |Incident settings|Enabled|
     |Alert grouping|Disabled|
 
-Select **Next : Automated response >** button.
-
-29. For the "Automated response" tab select the *PostMessageTeams-OnAlert* under *Alert automation* and then select **Next : Review** button.
+29. Select **Next : Automated response >** button. For the "Automated response" tab select the *PostMessageTeams-OnAlert* under *Alert automation* and then select **Next : Review** button.
 
 30. On the Review tab, select the **Create** button.
 
@@ -244,8 +231,6 @@ DeviceRegistryEvents
 | where RegistryValueData startswith "c:\\temp"
 ```
 
-    This looks like a good detection rule.  
-
 8. It is important to help the Security Operations Center Analyst by providing as much context about the alert as you can. This includes projecting Entities for use in the investigation graph. Run the following query:
 
 ```KQL
@@ -291,9 +276,7 @@ DeviceRegistryEvents
     |Incident settings|Enabled|
     |Alert grouping|Disabled|
 
-    Select **Next : Automated response >**:
-
-16. For the "Automated response" tab select the *PostMessageTeams-OnAlert* under *Alert automation* and then select **Next : Review** button.
+16. Select **Next : Automated response >**. For the "Automated response" tab select the *PostMessageTeams-OnAlert* under *Alert automation* and then select **Next : Review** button.
 
 17. On the Review and create tab, select **Create**.
 
@@ -340,8 +323,6 @@ SecurityEvent
 ) on $left.MachId == $right.MachId1, $left.Acct == $right.Acct1 
 ```
 
-    This looks like a good detection rule.  
-
    ![Screenshot](../Media/SC200_sysmon_attack3.png)
 
 >**Note:** This KQL might not return the expected results because of the small dataset used in the lab.
@@ -372,9 +353,7 @@ SecurityEvent
     |Tactics|**Privilege Escalation**|
     |Severity|**High**|
 
-Select **Next : Set rule logic >** button.
-
-10. On the Set rule logic tab, the Rule query and Map entities should already be populated.
+10. Select **Next : Set rule logic >** button. On the Set rule logic tab, the Rule query and Map entities should already be populated.
 
 11. For Query scheduling set the following:
 
@@ -394,9 +373,7 @@ Select **Next : Set rule logic >** button.
     |Incident settings|Enabled|
     |Alert grouping|Disabled|
 
-    Select **Next: Automated response >**
-
-14. For the "Automated response" tab select the *PostMessageTeams-OnAlert* under *Alert automation* and then select **Next : Review** button.
+14. Select **Next: Automated response >**. For the "Automated response" tab select the *PostMessageTeams-OnAlert* under *Alert automation* and then select **Next : Review** button.
 
 15. On the Review tab, select **Create**.
 

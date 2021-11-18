@@ -100,15 +100,13 @@ Host5
 
 15. Select your new watchlist.  On the right tab, select **View in Log Analytics**.
 
-16. The following KQL statement is automatically executed with the results displayed.
+16. You can now use the _GetWatchlist('HighValueHosts') in your own KQL statements to access the list. The column to reference would be *Hostname*.
 
 ```KQL
 _GetWatchlist('HighValueHosts')
 ```
 
 >**Note:** It could take a couple of minutes for the import to complete. You can continue with the following task and come back later to run this command.
-
-    You can now use the _GetWatchlist('HighValueHosts') in your own KQL statements to access the list. The column to reference would be *Hostname*.
 
 17. Close the *Logs* window by selecting the 'x' in the top-right and click **OK** to discard the unsaved edits.
 

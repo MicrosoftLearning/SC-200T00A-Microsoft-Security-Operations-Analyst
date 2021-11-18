@@ -33,7 +33,7 @@ In this task, you will explore the configuration of a workbook.
 
 9. Review the Identity & Access workbook.
 
-10. Close the workbook by selecting the 'x' in the top-right corner. You should be in the **Azure Sentinel | Workbooks | Templates** tab.
+10. Close the workbook by selecting the 'x' in the top-right corner. You should be in the **Azure Sentinel - Workbooks - Templates** tab.
 
 11. In the *Templates* tab search for and select **Azure AD Audit logs**, then select the **Save** button from the right pane. 
 

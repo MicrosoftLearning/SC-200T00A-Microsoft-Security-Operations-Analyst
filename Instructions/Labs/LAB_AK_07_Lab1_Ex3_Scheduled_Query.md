@@ -35,7 +35,7 @@ In this task, you will create a scheduled query and connect it to the Teams chan
 
 12. For the rule query, paste in the following KQL statement:
 
-    >**Warning:** When using the Paste function to the virtual machine extra | (pipe) characters could be added. Make sure you use Notepad first to paste the following query.
+    >**Warning:** When using the Paste function to the virtual machine extra (pipe) characters could be added. Make sure you use Notepad first to paste the following query.
 
 ```KQL
 AuditLogs 
@@ -95,11 +95,11 @@ In this task, you will test your new scheduled query rule.
 
 1. In the Search bar of the Azure portal, type *Azure Active Directory*. Then select **Azure Active Directory**.
 
-2. Select **Users** in the Manage area so the "Users | All users (Preview)" page is displayed.
+2. Select **Users** in the Manage area so the "Users - All users (Preview)" page is displayed.
 
-3. Select user **Christie Cline** in the list so the "Christie Cline | Profile" page is displayed.
+3. Select user **Christie Cline** in the list so the "Christie Cline - Profile" page is displayed.
 
-4. Select **Assigned roles** in the Manage area so the "Christie Cline | Assigned roles" page is displayed.
+4. Select **Assigned roles** in the Manage area so the "Christie Cline - Assigned roles" page is displayed.
 
 5. Select **+ Add assignments** from the command bar.
 
@@ -107,9 +107,9 @@ In this task, you will test your new scheduled query rule.
 
 7. Review the default *Assignment type* in the *Settings tab and select **Assign**. If the assignment fails to complete, try again.
 
-8. Close the "Christie Cline | Assigned roles" and "Users | All users (Preview)" pages by selecting the 'x' in the top-right twice.
+8. Close the "Christie Cline - Assigned roles" and "Users - All users (Preview)" pages by selecting the 'x' in the top-right twice.
 
-9. In the "Contoso | Overview" page, under *Monitoring*, select **Audit logs**.
+9. In the "Contoso - Overview" page, under *Monitoring*, select **Audit logs**.
 
 10. Verify that the "Azure Active Directory" data connector was setup correctly in Sentinel by selecting **Export data settings**.
 
