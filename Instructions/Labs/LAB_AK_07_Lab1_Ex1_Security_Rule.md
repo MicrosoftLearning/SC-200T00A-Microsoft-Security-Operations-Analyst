@@ -1,8 +1,15 @@
+---
+lab:
+    title: 'Exercise 1 - Activate a Microsoft Security rule'
+    module: 'Module 7 - Create detections and perform investigations using Azure Sentinel'
+---
+
 # Module 7 - Lab 1 - Exercise 1 - Activate a Microsoft Security rule
 
 ## Lab scenario
 
 You are a Security Operations Analyst working at a company that implemented Azure Sentinel. You must learn how to detect and mitigate threats using Azure Sentinel.  You need to enable alerts from other Microsoft 365 and Azure services.  
+
 
 ### Task 1: Activate a Microsoft Security Rule
 

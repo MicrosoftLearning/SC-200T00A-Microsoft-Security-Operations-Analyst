@@ -1,3 +1,9 @@
+---
+lab:
+    title: 'Exercise 1 - Connect data to Azure Sentinel using data connectors'
+    module: 'Module 6 - Connect logs to Azure Sentinel'
+---
+
 # Module 6 - Lab 1 - Exercise 1 - Connect data to Azure Sentinel using data connectors
 
 ## Lab scenario
@@ -6,7 +12,6 @@ You are a Security Operations Analyst working at a company that implemented Azur
 
 You plan on using the Azure Sentinel data connectors to integrate the log data from the various sources. You need to write a connector plan for management that maps each of the organization's data sources to the proper Azure Sentinel data connector.
 
-**Important Warning!**  The Virtual Machine WIN1 and WIN2 are used in Module 7.  Save your virtual machines.   If you exit the lab without saving, you will be required to install the connectors again on WIN1 and WIN2.
 
 ### Task 1: Access the Azure Sentinel Workspace.
 
@@ -26,31 +31,34 @@ In this task, you will access your Azure Sentinel workspace.
 
 7. Select your Azure Sentinel Workspace that you created in the previous lab.
 
+
 ### Task 2: Connect the Azure Active Directory connector.
 
 In this task, you will connect the Azure Active Directory connector to Azure Sentinel.
 
-1. In the Configuration area select **Data connectors**.  In the Data Connectors page, select the **Azure Active Directory** connector from the list.
+1. In the Configuration area select **Data connectors**.  In the Data Connectors page, search for the **Azure Active Directory** connector and select it from the list.
 
 2. Select **Open connector page** on the connector information blade.
 
 3. Select the **Sign-in Logs** and **Audit Logs** options from the Configuration area, then select **Apply Changes**.
 
+
 ### Task 3: Connect the Azure Active Directory Identity Protection connector.
 
 In this task, you will connect the Azure Active Directory Identity Protection connector to Azure Sentinel.
 
-1. From the Data Connectors Tab, select the **Azure Active Directory Identity Protection** connector from the list.
+1. From the Data Connectors Tab, search for the **Azure Active Directory Identity Protection** connector and select it from the list.
 
 2. Select **Open connector page** on the connector information blade.
 
 3. From the Configuration area select the **Connect** button.
 
+
 ### Task 4: Connect the Microsoft Defender for Cloud connector.
 
 In this task, you will connect the Microsoft Defender for Cloud connector.
 
-1. From the Data Connectors tab, select the **Microsoft Defender for Cloud** connector from the list.
+1. From the Data Connectors tab, search for the **Microsoft Defender for Cloud** connector and select it from the list.
 
 2. Select **Open connector page** on the connector information blade.
 
@@ -60,51 +68,56 @@ In this task, you will connect the Microsoft Defender for Cloud connector.
 
 5. Scroll down and in the Create incidents - Recommended! area, select **Enable**.
 
+
 ### Task 5: Connect the Microsoft Defender for Cloud Apps connector.
 
 In this task, you will connect the Microsoft Defender for Cloud Apps connector.
 
-1. From the Data Connectors Tab, select the **Microsoft Defender for Cloud Apps** connector from the list.
+1. From the Data Connectors Tab, search for the **Microsoft Defender for Cloud Apps** connector and select it from the list.
 
 2. Select **Open connector page** on the connector information blade.
 
 3. Select **Alerts** and then select **Apply Changes**.
 
+
 ### Task 6: Connect the Microsoft Defender for Office 365 connector.
 
 In this task, you will connect the Microsoft Defender for Office 365 connector.
 
-1. From the Data Connectors tab, select the **Microsoft Defender for Office 365 (Preview)** connector from the list.
+1. From the Data Connectors tab, search for the **Microsoft Defender for Office 365 (Preview)** connector and select it from the list.
 
 2. Select **Open connector page** on the connector information blade.
 
 3. In the Configuration area select **Connect**.
 
-### Task 7: Connect the Microsoft Defender for Identity connector.
+
+### Task 7: The Microsoft Defender for Identity connector.
 
 In this task, you will review the Microsoft Defender for Identity connector.
 
-1. From the Data Connectors Tab, select the **Microsoft Defender for Identity** connector from the list.
+1. From the Data Connectors Tab, search for the **Microsoft Defender for Identity** connector and select it from the list.
 
 2. Select **Open connector page** on the connector information blade.
 
 3. Review the Connecting Options. Don't connect. This is for informational purposes only.
 
+
 ### Task 8: Connect the Microsoft Defender for Endpoint connector.
 
 In this task, you will connect the Microsoft Defender for Endpoint connector.
 
-1. From the Data Connectors Tab, select the **Microsoft Defender for Endpoint** connector from the list.
+1. From the Data Connectors Tab, search for the **Microsoft Defender for Endpoint** connector and select it from the list.
 
 2. Select **Open connector page** on the connector information blade.
 
 3. In the Configuration area select **Connect**.
 
+
 ### Task 9: Connect the Microsoft 365 Defender connector.
 
 In this task, you will connect the Microsoft 365 Defender connector.
 
-1. From the Data Connectors Tab, select the **Microsoft 365 Defender (Preview)** connector from the list.
+1. From the Data Connectors Tab, search for the **Microsoft 365 Defender (Preview)** connector and select it from the list.
 
 2. Select **Open connector page** on the connector information blade.
 
@@ -112,11 +125,12 @@ In this task, you will connect the Microsoft 365 Defender connector.
 
 4. Select **Apply Changes**.
 
+
 ### Task 10: Connect the Azure Activity connector.
 
 In this task, you will connect the Azure Activity connector.
 
-1. From the Data Connectors Tab, select the **Azure Activity** connector from the list.
+1. From the Data Connectors Tab, search for the **Azure Activity** connector and select it from the list.
 
 2. Select **Open connector page** on the connector information blade.
 

@@ -1,8 +1,15 @@
+---
+lab:
+    title: 'Exercise 1 - Enable Microsoft Defender for Cloud'
+    module: 'Module 3 - Mitigate threats using Microsoft Defender for Cloud'
+---
+
 # Module 3 - Lab 1 - Exercise 1 - Enable Microsoft Defender for Cloud
 
 ## Lab scenario
 
 You're a Security Operations Analyst working at a company that is implementing cloud workload protection with Microsoft Defender for Cloud.  In this lab you will enable Microsoft Defender for Cloud.
+
 
 ### Task 1: Access the Azure portal and set up a Subscription.
 
@@ -20,11 +27,10 @@ In this task, you will set up an Azure Subscription required to complete this la
 
 6. In the Search bar of the Azure portal, type *Subscription*, then select **Subscriptions**. 
 
-7. If the *"Azure Pass - Sponsorship"* subscription is shown (or equivalent name in your selected language), proceed to Task #2. Otherwise, ask your instructor on how to create the Azure subscription with your tenant admin user credentials.
+7. If the *"Azure Pass - Sponsorship"* subscription is shown (or equivalent name in your selected language), proceed to Task #2. Otherwise, ask your instructor on how to create the Azure subscription with your tenant admin user credentials. **Note:** The subscription creation process could take up to 10 minutes. 
 
-**Important:** These labs have been designed to use less than USD $10 of Azure services during the class.
+>**Important:** These labs have been designed to use less than USD $10 of Azure services during the class.
 
-**Note:** It could take up to 10 minutes before the subscription can be used. 
 
 ### Task 2: Create a Log Analytics Workspace.
 
@@ -43,6 +49,7 @@ In this task, you will create a Log Analytics workspace for use with Microsoft D
 6. Select **Review + Create**.
 
 7. Once the workspace validation has passed, select **Create**. Wait for the new workspace to be provisioned, this may take a few minutes.
+
 
 ### Task 3: Enable Microsoft Defender for Cloud.
 
@@ -67,6 +74,7 @@ In this task, you will enable and configure Microsoft Defender for Cloud.
 9. Close the settings page by selecting the 'x' on the upper right of the page to go back to the **Environment settings** again and select the '>' on the left of your subscription.
 
 10. Select the Log analytics workspace you created earlier *uniquenameDefender* to review the available options and pricing.
+
 
 ### Task 4: Install Azure Arc on an On-Premises Server.
 
@@ -94,7 +102,7 @@ In this task, you will install Azure Arc on an on-premises server.
 
 10. Select the Resource group you created earlier. Hint: *RG-Defender*
 
-**Note:** If you haven't already created a resource group. Open another tab and create the resource group.
+    >**Note:** If you haven't already created a resource group, open another tab and create the resource group and start over.
 
 11. Review the *Server details* and *Network connectivity* options. Select **Next** to get to the Tags tab.
 
@@ -102,7 +110,7 @@ In this task, you will install Azure Arc on an on-premises server.
 
 13. Select **Register**.
 
-**Note:** Wait three (3) minutes for processing.
+    >**Note:** Wait at least three (3) minutes for processing.
 
 14. Scroll down and select the **Download** button. Hint: if your browser blocks the download take action in the browser to allow it. In Edge Browser, select the 3 dots "..." and then select **Keep**. 
 
@@ -128,7 +136,8 @@ In this task, you will install Azure Arc on an on-premises server.
 
 25. Select **Refresh** until WINServer server name appears.
 
-**Note:** This could take a few minutes.
+    >**Note:** This could take a few minutes.
+
 
 ### Task 5: Protect an On-Premises Server.
 
@@ -159,6 +168,5 @@ In this task, you will manually install the required agent on the Windows Server
 12. The Server should appear in the list.  You may have to select **Refresh** to see the update and it will take a few minutes.
 
 13. You can move on to the next lab and return later to the **Microsoft Defender for Cloud**. Your server will appear in the **Inventory** section. 
-
 
 # Proceed to Exercise 2

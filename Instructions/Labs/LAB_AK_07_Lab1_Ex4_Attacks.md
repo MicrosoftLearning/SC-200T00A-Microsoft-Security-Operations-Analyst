@@ -1,3 +1,9 @@
+---
+lab:
+    title: 'Exercise 4 - Understand Detection Modeling'
+    module: 'Module 7 - Create detections and perform investigations using Azure Sentinel'
+---
+
 # Module 7 - Lab 1 - Exercise 4 - Understand Detection Modeling
 
 ### Task 1: Understand the Attacks
@@ -6,7 +12,7 @@
 
 The attack patterns are based on an open-source project: https://github.com/redcanaryco/atomic-red-team
 
-**Note:** Some settings are triggered in a smaller time-frame just for our lab purpose.
+>**Note:** Some settings are triggered in a smaller time-frame just for our lab purpose.
 
 #### Attack 1 - Persistence with Registry Key Add.
 
@@ -26,7 +32,7 @@ net user theusernametoadd ThePassword1!
 net localgroup administrators theusernametoadd /add
 ```
 
-### Attack 3 -DNS / C2 
+### Attack 3 - DNS / C2 
 
 This attack will simulate a command and control (C2) communication.
 
@@ -71,6 +77,7 @@ Do {
 }
 Until ($TimeNow -ge $RunEnd)
 ```
+
 
 ### Task 2: Understand Detection Modeling.
 

@@ -1,4 +1,11 @@
+---
+lab:
+    title: 'Exercise 4 - Connect Threat intelligence to Azure Sentinel using data connectors'
+    module: 'Module 6 - Connect logs to Azure Sentinel'
+---
+
 # Module 6 - Lab 1 - Exercise 4 - Connect Threat intelligence to Azure Sentinel using data connectors
+
 
 ### Task 1: Connect Threat intelligence.
 
@@ -32,8 +39,8 @@ In this task, you will connect a Threat intelligence provider with the Threat in
 
 14. Now select **Add** button.  
 
-Phishing URLs will be pulled and populate the ThreatIntelligenceIndicator table.
+    Phishing URLs will be pulled and populate the ThreatIntelligenceIndicator table.
 
-**Note:** For additional collections open https://limo.anomali.com/api/v1/taxii2/feeds/collections/ in a Browser, use the guest username and password to review the different Collection IDs available.
+>**Note:** For additional collections open https://limo.anomali.com/api/v1/taxii2/feeds/collections/ in a Browser, use the guest username and password to review the different Collection IDs available.
 
 ## You have completed the lab.

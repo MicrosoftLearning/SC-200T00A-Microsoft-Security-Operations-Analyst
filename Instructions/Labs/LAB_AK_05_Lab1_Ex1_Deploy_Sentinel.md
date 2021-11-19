@@ -1,8 +1,15 @@
+---
+lab:
+    title: 'Exercise 1 - Configure your Azure Sentinel environment'
+    module: 'Module 5 - Configure your Azure Sentinel environment'
+---
+
 # Module 5 - Lab 1 - Exercise 1 - Configure your Azure Sentinel environment
 
 ## Lab scenario
 
 You're a Security Operations Analyst working at a company that is implementing Azure Sentinel. You're responsible for setting up the Azure Sentinel environment to meet the company requirement to minimize cost, meet compliance regulations, and provide the most manageable environment for your security team to perform their daily job responsibilities.
+
 
 ### Task 1: Initialize the Azure Sentinel Workspace.
 
@@ -24,7 +31,7 @@ In this task, you will create an Azure Sentinel workspace.
 
 8. Next, select **+ Create a new workspace**.
 
-**Note:** First, you create a new Log Analytics Workspace.
+    >**Note:** First, you create a new Log Analytics Workspace.
 
 9. Select your proper Subscription.
 
@@ -32,7 +39,7 @@ In this task, you will create an Azure Sentinel workspace.
 
 11. Under *Instance details* in the name field enter a name for your choosing for the Log Analytics Workspace.
 
-**Note:** This name will also be the Azure Sentinel workspace name.
+    >**Note:** This name will also be the Azure Sentinel workspace name.
 
 12. Select the region that is appropriate for you. The appropriate region may default or your instructor may have specific advice on which region to select.  
 
@@ -44,6 +51,7 @@ In this task, you will create an Azure Sentinel workspace.
 
 16. Navigate around the newly created Azure Sentinel workspace to become familiar with the user interface options.
 
+
 ### Task 2: Create a Watchlist.
 
 In this task, you will create a watchlist in Azure Sentinel.
@@ -53,6 +61,7 @@ In this task, you will create a watchlist in Azure Sentinel.
 2. Type *Hostname* then enter for a new line.
 
 3. In Row 2 through 6 of the notepad, copy the following hostnames, each one in a different line:
+
 ```Notepad
 Host1
 Host2
@@ -70,9 +79,12 @@ Host5
 7. Select **+ Add new** from the command bar.
 
 8. In the Watchlist wizard, enter the following:
-    Name: HighValueHosts
-    Description: High Value Hosts
-    Watchlist alias: HighValueHosts
+
+    |General setting|Value|
+    |---|---|
+    |Name|**HighValueHosts**|
+    |Description|**High Value Hosts**|
+    |Watchlist alias|**HighValueHosts**|
 
 9. Select, **Next: Source >**.
 
@@ -88,17 +100,16 @@ Host5
 
 15. Select your new watchlist.  On the right tab, select **View in Log Analytics**.
 
-16. The following KQL statement is automatically executed with the results displayed.
+16. You can now use the _GetWatchlist('HighValueHosts') in your own KQL statements to access the list. The column to reference would be *Hostname*.
 
 ```KQL
 _GetWatchlist('HighValueHosts')
 ```
 
-**Note:** It could take a couple of minutes for the import to complete. You can continue with the following task and come back later to run this command.
-
-You can now use the _GetWatchlist('HighValueHosts') in your own KQL statements to access the list. The column to reference would be *Hostname*.
+>**Note:** It could take a couple of minutes for the import to complete. You can continue with the following task and come back later to run this command.
 
 17. Close the *Logs* window by selecting the 'x' in the top-right and click **OK** to discard the unsaved edits.
+
 
 ### Task 3: Create a Threat Indicator.
 
@@ -118,7 +129,7 @@ In this task, you will create an indicator in Azure Sentinel.
 
 7. Select **Apply**.
 
-**Note:** It could take a couple of minute for the indicator to appear.
+    >**Note:** It could take a couple of minute for the indicator to appear.
 
 8. Select the **Logs** option in the General area. You may need to disable the "Always show queries" option and close the *Queries* window to get run the statements.
 

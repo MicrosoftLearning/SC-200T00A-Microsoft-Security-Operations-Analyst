@@ -1,4 +1,11 @@
+---
+lab:
+    title: 'Exercise 2 - Connect Windows devices to Azure Sentinel using data connectors'
+    module: 'Module 6 - Connect logs to Azure Sentinel'
+---
+
 # Module 6 - Lab 1 - Exercise 2 - Connect Windows devices to Azure Sentinel using data connectors
+
 
 ### Task 1: Create a Windows Virtual Machine in Azure.
 
@@ -20,9 +27,9 @@ In this task, you will create a Windows virtual machine in Azure.
 
 8. Select your Subscription.
 
-9. Select **Create new** for *Resource group*, enter rg-AZWIN01 as Name and select **OK**.
+9. Select **Create new** for *Resource group*, enter RG-AZWIN01 as Name and select **OK**.
 
-**Note:** This should be a new resource group for tracking purposes.  
+    >**Note:** This should be a new resource group for tracking purposes.  
 
 10. In *Virtual machine name*, enter AZWIN01.
 
@@ -32,13 +39,14 @@ In this task, you will create a Windows virtual machine in Azure.
 
 13. Enter a *Password* of your choosing. 
 
-**Hint:** It might be easiest to use your tenant password.
+    >**Hint:** It might be easiest to use your tenant password.
 
 14. Select the checkbox below *Licensing*.
 
 15. Select **Review + create**.
 
 16. Select **Create**. Wait for the Resource to be created, this may take a few minutes.
+
 
 ### Task 2: Connect an Azure Windows virtual machine.
 
@@ -48,7 +56,7 @@ In this task, you will connect an Azure Windows virtual machine to Azure Sentine
 
 2. Select your Azure Sentinel Workspace you created earlier.
 
-3. From the Data Connectors Tab, select the **Security Events via Legacy Agent** connector from the list.
+3. From the Data Connectors Tab, search for the **Security Events via Legacy Agent** connector and select it from the list.
 
 4. Select **Open connector page** on the connector information blade.
 
@@ -59,6 +67,7 @@ In this task, you will connect an Azure Windows virtual machine to Azure Sentine
 7. Select the **AZWIN01** virtual machine in the list that you just created in the previous task, then select **Connect**. Wait until the *connecting...* message disappears.
 
 8. Close the window by selecting the 'x' to go back to **Virtual machines** view. You should now see the virtual machine has a *Log Analytics Connection* to "This workspace".
+
 
 ### Task 3: Connect a non-Azure Windows Machine.
 
@@ -74,7 +83,7 @@ In this task, you will connect a non-Azure Windows virtual machine to Azure Sent
 
 5. Select your Azure Sentinel Workspace.
 
-6. Select **Data connectors** then select the **Security Events via Legacy Agent** connector from the list.
+6. Select **Data connectors** then search for the **Security Events via Legacy Agent** connector and select it from the list.
 
 7. Select **Open connector page** on the connector information blade.
 
@@ -104,11 +113,12 @@ In this task, you will connect a non-Azure Windows virtual machine to Azure Sent
 
 20. Then select **Install**.  When complete select **Finish**.
 
+
 ### Task 4: Install and collect Sysmon logs.
 
 In this task, you will install and collect Sysmon logs.
 
-You should still be connected to the WIN2 virtual machine. The following instructions will install Sysmon with the default configuration. You should research community-based configurations for Sysmon to be used on production machines.
+>**Important:** You should still be connected to the WIN2 virtual machine. The following instructions will install Sysmon with the default configuration. You should research community-based configurations for Sysmon to be used on production machines.
 
 1. Open a new tab in the browser, go to https://docs.microsoft.com/sysinternals/downloads/sysmon
 
@@ -129,7 +139,7 @@ You should still be connected to the WIN2 virtual machine. The following instruc
 9. In the command prompt type the following and press enter:
     sysmon.exe -accepteula -i sysmon.xml
 
-**Note:**  Verify that "Configuration file validated" and "Sysmon started" messages appear in the output. If that is not the case, verify that the data is properly copied and the sysmon.xml has been saved.
+    >**Note:**  Verify that "Configuration file validated" and "Sysmon started" messages appear in the output. If that is not the case, verify that the data is properly copied and the sysmon.xml has been saved.
 
 10. In the browser, navigate back to the Azure portal at https://portal.azure.com 
 
@@ -149,11 +159,12 @@ You should still be connected to the WIN2 virtual machine. The following instruc
 
 18. Select **Apply**.
 
+
 ### Task 5: Onboard Microsoft Defender for Endpoint Device.
 
 In this task, you will on-board a device to Microsoft Defender for Endpoint.
 
-**IMPORTANT:** If you completed the labs in the first module of this course AND saved your Virtual Machines you have already performed this task.  If you’re using the same virtual machine from that lab exercise you can skip this task.
+>**IMPORTANT:** If you completed the labs in the first module of this course AND saved your Virtual Machines you have already performed this task. This means that if you’re using the same virtual machine from that lab exercise you can skip this task.
 
 1. Login to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
@@ -171,7 +182,7 @@ In this task, you will on-board a device to Microsoft Defender for Endpoint.
 
 8. Run the WindowsDefenderATPLocalOnboardingScript.cmd file that you just extracted as administrator. **Note** By default the file should be in the c:\users\admin\downloads directory. Answer Y to questions presented by the script. 
 
-9. From the Onboarding page in the portal, copy the detection test script and run it in an open command window.  You may have to open a new **Administrator: Command Prompt** window by typing *CMD* in the windows search bar and choose to **run as Administrator**.
+9. From the Onboarding page in the portal, copy the detection test script and run it in an open command window.  You may have to open a new **Administrator: Command Prompt** window by typing *CMD* in the windows search bar and choose to **Run as Administrator**.
 
 10. In the Microsoft 365 Defender portal in the Endpoints area, select **Device inventory**. You should now see your device in the list.
 

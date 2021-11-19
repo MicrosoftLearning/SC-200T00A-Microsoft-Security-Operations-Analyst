@@ -1,4 +1,11 @@
+---
+lab:
+    title: 'Exercise 3 - Connect Linux hosts to Azure Sentinel using data connectors'
+    module: 'Module 6 - Connect logs to Azure Sentinel'
+---
+
 # Module 6 - Lab 1 - Exercise 3 - Connect Linux hosts to Azure Sentinel using data connectors
+
 
 ### Task 1: Access the Azure Sentinel Workspace.
 
@@ -18,11 +25,12 @@ In this task, you will access your Azure Sentinel workspace.
 
 7. Select your Azure Sentinel Workspace you created in a previous lab.
 
+
 ### Task 2: Connect a Linux Host using the Common Event Format connector.
 
 In this task, you will connect a Linux host to Azure Sentinel with the Common Event Format (CEF) connector.
 
-1. Select **Data connectors** from the Configuration area in Azure Sentinel.  From the Data Connectors tab, select the **Common Event Format (CEF)** connector from the list.
+1. Select **Data connectors** from the Configuration area in Azure Sentinel.  From the Data Connectors tab, search for the **Common Event Format (CEF)** connector and select it from the list.
 
 2. Select **Open connector page** on the connector information blade.
 
@@ -53,13 +61,14 @@ ssh <insert your linux IP address here> -l <insert linux user name here>
 
    ![ConnectorScript](../Media/LinuxConnected.png)
 
+
 ### Task 3: Connect a Linux host using the Syslog connector.
 
 In this task, you will connect a Linux host to Azure Sentinel with the Syslog connector.
 
 1. Connect to WIN1, which should already be in the Azure Sentinel portal for your workspace.  
 
-2. From the Data Connectors tab, select the **Syslog** connector from the list.
+2. From the Data Connectors tab, search for the **Syslog** connector and select it from the list.
 
 3. Select **Open connector page** on the connector information blade.
 
@@ -77,7 +86,7 @@ In this task, you will connect a Linux host to Azure Sentinel with the Syslog co
 
 9. Go back to the WIN1 virtual machine and launch a NEW Windows PowerShell as Administrator by right-clicking the Start menu icon and select **Windows PowerShell (Admin)**. Select **Yes** to allow the app to run in the User Account Control window that appears.
 
-**Note:** You can reuse the Windows PowerShell window if the *Installation completed* for the last task by entering *exit* to close the connection to LIN1.
+   >**Note:** You can reuse the Windows PowerShell window if the *Installation completed* for the last task by entering *exit* to close the connection to LIN1.
 
 10. Enter the following PowerShell command, adjusting for your specific Linux server information, and press enter:
 
@@ -92,6 +101,7 @@ ssh <insert your linux IP address here> -l <insert linux user name here>
 12. You are now ready to paste in the *Download and onboard agent for Linux* from the earlier step. Make sure that script from Azure is in the clipboard. In PowerShell right-click the top bar and choose **Edit** and then **Paste**.
 
 13. Once the script is pasted in press enter. The script will run against your Linux server remotely. You have completed the task. No further labs in this course rely on this connection.
+
 
 ### Task 4: Configure the facilities you want to collect and their severities for the Syslog connector.
 

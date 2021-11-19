@@ -1,12 +1,19 @@
+---
+lab:
+    title: 'Exercise 1 - Perform Threat Hunting in Azure Sentinel'
+    module: 'Module 8 - Perform threat hunting in Azure Sentinel'
+---
+
 # Module 8 - Lab 1 - Exercise 1 - Perform Threat Hunting in Azure Sentinel
 
 ## Lab scenario
 
 You are a Security Operations Analyst working at a company that implemented Azure Sentinel. You have received threat intelligence about a Command and Control (C2 or C&C) technique.  You need to perform a hunt and watch for the threat.
 
-**Important:** The log data used in the lab was created in the previous module. See **Attack 3** in WIN1 server in Exercise 5.
+>**Important:** The log data used in the lab was created in the previous module. See **Attack 3** in WIN1 server in Exercise 5.
 
-**Note:**  Because you already experienced the process of exploring data in a previous module, the lab provides a KQL statement to start with.  
+>**Note:**  Because you already experienced the process of exploring data in a previous module, the lab provides a KQL statement to start with.  
+
 
 ### Task 1: Create a hunting query
 
@@ -28,7 +35,7 @@ In this task, you will create a hunting query, bookmark a result, and create a L
 
 8. Enter the following KQL Statement in the New Query 1 space:
 
-**Important:** Please paste any KQL queries first in Notepad and then copy from there to the *New Query 1* Log window to avoid any errors.
+   >**Important:** Please paste any KQL queries first in Notepad and then copy from there to the *New Query 1* Log window to avoid any errors.
 
 ```KQL
 let lookback = 2d;
@@ -61,7 +68,7 @@ DeviceEvents
 
    ![Screenshot](../Media/SC200_hunting2.png)
 
-**Note:** The generated log data is only from one device.
+   >**Note:** The generated log data is only from one device.
 
 11. Close the Logs window by selecting the 'x' in the top-right of the window and select **OK** to discard the changes. Select your Azure Sentinel workspace again and select the **Hunting** page under the Threat Management area.
 
@@ -84,9 +91,9 @@ DeviceEvents
 
 15. In the *Entity mapping (Preview)* select **+ Add new entity**:
 
-    For the *Entity type* drop-down list select **Host**.
-    For the *Identifier* drop-down list select **HostName**.
-    For the *Value* drop-down list select **DeviceName**.
+    - For the *Entity type* drop-down list select **Host**.
+    - For the *Identifier* drop-down list select **HostName**.
+    - For the *Value* drop-down list select **DeviceName**.
 
 16. In the *Tactics & Techniques* select **Command and Control**. Select **Create** to create the hunting query.
 

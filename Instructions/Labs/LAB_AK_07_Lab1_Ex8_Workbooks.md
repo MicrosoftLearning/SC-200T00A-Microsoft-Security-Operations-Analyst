@@ -1,8 +1,15 @@
+---
+lab:
+    title: 'Exercise 8 - Create workbooks'
+    module: 'Module 7 - Create detections and perform investigations using Azure Sentinel'
+---
+
 # Module 7 - Lab 1 - Exercise 8 - Create workbooks
 
 ## Lab scenario
 
 You're a Security Operations Analyst working at a company that implemented Azure Sentinel. You must design workbooks with advanced visualizations.
+
 
 ### Task 1: Explore Workbooks.
 
@@ -26,7 +33,7 @@ In this task, you will explore the configuration of a workbook.
 
 9. Review the Identity & Access workbook.
 
-10. Close the workbook by selecting the 'x' in the top-right corner. You should be in the **Azure Sentinel | Workbooks | Templates** tab.
+10. Close the workbook by selecting the 'x' in the top-right corner. You should be in the **Azure Sentinel - Workbooks - Templates** tab.
 
 11. In the *Templates* tab search for and select **Azure AD Audit logs**, then select the **Save** button from the right pane. 
 
@@ -42,7 +49,7 @@ In this task, you will explore the configuration of a workbook.
 
 16. Select the **Column Settings** button in the right of the Query Command bar.
 
-**Note:** This button only appears if there is data in the report.
+    >**Note:** This button only appears if there is data in the report.
 
 17. In the *Edit column settings* blade select the column **Operations Count (Heatmap + Formatted)**.
 
@@ -69,6 +76,7 @@ In this task, you will explore the configuration of a workbook.
 27. Select **Done Editing** at the bottom of the query.
 
 28. Select **Done Editing** at the top menu for the workbook and select the **Save** icon. Close the workbook by selecting the 'x' in the top-right corner.
+
 
 ### Task 2: Create a Workbook.
 
@@ -118,7 +126,7 @@ In this task, you will create a new workbook with advanced visualizations.
 
 Enter the following KQL command for the query:
 
-```
+```KQL
 SecurityEvent
 ```
 

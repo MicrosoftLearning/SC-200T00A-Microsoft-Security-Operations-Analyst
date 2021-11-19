@@ -1,4 +1,11 @@
+---
+lab:
+    title: 'Exercise 3 - Create a Scheduled Query'
+    module: 'Module 7 - Create detections and perform investigations using Azure Sentinel'
+---
+
 # Module 7 - Lab 1 - Exercise 3 - Create a Scheduled Query
+
 
 ### Task 1: Create a Scheduled Query.
 
@@ -28,7 +35,7 @@ In this task, you will create a scheduled query and connect it to the Teams chan
 
 12. For the rule query, paste in the following KQL statement:
 
-**Warning:** When using the Paste function to the virtual machine.  Extra | (pipe) characters could be added. Make sure you use Notepad first to paste the following query.
+    >**Warning:** When using the Paste function to the virtual machine extra (pipe) characters could be added. Make sure you use Notepad first to paste the following query.
 
 ```KQL
 AuditLogs 
@@ -40,17 +47,32 @@ AuditLogs
 | project TimeGenerated, InitiatedByUPN, InitiatedFromIP, TargetUser, TargetRoleName, AADOperationType, OperationName
 ```
 
-**Note:** If you select the link to "View query results", you should not receive any results nor any errors. If you receive an error, please review that the query appears just like the previous KQL statement.
+>**Note:** If you select the link to "View query results", you should not receive any results nor any errors. If you receive an error, please review that the query appears just like the previous KQL statement.
 
-13. Back in the "Analytics rule wizard - Create new scheduled rule" blade in the *Alert enrichment (Preview)* area, select *Entity mapping* and select the following values: **Entity Type:** Account, **Identifier:** FullName, **Value:** InitiatedByUPN, then select *Add new entity* and select the following values: **Entity Type:** IP, **Identifier:** Address, **Value:** InitiatedFromIP
+13. Back in the "Analytics rule wizard - Create new scheduled rule" blade in the *Alert enrichment (Preview)* area, select *Entity mapping* and select the following values: 
 
-14. In the *Query scheduling* area, enter **5** and select **Minutes** for the *Run query every* option and enter **1** and select **Days** for the *Lookup data from the last* option.
+    - For the *Entity type* drop-down list select **Account**.
+    - For the *Identifier* drop-down list select **FullName**.
+    - For the *Value* drop-down list select **InitiatedByUPN**.
 
-**Note:** We are purposely generating many incidents for the same data.  This enables the Lab to use these alerts.
+    Then select **Add new entity** and select the following values:
+
+    - For the *Entity type* drop-down list select **IP**.
+    - For the *Identifier* drop-down list select **Address**.
+    - For the *Value* drop-down list select **InitiatedFromIP**.
+
+14. In the *Query scheduling* set the following:
+
+    |Setting|Value|
+    |---|---|
+    |Run Query every|5 minutes|
+    |Look data from the last|1 Day|
+
+    >**Note:** We are purposely generating many incidents for the same data.  This enables the Lab to use these alerts.
 
 15. For the *Alert threshold* area, leave the options unchanged.
 
-**Note:** Best practices are to manage thresholds in the alert rule KQL query statement.
+    >**Note:** Best practices are to manage thresholds in the alert rule KQL query statement.
 
 16. For the *Event grouping* area, leave the **Group all events into a single alert** as the selected option.
 
@@ -66,17 +88,18 @@ AuditLogs
   
 23. Select **Create**.
 
+
 ### Task 2: Test our new rule.
 
 In this task, you will test your new scheduled query rule.
 
 1. In the Search bar of the Azure portal, type *Azure Active Directory*. Then select **Azure Active Directory**.
 
-2. Select **Users** in the Manage area so the "Users | All users (Preview)" page is displayed.
+2. Select **Users** in the Manage area so the "Users - All users (Preview)" page is displayed.
 
-3. Select user **Christie Cline** in the list so the "Christie Cline | Profile" page is displayed.
+3. Select user **Christie Cline** in the list so the "Christie Cline - Profile" page is displayed.
 
-4. Select **Assigned roles** in the Manage area so the "Christie Cline | Assigned roles" page is displayed.
+4. Select **Assigned roles** in the Manage area so the "Christie Cline - Assigned roles" page is displayed.
 
 5. Select **+ Add assignments** from the command bar.
 
@@ -84,9 +107,9 @@ In this task, you will test your new scheduled query rule.
 
 7. Review the default *Assignment type* in the *Settings tab and select **Assign**. If the assignment fails to complete, try again.
 
-8. Close the "Christie Cline | Assigned roles" and "Users | All users (Preview)" pages by selecting the 'x' in the top-right twice.
+8. Close the "Christie Cline - Assigned roles" and "Users - All users (Preview)" pages by selecting the 'x' in the top-right twice.
 
-9. In the "Contoso | Overview" page, under *Monitoring*, select **Audit logs**.
+9. In the "Contoso - Overview" page, under *Monitoring*, select **Audit logs**.
 
 10. Verify that the "Azure Active Directory" data connector was setup correctly in Sentinel by selecting **Export data settings**.
 
@@ -102,7 +125,7 @@ In this task, you will test your new scheduled query rule.
 
 16. Select the **Incidents** menu option.
 
-**Note:** The alert triggered may take 5+ minutes to process. You may continue with the next exercise and return to this point later. For automatic updating of the Incidents page, select the **Auto-refresh incidents** toggle.
+    >**Note:** The alert triggered may take 5+ minutes to process. You may continue with the next exercise and return to this point later. For automatic updating of the Incidents page, select the **Auto-refresh incidents** toggle.
 
 17. You should see the newly created Incident. Select the Incident and review the information in the right blade.
 

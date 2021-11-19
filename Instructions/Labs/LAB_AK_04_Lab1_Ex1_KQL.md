@@ -1,9 +1,15 @@
+---
+lab:
+    title: 'Exercise 1 - Create queries for Azure Sentinel using Kusto Query Language (KQL)'
+    module: 'Module 4 - Create queries for Azure Sentinel using Kusto Query Language (KQL)'
+---
+
 # Module 4 - Lab 1 - Exercise 1 - Create queries for Azure Sentinel using Kusto Query Language (KQL)
 
 ## Lab scenario
 You are a Security Operations Analyst working at a company that is implementing Azure Sentinel. You are responsible for performing log data analysis to search for malicious activity, display visualizations, and perform threat hunting. To query log data, you use the Kusto Query Language (KQL).
 
-**Hint:** This lab involves entering many KQL scripts into Azure Sentinel. The scripts were provided in a file at the beginning of this lab. An alternate location to download them is:  https://github.com/MicrosoftLearning/SC-200T00A-Microsoft-Security-Operations-Analyst/tree/master/Allfiles
+>**Hint:** This lab involves entering many KQL scripts into Azure Sentinel. The scripts were provided in a file at the beginning of this lab. An alternate location to download them is:  https://github.com/MicrosoftLearning/SC-200T00A-Microsoft-Security-Operations-Analyst/tree/master/Allfiles
 
 
 ### Task 1: Access the KQL testing area.
@@ -24,11 +30,12 @@ SecurityEvent
 
 5. Next to the first record, select the **>** to expand the information for the row.
 
+
 ### Task 2: Run Basic KQL Statements
 
 In this task, you will build basic KQL statements.
 
-**Important:**  For each query, clear the previous statement from the Query Window or open a new Query Windows by selecting **+** after the last opened tab (up to 25).
+>**Important:**  For each query, clear the previous statement from the Query Window or open a new Query Windows by selecting **+** after the last opened tab (up to 25).
 
 1. The following statement demonstrates the use of the let statement to declare variables. In the Query Window. Enter the following statement and select **Run**: 
 
@@ -66,7 +73,7 @@ LowActivityAccounts | where Account contains "sql"
 search "err"
 ```
 
-**Warning:** Make sure you change back the Time range to "Last 24 hours" for the next scripts.
+>**Warning:** Make sure you change back the Time range to "Last 24 hours" for the next scripts.
 
 5. The following statement demonstrates searching across tables listed with the "in" clause for records within the query time range display in the query window. In the Query Window. Enter the following statement and select **Run**: 
 
@@ -76,7 +83,7 @@ search in (SecurityEvent,SecurityAlert,A*) "err"
 
 6. The following statements demonstrates filter using the where operator. In the Query Window. Enter the following statement and select **Run**: 
 
-**Note:** You should "run" after entering the query from each code block below.
+    >**Note:** You should "run" after entering the query from each code block below.
 
 ```KQL
 SecurityEvent
@@ -128,7 +135,7 @@ SecurityAlert
 
 9. The following statements demonstrate specifying fields for the result set using the project operators.
 
-**Note:** You should "Run" after entering the query from each code block below.
+    >**Note:** You should "Run" after entering the query from each code block below.
 
 In the Query Window. Enter the following statement and select **Run**: 
 
@@ -149,6 +156,7 @@ SecurityAlert
 | order by severityOrder
 | project-away severityOrder
 ```
+
 
 ### Task 3: Analyze Results in KQL with the Summarize Operator
 
@@ -216,7 +224,7 @@ SecurityEvent
 | summarize arg_max(TimeGenerated, *) by Account
 ```
 
-**Note:**  You can also review the "Total CPU" and "Data used for processed query" by selecting the bar "Completed" and compare the data between both statements.
+>**Note:**  You can also review the "Total CPU" and "Data used for processed query" by selecting the bar "Completed" and compare the data between both statements.
 
 7. The following statement demonstrates the make_list function.
 
@@ -240,6 +248,7 @@ SecurityEvent
 | summarize make_set(Account) by Computer
 ```
 
+
 ### Task 4: Create visualizations in KQL with the Render Operator
 
 In this task, you will use generate visualizations with KQL statements.
@@ -262,6 +271,7 @@ SecurityEvent
 | render timechart
 ```
 
+
 ### Task 5: Build multi-table statements in KQL
 
 In this task, you will build multi-table KQL statements.
@@ -269,12 +279,14 @@ In this task, you will build multi-table KQL statements.
 1. The following statement demonstrates the union operator that takes two or more tables and returns the rows of all of them. Understanding how results are passed and impacted with the pipe character is essential. In the Query Window. Enter the following statements and select **Run** for each separately to see the results: 
 
 **Query 1** will return all rows of SecurityEvent and all rows of SecurityAlert.
+
 ```KQL
 SecurityEvent 
 | union SecurityAlert  
 ```
 
 **Query 2** will return one row and column, which is the count of all rows of SecurityEvent and all rows of SecurityAlert.
+
 ```KQL
 SecurityEvent 
 | union SecurityAlert  
@@ -283,6 +295,7 @@ SecurityEvent
 ```
 
 **Query 3** will return all rows of SecurityEvent and one row for SecurityAlert.  The row for SecurityAlert will have the count of the SecurityAlert rows.
+
 ```KQL
 SecurityEvent 
 | union (SecurityAlert  | summarize count()) 
@@ -312,6 +325,7 @@ SecurityEvent
 ```
 
 The first table specified in the join is considered the Left table.  The table after the join keyword is the right table.  When working with columns from the tables, the $left.Column name and $right.Column name is to distinguish which tables column are referenced. 
+
 
 ### Task 6: Work with string data in KQL
 
@@ -400,7 +414,7 @@ SecurityAlert
 
 6. To create a function:
 
-**Note:** You will not be able to do this in the lademo environment used for data in this lab, but it's an important concept to be used in your environment. 
+    >**Note:** You will not be able to do this in the lademo environment used for data in this lab, but it's an important concept to be used in your environment. 
 
 After running a query, select the **Save** button and then select **Save As function** from the drop-down. Enter the name your want, for example: *MailboxForward* in the **Function name** box and enter a **Legacy category**, like *General* and select **Save**.
 
@@ -411,4 +425,3 @@ MailboxForward
 ```
 
 ## You have completed the lab.
-
