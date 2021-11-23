@@ -1,21 +1,21 @@
 ---
 lab:
-    title: 'Exercise 1 - Connect data to Azure Sentinel using data connectors'
-    module: 'Module 6 - Connect logs to Azure Sentinel'
+    title: 'Exercise 1 - Connect data to Microsoft Sentinel using data connectors'
+    module: 'Module 6 - Connect logs to Microsoft Sentinel'
 ---
 
-# Module 6 - Lab 1 - Exercise 1 - Connect data to Azure Sentinel using data connectors
+# Module 6 - Lab 1 - Exercise 1 - Connect data to Microsoft Sentinel using data connectors
 
 ## Lab scenario
 
-You are a Security Operations Analyst working at a company that implemented Azure Sentinel. You must learn how to connect log data from the many data sources in your organization. The organization has data from Microsoft 365, Microsoft 365 Defender, Azure resources, non-azure virtual machines, and network appliances.
+You are a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You must learn how to connect log data from the many data sources in your organization. The organization has data from Microsoft 365, Microsoft 365 Defender, Azure resources, non-azure virtual machines, and network appliances.
 
-You plan on using the Azure Sentinel data connectors to integrate the log data from the various sources. You need to write a connector plan for management that maps each of the organization's data sources to the proper Azure Sentinel data connector.
+You plan on using the Microsoft Sentinel data connectors to integrate the log data from the various sources. You need to write a connector plan for management that maps each of the organization's data sources to the proper Microsoft Sentinel data connector.
 
 
-### Task 1: Access the Azure Sentinel Workspace.
+### Task 1: Access the Microsoft Sentinel Workspace.
 
-In this task, you will access your Azure Sentinel workspace.
+In this task, you will access your Microsoft Sentinel workspace.
 
 1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
@@ -27,14 +27,14 @@ In this task, you will access your Azure Sentinel workspace.
 
 5. In the **Enter password** dialog box, copy, and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
-6. In the Search bar of the Azure portal, type *Sentinel*, then select **Azure Sentinel**.
+6. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
-7. Select your Azure Sentinel Workspace that you created in the previous lab.
+7. Select your Microsoft Sentinel Workspace that you created in the previous lab.
 
 
 ### Task 2: Connect the Azure Active Directory connector.
 
-In this task, you will connect the Azure Active Directory connector to Azure Sentinel.
+In this task, you will connect the Azure Active Directory connector to Microsoft Sentinel.
 
 1. In the Configuration area select **Data connectors**.  In the Data Connectors page, search for the **Azure Active Directory** connector and select it from the list.
 
@@ -45,7 +45,7 @@ In this task, you will connect the Azure Active Directory connector to Azure Sen
 
 ### Task 3: Connect the Azure Active Directory Identity Protection connector.
 
-In this task, you will connect the Azure Active Directory Identity Protection connector to Azure Sentinel.
+In this task, you will connect the Azure Active Directory Identity Protection connector to Microsoft Sentinel.
 
 1. From the Data Connectors Tab, search for the **Azure Active Directory Identity Protection** connector and select it from the list.
 
@@ -138,7 +138,7 @@ In this task, you will connect the Azure Activity connector.
 
 4. In the **Basics** tab, select the button with the three dots under **Scope** to select your subscription from the drop-down list and click **Select**.
 
-5. Select the **Parameters** tab, choose your Azure Sentinel workspace from the **Primary Log Analytics workspace** drop-down list.
+5. Select the **Parameters** tab, choose your Microsoft Sentinel workspace from the **Primary Log Analytics workspace** drop-down list.
 
 6. Select the **Remediation** tab and mark the **Create a remediation task** checkbox.
 

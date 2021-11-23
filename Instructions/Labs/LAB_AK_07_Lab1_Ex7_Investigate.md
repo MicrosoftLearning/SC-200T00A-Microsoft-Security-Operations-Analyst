@@ -1,7 +1,7 @@
 ---
 lab:
     title: 'Exercise 7 - Investigate Incidents'
-    module: 'Module 7 - Create detections and perform investigations using Azure Sentinel'
+    module: 'Module 7 - Create detections and perform investigations using Microsoft Sentinel'
 ---
 
 # Module 7 - Lab 1 - Exercise 7 - Investigate Incidents
@@ -19,9 +19,9 @@ In this task, you will investigate an incident.
 
 4. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
-5. In the Search bar of the Azure portal, type *Sentinel*, then select **Azure Sentinel**.
+5. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
-6. Select your Azure Sentinel Workspace you created earlier.
+6. Select your Microsoft Sentinel Workspace you created earlier.
 
 7. Select the **Incidents** page.
 

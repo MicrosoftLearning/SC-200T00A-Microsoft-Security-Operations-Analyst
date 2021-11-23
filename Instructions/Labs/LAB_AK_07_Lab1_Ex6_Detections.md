@@ -1,7 +1,7 @@
 ---
 lab:
     title: 'Exercise 6 - Create Detections'
-    module: 'Module 7 - Create detections and perform investigations using Azure Sentinel'
+    module: 'Module 7 - Create detections and perform investigations using Microsoft Sentinel'
 ---
 
 # Module 7 - Lab 1 - Exercise 6 - Create Detections
@@ -19,9 +19,9 @@ In this task, you will create a detection for **Attack 1** on the host with the 
 
 4. In the **Enter password** dialog box, copy and paste in the **Tenant Password** for admin provided by your lab hosting provider and then select **Sign in**.
 
-5. In the Search bar of the Azure portal, type *Sentinel*, then select **Azure Sentinel**.
+5. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
-6. Select your Azure Sentinel Workspace you created earlier.
+6. Select your Microsoft Sentinel Workspace you created earlier.
 
 7. Select **Logs** from the General section.
 
@@ -54,7 +54,7 @@ The results now only show for the Event table.
 
 12. Expand the rows to see all the columns related to the record.  A few of the fields like EventData and ParameterXml have multiple data items stored as structured data.  This makes it difficult to query on specific fields.  
 
-13. Next, we have to build a KQL statement that parses the data from each row, allowing us to have meaningful fields. In the Azure Sentinel Community on GitHub, there are many examples of Parsers in the Parsers folder.  Open another tab in your browser and navigate to: **https://github.com/Azure/Azure-Sentinel**
+13. Next, we have to build a KQL statement that parses the data from each row, allowing us to have meaningful fields. In the Microsoft Sentinel Community on GitHub, there are many examples of Parsers in the Parsers folder.  Open another tab in your browser and navigate to: **https://github.com/Azure/Azure-Sentinel**
 
 14. Select the **Parsers** folder, then **Sysmon** folder.
 
@@ -193,7 +193,7 @@ Event_Reg_SetValue
 
 In this task, you will create a detection for **Attack 1** on the host with the Microsoft Defender for Endpoint configured.
 
-1. In the Azure Sentinel portal, Select **Logs** from the General section.
+1. In the Microsoft Sentinel portal, Select **Logs** from the General section.
 
 2. First, you need to see where the data is stored. Since you just performed the attacks set the log **Time Range: Last 24 hours**.
 
@@ -285,7 +285,7 @@ DeviceRegistryEvents
 
 In this task, you will create a detection for *Attack 2* on the host with the Security Events connector and Sysmon installed.
 
-1. Select **Logs** from the General section of the Azure Sentinel portal.
+1. Select **Logs** from the General section of the Microsoft Sentinel portal.
 
 2. First, you need to see where the data is stored. Since you just performed the attacks.  
 

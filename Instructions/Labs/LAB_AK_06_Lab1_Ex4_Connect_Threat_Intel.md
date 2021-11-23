@@ -1,10 +1,10 @@
 ---
 lab:
-    title: 'Exercise 4 - Connect Threat intelligence to Azure Sentinel using data connectors'
-    module: 'Module 6 - Connect logs to Azure Sentinel'
+    title: 'Exercise 4 - Connect Threat intelligence to Microsoft Sentinel using data connectors'
+    module: 'Module 6 - Connect logs to Microsoft Sentinel'
 ---
 
-# Module 6 - Lab 1 - Exercise 4 - Connect Threat intelligence to Azure Sentinel using data connectors
+# Module 6 - Lab 1 - Exercise 4 - Connect Threat intelligence to Microsoft Sentinel using data connectors
 
 
 ### Task 1: Connect Threat intelligence.
@@ -19,9 +19,9 @@ In this task, you will connect a Threat intelligence provider with the Threat in
 
 4. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
-5. In the Search bar of the Azure portal, type *Sentinel*, then select **Azure Sentinel**.
+5. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
-6. Select your Azure Sentinel Workspace you created earlier.
+6. Select your Microsoft Sentinel Workspace you created earlier.
 
 7. From the Data Connectors tab, select the **Threat intelligence - TAXII** connector.
 

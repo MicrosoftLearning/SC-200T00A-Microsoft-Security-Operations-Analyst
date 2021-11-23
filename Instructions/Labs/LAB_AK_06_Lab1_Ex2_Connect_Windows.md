@@ -1,10 +1,10 @@
 ---
 lab:
-    title: 'Exercise 2 - Connect Windows devices to Azure Sentinel using data connectors'
-    module: 'Module 6 - Connect logs to Azure Sentinel'
+    title: 'Exercise 2 - Connect Windows devices to Microsoft Sentinel using data connectors'
+    module: 'Module 6 - Connect logs to Microsoft Sentinel'
 ---
 
-# Module 6 - Lab 1 - Exercise 2 - Connect Windows devices to Azure Sentinel using data connectors
+# Module 6 - Lab 1 - Exercise 2 - Connect Windows devices to Microsoft Sentinel using data connectors
 
 
 ### Task 1: Create a Windows Virtual Machine in Azure.
@@ -50,11 +50,11 @@ In this task, you will create a Windows virtual machine in Azure.
 
 ### Task 2: Connect an Azure Windows virtual machine.
 
-In this task, you will connect an Azure Windows virtual machine to Azure Sentinel.
+In this task, you will connect an Azure Windows virtual machine to Microsoft Sentinel.
 
-1. In the Search bar of the Azure portal, type *Sentinel*, then select **Azure Sentinel**.
+1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
-2. Select your Azure Sentinel Workspace you created earlier.
+2. Select your Microsoft Sentinel Workspace you created earlier.
 
 3. From the Data Connectors Tab, search for the **Security Events via Legacy Agent** connector and select it from the list.
 
@@ -71,7 +71,7 @@ In this task, you will connect an Azure Windows virtual machine to Azure Sentine
 
 ### Task 3: Connect a non-Azure Windows Machine.
 
-In this task, you will connect a non-Azure Windows virtual machine to Azure Sentinel.
+In this task, you will connect a non-Azure Windows virtual machine to Microsoft Sentinel.
 
 1. Login to WIN2 virtual machine as Admin with the password: **Pa55w.rd**.  
 
@@ -79,9 +79,9 @@ In this task, you will connect a non-Azure Windows virtual machine to Azure Sent
 
 3. Open a browser and log into the Azure Portal at https://portal.azure.com with the credentials you've been using in the previous labs.
 
-4. In the Search bar of the Azure Portal, type *Sentinel*, then select **Azure Sentinel**.
+4. In the Search bar of the Azure Portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
-5. Select your Azure Sentinel Workspace.
+5. Select your Microsoft Sentinel Workspace.
 
 6. Select **Data connectors** then search for the **Security Events via Legacy Agent** connector and select it from the list.
 
@@ -103,9 +103,9 @@ In this task, you will connect a non-Azure Windows virtual machine to Azure Sent
 
 15. On the Agent Setup Options prompt, select **Connect the agent to Azure Log Analytics (OMS)** option, then select **Next**.
 
-16. In the browser with Azure Sentinel open, copy the **Workspace ID** from the Agents Management page and paste into the Workspace ID in the dialog. 
+16. In the browser with Microsoft Sentinel open, copy the **Workspace ID** from the Agents Management page and paste into the Workspace ID in the dialog. 
 
-17. In the browser with Azure Sentinel open, copy the **Primary key** from the Agents Management page and paste into the Workspace key in the dialog. 
+17. In the browser with Microsoft Sentinel open, copy the **Primary key** from the Agents Management page and paste into the Workspace key in the dialog. 
 
 18. Select **Next**.
 
@@ -143,11 +143,11 @@ In this task, you will install and collect Sysmon logs.
 
 10. In the browser, navigate back to the Azure portal at https://portal.azure.com 
 
-11. In the Search bar of the Azure portal, type *Sentinel*, then select **Azure Sentinel** and select your Azure Sentinel Workspace you created earlier.
+11. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel** and select your Microsoft Sentinel Workspace you created earlier.
 
-12. In Azure Sentinel, select **Settings** from the Configuration area and then select **Workspace settings >** tab.
+12. In Microsoft Sentinel, select **Settings** from the Configuration area and then select **Workspace settings >** tab.
 
-13. Make sure your Azure Sentinel Workspace is selected.
+13. Make sure your Microsoft Sentinel Workspace is selected.
 
 14. Select **Agents configuration** from the Settings area.
 

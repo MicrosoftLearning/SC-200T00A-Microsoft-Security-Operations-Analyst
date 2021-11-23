@@ -1,7 +1,7 @@
 ---
 lab:
     title: 'Exercise 4 - Understand Detection Modeling'
-    module: 'Module 7 - Create detections and perform investigations using Azure Sentinel'
+    module: 'Module 7 - Create detections and perform investigations using Microsoft Sentinel'
 ---
 
 # Module 7 - Lab 1 - Exercise 4 - Understand Detection Modeling
