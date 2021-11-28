@@ -1,19 +1,19 @@
 ---
 lab:
-    title: 'Exercise 1 - Configure your Azure Sentinel environment'
-    module: 'Module 5 - Configure your Azure Sentinel environment'
+    title: 'Exercise 1 - Configure your Microsoft Sentinel environment'
+    module: 'Module 5 - Configure your Microsoft Sentinel environment'
 ---
 
-# Module 5 - Lab 1 - Exercise 1 - Configure your Azure Sentinel environment
+# Module 5 - Lab 1 - Exercise 1 - Configure your Microsoft Sentinel environment
 
 ## Lab scenario
 
-You're a Security Operations Analyst working at a company that is implementing Azure Sentinel. You're responsible for setting up the Azure Sentinel environment to meet the company requirement to minimize cost, meet compliance regulations, and provide the most manageable environment for your security team to perform their daily job responsibilities.
+You're a Security Operations Analyst working at a company that is implementing Microsoft Sentinel. You're responsible for setting up the Microsoft Sentinel environment to meet the company requirement to minimize cost, meet compliance regulations, and provide the most manageable environment for your security team to perform their daily job responsibilities.
 
 
-### Task 1: Initialize the Azure Sentinel Workspace.
+### Task 1: Initialize the Microsoft Sentinel Workspace.
 
-In this task, you will create an Azure Sentinel workspace.
+In this task, you will create an Microsoft Sentinel workspace.
 
 1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
@@ -25,7 +25,7 @@ In this task, you will create an Azure Sentinel workspace.
 
 5. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
-6. In the Search bar of the Azure portal, type *Sentinel*, then select **Azure Sentinel**.
+6. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
 7. Select **+ Create**.
 
@@ -39,22 +39,22 @@ In this task, you will create an Azure Sentinel workspace.
 
 11. Under *Instance details* in the name field enter a name for your choosing for the Log Analytics Workspace.
 
-    >**Note:** This name will also be the Azure Sentinel workspace name.
+    >**Note:** This name will also be the Microsoft Sentinel workspace name.
 
 12. Select the region that is appropriate for you. The appropriate region may default or your instructor may have specific advice on which region to select.  
 
 13. Select **Review + Create**.
 
-14. In the Create Log Analytics workspace area select **Create**. Wait for the new Log Analytics workspace to appear in the list on the *Add Azure Sentinel to a workspace* page.  This may take a minute.
+14. In the Create Log Analytics workspace area select **Create**. Wait for the new Log Analytics workspace to appear in the list on the *Add Microsoft Sentinel to a workspace* page.  This may take a minute.
 
 15. Select your newly created workspace when it appears, then select **Add**. This could take a few minutes.
 
-16. Navigate around the newly created Azure Sentinel workspace to become familiar with the user interface options.
+16. Navigate around the newly created Microsoft Sentinel workspace to become familiar with the user interface options.
 
 
 ### Task 2: Create a Watchlist.
 
-In this task, you will create a watchlist in Azure Sentinel.
+In this task, you will create a watchlist in Microsoft Sentinel.
 
 1. In the search box at the bottom of the Windows 10 screen, enter *Notepad*.  Select **Notepad** from the results.
 
@@ -74,7 +74,7 @@ Host5
 
 5. Close Notepad.
 
-6. In Azure Sentinel, select the **Watchlist** option in the Configuration area.
+6. In Microsoft Sentinel, select the **Watchlist** option in the Configuration area.
 
 7. Select **+ Add new** from the command bar.
 
@@ -113,9 +113,9 @@ _GetWatchlist('HighValueHosts')
 
 ### Task 3: Create a Threat Indicator.
 
-In this task, you will create an indicator in Azure Sentinel.
+In this task, you will create an indicator in Microsoft Sentinel.
 
-1. In Azure Sentinel, select the **Threat intelligence** option in the Threat management area.
+1. In Microsoft Sentinel, select the **Threat intelligence** option in the Threat management area.
 
 2. Select **+ Add New** from the command bar.
 

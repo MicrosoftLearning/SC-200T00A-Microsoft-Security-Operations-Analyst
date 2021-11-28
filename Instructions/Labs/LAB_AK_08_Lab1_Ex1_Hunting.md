@@ -1,14 +1,14 @@
 ---
 lab:
-    title: 'Exercise 1 - Perform Threat Hunting in Azure Sentinel'
-    module: 'Module 8 - Perform threat hunting in Azure Sentinel'
+    title: 'Exercise 1 - Perform Threat Hunting in Microsoft Sentinel'
+    module: 'Module 8 - Perform threat hunting in Microsoft Sentinel'
 ---
 
-# Module 8 - Lab 1 - Exercise 1 - Perform Threat Hunting in Azure Sentinel
+# Module 8 - Lab 1 - Exercise 1 - Perform Threat Hunting in Microsoft Sentinel
 
 ## Lab scenario
 
-You are a Security Operations Analyst working at a company that implemented Azure Sentinel. You have received threat intelligence about a Command and Control (C2 or C&C) technique.  You need to perform a hunt and watch for the threat.
+You are a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You have received threat intelligence about a Command and Control (C2 or C&C) technique.  You need to perform a hunt and watch for the threat.
 
 >**Important:** The log data used in the lab was created in the previous module. See **Attack 3** in WIN1 server in Exercise 5.
 
@@ -27,9 +27,9 @@ In this task, you will create a hunting query, bookmark a result, and create a L
 
 4. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
-5. In the Search bar of the Azure portal, type *Sentinel*, then select **Azure Sentinel**.
+5. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
-6. Select your Azure Sentinel Workspace.
+6. Select your Microsoft Sentinel Workspace.
 
 7. Select **Logs** 
 
@@ -70,7 +70,7 @@ DeviceEvents
 
    >**Note:** The generated log data is only from one device.
 
-11. Close the Logs window by selecting the 'x' in the top-right of the window and select **OK** to discard the changes. Select your Azure Sentinel workspace again and select the **Hunting** page under the Threat Management area.
+11. Close the Logs window by selecting the 'x' in the top-right of the window and select **OK** to discard the changes. Select your Microsoft Sentinel workspace again and select the **Hunting** page under the Threat Management area.
 
 12. Select **+ New Query** from the command bar.
 
@@ -97,7 +97,7 @@ DeviceEvents
 
 16. In the *Tactics & Techniques* select **Command and Control**. Select **Create** to create the hunting query.
 
-17. In the Azure Sentinel | Hunting blade search for the query you just created in the list, *C2 Hunt*.
+17. In the Microsoft Sentinel - Hunting blade search for the query you just created in the list, *C2 Hunt*.
 
 18. Select **C2 Hunt** in the list.
 
@@ -113,7 +113,7 @@ DeviceEvents
 
 24. In the Add bookmark blade select **Create**.
 
-25. Return to the Hunting page in the Azure Sentinel portal (hint: scroll to the left).
+25. Return to the Hunting page in the Microsoft Sentinel portal (hint: scroll to the left).
 
 26. Select the **Bookmarks** tab.
 
@@ -123,7 +123,7 @@ DeviceEvents
 
 29. Explore the Investigation graph.
 
-30. Return to the Hunting page in the Azure Sentinel portal by closing the window selecting the 'x' in the top-right.
+30. Return to the Hunting page in the Microsoft Sentinel portal by closing the window selecting the 'x' in the top-right.
 
 31. Select the **Queries** tab
 

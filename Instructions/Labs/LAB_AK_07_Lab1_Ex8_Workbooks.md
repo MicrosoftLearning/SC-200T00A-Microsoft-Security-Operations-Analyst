@@ -1,14 +1,14 @@
 ---
 lab:
     title: 'Exercise 8 - Create workbooks'
-    module: 'Module 7 - Create detections and perform investigations using Azure Sentinel'
+    module: 'Module 7 - Create detections and perform investigations using Microsoft Sentinel'
 ---
 
 # Module 7 - Lab 1 - Exercise 8 - Create workbooks
 
 ## Lab scenario
 
-You're a Security Operations Analyst working at a company that implemented Azure Sentinel. You must design workbooks with advanced visualizations.
+You're a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You must design workbooks with advanced visualizations.
 
 
 ### Task 1: Explore Workbooks.
@@ -23,9 +23,9 @@ In this task, you will explore the configuration of a workbook.
 
 4. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
-5. In the Search bar of the Azure portal, type *Sentinel*, then select **Azure Sentinel**.
+5. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
-6. Select your Azure Sentinel Workspace.
+6. Select your Microsoft Sentinel Workspace.
 
 7. Select **Workbooks**.
 
@@ -33,7 +33,7 @@ In this task, you will explore the configuration of a workbook.
 
 9. Review the Identity & Access workbook.
 
-10. Close the workbook by selecting the 'x' in the top-right corner. You should be in the **Azure Sentinel - Workbooks - Templates** tab.
+10. Close the workbook by selecting the 'x' in the top-right corner. You should be in the **Microsoft Sentinel - Workbooks - Templates** tab.
 
 11. In the *Templates* tab search for and select **Azure AD Audit logs**, then select the **Save** button from the right pane. 
 
@@ -82,7 +82,7 @@ In this task, you will explore the configuration of a workbook.
 
 In this task, you will create a new workbook with advanced visualizations.
 
-1. Go back to the **Workbooks** area of the Azure Sentinel portal.
+1. Go back to the **Workbooks** area of the Microsoft Sentinel portal.
 
 2. Select **+ Add workbook**
 
@@ -146,7 +146,7 @@ SecurityEvent
 
 28. Select the **Save** icon, change the *Title* to *My Workbook* and select **Save** again.
 
-29. Close the workbook by selecting the 'x' at the top-right or select **Workbooks** in the Azure Sentinel portal.
+29. Close the workbook by selecting the 'x' at the top-right or select **Workbooks** in the Microsoft Sentinel portal.
 
 30. Select the **My workbooks** tab if needed.
 

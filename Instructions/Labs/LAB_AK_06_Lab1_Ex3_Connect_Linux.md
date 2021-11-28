@@ -1,15 +1,15 @@
 ---
 lab:
-    title: 'Exercise 3 - Connect Linux hosts to Azure Sentinel using data connectors'
-    module: 'Module 6 - Connect logs to Azure Sentinel'
+    title: 'Exercise 3 - Connect Linux hosts to Microsoft Sentinel using data connectors'
+    module: 'Module 6 - Connect logs to Microsoft Sentinel'
 ---
 
-# Module 6 - Lab 1 - Exercise 3 - Connect Linux hosts to Azure Sentinel using data connectors
+# Module 6 - Lab 1 - Exercise 3 - Connect Linux hosts to Microsoft Sentinel using data connectors
 
 
-### Task 1: Access the Azure Sentinel Workspace.
+### Task 1: Access the Microsoft Sentinel Workspace.
 
-In this task, you will access your Azure Sentinel workspace.
+In this task, you will access your Microsoft Sentinel workspace.
 
 1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
@@ -21,16 +21,16 @@ In this task, you will access your Azure Sentinel workspace.
 
 5. In the **Enter password** dialog box, copy, and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
-6. In the Search bar of the Azure portal, type *Sentinel*, then select **Azure Sentinel**.
+6. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
-7. Select your Azure Sentinel Workspace you created in a previous lab.
+7. Select your Microsoft Sentinel Workspace you created in a previous lab.
 
 
 ### Task 2: Connect a Linux Host using the Common Event Format connector.
 
-In this task, you will connect a Linux host to Azure Sentinel with the Common Event Format (CEF) connector.
+In this task, you will connect a Linux host to Microsoft Sentinel with the Common Event Format (CEF) connector.
 
-1. Select **Data connectors** from the Configuration area in Azure Sentinel.  From the Data Connectors tab, search for the **Common Event Format (CEF)** connector and select it from the list.
+1. Select **Data connectors** from the Configuration area in Microsoft Sentinel.  From the Data Connectors tab, search for the **Common Event Format (CEF)** connector and select it from the list.
 
 2. Select **Open connector page** on the connector information blade.
 
@@ -64,9 +64,9 @@ ssh <insert your linux IP address here> -l <insert linux user name here>
 
 ### Task 3: Connect a Linux host using the Syslog connector.
 
-In this task, you will connect a Linux host to Azure Sentinel with the Syslog connector.
+In this task, you will connect a Linux host to Microsoft Sentinel with the Syslog connector.
 
-1. Connect to WIN1, which should already be in the Azure Sentinel portal for your workspace.  
+1. Connect to WIN1, which should already be in the Microsoft Sentinel portal for your workspace.  
 
 2. From the Data Connectors tab, search for the **Syslog** connector and select it from the list.
 
@@ -109,7 +109,7 @@ In this task, you will configure the Syslog collection facilities.
 
 1. Connect to WIN1 virtual machine.
 
-2. In Azure Sentinel portal, select **Settings** and then **Workspace settings** from the settings blade.
+2. In Microsoft Sentinel portal, select **Settings** and then **Workspace settings** from the settings blade.
 
 3. Select **Agents configuration** from the **Settings** area.
 

@@ -1,7 +1,7 @@
 ---
 lab:
     title: 'Exercise 2 - Create a Playbook'
-    module: 'Module 7 - Create detections and perform investigations using Azure Sentinel'
+    module: 'Module 7 - Create detections and perform investigations using Microsoft Sentinel'
 ---
 
 # Module 7 - Lab 1 - Exercise 2 - Create a Playbook
@@ -38,9 +38,9 @@ In this task, you will create a Microsoft Teams team for use in the lab.
 13. Enter a channel name of *New Alerts* then select the **Add** button.
 
 
-### Task 2: Create a Playbook in Azure Sentinel.
+### Task 2: Create a Playbook in Microsoft Sentinel.
 
-In this task, you will create a Logic App that will be used as a Playbook in Azure Sentinel.
+In this task, you will create a Logic App that will be used as a Playbook in Microsoft Sentinel.
 
 1. In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
 
@@ -48,13 +48,13 @@ In this task, you will create a Logic App that will be used as a Playbook in Azu
 
 3. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
-4. In the Search bar of the Azure portal, type *Sentinel*, then select **Azure Sentinel**.
+4. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
-5. Select your Azure Sentinel Workspace you created earlier.
+5. Select your Microsoft Sentinel Workspace you created earlier.
 
 6. Select the **Community** page in the *Content management* area on the left side of the page.
 
-7. Select the **Onboard community content** link on the right pane. This will open a new tab in the Edge Browser for Azure Sentinel GitHub content.
+7. Select the **Onboard community content** link on the right pane. This will open a new tab in the Edge Browser for Microsoft Sentinel GitHub content.
 
 8. Select the **Playbooks** folder.
 
@@ -62,7 +62,7 @@ In this task, you will create a Logic App that will be used as a Playbook in Azu
 
 10. In the readme.md box, go below the second *Quick Deployment* option **Deploy with alert trigger** and select **Deploy to Azure** button.  
 
-    >**VERY IMPORTANT**: Be aware that they are two different Azure Sentinel triggers to use, Incident and Alert. Make sure you are selecting the Alert (second) one.
+    >**VERY IMPORTANT**: Be aware that they are two different Microsoft Sentinel triggers to use, Incident and Alert. Make sure you are selecting the Alert (second) one.
 
 11. Make sure your Azure Subscription is selected.
 
@@ -77,13 +77,13 @@ In this task, you will create a Logic App that will be used as a Playbook in Azu
     >**Note:** Wait for the deployment to finish before proceeding to the next task. It may take a couple minutes to deploy.
 
 
-### Task 3: Update a Playbook in Azure Sentinel.
+### Task 3: Update a Playbook in Microsoft Sentinel.
 
 In this task, you will update the new playbook you created with the proper connection information.
 
-1. In the Search bar of the Azure portal, type *Sentinel*, then select **Azure Sentinel**.
+1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
-2. Select your Azure Sentinel Workspace.
+2. Select your Microsoft Sentinel Workspace.
 
 3. Select the **Automation** from the Configuration area and then select the **Active Playbooks** tab.
 
@@ -91,7 +91,7 @@ In this task, you will update the new playbook you created with the proper conne
 
 5. On the Logic App page for *PostMessageTeams-OnAlert*, in the center menu, select **Edit**.
 
-6. Select the *first* block **When a response to an Azure Sentinel alert is triggered**.
+6. Select the *first* block **When a response to an Microsoft Sentinel alert is triggered**.
 
 7. Select the **Change connection** link.
 

@@ -1,7 +1,7 @@
 ---
 lab:
     title: 'Exercise 3 - Create a Scheduled Query'
-    module: 'Module 7 - Create detections and perform investigations using Azure Sentinel'
+    module: 'Module 7 - Create detections and perform investigations using Microsoft Sentinel'
 ---
 
 # Module 7 - Lab 1 - Exercise 3 - Create a Scheduled Query
@@ -17,9 +17,9 @@ In this task, you will create a scheduled query and connect it to the Teams chan
 
 3. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
-4. In the Search bar of the Azure portal, type *Sentinel*, then select **Azure Sentinel**.
+4. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
-5. Select your Azure Sentinel Workspace.
+5. Select your Microsoft Sentinel Workspace.
 
 6. Select **Analytics** from the Configuration area.
 
@@ -119,9 +119,9 @@ In this task, you will test your new scheduled query rule.
 
 13. Select **Refresh** until you see the entries for the *Category: RoleManagement* that indicates the change in roles you made earlier.
 
-14. In the Search bar of the Azure portal, type *Sentinel*, then select **Azure Sentinel**.
+14. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
-15. Select your Azure Sentinel Workspace.
+15. Select your Microsoft Sentinel Workspace.
 
 16. Select the **Incidents** menu option.
 
