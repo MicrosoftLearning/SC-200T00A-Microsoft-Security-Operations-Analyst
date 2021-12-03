@@ -116,7 +116,7 @@ Event
     |Function Name|**Event_Reg_SetValue**|
     |Category|**Sysmon**|
 
-18. Select **Save** and open a new Log Query tab by selecting the '+' sign. Then run the following KQL Statement:
+18. Select **Save** and open a new Log Query tab by selecting the **+** sign. Then run the following KQL Statement:
 
 ```KQL
 Event_Reg_SetValue
