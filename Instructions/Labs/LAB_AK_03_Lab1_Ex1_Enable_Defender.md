@@ -73,7 +73,7 @@ In this task, you will enable and configure Microsoft Defender for Cloud.
 
 9. Close the settings page by selecting the 'x' on the upper right of the page to go back to the **Environment settings** again and select the '>' on the left of your subscription.
 
-10. Select the Log analytics workspace you created earlier *uniquenameDefender* to review the available options and pricing.
+10. Select the Log analytics workspace you created earlier *uniquenameDefender* to review the available options and pricing. Select **Enable all Microsoft Defender for Cloud plans** and select **Save**.
 
 
 ### Task 4: Install Azure Arc on an On-Premises Server.
@@ -143,7 +143,7 @@ In this task, you will install Azure Arc on an on-premises server.
 
 In this task, you will manually install the required agent on the Windows Server.
 
-1. Go to the "Microsoft Defender for Cloud" and select the **Getting Started** page.
+1. Go to **Microsoft Defender for Cloud** and select the **Getting Started** page.
 
 2. Select the **Get Started** tab.
 

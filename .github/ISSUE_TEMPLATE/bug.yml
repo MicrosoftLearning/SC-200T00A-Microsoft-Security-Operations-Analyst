@@ -1,0 +1,82 @@
+name: Bug Report
+description: File a bug report
+title: "M00-LAB00: QUICK_DESCRIPTION"
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # Thanks for taking the time to fill out this bug report!
+        
+        **Replace issue name M00-LAB00:QUICK_DESCRIPTION, for example "M01-LAB01: My new issue"**
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info 😉?
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What happened?
+      placeholder: Tell us what you see!
+      value: |
+        Exercise : 00
+        Task: 00
+        Step: 00
+        
+        Description of issue:
+
+        Repro steps:
+        1.
+        1.
+        1.
+    validations:
+      required: true
+  - type: dropdown
+    id: version
+    attributes:
+      label: Lab
+      description: Lab name
+      options:
+        - Other
+        - Lab 01 Exercise 01 Explore Microsoft 365 Defender
+        - Lab 02 Exercise 01 Deploy Microsoft Defender for Endpoint
+        - Lab 02 Exercise 02 Mitigate Attacks with Microsoft Defender for Endpoint
+        - Lab 03 Exercise 01 Enable Microsoft Defender for Cloud
+        - Lab 03 Exercise 02 Mitigate threats using Microsoft Defender for Cloud
+        - Lab 04 Exercise 01 Create queries for Microsoft Sentinel using Kusto Query Language (KQL)
+        - Lab 05 Exercise 01 Configure your Microsoft Sentinel environment
+        - Lab 06 Exercise 01 Connect data to Microsoft Sentinel using data connectors
+        - Lab 06 Exercise 02 Connect Windows devices to Microsoft Sentinel using data connectors
+        - Lab 06 Exercise 03 Connect Linux hosts to Microsoft Sentinel using data connectors 
+        - Lab 06 Exercise 04 Connect Threat intelligence to Microsoft Sentinel using data connectors
+        - Lab 07 Exercise 01 Activate a Microsoft Security rule
+        - Lab 07 Exercise 02 Create a Playbook
+        - Lab 07 Exercise 03 Create a Scheduled Query
+        - Lab 07 Exercise 04 Understand Detection Modeling
+        - Lab 07 Exercise 05 Conduct attacks
+        - Lab 07 Exercise 06 Create Detections
+        - Lab 07 Exercise 07 Investigate Incidents
+        - Lab 07 Exercise 08 Create workbooks
+        - Lab 08 Exercise 01 Perform Threat Hunting in Microsoft Sentinel
+        - Lab 08 Exercise 02 Threat Hunting using Notebooks with Microsoft Sentinel
+    validations:
+      required: true
+  - type: textarea
+    id: Screenshots
+    attributes:
+      label: Relevant screenshots
+      description: Please copy and paste any relevant screenshots 📸
+      value: paste here 😉 
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Do you want to help us? 👏
+      description: GitHub/Git uses Pull Requests (PR) to propose and collaborate on changes to a repository. **No git/github experience?** Follow the [video in the Contribution Guide](https://github.com/MicrosoftLearning/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions/blob/master/.github/CONTRIBUTING.md#easy-prs-using-github-no-gitgithub-knowledge-needed)
+      options:
+        - label: Create a Pull Requestt by following this project's [Contribution Guide](https://github.com/MicrosoftLearning/SC-200T00A-Microsoft-Security-Operations-Analyst/blob/master/.github/CONTRIBUTING.md#how-can-i-collaborate)
+          required: false
