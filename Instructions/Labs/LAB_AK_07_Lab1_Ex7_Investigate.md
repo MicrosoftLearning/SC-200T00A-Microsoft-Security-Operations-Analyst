@@ -41,7 +41,7 @@ In this task, you will investigate an incident.
 
 14. Enter in the Comments: *I will research this. *
 
-15. Select the **Comment** button to submit the new comment.
+15. Select the **Send comment** button to submit the new comment.
 
 16. Select the **Entities** tab and review.
 
