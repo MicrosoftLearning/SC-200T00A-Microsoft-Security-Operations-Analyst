@@ -23,7 +23,7 @@ In this task, you will create a Windows virtual machine in Azure.
 
 6. In the **search services and marketplace** box, enter *Windows 10*. 
 
-7. Select the **Create** dropdown for *Microsoft Windows 10*.  Then select **Windows 10 Enterprise, version 20H2**.
+7. Select the **Create** dropdown for *Microsoft Windows 10*.  Then select **Windows 10 Enterprise, version 20H2** and click the **Create** button.
 
 8. Select your Subscription.
 
@@ -155,7 +155,7 @@ In this task, you will install and collect Sysmon logs.
 
 15. Select the **Windows Event logs** tab.
 
-16. Select **Add windows event log** button.
+16. Select **+ Add windows event log** button.
 
 17. Type **Microsoft-Windows-Sysmon/Operational** in the Log name field.
 
