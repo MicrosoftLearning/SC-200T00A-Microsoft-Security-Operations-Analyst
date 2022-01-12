@@ -59,7 +59,7 @@ In this task, you will enable and configure Microsoft Defender for Cloud.
 
 2. On the **Getting started** page, go to the **Upgrade** section, make sure your subscription is selected, and then select the **Upgrade** button at the bottom of the page. Wait for the *Trial started* notification to appear. **Hint:** You can click the bell button on the top bar to review your Azure portal notifications.
 
-3. The next page shows the option to install the agent on virtual machines already in the subscription. **Do nothing here**.
+3. The next page shows the option to install the agent on virtual machines already in the subscription. Select **Continue without installing agents** or **Do nothing here**.
 
 4. Select **Environment settings** from the Management area of the portal menu.
 
@@ -159,7 +159,7 @@ In this task, you will manually install the required agent on the Windows Server
 
 8. Select **Next** until the wizard page for **Agent Setup Options** appears, Select **Connect the Agent to Azure Log Analytics (OMS)**, then select **Next**.
 
-9. Copy and paste the **Workspace ID** and **Primary Key** from the Azure portal into the wizard page fields as appropriate and select **Next**.
+9. Copy and paste the **Workspace ID** and **Primary Key** value in the **Workspace Key** text box from the Azure portal into the wizard page fields as appropriate and select **Next**.
 
 10. Continue with the Install. Select **Finish** when complete.
 
