@@ -122,7 +122,7 @@ In this task, you will create a new workbook with advanced visualizations.
 
 19. Select **Done Editing** on the bottom menu, for the new Graph.
 
-20. At the bottom of the Workbook select **Add**, then **Add query**.
+20. At the bottom of the Workbook select **+ Add**, then **Add query**.
 
 Enter the following KQL command for the query:
 
