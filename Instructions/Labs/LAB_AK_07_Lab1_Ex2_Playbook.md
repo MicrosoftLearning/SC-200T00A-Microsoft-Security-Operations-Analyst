@@ -13,7 +13,7 @@ In this task, you will create a Microsoft Teams team for use in the lab.
 
 1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
-2. In the Edge browser, open a new tan and navigate to the Microsoft Teams portal at (https://teams.microsoft.com).
+2. In the Edge browser, open a new tab and navigate to the Microsoft Teams portal at (https://teams.microsoft.com).
 
 3. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
