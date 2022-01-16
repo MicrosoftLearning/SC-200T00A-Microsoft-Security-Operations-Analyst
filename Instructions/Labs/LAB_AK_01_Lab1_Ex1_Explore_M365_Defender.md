@@ -39,25 +39,25 @@ In this task, you will assign preset security policies for EOP and Microsoft Def
 
 6. If shown, close the Microsoft 365 Defender quick tour.
 
-7. From the navigation menu, under *Email & Collaboration*, select **Polices & Rules**.
+7. From the navigation menu, under *Email & Collaboration* area, select **Policies & rules**.
 
-8. On the *Policy & Rules* dashboard, select **Threat Policies**.
+8. On the *Policy & rules* dashboard, select **Threat policies**.
 
-9. On the *Policy dashboard*, select **Preset Security Policies**.
+9. On the *Threat polies* dashboard, select **Preset Security Policies**.
 
-10. Under *Standard protection*, select **Edit**.
+10. Under *Standard protection*, select **Manage**.
 
-11. In *EOP protections apply to*, under **Domains** write your tenant's domain name, select it and select **Next**. Notice that this configuration applies policies for anti-spam, outbound spam filter, anti-malware, anti-phishing.
+11. In *EOP protections apply to* section, under **Domains** write your tenant's domain name, select it and select **Next**. Notice that this configuration applies policies for anti-spam, outbound spam filter, anti-malware, anti-phishing.
 
-12. In *Defender for Office 365 protections​ apply to*, apply the same configuration as the previous step and select **Next**. Notice that this configuration applies policies for anti-phishing, Safe Attachments, Safe Links.
+12. In *Defender for Office 365 protections apply to* section, apply the same configuration as the previous step and select **Next**. Notice that this configuration applies policies for anti-phishing, Safe Attachments, Safe Links.
 
 13. Read the content under *Review and confirm your changes* and select **Confirm** to apply the changes and select **Done** to finish.
 
-14. Under *Strict protection*, select **Edit**.
+14. Under *Strict protection*, select **Manage**.
 
 15. In *EOP protections apply to*, under **Groups** write **Leadership**, select it and select **Next**. Notice that this configuration applies policies for anti-spam, outbound spam filter, anti-malware, anti-phishing.
 
-16. In *Defender for Office 365 protections​ apply to*, apply the same configuration as the previous step and select **Next**. Notice that this configuration applies policies for anti-phishing, Safe Attachments, Safe Links.
+16. In *Defender for Office 365 protections apply to* section, apply the same configuration as the previous step and select **Next**. Notice that this configuration applies policies for anti-phishing, Safe Attachments, Safe Links.
 
 17. Read the content under *Review and confirm your changes* and select **Confirm** to apply the changes and select **Done** to finish.
 
