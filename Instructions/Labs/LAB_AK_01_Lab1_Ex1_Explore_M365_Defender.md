@@ -63,7 +63,7 @@ In this task, you will assign preset security policies for EOP and Microsoft Def
 
 18. On the top middle menu, select **Threat policies** to go back and under *Policies*, select **Safe Attachments**. Notice that both preset policies appears here and the Status is On.
 
-19. In the menu, select **Global Settings**.
+19. In the menu, select **Global Settings** (Cog wheel icon available on the top menu).
 
 20. Read through the available options and select the toggle under **Turn on Defender for Office 365 for SharePoint, OneDrive, and Microsoft Teams** and select **Save**.
 
