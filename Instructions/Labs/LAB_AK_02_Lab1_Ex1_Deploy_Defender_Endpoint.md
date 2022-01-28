@@ -73,7 +73,7 @@ In this task, you will configure roles for use with device groups.
 
 3. Select the **Turn on roles** button.
 
-4. Select **+ Add item**.
+4. Select **+ Add new item** icon.
 
 5. In the Add role dialog enter the following:
 
@@ -95,7 +95,7 @@ In this task, you will configure device groups that allow for access control and
 
 2. In the permissions area select **Device groups**.
 
-3. Select **+ Add device group**.
+3. Select **+ Add new device group** icon.
 
 4. Enter the following information on the General tab:
 
