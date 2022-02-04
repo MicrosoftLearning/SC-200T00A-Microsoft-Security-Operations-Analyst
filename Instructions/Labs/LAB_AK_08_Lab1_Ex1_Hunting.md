@@ -37,16 +37,16 @@ In this task, you will create a hunting query, bookmark a result, and create a L
 
    >**Important:** Please paste any KQL queries first in Notepad and then copy from there to the *New Query 1* Log window to avoid any errors.
 
-```KQL
-let lookback = 2d;
-DeviceEvents | where TimeGenerated >= ago(lookback) 
-| where ActionType == "DnsQueryResponse"
-| extend c2 = substring(tostring(AdditionalFields.DnsQueryString),0,indexof(tostring(AdditionalFields.DnsQueryString),"."))
-| where c2 startswith "sub"
-| summarize count() by bin(TimeGenerated, 3m), c2
-| where count_ > 5
-| render timechart 
-```
+   ```KQL
+   let lookback = 2d;
+   DeviceEvents | where TimeGenerated >= ago(lookback) 
+   | where ActionType == "DnsQueryResponse"
+   | extend c2 = substring(tostring(AdditionalFields.DnsQueryString),0,indexof(tostring(AdditionalFields.DnsQueryString),"."))
+   | where c2 startswith "sub"
+   | summarize count() by bin(TimeGenerated, 3m), c2
+   | where count_ > 5
+   | render timechart 
+   ```
 
    ![Screenshot](../Media/SC200_hunting1.png)
 
@@ -56,15 +56,15 @@ DeviceEvents | where TimeGenerated >= ago(lookback)
 
 1. You have now identified DNS requests that are beaconing to a C2 server. Next, determine which devices are beaconing. **Run** the following KQL Statement:
 
-```KQL
-let lookback = 2d;
-DeviceEvents | where TimeGenerated >= ago(lookback) 
-| where ActionType == "DnsQueryResponse"
-| extend c2 = substring(tostring(AdditionalFields.DnsQueryString),0,indexof(tostring(AdditionalFields.DnsQueryString),".")) 
-| where c2 startswith "sub"
-| summarize cnt=count() by bin(TimeGenerated, 5m), c2, DeviceName
-| where cnt > 15
-```
+   ```KQL
+   let lookback = 2d;
+   DeviceEvents | where TimeGenerated >= ago(lookback) 
+   | where ActionType == "DnsQueryResponse"
+   | extend c2 = substring(tostring(AdditionalFields.DnsQueryString),0,indexof(tostring(AdditionalFields.DnsQueryString),".")) 
+   | where c2 startswith "sub"
+   | summarize cnt=count() by bin(TimeGenerated, 5m), c2, DeviceName
+   | where cnt > 15
+   ```
 
    ![Screenshot](../Media/SC200_hunting2.png)
 
@@ -80,15 +80,15 @@ DeviceEvents | where TimeGenerated >= ago(lookback)
 
 1. For the *Custom query* enter the following KQL statement:
 
-```KQL
-let lookback = 2d;
-DeviceEvents | where TimeGenerated >= ago(lookback) 
-| where ActionType == "DnsQueryResponse"
-| extend c2 = substring(tostring(AdditionalFields.DnsQueryString),0,indexof(tostring(AdditionalFields.DnsQueryString),"."))
-| where c2 startswith "sub"
-| summarize cnt=count() by bin(TimeGenerated, 5m), c2, DeviceName
-| where cnt > 15
-```
+   ```KQL
+   let lookback = 2d;
+   DeviceEvents | where TimeGenerated >= ago(lookback) 
+   | where ActionType == "DnsQueryResponse"
+   | extend c2 = substring(tostring(AdditionalFields.DnsQueryString),0,indexof(tostring(AdditionalFields.DnsQueryString),"."))
+   | where c2 startswith "sub"
+   | summarize cnt=count() by bin(TimeGenerated, 5m), c2, DeviceName
+   | where cnt > 15
+   ```
 
 1. Scroll down and under *Entity mapping (Preview)* select:
 

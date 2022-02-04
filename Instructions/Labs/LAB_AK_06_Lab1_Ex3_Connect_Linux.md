@@ -52,9 +52,9 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
 
 1. Enter the following PowerShell command, adjusting for your specific Linux server information, and press enter:
 
-```PowerShell
-ssh insert-your-linux-IP-address-here -l insert-linux-user-name-here
-```
+   ```PowerShell
+   ssh insert-your-linux-IP-address-here -l insert-linux-user-name-here
+   ```
 
 1. Enter *yes* to confirm the connection and then type the user's password and press enter. Your screen should look something like this:
 
@@ -106,9 +106,9 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
 1. Enter the following PowerShell command, adjusting for your specific Linux server information, and press enter:
 
-```PowerShell
-ssh insert-your-linux-IP-address-here -l insert-linux-user-name-here
-```
+   ```PowerShell
+   ssh insert-your-linux-IP-address-here -l insert-linux-user-name-here
+   ```
 
 1. Enter *yes* to confirm the connection and then type the user's password and press enter. Your screen should look something like this:
 

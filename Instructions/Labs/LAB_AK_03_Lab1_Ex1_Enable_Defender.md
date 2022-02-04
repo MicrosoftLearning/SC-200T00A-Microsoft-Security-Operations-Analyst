@@ -177,4 +177,4 @@ In this task, you will manually install the required agent on the WINServer virt
 
 1. You can move on to the next lab and return later to review the **Inventory** section of **Microsoft Defender for Cloud**.
 
-# Proceed to Exercise 2
+## Proceed to Exercise 2

@@ -35,11 +35,12 @@ In this task, you will create a detection for **Attack 1** on the host with the 
 
 1. First, you need to see where the data is stored. **Run** the following KQL Statement:
 
-```KQL
-search "temp\\startup.bat"
-```
+    ```KQL
+    search "temp\\startup.bat"
+    ```
 
 1. The result shows data from three different tables:
+
     - *DeviceProcessEvents*. Source: Defender for Endpoint connector.
     - *DeviceRegistryEvents*. Source: Defender for Endpoint connector.
     - *Event*. Source: Log Analytics Agent, Sysmon/Operational Windows Event Logs (Agents configuration).
@@ -51,9 +52,9 @@ search "temp\\startup.bat"
 
 1. Our first data source to analyze is Sysmon from Windows hosts. **Run** the following KQL Statement to show only the results from the *Event* table:
 
-```KQL
-search in (Event) "temp\\startup.bat"
-```
+    ```KQL
+    search in (Event) "temp\\startup.bat"
+    ```
 
 1. Expand the first row to see all the columns related to the record. A few of the fields like *EventData* and *ParameterXml* have multiple data items stored as structured data. This makes it difficult to query on specific fields. 
 
@@ -67,46 +68,46 @@ search in (Event) "temp\\startup.bat"
 
     >**Note:** The following code snippet is for better understanding the query in step 16, not to be copied and executed.
 
-```
-let EventData = Event
-| where Source == "Microsoft-Windows-Sysmon"
-| extend RenderedDescription = tostring(split(RenderedDescription, ":")[0])
-| project TimeGenerated, Source, EventID, Computer, UserName, EventData, RenderedDescription
-| extend EvData = parse_xml(EventData)
-| extend EventDetail = EvData.DataItem.EventData.Data
-| project-away EventData, EvData  ;
-```
+    ```
+    let EventData = Event
+    | where Source == "Microsoft-Windows-Sysmon"
+    | extend RenderedDescription = tostring(split(RenderedDescription, ":")[0])
+    | project TimeGenerated, Source, EventID, Computer, UserName, EventData, RenderedDescription
+    | extend EvData = parse_xml(EventData)
+    | extend EventDetail = EvData.DataItem.EventData.Data
+    | project-away EventData, EvData  ;
+    ```
 
 1. Further down in the file, you see another *let* statement looking for *EventID == 13* and using the *EventData* variable as input, just like the one below:
 
     >**Note:** The following code snippet is for better understanding the query in step 16, not to be copied and executed.
 
-```
-let SYSMON_REG_SETVALUE_13=()
-{
-    let processEvents = EventData
-    | where EventID == 13
-    | extend RuleName = EventDetail.[0].["#text"], EventType = EventDetail.[1].["#text"], UtcTime = EventDetail.[2].["#text"], ProcessGuid = EventDetail.[3].["#text"], ProcessId = EventDetail.[4].["#text"], Image = EventDetail.[5].["#text"], TargetObject = EventDetail.[6].["#text"], Details = EventDetail.[7].["#text"]
-    | project-away EventDetail  ;
-    processEvents;
-};
-```
+    ```
+    let SYSMON_REG_SETVALUE_13=()
+    {
+        let processEvents = EventData
+        | where EventID == 13
+        | extend RuleName = EventDetail.[0].["#text"], EventType = EventDetail.[1].["#text"], UtcTime = EventDetail.[2].["#text"], ProcessGuid = EventDetail.[3].["#text"], ProcessId = EventDetail.[4].["#text"], Image = EventDetail.[5].["#text"], TargetObject = EventDetail.[6].["#text"], Details = EventDetail.[7].["#text"]
+        | project-away EventDetail  ;
+        processEvents;
+    };
+    ```
 
 1. This looks like a good start. With the two statements above, you create your own KQL statement to display all Registry Key Set Value rows using Sysmon within the Event table. Go back to the Microsoft Sentinel Edge browser tab and **Run** the following KQL query:
 
     >**Important:** Please paste any KQL queries first in *Notepad* and then copy from there to the *New Query 1* Log window to avoid any errors.
 
-```KQL
-Event | where Source == "Microsoft-Windows-Sysmon"
-| where EventID == 13
-| extend RenderedDescription = tostring(split(RenderedDescription, ":")[0])
-| project TimeGenerated, Source, EventID, Computer, UserName, EventData, RenderedDescription
-| extend EvData = parse_xml(EventData)
-| extend EventDetail = EvData.DataItem.EventData.Data
-| project-away EventData, EvData  
-| extend RuleName = EventDetail.[0].["#text"], EventType = EventDetail.[1].["#text"], UtcTime = EventDetail.[2].["#text"], ProcessGuid = EventDetail.[3].["#text"], ProcessId = EventDetail.[4].["#text"], Image = EventDetail.[5].["#text"], TargetObject = EventDetail.[6].["#text"], Details = EventDetail.[7].["#text"]
-| project-away EventDetail 
-```
+    ```KQL
+    Event | where Source == "Microsoft-Windows-Sysmon"
+    | where EventID == 13
+    | extend RenderedDescription = tostring(split(RenderedDescription, ":")[0])
+    | project TimeGenerated, Source, EventID, Computer, UserName, EventData, RenderedDescription
+    | extend EvData = parse_xml(EventData)
+    | extend EventDetail = EvData.DataItem.EventData.Data
+    | project-away EventData, EvData  
+    | extend RuleName = EventDetail.[0].["#text"], EventType = EventDetail.[1].["#text"], UtcTime = EventDetail.[2].["#text"], ProcessGuid = EventDetail.[3].["#text"], ProcessId = EventDetail.[4].["#text"], Image = EventDetail.[5].["#text"], TargetObject = EventDetail.[6].["#text"], Details = EventDetail.[7].["#text"]
+    | project-away EventDetail 
+    ```
 
    ![Screenshot](../Media/SC200_sysmon_query1.png)
 
@@ -121,30 +122,30 @@ Event | where Source == "Microsoft-Windows-Sysmon"
 
 1. **Run** the following KQL statement to test your newly created function:
 
-```KQL
-Event_Reg_SetValue
-```
+    ```KQL
+    Event_Reg_SetValue
+    ```
 
 1. Depending on the current data collection, you could receive many rows. This is expected. Our next task is to filter to our specific scenario. **Run** the following KQL Statement to return our specific record that we can now review to see what we can change to identify rows:
 
-```KQL
-Event_Reg_SetValue | search "startup.bat"
-```
+    ```KQL
+    Event_Reg_SetValue | search "startup.bat"
+    ```
 
 1. From the results, we now know that the Threat Actor is using reg.exe to add keys to the Registry key and the program is located in C:\temp. **Run** the following statement to replace the *search* operator with the *where* operator in our query:
 
-```KQL
-Event_Reg_SetValue | where Image contains "reg.exe"
-| where Details startswith "C:\\TEMP"
-```
+    ```KQL
+    Event_Reg_SetValue | where Image contains "reg.exe"
+    | where Details startswith "C:\\TEMP"
+    ```
 
 1. This is a good start. It is important to help the Security Operations Analysts by providing as much context about the alert as you can. This includes projecting entities for use in the investigation graph. **Run** the following query:
 
-```KQL
-Event_Reg_SetValue | where Image contains "reg.exe"
-| where Details startswith "C:\\TEMP"
-| extend timestamp = TimeGenerated, HostCustomEntity = Computer, AccountCustomEntity = UserName
-```
+    ```KQL
+    Event_Reg_SetValue | where Image contains "reg.exe"
+    | where Details startswith "C:\\TEMP"
+    | extend timestamp = TimeGenerated, HostCustomEntity = Computer, AccountCustomEntity = UserName
+    ```
 
 1. Now that you have a good detection rule, in the Logs window, select the **+ New alert rule** in the command bar and then select **Create Azure Sentinel alert**. This will create a new Scheduled rule, just like the one you created in Module 7 - Exercise 3.
 
@@ -189,15 +190,15 @@ In this task, you will create a detection for **Attack 1** on the host with the 
 
 1. **Run** the following KQL Statement again to recall the tables where we have this data:
 
-```KQL
-search "temp\\startup.bat"
-```
+    ```KQL
+    search "temp\\startup.bat"
+    ```
 
 1. This detection will focus on data from Defender for Endpoint. **Run** the following KQL Statement:
 
-```KQL
-search in (Device*) "temp\\startup.bat"
-```
+    ```KQL
+    search in (Device*) "temp\\startup.bat"
+    ```
 
 1. The table *DeviceRegistryEvents* looks to have the data already normalized and easy for us to query. Expand the row to see all the columns related to the record.
 
@@ -205,40 +206,40 @@ search in (Device*) "temp\\startup.bat"
 
 1. From the results, we now know that the Threat Actor is using reg.exe to add keys to the Registry key and the program is located in C:\temp. **Run** the following statement to replace the *search* operator with the *where* operator in our query:
 
-```KQL
-DeviceRegistryEvents | where ActionType == "RegistryValueSet"
-| where InitiatingProcessFileName == "reg.exe"
-| where RegistryValueData startswith "c:\\temp"
-```
+    ```KQL
+    DeviceRegistryEvents | where ActionType == "RegistryValueSet"
+    | where InitiatingProcessFileName == "reg.exe"
+    | where RegistryValueData startswith "c:\\temp"
+    ```
 
 1. Alternatively, you can **Run** the following KQL query using the *DeviceProcessEvents* table:
 
-```KQL
-DeviceProcessEvents | where ActionType == "ProcessCreated"
-| where FileName == "reg.exe"
-| where ProcessCommandLine contains "c:\\temp"
-```
+    ```KQL
+    DeviceProcessEvents | where ActionType == "ProcessCreated"
+    | where FileName == "reg.exe"
+    | where ProcessCommandLine contains "c:\\temp"
+    ```
 
 1. It is important to help the Security Operations Center Analyst by providing as much context about the alert as you can. This includes projecting Entities for use in the investigation graph. **Run** the following query:
 
-```KQL
-DeviceRegistryEvents
-| where ActionType == "RegistryValueSet"
-| where InitiatingProcessFileName == "reg.exe"
-| where RegistryValueData startswith "c:\\temp"
-| extend timestamp = TimeGenerated, HostCustomEntity = DeviceName, AccountCustomEntity = InitiatingProcessAccountName
-```
+    ```KQL
+    DeviceRegistryEvents
+    | where ActionType == "RegistryValueSet"
+    | where InitiatingProcessFileName == "reg.exe"
+    | where RegistryValueData startswith "c:\\temp"
+    | extend timestamp = TimeGenerated, HostCustomEntity = DeviceName, AccountCustomEntity = InitiatingProcessAccountName
+    ```
 
    ![Screenshot](../Media/SC200_sysmon_query2.png)
 
 1. Alternatively, you can **Run** the following KQL query using the *DeviceProcessEvents* table:
 
-```KQL
-DeviceProcessEvents | where ActionType == "ProcessCreated"
-| where FileName == "reg.exe"
-| where ProcessCommandLine contains "c:\\temp"
-| extend timestamp = TimeGenerated, HostCustomEntity = DeviceName, AccountCustomEntity = InitiatingProcessAccountName
-```
+    ```KQL
+    DeviceProcessEvents | where ActionType == "ProcessCreated"
+    | where FileName == "reg.exe"
+    | where ProcessCommandLine contains "c:\\temp"
+    | extend timestamp = TimeGenerated, HostCustomEntity = DeviceName, AccountCustomEntity = InitiatingProcessAccountName
+    ```
 
 1. Now that you have a good detection rule, in the Logs window, select the **+ New alert rule** in the command bar and then select **Create Azure Sentinel alert**. This will create a new Scheduled rule, just like the one you created before.
 
@@ -281,28 +282,28 @@ In this task, you will create a detection for **Attack 2** on the host with the 
 
 1. **Run** the following KQL Statement to identify any entry that refers to administrators:
 
-```KQL
-search "administrators" | summarize count() by $table
-```
+    ```KQL
+    search "administrators" | summarize count() by $table
+    ```
 
 1. The result might show events from different tables, but in our case, we want to investigate the SecurityEvent table. The EventID and Event that we are looking is "4732 - A member was added to a security-enabled local group". With this, we will identify adding a member to a privileged group. **Run** the following KQL query to confirm:
 
-```KQL
-SecurityEvent | where EventID == 4732
-| where TargetAccount == "Builtin\\Administrators"
-```
+    ```KQL
+    SecurityEvent | where EventID == 4732
+    | where TargetAccount == "Builtin\\Administrators"
+    ```
 
 1. Expand the row to see all the columns related to the record. The username of the account added as Administrator does not show. The issue is that instead of storing the username, we have the Security IDentifier (SID). **Run** the following KQL to match the SID to the username that was added to the Administrators group:
 
-```KQL
-SecurityEvent | where EventID == 4732
-| where TargetAccount == "Builtin\\Administrators"
-| extend Acct = MemberSid, MachId = SourceComputerId  
-| join kind=leftouter (
-     SecurityEvent | summarize count() by TargetSid, SourceComputerId, TargetUserName | project Acct1 = TargetSid, MachId1 = SourceComputerId, UserName1 = TargetUserName
+    ```KQL
+    SecurityEvent | where EventID == 4732
+    | where TargetAccount == "Builtin\\Administrators"
+    | extend Acct = MemberSid, MachId = SourceComputerId  
+    | join kind=leftouter (
+        SecurityEvent | summarize count() by TargetSid, SourceComputerId, TargetUserName | project Acct1 = TargetSid, MachId1 = SourceComputerId, UserName1 = TargetUserName
 
-) on $left.MachId == $right.MachId1, $left.Acct == $right.Acct1
-```
+    ) on $left.MachId == $right.MachId1, $left.Acct == $right.Acct1
+    ```
 
    ![Screenshot](../Media/SC200_sysmon_attack3.png)
 
@@ -310,16 +311,16 @@ SecurityEvent | where EventID == 4732
 
 1. Extend the row to show the resulting columns, in the last one, we see the name of the added user under the *UserName1* column we *project* within the KQL query. It is important to help the Security Operations Analyst by providing as much context about the alert as you can. This includes projecting Entities for use in the investigation graph. **Run** the following query:
 
-```KQL
-SecurityEvent | where EventID == 4732
-| where TargetAccount == "Builtin\\Administrators"
-| extend Acct = MemberSid, MachId = SourceComputerId  
-| join kind=leftouter (
-     SecurityEvent | summarize count() by TargetSid, SourceComputerId, TargetUserName | project Acct1 = TargetSid, MachId1 = SourceComputerId, UserName1 = TargetUserName
+    ```KQL
+    SecurityEvent | where EventID == 4732
+    | where TargetAccount == "Builtin\\Administrators"
+    | extend Acct = MemberSid, MachId = SourceComputerId  
+    | join kind=leftouter (
+        SecurityEvent | summarize count() by TargetSid, SourceComputerId, TargetUserName | project Acct1 = TargetSid, MachId1 = SourceComputerId, UserName1 = TargetUserName
 
-) on $left.MachId == $right.MachId1, $left.Acct == $right.Acct1
-| extend timestamp = TimeGenerated, HostCustomEntity = Computer, AccountCustomEntity = UserName1
-```
+    ) on $left.MachId == $right.MachId1, $left.Acct == $right.Acct1
+    | extend timestamp = TimeGenerated, HostCustomEntity = Computer, AccountCustomEntity = UserName1
+    ```
 
 1. Now that you have a good detection rule, in the Logs window, select **+ New alert rule** in the command bar and then select **Create Azure Sentinel alert**.
 

@@ -46,13 +46,13 @@ In this task, you will create a watchlist in Microsoft Sentinel.
 
 1. From row 2 of the notepad, copy the following hostnames, each one in a different line:
 
-```Notepad
-Host1
-Host2
-Host3
-Host4
-Host5
-```
+    ```Notepad
+    Host1
+    Host2
+    Host3
+    Host4
+    Host5
+    ```
 
 1. From the menu select, **File - Save As**, Name the file *HighValue.csv*, change the file type to **All files(*.*)** and select **Save**. **Hint:** The file can be saved in the *Documents* folder.
 
@@ -113,17 +113,16 @@ In this task, you will create an indicator in Microsoft Sentinel.
 
 1. Run the following KQL statement.
 
-```KQL
-ThreatIntelligenceIndicator
-```
+    ```KQL
+    ThreatIntelligenceIndicator
+    ```
 
->**Note:** It could take a couple of minutes for the indicator to appear.
+    >**Note:** It could take a couple of minutes for the indicator to appear.
 
 1. Scroll the results to the right to see the DomainName column. You can also run the following KQL statement to just see the DomainName column. 
 
-```KQL
-ThreatIntelligenceIndicator  
-| project DomainName
-```
+    ```KQL
+    ThreatIntelligenceIndicator | project DomainName
+    ```
 
 ## You have completed the lab.

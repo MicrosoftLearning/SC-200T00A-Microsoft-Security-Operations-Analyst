@@ -43,15 +43,15 @@ In this task, you will create a scheduled query and connect it to the Teams chan
 
     >**Warning:** When using the Paste function to the virtual machine extra (pipe) characters could be added. Make sure you use Notepad first to paste the following query.
 
-```KQL
-AuditLogs  
-| where isnotempty(InitiatedBy.user.userPrincipalName) and Result == 'success' and OperationName contains "member to role" and AADOperationType startswith "Assign"
-| extend InitiatedByUPN = tostring(InitiatedBy.user.userPrincipalName)
-| extend InitiatedFromIP = iff(tostring(AdditionalDetails.[7].value) == '', tostring(AdditionalDetails.[6].value), tostring(AdditionalDetails.[7].value))
-| extend TargetUser = tostring(TargetResources.[2].displayName)
-| extend TargetRoleName = tostring(TargetResources.[0].displayName)
-| project TimeGenerated, InitiatedByUPN, InitiatedFromIP, TargetUser, TargetRoleName, AADOperationType, OperationName
-```
+    ```KQL
+    AuditLogs  
+    | where isnotempty(InitiatedBy.user.userPrincipalName) and Result == 'success' and OperationName contains "member to role" and AADOperationType startswith "Assign"
+    | extend InitiatedByUPN = tostring(InitiatedBy.user.userPrincipalName)
+    | extend InitiatedFromIP = iff(tostring(AdditionalDetails.[7].value) == '', tostring(AdditionalDetails.[6].value), tostring(AdditionalDetails.[7].value))
+    | extend TargetUser = tostring(TargetResources.[2].displayName)
+    | extend TargetRoleName = tostring(TargetResources.[0].displayName)
+    | project TimeGenerated, InitiatedByUPN, InitiatedFromIP, TargetUser, TargetRoleName, AADOperationType, OperationName
+    ```
 
 1. Select **View query results**. You should not receive any results nor any errors. If you receive an error, please review that the query appears just like the previous KQL statement. Close the *Logs* window by selecting the upper right **X** and select **OK** to discard to save changes to go back to the wizard.
 
