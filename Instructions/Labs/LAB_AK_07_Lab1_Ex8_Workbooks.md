@@ -8,150 +8,149 @@ lab:
 
 ## Lab scenario
 
-You're a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You must design workbooks with advanced visualizations.
+You are a Security Operations Analyst working at a company that implemented Microsoft Sentinel. Once you have connected your data sources to Microsoft Sentinel, you can visualize and monitor the data using the Microsoft Sentinel adoption of Azure Monitor Workbooks, which provides versatility in creating custom dashboards. 
+
+Microsoft Sentinel allows you to create custom workbooks across your data, and also comes with built-in workbook templates to allow you to quickly gain insights across your data as soon as you connect a data source.
 
 
-### Task 1: Explore Workbooks.
+### Task 1: Explore workbook templates
 
-In this task, you will explore the configuration of a workbook.
+In this task, you will explore the Microsoft Sentinel workbook templates.
 
 1. Login to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
-2. In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
+1. In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
 
-3. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
+1. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
-4. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
+1. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
-5. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
+1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
-6. Select your Microsoft Sentinel Workspace.
+1. Select your Microsoft Sentinel Workspace.
 
-7. Select **Workbooks**.
+1. Select **Workbooks**. The *Templates* tab is selected by default.
 
-8. Select **Identity & Access**, then select the **View template** button.
+1. Search for and select the **Identity & Access** template workbook. In the right pane, scroll down and select the **View template** button.
 
-9. Review the Identity & Access workbook.
+1. Review the contents of the workbook. It shows insights into Identity and access operations by collecting and analyzing security logs, using the audit and sign-in logs to gather insights into use of Microsoft products.
 
-10. Close the workbook by selecting the 'x' in the top-right corner. You should be in the **Microsoft Sentinel - Workbooks - Templates** tab.
-
-11. In the *Templates* tab search for and select **Azure AD Audit logs**, then select the **Save** button from the right pane. 
-
-12. Select the location that is appropriate for your location and select **OK**. The appropriate location usually defaults.
-
-13. Select the **View saved workbook** button.
-
-14. Select **Edit** in command bar.
-
-15. In the *User activities* area, take a look at the colors in the graph for "Operations count" and "Trend". Then select **Edit** below the grid.
-
-#### To format columns, the Column setting panel provides customization options, do the following:
-
-16. Select the **Column Settings** button in the right of the Query Command bar.
-
-    >**Note:** This button only appears if there is data in the report.
-
-17. In the *Edit column settings* blade select the column **Operations Count (Heatmap + Formatted)**.
-
-18. Review the settings, specially the options for *Column renderer*. For *Color palette*, select **32-color categorical**.
-
-19. Select the column **Trend (Spark line + Formatted)**.
-
-20. Review the settings, For *Column renderer* select **Spark area** and select the color of your choosing in *Color palette*.
-
-21. Select **Save and Close**.
-
-#### To have one tile/grid control filter the results in another tile/grid do the following:
-
-22. Select the **Advanced Settings** button in the *Editing query item: query - 2*.
-
-23. Review the *When items are selected, export parameters* setting. Notice the *UserInfo* field is selected.
-
-24. Select **Done Editing** at the bottom of the query (not the top menu).
-
-25. Select **Edit** below the *Top active users* grid on the right side of the screen.  
-
-26. In the query, locate *UserInfo*. The query is using the parameter exported from the other query to filter results.
-
-27. Select **Done Editing** at the bottom of the query (not the top menu).
-
-28. Select **Done Editing** at the top menu for the workbook and select the **Save** icon. Close the workbook by selecting the 'x' in the top-right corner.
+1. Close the workbook by selecting the **X** in the top-right corner.
 
 
-### Task 2: Create a Workbook.
+### Task 2: Save and modify a workbook template
+
+In this task, you will save a workbook template and modify it.
+
+1. You should be back in the **Microsoft Sentinel - Workbooks - Templates** tab. Search for and select **Azure AD Audit logs**, in the right pane, scroll down and select the **Save** button. 
+
+1. Select the location that is appropriate for you and select **OK**. The appropriate location will default.
+
+1. Select the **View saved workbook** button.
+
+1. Select **Edit** in command bar to enable changes in the workbook.
+
+1. Read the banner that informs you of a new feature to compare workbooks. Dismiss the message by selecting the banner.
+
+1. Scroll down to the *User activities* area, look at the colors in the graph for "Operations count" and "Trend" since we are going to format those columns. Select the **Edit** button below the grid.
+
+1. Select the **Column Settings** button, it is located to the right of the *Run Query* command bar. **Hint:** This button only appears if there is data from the KQL query.
+
+1. In the *Edit column settings* blade that appears, within *Columns* select **Operations Count (Heatmap + Formatted)**.
+
+1. Review the settings, in particular the options for *Column renderer*. For *Color palette*, select **32-color categorical**.
+
+1. Within *Columns*, select **Trend (Spark line + Formatted)**.
+
+1. Review the settings, for *Column renderer* select **Spark area** and then select a color of your choice in *Color palette*.
+
+1. Select **Save and Close**. Now we are going to review how one tile/grid control can be used to filter the results in another tile/grid.
+
+1. Select the **Advanced Settings** button in command bar of the *Editing query item: query - 2*.
+
+1. Review the *When items are selected, export parameters* setting. Notice the *UserInfo* field is selected.
+
+1. Scroll down and select **Done Editing** at the bottom of the query (not the top menu).
+
+1. Select **Edit** below the *Top active users* pie chart on the right side of the screen.  
+
+1. In the *Logs query*, locate *UserInfo*. The query is using the parameter exported from the other query to filter results.
+
+1. Scroll down and select **Done Editing** at the bottom of the query (not the top menu).
+
+1. Scroll up and select **Done Editing** at the top menu and select the **Save** icon. Close the workbook by selecting the **X** in the top-right corner.
+
+
+### Task 3: Create a Workbook
 
 In this task, you will create a new workbook with advanced visualizations.
 
-1. Go back to the **Workbooks** area of the Microsoft Sentinel portal.
+1. You should be back at the **Workbooks** area of the Microsoft Sentinel portal.
 
-2. Select **+ Add workbook**
+1. Select **+ Add workbook** to create a new workbook from scratch. 
 
-3. Select **Edit**
+    >**Note:** Although it is a new workbook, a startup template is used.
 
-#### Edit Header text:
+1. To edit the workbook, select **Edit**.
 
-4. Select **Edit** below the title of the workbook to change *## New workbook* to *## My workbook*.
+1. Select the **Edit** button below the first paragraph of the workbook 
 
-5. Select **Done Editing** on the bottom menu, for the Header text.
+1. Type *# My workbook* to replace *## New workbook*.
 
-6. Select **Edit** below the only visible graph.
+1. Select **Done Editing** on the bottom menu, for the *Editing text item: text - 2*. Notice that your header increased size and name changed.
 
-7. Review the KQL statement that provides a union of counts across multiple tables.
+1. Select **Edit** below the only visible barchart graph.
 
-8. Select the **Done Editing** on the bottom menu, for the Graph.
+1. Review the KQL statement that provides a *union* statement of counts across all tables.
 
-9. Select **...** next to the graph area, then select **+ Add**, then select **Add query**.
+1. Scroll down and select the **Done Editing** on the bottom menu, for the *Editing query item: query - 2*.
 
-10. Enter *SecurityEvent* into the query box, then select the **Run Query** button.
+1. Select the ellipsis **...** next to the *Edit* button of the barchart graph, then select **+ Add**, then select **Add query**.
 
-11. Change the *Time Range* to **Last 3 days**.
+1. Type **SecurityEvent** into the query box.
 
-12. Change the *Visualization* to **Bar chart** and see the results.
+1. Change the *Time Range* to **Last 4 hours**.
 
-13. Change the *Visualization* to **Time chart** and see the results.
+1. Change the *Visualization* to **Time chart**.
 
-14. Select **Style** from the Query tab.
+1. Select **Style** from the query's command bar.
 
-15. Select the **Make this item a custom width** box.
+1. Select the **Make this item a custom width** box.
 
-16. Set the Percent width to **75** and Maximum width to **75**.
+1. Set the *Percent width* to **25** and *Maximum width* to **25**.
 
-17. Select **Advanced Settings** from the Query tab.
+1. Now select **Advanced Settings** from the query's command bar.
 
-18. Select **Show refresh icon when not editing** box. 
+1. Select **Show refresh icon when not editing** box. 
 
-19. Select **Done Editing** on the bottom menu, for the new Graph.
+1. Scroll down and select **Done Editing** on the bottom menu, for the new *Editing query item: query - 2*.
 
-20. At the bottom of the Workbook select **+ Add**, then **Add query**.
+1. Scroll down and at the bottom of the workbook select **+ Add**, then **Add query**.
 
-Enter the following KQL command for the query:
+1. Type **SecurityEvent** into the query box.
 
-```KQL
-SecurityEvent
-```
+1. Change the *Time Range* to **Last 4 hours**.
 
-21. For Time Range, select **Last 4 hours**.
+1. Change the *Visualization* to **Grid**.
 
-22. Change the Visualization to **Grid**.
+1. Select **Style** from the query's command bar.
 
-23. Select the **Style** tab.
+1. Select **Make this item a custom width** box.
 
-24. Select **Make this item a custom width**.
+1. Set the *Percent width* to **75** and *Maximum width* to **75**.
 
-25. Change percentage width to **25** and maximum width to **25**. 
+1. Scroll down and select **Done Editing** on the bottom menu, for the new *Editing query item: query - 3*.
 
-26. Select **Done Editing** on the bottom menu, for the new Query.
+1. Select **Done Editing** in Workbook's command bar.
 
-27. Select **Done Editing** for the Workbook.
+1. Select the **Save** icon, change the *Title* to **My Workbook** and leave other values as default. Select **Save** again to commit the changes. 
 
-28. Select the **Save** icon, change the *Title* to *My Workbook* and select **Save** again.
+1. Close the workbook by selecting the **X** at the top-right or select **Workbooks** in the Microsoft Sentinel portal.
 
-29. Close the workbook by selecting the 'x' at the top-right or select **Workbooks** in the Microsoft Sentinel portal.
+1. Back in the *Workbooks* page, select the **My workbooks** tab.
 
-30. Select the **My workbooks** tab if needed.
+1. Select the workbook you just created, **My workbook**.
 
-31. Select the workbook you just created.
-
-32. Select **View saved workbook**.
+1. On the right pane, select **View saved workbook** to review your workbook.
 
 ## You have completed the lab.
