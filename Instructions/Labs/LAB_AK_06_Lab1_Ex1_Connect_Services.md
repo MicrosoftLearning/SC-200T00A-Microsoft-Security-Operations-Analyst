@@ -8,142 +8,100 @@ lab:
 
 ## Lab scenario
 
-You are a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You must learn how to connect log data from the many data sources in your organization. The organization has data from Microsoft 365, Microsoft 365 Defender, Azure resources, non-azure virtual machines, and network appliances.
-
-You plan on using the Microsoft Sentinel data connectors to integrate the log data from the various sources. You need to write a connector plan for management that maps each of the organization's data sources to the proper Microsoft Sentinel data connector.
+You are a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You must learn how to connect log data from the many data sources in your organization. The organization has data from Microsoft 365, Microsoft 365 Defender, Azure resources, non-azure virtual machines, etc. You start connecting the Microsoft sources first.
 
 
-### Task 1: Access the Microsoft Sentinel Workspace.
+### Task 1: Access the Microsoft Sentinel Workspace
 
 In this task, you will access your Microsoft Sentinel workspace.
 
 1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
-2. Open the Microsoft Edge browser.
+1. Open the Microsoft Edge browser.
 
-3. In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
+1. In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
 
-4. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
+1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
-5. In the **Enter password** dialog box, copy, and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
+1. In the **Enter password** dialog box, copy, and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
-6. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
+1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
-7. Select your Microsoft Sentinel Workspace that you created in the previous lab.
+1. Select your Microsoft Sentinel Workspace that you created in the previous lab.
 
 
-### Task 2: Connect the Azure Active Directory connector.
+### Task 2: Connect the Azure Active Directory connector
 
 In this task, you will connect the Azure Active Directory connector to Microsoft Sentinel.
 
-1. In the Configuration area select **Data connectors**.  In the Data Connectors page, search for the **Azure Active Directory** connector and select it from the list.
+1. Under the Configuration area select **Data connectors**. In the Data Connectors page, search for the **Azure Active Directory** connector and select it from the list.
 
-2. Select **Open connector page** on the connector information blade.
+1. Select **Open connector page** on the connector information blade.
 
-3. Select the **Sign-in Logs** and **Audit Logs** options from the Configuration area, then select **Apply Changes**.
+1. Select the **Sign-in Logs** and **Audit Logs** options from the Configuration area, then select **Apply Changes**.
 
 
-### Task 3: Connect the Azure Active Directory Identity Protection connector.
+### Task 3: Connect the Azure Active Directory Identity Protection connector
 
 In this task, you will connect the Azure Active Directory Identity Protection connector to Microsoft Sentinel.
 
 1. From the Data Connectors Tab, search for the **Azure Active Directory Identity Protection** connector and select it from the list.
 
-2. Select **Open connector page** on the connector information blade.
+1. Select **Open connector page** on the connector information blade.
 
-3. From the Configuration area select the **Connect** button.
+1. From the Configuration area select the **Connect** button.
 
 
-### Task 4: Connect the Microsoft Defender for Cloud connector.
+### Task 4: Connect the Microsoft Defender for Cloud connector
 
 In this task, you will connect the Microsoft Defender for Cloud connector.
 
 1. From the Data Connectors tab, search for the **Microsoft Defender for Cloud** connector and select it from the list.
 
-2. Select **Open connector page** on the connector information blade.
+1. Select **Open connector page** on the connector information blade.
 
-3. In the Configuration area under subscriptions select your Azure subscription and click **Connect**.
+1. In the Configuration area, under Subscription, select the checkbox for the "Azure Pass - Sponsorship" subscription and select **Connect**.
 
-4. Read the "Connect" message and select **OK** to continue. Your Azure subscription Status should be now *Connected*.
+1. Read the "Connect" message and select **OK** to continue. The "Status" should be now *Connected* and "Bi-directional sync" should be *Enabled*.
 
-5. Scroll down and in the Create incidents - Recommended! area, select **Enable**.
-
-
-### Task 5: Connect the Microsoft Defender for Cloud Apps connector.
-
-In this task, you will connect the Microsoft Defender for Cloud Apps connector.
-
-1. From the Data Connectors Tab, search for the **Microsoft Defender for Cloud Apps** connector and select it from the list.
-
-2. Select **Open connector page** on the connector information blade.
-
-3. Select **Alerts** and then select **Apply Changes**.
+1. Scroll down and under the "Create incidents - Recommended!" area, select **Enable**. This option creates an Analytics rule automatically for this service. You can manually add it later if not enabled here or change its configuration within the *Analytics* blade.
 
 
-### Task 6: Connect the Microsoft Defender for Office 365 connector.
-
-In this task, you will connect the Microsoft Defender for Office 365 connector.
-
-1. From the Data Connectors tab, search for the **Microsoft Defender for Office 365 (Preview)** connector and select it from the list.
-
-2. Select **Open connector page** on the connector information blade.
-
-3. In the Configuration area select **Connect**.
-
-
-### Task 7: The Microsoft Defender for Identity connector.
-
-In this task, you will review the Microsoft Defender for Identity connector.
-
-1. From the Data Connectors Tab, search for the **Microsoft Defender for Identity** connector and select it from the list.
-
-2. Select **Open connector page** on the connector information blade.
-
-3. Review the Connecting Options. Don't connect. This is for informational purposes only.
-
-
-### Task 8: Connect the Microsoft Defender for Endpoint connector.
-
-In this task, you will connect the Microsoft Defender for Endpoint connector.
-
-1. From the Data Connectors Tab, search for the **Microsoft Defender for Endpoint** connector and select it from the list.
-
-2. Select **Open connector page** on the connector information blade.
-
-3. In the Configuration area select **Connect**.
-
-
-### Task 9: Connect the Microsoft 365 Defender connector.
+### Task 5: Connect the Microsoft 365 Defender connector
 
 In this task, you will connect the Microsoft 365 Defender connector.
 
 1. From the Data Connectors Tab, search for the **Microsoft 365 Defender (Preview)** connector and select it from the list.
 
-2. Select **Open connector page** on the connector information blade.
+1. Select **Open connector page** on the connector information blade.
 
-3. Select the *Name* checkbox to select all the checkboxes for Microsoft Defender for Endpoint.
+1. From the Configuration area select **Connect Incident and Alerts**. 
 
-4. Select **Apply Changes**.
+1. Under "Connect Events", select the **Name** checkbox to select all the checkboxes for "Microsoft Defender for Endpoint".
+
+1. Repeat the same for "Microsoft Defender for Office 365"
+
+1. Scroll to the bottom of the page and select **Apply Changes**.
 
 
-### Task 10: Connect the Azure Activity connector.
+### Task 6: Connect the Azure Activity connector
 
 In this task, you will connect the Azure Activity connector.
 
 1. From the Data Connectors Tab, search for the **Azure Activity** connector and select it from the list.
 
-2. Select **Open connector page** on the connector information blade.
+1. Select **Open connector page** on the connector information blade.
 
-3. In the Configuration area select **Launch Azure Policy Assignment Wizard>**.
+1. In the Configuration area, scroll down and under "2. Connect your subscriptions..." select **Launch Azure Policy Assignment Wizard>**.
 
-4. In the **Basics** tab, select the button with the three dots under **Scope** to select your subscription from the drop-down list and click **Select**.
+1. In the **Basics** tab, select the ellipsis button (...) under **Scope** and select your "Azure Pass - Sponsorship" subscription from the drop-down list and click **Select**.
 
-5. Select the **Parameters** tab, choose your Microsoft Sentinel workspace from the **Primary Log Analytics workspace** drop-down list.
+1. Select the **Parameters** tab, choose your *uniquenameDefender* workspace from the **Primary Log Analytics workspace** drop-down list.
 
-6. Select the **Remediation** tab and mark the **Create a remediation task** checkbox.
+1. Select the **Remediation** tab and select the **Create a remediation task** checkbox.
 
-7. Select the **Review + Create** button to review the configuration.
+1. Select the **Review + Create** button to review the configuration.
 
-8. Select **Create** to finish.
+1. Select **Create** to finish.
 
 ## Proceed to Exercise 2
