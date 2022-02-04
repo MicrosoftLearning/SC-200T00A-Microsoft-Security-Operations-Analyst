@@ -307,7 +307,7 @@ In this task, you will create a detection for **Attack 2** on the host with the 
 
    ![Screenshot](../Media/SC200_sysmon_attack3.png)
 
->**Note:** This KQL might not return the expected results because of the small dataset used in the lab.
+    >**Note:** This KQL might not return the expected results because of the small dataset used in the lab.
 
 1. Extend the row to show the resulting columns, in the last one, we see the name of the added user under the *UserName1* column we *project* within the KQL query. It is important to help the Security Operations Analyst by providing as much context about the alert as you can. This includes projecting Entities for use in the investigation graph. **Run** the following query:
 

@@ -21,7 +21,7 @@ In this task, you will perform attacks on a host with Microsoft Defender for End
 
 1. In the Command Prompt, create a Temp folder in the root directory. Remember to press Enter after the last row:
 
-    ```Command Prompt
+    ```CommandPrompt
     cd \
     mkdir temp
     cd temp
@@ -31,7 +31,7 @@ In this task, you will perform attacks on a host with Microsoft Defender for End
 
 1. Copy and run this command to simulate program persistence:
 
-    ```Command Prompt
+    ```CommandPrompt
     REG ADD "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "SOC Test" /t REG_SZ /F /D "C:\temp\startup.bat"
     ```
 
@@ -39,7 +39,7 @@ In this task, you will perform attacks on a host with Microsoft Defender for End
 
 1. Copy and run this command to create a script that will simulate a DNS query to a C2 server:
 
-    ```Command
+    ```CommandPrompt
     notepad c2.ps1
     ```
 
@@ -95,7 +95,7 @@ In this task, you will perform attacks on a host with Microsoft Defender for End
 
     >**Note:** A new PowerShell window will open and you will see resolve errors. This is expected.
 
-    ```Command Prompt
+    ```CommandPrompt
     Start PowerShell.exe c2.ps1
     ```
 
@@ -114,7 +114,7 @@ In this task, you will perform attacks on a host with the Security Events connec
 
 1. In the Command Prompt, create a Temp folder in the root directory. Remember to press Enter after the last row:
 
-    ```Command Prompt
+    ```CommandPrompt
     cd \
     mkdir temp
     cd \temp
@@ -124,7 +124,7 @@ In this task, you will perform attacks on a host with the Security Events connec
 
 1. Copy and run this command to simulate program persistence:
 
-    ```Command Prompt
+    ```CommandPrompt
     REG ADD "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "SOC Test" /t REG_SZ /F /D "C:\temp\startup.bat"
     ```
 
@@ -134,7 +134,7 @@ In this task, you will perform attacks on a host with the Security Events connec
 
 1. Copy and run this command to simulate the creation of an Admin account. Remember to press Enter after the last row:
 
-    ```Command Prompt
+    ```CommandPrompt
     net user theusernametoadd /add
     net user theusernametoadd ThePassword1!
     net localgroup administrators theusernametoadd /add

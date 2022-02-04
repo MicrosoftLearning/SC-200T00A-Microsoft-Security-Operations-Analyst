@@ -200,7 +200,7 @@ In this task, you will build KQL statements to aggregate data. **Summarize** gro
     | summarize arg_min(TimeGenerated,*) by Computer
     ```
 
-1. The following statements demonstrate the importance of understanding results based on the order of the **pipe "|"**. In the Query Window enter the following queries and run each query separately: 
+1. The following statements demonstrate the importance of understanding results based on the order of the *pipe*. In the Query Window enter the following queries and run each query separately: 
 
     1. **Query 1** will have Accounts for which the last activity was a login. The SecurityEvent table will first be summarized and return the most current row for each Account. Then only rows with EventID equals 4624 (login) will be returned.
 
