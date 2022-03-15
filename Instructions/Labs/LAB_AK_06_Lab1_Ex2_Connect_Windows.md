@@ -134,7 +134,7 @@ In this task, you will install and collect Sysmon logs.
 
 1. In the Windows Taskbar for WIN2 search box, enter *command*. The search results will show Command Prompt app. Right-click on the Command Prompt app and select **Run as Administrator**. Select **Yes** to allow the app to run in the User Account Control window that appears.
 
-1. Type *cd \sysmon*
+1. Type *cd C:\Users\Admin\Downloads\sysmon*
 
 1. Type *notepad sysmon.xml* to create a new file. Select **Yes** to confirm the file creation.
 
