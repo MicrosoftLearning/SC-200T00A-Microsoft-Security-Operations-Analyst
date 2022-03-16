@@ -300,9 +300,9 @@ In this task, you will create a detection for **Attack 2** on the host with the 
     | where TargetAccount == "Builtin\\Administrators"
     | extend Acct = MemberSid, MachId = SourceComputerId  
     | join kind=leftouter (
-        SecurityEvent | summarize count() by TargetSid, SourceComputerId, TargetUserName | project Acct1 = TargetSid, MachId1 = SourceComputerId, UserName1 = TargetUserName
-
-    ) on $left.MachId == $right.MachId1, $left.Acct == $right.Acct1
+        SecurityEvent 
+        | summarize count() by TargetSid, SourceComputerId, TargetUserName 
+        | project Acct1 = TargetSid, MachId1 = SourceComputerId, UserName1 = TargetUserName) on $left.MachId == $right.MachId1, $left.Acct == $right.Acct1
     ```
 
    ![Screenshot](../Media/SC200_sysmon_attack3.png)
@@ -316,9 +316,9 @@ In this task, you will create a detection for **Attack 2** on the host with the 
     | where TargetAccount == "Builtin\\Administrators"
     | extend Acct = MemberSid, MachId = SourceComputerId  
     | join kind=leftouter (
-        SecurityEvent | summarize count() by TargetSid, SourceComputerId, TargetUserName | project Acct1 = TargetSid, MachId1 = SourceComputerId, UserName1 = TargetUserName
-
-    ) on $left.MachId == $right.MachId1, $left.Acct == $right.Acct1
+        SecurityEvent 
+        | summarize count() by TargetSid, SourceComputerId, TargetUserName 
+        | project Acct1 = TargetSid, MachId1 = SourceComputerId, UserName1 = TargetUserName) on $left.MachId == $right.MachId1, $left.Acct == $right.Acct1
     | extend timestamp = TimeGenerated, HostCustomEntity = Computer, AccountCustomEntity = UserName1
     ```
 
