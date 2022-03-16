@@ -39,9 +39,7 @@ In this task, you will run two simulated attacks to explore the capabilities of 
 
 1. Select the toggle **Assign to me** to add your user account as owner of the incident. 
 
-1. Under **Classification**, in the drop-down menu select **True alert**. 
-
-1. Under **Determination**, in the drop-down menu select **Security test**. 
+1. Under **Classification**, in the drop-down menu select **Security test**. 
 
 1. Add any comments if desired and click **Save** to finish.
 
