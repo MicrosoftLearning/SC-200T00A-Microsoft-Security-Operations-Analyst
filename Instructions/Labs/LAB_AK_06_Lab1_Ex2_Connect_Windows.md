@@ -179,7 +179,7 @@ In this task, you will on-board a device to Microsoft Defender for Endpoint.
 
 1. Select **Onboarding** in the Device management section.
 
-1. Select **Download Package**.
+1. Select **Download onboarding package**.
 
 1. Extract the downloaded .zip file.
 
