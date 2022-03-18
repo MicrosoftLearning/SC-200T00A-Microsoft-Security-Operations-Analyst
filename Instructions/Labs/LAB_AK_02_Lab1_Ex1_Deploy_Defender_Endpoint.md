@@ -72,7 +72,7 @@ In this task, you will onboard a device to Microsoft Defender for Endpoint using
 
 1. In the Microsoft 365 Defender portal, in the left-hand menu, under the Endpoints area, select **Device inventory**. You should now see your device in the list.
 
-    >**Note:** It can take up to 5 minutes for the device to be displayed in the portal. If the device is not shown, complete the next task and come back to check it back later.
+    >**Note:** It can take up to 5 minutes for the device to be displayed in the portal. If the device is not shown, complete the next task and come back to check it back later. If the device is still missing from the portal, restart the Win1 device.
 
 
 ### Task 3: Configure Roles
