@@ -29,7 +29,7 @@ In this task, you will activate a Microsoft Security rule.
 
 1. Select **Analytics** from the Configuration area. By default, you will see the *Active rules*.
 
-1. Select **Create incidents based on Azure Defender alerts**. This alert was automatically created by the Defender for Cloud connector we configured in "Module 6 - Exercise 1 - Task 4". 
+1. Select **Create incidents based on Microsoft Defender for Cloud**. This alert was automatically created by the Defender for Cloud connector we configured in "Module 6 - Exercise 1 - Task 4". 
 
 1. On the right blade, select the **Edit** button.
 
