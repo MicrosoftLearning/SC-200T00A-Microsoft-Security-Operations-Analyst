@@ -120,7 +120,7 @@ In this task, you will configure device groups that allow for access control and
 
 1. On the Devices tab, for the OS condition select **Windows 10** and select **Next**.
 
-1. On the Preview devices tab, select **Show preview** to see the WIN1 virtual machine.  Select **Next**.
+1. On the Preview devices tab, select **Show preview** to see the WIN1 virtual machine. Select **Next**. **Hint:** If you do not see the virtual machine in the preview list, go back and select also *None* for the OS condition. The data for the VM is not populated yet.
 
 1. For the User access tab, select **sg-IT** and then select **Add selected groups** button. Make sure it appears under *Azure AD user groups with access to this device group*.
 
