@@ -40,7 +40,7 @@ In this task, you will build basic KQL statements.
 1. The following statement demonstrates the use of the **let** statement to declare *variables*. In the Query Window enter the following statement and select **Run**: 
 
     ```KQL
-    let timeOffset = 7d;
+    let timeOffset = 1h;
     let discardEventId = 4688;
     SecurityEvent
     | where TimeGenerated > ago(timeOffset*2) and TimeGenerated < ago(timeOffset)
@@ -54,9 +54,11 @@ In this task, you will build basic KQL statements.
       @"\administrator", 
       @"NT AUTHORITY\SYSTEM"
     ];
-    SecurityEvent | where Account in (suspiciousAccounts)
+    SecurityEvent | where TimeGenerated > ago(1h) and Account in (suspiciousAccounts)
     ```
 
+    >**Tip:** You can re-format the query easily by selecting the ellipsis (...) in the Query window and select **Format query**.
+    
 1. The following statement demonstrates the use of the **let** statement to declare a *dynamic table*. In the Query Window enter the following statement and select **Run**: 
 
     ```KQL
@@ -67,7 +69,9 @@ In this task, you will build basic KQL statements.
     LowActivityAccounts | where Account contains "sql"
     ```
 
-1. The following statement demonstrates the **search** operator, which searches all columns in the table for the value. In the Query Window before running this script change the **Time range** to **Last hour**. Enter the following statement and select **Run**: 
+1. Change the **Time range** to **Last hour** in the Query Window. This will limit our results for the following statements.
+
+1. The following statement demonstrates the **search** operator, which searches all columns in the table for the value. In the Query Window enter the following statement and select **Run**: 
 
     ```KQL
     search "err"
@@ -86,7 +90,7 @@ In this task, you will build basic KQL statements.
 
     ```KQL
     SecurityEvent  
-    | where TimeGenerated > ago(1d)
+    | where TimeGenerated > ago(1h)
     ```
 
     ```KQL
@@ -103,16 +107,16 @@ In this task, you will build basic KQL statements.
 
     ```KQL
     SecurityEvent  
-    | where EventID in (4624, 4625)
+    | where TimeGenerated > ago(1h) and EventID in (4624, 4625)
     ```
 
 1. The following statement demonstrates the **extend** operator, which creates a calculated column and adds it to the result set. In the Query Window enter the following statement and select **Run**: 
 
     ```KQL
     SecurityAlert  
-    | where TimeGenerated > ago(7d)
-    | extend severityOrder = case (
-      AlertSeverity == "High",3,
+    | where TimeGenerated > ago(90d)
+    | extend severityOrder = case (  
+    AlertSeverity == "High",3,
     AlertSeverity == "Medium",2,
     AlertSeverity == "Low",1,
     AlertSeverity == "Informational",0,
@@ -123,9 +127,9 @@ In this task, you will build basic KQL statements.
 
     ```KQL
     SecurityAlert  
-    | where TimeGenerated > ago(7d)
-    | extend severityOrder = case (
-      AlertSeverity == "High",3,
+    | where TimeGenerated > ago(90d)
+    | extend severityOrder = case (  
+    AlertSeverity == "High",3,
     AlertSeverity == "Medium",2,
     AlertSeverity == "Low",1,
     AlertSeverity == "Informational",0,
@@ -137,6 +141,7 @@ In this task, you will build basic KQL statements.
 
     ```KQL
     SecurityEvent  
+    | where TimeGenerated > ago(1h)
     | project Computer, Account
     ```
 
@@ -144,9 +149,9 @@ In this task, you will build basic KQL statements.
 
     ```KQL
     SecurityAlert  
-    | where TimeGenerated > ago(7d)
-    | extend severityOrder = case (
-      AlertSeverity == "High",3,
+    | where TimeGenerated > ago(90d)
+    | extend severityOrder = case (  
+    AlertSeverity == "High",3,
     AlertSeverity == "Medium",2, 
     AlertSeverity == "Low",1,
     AlertSeverity == "Informational",0,
@@ -164,7 +169,7 @@ In this task, you will build KQL statements to aggregate data. **Summarize** gro
 
     ```KQL
     SecurityEvent  
-    | where EventID == 4688
+    | where TimeGenerated > ago(1h) and EventID == 4688
     | summarize count() by Process, Computer
     ```
 
@@ -172,8 +177,7 @@ In this task, you will build KQL statements to aggregate data. **Summarize** gro
 
     ```KQL
     SecurityEvent  
-    | where TimeGenerated > ago(1h)
-    | where EventID == 4624
+    | where TimeGenerated > ago(1h) and EventID == 4624
     | summarize cnt=count() by AccountType, Computer
     ```
 
@@ -181,6 +185,7 @@ In this task, you will build KQL statements to aggregate data. **Summarize** gro
 
     ```KQL
     SecurityEvent  
+    | where TimeGenerated > ago(1h)
     | summarize dcount(IpAddress)
     ```
 
@@ -224,6 +229,7 @@ In this task, you will build KQL statements to aggregate data. **Summarize** gro
 
     ```KQL
     SecurityEvent  
+    | where TimeGenerated > ago(1h)
     | where EventID == 4624 
     | summarize make_list(Account) by Computer
     ```
@@ -232,6 +238,7 @@ In this task, you will build KQL statements to aggregate data. **Summarize** gro
 
     ```KQL
     SecurityEvent  
+    | where TimeGenerated > ago(1h)
     | where EventID == 4624 
     | summarize make_set(Account) by Computer
     ```
@@ -245,6 +252,7 @@ In this task, you will use generate visualizations with KQL statements.
 
     ```KQL
     SecurityEvent  
+    | where TimeGenerated > ago(1h)
     | summarize count() by Account
     | render barchart
     ```
@@ -253,7 +261,8 @@ In this task, you will use generate visualizations with KQL statements.
 
     ```KQL
     SecurityEvent  
-    | summarize count() by bin(TimeGenerated, 1h)
+    | where TimeGenerated > ago(1h)
+    | summarize count() by bin(TimeGenerated, 1m)
     | render timechart
     ```
 
@@ -264,26 +273,27 @@ In this task, you will build multi-table KQL statements.
 
 1. The following statement demonstrates the **union** operator, which takes two or more tables and returns all their rows. Understanding how results are passed and impacted with the pipe character is essential. In the Query Window enter the following statements and select **Run** for each query separately to see the results: 
 
-    1. **Query 1** will return all rows of SecurityAlert and all rows of SecurityEvent.
+1. Change the **Time range** to **Last hour** in the Query Window. This will limit our results for the following statements.
+
+    1. **Query 1** will return all rows of SecurityBaseline and all rows of SecurityEvent.
 
         ```KQL
-        SecurityAlert  
+        SecurityBaseline  
         | union SecurityEvent
         ```
 
-    1. **Query 2** will return one row and column, which is the count of all rows of SecurityAlert and all rows of SecurityEvent.
+    1. **Query 2** will return one row and column, which is the count of all rows of SecurityBaseline and all rows of SecurityEvent.
 
         ```KQL
-        SecurityAlert  
+        SecurityBaseline  
         | union SecurityEvent
         | summarize count() 
-        | project count_
         ```
 
-    1. **Query 3** will return all rows of SecurityAlert and one (last) row for SecurityEvent. The last row for SecurityEvent will have the summarized count of the total number of rows.
+    1. **Query 3** will return all rows of SecurityBaseline and one (last) row for SecurityEvent. The last row for SecurityEvent will have the summarized count of the total number of rows.
 
         ```KQL
-        SecurityAlert  
+        SecurityBaseline  
         | union (SecurityEvent | summarize count() | project count_)
         ```
 
@@ -298,11 +308,11 @@ In this task, you will build multi-table KQL statements.
 
     ```KQL
     SecurityEvent  
-    | where EventID == "4624"
+    | where EventID == "4624" 
     | summarize LogOnCount=count() by EventID, Account
     | project LogOnCount, Account
-    | join kind = inner(
-      SecurityEvent  
+    | join kind = inner( 
+     SecurityEvent  
     | where EventID == "4634" 
     | summarize LogOffCount=count() by EventID, Account
     | project LogOffCount, Account
@@ -310,6 +320,8 @@ In this task, you will build multi-table KQL statements.
     ```
 
 >**Important:** The first table specified in the join is considered the Left table. The table after the **join** operator is the right table. When working with columns from the tables, the $left.Column name and $right.Column name is to distinguish which tables column are referenced. The **join** operator supports a full range of types: flouter, inner, innerunique, leftanti, leftantisemi, leftouter, leftsemi, rightanti, rightantisemi, rightouter, rightsemi.
+
+1. Change back the **Time range** to **Last 24 hours** in the Query Window.
 
 
 ### Task 6: Work with string data in KQL
@@ -373,29 +385,35 @@ In this task, you will work with structured and unstructured string fields with 
 
     >**Important:** Although the dynamic type appears JSON-like, it can hold values that the JSON model does not represent because they do not exist in JSON. Therefore, in serializing dynamic values into a JSON representation, values that JSON cannot represent are serialized into string values. 
 
-1. The following statements demonstrates operators to manipulate JSON stored in string fields. Many logs submit data in JSON format, which requires you to know how to transform JSON data to fields that can be queried. In the Query Window enter the following statements individually and select **Run**: 
+1. The following statements demonstrates operators to manipulate JSON stored in string fields. Many logs submit data in JSON format, which requires you to know how to transform JSON data to fields that can be queried. In the Query Window enter the following statement and select **Run**: 
 
     ```KQL
-    SecurityAlert  
-    | extend ExtendedProperties = todynamic(ExtendedProperties) 
-    | extend ActionTaken = ExtendedProperties.ActionTaken
-    | extend AttackerIP = ExtendedProperties["Attacker IP"]
+    ContainerInventory  
+    | where TimeGenerated > ago(1h) 
+    | extend Command = todynamic(Command) 
+    | extend Cmd = Command.[0]
+    | extend Param1 = Command.[1]
+    | extend Param2 = Command.[2]
+    | project-away Command 
+    | order by tostring(Cmd)
     ```
 
 1. The following statement demonstrates the **mv-expand** operator, which turns dynamic arrays into rows (multi-value expansion).
 
     ```KQL
-    SecurityAlert  
-    | mv-expand entity = todynamic(Entities)
+    ContainerInventory  
+    | where TimeGenerated > ago(1h)
+    | mv-expand Command = todynamic(Command) 
+    | project ContainerHostname,Command
     ```
 
 1. The following statement demonstrates the **mv-apply** operator, which applies a subquery to each record and returns the union of the results of all subqueries.
 
     ```KQL
     SecurityAlert  
-    | where TimeGenerated >= ago(7d)
+    | where TimeGenerated >= ago(90d)
     | mv-apply entity = todynamic(Entities) on 
-    ( where entity.Type == "account" | extend account = strcat (entity.NTDomain, "\\", entity.Name))
+    ( where entity.Type == "host" | extend AffectedHost = strcat (entity.DnsDomain, "\\", entity.HostName))
     ```
 
 1. A **function** is a log query that can be used in other log queries with the saved name as a command. To create a **function**, after running your query, select the **Save** button and then select **Save As function** from the drop-down. Enter the name your want (for example: *MailboxForward*) in the **Function name** box and enter a **Legacy category** (for example: *General*) and select **Save**. The function will be available in KQL by using the function's alias:
