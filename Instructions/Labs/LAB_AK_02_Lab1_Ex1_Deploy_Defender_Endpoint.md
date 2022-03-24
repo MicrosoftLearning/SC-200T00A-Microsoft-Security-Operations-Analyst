@@ -70,9 +70,9 @@ In this task, you will onboard a device to Microsoft Defender for Endpoint using
 
 1. Paste the script by right-clicking in the **Administrator: Command Prompt** windows and press **Enter** to run it. **Note:** The window closes automatically after running the script.
 
-1. In the Microsoft 365 Defender portal, in the left-hand menu, under the Endpoints area, select **Device inventory**. You should now see your device in the list.
+1. In the Microsoft 365 Defender portal, in the left-hand menu, under the Endpoints area, select **Device inventory**. If the device is not shown, complete the next task and come back to check it back later. It can take up to 60 minutes for first the device to be displayed in the portal.
 
-    >**Note:** It can take up to 5 minutes for the device to be displayed in the portal. If the device is not shown, complete the next task and come back to check it back later. If the device is still missing from the portal, restart the Win1 device.
+    >**Note:** If you have completed the onboarding process and don't see devices in the Devices list after an hour, it might indicate an onboarding or connectivity problem.
 
 
 ### Task 3: Configure Roles
@@ -120,7 +120,7 @@ In this task, you will configure device groups that allow for access control and
 
 1. On the Devices tab, for the OS condition select **Windows 10** and select **Next**.
 
-1. On the Preview devices tab, select **Show preview** to see the WIN1 virtual machine.  Select **Next**.
+1. On the Preview devices tab, select **Show preview** to see the WIN1 virtual machine. Select **Next**. **Hint:** If you do not see the virtual machine in the preview list, go back and select also *None* for the OS condition. The data for the VM is not populated yet.
 
 1. For the User access tab, select **sg-IT** and then select **Add selected groups** button. Make sure it appears under *Azure AD user groups with access to this device group*.
 
