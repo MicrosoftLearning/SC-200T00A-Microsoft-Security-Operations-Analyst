@@ -44,7 +44,7 @@ In this task, you will save a workbook template and modify it.
 
 1. You should be back in the **Microsoft Sentinel - Workbooks - Templates** tab. Search for and select **Azure AD Audit logs**, in the right pane, scroll down and select the **Save** button. 
 
-1. Select the location that is appropriate for you and select **OK**. The appropriate location will default.
+1. Leave **East US** as the default value for *Region* and select **OK**.
 
 1. Select the **View saved workbook** button.
 
@@ -70,7 +70,7 @@ In this task, you will save a workbook template and modify it.
 
 1. Review the *When items are selected, export parameters* setting. Notice the *UserInfo* field is selected.
 
-1. Scroll down and select **Done Editing** at the bottom of the query (not the top menu).
+1. Scroll down and select **Done Editing** at the bottom of the query (not the top menu). Look at the changed colors for *Operations count* and *Trend*.
 
 1. Select **Edit** below the *Top active users* pie chart on the right side of the screen.  
 
@@ -95,7 +95,7 @@ In this task, you will create a new workbook with advanced visualizations.
 
 1. Select the **Edit** button below the first paragraph of the workbook 
 
-1. Type *# My workbook* to replace *## New workbook*.
+1. Type *# My workbook* on top of *## New workbook*.
 
 1. Select **Done Editing** on the bottom menu, for the *Editing text item: text - 2*. Notice that your header increased size and name changed.
 

@@ -70,7 +70,7 @@ In this task, you will onboard a device to Microsoft Defender for Endpoint using
 
 1. Paste the script by right-clicking in the **Administrator: Command Prompt** windows and press **Enter** to run it. **Note:** The window closes automatically after running the script.
 
-1. In the Microsoft 365 Defender portal, in the left-hand menu, under the Endpoints area, select **Device inventory**. If the device is not shown, complete the next task and come back to check it back later. It can take up to 60 minutes for first the device to be displayed in the portal.
+1. In the Microsoft 365 Defender portal, in the left-hand menu, under the Endpoints area, select **Device inventory**. If the device is not shown, complete the next task and come back to check it back later. It can take up to 60 minutes for the first device to be displayed in the portal.
 
     >**Note:** If you have completed the onboarding process and don't see devices in the Devices list after an hour, it might indicate an onboarding or connectivity problem.
 

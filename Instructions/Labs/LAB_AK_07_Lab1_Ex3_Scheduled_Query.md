@@ -82,7 +82,7 @@ In this task, you will create a scheduled query and connect it to the Teams chan
 
 1. Select the **Next: Incident settings >** button. 
 
-1. On the *Incident settings (Preview)* tab, review the default options.
+1. On the *Incident settings* tab, review the default options.
 
 1. Select the **Next: Automated response >** button.
 
