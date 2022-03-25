@@ -96,7 +96,7 @@ In this task, you will perform attacks on a host with Microsoft Defender for End
     >**Note:** A new PowerShell window will open and you will see resolve errors. This is expected.
 
     ```CommandPrompt
-    Start PowerShell.exe c2.ps1
+    Start PowerShell.exe -file c2.ps1
     ```
 
 >**Important:** Do not close these windows. Let this PowerShell script run in the background. The command needs to generate log entries for some hours. You can proceed to the next task and next exercises while this script runs. The data created by this task will be used in the Threat Hunting lab later. This process will not create substantial amounts of data or processing.

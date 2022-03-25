@@ -39,7 +39,7 @@ In this task, you will create a Microsoft Teams team for use in the lab.
 
 1. In the Add members to SOC screen, select the **Skip** button. 
 
-1. Scroll down the Teams blade to locate the newly created SOC team, select the **...** on the right side of the name and select **Add channel**.
+1. Scroll down the Teams blade to locate the newly created SOC team, select the ellipsis **(...)** on the right side of the name and select **Add channel**.
 
 1. Enter a channel name of *New Alerts* then select the **Add** button.
 
@@ -74,9 +74,9 @@ In this task, you will create a Logic App that will be used as a Playbook in Mic
 
 1. For Resource Group, select **Create New**, enter *RG-Playbooks* and select **OK**.
 
-1. For region, select the appropriate region for your situation. The default region will be optimal.
+1. Leave **(US) East US** as the default value for *Region*.
 
-1. Make sure the *Playbook Name* is "PostMessageTeams-OnAlert" and select **Review + create**.
+1. Make sure the *Playbook Name* is "PostMessageTeams-OnAlert" and select **Review + create**. **Hint:** If the name is different, go back to GitHub and select the **Deploy with alert trigger** playbook.
 
 1. Now select **Create**. 
 

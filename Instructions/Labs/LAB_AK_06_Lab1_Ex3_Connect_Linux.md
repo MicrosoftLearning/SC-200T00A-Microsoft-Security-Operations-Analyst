@@ -46,30 +46,30 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
 
 1. Note the IP address for your LIN1 server. See the screenshot below as an example:
 
-   ![linux login](../Media/LinuxLoginExample.png)
+    ![linux login](../Media/LinuxLoginExample.png)
 
 1. Go back to the WIN1 virtual machine. Launch Windows PowerShell as Administrator by right-clicking the Start menu icon and select **Windows PowerShell (Admin)**. Select **Yes** to allow the app to run in the User Account Control window that appears. **Hint:** You might have a Windows PowerShell window already open from previous exercises.
 
 1. Enter the following PowerShell command, adjusting for your specific Linux server information, and press enter:
 
-   ```PowerShell
-   ssh insert-your-linux-IP-address-here -l insert-linux-user-name-here
-   ```
+    ```PowerShell
+    ssh insert-your-linux-IP-address-here -l insert-linux-user-name-here
+    ```
 
 1. Enter *yes* to confirm the connection and then type the user's password and press enter. Your screen should look something like this:
 
-   ![linux login](../Media/PSconnectLinux.png)
+    ![linux login](../Media/PSconnectLinux.png)
 
 1. You are now ready to paste the *1.2 Install the CEF collector on the Linux machine* command from the earlier step. Make sure that script from Azure is in the clipboard. In PowerShell right-click the top bar and choose **Edit** and then **Paste**. 
 
 1. Once pasted and before to press Enter, add the character **3** to the word *python* as shown below:
 
-   ![ConnectorScript](../Media/ConnectorScript.png)
+    ![ConnectorScript](../Media/ConnectorScript.png)
 
 
 1. Once the script is adjusted press Enter. The script will run against your Linux server remotely. When the script processes properly it should look like this screen:
 
-   ![ConnectorScript](../Media/LinuxConnected.png)
+    ![ConnectorScript](../Media/LinuxConnected.png)
 
 1. Type **exit** to close the remote shell connection to LIN1.
 
@@ -100,19 +100,19 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
 1. Note the IP address for your LIN2 server. See the screenshot below as an example:
 
-   ![linux login](../Media/LinuxLoginExample.png)
+    ![linux login](../Media/LinuxLoginExample.png)
 
 1. Go back to the WIN1 virtual machine. Select the Windows PowerShell used in the previous task.
 
 1. Enter the following PowerShell command, adjusting for your specific Linux server information, and press enter:
 
-   ```PowerShell
-   ssh insert-your-linux-IP-address-here -l insert-linux-user-name-here
-   ```
+    ```PowerShell
+    ssh insert-your-linux-IP-address-here -l insert-linux-user-name-here
+    ```
 
 1. Enter *yes* to confirm the connection and then type the user's password and press enter. Your screen should look something like this:
 
-   ![linux login](../Media/PSconnectLinux.png)
+    ![linux login](../Media/PSconnectLinux.png)
 
 1. You are now ready to paste the *Download and onboard agent for Linux* command from the earlier step. Make sure that script is in the clipboard. In PowerShell right-click the top bar and choose **Edit** and then **Paste**.
 

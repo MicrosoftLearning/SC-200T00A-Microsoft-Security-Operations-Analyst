@@ -41,16 +41,16 @@ In this task, you will explore using notebooks in Microsoft Sentinel.
 
 1. In the Workspace details section do the following:
 
-    - Give your workspace a unique name.
-    - Choose your Region (or leave the default if reasonable)
-    - Keep the default Storage account, Key vault, and Application insights information.
-    - The Container registry option can remain as **None**.
+     - Give your workspace a unique name.
+     - Leave **(US) East US** as the default value for *Region*.
+     - Keep the default Storage account, Key vault, and Application insights information.
+     - The Container registry option can remain as **None**.
 
 1. At the bottom of the page, select **Review + create**. When you see the *"Validation passed"* message, select **Create**. 
 
-    >**Note:** It may take a few minutes to deploy the Machine Learning workspace.
+     >**Note:** It may take a few minutes to deploy the Machine Learning workspace.
 
-1. After *Your the deployment is complete* message appears, return to the Microsoft Sentinel portal.
+1. After *Your deployment is complete* message appears, return to the Microsoft Sentinel portal.
 
 1. Select **Notebooks** and then select the **Templates** tab from the middle command bar. 
 

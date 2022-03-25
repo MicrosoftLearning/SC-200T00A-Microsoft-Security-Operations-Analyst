@@ -39,7 +39,7 @@ In this task, you will create a detection for **Attack 1** on the host with the 
     search "temp\\startup.bat"
     ```
 
-1. The result shows data from three different tables:
+1. The result should show data from four different tables:
 
     - *DeviceProcessEvents*. Source: Defender for Endpoint connector.
     - *DeviceRegistryEvents*. Source: Defender for Endpoint connector.
@@ -48,7 +48,7 @@ In this task, you will create a detection for **Attack 1** on the host with the 
 
     Since we are receiving data from various sources, we will need to build two KQL statements that we could *union* later. In our initial investigation, you will look at each separately.
 
-    >**Note:** On rare occasions, the initial data loading process takes longer than expected. When that happens, the tables do not appear in the results for some hours. You may continue now if you only see the *Event* table, since will be the one that you will use now.
+    >**Note:** On rare occasions, the initial data loading process takes longer than expected. When that happens, the tables do not appear in the results for some hours. You may continue now if you only see the *Event* table, since that will be the one that you will use now.
 
 1. Our first data source to analyze is Sysmon from Windows hosts. **Run** the following KQL Statement to show only the results from the *Event* table:
 
@@ -175,7 +175,7 @@ In this task, you will create a detection for **Attack 1** on the host with the 
 
 1. Leave the rest of the options with the defaults. Select **Next: Incident settings>** button.
 
-1. For the *Incident settings (Preview)* tab, leave the default values and select **Next: Automated response >** button.
+1. For the *Incident settings* tab, leave the default values and select **Next: Automated response >** button.
 
 1. For the *Automated response* tab select the **PostMessageTeams-OnAlert** under *Alert automation* and then select **Next: Review >** button.
 
@@ -267,7 +267,7 @@ In this task, you will create a detection for **Attack 1** on the host with the 
 
 1. Leave the rest of the options with the defaults. Select **Next: Incident settings>** button.
 
-1. For the *Incident settings (Preview)* tab, leave the default values and select **Next: Automated response >** button.
+1. For the *Incident settings* tab, leave the default values and select **Next: Automated response >** button.
 
 1. For the *Automated response* tab select the **PostMessageTeams-OnAlert** under *Alert automation* and then select **Next: Review** button.
 
@@ -348,7 +348,7 @@ In this task, you will create a detection for **Attack 2** on the host with the 
 
 1. Leave the rest of the options with the defaults. Select **Next: Incident settings>** button.
 
-1. For the *Incident settings (Preview)* tab, leave the default values and select **Next: Automated response >** button.
+1. For the *Incident settings* tab, leave the default values and select **Next: Automated response >** button.
 
 1. For the *Automated response* tab select the **PostMessageTeams-OnAlert** under *Alert automation* and then select **Next: Review** button.
 

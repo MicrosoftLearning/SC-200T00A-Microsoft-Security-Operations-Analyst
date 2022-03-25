@@ -27,7 +27,7 @@ In this task, you will create a Windows virtual machine in Azure.
 
 1. In the **Search services and marketplace** box, enter *Windows 10* and select **Microsoft Window 10** from the drop-down list.
 
-1. Open the *Plan* drop-down list and select **Windows 10 Enterprise, version 20H2**. Select **Start with a pre-set configuration** to continue.
+1. Open the *Plan* drop-down list and select **Windows 10 Enterprise, version 21H2**. Select **Start with a pre-set configuration** to continue.
 
 1. Select **Dev/Test** and then select **Continue to create a VM**.
 
@@ -37,9 +37,9 @@ In this task, you will create a Windows virtual machine in Azure.
 
 1. In *Virtual machine name*, enter AZWIN01.
 
-1. Set the *Region* to the appropriate region for your area. The appropriate region will default.
+1. Leave **(US) East US** as the default value for *Region*.
 
-1. Scroll down and review the *Size* for the virtual machine. If it appears empty, select **See all sizes**, choose **B2ms** and click **Select**.
+1. Scroll down and review the *Size* for the virtual machine. If it appears empty, select **See all sizes**, choose one of the VM sizes under *Most used by Azure users* and click **Select**.
 
 1. Enter a *Username* of your choosing. **Hint:** Avoid reserved words like admin or root.
 

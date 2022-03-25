@@ -271,9 +271,9 @@ In this task, you will use generate visualizations with KQL statements.
 
 In this task, you will build multi-table KQL statements.
 
-1. The following statement demonstrates the **union** operator, which takes two or more tables and returns all their rows. Understanding how results are passed and impacted with the pipe character is essential. In the Query Window enter the following statements and select **Run** for each query separately to see the results: 
-
 1. Change the **Time range** to **Last hour** in the Query Window. This will limit our results for the following statements.
+
+1. The following statement demonstrates the **union** operator, which takes two or more tables and returns all their rows. Understanding how results are passed and impacted with the pipe character is essential. In the Query Window enter the following statements and select **Run** for each query separately to see the results: 
 
     1. **Query 1** will return all rows of SecurityBaseline and all rows of SecurityEvent.
 
@@ -319,7 +319,7 @@ In this task, you will build multi-table KQL statements.
     ) on Account
     ```
 
->**Important:** The first table specified in the join is considered the Left table. The table after the **join** operator is the right table. When working with columns from the tables, the $left.Column name and $right.Column name is to distinguish which tables column are referenced. The **join** operator supports a full range of types: flouter, inner, innerunique, leftanti, leftantisemi, leftouter, leftsemi, rightanti, rightantisemi, rightouter, rightsemi.
+    >**Important:** The first table specified in the join is considered the Left table. The table after the **join** operator is the right table. When working with columns from the tables, the $left.Column name and $right.Column name is to distinguish which tables column are referenced. The **join** operator supports a full range of types: flouter, inner, innerunique, leftanti, leftantisemi, leftouter, leftsemi, rightanti, rightantisemi, rightouter, rightsemi.
 
 1. Change back the **Time range** to **Last 24 hours** in the Query Window.
 
@@ -411,7 +411,7 @@ In this task, you will work with structured and unstructured string fields with 
 
     ```KQL
     SecurityAlert  
-    | where TimeGenerated >= ago(90d)
+    | where TimeGenerated > ago(90d)
     | mv-apply entity = todynamic(Entities) on 
     ( where entity.Type == "host" | extend AffectedHost = strcat (entity.DnsDomain, "\\", entity.HostName))
     ```

@@ -47,13 +47,13 @@ In this task, you will investigate an incident.
 
 1. Type in the comments box: *I will research this* and select the **Comment** button to submit the new comment.
 
-1. Select the **Entities** tab and review the *Account* and *Host* entities that we mapped within the KQL query from the previous exercise.
+1. Select the **Entities** tab and review the *Account* and *Host* entities that we mapped within the KQL query from the previous exercise. **Hint:** If no entities are shown, refresh the page.
 
 1. Select the **Alerts** tab. For the *Sysmon Startup RegKey* alert, slide right using the bar and notice the **View playbooks** link. This allows manual execution of a playbook from the alert, rather than triggering it from the *Automated response* tab within an Analytics rule.
 
 1. From the left pane, scroll down and select the **Investigate** button. **Hint:** If the icons are too small for your screen, select **(+)** to magnify them.
 
-1. Select the **WIN2** entity icon and wait for new *exploration queries* to be shown. It looks that *Related Alerts* has more data on it. Select the name of the exploration query **Related Alerts** to bring them to the investigation graph or select **Events >** to investigate them with a KQL query.
+1. Hover the **WIN2** entity icon and wait for new *exploration queries* to be shown. It looks that *Related Alerts* has more data on it. Select the name of the exploration query **Related Alerts** to bring them to the investigation graph or select **Events >** to investigate them with a KQL query.
 
 1.	When you select an entity, a window on the right opens for more detailed information. Review the **Info** page.
 

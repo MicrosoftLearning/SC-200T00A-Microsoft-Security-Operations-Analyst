@@ -37,18 +37,18 @@ In this task, you will create a hunting query, bookmark a result, and create a L
 
    >**Important:** Please paste any KQL queries first in Notepad and then copy from there to the *New Query 1* Log window to avoid any errors.
 
-   ```KQL
-   let lookback = 2d;
-   DeviceEvents | where TimeGenerated >= ago(lookback) 
-   | where ActionType == "DnsQueryResponse"
-   | extend c2 = substring(tostring(AdditionalFields.DnsQueryString),0,indexof(tostring(AdditionalFields.DnsQueryString),"."))
-   | where c2 startswith "sub"
-   | summarize count() by bin(TimeGenerated, 3m), c2
-   | where count_ > 5
-   | render timechart 
-   ```
+    ```KQL
+    let lookback = 2d;
+    DeviceEvents | where TimeGenerated >= ago(lookback) 
+    | where ActionType == "DnsQueryResponse"
+    | extend c2 = substring(tostring(AdditionalFields.DnsQueryString),0,indexof(tostring(AdditionalFields.DnsQueryString),"."))
+    | where c2 startswith "sub"
+    | summarize count() by bin(TimeGenerated, 3m), c2
+    | where count_ > 5
+    | render timechart 
+    ```
 
-   ![Screenshot](../Media/SC200_hunting1.png)
+    ![Screenshot](../Media/SC200_hunting1.png)
 
 1. The goal of the previous KQL query is to provide a visualization for a C2 beaconing on a consistent basis. Adjust grouping of values by changing the *3m* setting to **30s** within bin() and **Run** the query again.
 
@@ -56,19 +56,19 @@ In this task, you will create a hunting query, bookmark a result, and create a L
 
 1. You have now identified DNS requests that are beaconing to a C2 server. Next, determine which devices are beaconing. **Run** the following KQL Statement:
 
-   ```KQL
-   let lookback = 2d;
-   DeviceEvents | where TimeGenerated >= ago(lookback) 
-   | where ActionType == "DnsQueryResponse"
-   | extend c2 = substring(tostring(AdditionalFields.DnsQueryString),0,indexof(tostring(AdditionalFields.DnsQueryString),".")) 
-   | where c2 startswith "sub"
-   | summarize cnt=count() by bin(TimeGenerated, 5m), c2, DeviceName
-   | where cnt > 15
-   ```
+    ```KQL
+    let lookback = 2d;
+    DeviceEvents | where TimeGenerated >= ago(lookback) 
+    | where ActionType == "DnsQueryResponse"
+    | extend c2 = substring(tostring(AdditionalFields.DnsQueryString),0,indexof(tostring(AdditionalFields.DnsQueryString),".")) 
+    | where c2 startswith "sub"
+    | summarize cnt=count() by bin(TimeGenerated, 5m), c2, DeviceName
+    | where cnt > 15
+    ```
 
-   ![Screenshot](../Media/SC200_hunting2.png)
+    ![Screenshot](../Media/SC200_hunting2.png)
 
-   >**Note:** The generated log data is only from the WIN1 device.
+    >**Note:** The generated log data is only from the WIN1 device.
 
 1. Close the *Logs* window by selecting the **X** in the top-right of the window and select **OK** to discard the changes. 
 
@@ -80,15 +80,15 @@ In this task, you will create a hunting query, bookmark a result, and create a L
 
 1. For the *Custom query* enter the following KQL statement:
 
-   ```KQL
-   let lookback = 2d;
-   DeviceEvents | where TimeGenerated >= ago(lookback) 
-   | where ActionType == "DnsQueryResponse"
-   | extend c2 = substring(tostring(AdditionalFields.DnsQueryString),0,indexof(tostring(AdditionalFields.DnsQueryString),"."))
-   | where c2 startswith "sub"
-   | summarize cnt=count() by bin(TimeGenerated, 5m), c2, DeviceName
-   | where cnt > 15
-   ```
+    ```KQL
+    let lookback = 2d;
+    DeviceEvents | where TimeGenerated >= ago(lookback) 
+    | where ActionType == "DnsQueryResponse"
+    | extend c2 = substring(tostring(AdditionalFields.DnsQueryString),0,indexof(tostring(AdditionalFields.DnsQueryString),"."))
+    | where c2 startswith "sub"
+    | summarize cnt=count() by bin(TimeGenerated, 5m), c2, DeviceName
+    | where cnt > 15
+    ```
 
 1. Scroll down and under *Entity mapping (Preview)* select:
 
@@ -120,7 +120,7 @@ In this task, you will create a hunting query, bookmark a result, and create a L
 
 1. Select the **C2 Hunt** bookmark you just created from the results list.
 
-1. On the right pane, scroll down and select the **Investigate** button.
+1. On the right pane, scroll down and select the **Investigate** button. **Hint:** It might take a couple of minutes to show the investigation graph.
 
 1. Explore the Investigation graph just like you did in the previous module.
 
