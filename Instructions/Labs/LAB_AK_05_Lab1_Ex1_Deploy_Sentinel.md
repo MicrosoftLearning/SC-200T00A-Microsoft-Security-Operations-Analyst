@@ -47,6 +47,7 @@ In this task, you will create a watchlist in Microsoft Sentinel.
 1. From row 2 of the notepad, copy the following hostnames, each one in a different line:
 
     ```Notepad
+    Hostname
     Host1
     Host2
     Host3
