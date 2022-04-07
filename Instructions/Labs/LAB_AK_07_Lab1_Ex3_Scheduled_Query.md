@@ -8,11 +8,11 @@ lab:
 
 ## Lab scenario
 
-![Lab overview.](../media/SC-200-Lab_Diagrams_Mod7_L1_Ex3.png)
+![Lab overview.](../Media/SC-200-Lab_Diagrams_Mod7_L1_Ex3.png)
 
 You are a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You must learn how to detect and mitigate threats using Microsoft Sentinel. After connecting your data sources to Microsoft Sentinel, you create custom analytics rules to help discover threats and anomalous behaviors in your environment.
 
-Analytics rules search for specific events or sets of events across your environment, alert you when certain event thresholds or conditions are reached, generate incidents for your SOC to triage and investigate, and respond to threats with automated tracking and remediation processes.
+Analytics rules search for specific events or sets of events across your environment, alert you when certain event thresholds or conditions are reached, generate incidents for your SOC to triage and investigate, and respond to threats with automated tracking and reMediation processes.
 
 
 ### Task 1: Create a Scheduled Query

@@ -8,7 +8,7 @@ lab:
 
 ## Lab scenario
 
-![Lab overview.](../media/SC-200-Lab_Diagrams_Mod2_L1_Ex1.png)
+![Lab overview.](../Media/SC-200-Lab_Diagrams_Mod2_L1_Ex1.png)
 
 You are a Security Operations Analyst working at a company that is implementing Microsoft Defender for Endpoint. Your manager plans to onboard a few devices to provide insight into required changes to the Security Operations (SecOps) team response procedures.
 
@@ -116,7 +116,7 @@ In this task, you will configure device groups that allow for access control and
     |General setting|Value|
     |---|---|
     |Device group name|**Regular**|
-    |Automation level|Full - remediate threats automatically|
+    |Automation level|Full - reMediate threats automatically|
 
 1. Select **Next**.
 
@@ -130,6 +130,6 @@ In this task, you will configure device groups that allow for access control and
 
 1. Device group configuration has changed. Select **Apply changes** to check matches and recalculate groupings.
 
-1. You are going to have two device groups now; the "Regular" you just created and the "Ungrouped devices (default)" with the same remediation level.
+1. You are going to have two device groups now; the "Regular" you just created and the "Ungrouped devices (default)" with the same reMediation level.
 
 ## Proceed to Exercise 2

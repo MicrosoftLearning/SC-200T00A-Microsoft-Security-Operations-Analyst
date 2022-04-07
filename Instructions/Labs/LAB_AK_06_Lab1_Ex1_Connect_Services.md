@@ -8,7 +8,7 @@ lab:
 
 ## Lab scenario
 
-![Lab overview.](../media/SC-200-Lab_Diagrams_Mod6_L1_Ex1.png)
+![Lab overview.](../Media/SC-200-Lab_Diagrams_Mod6_L1_Ex1.png)
 
 You are a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You must learn how to connect log data from the many data sources in your organization. The organization has data from Microsoft 365, Microsoft 365 Defender, Azure resources, non-azure virtual machines, etc. You start connecting the Microsoft sources first.
 
@@ -100,7 +100,7 @@ In this task, you will connect the Azure Activity connector.
 
 1. Select the **Parameters** tab, choose your *uniquenameDefender* workspace from the **Primary Log Analytics workspace** drop-down list.
 
-1. Select the **Remediation** tab and select the **Create a remediation task** checkbox.
+1. Select the **ReMediation** tab and select the **Create a reMediation task** checkbox.
 
 1. Select the **Review + Create** button to review the configuration.
 
