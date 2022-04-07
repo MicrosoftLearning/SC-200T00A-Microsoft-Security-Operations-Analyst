@@ -8,6 +8,8 @@ lab:
 
 ## Lab scenario
 
+![Lab overview.](../media/SC-200-Lab_Diagrams_Mod6_L1_Ex1.png)
+
 You are a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You must learn how to connect log data from the many data sources in your organization. The organization has data from Microsoft 365, Microsoft 365 Defender, Azure resources, non-azure virtual machines, etc. You start connecting the Microsoft sources first.
 
 

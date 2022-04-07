@@ -8,6 +8,8 @@ lab:
 
 ## Lab scenario
 
+![Lab overview.](../media/SC-200-Lab_Diagrams_Mod5_L1_Ex1.png)
+
 You are a Security Operations Analyst working at a company that is implementing Microsoft Sentinel. You are responsible for setting up the Microsoft Sentinel environment to meet the company requirement to minimize cost, meet compliance regulations, and provide the most manageable environment for your security team to perform their daily job responsibilities.
 
 

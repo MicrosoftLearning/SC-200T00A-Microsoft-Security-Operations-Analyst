@@ -6,6 +6,7 @@ lab:
 
 # Module 7 - Lab 1 - Exercise 4 - Understand Detection Modeling
 
+![Lab overview.](../media/SC-200-Lab_Diagrams_Mod7_L1_Ex4.png)
 ### Task 1: Understand the Attacks
 
 >**Important: You will perform no actions in this exercise.**  These instructions are only an explanation of the attacks you will perform in the next exercise. Please carefully read this page.
