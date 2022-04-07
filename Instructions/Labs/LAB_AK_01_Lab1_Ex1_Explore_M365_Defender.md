@@ -8,7 +8,7 @@ lab:
 
 ## Lab scenario
 
-![Lab overview.](../media/SC-200-Lab_M1_L1_Ex1.png)
+![M365 Defender](../media/SC-200-Lab_M1_L1_Ex1.png)
 
 You are a Security Operations Analyst working at a company that is implementing Microsoft 365 Defender. You start by assigning preset security policies in EOP and Microsoft Defender for Office 365.
 
