@@ -8,9 +8,9 @@ lab:
 
 ## Lab scenario
 
-![Lab overview.](../media/SC-200-Lab_Diagrams_Mod7_L1_Ex2.png)
+![Lab overview.](../Media/SC-200-Lab_Diagrams_Mod7_L1_Ex2.png)
 
-You are a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You must learn how to detect and mitigate threats using Microsoft Sentinel. Now, you want to respond and remediate actions that can be run from Microsoft Sentinel as a routine.
+You are a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You must learn how to detect and mitigate threats using Microsoft Sentinel. Now, you want to respond and reMediate actions that can be run from Microsoft Sentinel as a routine.
 
 With a playbook, you can help automate and orchestrate your threat response, integrate with other systems both internal and external, and can be set to run automatically in response to specific alerts or incidents, when triggered by an analytics rule or an automation rule, respectively. 
 

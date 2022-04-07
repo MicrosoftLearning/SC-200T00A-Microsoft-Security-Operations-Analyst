@@ -8,7 +8,7 @@ lab:
 
 ## Lab scenario
 
-![Lab overview.](../media/SC-200-Lab_Diagrams_Mod7_L1_Ex8.png)
+![Lab overview.](../Media/SC-200-Lab_Diagrams_Mod7_L1_Ex8.png)
 
 You are a Security Operations Analyst working at a company that implemented Microsoft Sentinel. Once you have connected your data sources to Microsoft Sentinel, you can visualize and monitor the data using the Microsoft Sentinel adoption of Azure Monitor Workbooks, which provides versatility in creating custom dashboards. 
 

@@ -126,7 +126,7 @@ In this task, you will configure device groups that allow for access control and
 4. Enter the following information on the General tab:
 
 - Device group name: Regular
-- Automation level: Full - remediate threats automatically
+- Automation level: Full - reMediate threats automatically
 - Members: Name equals TESTLAB
 
 5. Select **Next**.
