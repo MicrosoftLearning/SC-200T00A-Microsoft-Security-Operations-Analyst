@@ -8,6 +8,8 @@ lab:
 
 ## Lab scenario
 
+![Lab overview.](../media/SC-200-Lab_Diagrams_Mod2_L1_Ex2.png)
+
 You are a Security Operations Analyst working at a company that is implementing Microsoft Defender for Endpoint. Your manager plans to onboard a few devices to provide insight into required changes to the Security Operations (SecOps) team response procedures.
 
 To explore the Defender for Endpoint attack mitigation capabilities, you will run two simulated attacks.

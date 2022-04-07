@@ -8,6 +8,8 @@ lab:
 
 ## Lab scenario
 
+![Lab overview.](../media/SC-200-Lab_Diagrams_Mod7_L1_Ex5.png)
+
 You are going to simulate the attacks that you will later use to detect and investigate in Microsoft Sentinel.
 
 

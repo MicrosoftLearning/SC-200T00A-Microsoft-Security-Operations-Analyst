@@ -8,6 +8,8 @@ lab:
 
 ## Lab scenario
 
+![Lab overview.](../media/SC-200-Lab_Diagrams_Mod8_L1_Ex1.png)
+
 You are a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You have received threat intelligence about a Command and Control (C2 or C&C) technique. You need to perform a hunt and watch for the threat.
 
 >**Important:** The log data used in the lab was created in the previous module. See **Attack 3** on WIN1 server in Exercise 5.

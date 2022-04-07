@@ -8,6 +8,8 @@ lab:
 
 ## Lab scenario
 
+
+
 You are a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You need to explore the benefits of threat hunting with Microsoft Sentinel Notebooks. You can use notebooks to:
 
 - Perform analytics that are not provided out-of-the box in Microsoft Sentinel, such as some Python machine learning features.
