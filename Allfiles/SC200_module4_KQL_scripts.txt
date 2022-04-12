@@ -37,11 +37,11 @@ In this task, you will build basic KQL statements.
 1. The following statement demonstrates the use of the let statement to declare variables. In the Query Window. Enter the following statement and select **Run**: 
 
 ```KQL
-let timeOffset = 7d;
-let discardEventId = 4688;
-SecurityEvent
-| where TimeGenerated > ago(timeOffset*2) and TimeGenerated < ago(timeOffset)
-| where EventID != discardEventId
+ let timeOffset = 1h;
+ let discardEventId = 4688;
+ SecurityEvent
+ | where TimeGenerated > ago(timeOffset*2) and TimeGenerated < ago(timeOffset)
+ | where EventID != discardEventId
 ```
 
 2. The following statement demonstrates the use of the let statement to declare a dynamic list. In the Query Window enter the following statement and select **Run**: 
@@ -51,7 +51,7 @@ let suspiciousAccounts = datatable(account: string) [
     @"\administrator", 
     @"NT AUTHORITY\SYSTEM"
 ];
-SecurityEvent | where Account in (suspiciousAccounts)
+SecurityEvent | where TimeGenerated > ago(1h) and Account in (suspiciousAccounts)
 ```
 
 3. The following statement demonstrates the use of the "let" statement to declare a dynamic table. In the Query Window. Enter the following statement and select **Run**: 
@@ -84,7 +84,7 @@ search in (SecurityEvent,SecurityAlert,A*) "err"
 
 ```KQL
 SecurityEvent
-| where TimeGenerated > ago(1d)
+| where TimeGenerated > ago(1h)
 ```
 
 ```KQL
@@ -100,14 +100,15 @@ SecurityEvent
 ```
 
 ```KQL
-SecurityEvent | where EventID in (4624, 4625)
+SecurityEvent 
+| where TimeGenerated > ago(1h) and EventID in (4624, 4625)
 ```
 
 7. The following statement demonstrates creating fields using the extend operator In the Query Window. Enter the following statement and select **Run**: 
 
 ```KQL
 SecurityAlert
-| where TimeGenerated > ago(7d)
+| where TimeGenerated > ago(90d)
 | extend severityOrder = case (
     AlertSeverity == "High", 3,
     AlertSeverity == "Medium", 2, 
@@ -120,7 +121,7 @@ SecurityAlert
 
 ```KQL
 SecurityAlert
-| where TimeGenerated > ago(7d)
+| where TimeGenerated > ago(90d)
 | extend severityOrder = case (
     AlertSeverity == "High", 3,
     AlertSeverity == "Medium", 2, 
@@ -138,12 +139,13 @@ In the Query Window. Enter the following statement and select **Run**:
 
 ```KQL
 SecurityEvent
+| where TimeGenerated > ago(1h)
 | project Computer, Account
 ```
 
 ```KQL
 SecurityAlert
-| where TimeGenerated > ago(7d)
+| where TimeGenerated > ago(90d)
 | extend severityOrder = case (
     AlertSeverity == "High", 3,
     AlertSeverity == "Medium", 2, 
@@ -163,7 +165,7 @@ In this task, you will build KQL statements to prepare data.
 
 ```KQL
 SecurityEvent
-| where EventID == "4688"
+| where TimeGenerated > ago(1h) and where EventID == "4688"
 | summarize count() by Process, Computer
 ```
 
@@ -171,8 +173,7 @@ SecurityEvent
 
 ```KQL
 SecurityEvent
-| where TimeGenerated > ago(1h)
-| where EventID == 4624
+| where TimeGenerated > ago(1h) and EventID == 4624
 | summarize cnt=count() by AccountType, Computer
 ```
 
@@ -180,6 +181,7 @@ SecurityEvent
 
 ```KQL
 SecurityEvent
+| where TimeGenerated > ago(1h)
 | summarize dcount(IpAddress)
 ```
 
@@ -231,6 +233,7 @@ In the Query Window. Enter the following statement and select **Run**:
 
 ```KQL
 SecurityEvent
+| where TimeGenerated > ago(1h)
 | where EventID == "4624"
 | summarize make_list(Account) by Computer
 ```
@@ -241,10 +244,10 @@ The make_set function returns a dynamic (JSON) array containing *distinct* value
 
 ```KQL
 SecurityEvent
+| where TimeGenerated > ago(1h)
 | where EventID == "4624"
 | summarize make_set(Account) by Computer
 ```
-
 
 ### Task 4: Create visualizations in KQL with the Render Operator
 
@@ -254,6 +257,7 @@ In this task, you will use generate visualizations with KQL statements.
 
 ```KQL
 SecurityEvent 
+| where TimeGenerated > ago(1h)
 | summarize count() by Account
 | render barchart
 ```
@@ -264,7 +268,8 @@ The bin() function rounds values down to an integer multiple of the given bin si
 
 ```KQL
 SecurityEvent 
-| summarize count() by bin(TimeGenerated, 1h) 
+| where TimeGenerated > ago(1h)
+| summarize count() by bin(TimeGenerated, 1m) 
 | render timechart
 ```
 
@@ -278,25 +283,23 @@ In this task, you will build multi-table KQL statements.
 **Query 1** will return all rows of SecurityEvent and all rows of SecurityAlert.
 
 ```KQL
-SecurityEvent 
-| union SecurityAlert  
+SecurityBaseline  
+| union SecurityEvent 
 ```
 
 **Query 2** will return one row and column, which is the count of all rows of SecurityEvent and all rows of SecurityAlert.
 
 ```KQL
-SecurityEvent 
-| union SecurityAlert  
+SecurityBaseline  
+| union SecurityEvent  
 | summarize count() 
-| project count_
 ```
 
 **Query 3** will return all rows of SecurityEvent and one row for SecurityAlert.  The row for SecurityAlert will have the count of the SecurityAlert rows.
 
 ```KQL
-SecurityEvent 
-| union (SecurityAlert  | summarize count()) 
-| project count_
+SecurityBaseline 
+| union (SecurityEvent  | summarize count() | project count_) 
 ```
 
 2. The following statement demonstrates the union operator support for wildcards to union multiple tables. In the Query Window. Enter the following statement and select **Run**: 
@@ -314,10 +317,10 @@ SecurityEvent
 | summarize LogOnCount=count() by EventID, Account 
 | project LogOnCount, Account 
 | join kind = inner (
-     SecurityEvent 
-     | where EventID == "4634" 
-     | summarize LogOffCount=count() by EventID, Account 
-     | project LogOffCount, Account 
+SecurityEvent 
+| where EventID == "4634" 
+| summarize LogOffCount=count() by EventID, Account 
+| project LogOffCount, Account 
 ) on Account
 ```
 
@@ -371,40 +374,47 @@ Traces
 | project resourceName, totalSlices, sliceNumber, lockTime, releaseTime, previousLockTime
 ```
 
-4. The following statement demonstrates working with Dynamics Fields:
-
-Within a Log Analytics table, there are field types defined as Dynamic. Dynamic fields contain a key-value pairs.
-
-To access the strings within a Dynamic field, use the dot notation. The Properties field from the AppAvailabilityResults table is of type dynamic. In this example, you could access the SyntheticMonitorId with the Properties.SyntheticMonitorId field name.
-
-In the Query Window. Enter the following statement and **Run**: 
+4. The following statement demonstrates working with dynamics fields, which are special since they can take on any value of other data types. In this example, the Properties field from the AppAvailabilityResults table is of type dynamic.
+In the Query Window enter the following statement and select Run:
 
 ```KQL
-AppAvailabilityResults
-| project Properties.SyntheticMonitorId
+AppAvailabilityResults | project Properties
 ```
 
-5. The following statement demonstrates functions to manipulate JSON stored in string fields. Many logs submit data in JSON format, which requires you to know how to transform JSON data to queryable fields. 
+5. To access the strings within a Dynamic field, use the dot notation. The Properties field from the AppAvailabilityResults table is of type dynamic. In this example, you could access the SyntheticMonitorId with the Properties.SyntheticMonitorId field name.
+
+In the Query Window. Enter the following statement and **Run**:
+```KQL
+AppAvailabilityResults | project Name=Properties.WebtestArmResourceName, Location=Properties.WebtestLocationId, Id=Properties.SyntheticMonitorId
+```
+
+6. The following statement demonstrates functions to manipulate JSON stored in string fields. Many logs submit data in JSON format, which requires you to know how to transform JSON data to queryable fields. 
 
 In the Query Window. Enter the following statements individually and select **Run**: 
 
 ```KQL
-SecurityAlert
-| extend ExtendedProperties = todynamic(ExtendedProperties) 
-| extend ActionTaken = ExtendedProperties.ActionTaken
-| extend AttackerIP = ExtendedProperties["Attacker IP"]
+ ContainerInventory  
+ | where TimeGenerated > ago(1h) 
+ | extend Command = todynamic(Command) 
+ | extend Cmd = Command.[0]
+ | extend Param1 = Command.[1]
+ | extend Param2 = Command.[2]
+ | project-away Command 
+ | order by tostring(Cmd)
 ```
 The mv-expand operator expands multi-value dynamic arrays or property bags into multiple records.
 
 ```KQL
-SecurityAlert
-| mv-expand entity = todynamic(Entities)
+ ContainerInventory  
+ | where TimeGenerated > ago(1h)
+ | mv-expand Command = todynamic(Command) 
+ | project ContainerHostname,Command
 ```
 The mv-apply operator applies a subquery to each record and returns the union of the results of all subqueries.
 
 ```KQL
 SecurityAlert
-| where TimeGenerated >= ago(7d)
+| where TimeGenerated >= ago(90d)
 | mv-apply entity = todynamic(Entities) on 
 ( where entity.Type == "account" | extend account = strcat (entity.NTDomain, "\\", entity.Name))
 ```
