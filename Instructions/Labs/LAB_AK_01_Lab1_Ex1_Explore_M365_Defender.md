@@ -49,19 +49,23 @@ In this task, you will assign preset security policies for EOP and Microsoft Def
 
     >**Note:** If you receive the message "Client Error - Error when getting bip rule" select **OK** to continue. The error is due to the hydration status of your tenant at Office 365 which is not enabled by default.
 
-1. Under *Standard protection*, select **Manage**.
+1. Under *Standard protection*, select **Apply standard policy**.
 
 1. In *EOP protections apply to* section, under **Domains** write your tenant's domain name, select it, and then select **Next**. **Hint:** You tenant's domain name is the same that you have for you admin account, it might be something like *WWLx######.onmicrosoft.com*. Notice that this configuration applies policies for anti-spam, outbound spam filter, anti-malware, anti-phishing. 
 
 1. In *Defender for Office 365 protections apply to* section, apply the same configuration as the previous step and select **Next**. Notice that this configuration applies policies for anti-phishing, Safe Attachments, Safe Links.
 
+1. In the *Policy mode* section, make sure the **Turn on the policy after I finish** radio button is selected, and then select **Next**.
+
 1. Read the content under *Review and confirm your changes* and select **Confirm** to apply the changes and select **Done** to finish.
 
-1. Under *Strict protection*, select **Manage**. **Hint:** *Strict protection* is found under "Email & Collaboration - Policies & rules - Threat policies - Preset security policies".
+1. Under *Strict protection*, select **Apply standard policy**. **Hint:** *Strict protection* is found under "Email & Collaboration - Policies & rules - Threat policies - Preset security policies".
 
 1. In *EOP protections apply to*, under **Groups** write **Leadership**, select it, and then select **Next**. Notice that this configuration applies policies for anti-spam, outbound spam filter, anti-malware, anti-phishing.
 
 1. In *Defender for Office 365 protections apply to* section, apply the same configuration as the previous step and select **Next**. Notice that this configuration applies policies for anti-phishing, Safe Attachments, Safe Links.
+
+1. In the *Policy mode* section, make sure the **Turn on the policy after I finish** radio button is selected, and then select **Next**.
 
 1. Read the content under *Review and confirm your changes* and select **Confirm** to apply the changes and select **Done** to finish.
 
