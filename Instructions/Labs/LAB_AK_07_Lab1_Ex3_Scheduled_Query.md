@@ -109,9 +109,9 @@ In this task, you will test your new scheduled query rule.
 
 1. Select **+ Add assignments** from the command bar.
 
-1. In the *Add assignments* page, *Membership* tab, under *Select role*, select **User Administrator**. and select **Next >**.
+1. In the *Add assignments* page, *Membership* tab, under *Select role*, select **User Administrator**. and select **Add**.
 
-1. Review the default *Assignment type* in the *Settings* tab and then select **Assign**. If the assignment fails to complete, try again.
+     >**Note:** You may need to click on the **Refresh** button to see the new role assignment. 
 
 1. Close the "Christie Cline - Assigned roles" and "Users - All users" pages by selecting the 'x' in the top-right, twice.
 
