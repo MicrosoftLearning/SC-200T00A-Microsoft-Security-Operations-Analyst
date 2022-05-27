@@ -58,7 +58,7 @@ In this task, you will explore using notebooks in Microsoft Sentinel.
 
 1. Select **A Getting Started Guide for Microsoft Sentinel ML Notebooks**. 
 
-1. On the right pane, scroll down and select **Clone notebook template** button. Review the default option and select **Save**.
+1. On the right pane, scroll down and select **Create from template** button. Review the default option and select **Save**.
 
 1. Once the saving is done, select the **Launch notebook** button. This will take you to the Microsoft Azure Machine Learning Studio.
 
