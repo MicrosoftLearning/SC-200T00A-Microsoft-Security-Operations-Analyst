@@ -59,7 +59,7 @@ In this task, you will assign preset security policies for EOP and Microsoft Def
 
 1. Read the content under *Review and confirm your changes* and select **Confirm** to apply the changes and select **Done** to finish.
 
-1. Under *Strict protection*, select **Apply standard policy**. **Hint:** *Strict protection* is found under "Email & Collaboration - Policies & rules - Threat policies - Preset security policies".
+1. Under *Strict protection*, select **Apply strict protection**. **Hint:** *Strict protection* is found under "Email & Collaboration - Policies & rules - Threat policies - Preset security policies".
 
 1. In *EOP protections apply to*, under **Groups** write **Leadership**, select it, and then select **Next**. Notice that this configuration applies policies for anti-spam, outbound spam filter, anti-malware, anti-phishing.
 
