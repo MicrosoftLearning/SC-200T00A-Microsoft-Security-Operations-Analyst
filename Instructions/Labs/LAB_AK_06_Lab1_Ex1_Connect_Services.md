@@ -62,9 +62,9 @@ In this task, you will connect the Microsoft Defender for Cloud connector.
 
 1. Select **Open connector page** on the connector information blade.
 
-1. In the Configuration area, under Subscription, select the checkbox for the "Azure Pass - Sponsorship" subscription and select **Connect**.
+1. In the Configuration area, under Subscription, select the checkbox for the "Azure Pass - Sponsorship" subscription and slide the **Status** option to the right to indicate **Connected**.
 
-1. Read the "Connect" message and select **OK** to continue. The "Status" should be now *Connected* and "Bi-directional sync" should be *Enabled*.
+1. The "Status" should be now *Connected* and "Bi-directional sync" should be *Enabled*.
 
 1. Scroll down and under the "Create incidents - Recommended!" area, select **Enable**. This option creates an Analytics rule automatically for this service. You can manually add it later if not enabled here or change its configuration within the *Analytics* blade.
 
