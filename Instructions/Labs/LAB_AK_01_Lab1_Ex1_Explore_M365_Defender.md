@@ -15,7 +15,7 @@ You are a Security Operations Analyst working at a company that is implementing 
 
 ### Task 1: Obtain Your Microsoft 365 Credentials
 
-Once you launch the lab, a free trial tenant will be made available to you to access in the Microsoft virtual Lab environment. This tenant will be automatically assigned a unique username and password. You must retrieve this username and password so that you can sign in to Azure and Microsoft 365 within the Microsoft Virtual Lab environment. 
+Once you launch the lab, a free trial tenant will be made available to you to access in the Microsoft virtual Lab environment. This tenant will be automatically assigned a unique username and password. You must retrieve this username and password so that you can sign into Azure and Microsoft 365 within the Microsoft Virtual Lab environment. 
 
 Because this course can be offered by learning partners using any one of several Authorized Lab Hosting (ALH) providers, the actual steps involved to retrieve the tenant ID associated with your tenant may vary by lab hosting provider. Therefore, your instructor will provide you with the necessary instructions for how to retrieve this information for your course. The information that you should note for later use includes:
 
@@ -37,7 +37,7 @@ In this task, you will assign preset security policies for EOP and Microsoft Def
 
 1. In the **Enter password** dialog box, copy and paste in the admin's tenant password provided by your lab hosting provider and then select **Sign in**.
 
-    >**Note:** if you receive a message "You can't access this section." wait 5 minutes and try again. Sometimes the access rules need to propagate the tenant which can take many minutes.  
+    >**Note:** If you receive a message "The operation could not be completed. Please try again later. If the problem persists, contact Microsoft support." just click **OK** to continue.  
 
 1. If shown, close the Microsoft 365 Defender quick tour.
 
@@ -47,33 +47,37 @@ In this task, you will assign preset security policies for EOP and Microsoft Def
 
 1. On the *Threat polies* dashboard, select **Preset Security Policies**.
 
-    >**Note:** If you receive the message "Client Error - Error when getting bip rule" select **OK** to continue. The error is due to the hydration status of your tenant at Office 365 which is not enabled by default.
+    >**Note:** If you receive the message *"Client Error - Error when getting bip rule"* select **OK** to continue. The error is due to the hydration status of your tenant at Office 365 which is not enabled by default.
 
-1. Under *Standard protection*, select **Apply standard policy**.
+    >**Note:** If you receive the message *"Client Error - An error occurred when retrieving preset security policies. Please try again later."* select **OK** to continue. Refresh your browser using **Ctrl+F5**.
 
-1. In *EOP protections apply to* section, under **Domains** write your tenant's domain name, select it, and then select **Next**. **Hint:** You tenant's domain name is the same that you have for you admin account, it might be something like *WWLx######.onmicrosoft.com*. Notice that this configuration applies policies for anti-spam, outbound spam filter, anti-malware, anti-phishing. 
+1. Under *Standard protection*, select **Manage protection settings**. **Hint:** If you see this option grayed out, refresh your browser using **Ctrl+F5**.
 
-1. In *Defender for Office 365 protections apply to* section, apply the same configuration as the previous step and select **Next**. Notice that this configuration applies policies for anti-phishing, Safe Attachments, Safe Links.
+1. In the *Apply Exchange Online Protection* section, select **Specific recipients** and under **Domains** start writing your tenant's domain name, select it, and then select **Next**. **Hint:** You tenant's domain name is the same that you have for you admin account, it might be something like *WWLx######.onmicrosoft.com*. Notice that this configuration applies policies for anti-spam, outbound spam filter, anti-malware, anti-phishing. 
 
-1. In the *Policy mode* section, make sure the **Turn on the policy after I finish** radio button is selected, and then select **Next**.
+1. In the *Apply Defender for Office 365 protection* section, apply the same configuration as the previous step and select **Next**. Notice that this configuration applies policies for anti-phishing, Safe Attachments, Safe Links.
 
-1. Read the content under *Review and confirm your changes* and select **Confirm** to apply the changes and select **Done** to finish.
-
-1. Under *Strict protection*, select **Apply strict protection**. **Hint:** *Strict protection* is found under "Email & Collaboration - Policies & rules - Threat policies - Preset security policies".
-
-1. In *EOP protections apply to*, under **Groups** write **Leadership**, select it, and then select **Next**. Notice that this configuration applies policies for anti-spam, outbound spam filter, anti-malware, anti-phishing.
-
-1. In *Defender for Office 365 protections apply to* section, apply the same configuration as the previous step and select **Next**. Notice that this configuration applies policies for anti-phishing, Safe Attachments, Safe Links.
+1. In the *Impersonation protection* section, select **Next** four times (4x) to continue.
 
 1. In the *Policy mode* section, make sure the **Turn on the policy after I finish** radio button is selected, and then select **Next**.
 
-1. Read the content under *Review and confirm your changes* and select **Confirm** to apply the changes and select **Done** to finish.
+1. Read the content under *Review and confirm your changes* and select **Confirm** to apply the changes and then select **Done** to finish.
 
-1. On the top middle menu, select **Threat policies** to go back and under *Policies*, select **Safe Attachments**. Notice that both preset policies appears here and the Status is On.
+    >**Note:** If you receive the message *"The URI 'https://outlook.office365.com/psws/service.svc/AntiPhishPolicy' is not valid for PUT operation. The URI must point to a single resource for PUT operations."* just select **OK** and **Cancel** the operation. You will see the *Standard protection is on* option enabled.
 
-1. In the menu, select the **gear** icon for **Global Settings**.
+1. Under *Strict protection*, select **Manage protection settings**. **Hint:** *Strict protection* is found under "Email & Collaboration - Policies & rules - Threat policies - Preset security policies".
 
-1. Read through the available integration options and select **Cancel** to go back.
+1. In the *Apply Exchange Online Protection*, select **Specific recipients** and under **Groups** start writing **Leadership**, select it, and then select **Next**. Notice that this configuration applies policies for anti-spam, outbound spam filter, anti-malware, anti-phishing.
+
+1. In the *Apply Defender for Office 365 protection* section, apply the same configuration as the previous step and select **Next**. Notice that this configuration applies policies for anti-phishing, Safe Attachments, Safe Links.
+
+1. In the *Impersonation protection* section, select **Next** four times (4x) to continue.
+
+1. In the *Policy mode* section, make sure the **Turn on the policy after I finish** radio button is selected, and then select **Next**.
+
+1. Read the content under *Review and confirm your changes* and select **Confirm** to apply the changes and then select **Done** to finish.
+
+    >**Note:** If you receive the message *"The URI 'https://outlook.office365.com/psws/service.svc/AntiPhishPolicy' is not valid for PUT operation. The URI must point to a single resource for PUT operations."* just select **OK** and **Cancel** the operation. You will see the *Strict protection is on* option enabled.
 
 1. On the **Microsoft 365 Defender** portal, from the navigation menu, select **Settings** from the left.
 
