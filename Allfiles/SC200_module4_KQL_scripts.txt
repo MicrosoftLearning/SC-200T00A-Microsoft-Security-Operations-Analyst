@@ -37,7 +37,7 @@ In this task, you will build basic KQL statements.
 1. The following statement demonstrates the use of the let statement to declare variables. In the Query Window. Enter the following statement and select **Run**: 
 
 ```KQL
- let timeOffset = 1h;
+ let timeOffset = 7d;
  let discardEventId = 4688;
  SecurityEvent
  | where TimeGenerated > ago(timeOffset*2) and TimeGenerated < ago(timeOffset)
@@ -51,7 +51,7 @@ let suspiciousAccounts = datatable(account: string) [
     @"\administrator", 
     @"NT AUTHORITY\SYSTEM"
 ];
-SecurityEvent | where TimeGenerated > ago(1h) and Account in (suspiciousAccounts)
+SecurityEvent | where Account in (suspiciousAccounts)
 ```
 
 3. The following statement demonstrates the use of the "let" statement to declare a dynamic table. In the Query Window. Enter the following statement and select **Run**: 
@@ -60,7 +60,7 @@ SecurityEvent | where TimeGenerated > ago(1h) and Account in (suspiciousAccounts
 let LowActivityAccounts =
     SecurityEvent 
     | summarize cnt = count() by Account 
-    | where cnt < 10;
+    | where cnt < 1000;
 LowActivityAccounts | where Account contains "sql"
 ```
 
@@ -107,28 +107,18 @@ SecurityEvent
 7. The following statement demonstrates creating fields using the extend operator In the Query Window. Enter the following statement and select **Run**: 
 
 ```KQL
-SecurityAlert
-| where TimeGenerated > ago(90d)
-| extend severityOrder = case (
-    AlertSeverity == "High", 3,
-    AlertSeverity == "Medium", 2, 
-    AlertSeverity == "Low", 1,
-    AlertSeverity == "Informational", 0,
-    -1)
+SecurityEvent
+| where ProcessName != "" and Process != ""
+| extend StartDir =  substring(ProcessName,0, string_size(ProcessName)-string_size(Process))
 ```
 
 8. The following statement demonstrates sorting results using the order by operator. In the Query Window. Enter the following statement and select **Run**: 
 
 ```KQL
-SecurityAlert
-| where TimeGenerated > ago(90d)
-| extend severityOrder = case (
-    AlertSeverity == "High", 3,
-    AlertSeverity == "Medium", 2, 
-    AlertSeverity == "Low", 1,
-    AlertSeverity == "Informational", 0,
-    -1)
-| order by severityOrder desc
+SecurityEvent
+| where ProcessName != "" and Process != ""
+| extend StartDir =  substring(ProcessName,0, string_size(ProcessName)-string_size(Process))
+| order by StartDir desc, Process asc
 ```
 
 9. The following statements demonstrate specifying fields for the result set using the project operators.
@@ -143,17 +133,21 @@ SecurityEvent
 | project Computer, Account
 ```
 
+
 ```KQL
-SecurityAlert
-| where TimeGenerated > ago(90d)
-| extend severityOrder = case (
-    AlertSeverity == "High", 3,
-    AlertSeverity == "Medium", 2, 
-    AlertSeverity == "Low", 1,
-    AlertSeverity == "Informational", 0,
-    -1)
-| order by severityOrder
-| project-away severityOrder
+SecurityEvent
+| where ProcessName != "" and Process != ""
+| extend StartDir =  substring(ProcessName,0, string_size(ProcessName)-string_size(Process))
+| order by StartDir desc, Process asc
+| project Process, StartDir
+```
+
+```KQL
+SecurityEvent
+| where ProcessName != "" and Process != ""
+| extend StartDir =  substring(ProcessName,0, string_size(ProcessName)-string_size(Process))
+| order by StartDir desc, Process asc
+| project-away ProcessName
 ```
 
 
@@ -185,7 +179,20 @@ SecurityEvent
 | summarize dcount(IpAddress)
 ```
 
-4. The following statement demonstrates the arg_max function.
+4. The following statement is a rule to detect MFA failures across multiple applications for the same account. In the Query Window enter the following statement and select **Run**: 
+
+```KQL
+let timeframe = 1d;
+let threshold = 3;
+SigninLogs
+| where TimeGenerated >= ago(timeframe)
+| where ResultDescription has "MFA"
+| summarize applicationCount = dcount(AppDisplayName) by UserPrincipalName, IPAddress
+| where applicationCount >= threshold
+```
+
+
+5. The following statement demonstrates the arg_max function.
 
 The following statement will return the most current row from the SecurityEvent table for the computer SQL12.NA.contosohotels.com.  The * in the arg_max function requests all columns for the row. In the Query Window. Enter the following statement and select **Run**: 
 
@@ -195,7 +202,7 @@ SecurityEvent
 | summarize arg_max(TimeGenerated,*) by Computer
 ```
 
-5. The following statement demonstrates the arg_min function.
+6. The following statement demonstrates the arg_min function.
 
 In this statement, the oldest SecurityEvent for the computer SQL12.NA.contosohotels.com will be returned as the result set. In the Query Window. Enter the following statement and select **Run**: 
 
@@ -205,7 +212,7 @@ SecurityEvent
 | summarize arg_min(TimeGenerated,*) by Computer
 ```
 
-6. The following statements demonstrate the importance of understanding results based on the order of the pipe "|". In the Query Window. Enter the following queries and run each separately: 
+7. The following statements demonstrate the importance of understanding results based on the order of the pipe "|". In the Query Window. Enter the following queries and run each separately: 
 
 **Query 1** will have Accounts for which the last activity was a login. The SecurityEvent table will first be summarized and return the most current row for each Account.  Then only rows with EventID equals 4624 (login) will be returned.
 
@@ -225,7 +232,7 @@ SecurityEvent
 
 >**Note:**  You can also review the "Total CPU" and "Data used for processed query" by selecting the bar "Completed" and compare the data between both statements.
 
-7. The following statement demonstrates the make_list function.
+8. The following statement demonstrates the make_list function.
 
 The make_list function returns a dynamic (JSON) array of all the values of Expression in the group. This KQL query will first filter the EventID with the where operator.  Next, for each Computer, the results are a JSON array of Accounts. The resulting JSON array will include duplicate accounts.
 
@@ -238,7 +245,7 @@ SecurityEvent
 | summarize make_list(Account) by Computer
 ```
 
-8. The following statement demonstrates the make_set function.
+9. The following statement demonstrates the make_set function.
 
 The make_set function returns a dynamic (JSON) array containing *distinct* values that Expression takes in the group. This KQL query will first filter the EventID with the where operator.  Next, for each Computer, the results are a JSON array of unique Accounts. In the Query Window. Enter the following statement and select **Run**: 
 
@@ -280,26 +287,26 @@ In this task, you will build multi-table KQL statements.
 
 1. The following statement demonstrates the union operator that takes two or more tables and returns the rows of all of them. Understanding how results are passed and impacted with the pipe character is essential. In the Query Window. Enter the following statements and select **Run** for each separately to see the results: 
 
-**Query 1** will return all rows of SecurityEvent and all rows of SecurityAlert.
+**Query 1** will return all rows of SecurityEvent and all rows of SigninLogs.
 
 ```KQL
-SecurityBaseline  
-| union SecurityEvent 
+SecurityEvent 
+| union SigninLogs  
 ```
 
-**Query 2** will return one row and column, which is the count of all rows of SecurityEvent and all rows of SecurityAlert.
+**Query 2** will return one row and column, which is the count of all rows of SecurityEvent and all rows of SigninLogs.
 
 ```KQL
-SecurityBaseline  
-| union SecurityEvent  
-| summarize count() 
+SecurityEvent 
+| union SigninLogs  
+| summarize count() 
 ```
 
-**Query 3** will return all rows of SecurityEvent and one row for SecurityAlert.  The row for SecurityAlert will have the count of the SecurityAlert rows.
+**Query 3** will return all rows of SecurityEvent and one row for SigninLogs.  The row for SigninLogs will have the count of the SigninLogs rows.
 
 ```KQL
-SecurityBaseline 
-| union (SecurityEvent  | summarize count() | project count_) 
+SecurityEvent 
+| union (SigninLogs | summarize count()| project count_)
 ```
 
 2. The following statement demonstrates the union operator support for wildcards to union multiple tables. In the Query Window. Enter the following statement and select **Run**: 
@@ -340,22 +347,12 @@ print extract("x=([0-9.]+)", 1, "hello x=45.6|wo") == "45.6"
 2. The following statements use the extract function to pull out the Account Name from the Account field of the SecurityEvent table. In the Query Window. Enter the following statement and select **Run**: 
 
 ```KQL
-let top3 = SecurityEvent
-| where TimeGenerated > ago(1h)
-| where AccountType == 'User'
-| extend Account_Name = extract(@"^(.*\\)?([^@]*)(@.*)?$", 2, tolower(Account))
-| summarize Attempts = count() by Account_Name
-| where Account_Name != ""
-| top 3 by Attempts 
-| summarize make_list(Account_Name);
 SecurityEvent
-| where TimeGenerated > ago(1h)
-| where AccountType == 'User'
-| extend Name = extract(@"^(.*\\)?([^@]*)(@.*)?$", 2, tolower(Account))
-| extend Account_Name = iff(Name in (top3), Name, "Other")
+| where EventID == 4672 and AccountType == 'User'
+| extend Account_Name = extract(@"^(.*\\)?([^@]*)(@.*)?$", 2, tolower(Account))
+| summarize LoginCount = count() by Account_Name
 | where Account_Name != ""
-| summarize Attempts = count() by Account_Name
-| sort by Attempts
+| where LoginCount < 10
 ```
 
 3. The following statement demonstrates the parse function. Parse evaluates a string expression and parses its value into one or more calculated columns. The computed columns will have nulls for unsuccessfully parsed strings.
@@ -374,18 +371,29 @@ Traces
 | project resourceName, totalSlices, sliceNumber, lockTime, releaseTime, previousLockTime
 ```
 
-4. The following statement demonstrates working with dynamics fields, which are special since they can take on any value of other data types. In this example, the Properties field from the AppAvailabilityResults table is of type dynamic.
-In the Query Window enter the following statement and select Run:
+4. The following statement demonstrates working with dynamic fields, which are special since they can take on any value of other data types. In this example, The DeviceDetail field from the SigninLogs table is of type dynamic. In the Query Window enter the following statement and select Run: 
+
 
 ```KQL
-AppAvailabilityResults | project Properties
+SigninLogs 
+| extend OS = DeviceDetail.operatingSystem
 ```
 
-5. To access the strings within a Dynamic field, use the dot notation. The Properties field from the AppAvailabilityResults table is of type dynamic. In this example, you could access the SyntheticMonitorId with the Properties.SyntheticMonitorId field name.
+5. The following example shows how to break out packed fields for SigninLogs. In the Query Window enter the following statement and select Run:
 
-In the Query Window. Enter the following statement and **Run**:
+
 ```KQL
-AppAvailabilityResults | project Name=Properties.WebtestArmResourceName, Location=Properties.WebtestLocationId, Id=Properties.SyntheticMonitorId
+SigninLogs 
+| where TimeGenerated >= ago(1d)
+| extend OS = DeviceDetail.operatingSystem, Browser = DeviceDetail.browser
+| extend ConditionalAccessPol0Name = tostring(ConditionalAccessPolicies[0].displayName), ConditionalAccessPol0Result = tostring(ConditionalAccessPolicies[0].result)
+| extend ConditionalAccessPol1Name = tostring(ConditionalAccessPolicies[1].displayName), ConditionalAccessPol1Result = tostring(ConditionalAccessPolicies[1].result)
+| extend ConditionalAccessPol2Name = tostring(ConditionalAccessPolicies[2].displayName), ConditionalAccessPol2Result = tostring(ConditionalAccessPolicies[2].result)
+| extend StatusCode = tostring(Status.errorCode), StatusDetails = tostring(Status.additionalDetails)
+| extend State = tostring(LocationDetails.state), City = tostring(LocationDetails.city)
+| extend Date = startofday(TimeGenerated), Hour = datetime_part("Hour", TimeGenerated)
+| summarize count() by Date, Identity, UserDisplayName, UserPrincipalName, IPAddress, ResultType, ResultDescription, StatusCode, StatusDetails, ConditionalAccessPol0Name, ConditionalAccessPol0Result, ConditionalAccessPol1Name, ConditionalAccessPol1Result, ConditionalAccessPol2Name, ConditionalAccessPol2Result, Location, State, City
+| sort by Date
 ```
 
 6. The following statement demonstrates functions to manipulate JSON stored in string fields. Many logs submit data in JSON format, which requires you to know how to transform JSON data to queryable fields. 
@@ -393,42 +401,36 @@ AppAvailabilityResults | project Name=Properties.WebtestArmResourceName, Locatio
 In the Query Window. Enter the following statements individually and select **Run**: 
 
 ```KQL
- ContainerInventory  
- | where TimeGenerated > ago(1h) 
- | extend Command = todynamic(Command) 
- | extend Cmd = Command.[0]
- | extend Param1 = Command.[1]
- | extend Param2 = Command.[2]
- | project-away Command 
- | order by tostring(Cmd)
+ SigninLogs
+| extend Location =  todynamic(LocationDetails)
+| extend City =  Location.city
+| extend City2 = Location["city"]
+| project Location, City, City2
 ```
 The mv-expand operator expands multi-value dynamic arrays or property bags into multiple records.
 
 ```KQL
- ContainerInventory  
- | where TimeGenerated > ago(1h)
- | mv-expand Command = todynamic(Command) 
- | project ContainerHostname,Command
+ SigninLogs
+| mv-expand Location = todynamic(LocationDetails)
 ```
 The mv-apply operator applies a subquery to each record and returns the union of the results of all subqueries.
 
 ```KQL
-SecurityAlert
-| where TimeGenerated >= ago(90d)
-| mv-apply entity = todynamic(Entities) on 
-( where entity.Type == "account" | extend account = strcat (entity.NTDomain, "\\", entity.Name))
+SigninLogs
+| mv-apply Location = todynamic(LocationDetails) on 
+( where Location.city == "Canberra")
 ```
 
 6. To create a function:
 
     >**Note:** You will not be able to do this in the lademo environment used for data in this lab, but it's an important concept to be used in your environment. 
 
-After running a query, select the **Save** button and then select **Save As function** from the drop-down. Enter the name your want, for example: *MailboxForward* in the **Function name** box and enter a **Legacy category**, like *General* and select **Save**.
+After running a query, select the **Save** button and then select **Save As function** from the drop-down. Enter the name your want, for example: *PrivLogins* in the **Function name** box and enter a **Legacy category**, like *General* and select **Save**.
 
 The function will be available in KQL by using the function alias:
 
 ```KQL
-MailboxForward
+PrivLogins
 ```
 
 ## You have completed the lab.
