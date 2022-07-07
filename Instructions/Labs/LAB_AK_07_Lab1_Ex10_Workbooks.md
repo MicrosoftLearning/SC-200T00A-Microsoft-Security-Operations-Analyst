@@ -1,10 +1,10 @@
 ---
 lab:
-    title: 'Exercise 8 - Create workbooks'
+    title: 'Exercise 10 - Create workbooks'
     module: 'Module 7 - Create detections and perform investigations using Microsoft Sentinel'
 ---
 
-# Module 7 - Lab 1 - Exercise 8 - Create workbooks
+# Module 7 - Lab 1 - Exercise 10 - Create workbooks
 
 ## Lab scenario
 
@@ -155,4 +155,4 @@ In this task, you will create a new workbook with advanced visualizations.
 
 1. On the right pane, select **View saved workbook** to review your workbook.
 
-## You have completed the lab.
+## Proceed to Exercise 11

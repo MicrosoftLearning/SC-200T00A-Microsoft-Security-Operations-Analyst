@@ -1,6 +1,6 @@
 ---
 lab:
-    title: 'Exercise 7 - Investigate Incidents'
+    title: 'Exercise 9 - Investigate Incidents'
     module: 'Module 7 - Create detections and perform investigations using Microsoft Sentinel'
 ---
 
@@ -8,7 +8,6 @@ lab:
 
 ## Lab scenario
 
-![Lab overview.](../Media/SC-200-Lab_Diagrams_Mod7_L1_Ex7.png)
 
 You are a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You already created Scheduled and Microsoft Security Analytics rules. The Fusion and Anomalies Analytics rules are also enabled in your environment. Now is the time to investigate the Incidents created by them.
 
@@ -37,7 +36,7 @@ In this task, you will investigate an incident.
 
     >**Note:** The Analytics rules are generating alerts and incidents on the same specific log entry. Remember that this was done in the *Query scheduling* configuration to generate more alerts and incidents to be utilized in the lab.
   
-1. Select one of the *Sysmon Startup RegKey* incidents.
+1. Select one of the *MDE Startup RegKey* incidents.
 
 1. Review the incident details on the right blade that opened. Scroll down and select the **View full details** button.
 
@@ -51,17 +50,17 @@ In this task, you will investigate an incident.
 
 1. Select the **Entities** tab and review the *Account* and *Host* entities that we mapped within the KQL query from the previous exercise. **Hint:** If no entities are shown, refresh the page.
 
-1. Select the **Alerts** tab. For the *Sysmon Startup RegKey* alert, slide right using the bar and notice the **View playbooks** link. This allows manual execution of a playbook from the alert, rather than triggering it from the *Automated response* tab within an Analytics rule.
+1. Select the **Alerts** tab. For the *MDE Startup RegKey* alert, slide right using the bar and notice the **View playbooks** link. This allows manual execution of a playbook from the alert, rather than triggering it from the *Automated response* tab within an Analytics rule.
 
 1. From the left pane, scroll down and select the **Investigate** button. **Hint:** If the icons are too small for your screen, select **(+)** to magnify them.
 
-1. Hover the **WIN2** entity icon and wait for new *exploration queries* to be shown. It looks that *Related Alerts* has more data on it. Select the name of the exploration query **Related Alerts** to bring them to the investigation graph or select **Events >** to investigate them with a KQL query.
+1. Hover the **WIN1** entity icon and wait for new *exploration queries* to be shown. It looks that *Related Alerts* has more data on it. Select the name of the exploration query **Related Alerts** to bring them to the investigation graph or select **Events >** to investigate them with a KQL query.
 
 1.	When you select an entity, a window on the right opens for more detailed information. Review the **Info** page.
 
 1. Select **Timeline** button. Hover the first two incidents and see which things on the graph occurred at what point in time.
 
-1. Select **Entities** button and review the *Entities* and *Alerts* related to *WIN2*.
+1. Select **Entities** button and review the *Entities* and *Alerts* related to *WIN1*.
 
 1. Close the investigation graph by selecting the **X** in the top right of the page.
 
@@ -69,4 +68,4 @@ In this task, you will investigate an incident.
 
 1. Finally, select **Active Status** and select **Closed**. In the *Select classification* review the different options. After that, select **True positive - suspicious activity** and then select **Apply**.
 
-## Proceed to Exercise 8
+## Proceed to Exercise 10
