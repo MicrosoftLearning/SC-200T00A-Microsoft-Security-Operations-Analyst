@@ -136,4 +136,69 @@ In this task, you will create a hunting query, bookmark a result, and create a L
 
 1. Review that the *Status* is now *Running*. You will receive a notification in the Azure Portal (bell icon) if we find a result.
 
-# Proceed to Exercise 2
+
+### Task 2: Create a NRT query rule
+
+In this task, instead of using a LiveStream, you will create a NRT analytics query rule. NRT rules run every minute and lookback one minute.  The benefit to NRT rules are they can use the alert and incident creation logic.
+
+
+1. Select the **Analytics** page in Microsoft Sentinel. 
+
+1. Select the **Create** tab, then **NRT query rule**
+1. This starts the "Analytics rule wizard". For the *General* tab type:
+
+    |Setting|Value|
+    |---|---|
+    |Name|**NRT C2 Hunt**|
+    |Description|**NRT C2 Hunt**|
+    |Tactics|**Command and Control**|
+    |Severity|**High**|
+
+1. Select **Next: Set rule logic >** button. 
+
+
+1. For the *Rule query* enter the following KQL statement:
+
+    ```KQL
+    DeviceEvents | where TimeGenerated >= ago(lookback) 
+    | where ActionType == "DnsQueryResponse"
+    | extend c2 = substring(tostring(AdditionalFields.DnsQueryString),0,indexof(tostring(AdditionalFields.DnsQueryString),"."))
+    | where c2 startswith "sub"
+    | summarize cnt=count() by bin(TimeGenerated, 5m), c2, DeviceName
+    | where cnt > 15
+    ```
+
+>**Note:** We are purposely generating many incidents for the same data. This enables the Lab to use these alerts.
+
+1. Leave the rest of the options with the defaults. Select **Next: Incident settings>** button.
+
+1. For the *Incident settings* tab, leave the default values and select **Next: Automated response >** button.
+
+1. For the *Automated response* tab select the **PostMessageTeams-OnAlert** under *Alert automation* and then select **Next: Review** button.
+
+1. On the *Review* tab, select the **Create** button to create the new Scheduled Analytics rule.
+
+
+
+### Task 3: Create a Search
+
+In this task, you will use a Search job to look for a C2. 
+
+
+1. Select the **Search** page in Microsoft Sentinel. 
+
+1. Select the **Restore** tab.
+
+>**Note:** The lab will not have Archived tables to restore from.  The normal process would restore archived tables to include in the Search job.
+1. Select the **Cancel**.
+1. Select the **Search** tab.
+1. Select the *Table* and change to **DeviceRegistryEvents**
+1. In the Search box, enter **reg.exe**  
+1. Select **Saved Searches**. 
+1. The search job will create a new table named **DeviceRegistryEvents_####_SRCH**. 
+1. Wait for the search job to complete.  The status will display *Updating*. Then *In progress*. Then *Search completed*. 
+1. Select **View search results**
+1. Open a new tab in *Logs*.
+1. Enter the new table name **DeviceRegistryEvents_####_SRCH** and Run.
+
+## Proceed to Exercise 2

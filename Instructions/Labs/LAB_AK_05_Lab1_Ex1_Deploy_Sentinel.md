@@ -127,4 +127,16 @@ In this task, you will create an indicator in Microsoft Sentinel.
     ThreatIntelligenceIndicator | project DomainName
     ```
 
+### Task 4: Configure log retention
+
+In this task, you will change the retention period for the SecurityEvent table.
+
+1. In Microsoft Sentinel, select the **Settings** option in the *Configuration* area.
+1. Select **Workspace settings**
+1. In Log Analytics workspace, select the **Tables (preview)** option in the *Settings* area.
+1. Select Table name **SecurityEvent**, then **...**.
+1. Select **Manage Table**.
+1. Select **180 days** for *Total retention period*. Then **Save**.
+
+
 ## You have completed the lab.

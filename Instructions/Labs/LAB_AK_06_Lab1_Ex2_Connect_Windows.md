@@ -62,24 +62,27 @@ In this task, you will connect an Azure Windows virtual machine to Microsoft Sen
 
 1. Select your Microsoft Sentinel Workspace you created earlier.
 
-1. From the Data Connectors Tab, search for the **Security Events via Legacy Agent** connector and select it from the list.
+1. From the Data Connectors Tab, search for the **Windows Security Events via AMA** connector and select it from the list.
 
 1. Select **Open connector page** on the connector information blade.
 
-1. In the *Configuration* section, under "1. Download and install the agent", select the **Install agent on Azure Windows Virtual Machine** option.
-
-1. Select **Download & install agent for Azure Windows Virtual machines**. This will show the available Virtual Machines in your Azure subscription.
-
-1. Select the **AZWIN01** virtual machine that you just created in the previous task, and then select **Connect**. Wait until the "Status" shows *This workspace*.
-
-1. Close the window by selecting the 'x'. In the *Configuration* section, under "2. Select which events to stream", select **All Events**, then select **Apply Changes**.
+1. In the *Configuration* section, select the **Create data collection rule**.
+1. Enter **AZWIN01DCR** for Rule Name, then select **Next: Resources**.
+1. Select **+Add resource(s)**
+1. Expand **rg-azwin01**, then select **AZWIN01**.
+1. Select **Apply**.
+1. Select **Next : Collect**, then **Next : Review + create**
+1. Select **Create**
+1. Wait a few minutes and then select **Refresh** to see the new data collection rule listed.
 
 
 ### Task 3: Connect a non-Azure Windows Machine
 
-In this task, you will connect a non-Azure Windows virtual machine to Microsoft Sentinel.
+In this task, you will install Azure Arc and connect a non-Azure Windows virtual machine to Microsoft Sentinel.  
 
 >**Important:** The next steps are done in a different machine than the one you were previously working. Look for the Virtual Machine name references.
+
+>**Important:** The *Windows Security Events via AMA* data connector requires Azure Arc for non-Azure devices. 
 
 1. Login to WIN2 virtual machine as Admin with the password: **Pa55w.rd**.  
 
@@ -87,85 +90,87 @@ In this task, you will connect a non-Azure Windows virtual machine to Microsoft 
 
 1. Open a browser and log into the Azure Portal at https://portal.azure.com with the credentials you have been using in the previous labs.
 
-1. In the Search bar of the Azure Portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
-1. Select your Microsoft Sentinel Workspace.
+1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
-1. Select **Data connectors** then search for the **Security Events via Legacy Agent** connector and select it from the list.
+1. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
+
+1. In the Search bar of the Azure portal, type *Arc*, then select **Azure Arc**.
+
+1. In the navigation pane under **Infrastructure** select **Servers**
+
+1. Select **+ Add**.
+
+1. Select **Generate script** in the "Add a single server" section.
+
+1. Select **Next** to get to the Resource details tab.
+
+1. Select the Resource group you created earlier. **Hint:** *RG-Defender*
+
+    >**Note:** If you haven't already created a resource group, open another tab and create the resource group and start over.
+
+1. Review the *Server details* and *Connectivity method* options. Keep the default values and select **Next** to get to the Tags tab.
+
+1. Select **Next** to get to the Download and run script tab.
+
+1. If the **Register** option is available, Select **Register** under the step *1. Register your subscription*.
+
+    >**Note:** Wait at least three (3) minutes for processing.
+
+1. Scroll down and select the **Download** button. **Hint:** if your browser blocks the download, take action in the browser to allow it. In Edge Browser, select the ellipsis button (...) if needed and then select **Keep**. 
+
+1. Right-click the Windows Start button and select **Windows PowerShell (Admin)**.
+
+1. Enter *Administrator* for "Username" and *Passw0rd!* for "Password" if you get a UAC prompt.
+
+1. Enter: cd C:\Users\Admin\Downloads
+
+1. Type *Set-ExecutionPolicy -ExecutionPolicy Unrestricted* and press enter.
+
+1. Enter **A** for Yes to All and press enter.
+
+1. Type *.\OnboardingScript.ps1* and press enter.  
+
+    >**Important:** If you get the error *"The term .\OnboardingScript.ps1 is not recognized..."*, make sure you are doing the steps for Task 4 in the WINServer virtual machine. Other issue might be that the name of the file changed due to multiple downloads, search for *".\OnboardingScript (1).ps1"* or other file numbers in the running directory.
+
+1. Enter **R** to Run once and press enter (this may take a couple minutes).
+
+1. Back in the Edge browser, open a new tab and type https://microsoft.com/devicelogin in the address bar.
+
+1. Go back to the Windows PowerShell window, copy the code that appears after *"...enter the code"* in the last line of the script to authenticate the agent.
+
+1. Go back to the Edge browser and paste it in the **Code** box and select **Next**. Select your tenant admin account and select **Continue** in the *Are you trying to sign in to Azure Connected Machine Agent?* window. 
+
+1. Go back to the Windows PowerShell window and wait for the message *"Successfully Onboarded Resource to Azure"*. **Note:** If you see a message line with a new authentication code, you need to repeat the last 3 steps again.
+
+1. Go back to the Azure portal page where you downloaded the script and select **Close**. Close the **Add servers with Azure Arc** to go back to the Azure Arc **Servers** page.
+
+1. Select **Refresh** until WIN2  name appears.
+
+    >**Note:** This could take a few minutes.
+
+
+
+1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
+
+1. Select your Microsoft Sentinel Workspace you created earlier.
+
+1. From the Data Connectors Tab, search for the **Windows Security Events via AMA** connector and select it from the list.
 
 1. Select **Open connector page** on the connector information blade.
 
-1. In the *Configuration* section, under "1. Download and install the agent", now select the **Install agent on a non-Azure Windows Machine** option.
-
-1. Select **Download & install agent for non-Azure Windows machines**. 
-
-    >**Note:** Your Log Analytics workspace should show *2 Windows computers connected*. This corresponds to WINServer and AZWIN01 virtual machines connected earlier.
-
-1. Select the link for **Download Windows Agent (64 bit)**.
-
-1. Select **Open file** under the *MMASetup-AMD64.exe* file that was downloaded and select **Yes** to allow the executable to run in the User Account Control window that appears.
-
-1. Select **Next** on the welcome dialog, select **I Agree** to the "Microsoft Software License Terms" page and **Next** on the Destination prompt to accept the default path.
-
-1. On the Agent Setup Options prompt, select **Connect the agent to Azure Log Analytics (OMS)** option, then select **Next**.
-
-1. In the browser with Microsoft Sentinel open, copy the **Workspace ID** from the Agents Management page and paste into the Workspace ID in the dialog. 
-
-1. In the browser with Microsoft Sentinel open, copy the **Primary key** from the Agents Management page and paste into the Workspace key in the dialog. 
-
-1. Select **Next** to save the configuration.
-
-1. Select **Next** on the Microsoft Update page.
-
-1. Then select **Install**. Wait for the Microsoft Monitoring Agent setup to finish.
-
-1. When complete, select **Finish**.
+1. In the *Configuration* section, select the **Create data collection rule**.
+1. Enter **WIN2** for Rule Name, then select **Next: Resources**.
+1. Select **+Add resource(s)**
+1. Expand **rg-defender** (or the Resource Group your created), then select **WIN2**.
+1. Select **Apply**.
+1. Select **Next : Collect**, then **Next : Review + create**
+1. Select **Create**
+1. Wait a few minutes and then select **Refresh** to see the new data collection rule listed.
 
 
-### Task 4: Install and collect Sysmon logs
 
-In this task, you will install and collect Sysmon logs.
-
->**Note:** The following instructions will install Sysmon with the default configuration. You should research community-based configurations for Sysmon to be used on production machines.
-
-1. Open a new tab in the browser, go to https://docs.microsoft.com/sysinternals/downloads/sysmon
-
-1. Download Sysmon from the page by selecting **Download Sysmon**.
-
-1. Hover the *Sysmon.zip* and select the folder icon. Right-click the downloaded file and select **Extract All...** enter *C:\Sysmon* under **Files will be extracted to this folder** and select **Extract**. 
-
-1. In the Windows Taskbar for WIN2 search box, enter *command*. The search results will show Command Prompt app. Right-click on the Command Prompt app and select **Run as Administrator**. Select **Yes** to allow the app to run in the User Account Control window that appears.
-
-1. Type *cd \sysmon*
-
-1. Type *notepad sysmon.xml* to create a new file. Select **Yes** to confirm the file creation.
-
-1. Open a new tab in the browser, go to: https://github.com/SwiftOnSecurity/sysmon-config/blob/master/sysmonconfig-export.xml
-
-1. Select the **Raw** button. Select all and copy the contents of that file from GitHub and paste it back in the sysmon.xml notepad file you just created.
-
-1. In Notepad, select **File** and then select **Save** to save the file.
-
-1. Back in the Command Prompt type the following and press enter: **sysmon.exe -accepteula -i sysmon.xml**
-
-    >**Important:** Verify that "Configuration file validated" and "Sysmon started" messages appear in the output. If that is not the case, verify that the data is properly copied and that the sysmon.xml file has been saved.
-
-1. In the browser, navigate back to the tab with the Azure portal open at https://portal.azure.com 
-
-1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel** and select your Microsoft Sentinel Workspace you created earlier.
-
-1. In Microsoft Sentinel, select **Settings** from the Configuration area and then select **Workspace settings >** tab.
-
-1. Select **Agents configuration** from the Settings area. The **Windows Event logs** tab should be select by default.
-
-1. Select **+ Add windows event log** button.
-
-1. Type **Microsoft-Windows-Sysmon/Operational** in the Log name field.
-
-1. Select **Apply**. With this, we are going to collect all events generated by Sysmon from the Event Viewer.
-
-
-### Task 5: Onboard Microsoft Defender for Endpoint Device
+### Task 4: Onboard Microsoft Defender for Endpoint Device
 
 In this task, you will on-board a device to Microsoft Defender for Endpoint.
 

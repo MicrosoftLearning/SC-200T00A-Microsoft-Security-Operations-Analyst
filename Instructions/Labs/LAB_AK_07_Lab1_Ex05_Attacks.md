@@ -1,10 +1,10 @@
 ---
 lab:
-    title: 'Exercise 4 - Understand Detection Modeling'
+    title: 'Exercise 5 - Understand Detection Modeling'
     module: 'Module 7 - Create detections and perform investigations using Microsoft Sentinel'
 ---
 
-# Module 7 - Lab 1 - Exercise 4 - Understand Detection Modeling
+# Module 7 - Lab 1 - Exercise 5 - Understand Detection Modeling
 
 ![Lab overview.](../Media/SC-200-Lab_Diagrams_Mod7_L1_Ex4.png)
 ### Task 1: Understand the Attacks
@@ -85,7 +85,6 @@ The attack-detect configuration cycle used in this lab represents all data sourc
 
 To build a detection, you first start with building a KQL statement. Since you will attack a host, you will have representative data to start building the KQL statement.
 
-The following lab runs the same attacks on a Windows host with Defender for Endpoint installed and Windows with Sysmon installed. As you build the detections, you will see the difference in data normalization for each.
 
 After you have the KQL statement, you create the Analytical Rule.
 
@@ -95,4 +94,4 @@ Next, you will make other changes to the analytics rule.
 
 >**Note:** Some alerts will be triggered in a smaller time-frame just for our lab purpose.
 
-# Proceed to Exercise 5
+## Proceed to Exercise 6
