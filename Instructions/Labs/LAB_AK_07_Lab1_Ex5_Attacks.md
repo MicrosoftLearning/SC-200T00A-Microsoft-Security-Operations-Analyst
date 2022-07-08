@@ -4,7 +4,7 @@ lab:
     module: 'Module 7 - Create detections and perform investigations using Microsoft Sentinel'
 ---
 
-# Module 7 - Lab 1 - Exercise 4 - Understand Detection Modeling
+# Module 7 - Lab 1 - Exercise 5 - Understand Detection Modeling
 
 ![Lab overview.](../Media/SC-200-Lab_Diagrams_Mod7_L1_Ex4.png)
 ### Task 1: Understand the Attacks

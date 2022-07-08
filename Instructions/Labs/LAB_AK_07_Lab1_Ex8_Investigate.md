@@ -1,10 +1,10 @@
 ---
 lab:
-    title: 'Exercise 9 - Investigate Incidents'
+    title: 'Exercise 8 - Investigate Incidents'
     module: 'Module 7 - Create detections and perform investigations using Microsoft Sentinel'
 ---
 
-# Module 7 - Lab 1 - Exercise 7 - Investigate Incidents
+# Module 7 - Lab 1 - Exercise 8 - Investigate Incidents
 
 ## Lab scenario
 
@@ -68,4 +68,4 @@ In this task, you will investigate an incident.
 
 1. Finally, select **Active Status** and select **Closed**. In the *Select classification* review the different options. After that, select **True positive - suspicious activity** and then select **Apply**.
 
-## Proceed to Exercise 10
+## Proceed to Exercise 9

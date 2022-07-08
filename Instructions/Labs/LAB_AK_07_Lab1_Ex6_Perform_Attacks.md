@@ -4,7 +4,7 @@ lab:
     module: 'Module 7 - Create detections and perform investigations using Microsoft Sentinel'
 ---
 
-# Module 7 - Lab 1 - Exercise 5 - Conduct attacks
+# Module 7 - Lab 1 - Exercise 6 - Conduct attacks
 
 ## Lab scenario
 

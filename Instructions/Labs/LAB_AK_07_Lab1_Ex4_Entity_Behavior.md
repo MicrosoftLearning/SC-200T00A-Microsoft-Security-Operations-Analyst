@@ -4,7 +4,7 @@ lab:
     module: 'Module 7 - Create detections and perform investigations using Microsoft Sentinel'
 ---
 
-# Module ?? - Lab 1 - Exercise ??? - Explore Entity Behavior Analytics
+# Module 7 - Lab 1 - Exercise 4 - Explore Entity Behavior Analytics
 
 ## Lab scenario
 

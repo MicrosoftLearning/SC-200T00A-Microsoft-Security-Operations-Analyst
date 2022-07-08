@@ -1,10 +1,10 @@
 ---
 lab:
-    title: 'Exercise 8 - Create ASIM parsers'
+    title: 'Exercise 9 - Create ASIM parsers'
     module: 'Module 7 - Create detections and perform investigations using Microsoft Sentinel'
 ---
 
-# Module ?? - Lab 1 - Exercise ??? - Create ASIM parsers
+# Module 7 - Lab 1 - Exercise 9 - Create ASIM parsers
 
 ## Lab scenario
 
@@ -258,5 +258,5 @@ In this task, you create a unifying parser function that combines the previous t
 1. Update the query to **imRegEvt | where ActionType == 'RegistryValueSet'** and select **Run**
 
 
-## Proceed to Exercise 9
+## Proceed to Exercise 10
 
