@@ -16,7 +16,7 @@ You start by initializing the Defender for Endpoint environment. Next, you onboa
 
 >**Important:**  The lab Virtual Machines are used through different modules. SAVE your virtual machines. If you exit the lab without saving, you will be required to re-run some configurations again.
 
->**Note:** Make sure you have completed successfully the last 3 steps of the previous module.
+>**Note:** Make sure you have completed successfully Task 3 of the previous module.
 
 
 ### Task 1: Initialize Microsoft Defender for Endpoint
@@ -116,7 +116,7 @@ In this task, you will configure device groups that allow for access control and
     |General setting|Value|
     |---|---|
     |Device group name|**Regular**|
-    |Automation level|Full - reMediate threats automatically|
+    |Automation level|Full - remediate threats automatically|
 
 1. Select **Next**.
 
