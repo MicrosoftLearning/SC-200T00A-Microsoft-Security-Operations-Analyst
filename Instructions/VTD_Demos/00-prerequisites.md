@@ -4,7 +4,7 @@ Trainer Preparation Guide
 
 ## Purpose 
 
-This document is for presenters preparing to teach the Microsoft Security Virtual Training Day for "Modernize Security and Defend Against Threats". This material is a subset of the SC-200: Microsoft Security Operations Analyst certification course.
+This document is for presenters preparing to teach the Microsoft Security Virtual Training Day for "Defend against threats with SIEM & XDR". This material is a subset of the SC-200: Microsoft Security Operations Analyst certification course.
 
 ## Demo prerequisites
 
@@ -38,7 +38,7 @@ In this task, you will perform the initialization of the Microsoft Defender for 
 
 2.  Open the Microsoft Edge browser, search for "edge browser update", download, and install the new Microsoft Edge browser. This is necessary to ensure you're running the latest version of Microsoft Edge in your hosted virtual machine. Start the new Edge browser.
 
-3.  In the Edge browser, go to the Microsoft Defender Security Center at (https://securitycenter.microsoft.com).
+3.  In the Edge browser, go to the Microsoft Defender Security Center at (https://security.microsoft.com).
 
 4. In the **Sign in** dialog box, copy and paste in the tenant Email account for the admin username provided by your lab hosting provider and then select **Next**.
 
@@ -160,9 +160,9 @@ In this task, you will load sample security alerts and review the alert details.
 
 **Note** This may take a few minutes to complete.
 
-## Deploy Azure Sentinel Workspace for Demo in Module 4
+## Deploy Microsoft Sentinel Workspace for Demo in Module 4
 
-In this task, you will create an Azure Sentinel workspace.
+In this task, you will create an Microsoft Sentinel workspace.
 
 3.  In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
 
@@ -170,7 +170,7 @@ In this task, you will create an Azure Sentinel workspace.
 
 5. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
-6. In the Search bar of the Azure portal, type *Sentinel*, then select **Azure Sentinel**.
+6. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
 7. Select **+ Create**.
 
@@ -184,21 +184,21 @@ In this task, you will create an Azure Sentinel workspace.
 
 11. Under Instance details in the name field enter a name for your choosing for the Log Analytics Workspace.
 
-**Note:** This name will also be the Azure Sentinel workspace name.
+**Note:** This name will also be the Microsoft Sentinel workspace name.
 
 12. Select the region that is appropriate for you.  The appropriate region may default or your instructor may have specific advice on which region to select.  
 
 13. Select **Review + Create**.
 
-14. Select **Create**. Wait for the new Log Analytics workspace to appear in the list on the Add Azure Sentinel to a workspace page.  This may take a minute.
+14. Select **Create**. Wait for the new Log Analytics workspace to appear in the list on the Add Microsoft Sentinel to a workspace page.  This may take a minute.
 
 16. Select the newly created workspace when it appears, then select **Add**.
 
-## Create data connectors for Azure Sentinel
+## Create data connectors for Microsoft Sentinel
 
-### Task 1: Access the Azure Sentinel Workspace.
+### Task 1: Access the Microsoft Sentinel Workspace.
 
-In this task, you will access your Azure Sentinel workspace.
+In this task, you will access your Microsoft Sentinel workspace.
 
 1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
@@ -210,9 +210,9 @@ In this task, you will access your Azure Sentinel workspace.
 
 5. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
-6. In the Search bar of the Azure portal, type *Sentinel*, then select **Azure Sentinel**.
+6. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
-7. Select your Azure Sentinel Workspace that you created in the previous lab.
+7. Select your Microsoft Sentinel Workspace that you created in the previous lab.
 
 ### Task 2: Connect the Azure Active Directory connector.
 
@@ -298,7 +298,7 @@ In this task, you will connect the Microsoft 365 Defender connector.
 
 ### Task 3: Connect a non-Azure Windows Machine.
 
-In this task, you will connect a non-Azure Windows virtual machine to Azure Sentinel.
+In this task, you will connect a non-Azure Windows virtual machine to Microsoft Sentinel.
 
 1. Login to WIN2 virtual machine as Admin with the password: **Pa55w.rd**.  
 
@@ -306,9 +306,9 @@ In this task, you will connect a non-Azure Windows virtual machine to Azure Sent
 
 3. Open a browser and log into the Azure Portal at https://portal.azure.com with your credentials.
 
-4. In the Search bar of the Azure Portal, type *Sentinel*, then select **Azure Sentinel**.
+4. In the Search bar of the Azure Portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
-5. Select your Azure Sentinel Workspace.
+5. Select your Microsoft Sentinel Workspace.
 
 6. From the Data Connectors tab, select the **Security Events** connector from the list.
 
@@ -369,11 +369,11 @@ You should still be connected to the WIN2 virtual machine.  The following instru
 
 10. In the browser, navigate to the Azure portal at https://portal.azure.com 
 
-11. In the Search bar of the Azure portal, type *Sentinel*, then select **Azure Sentinel**.
+11. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
-12. In Azure Sentinel, select **Settings** from the Configuration area and then select **Workspace settings** tab.
+12. In Microsoft Sentinel, select **Settings** from the Configuration area and then select **Workspace settings** tab.
 
-13. Make sure your Azure Sentinel Workspace is selected.
+13. Make sure your Microsoft Sentinel Workspace is selected.
 
 14. Select **Agents configuration** in Settings.
 

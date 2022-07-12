@@ -73,7 +73,7 @@ In this task, you will create a detection for **Attack 1** on the host with the 
     | extend timestamp = TimeGenerated, HostCustomEntity = DeviceName, AccountCustomEntity = InitiatingProcessAccountName
     ```
 
-1. Now that you have a good detection rule, in the Logs window, select the **+ New alert rule** in the command bar and then select **Create Azure Sentinel alert**. This will create a new Scheduled rule.
+1. Now that you have a good detection rule, in the Logs window, select the **+ New alert rule** in the command bar and then select **Create Microsoft Sentinel alert**. This will create a new Scheduled rule.
 
 1. This starts the "Analytics rule wizard". For the *General* tab type:
 
@@ -154,7 +154,7 @@ In this task, you will create a detection for **Attack 2** on the host with the 
     | extend timestamp = TimeGenerated, HostCustomEntity = Computer, AccountCustomEntity = UserName1
     ```
 
-1. Now that you have a good detection rule, in the Logs window, select **+ New alert rule** in the command bar and then select **Create Azure Sentinel alert**.
+1. Now that you have a good detection rule, in the Logs window, select **+ New alert rule** in the command bar and then select **Create Microsoft Sentinel alert**.
 
 1. This starts the "Analytics rule wizard". For the *General* tab type:
 

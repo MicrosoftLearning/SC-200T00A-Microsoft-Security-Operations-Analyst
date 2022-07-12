@@ -1,12 +1,12 @@
-# Module 4 Create queries for Azure Sentinel using Kusto Query Language (KQL)
+# Module 4 Create queries for Microsoft Sentinel using Kusto Query Language (KQL)
 
 **Note** Successful completion of this demo depends on completing all of the steps in the  [Pre-requisites document](00-prerequisites.md). 
 
-## Explore the Azure Sentinel interface
+## Explore the Microsoft Sentinel interface
 
-1. Return to the Azure Sentinel instance that you created earlier while completed the [prerequisites section](00-prerequisites.md#deploy-azure-sentinel-workspace-for-demo-in-module-4).
+1. Return to the Microsoft Sentinel instance that you created earlier while completed the [prerequisites section](00-prerequisites.md#deploy-azure-sentinel-workspace-for-demo-in-module-4).
 
-1. Navigate around the newly created Azure Sentinel workspace to become familiar with the user interface options.
+1. Navigate around the newly created Microsoft Sentinel workspace to become familiar with the user interface options.
 
 ## Create a Watchlist.
 
@@ -29,7 +29,7 @@ In this task, you will create a watchlist.
 
 5. Close Notepad.
 
-6. In Azure Sentinel, select the **Watchlist** option in the **Configuration** area.
+6. In Microsoft Sentinel, select the **Watchlist** option in the **Configuration** area.
 
 7. Select **Add New** from the command bar.
 
@@ -65,7 +65,7 @@ You can now use the _GetWatchlist('HighValueHosts') in your own KQL statements t
 
 In this task, you will create an indicator.
 
-1. In Azure Sentinel, Select the **Threat intelligence** option in the **Threat management** area.
+1. In Microsoft Sentinel, Select the **Threat intelligence** option in the **Threat management** area.
 
 2. Select **Add New** from the command bar.
 
