@@ -43,7 +43,7 @@ In this task, you will build basic KQL statements.
 1. The following statement demonstrates the use of the **let** statement to declare *variables*. In the Query Window enter the following statement and select **Run**: 
 
     ```KQL
-    let timeOffset = 7d;
+    let timeOffset = 1h;
     let discardEventId = 4688;
     SecurityEvent
     | where TimeGenerated > ago(timeOffset*2) and TimeGenerated < ago(timeOffset)
@@ -57,7 +57,9 @@ In this task, you will build basic KQL statements.
       @"\administrator", 
       @"NT AUTHORITY\SYSTEM"
     ];
-    SecurityEvent | where Account in (suspiciousAccounts)
+    SecurityEvent
+    | where TimeGenerated > ago(1h)
+    | where Account in (suspiciousAccounts)
     ```
 
     >**Tip:** You can re-format the query easily by selecting the ellipsis (...) in the Query window and select **Format query**.
@@ -85,6 +87,7 @@ In this task, you will build basic KQL statements.
     ```KQL
     search in (SecurityEvent,SecurityAlert,A*) "err"
     ```
+
 1. Change back the **Time range** to **Last 24 hours** in the Query Window.
 
 1. The following statements demonstrates the **where** operator, which filters on a specific predicate. In the Query Window enter the following statement and select **Run**: 
@@ -117,6 +120,7 @@ In this task, you will build basic KQL statements.
 
     ```KQL
     SecurityEvent
+    | where TimeGenerated > ago(1h)
     | where ProcessName != "" and Process != ""
     | extend StartDir =  substring(ProcessName,0, string_size(ProcessName)-string_size(Process))
     ```
@@ -125,6 +129,7 @@ In this task, you will build basic KQL statements.
 
     ```KQL
     SecurityEvent
+    | where TimeGenerated > ago(1h)
     | where ProcessName != "" and Process != ""
     | extend StartDir =  substring(ProcessName,0, string_size(ProcessName)-string_size(Process))
     | order by StartDir desc, Process asc
@@ -133,23 +138,19 @@ In this task, you will build basic KQL statements.
 1. The following statements demonstrate the **project** operator, which selects the columns to include in the order specified. In the Query Window enter the following statement and select **Run**: 
 
     ```KQL
-    SecurityEvent  
-    | where TimeGenerated > ago(1h)
-    | project Computer, Account
-    ```
-    
-    ```KQL
     SecurityEvent
+    | where TimeGenerated > ago(1h)
     | where ProcessName != "" and Process != ""
     | extend StartDir =  substring(ProcessName,0, string_size(ProcessName)-string_size(Process))
     | order by StartDir desc, Process asc
     | project Process, StartDir
-        ```
+    ```
 
 1. The following statements demonstrate the **project-away** operator, which selects the columns to exclude from the output. In the Query Window enter the following statement and select **Run**: 
 
     ```KQL
     SecurityEvent
+    | where TimeGenerated > ago(1h)
     | where ProcessName != "" and Process != ""
     | extend StartDir =  substring(ProcessName,0, string_size(ProcessName)-string_size(Process))
     | order by StartDir desc, Process asc
@@ -184,19 +185,18 @@ In this task, you will build KQL statements to aggregate data. **Summarize** gro
     | where TimeGenerated > ago(1h)
     | summarize dcount(IpAddress)
     ```
+
 1. The following statement is a rule to detect MFA failures across multiple applications for the same account. In the Query Window enter the following statement and select **Run**: 
 
     ```KQL
     let timeframe = 1d;
-    let threshold = 3;
+    let threshold = 1;
     SigninLogs
     | where TimeGenerated >= ago(timeframe)
     | where ResultDescription has "MFA"
     | summarize applicationCount = dcount(AppDisplayName) by UserPrincipalName, IPAddress
     | where applicationCount >= threshold
     ```
-
-
 
 1. The following statement demonstrates the **arg_max()** function, which returns one or more expressions when the argument is maximized. The following statement will return the most current row from the SecurityEvent table for the computer SQL12.NA.contosohotels.com. The * in the arg_max function requests all columns for the row. In the Query Window enter the following statement and select **Run**: 
 
@@ -403,7 +403,7 @@ In this task, you will work with structured and unstructured string fields with 
     | extend City =  Location.city
     | extend City2 = Location["city"]
     | project Location, City, City2
-        ```
+    ```
 
 1. The following statement demonstrates the **mv-expand** operator, which turns dynamic arrays into rows (multi-value expansion).
 
