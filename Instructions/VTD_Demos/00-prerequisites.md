@@ -38,7 +38,7 @@ In this task, you will perform the initialization of the Microsoft Defender for 
 
 2.  Open the Microsoft Edge browser, search for "edge browser update", download, and install the new Microsoft Edge browser. This is necessary to ensure you're running the latest version of Microsoft Edge in your hosted virtual machine. Start the new Edge browser.
 
-3.  In the Edge browser, go to the Microsoft Defender Security Center at (https://security.microsoft.com).
+3.  In the Edge browser, go to the Microsoft 365 Defender portal at (https://security.microsoft.com).
 
 4. In the **Sign in** dialog box, copy and paste in the tenant Email account for the admin username provided by your lab hosting provider and then select **Next**.
 
@@ -66,7 +66,7 @@ In this task, you will perform the initialization of the Microsoft Defender for 
 
 In this task, you will onboard a device to Microsoft Defender for Endpoint.
 
-1. Go to the Microsoft Defender Security Center at (https://securitycenter.microsoft.com) and login with the **Tenant Email** credentials if you are not currently in the portal.
+1. Go to the Microsoft 365 Defender portal at (https://security.microsoft.com) and login with the **Tenant Email** credentials if you are not currently in the portal.
 
 2. Select **Settings** from the left menu bar.
 
