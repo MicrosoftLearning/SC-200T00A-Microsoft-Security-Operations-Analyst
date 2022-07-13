@@ -25,7 +25,7 @@ Because this course can be offered by learning partners using any one of several
 
 ### Task 2: Apply Microsoft Defender for Office 365 preset security policies
 
-In this task, you will assign preset security policies for EOP and Microsoft Defender for Office 365 in the Microsoft 365 security portal.
+In this task, you will assign preset security policies for Exchange Online Protection (EOP) and Microsoft Defender for Office 365 in the Microsoft 365 security portal.
 
 1. Login to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
