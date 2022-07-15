@@ -1,4 +1,4 @@
-# Module 5 Create detections and perform investigations with Azure Sentinel
+# Module 5 Create detections and perform investigations with Microsoft Sentinel
 
 **Note** Successful completion of this demo depends on completing all of the steps in the  [Pre-requisites document](00-prerequisites.md). 
 
@@ -19,9 +19,9 @@ REG ADD "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "SOC Test" /t RE
 
 4. In the **Enter password** dialog box, copy and paste in the **Tenant Password** for admin provided by your lab hosting provider and then select **Sign in**.
 
-5. In the Search bar of the Azure portal, type *Sentinel*, then select **Azure Sentinel**.
+5. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
-6. Select your Azure Sentinel Workspace you created earlier.
+6. Select your Microsoft Sentinel Workspace you created earlier.
 
 7. Select **Logs** from the General section.
 

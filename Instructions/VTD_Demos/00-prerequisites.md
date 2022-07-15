@@ -4,7 +4,7 @@ Trainer Preparation Guide
 
 ## Purpose 
 
-This document is for presenters preparing to teach the Microsoft Security Virtual Training Day for "Modernize Security and Defend Against Threats". This material is a subset of the SC-200: Microsoft Security Operations Analyst certification course.
+This document is for presenters preparing to teach the Microsoft Security Virtual Training Day for "Defend against threats and Secure CLoud Environments". This material is a subset of the SC-200: Microsoft Security Operations Analyst certification course.
 
 ## Demo prerequisites
 
@@ -31,34 +31,34 @@ Because this course can be offered by learning partners using any one of several
 
 ### Initialize Microsoft Defender for Endpoint.
 
-In this task, you will perform the initialization of the Microsoft Defender for Endpoint portal.
+In this task, you will perform the initialization of the Microsoft Defender for Endpoint.
 
 
-1.  Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
+1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
-2.  Open the Microsoft Edge browser, search for "edge browser update", download, and install the new Microsoft Edge browser. This is necessary to ensure you're running the latest version of Microsoft Edge in your hosted virtual machine. Start the new Edge browser.
+1. Open the Microsoft Edge browser, search for "edge browser update", download, and install the new Microsoft Edge browser. This is necessary to ensure you're running the latest version of Microsoft Edge in your hosted virtual machine. Start the new Edge browser.
 
-3.  In the Edge browser, go to the Microsoft Defender Security Center at (https://securitycenter.microsoft.com).
+1. In the Edge browser, go to the Microsoft 365 Defender portal at (https://security.microsoft.com).
 
-4. In the **Sign in** dialog box, copy and paste in the tenant Email account for the admin username provided by your lab hosting provider and then select **Next**.
+1. In the **Sign in** dialog box, copy and paste in the tenant Email account for the admin username provided by your lab hosting provider and then select **Next**.
 
-5. In the **Enter password** dialog box, copy and paste in the admin's tenant password provided by your lab hosting provider and then select **Sign in**.
+1. In the **Enter password** dialog box, copy and paste in the admin's tenant password provided by your lab hosting provider and then select **Sign in**.
 
-**Note**: if you receive a message "You can't access this section.",  wait 5 minutes and try again.  Sometimes the access rules need to propagate the tenant.  
+**Note**: if you receive a message "You can't access this section.",  wait 5 minutes and try again.  Sometimes the access rules need to propagate the tenant.
 
-6. On the **Microsoft Security Center** setup Step 2, select **Next**.
+1. In the Microsoft 365 Defender portal, in the menus section on the left, scroll down to Settings.
 
-7. On Step 3 **Set up preferences**, select the data storage location appropriate for where this training tenant is being managed.  You may want to validate with your course instructor.
+1. In Settings select Endpoints.
 
-8. Confirm the Preview features are **On**.
+1. You will be in the General section Data retention selection.
 
-9. Select **Next**.  
+**Note**: In the hosted lab environment your data storage location should be selected for you. And, it should be in the appropriate Geography for where this training tenant is being managed. You can still select the Data Retention length, but it is not required.
 
-10. Select Continue on the **Create your cloud instance**
+1. Under Endpoints, General, select Advanced features.
 
-11. After the **Creating your Microsoft Defender for Endpoint account** progress bar completes. Step 4 options will be displayed.  Select **Start using Microsoft Defender for Endpoint**.
+1. Scroll down through the list of features and confirm the Preview features are **On**.
 
-12. In the Setup incomplete dialog box select **Proceed anyway**.
+1. If not, move the slider to the **On** position and select **Save preferences**.  
 
 **Note**: The setup is **Complete**.  You will onboard Devices in the next task.  
 
@@ -66,25 +66,25 @@ In this task, you will perform the initialization of the Microsoft Defender for 
 
 In this task, you will onboard a device to Microsoft Defender for Endpoint.
 
-1. Go to the Microsoft Defender Security Center at (https://securitycenter.microsoft.com) and login with the **Tenant Email** credentials if you are not currently in the portal.
+1. Go to the Microsoft 365 Defender portal at (https://security.microsoft.com) and login with the **Tenant Email** credentials if you are not currently in the portal.
 
-2. Select **Settings** from the left menu bar.
+1. Select **Settings** from the left menu bar.
 
-3. Select **Onboarding** in the Device management section.
+1. Select **Endpoints**, and then select **Onboarding** in the Device management section.
 
-4. In the Onboard a device area select **Download Package** button.
+1. In the Onboard a device area select **Download Package** button.
 
-5. Extract the downloaded zip file to a local folder like the Documents folder.
+1. Extract the downloaded zip file to a local folder like the Documents folder.
 
-6. Right-click on the extracted file WindowsDefenderATPLocalOnboardingScript.cmd and choose **Run as Administrator**.  If you encounter the Windows SmartScreen choose to Run anyway.
+1. Right-click on the extracted file WindowsDefenderATPLocalOnboardingScript.cmd and choose **Run as Administrator**.  If you encounter the Windows SmartScreen choose to Run anyway.
 
 **Note** By default, the file should be in the c:\users\admin\downloads directory.
     
-7. Answer **Y** to questions presented by the script. When complete you should see a message in the command screen that says something like "Successfully onboarded machine..." 
+1. Answer **Y** to questions presented by the script. When complete you should see a message in the command screen that says something like "Successfully onboarded machine..." 
 
-8. From the Onboarding page in the portal, copy the detection test script and run it in an open command window.  You may have to open a new **Administrator: Command Prompt** window by typing *CMD* in the windows search bar and choose to **run as Administrator**.
+1. From the Onboarding page in the portal, copy the detection test script and run it in an open command window.  You may have to open a new **Administrator: Command Prompt** window by typing *CMD* in the windows search bar and choose to **run as Administrator**.
 
-9. In the Microsoft Defender Security Center portal menu, select **Device inventory**. You should now see your device in the list.
+1. In the Microsoft 365 Defender portal menu, select **Device inventory**. You should now see your device in the list.
 
 **Note** It can take up to 5 minutes for the device to be displayed in the portal.
 
@@ -93,24 +93,24 @@ In this task, you will onboard a device to Microsoft Defender for Endpoint.
 
 In this task, you will configure roles for use with device groups.
 
-1. In the Microsoft Defender Security Center portal select **Settings** from the left menu bar. 
+1. In the Microsoft 365 Defender portal select **Settings** from the left menu bar. 
 
-2. Select **Roles** in the permissions area.
+1. Select **Endpoints**, and then select **Roles** in the permissions area.
 
-3. Select the **Turn on roles** button.
+1. Select the **Turn on roles** button.
 
-4. Select **Add item**.
+1. Select **Add item**.
 
-5. In the Add Role dialog enter the following:
+1. In the Add Role dialog enter the following:
     Role Name: Tier
     Live Response capabilities: select checkbox
     Advanced: select.
 
-6. Select **Next**.
+1. Select **Next**.
 
-7. In the Assigned user groups tab. Select **sg-IT** and then select **Add selected groups**.
+1. In the Assigned user groups tab. Select **sg-IT** and then select **Add selected groups**.
 
-8. Select **Save**.
+1. Select **Save**.
 
 
 ### Configure Device Groups
@@ -119,100 +119,100 @@ In this task, you will configure device groups that allow for access control and
 
 1. Select **Settings** from the left menu bar. 
 
-2. In the permissions area select **Device groups**.
+1. Select **Endpoints**, and in the permissions area select **Device groups**.
 
-3. Select **Add device group**.
+1. Select **Add device group**.
 
-4. Enter the following information on the General tab:
+1. Enter the following information on the General tab:
 
 - Device group name: Regular
 - Automation level: Full - reMediate threats automatically
 - Members: Name equals TESTLAB
 
-5. Select **Next**.
+1. Select **Next**.
 
-6. For the User access tab, select **sg-IT** and then select **Add selected groups**
+1. For the User access tab, select **sg-IT** and then select **Add selected groups**
 
-7. Select **Done**.
+1. Select **Done**.
 
-8. Device group configuration has changed. Apply changes to check matches and recalculate groupings.
+1. Device group configuration has changed. Apply changes to check matches and recalculate groupings.
 
 
 ## Deploy sample alerts for Demo in Module 2
 
 In this task, you will load sample security alerts and review the alert details.
 
-2. In the Edge browser, open the Azure portal at https://portal.azure.com.
+1. In the Edge browser, open the Azure portal at https://portal.azure.com.
 
-3. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
+1. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
-4. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
+1. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
-5. In the Search bar of the Azure portal, type *Security*, then select **Security Center**.
+1. In the Search bar of the Azure portal, type *Defender*, then select **Microsoft Defender for Cloud**.
 
-1. If prompted to Upgrade security center, click **Skip** at the bottom.
+1. In the **Getting Started** menu the default selection is **Upgrade**, select or **Skip** for now.
 
-6. Select **Security alerts** in the portal menu.
+1. Select **Security alerts** in the portal menu.
 
-7. Select **Sample Alerts** from the command bar.
+1. Select **Sample Alerts** from the command bar.
 
-8. In the Create sample alerts (Preview) pane make sure your subscription is selected.  Make sure all sample alerts are selected and select **Create sample alerts**.  
+1. In the Create sample alerts (Preview) pane make sure your subscription is selected.  Make sure all sample alerts are selected and select **Create sample alerts**.  
 
 **Note** This may take a few minutes to complete.
 
-## Deploy Azure Sentinel Workspace for Demo in Module 4
+## Deploy Microsoft Sentinel Workspace for Demo in Module 4
 
-In this task, you will create an Azure Sentinel workspace.
+In this task, you will create an Microsoft Sentinel workspace.
 
-3.  In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
+1.  In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
 
-4. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
+1. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
-5. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
+1. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
-6. In the Search bar of the Azure portal, type *Sentinel*, then select **Azure Sentinel**.
+1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
-7. Select **+ Create**.
+1. Select **+ Create**.
 
-8. Next, select **+ Create a new workspace**.
+1. Next, select **+ Create a new workspace**.
 
 **Note** First, you create a new Log Analytics Workspace.
 
-9. Select your proper Subscription.
+1. Select your proper Subscription.
 
-10. Select the **Create New** link for the Resource Group and enter a new resource group name of your choosing.
+1. Select the **Create New** link for the Resource Group and enter a new resource group name of your choosing.
 
-11. Under Instance details in the name field enter a name for your choosing for the Log Analytics Workspace.
+1. Under Instance details in the name field enter a name for your choosing for the Log Analytics Workspace.
 
-**Note:** This name will also be the Azure Sentinel workspace name.
+**Note:** This name should be unique and will also be the Microsoft Sentinel workspace name.
 
-12. Select the region that is appropriate for you.  The appropriate region may default or your instructor may have specific advice on which region to select.  
+1. Select the region that is appropriate for you.  The appropriate region may default or your instructor may have specific advice on which region to select.  
 
-13. Select **Review + Create**.
+1. Select **Review + Create**.
 
-14. Select **Create**. Wait for the new Log Analytics workspace to appear in the list on the Add Azure Sentinel to a workspace page.  This may take a minute.
+1. Select **Create**. Wait for the new Log Analytics workspace to appear in the list on the Add Microsoft Sentinel to a workspace page.  This may take a minute.
 
-16. Select the newly created workspace when it appears, then select **Add**.
+1. Select the newly created workspace when it appears, then select **Add**.
 
-## Create data connectors for Azure Sentinel
+## Create data connectors for Microsoft Sentinel
 
-### Task 1: Access the Azure Sentinel Workspace.
+### Task 1: Access the Microsoft Sentinel Workspace.
 
-In this task, you will access your Azure Sentinel workspace.
+In this task, you will access your Microsoft Sentinel workspace.
 
 1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
-2. Open the browser, search for, download, and install the new Microsoft Edge browser. Start the new Edge browser.
+1. Open the browser, search for, download, and install the new Microsoft Edge browser. Start the new Edge browser.
 
-3. In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
+1. In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
 
-4. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
+1. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
-5. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
+1. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
-6. In the Search bar of the Azure portal, type *Sentinel*, then select **Azure Sentinel**.
+1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
-7. Select your Azure Sentinel Workspace that you created in the previous lab.
+1. Select your Microsoft Sentinel Workspace that you created in the previous lab.
 
 ### Task 2: Connect the Azure Active Directory connector.
 
@@ -220,9 +220,9 @@ In this task, you will connect the Azure Active Directory connector.
 
 1. In the Configuration area select **Data connectors**.  In the Data Connectors page, select the **Azure Active Directory** connector from the list.
 
-2. Select **Open connector page** on the connector information blade.
+1. Select **Open connector page** on the connector information blade.
 
-3. Select the **Sign-in Logs** and **Audit Logs** options from the Configuration area, then select **Apply Changes**.
+1. Select the **Sign-in Logs** and **Audit Logs** options from the Configuration area, then select **Apply Changes**.
 
 ### Task 3: Connect the Azure Active Directory Identity Protection connector.
 
@@ -230,29 +230,29 @@ In this task, you will connect the Azure Active Directory Identity Protection co
 
 1. From the Data Connectors Tab, select the **Azure Active Directory Identity Protection** connector from the list.
 
-2. Select **Open connector page** on the connector information blade.
+1. Select **Open connector page** on the connector information blade.
 
-3. Select the **Connect** button.
+1. Select the **Connect** button.
 
-### Task 4: Connect the Azure Defender connector.
+### Task 4: Connect the Microsoft Defender for Cloud connector.
 
-In this task, you will connect the Azure Defender connector.
+In this task, you will connect the Microsoft Defender for Cloud connector.
 
-1. From the Data Connectors tab, select the **Azure Defender** connector from the list.
+1. From the Data Connectors tab, select the **Microsoft Defender for Cloud** connector from the list.
 
-2. Select **Open connector page** on the connector information blade.
+1. Select **Open connector page** on the connector information blade.
 
-3. Review the Connecting Options. Don't connect. This is for informational purposes only.
+1. Review the Connecting Options. Don't connect. This is for informational purposes only.
 
-### Task 5: Connect the Microsoft Cloud App Security connector.
+### Task 5: Connect the Microsoft Defender for Cloud Apps connector.
 
-In this task, you will connect the Microsoft Cloud App Security connector.
+In this task, you will connect theMicrosoft Defender for Cloud Apps connector.
 
-1. From the Data Connectors Tab, select the **Microsoft Cloud App Security** connector from the list.
+1. From the Data Connectors Tab, select the **Microsoft Defender for Cloud Apps** connector from the list.
 
-2. Select **Open connector page** on the connector information blade.
+1. Select **Open connector page** on the connector information blade.
 
-3. Select **Alerts** and then select **Apply Changes**.
+1. In the **Instructions** tab in the **Configuration** section, select **Alerts** and then select **Apply Changes**.
 
 ### Task 6: Connect the Microsoft Defender for Office 365 connector.
 
@@ -260,9 +260,9 @@ In this task, you will connect the Microsoft Defender for Office 365 connector.
 
 1. From the Data Connectors tab, select the **Microsoft Defender for Office 365** connector from the list.
 
-2. Select **Open connector page** on the connector information blade.
+1. Select **Open connector page** on the connector information blade.
 
-3. Select **Connect**.
+1. Select **Connect**.
 
 ### Task 7: Connect the Microsoft Defender for Identity connector.
 
@@ -270,9 +270,9 @@ In this task, you will connect the Microsoft Defender for Identity connector.
 
 1. From the Data Connectors Tab, select the **Microsoft Defender for Identity** connector from the list.
 
-2. Select **Open connector page** on the connector information blade.
+1. Select **Open connector page** on the connector information blade.
 
-3. Review the Connecting Options. Don't connect. This is for informational purposes only.
+1. Review the Connecting Options. Don't connect. This is for informational purposes only.
 
 ### Task 8: Connect the Microsoft Defender for Endpoint connector.
 
@@ -280,9 +280,9 @@ In this task, you will connect the Microsoft Defender for Endpoint connector.
 
 1. From the Data Connectors Tab, select the **Microsoft Defender for Endpoint** connector from the list.
 
-2. Select Open connector page on the connector information blade.
+1. Select Open connector page on the connector information blade.
 
-3. Select **Connect**.
+1. Select **Connect**.
 
 ### Task 9: Connect the Microsoft 365 Defender connector.
 
@@ -290,57 +290,57 @@ In this task, you will connect the Microsoft 365 Defender connector.
 
 1. From the Data Connectors Tab, select the **Microsoft 365 Defender** connector from the list.
 
-2. Select **Open connector page** on the connector information blade.
+1. Select **Open connector page** on the connector information blade.
 
-3. Select all the checkboxes for Microsoft Defender for Endpoint.
+1. Select all the checkboxes for Microsoft Defender for Endpoint.
 
-4. Select **Apply Changes**.
+1. Select **Apply Changes**.
 
 ### Task 3: Connect a non-Azure Windows Machine.
 
-In this task, you will connect a non-Azure Windows virtual machine to Azure Sentinel.
+In this task, you will connect a non-Azure Windows virtual machine to Microsoft Sentinel.
 
 1. Login to WIN2 virtual machine as Admin with the password: **Pa55w.rd**.  
 
-2. Open the browser, search for, download, and install the new Microsoft Edge browser. Start the new Edge browser.
+1. Open the browser, search for, download, and install the new Microsoft Edge browser. Start the new Edge browser.
 
-3. Open a browser and log into the Azure Portal at https://portal.azure.com with your credentials.
+1. Open a browser and log into the Azure Portal at https://portal.azure.com with your credentials.
 
-4. In the Search bar of the Azure Portal, type *Sentinel*, then select **Azure Sentinel**.
+1. In the Search bar of the Azure Portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
-5. Select your Azure Sentinel Workspace.
+1. Select your Microsoft Sentinel Workspace.
 
-6. From the Data Connectors tab, select the **Security Events** connector from the list.
+1. From the Data Connectors tab, select the **Security Events via Legacy Agent** connector from the list.
 
-7. Select **Open connector page** on the connector information blade.
+1. Select **Open connector page** on the connector information blade.
 
-8. In the Select which events to stream area, select **All Events**, then select **Apply Changes**.
+1. In the Select which events to stream area, select **All Events**, then select **Apply Changes**.
 
-9. Select the **Install agent on a non-Azure Windows Virtual Machine**.
+1. Select the **Install agent on a non-Azure Windows  Machine**.
 
 **Note:** The instructions for Install agent on a Windows Virtual Machine and Install agent on a non-Azure Windows Machine may be reversed. The links take you to the proper location even with the reversed text.
 
-10. Select **Download & install agent for non-Azure Windows Virtual machines**. 
+1. Select **Download & install agent for non-Azure Windows machines**. 
 
-11. Select the link for **Download Windows Agent (64 bit)**.
+1. Select the link for **Download Windows Agent (64 bit)**.
 
-12. Run the .exe file that is downloaded and confirm and User Account Control prompt that may appear.
+1. Run the .exe file that is downloaded and confirm and User Account Control prompt that may appear.
 
-13. Select **Next** on the Welcome dialog.
+1. Select **Next** on the Welcome dialog.
 
-14. Select **I Agree** on the Microsoft Software License Terms page.  On the Destination prompt select **Next**.
+1. Select **I Agree** on the Microsoft Software License Terms page.  On the Destination prompt select **Next**.
 
-15. On the Agent Setup Options prompt, select **Connect the agent to Azure Log Analytics (OMS)** option, then select **Next**.
+1. On the Agent Setup Options prompt, select **Connect the agent to Azure Log Analytics (OMS)** option, then select **Next**.
 
-16. In the browser, copy the **Workspace ID** from the Agents Management page and paste into the Workspace ID in the dialog. 
+1. In the browser, copy the **Workspace ID** from the Agents Management page and paste into the Workspace ID in the dialog. 
 
-17. In the browser, copy the **Primary key** from the Agents Management page and paste into the Primary key in the dialog. 
+1. In the browser, copy the **Primary key** from the Agents Management page and paste into the Primary key in the dialog. 
 
-18. Select **Next**.
+1. Select **Next**.
 
-19. Select **Next** on the Microsoft Update page.
+1. Select **Next** on the Microsoft Update page.
 
-20. Then select **Install**.
+2. Then select **Install**.
 
 ### Task 4: Install and collect Sysmon logs.
 
@@ -350,40 +350,40 @@ You should still be connected to the WIN2 virtual machine.  The following instru
 
 1. In the browser, go to https://docs.microsoft.com/sysinternals/downloads/sysmon
 
-2. Download Sysmon from the page by select **Download Sysmon**.
+1. Download Sysmon from the page by select **Download Sysmon**.
 
-3. Open the downloaded file and extract the files to a new directory c:\sysmon
+1. Open the downloaded file and extract the files to a new directory c:\sysmon
 
-4. In the Windows Taskbar for WIN2 search box, enter *command*.  The search results will show command prompt app.  Right-click on the command prompt app and select **Run as Administrator**.  Confirm any User Account Control prompts that appear.
+1. In the Windows Taskbar for WIN2 search box, enter *command*.  The search results will show command prompt app.  Right-click on the command prompt app and select **Run as Administrator**.  Confirm any User Account Control prompts that appear.
 
-5. Enter *cd \sysmon*
+1. Enter *cd \sysmon*
 
-6. type *notepad sysmon.xml* to create a new file.
+1. type *notepad sysmon.xml* to create a new file.
 
-7. Open a tab in the browser and navigate to: https://github.com/SwiftOnSecurity/sysmon-config/blob/master/sysmonconfig-export.xml
+1. Open a tab in the browser and navigate to: https://github.com/SwiftOnSecurity/sysmon-config/blob/master/sysmonconfig-export.xml
 
-8. Copy the contents of that file from Github to the sysmon.xml notepad file you just create and save the file.
+1. Copy the contents of that file from Github to the sysmon.xml notepad file you just create and save the file.
 
-9. In the command prompt type the following and press enter:
+1. In the command prompt type the following and press enter:
     sysmon.exe -accepteula -i sysmon.xml
 
-10. In the browser, navigate to the Azure portal at https://portal.azure.com 
+1. In the browser, navigate to the Azure portal at https://portal.azure.com 
 
-11. In the Search bar of the Azure portal, type *Sentinel*, then select **Azure Sentinel**.
+1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
-12. In Azure Sentinel, select **Settings** from the Configuration area and then select **Workspace settings** tab.
+1. In Microsoft Sentinel, select **Settings** from the Configuration area and then select **Workspace settings** tab.
 
-13. Make sure your Azure Sentinel Workspace is selected.
+1. Make sure your Microsoft Sentinel Workspace is selected.
 
-14. Select **Agents configuration** in Settings.
+1. Select **Agents configuration** in Settings.
 
-15. Select the **Windows Event logs** tab.
+1. Select the **Windows Event logs** tab.
 
-16. Select **Add windows event log** button.
+1. Select **Add windows event log** button.
 
-17. Enter **Microsoft-Windows-Sysmon/Operational** in the Log name field.
+1. Enter **Microsoft-Windows-Sysmon/Operational** in the Log name field.
 
-18. Select **Apply**.
+1. Select **Apply**.
 
 ## Conduct attacks
 
@@ -393,21 +393,21 @@ In this task, you will perform attacks on a host with Microsoft Defender for End
 
 1. Login to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
-2. In the search of the task bar, enter *Command*.  Command Prompt will be displayed in the search results.  Right-click on the Command Prompt and select **Run as Administrator**. Confirm any User Account Control prompts that appear.
+1. In the search of the task bar, enter *Command*.  Command Prompt will be displayed in the search results.  Right-click on the Command Prompt and select **Run as Administrator**. Confirm any User Account Control prompts that appear.
 
-3. In the command prompt, enter the command in each row pressing Enter key after each row:
+1. In the command prompt, enter the command in each row pressing Enter key after each row:
 ```
 cd \
 mkdir temp
 cd temp
 ```
-4. Attack 1 - Copy and run this command:
+1. Attack 1 - Copy and run this command:
 
 ```
 REG ADD "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "SOC Test" /t REG_SZ /F /D "C:\temp\startup.bat"
 ```
 
-5. Attack 3 - Copy and run this command:
+1. Attack 3 - Copy and run this command:
 
 ```
 notepad c2.ps1
@@ -487,22 +487,22 @@ In this task, you will perform attacks on a host with the Security Events connec
 
 1. Login to WIN2 virtual machine as Admin with the password: **Pa55w.rd**.  
 
-2. In the search of the task bar, enter *CMD*.  Command Prompt will be displayed in the search results.  Right-click on the Command Prompt and select **Run as Administrator**.
+1. In the search of the task bar, enter *CMD*.  Command Prompt will be displayed in the search results.  Right-click on the Command Prompt and select **Run as Administrator**.
 
-3. In the command prompt, enter the command in each row pressing Enter key after each row:
+1. In the command prompt, enter the command in each row pressing Enter key after each row:
 ```
 cd \
 mkdir temp
 cd \temp
 ```
 
-4. Attack 1 - Copy and run this command:
+1. Attack 1 - Copy and run this command:
 
 ```
 REG ADD "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "SOC Test" /t REG_SZ /F /D "C:\temp\startup.bat"
 ```
 
-5. Attack 2 - Copy and run this command, enter the command in each row pressing Enter key after each row:
+1. Attack 2 - Copy and run this command, enter the command in each row pressing Enter key after each row:
 
 ```
 net user theusernametoadd /add
