@@ -1,40 +1,10 @@
----
-lab:
-    title: 'Exercise 9 - Create ASIM parsers'
-    module: 'Module 7 - Create detections and perform investigations using Microsoft Sentinel'
----
+This file contains KQL ASIM parser scripts used in the course SC-200: Security Operations Analyst associate.
 
 # Module 7 - Lab 1 - Exercise 9 - Create ASIM parsers
 
-## Lab scenario
+**Task 1 Script**
 
-You are a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You need to model ASIM parsers for a specific Windows registry event.  These simplified parsers will be finalized at a later time following the ASIM parser registry event normalization standard (https://docs.microsoft.com/en-us/azure/sentinel/registry-event-normalization-schema).
-
->**Important:** This lab involves entering lengthy KQL ASIM parser scripts into Microsoft Sentinel. The scripts were provided via download files at the beginning of this lab. An alternate location to download them is:  https://github.com/MicrosoftLearning/SC-200T00A-Microsoft-Security-Operations-Analyst/tree/master/Allfiles
-
-### Task 1: Develop KQL Function for Microsoft 365 Defender Registry Event 
-
-In this task, you create a function that is a workspace parser for DeviceRegistryEvents. 
-
-1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
-
-1. In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
-
-1. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
-
-1. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
-
-1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
-
-1. Select your Microsoft Sentinel Workspace you created earlier.
-
-1. Select the **Logs** page.
-
-1. Open the **SC200_module7_ASIM_Parser_scripts.txt** you downloaded and copy and paste the *Task 1 Script* KQL statements into a new query tab.
-
->**NOTE** The script below is only shown for reference.
-
-    ```KQL
+```KQL
     let RegistryType = datatable (TypeCode: string, TypeName: string) [
     "None", "Reg_None",
     "String", "Reg_Sz",
@@ -115,29 +85,10 @@ In this task, you create a function that is a workspace parser for DeviceRegistr
     };
     RegistryEvents_M365D
     ```
->**Note:** Take time to review the KQL line by line.  
-1. Select **Run** to confirm the KQL is valid.
-1. Select **Save**, then **Save as function**.
-1. Scroll down and under *Query scheduling* set the following:
+        
+    **Task 2 Script**
 
-    |Setting|Value|
-    |---|---|
-    |Function name|vimRegEvtM365D|
-    |Legacy Category|MyASIM|
-1. Then select **Save**.
-1. In a new query tab, enter **vimRegEvtM365D** and select **Run**.
-
-
-### Task 2: Develop KQL Function for SecurityEvent table. 
-
-In this task, you create a function that is a workspace parser for SecurityEvent.
-
-1. Create a new query tab .
-1. Open the **SC200_module7_ASIM_Parser_scripts.txt** you downloaded and copy and paste the *Task 2 Script* KQL statements into a new query tab.
-
->**NOTE** The script below is only shown for reference.
-
-    ```KQL
+      ```KQL
     let RegistryType = datatable (TypeCode: string, TypeName: string) [
     "%%1872", "Reg_None",
     "%%1873", "Reg_Sz",
@@ -222,45 +173,3 @@ In this task, you create a function that is a workspace parser for SecurityEvent
     };
     RegistryEvents
     ```
-
->**Note:** Take time to review the KQL line by line.  
-1. Select **Run** to confirm the KQL is valid.
-1. Select **Save**, then **Save as function**.
-1. Scroll down and under *Query scheduling* set the following:
-
-    |Setting|Value|
-    |---|---|
-    |Function name|vimRegEvtSecurityEvent|
-    |Legacy Category|MyASIM|
-1. Then select **Save**.
-1. In a new query tab, enter **vimRegEvtSecurityEvent** and select **Run**
-
-
-### Task 3: Create a unifying workspace parser. 
-
-In this task, you create a unifying parser function that combines the previous two functions.  
-
-1. Create a new query tab .
-1. Enter the following KQL Statement in a new query tab:
-
-    ```KQL
-    union isfuzzy=true
-    vimRegEvtM365D,
-    vimRegEvtSecurityEvent
-    ```
-
-1. Select **Run** to confirm the KQL is valid.
-1. Select **Save**, then **Save as function**.
-1. Scroll down and under *Query scheduling* set the following:
-
-    |Setting|Value|
-    |---|---|
-    |Function name|imRegEvt|
-    |Legacy Category|MyASIM|
-1. Then select **Save**.
-1. In a new query tab, enter **imRegEvt** and select **Run**
-1. Update the query to **imRegEvt | where ActionType == 'RegistryValueSet'** and select **Run**
-
-
-## Proceed to Exercise 10
-
