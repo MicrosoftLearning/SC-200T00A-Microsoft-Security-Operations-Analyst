@@ -1,4 +1,4 @@
-# Module 3 Create queries for Microsoft Sentinel using Kusto Query Language (KQL)
+# Module 4 Create queries for Microsoft Sentinel using Kusto Query Language (KQL)
 
 **Note** Successful completion of this demo depends on completing all of the steps in the  [Pre-requisites document](00-prerequisites.md). 
 

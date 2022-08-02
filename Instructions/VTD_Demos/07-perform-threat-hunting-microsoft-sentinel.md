@@ -1,4 +1,4 @@
-# Module 6 - Threat hunting in Microsoft Sentinel
+# Module 7 - Threat hunting in Microsoft Sentinel
 
 **Note** Successful completion of this demo depends on completing all of the steps in the  [Pre-requisites document](00-prerequisites.md). 
 

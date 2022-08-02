@@ -1,4 +1,4 @@
-# Module 1 Demo - Mitigate Attacks with Microsoft Defender for Endpoint
+# Module 2 Demo - Mitigate Attacks with Microsoft Defender for Endpoint
 
 
 
