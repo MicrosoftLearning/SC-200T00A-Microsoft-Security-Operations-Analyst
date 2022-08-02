@@ -9,7 +9,8 @@ This document is for presenters preparing to teach the Microsoft Security Virtua
 ## Demo prerequisites
 
 The labs for this course require both a Microsoft 365 E5 licensed tenant as well as an Azure subscription.
-* You can request Microsoft Learning Azure Passes for yourself
+
+* You can request Microsoft Learning Azure Passes for yourself.
 * Ensure that you request these passes at least two weeks before you will be performing the demos. After receiving the pass, you will need to activate it. 
 * The Azure pass effectively functions in the same way as the publicly available Microsoft Azure Trial Subscription. This means there are limitations on what you can do with the pass.
 * The lab instructions are in the [SC-200 Microsoft Learning GitHub repository](https://github.com/MicrosoftLearning/SC-200T00A-Microsoft-Security-Operations-Analyst/tree/master/Instructions/VTD_Demos/).

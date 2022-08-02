@@ -1,4 +1,4 @@
-# Module 2 - Mitigate threats using Microsoft Defender for Cloud
+# Module 3 - Mitigate threats using Microsoft Defender for Cloud
 
 **Note** Successful completion of this demo depends on completing all of the steps in the  [Pre-requisites document](00-prerequisites.md). 
 
