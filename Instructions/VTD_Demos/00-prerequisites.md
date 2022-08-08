@@ -148,7 +148,7 @@ In this task, you will configure device groups that allow for access control and
 1. You are going to have two device groups now; the "Regular" you just created and the "Ungrouped devices (default)" with the same reMediation level.
 
 
-## Deploy sample alerts for Demo in Module 2
+## Deploy sample alerts for Demo in Module 3
 
 In this task, you will load sample security alerts and review the alert details.
 
