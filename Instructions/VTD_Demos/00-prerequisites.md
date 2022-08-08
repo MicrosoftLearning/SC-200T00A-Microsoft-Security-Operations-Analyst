@@ -103,16 +103,17 @@ In this task, you will configure roles for use with device groups.
 1. Select **Add item**.
 
 1. In the Add Role dialog enter the following:
-    Role Name: Tier
-    Live Response capabilities: select checkbox
-    Advanced: select.
+
+    |General setting|Value|
+    |---|---|
+    |Role name|**Tier 1 Support**|
+    |Permissions|Live Response capabilities - Advanced|
 
 1. Select **Next**.
 
 1. In the Assigned user groups tab. Select **sg-IT** and then select **Add selected groups**.
 
 1. Select **Save**.
-
 
 ### Configure Device Groups
 
@@ -126,17 +127,25 @@ In this task, you will configure device groups that allow for access control and
 
 1. Enter the following information on the General tab:
 
-- Device group name: Regular
-- Automation level: Full - reMediate threats automatically
-- Members: Name equals TESTLAB
+    |General setting|Value|
+    |---|---|
+    |Device group name|**Regular**|
+    |Automation level|Full - remediate threats automatically|
 
 1. Select **Next**.
+
+1. . On the Devices tab, for the OS condition select **Windows 10** and select **Next**.
+
+1. On the Preview devices tab, select **Show preview** to see the WIN1 virtual machine. Select **Next**. 
+**Hint:** If you do not see the virtual machine in the preview list, go back and select also *None* for the OS condition. The data for the VM is not populated yet.
 
 1. For the User access tab, select **sg-IT** and then select **Add selected groups**
 
 1. Select **Done**.
 
-1. Device group configuration has changed. Apply changes to check matches and recalculate groupings.
+1. Device group configuration has changed. Select **Apply changes** to check matches and recalculate groupings.
+
+1. You are going to have two device groups now; the "Regular" you just created and the "Ungrouped devices (default)" with the same reMediation level.
 
 
 ## Deploy sample alerts for Demo in Module 2
