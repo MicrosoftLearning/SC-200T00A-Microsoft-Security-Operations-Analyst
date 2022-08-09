@@ -174,7 +174,7 @@ In this task, you will load sample security alerts and review the alert details.
 
 In this task, you will create an Microsoft Sentinel workspace.
 
-1.  In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
+1. In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
 
 1. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
@@ -372,7 +372,7 @@ You should still be connected to the WIN2 virtual machine.  The following instru
 
 1. Open a tab in the browser and navigate to: https://github.com/SwiftOnSecurity/sysmon-config/blob/master/sysmonconfig-export.xml
 
-1. Copy the contents of that file from Github to the sysmon.xml notepad file you just create and save the file.
+1. Copy the contents of that file from Github to the sysmon.xml notepad file you just created and save the file.
 
 1. In the command prompt type the following and press enter:
     sysmon.exe -accepteula -i sysmon.xml
