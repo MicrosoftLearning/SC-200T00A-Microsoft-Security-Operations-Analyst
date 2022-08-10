@@ -417,7 +417,7 @@ cd temp
 REG ADD "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "SOC Test" /t REG_SZ /F /D "C:\temp\startup.bat"
 ```
 
-1. Attack 3 - Copy and run this command:
+1. Attack 2 - Copy and run this command:
 
 ```
 notepad c2.ps1

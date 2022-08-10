@@ -112,3 +112,5 @@ DeviceEvents | where TimeGenerated >= ago(lookback)
 1. Select the **...** at the end of the row to open the context menu.
 
 1. Select **Add to livestream**.
+
+## You have completed the Demo.
