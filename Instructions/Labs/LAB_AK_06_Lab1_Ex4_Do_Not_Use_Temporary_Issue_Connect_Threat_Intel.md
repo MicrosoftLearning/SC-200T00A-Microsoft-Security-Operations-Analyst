@@ -10,9 +10,6 @@ lab:
 
 ![Lab overview.](../Media/SC-200-Lab_Diagrams_Mod6_L1_Ex4.png)
 
-> [!IMPORTANT]
-> This lab is temporarily not working.
-
 You are a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You must learn how to connect log data from the many data sources in your organization. Finally, you connect a threat intelligence feed to enhance your ability to detect and prioritize known threats.
 
 ### Task 1: Connect Threat intelligence
