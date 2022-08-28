@@ -4,12 +4,12 @@ lab:
     module: 'Module 6 - Connect logs to Microsoft Sentinel'
 ---
 
-> [!IMPORTANT]
-> This lab is temporarily not working. The Animals TAXII server is offline. We will have this back online when resolved.
-
 # Module 6 - Lab 1 - Exercise 4 - Connect Threat intelligence to Microsoft Sentinel using data connectors
 
 ## Lab scenario
+
+> [!IMPORTANT]
+> This lab is temporarily not working. The Animals TAXII server is offline. We will have this back online when resolved.
 
 ![Lab overview.](../Media/SC-200-Lab_Diagrams_Mod6_L1_Ex4.png)
 
