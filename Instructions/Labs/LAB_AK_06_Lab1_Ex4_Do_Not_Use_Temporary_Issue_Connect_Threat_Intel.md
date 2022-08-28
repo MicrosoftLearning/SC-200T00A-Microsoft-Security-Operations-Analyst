@@ -1,5 +1,5 @@
 ---
-lab:
+lab - Don not use. Temporarily not operational!:
     title: 'Exercise 4 - Connect Threat intelligence to Microsoft Sentinel using data connectors'
     module: 'Module 6 - Connect logs to Microsoft Sentinel'
 ---
