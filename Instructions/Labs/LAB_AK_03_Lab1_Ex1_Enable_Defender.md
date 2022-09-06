@@ -17,7 +17,7 @@ You are a Security Operations Analyst working at a company that is implementing 
 
 In this task, you will set up an Azure Subscription required to complete this lab and future labs.
 
-1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
+1. Log in to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.  
 
 1. Open the Microsoft Edge browser or open a new tab if already open.
 
@@ -86,7 +86,7 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 
 >**Important:** The next steps are done in a different machine than the one you were previously working. Look for the Virtual Machine name references.
 
-1. Log in to WINServer virtual machine as Administrator with the password: **Passw0rd!** if required.  
+1. Log in to **WINServer** virtual machine as Administrator with the password: **Passw0rd!** if required.  
 
 1. Open the Microsoft Edge browser and navigate to the Azure portal at https://portal.azure.com.
 
@@ -151,7 +151,7 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 
 ### Task 5: Protect an On-Premises Server
 
-In this task, you will manually install the required agent on the WINServer virtual machine.
+In this task, you will manually install the required agent on the **WINServer** virtual machine.
 
 1. Go to **Microsoft Defender for Cloud** and select the **Getting Started** page.
 
@@ -175,7 +175,7 @@ In this task, you will manually install the required agent on the WINServer virt
 
 1. Go to the "Microsoft Defender for Cloud" portal and select **Inventory**.
 
-1. The *WINServer* virtual machine will appear after at least 5 minutes. You may have to select **Refresh** to see it. **Hint:** If you see the number 1 under *Total resources* remove the filter to show the *WINServer* virtual machine.
+1. The **WINServer** virtual machine will appear after at least 5 minutes. You may have to select **Refresh** to see it. **Hint:** If you see the number 1 under *Total resources* remove the filter to show the *WINServer* virtual machine.
 
 1. You can move on to the next lab and return later to review the **Inventory** section of **Microsoft Defender for Cloud**.
 
