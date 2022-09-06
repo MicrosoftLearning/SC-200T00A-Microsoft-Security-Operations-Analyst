@@ -17,7 +17,7 @@ You are a Security Operations Analyst working at a company that is implementing 
 
 In this task, you will create a Microsoft Sentinel workspace.
 
-1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
+1. Log in to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.  
 
 1. Open the Edge browser.
 

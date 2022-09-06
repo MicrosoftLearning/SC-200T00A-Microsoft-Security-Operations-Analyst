@@ -19,7 +19,7 @@ In this task, you will review Regulatory compliance configuration in Microsoft D
 
 >**Important:** The next steps are done in a different machine than the one you were previously working. Look for the Virtual Machine name references.
 
-1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
+1. Log in to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.  
 
 1. In the Edge browser, open the Azure portal at (https://portal.azure.com).
 
