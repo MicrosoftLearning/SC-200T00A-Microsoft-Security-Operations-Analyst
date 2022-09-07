@@ -19,7 +19,7 @@ You are a Security Operations Analyst working at a company that implemented Micr
 
 In this task, you will access your Microsoft Sentinel workspace.
 
-1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
+1. Log in to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.  
 
 1. Start the Microsoft Edge browser.
 
@@ -44,13 +44,13 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
 
 1. Under *Configuration*, copy to the clipboard the command shown in *1.2 Install the CEF collector on the Linux machine*.
 
-1. Launch your LIN1 virtual machine. Login with the username and password provided by your lab hoster. **Hint:** You might need to press the Enter key to see the login prompt. 
+1. Launch your **LIN1** virtual machine. Login with the username and password provided by your lab hoster. **Hint:** You might need to press the Enter key to see the login prompt. 
 
 1. Note the IP address for your LIN1 server. See the screenshot below as an example:
 
     ![linux login](../Media/LinuxLoginExample.png)
 
-1. Go back to the WIN1 virtual machine. Launch Windows PowerShell as Administrator by right-clicking the Start menu icon and select **Windows PowerShell (Admin)**. Select **Yes** to allow the app to run in the User Account Control window that appears. **Hint:** You might have a Windows PowerShell window already open from previous exercises.
+1. Go back to the **WIN1** virtual machine. Launch Windows PowerShell as Administrator by right-clicking the Start menu icon and select **Windows PowerShell (Admin)**. Select **Yes** to allow the app to run in the User Account Control window that appears. **Hint:** You might have a Windows PowerShell window already open from previous exercises.
 
 1. Enter the following PowerShell command, adjusting for your specific Linux server information, and press enter:
 
@@ -104,7 +104,7 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
     ![linux login](../Media/LinuxLoginExample.png)
 
-1. Go back to the WIN1 virtual machine. Select the Windows PowerShell used in the previous task.
+1. Go back to the **WIN1** virtual machine. Select the Windows PowerShell used in the previous task.
 
 1. Enter the following PowerShell command, adjusting for your specific Linux server information, and press enter:
 
@@ -131,7 +131,7 @@ In this task, you will configure the Syslog collection facilities.
 
 1. In Microsoft Sentinel portal, select **Settings** under *Configuration* and then the **Workspace settings** tab.
 
-1. Select **Agents configuration** under the **Settings** area.
+1. Select **Legacy agents management** under the **Settings** area.
 
 1. Select the **Syslog** tab.
 

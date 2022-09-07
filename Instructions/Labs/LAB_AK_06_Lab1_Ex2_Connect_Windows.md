@@ -17,7 +17,7 @@ You are a Security Operations Analyst working at a company that implemented Micr
 
 In this task, you will create a Windows virtual machine in Azure.
 
-1. Login to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
+1. Login to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.  
 
 1. In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
 
@@ -84,7 +84,7 @@ In this task, you will install Azure Arc and connect a non-Azure Windows virtual
 
 >**Important:** The *Windows Security Events via AMA* data connector requires Azure Arc for non-Azure devices. 
 
-1. Login to WIN2 virtual machine as Admin with the password: **Pa55w.rd**.  
+1. Login to **WIN2** virtual machine as Admin with the password: **Pa55w.rd**.  
 
 1. Open the Microsoft Edge browser.
 
@@ -121,7 +121,7 @@ In this task, you will install Azure Arc and connect a non-Azure Windows virtual
 
 1. Right-click the Windows Start button and select **Windows PowerShell (Admin)**.
 
-1. Enter *Administrator* for "Username" and *Passw0rd!* for "Password" if you get a UAC prompt.
+1. In case you get a UAC prompt, enter *Administrator* for "Username" and *Passw0rd!* for "Password", else skip to next step.
 
 1. Enter: cd C:\Users\Admin\Downloads
 
@@ -145,7 +145,7 @@ In this task, you will install Azure Arc and connect a non-Azure Windows virtual
 
 1. Go back to the Azure portal page where you downloaded the script and select **Close**. Close the **Add servers with Azure Arc** to go back to the Azure Arc **Servers** page.
 
-1. Select **Refresh** until WIN2  name appears.
+1. Select **Refresh** until **WIN2**  name appears.
 
     >**Note:** This could take a few minutes.
 
@@ -174,7 +174,7 @@ In this task, you will install Azure Arc and connect a non-Azure Windows virtual
 
 In this task, you will on-board a device to Microsoft Defender for Endpoint.
 
->**VERY IMPORTANT:** If you completed the labs for "Module 2 - Exercise 1" of this course AND have been saving your Virtual Machines until now, you can skip this task. Otherwise, you need to onboard again the WIN1 machine to Defender for Endpoint.
+>**VERY IMPORTANT:** If you completed the labs for "Module 2 - Exercise 1" of this course AND have been saving your Virtual Machines until now, you can skip this task. Otherwise, you need to onboard again the **WIN1** machine to Defender for Endpoint.
 
 >**Important:** The next steps are done in a different machine than the one you were previously working. Look for the Virtual Machine name references.
 
