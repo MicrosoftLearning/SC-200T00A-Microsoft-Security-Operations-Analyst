@@ -19,7 +19,7 @@ You are a Security Operations Analyst working at a company that is implementing 
 
 In this task, you will access a Log Analytics environment where you can practice writing KQL statements.
 
-1. Login to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
+1. Login to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.  
 
 1. Go to https://aka.ms/lademo in your browser. Login with the MOD Administrator credentials. 
 
