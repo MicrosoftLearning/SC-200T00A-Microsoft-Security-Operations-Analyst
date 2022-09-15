@@ -30,25 +30,31 @@ In this task, you will review Regulatory compliance configuration in Microsoft D
 1. In the Search bar of the Azure portal, type *Defender*, then select **Microsoft Defender for Cloud**.
 
 1. Under *Cloud Security*, select **Regulatory compliance** in the portal menu.
-1. Select **Yes** for *Is the regulator compliance experience clear to you?*.
-1. Enter **Class** in the *Regulatory compliance feedback* blade. then **Submit**.
+
 1. Select **Managed compliance policies** on the toolbar.
+
 1. Select your subscription.
+
 1. Under *Policy settings*, select **Security policy** in the portal menu.
-1. Select **Yes** for *Is the regulator compliance experience clear to you?*.
-1. Review available initiatives available to enable for your environment.
-1. Select Microsoft Defender for Cloud to return to the main blade.
+
+1. Review the "Industry & regulatory standards" available to you by default.
+
+1. Select **Add more standards** to review additional standards available.
+
+1. Select Microsoft Defender for Cloud below the search box to return to the main blade.
+
 
 ### Task 2: Explore Security posture and recommendations
 
 In this task, you will review cloud security posture management.  The Secure Score information can take 24 hours to recalculate.  It is beneficial to do this task again in 24 hours.
 
 1. Under *Cloud Security*, select **Security posture** in the portal menu.
+
 1. The Secure score most likely will show *N/A* until the score is calculated.
+
 1. Under *General*, select **Recommendations** in the portal menu.
+
 1. Explore Recommendations provided (after 24 hours).
-
-
 
 
 ### Task 3: Mitigate security alerts
@@ -60,7 +66,9 @@ In this task, you will load sample security alerts and review the alert details.
 
 1. Select **Sample alerts** from the command bar. **Hint:** you may need to select the ellipsis (...) button from the command bar).
 
-1. In the Create sample alerts (Preview) pane make sure your subscription is selected. Make sure all sample alerts are selected in the *Defender for Cloud plans* area and select **Create sample alerts**.  
+1. In the Create sample alerts (Preview) pane make sure your subscription is selected and that all sample alerts are selected in the *Defender for Cloud plans* area.
+
+1. Select **Create sample alerts**.  
 
     >**Note:** This sample alert creation process may take a few minutes to complete, wait for the "Successfully created sample alerts" notification. Once complete each of the alerts should appear in the *Security alerts* area.
 
@@ -72,6 +80,6 @@ In this task, you will load sample security alerts and review the alert details.
 
     - Select the **Take action** tab or select the **Next: Take Action** button at the end of the page.
 
-    - Review the *Take action* information. Notice the sections available to take action depending on the type of alert: Mitigate the threat, Prevent future attacks, Trigger automated response and Suppress similar alerts.
+    - Review the *Take action* information. Notice the sections available to take action depending on the type of alert: Inspect resource context, Mitigate the threat, Prevent future attacks, Trigger automated response and Suppress similar alerts.
 
 ## You have completed the lab.
