@@ -61,21 +61,21 @@ In this task, you will enable and configure Microsoft Defender for Cloud.
 
 1. On the **Getting started** page, under the **Upgrade** tab, make sure your subscription is selected, and then select the **Upgrade** button at the bottom of the page. Wait for the *Trial started* notification to appear, it takes about 2 minutes. **Hint:** You can click the bell button on the top bar to review your Azure portal notifications.
 
-1. The next page shows the option to install the agent on virtual machines already in the subscription. Select **Continue without installing agents** or **Do nothing here**.
-
-1. Select **Environment settings** under the Management area of the portal menu.
+1. In the left menu for Microsoft Defender for Cloud, under the Management, select **Environment settings**.
 
 1. Select the **"Azure Pass - Sponsorship"** subscription (or equivalent name in your Language). 
 
-1. Review the features enabled under *Enable all Microsoft Defender for Cloud plans* and the Azure resources protected under the *Microsoft Defender for* column.
+1. Review the Azure reources that are now protected with the Defender for Cloud plans.
 
 1. Select **Auto provisioning** from the Settings area.
 
-1. Review the Auto provisioning - Extensions. Confirm that **Log Analytics agent for Azure VMs** is **Off**.
+1. Review the Auto provisioning - Extensions. Confirm that **Log Analytics agent/Azure Monitor agent** is **Off**.
 
 1. Close the settings page by selecting the 'x' on the upper right of the page to go back to the **Environment settings** again and select the '>' on the left of your subscription.
 
-1. Select the Log analytics workspace you created earlier *uniquenameDefender* to review the available options and pricing. Select **Enable all Microsoft Defender for Cloud plans** and select **Save**. Wait for the *"Azure Defender plan for workspace uniquenameDefender were saved successfully!"* notification to appear.
+1. Select the Log analytics workspace you created earlier *uniquenameDefender* to review the available options and pricing. 
+
+1. Select **Enable all Microsoft Defender for Cloud plans** and select **Save**. Wait for the *"Microsoft Defender plan for workspace uniquenameDefender were saved successfully!"* notification to appear.
 
     >**Note:** If the page is not being displayed, refresh your Edge browser and try again.
 
@@ -112,10 +112,6 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 
 1. Select **Next** to get to the Download and run script tab.
 
-1. Select **Register** under the step *1. Register your subscription*.
-
-    >**Note:** Wait at least three (3) minutes for processing.
-
 1. Scroll down and select the **Download** button. **Hint:** if your browser blocks the download, take action in the browser to allow it. In Edge Browser, select the ellipsis button (...) if needed and then select **Keep**. 
 
 1. Right-click the Windows Start button and select **Windows PowerShell (Admin)**.
@@ -123,6 +119,8 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 1. Enter *Administrator* for "Username" and *Passw0rd!* for "Password" if you get a UAC prompt.
 
 1. Enter: cd C:\Users\Administrator\Downloads
+
+    >**Important:** If you do not have this directory, most likely means that you are in the wrong machine. Go back to the begining of Task 4 and change to WINServer and start over.
 
 1. Type *Set-ExecutionPolicy -ExecutionPolicy Unrestricted* and press enter.
 
@@ -134,19 +132,13 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 
 1. Enter **R** to Run once and press enter (this may take a couple minutes).
 
-1. Back in the Edge browser, open a new tab and type https://microsoft.com/devicelogin in the address bar.
+1. The setup process will open a new Edge browser tab to authenticate the Azure Arc agent. Select your admin account, wait for the message "Authentication complete" and then go back to the Windows PowerShell window.
 
-1. Go back to the Windows PowerShell window, copy the code that appears after *"...enter the code"* in the last line of the script to authenticate the agent.
+1. When the installation finishes, go back to the Azure portal page where you downloaded the script and select **Close**. Close the **Add servers with Azure Arc** to go back to the Azure Arc **Servers** page.
 
-1. Go back to the Edge browser and paste it in the **Code** box and select **Next**. Select your tenant admin account and select **Continue** in the *Are you trying to sign in to Azure Connected Machine Agent?* window. 
+1. Select **Refresh** until WINServer server name appears and the Status is *Connected*.
 
-1. Go back to the Windows PowerShell window and wait for the message *"Successfully Onboarded Resource to Azure"*. **Note:** If you see a message line with a new authentication code, you need to repeat the last 3 steps again.
-
-1. Go back to the Azure portal page where you downloaded the script and select **Close**. Close the **Add servers with Azure Arc** to go back to the Azure Arc **Servers** page.
-
-1. Select **Refresh** until WINServer server name appears.
-
-    >**Note:** This could take a few minutes.
+    >**Note:** This could take a couple of minutes.
 
 
 ### Task 5: Protect an On-Premises Server
@@ -162,6 +154,8 @@ In this task, you will manually install the required agent on the **WINServer** 
 1. Select **Upgrade** next to the workspace you created earlier. This might take a few minutes, wait until you see the notification *"Azure Defender plan for workspace uniquenameDefender were saved successfully!"*.
 
 1. Select **+ Add Servers** next to the workspace you created earlier.
+
+1. Select **Log Analytics agent instructions**
 
 1. Select **Download Windows Agent (64 bit)**.
 

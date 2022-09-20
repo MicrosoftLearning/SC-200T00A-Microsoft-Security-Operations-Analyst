@@ -52,7 +52,9 @@ In this task, you will onboard a device to Microsoft Defender for Endpoint using
 
 1. Select **Onboarding** in the Device management section.
 
-1. In the "1. Onboard a device" area make sure "Local Script (for up to 10 devices)" is displayed in the Deployment method drop-down and select the **Download onboarding package** button. Highlight the "WindowsDefenderATPOnboardingPackage.zip" file with your mouse and select the folder icon **Show in folder**. **Hint:** By default, the file should be in the c:\users\admin\downloads directory.
+1. In the "1. Onboard a device" area make sure "Local Script (for up to 10 devices)" is displayed in the Deployment method drop-down and select the **Download onboarding package** button. 
+
+1. Under the *Downloads* pop-ipup, highlight the "WindowsDefenderATPOnboardingPackage.zip" file with your mouse and select the folder icon **Show in folder**. **Hint:** In case you don't see it, the file should be in the c:\users\admin\downloads directory.
 
 1. Right-click the downloaded zip file and select **Extract All...**, make sure that *Show extracted files when complete* is checked and select **Extract**.
 
@@ -60,7 +62,7 @@ In this task, you will onboard a device to Microsoft Defender for Endpoint using
 
 1. Right-click on the extracted file "WindowsDefenderATPLocalOnboardingScript.cmd" again and choose **Run as Administrator**.  **Hint:** If you encounter the Windows SmartScreen window, select on **More info**, and choose **Run anyway**. 
     
-1. When the "User Account Control" window is shown, select **Yes** to allow the script to run and answer **Y** to the question presented by the script and press **Enter**. When complete you should see a message in the command screen that says "Successfully onboarded machine to Microsoft Defender for Endpoint.
+1. When the "User Account Control" window is shown, select **Yes** to allow the script to run and answer **Y** to the question presented by the script and press **Enter**. When complete you should see a message in the command screen that says *Successfully onboarded machine to Microsoft Defender for Endpoint*.
 
 1. Press any key to continue. This will close the Command Prompt window.
 
@@ -98,7 +100,7 @@ In this task, you will configure roles for use with device groups.
 
 1. Select the **Assigned user groups** tab on the top. Select **sg-IT** and then select **Add selected groups**. Make sure it appears under *Azure AD user groups with this role*.
 
-1. Select **Save**.
+1. Select **Save**. If you receive an error while saving the role, refresh the page and try again.
 
 
 ### Task 4: Configure Device Groups
@@ -122,7 +124,7 @@ In this task, you will configure device groups that allow for access control and
 
 1. On the Devices tab, for the OS condition select **Windows 10** and select **Next**.
 
-1. On the Preview devices tab, select **Show preview** to see the WIN1 virtual machine. Select **Next**. **Hint:** If you do not see the virtual machine in the preview list, go back and select also *None* for the OS condition. The data for the VM is not populated yet.
+1. On the Preview devices tab, select **Show preview** to see the WIN1 virtual machine, most likely the data is not populated yet. Leave it as is and select **Next**.
 
 1. For the User access tab, select **sg-IT** and then select **Add selected groups** button. Make sure it appears under *Azure AD user groups with access to this device group*.
 
@@ -130,6 +132,6 @@ In this task, you will configure device groups that allow for access control and
 
 1. Device group configuration has changed. Select **Apply changes** to check matches and recalculate groupings.
 
-1. You are going to have two device groups now; the "Regular" you just created and the "Ungrouped devices (default)" with the same reMediation level.
+1. You are going to have two device groups now; the "Regular" you just created and the "Ungrouped devices (default)" with the same remediation level.
 
 ## Proceed to Exercise 2
