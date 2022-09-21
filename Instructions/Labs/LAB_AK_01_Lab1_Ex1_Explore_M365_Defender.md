@@ -45,7 +45,7 @@ In this task, you will assign preset security policies for Exchange Online Prote
 
 1. On the *Policy & rules* dashboard, select **Threat policies**.
 
-1. On the *Threat polies* dashboard, select **Preset Security Policies**.
+1. On the *Threat policies* dashboard, select **Preset Security Policies**.
 
     >**Note:** If you receive the message *"Client Error - Error when getting bip rule"* select **OK** to continue. The error is due to the hydration status of your tenant at Office 365 which is not enabled by default.
 
