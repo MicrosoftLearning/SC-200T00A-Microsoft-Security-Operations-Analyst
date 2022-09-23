@@ -33,13 +33,17 @@ In this task, you will perform the initialization of the Microsoft Defender for 
 
 1. In the **Enter password** dialog box, copy, and paste in the admin's tenant password provided by your lab hosting provider and then select **Sign in**.
 
+    >**Tip:** The admin's tenant email account and password can be found on the Resources tab.
+
 1. On the **Microsoft 365 Defender** portal, from the navigation menu, select **Settings** from the left.
 
 1. On the **Settings** page select **Device discovery**. 
 
     >**Note:** If you do not see the **Device discovery** option under **Settings**, logout by selecting the top-right circle with your account initials and select **Sign out**. Other options that you might want to try is to refresh the page with Ctrl+F5 or open the page InPrivate. Login again with the **Tenant Email** credentials.
 
-1. In Discovery setup make sure **Standard discovery (recommended)** is selected. **Hint:** If you do not see the option, refresh the page.
+
+1. In Discovery setup make sure **Standard discovery (recommended)** is selected. 
+    >**Hint:** If you do not see the option, refresh the page.
 
 
 ### Task 2: Onboard a Device.
@@ -51,6 +55,8 @@ In this task, you will onboard a device to Microsoft Defender for Endpoint using
 1. Select **Settings** from the left menu bar, then from the Settings page select **Endpoints**.
 
 1. Select **Onboarding** in the Device management section.
+
+    >**Note:** You can also perform device onboarding from the **Assets** section of the left menu bar. Expand Assets and select Devices. On the Device Inventory page, with Computers & Mobile selected, scroll down to **Onboard devices.** This takes you to the **Settings > Endpoints** page.
 
 1. In the "1. Onboard a device" area make sure "Local Script (for up to 10 devices)" is displayed in the Deployment method drop-down and select the **Download onboarding package** button. 
 

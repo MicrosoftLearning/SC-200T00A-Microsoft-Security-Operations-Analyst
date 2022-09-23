@@ -160,6 +160,7 @@ In this task, instead of using a LiveStream, you will create a NRT analytics que
 1. For the *Rule query* enter the following KQL statement:
 
     ```KQL
+    let lookback = 2d;
     DeviceEvents | where TimeGenerated >= ago(lookback) 
     | where ActionType == "DnsQueryResponse"
     | extend c2 = substring(tostring(AdditionalFields.DnsQueryString),0,indexof(tostring(AdditionalFields.DnsQueryString),"."))
