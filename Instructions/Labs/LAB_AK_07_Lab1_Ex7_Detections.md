@@ -18,6 +18,8 @@ Analytics rules search for specific events or sets of events across your environ
 
 In this task, you will create a detection for **Attack 1** on the host with the Microsoft Defender for Endpoint configured.
 
+1. On WIN1 virtual machine as Admin with the password: Pa55w.rd.
+
 1. In the Microsoft Sentinel portal, select **Logs** from the General section in case you navigated away from this page.
 
 1. **Run** the following KQL Statement again to recall the tables where we have this data:
