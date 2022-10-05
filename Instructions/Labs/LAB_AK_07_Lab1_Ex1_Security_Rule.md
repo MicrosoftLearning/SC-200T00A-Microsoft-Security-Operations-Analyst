@@ -29,9 +29,9 @@ In this task, you will activate a Microsoft Security rule.
 
 1. Select your Microsoft Sentinel Workspace you created in the previous labs.
 
-1. Select **Analytics** from the Configuration area. By default, you will see the *Active rules*. Click on *Rule templates*.
+1. Select **Analytics** from the Configuration area. By default, you will see the *Active rules*.
 
-1. Search for and select **Create incidents based on Microsoft Defender for Cloud**. This rule was activated by the Defender for Cloud connector we configured in "Module 6 - Exercise 1 - Task 4". 
+1. Select the **Create incidents based on Microsoft Defender for Cloud** rule. This rule was activated by the Defender for Cloud connector we configured in "Module 6 - Exercise 1 - Task 4". 
 
 1. On the right blade, select the **Edit** button.
 
