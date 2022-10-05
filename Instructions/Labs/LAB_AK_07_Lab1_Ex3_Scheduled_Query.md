@@ -89,7 +89,7 @@ In this task, you will create a scheduled query and connect it to the Teams chan
 1. Select the **Next: Automated response >** button.
 
 1. On the Automated response tab under the *Alert automation* area, select the playbook *PostMessageTeams-OnAlert* you had created in the previous exercise.
-1. On the Incident automation tab, select **Add new**
+1. Under Automation rules (Preview), select **Add new**
 1. For the *Automation rule name*, enter **Tier 2**
 1. For the *Actions*, select **Assign owner**
 1. Then select **Assign to me**. Then select **Apply**.
@@ -116,6 +116,10 @@ In this task, you will test your new scheduled query rule.
 1. In the *Add assignments* page, *Membership* tab, under *Select role*, select **User Administrator**. and select **Add**.
 
     >**Note:** You may need to click on the **Refresh** button to see the new role assignment. 
+    
+1. Click **Next**
+
+1. Click **Assign**
 
 1. Close the "Christie Cline - Assigned roles" and "Users - All users" pages by selecting the 'x' in the top-right, twice.
 
