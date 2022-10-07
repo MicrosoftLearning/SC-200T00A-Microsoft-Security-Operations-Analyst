@@ -8,15 +8,13 @@ lab:
 
 ## Lab scenario
 
-
 You are a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You are going to work with Log Analytics KQL queries and from there, you will create custom analytics rules to help discover threats and anomalous behaviors in your environment.
 
 Analytics rules search for specific events or sets of events across your environment, alert you when certain event thresholds or conditions are reached, generate incidents for your SOC to triage and investigate, and respond to threats with automated tracking and reMediation processes.
 
-
 ### Task 1: Attack 1 Detection with Defender for Endpoint
 
-In this task, you will create a detection for **Attack 1** on the host with the Microsoft Defender for Endpoint configured.
+In this task, you will create a detection for **Attack 1** on the host (Win1) with the Microsoft Defender for Endpoint configured.
 
 1. In the Microsoft Sentinel portal, select **Logs** from the General section in case you navigated away from this page.
 
@@ -108,7 +106,7 @@ In this task, you will create a detection for **Attack 1** on the host with the 
 
 ### Task 2: Attack 2 Detection with SecurityEvent
 
-In this task, you will create a detection for **Attack 2** on the host with the Security Events connector  installed.
+In this task, you will create a detection for **Attack 2** on the host (Win2) with the Security Events connector  installed.
 
 1. In the Microsoft Sentinel portal, select **Logs** from the General section in case you navigated away from this page.
 
