@@ -140,7 +140,6 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 
     >**Note:** This could take a couple of minutes.
 
-
 ### Task 5: Protect an On-Premises Server
 
 In this task, you will manually install the required agent on the **WINServer** virtual machine.

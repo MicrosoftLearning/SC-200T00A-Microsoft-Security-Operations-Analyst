@@ -135,21 +135,13 @@ In this task, you will install Azure Arc and connect a non-Azure Windows virtual
 
 1. Enter **R** to Run once and press enter (this may take a couple minutes).
 
-1. Back in the Edge browser, open a new tab and type https://microsoft.com/devicelogin in the address bar.
+1. The setup process will open a new Edge browser tab to authenticate the Azure Arc agent. Select your admin account, wait for the message "Authentication complete" and then go back to the Windows PowerShell window.
 
-1. Go back to the Windows PowerShell window, copy the code that appears after *"...enter the code"* in the last line of the script to authenticate the agent.
-
-1. Go back to the Edge browser and paste it in the **Code** box and select **Next**. Select your tenant admin account and select **Continue** in the *Are you trying to sign in to Azure Connected Machine Agent?* window. 
-
-1. Go back to the Windows PowerShell window and wait for the message *"Successfully Onboarded Resource to Azure"*. **Note:** If you see a message line with a new authentication code, you need to repeat the last 3 steps again.
-
-1. Go back to the Azure portal page where you downloaded the script and select **Close**. Close the **Add servers with Azure Arc** to go back to the Azure Arc **Servers** page.
+1. When the installation finishes, go back to the Azure portal page where you downloaded the script and select **Close**. Close the **Add servers with Azure Arc** to go back to the Azure Arc **Servers** page.
 
 1. Select **Refresh** until **WIN2**  name appears.
 
     >**Note:** This could take a few minutes.
-
-
 
 1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
