@@ -113,13 +113,11 @@ In this task, you will install Azure Arc and connect a non-Azure Windows virtual
 
 1. Select **Next** to get to the Download and run script tab.
 
-1. If the **Register** option is available, Select **Register** under the step *1. Register your subscription*.
-
-    >**Note:** Wait at least three (3) minutes for processing.
-
 1. Scroll down and select the **Download** button. **Hint:** if your browser blocks the download, take action in the browser to allow it. In Edge Browser, select the ellipsis button (...) if needed and then select **Keep**. 
 
 1. Right-click the Windows Start button and select **Windows PowerShell (Admin)**.
+
+    >**Note:** You may need to search for **Windows PowerShell**. In the search box type in **PowerShell**. You should see the **Windows PowerShell App** appear. Select the **Run as Administrator** option.
 
 1. In case you get a UAC prompt, enter *Administrator* for "Username" and *Passw0rd!* for "Password", else skip to next step.
 
@@ -131,7 +129,7 @@ In this task, you will install Azure Arc and connect a non-Azure Windows virtual
 
 1. Type *.\OnboardingScript.ps1* and press enter.  
 
-    >**Important:** If you get the error *"The term .\OnboardingScript.ps1 is not recognized..."*, make sure you are doing the steps for Task 4 in the WINServer virtual machine. Other issue might be that the name of the file changed due to multiple downloads, search for *".\OnboardingScript (1).ps1"* or other file numbers in the running directory.
+    >**Important:** If you get the error *"The term .\OnboardingScript.ps1 is not recognized..."*, make sure you are doing the steps for Task 3 on the WIN2 virtual machine. Other issue might be that the name of the file changed due to multiple downloads, search for *".\OnboardingScript (1).ps1"* or other file numbers in the running directory.
 
 1. Enter **R** to Run once and press enter (this may take a couple minutes).
 
