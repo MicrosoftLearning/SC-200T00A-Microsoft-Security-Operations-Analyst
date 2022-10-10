@@ -120,7 +120,7 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 
 1. Enter: cd C:\Users\Administrator\Downloads
 
-    >**Important:** If you do not have this directory, most likely means that you are in the wrong machine. Go back to the begining of Task 4 and change to WINServer and start over.
+    >**Important:** If you do not have this directory, most likely means that you are in the wrong machine. Go back to the beginning of Task 4 and change to WINServer and start over.
 
 1. Type *Set-ExecutionPolicy -ExecutionPolicy Unrestricted* and press enter.
 
