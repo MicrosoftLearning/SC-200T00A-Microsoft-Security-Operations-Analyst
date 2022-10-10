@@ -113,13 +113,11 @@ In this task, you will install Azure Arc and connect a non-Azure Windows virtual
 
 1. Select **Next** to get to the Download and run script tab.
 
-1. If the **Register** option is available, Select **Register** under the step *1. Register your subscription*.
-
-    >**Note:** Wait at least three (3) minutes for processing.
-
 1. Scroll down and select the **Download** button. **Hint:** if your browser blocks the download, take action in the browser to allow it. In Edge Browser, select the ellipsis button (...) if needed and then select **Keep**. 
 
 1. Right-click the Windows Start button and select **Windows PowerShell (Admin)**.
+
+    >**Note:** You may need to search for **Windows PowerShell**. In the search box type in **PowerShell**. You should see the **Windows PowerShell App** appear. Select the **Run as Administrator** option.
 
 1. In case you get a UAC prompt, enter *Administrator* for "Username" and *Passw0rd!* for "Password", else skip to next step.
 
@@ -131,25 +129,17 @@ In this task, you will install Azure Arc and connect a non-Azure Windows virtual
 
 1. Type *.\OnboardingScript.ps1* and press enter.  
 
-    >**Important:** If you get the error *"The term .\OnboardingScript.ps1 is not recognized..."*, make sure you are doing the steps for Task 4 in the WINServer virtual machine. Other issue might be that the name of the file changed due to multiple downloads, search for *".\OnboardingScript (1).ps1"* or other file numbers in the running directory.
+    >**Important:** If you get the error *"The term .\OnboardingScript.ps1 is not recognized..."*, make sure you are doing the steps for Task 3 on the WIN2 virtual machine. Other issue might be that the name of the file changed due to multiple downloads, search for *".\OnboardingScript (1).ps1"* or other file numbers in the running directory.
 
 1. Enter **R** to Run once and press enter (this may take a couple minutes).
 
-1. Back in the Edge browser, open a new tab and type https://microsoft.com/devicelogin in the address bar.
+1. The setup process will open a new Edge browser tab to authenticate the Azure Arc agent. Select your admin account, wait for the message "Authentication complete" and then go back to the Windows PowerShell window.
 
-1. Go back to the Windows PowerShell window, copy the code that appears after *"...enter the code"* in the last line of the script to authenticate the agent.
-
-1. Go back to the Edge browser and paste it in the **Code** box and select **Next**. Select your tenant admin account and select **Continue** in the *Are you trying to sign in to Azure Connected Machine Agent?* window. 
-
-1. Go back to the Windows PowerShell window and wait for the message *"Successfully Onboarded Resource to Azure"*. **Note:** If you see a message line with a new authentication code, you need to repeat the last 3 steps again.
-
-1. Go back to the Azure portal page where you downloaded the script and select **Close**. Close the **Add servers with Azure Arc** to go back to the Azure Arc **Servers** page.
+1. When the installation finishes, go back to the Azure portal page where you downloaded the script and select **Close**. Close the **Add servers with Azure Arc** to go back to the Azure Arc **Servers** page.
 
 1. Select **Refresh** until **WIN2**  name appears.
 
     >**Note:** This could take a few minutes.
-
-
 
 1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
