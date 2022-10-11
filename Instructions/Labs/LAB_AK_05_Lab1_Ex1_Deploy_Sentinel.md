@@ -84,9 +84,9 @@ In this task, you will create a watchlist in Microsoft Sentinel.
 
 1. The screen returns to the Watchlist page.
 
-1. Select the *HighValueHosts* watchlist and on the right tab, select **View in logs**.
+1. Select the *HighValueHosts* watchlist and on the right pane, select **View in logs**.
 
-    >**Important:** It could take some time for the watchlist to appear. **Please continue to with the following task and run this command on the next lab**.
+    >**Important:** It could take up to ten minutes for the watchlist to appear. **Please continue to with the following task and run this command on the next lab**.
     
     >**Note:** You can now use the _GetWatchlist('HighValueHosts') in your own KQL statements to access the list. The column to reference would be *Hostname*.
 
@@ -103,7 +103,7 @@ In this task, you will create an indicator in Microsoft Sentinel.
 
 1. Review the different indicator types available in the *Types* dropdown. Select the **domain-name**. Enter your initials in the Domain box. An example would be *fmg.com*.
 
-1. For the *Threat types*, select **malicious-activity**.
+1. For the *Threat types*, write down **malicious-activity** and select **OK**.
 
 1. For the *Name*, enter the same value used for the Domain. An example would be *fmg.com*.
 
@@ -119,7 +119,7 @@ In this task, you will create an indicator in Microsoft Sentinel.
     ThreatIntelligenceIndicator
     ```
 
-    >**Note:** It could take a couple of minutes for the indicator to appear.
+    >**Note:** It could take up to five minutes for the indicator to appear.
 
 1. Scroll the results to the right to see the DomainName column. You can also run the following KQL statement to just see the DomainName column. 
 
@@ -127,15 +127,21 @@ In this task, you will create an indicator in Microsoft Sentinel.
     ThreatIntelligenceIndicator | project DomainName
     ```
 
+
 ### Task 4: Configure log retention
 
 In this task, you will change the retention period for the SecurityEvent table.
 
 1. In Microsoft Sentinel, select the **Settings** option in the *Configuration* area.
-1. Select **Workspace settings**
+
+1. Select **Workspace settings**.
+
 1. In Log Analytics workspace, select the **Tables (preview)** option in the *Settings* area.
-1. Select Table name **SecurityEvent**, then **...**.
+
+1. Search and select the table **SecurityEvent**, and then select the ellipsis button (...).
+
 1. Select **Manage Table**.
+
 1. Select **180 days** for *Total retention period*. Then **Save**.
 
 
