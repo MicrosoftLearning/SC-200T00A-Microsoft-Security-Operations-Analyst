@@ -31,13 +31,20 @@ In this task, you will enable Entity behavior analytics in Microsoft Sentinel.
 1. Select your Microsoft Sentinel Workspace you created earlier.
 
 1. Select the **Entity behavior** page.
-1. On the popup from *Entity behavior settings*, select **Set EUBA**.
+
+1. On the popup from *Entity behavior settings*, select **Set UEBA**.
+
 1. On the next page, select  **Set UEBA**.
-1. On the *Entity behavior configuration page*, toggle **On** the feature for #1. 
-1. For *2.*, select **Azure Active Directory**. Then select **Apply**.
-1. For *3.*, select **Audit Logs**, **Azure Activity**, **Security Events**, and **Signin Logs**. 
-1. Then select **Apply**.
-1. Return to this page often during the labs to see entities populated based on log data ingested and alerts created.
+
+1. On the *Entity behavior configuration page*, **select the toggle** to *1. Turn on the UEBA feature*.
+
+1. For *2. Sync Microsoft Sentinel with at least one of the following directory services*, select **Azure Active Directory** and then select **Apply**.
+
+1. For *3. Select the existing data sources you want to enable for entity behavior analytics*, select **Audit Logs**, **Azure Activity**, **Security Events**, and **Signin Logs** and then select **Apply**.
+
+1. Close the *Settings* page by click the 'x' at the top right of the page.
+
+1. Return to the *Entity behavior* page often during the labs to see entities populated based on log data ingested and alerts created.
 
 
 ### Task 2: Confirm and review Anomalies rules
@@ -45,10 +52,15 @@ In this task, you will enable Entity behavior analytics in Microsoft Sentinel.
 In this task, you will confirm Anomalies analytics rules are enabled.
 
 1. Select the **Analytics** page.
+
 1. Select the **Anomalies** tab.
+
 1. Confirm status column of the rules is *Enabled*.
+
 1. Select any rule. Then select **Edit** on the rule blade.
-1. Review the *General* tab information. Then select **Next : Configuration**
+
+1. Review the *General* tab information. Then select **Next: Configuration**.
+
 1. Review the *Configuration* tab information. Then select **X** in the top right corner to exit the Analytics rule wizard.
 
 

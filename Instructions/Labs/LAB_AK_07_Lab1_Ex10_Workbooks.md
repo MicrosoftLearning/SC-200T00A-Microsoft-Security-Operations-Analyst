@@ -52,8 +52,6 @@ In this task, you will save a workbook template and modify it.
 
 1. Select **Edit** in command bar to enable changes in the workbook.
 
-1. Read the banner that informs you of a new feature to compare workbooks. Dismiss the message by selecting the banner.
-
 1. Scroll down to the *User activities* area, look at the colors in the graph for "Operations count" and "Trend" since we are going to format those columns. Select the **Edit** button below the grid.
 
 1. Select the **Column Settings** button, it is located to the right of the *Run Query* command bar. **Hint:** This button only appears if there is data from the KQL query.
@@ -95,9 +93,9 @@ In this task, you will create a new workbook with advanced visualizations.
 
 1. To edit the workbook, select **Edit**.
 
-1. Select the **Edit** button below the first paragraph of the workbook 
+1. Select the **Edit** button below the first paragraph of the workbook.
 
-1. Type *# My workbook* on top of *## New workbook*.
+1. Type *# My workbook* in a new line on top of *## New workbook*.
 
 1. Select **Done Editing** on the bottom menu, for the *Editing text item: text - 2*. Notice that your header increased size and name changed.
 
@@ -111,7 +109,7 @@ In this task, you will create a new workbook with advanced visualizations.
 
 1. Type **SecurityEvent** into the query box.
 
-1. Change the *Time Range* to **Last 4 hours**.
+1. Change the *Time Range* to **Last hour**.
 
 1. Change the *Visualization* to **Time chart**.
 
@@ -131,7 +129,7 @@ In this task, you will create a new workbook with advanced visualizations.
 
 1. Type **SecurityEvent** into the query box.
 
-1. Change the *Time Range* to **Last 4 hours**.
+1. Change the *Time Range* to **Last hour**.
 
 1. Change the *Visualization* to **Grid**.
 
@@ -143,9 +141,13 @@ In this task, you will create a new workbook with advanced visualizations.
 
 1. Scroll down and select **Done Editing** on the bottom menu, for the new *Editing query item: query - 3*.
 
-1. Select **Done Editing** in Workbook's command bar.
+1. Select **Done Editing** in Workbook's top command bar.
 
-1. Select the **Save** icon, change the *Title* to **My Workbook** and leave other values as default. Select **Save** again to commit the changes. 
+1. Select the **Save** icon, change the *Title* to **My Workbook**.
+
+1. Select the **RG-Defender** resource group if needed and leave other values as default.
+
+1.  Select **Apply** to commit the changes. 
 
 1. Close the workbook by selecting the **X** at the top-right or select **Workbooks** in the Microsoft Sentinel portal.
 
