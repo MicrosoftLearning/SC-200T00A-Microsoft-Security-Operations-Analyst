@@ -41,7 +41,7 @@ In this task, you will create a Windows virtual machine in Azure.
 
 1. Leave **(US) East US** as the default value for *Region*.
 
-1. Scroll down and review the *Size* for the virtual machine. If it appears empty, select **See all sizes**, choose one of the VM sizes under *Most used by Azure users* and click **Select**.
+1. Scroll down and review the *Size* for the virtual machine. If it appears empty, select **See all sizes**, choose the first VM size under *Most used by Azure users* and click **Select**.
 
 1. Enter a *Username* of your choosing. **Hint:** Avoid reserved words like admin or root.
 
@@ -67,13 +67,20 @@ In this task, you will connect an Azure Windows virtual machine to Microsoft Sen
 1. Select **Open connector page** on the connector information blade.
 
 1. In the *Configuration* section, select the **Create data collection rule**.
+
 1. Enter **AZWIN01DCR** for Rule Name, then select **Next: Resources**.
-1. Select **+Add resource(s)**
-1. Expand **rg-azwin01**, then select **AZWIN01**.
+
+1. Select **+Add resource(s)**.
+
+1. Expand **RG-AZWIN01**, then select **AZWIN01**.
+
 1. Select **Apply**.
-1. Select **Next : Collect**, then **Next : Review + create**
-1. Select **Create**
-1. Wait a few minutes and then select **Refresh** to see the new data collection rule listed.
+
+1. Select **Next: Collect**, then **Next: Review + create**.
+
+1. Select **Create**.
+
+1. Wait a minute and then select **Refresh** to see the new data collection rule listed.
 
 
 ### Task 3: Connect a non-Azure Windows Machine
@@ -89,7 +96,6 @@ In this task, you will install Azure Arc and connect a non-Azure Windows virtual
 1. Open the Microsoft Edge browser.
 
 1. Open a browser and log into the Azure Portal at https://portal.azure.com with the credentials you have been using in the previous labs.
-
 
 1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
@@ -150,14 +156,20 @@ In this task, you will install Azure Arc and connect a non-Azure Windows virtual
 1. Select **Open connector page** on the connector information blade.
 
 1. In the *Configuration* section, select the **Create data collection rule**.
-1. Enter **WIN2** for Rule Name, then select **Next: Resources**.
-1. Select **+Add resource(s)**
-1. Expand **rg-defender** (or the Resource Group your created), then select **WIN2**.
-1. Select **Apply**.
-1. Select **Next : Collect**, then **Next : Review + create**
-1. Select **Create**
-1. Wait a few minutes and then select **Refresh** to see the new data collection rule listed.
 
+1. Enter **WIN2** for Rule Name, then select **Next: Resources**.
+
+1. Select **+Add resource(s)**.
+
+1. Expand **rg-defender** (or the Resource Group your created), then select **WIN2**.
+
+1. Select **Apply**.
+
+1. Select **Next: Collect**, then **Next: Review + create**.
+
+1. Select **Create**.
+
+1. Wait a few minutes and then select **Refresh** to see the new data collection rule listed.
 
 
 ### Task 4: Onboard Microsoft Defender for Endpoint Device
