@@ -66,7 +66,7 @@ In this task, you will create a Logic App that will be used as a Playbook in Mic
 
 1. Select the **Solutions** folder.
 
-1. Next select the **Teams** folder, then the **Playbooks** folder.
+1. Next select the **SentinelSOARessentials** folder, then the **Playbooks** folder.
 
 1. Select the **Post-Message-Teams** folder.
 
