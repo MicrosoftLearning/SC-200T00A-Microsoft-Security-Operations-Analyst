@@ -96,6 +96,8 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
     >**Note:** Your Log Analytics workspace should show *1 Linux computers connected*. This corresponds to LIN1 (ubuntu1) virtual machine connected earlier with the CEF connector.
 
+1. Select **Log Analytics agent instructions**.
+
 1. Copy the command in the *Download and onboard agent for Linux* area to the clipboard.
 
 1. Launch your LIN2 virtual machine. Login with the username as password provided by your lab hoster. **Hint:** You might need to press the Enter key to see the login prompt.

@@ -89,9 +89,13 @@ In this task, you will create a scheduled query and connect it to the Teams chan
 1. Select the **Next: Automated response >** button.
 
 1. On the Automated response tab under the *Alert automation (classic)* area, select the playbook *PostMessageTeams-OnAlert* you had created in the previous exercise.
-1. Under Automation rules (Preview), select **Add new**
-1. For the *Automation rule name*, enter **Tier 2**
-1. For the *Actions*, select **Assign owner**
+
+1. Under Automation rules (Preview), select **Add new**.
+
+1. For the *Automation rule name*, enter **Tier 2**.
+
+1. For the *Actions*, select **Assign owner**.
+
 1. Then select **Assign to me**. Then select **Apply**.
 
 1. Select the **Next: Review >** button.
@@ -113,13 +117,11 @@ In this task, you will test your new scheduled query rule.
 
 1. Select **+ Add assignments** from the command bar.
 
-1. In the *Add assignments* page, *Membership* tab, under *Select role*, select **User Administrator**.
+1. In the *Directory roles* blade, select the checkbox for **User Administrator**.
 
-    >**Note:** You may need to click on the **Refresh** button to see the new role assignment. 
+1. Select **Add**.
 
-1. Select **Next**
-
-1. Select **Assign**
+1. Select **Refresh** button form the command bar to see the new role assignment. 
 
 1. Close the "Christie Cline - Assigned roles" and "Users - All users" pages by selecting the 'x' in the top-right, twice.
 
@@ -137,11 +139,15 @@ In this task, you will test your new scheduled query rule.
 
 1. Select your Microsoft Sentinel Workspace.
 
-1. Select the **Incidents** menu option.
+1. Select the **Incidents** menu option under *Threat management*.
 
-    >**Note:** The alert triggered may take 5+ minutes to process. You may continue with the next exercise and return to this point later. For automatic updating of the Incidents page, select the **Auto-refresh incidents** toggle.
+1. Select the **Auto-refresh incidents** toggle.
 
-1. You should see the newly created Incident. Select the Incident and review the information in the right blade.
+1. You should see the newly created Incident. 
+
+    >**Note:** The event that triggers the alert may take 5+ minutes to process. You may continue with the next exercise and return to this point later.
+
+1. Select the Incident and review the information in the right blade.
 
 1. Go back to Microsoft Teams by selecting the tab in your Edge browser. If you closed it, just open a new tab and type https://teams.microsoft.com. Go to the *SOC* Teams, select the *New Alerts* channel and see the message post about the incident.
 

@@ -32,7 +32,7 @@ In this task, you will create a detection for **Attack 1** on the host (Win1) wi
 
 1. The table *DeviceRegistryEvents* looks to have the data already normalized and easy for us to query. Expand the row to see all the columns related to the record.
 
-    >**Important:** If you do not see the *DeviceRegistryEvents* table in the results, an alternative for the following queries is to use the *DeviceProcessEvents* table as replacement. Being that said, use one of the two provided examples below.
+    >**Important:** If you do not see the *DeviceRegistryEvents* table in the results, an alternative for the following two queries is to use the *DeviceProcessEvents* table as replacement. Being that said, use one of the two provided examples below, depending on the table you see in the previous query.
 
 1. From the results, we now know that the Threat Actor is using reg.exe to add keys to the Registry key and the program is located in C:\temp. **Run** the following statement to replace the *search* operator with the *where* operator in our query:
 
@@ -42,7 +42,7 @@ In this task, you will create a detection for **Attack 1** on the host (Win1) wi
     | where RegistryValueData startswith "c:\\temp"
     ```
 
-1. Alternatively, you can **Run** the following KQL query using the *DeviceProcessEvents* table:
+    Alternatively, you can **Run** the following KQL query using the *DeviceProcessEvents* table:
 
     ```KQL
     DeviceProcessEvents | where ActionType == "ProcessCreated"
@@ -62,7 +62,7 @@ In this task, you will create a detection for **Attack 1** on the host (Win1) wi
 
    ![Screenshot](../Media/SC200_sysmon_query2.png)
 
-1. Alternatively, you can **Run** the following KQL query using the *DeviceProcessEvents* table:
+    Alternatively, you can **Run** the following KQL query using the *DeviceProcessEvents* table:
 
     ```KQL
     DeviceProcessEvents | where ActionType == "ProcessCreated"
@@ -71,7 +71,7 @@ In this task, you will create a detection for **Attack 1** on the host (Win1) wi
     | extend timestamp = TimeGenerated, HostCustomEntity = DeviceName, AccountCustomEntity = InitiatingProcessAccountName
     ```
 
-1. Now that you have a good detection rule, in the Logs window, select the **+ New alert rule** in the command bar and then select **Create Microsoft Sentinel alert**. This will create a new Scheduled rule.
+1. Now that you have a good detection rule, in the Logs window, select the **+ New alert rule** in the command bar and then select **Create Microsoft Sentinel alert**. This will create a new Scheduled rule. **Hint:** You might need to select the ellipsis (...) button in the command bar.
 
 1. This starts the "Analytics rule wizard". For the *General* tab type:
 
@@ -99,7 +99,7 @@ In this task, you will create a detection for **Attack 1** on the host (Win1) wi
 
 1. For the *Incident settings* tab, leave the default values and select **Next: Automated response >** button.
 
-1. For the *Automated response* tab select the **PostMessageTeams-OnAlert** under *Alert automation* and then select **Next: Review** button.
+1. For the *Automated response* tab select the **PostMessageTeams-OnAlert** under *Alert automation (classic)* and then select **Next: Review** button.
 
 1. On the *Review* tab, select the **Create** button to create the new Scheduled Analytics rule.
 
@@ -152,7 +152,7 @@ In this task, you will create a detection for **Attack 2** on the host (Win2) wi
     | extend timestamp = TimeGenerated, HostCustomEntity = Computer, AccountCustomEntity = UserName1
     ```
 
-1. Now that you have a good detection rule, in the Logs window, select **+ New alert rule** in the command bar and then select **Create Microsoft Sentinel alert**.
+1. Now that you have a good detection rule, in the Logs window, select **+ New alert rule** in the command bar and then select **Create Microsoft Sentinel alert**. **Hint:** You might need to select the ellipsis (...) button in the command bar.
 
 1. This starts the "Analytics rule wizard". For the *General* tab type:
 
@@ -180,7 +180,7 @@ In this task, you will create a detection for **Attack 2** on the host (Win2) wi
 
 1. For the *Incident settings* tab, leave the default values and select **Next: Automated response >** button.
 
-1. For the *Automated response* tab select the **PostMessageTeams-OnAlert** under *Alert automation* and then select **Next: Review** button.
+1. For the *Automated response* tab select the **PostMessageTeams-OnAlert** under *Alert automation (classic)* and then select **Next: Review** button.
 
 1. On the *Review* tab, select the **Create** button to create the new Scheduled Analytics rule.
 

@@ -74,7 +74,9 @@ In this task, you will explore using notebooks in Microsoft Sentinel.
 
 1. Once the Compute has been created and running, verify that the kernel to use is *Python 3.8 - AzureML*. **Hint:** This is shown in the right of the command bar. You can also increase your screen size by selecting **<<** under the *Notebooks* menu.
 
-1. Clear all the results from the notebook by selecting the **eraser** icon from the command bar and follow the *Getting Started* tutorial.
+1. Select the **Authenticate** button and wait for the authentication to complete.
+
+1. Clear all the results from the notebook by selecting the **Clear all outputs** from the command bar and follow the *Getting Started* tutorial. **Hint:** This can be found by selecting the ellipsis (...) from the command bar.
 
 >**Note:** If you cannot complete the steps above to access the Notebook, you can follow it on its GitHub page instead. See the notebook file here: [Microsoft Sentinel Notebooks on GitHub](https://github.com/Azure/Azure-Sentinel-Notebooks/blob/8122bca32387d60a8ee9c058ead9d3ab8f4d61e6/A%20Getting%20Started%20Guide%20For%20Azure%20Sentinel%20ML%20Notebooks.ipynb) 
 

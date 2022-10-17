@@ -114,11 +114,11 @@ In this task, you will perform attacks on a host with the Security Events connec
 
 >**Important:** The lab *SAVE* functionality can cause Win2 to become disconnected from Azure Arc.  A reboot will solve the issue.  
 
-1. Select **Start** in Windows. Then **Power**, next **Restart**
+1. Select **Start** in Windows. Then **Power**, next **Restart**.
+
 1. Follow the instructions to log into WIN2 again.
 
-
-1. In the search of the task bar, enter *Command*. Command Prompt will be displayed in the search results. Right-click on the Command Prompt and select **Run as Administrator**. Select **Yes** in the User Account Control window that appears to allow the app to run. **Hint:** You might have a Command Prompt as Administrator open from a previous exercise.
+1. In the search of the task bar, enter *Command*. Command Prompt will be displayed in the search results. Right-click on the Command Prompt and select **Run as Administrator**. Select **Yes** in the User Account Control window that appears to allow the app to run.
 
 1. In the Command Prompt, create a Temp folder in the root directory. Remember to press Enter after the last row:
 
