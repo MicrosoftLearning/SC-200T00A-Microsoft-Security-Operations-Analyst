@@ -32,7 +32,7 @@ In this task, you create a function that is a workspace parser for DeviceRegistr
 
 1. Open the **SC200_module7_ASIM_Parser_scripts.txt** you downloaded and copy and paste the *Task 1 Script* KQL statements into a new query tab.
 
->**NOTE** The script below is only shown for reference.
+    >**Note:** The script below is only shown for reference; take time to review the KQL query.
 
     ```KQL
     let RegistryType = datatable (TypeCode: string, TypeName: string) [
@@ -48,9 +48,9 @@ In this task, you create a function that is a workspace parser for DeviceRegistr
     DeviceRegistryEvents
     | extend
         // Event
-        EventOriginalUid = tostring(ReportId), 
+        EventOriginalUid = tostring(ReportId),
         EventCount = int(1), 
-        EventProduct = 'M365 Defender for Endpoint', 
+        EventProduct = 'M365 Defender for Endpoint',
         EventVendor = 'Microsoft', 
         EventSchemaVersion = '0.1.0', 
         EventStartTime = TimeGenerated, 
@@ -59,8 +59,8 @@ In this task, you create a function that is a workspace parser for DeviceRegistr
         // Registry
         RegistryKey = iff (ActionType in ("RegistryKeyDeleted", "RegistryValueDeleted"), PreviousRegistryKey, RegistryKey),
         RegistryValue = iff (ActionType == "RegistryValueDeleted", PreviousRegistryValueName, RegistryValueName),
-        // RegistryValueType -- original name is fine 
-        // RegistryValueData -- original name is fine 
+        // RegistryValueType -- original name is fine
+        // RegistryValueData -- original name is fine
         RegistryKeyModified = iff (ActionType == "RegistryKeyRenamed", PreviousRegistryKey, ""),
         RegistryValueModified = iff (ActionType == "RegistryValueSet", PreviousRegistryValueName, ""),
         // RegistryValueTypeModified -- Not provided by Defender
@@ -74,9 +74,9 @@ In this task, you create a function that is a workspace parser for DeviceRegistr
         PreviousRegistryValueData
     // Device
     | extend
-        DvcHostname = DeviceName, 
-        DvcId = DeviceId, 
-        Dvc = DeviceName 
+        DvcHostname = DeviceName,
+        DvcId = DeviceId,
+        Dvc = DeviceName
     // Users
     | extend
         ActorUsername = iff (InitiatingProcessAccountDomain == '', InitiatingProcessAccountName, strcat(InitiatingProcessAccountDomain, '\\', InitiatingProcessAccountName)), 
@@ -115,16 +115,20 @@ In this task, you create a function that is a workspace parser for DeviceRegistr
     };
     RegistryEvents_M365D
     ```
->**Note:** Take time to review the KQL line by line.  
+
 1. Select **Run** to confirm the KQL is valid.
+
 1. Select **Save**, then **Save as function**.
-1. Scroll down and under *Query scheduling* set the following:
+
+1. Under *Save as function* set the following:
 
     |Setting|Value|
     |---|---|
     |Function name|vimRegEvtM365D|
     |Legacy Category|MyASIM|
+
 1. Then select **Save**.
+
 1. In a new query tab, enter **vimRegEvtM365D** and select **Run**.
 
 
@@ -132,10 +136,11 @@ In this task, you create a function that is a workspace parser for DeviceRegistr
 
 In this task, you create a function that is a workspace parser for SecurityEvent.
 
-1. Create a new query tab .
-1. Open the **SC200_module7_ASIM_Parser_scripts.txt** you downloaded and copy and paste the *Task 2 Script* KQL statements into a new query tab.
+1. Create a new query tab.
 
->**NOTE** The script below is only shown for reference.
+1. Go back to the **SC200_module7_ASIM_Parser_scripts.txt** you downloaded and copy and paste the *Task 2 Script* KQL statements into the new query tab.
+
+    >**Note:** The script below is only shown for reference; take time to review the KQL query.
 
     ```KQL
     let RegistryType = datatable (TypeCode: string, TypeName: string) [
@@ -223,24 +228,28 @@ In this task, you create a function that is a workspace parser for SecurityEvent
     RegistryEvents
     ```
 
->**Note:** Take time to review the KQL line by line.  
 1. Select **Run** to confirm the KQL is valid.
+
 1. Select **Save**, then **Save as function**.
-1. Scroll down and under *Query scheduling* set the following:
+
+1. Under *Save as function* set the following:
 
     |Setting|Value|
     |---|---|
     |Function name|vimRegEvtSecurityEvent|
     |Legacy Category|MyASIM|
+
 1. Then select **Save**.
-1. In a new query tab, enter **vimRegEvtSecurityEvent** and select **Run**
+
+1. In a new query tab, enter **vimRegEvtSecurityEvent** and select **Run**.
 
 
 ### Task 3: Create a unifying workspace parser. 
 
 In this task, you create a unifying parser function that combines the previous two functions.  
 
-1. Create a new query tab .
+1. Create a new query tab.
+
 1. Enter the following KQL Statement in a new query tab:
 
     ```KQL
@@ -250,17 +259,26 @@ In this task, you create a unifying parser function that combines the previous t
     ```
 
 1. Select **Run** to confirm the KQL is valid.
+
 1. Select **Save**, then **Save as function**.
-1. Scroll down and under *Query scheduling* set the following:
+
+1. Under *Save as function* set the following:
 
     |Setting|Value|
     |---|---|
     |Function name|imRegEvt|
     |Legacy Category|MyASIM|
-1. Then select **Save**.
-1. In a new query tab, enter **imRegEvt** and select **Run**
-1. Update the query to **imRegEvt | where ActionType == 'RegistryValueSet'** and select **Run**
 
+1. Then select **Save**.
+
+1. In a new query tab, enter **imRegEvt** and select **Run**.
+
+1. Update the query to the following and select **Run**:
+
+    ```KQL
+    imRegEvt
+    | where ActionType == 'RegistryValueSet'
+    ```
 
 ## Proceed to Exercise 10
 
