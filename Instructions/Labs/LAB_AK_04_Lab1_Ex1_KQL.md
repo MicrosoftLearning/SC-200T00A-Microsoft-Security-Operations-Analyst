@@ -33,48 +33,11 @@ In this task, you will access a Log Analytics environment where you can practice
 
 1. Next to the first record, select the **>** to expand the information for the row.
 
-
 ### Task 2: Run Basic KQL Statements
 
 In this task, you will build basic KQL statements.
 
 >**Important:**  For each query, clear the previous statement from the Query Window or open a new Query Windows by selecting **+** after the last opened tab (up to 25).
-
-1. The following statement demonstrates the use of the **let** statement to declare *variables*. In the Query Window enter the following statement and select **Run**: 
-
-    ```KQL
-    let timeOffset = 1h;
-    let discardEventId = 4688;
-    SecurityEvent
-    | where TimeGenerated > ago(timeOffset*2) and TimeGenerated < ago(timeOffset)
-    | where EventID != discardEventId
-    ```
-
-1. The following statement demonstrates the use of the **let** statement to declare a *dynamic list*. In the Query Window enter the following statement and select **Run**: 
-
-    ```KQL
-    let suspiciousAccounts = datatable(account: string) [
-      @"\administrator", 
-      @"NT AUTHORITY\SYSTEM"
-    ];
-    SecurityEvent  
-    | where TimeGenerated > ago(1h)
-    | where Account in (suspiciousAccounts)
-    ```
-
-    >**Tip:** You can re-format the query easily by selecting the ellipsis (...) in the Query window and select **Format query**.
-    
-1. The following statement demonstrates the use of the **let** statement to declare a *dynamic table*. In the Query Window enter the following statement and select **Run**: 
-
-    ```KQL
-    let LowActivityAccounts =
-        SecurityEvent 
-        | summarize cnt = count() by Account 
-        | where cnt < 1000;
-    LowActivityAccounts | where Account contains "sql"
-    ```
-
-1. Change the **Time range** to **Last hour** in the Query Window. This will limit our results for the following statements.
 
 1. The following statement demonstrates the **search** operator, which searches all columns in the table for the value. In the Query Window enter the following statement and select **Run**: 
 
@@ -114,7 +77,44 @@ In this task, you will build basic KQL statements.
     ```KQL
     SecurityEvent  
     | where TimeGenerated > ago(1h) and EventID in (4624, 4625)
+ 
     ```
+
+1. The following statement demonstrates the use of the **let** statement to declare *variables*. In the Query Window enter the following statement and select **Run**: 
+
+    ```KQL
+    let timeOffset = 1h;
+    let discardEventId = 4688;
+    SecurityEvent
+    | where TimeGenerated > ago(timeOffset*2) and TimeGenerated < ago(timeOffset)
+    | where EventID != discardEventId
+    ```
+
+1. The following statement demonstrates the use of the **let** statement to declare a *dynamic list*. In the Query Window enter the following statement and select **Run**: 
+
+    ```KQL
+    let suspiciousAccounts = datatable(account: string) [
+      @"\administrator", 
+      @"NT AUTHORITY\SYSTEM"
+    ];
+    SecurityEvent  
+    | where TimeGenerated > ago(1h)
+    | where Account in (suspiciousAccounts)
+    ```
+
+    >**Tip:** You can re-format the query easily by selecting the ellipsis (...) in the Query window and select **Format query**.
+
+1. The following statement demonstrates the use of the **let** statement to declare a *dynamic table*. In the Query Window enter the following statement and select **Run**: 
+
+    ```KQL
+    let LowActivityAccounts =
+        SecurityEvent 
+        | summarize cnt = count() by Account 
+        | where cnt < 1000;
+    LowActivityAccounts | where Account contains "sql"
+    ```
+
+1. Change the **Time range** to **Last hour** in the Query Window. This will limit our results for the following statements.
 
 1. The following statement demonstrates the **extend** operator, which creates a calculated column and adds it to the result set. In the Query Window enter the following statement and select **Run**: 
 
