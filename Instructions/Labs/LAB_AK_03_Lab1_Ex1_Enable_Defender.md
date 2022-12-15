@@ -67,11 +67,13 @@ In this task, you will enable and configure Microsoft Defender for Cloud.
 
 1. Review the Azure reources that are now protected with the Defender for Cloud plans.
 
-1. Select **Auto provisioning** from the Settings area.
+1. Select **Settings and Monitoring** tab.
 
-1. Review the Auto provisioning - Extensions. Confirm that **Log Analytics agent/Azure Monitor agent** is **Off**.
+1. Review the different Extensions. Confirm that **Log Analytics agent/Azure Monitor agent** is **Off**. Turning this on will install the agent on Azure virtual machines automatically for the current subscription.
 
-1. Close the settings page by selecting the 'x' on the upper right of the page to go back to the **Environment settings** again and select the '>' on the left of your subscription.
+1. Close the settings page by selecting the 'x' on the upper right of the page to go back to the **Defender Plans** 
+
+1. Close the Defender Plans page by selecting the 'x' on the upper right of the page to go back to the **Environment Settings**again and select the '>' on the left of your subscription.
 
 1. Select the Log analytics workspace you created earlier *uniquenameDefender* to review the available options and pricing. 
 
