@@ -159,7 +159,7 @@ In this task, you will build KQL statements to prepare data.
 
 ```KQL
 SecurityEvent
-| where TimeGenerated > ago(1h) and where EventID == "4688"
+| where TimeGenerated > ago(1h) and EventID == "4688"
 | summarize count() by Process, Computer
 ```
 
@@ -182,8 +182,8 @@ SecurityEvent
 4. The following statement is a rule to detect MFA failures across multiple applications for the same account. In the Query Window enter the following statement and select **Run**: 
 
 ```KQL
-let timeframe = 1d;
-let threshold = 3;
+let timeframe = 30d;
+let threshold = 1;
 SigninLogs
 | where TimeGenerated >= ago(timeframe)
 | where ResultDescription has "MFA"
@@ -415,11 +415,11 @@ The mv-expand operator expands multi-value dynamic arrays or property bags into 
 ```
 The mv-apply operator applies a subquery to each record and returns the union of the results of all subqueries.
 
-```KQL
-SigninLogs
-| mv-apply Location = todynamic(LocationDetails) on 
-( where Location.city == "Canberra")
-```
+   ```KQL
+    SigninLogs  
+    | mv-apply Location = todynamic(LocationDetails) on 
+    ( where Location.countryOrRegion == "ES")
+    ```
 
 6. To create a function:
 
