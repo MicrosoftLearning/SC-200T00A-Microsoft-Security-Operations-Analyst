@@ -34,37 +34,7 @@ In this task, you will build basic KQL statements.
 
 >**Important:**  For each query, clear the previous statement from the Query Window or open a new Query Windows by selecting **+** after the last opened tab (up to 25).
 
-1. The following statement demonstrates the use of the let statement to declare variables. In the Query Window. Enter the following statement and select **Run**: 
-
-```KQL
- let timeOffset = 7d;
- let discardEventId = 4688;
- SecurityEvent
- | where TimeGenerated > ago(timeOffset*2) and TimeGenerated < ago(timeOffset)
- | where EventID != discardEventId
-```
-
-2. The following statement demonstrates the use of the let statement to declare a dynamic list. In the Query Window enter the following statement and select **Run**: 
-
-```KQL
-let suspiciousAccounts = datatable(account: string) [
-    @"\administrator", 
-    @"NT AUTHORITY\SYSTEM"
-];
-SecurityEvent | where Account in (suspiciousAccounts)
-```
-
-3. The following statement demonstrates the use of the "let" statement to declare a dynamic table. In the Query Window. Enter the following statement and select **Run**: 
-
-```KQL
-let LowActivityAccounts =
-    SecurityEvent 
-    | summarize cnt = count() by Account 
-    | where cnt < 1000;
-LowActivityAccounts | where Account contains "sql"
-```
-
-4. The following statement demonstrates searching across all tables and columns for records within the query time range display in the query window. In the Query Window before running this script change the **Time range** to "Last hour". Enter the following statement and select **Run**: 
+1. The following statement demonstrates searching across all tables and columns for records within the query time range display in the query window. In the Query Window before running this script change the **Time range** to "Last hour". Enter the following statement and select **Run**: 
 
 ```KQL
 search "err"
@@ -72,13 +42,13 @@ search "err"
 
 >**Warning:** Make sure you change back the Time range to "Last 24 hours" for the next scripts.
 
-5. The following statement demonstrates searching across tables listed with the "in" clause for records within the query time range display in the query window. In the Query Window. Enter the following statement and select **Run**: 
+2. The following statement demonstrates searching across tables listed with the "in" clause for records within the query time range display in the query window. In the Query Window. Enter the following statement and select **Run**: 
 
 ```KQL
 search in (SecurityEvent,SecurityAlert,A*) "err"
 ```
 
-6. The following statements demonstrates filter using the where operator. In the Query Window. Enter the following statement and select **Run**: 
+3. The following statements demonstrates filter using the where operator. In the Query Window. Enter the following statement and select **Run**: 
 
     >**Note:** You should "run" after entering the query from each code block below.
 
@@ -102,6 +72,36 @@ SecurityEvent
 ```KQL
 SecurityEvent 
 | where TimeGenerated > ago(1h) and EventID in (4624, 4625)
+```
+
+4. The following statement demonstrates the use of the let statement to declare variables. In the Query Window. Enter the following statement and select **Run**: 
+
+```KQL
+ let timeOffset = 7d;
+ let discardEventId = 4688;
+ SecurityEvent
+ | where TimeGenerated > ago(timeOffset*2) and TimeGenerated < ago(timeOffset)
+ | where EventID != discardEventId
+```
+
+5. The following statement demonstrates the use of the let statement to declare a dynamic list. In the Query Window enter the following statement and select **Run**: 
+
+```KQL
+let suspiciousAccounts = datatable(account: string) [
+    @"\administrator", 
+    @"NT AUTHORITY\SYSTEM"
+];
+SecurityEvent | where Account in (suspiciousAccounts)
+```
+
+6. The following statement demonstrates the use of the "let" statement to declare a dynamic table. In the Query Window. Enter the following statement and select **Run**: 
+
+```KQL
+let LowActivityAccounts =
+    SecurityEvent 
+    | summarize cnt = count() by Account 
+    | where cnt < 1000;
+LowActivityAccounts | where Account contains "sql"
 ```
 
 7. The following statement demonstrates creating fields using the extend operator In the Query Window. Enter the following statement and select **Run**: 
@@ -133,7 +133,6 @@ SecurityEvent
 | project Computer, Account
 ```
 
-
 ```KQL
 SecurityEvent
 | where ProcessName != "" and Process != ""
@@ -159,7 +158,7 @@ In this task, you will build KQL statements to prepare data.
 
 ```KQL
 SecurityEvent
-| where TimeGenerated > ago(1h) and where EventID == "4688"
+| where TimeGenerated > ago(1h) and EventID == "4688"
 | summarize count() by Process, Computer
 ```
 
@@ -182,15 +181,14 @@ SecurityEvent
 4. The following statement is a rule to detect MFA failures across multiple applications for the same account. In the Query Window enter the following statement and select **Run**: 
 
 ```KQL
-let timeframe = 1d;
-let threshold = 3;
+let timeframe = 15d;
+let threshold = 1;
 SigninLogs
 | where TimeGenerated >= ago(timeframe)
 | where ResultDescription has "MFA"
 | summarize applicationCount = dcount(AppDisplayName) by UserPrincipalName, IPAddress
 | where applicationCount >= threshold
 ```
-
 
 5. The following statement demonstrates the arg_max function.
 
@@ -418,8 +416,10 @@ The mv-apply operator applies a subquery to each record and returns the union of
 ```KQL
 SigninLogs
 | mv-apply Location = todynamic(LocationDetails) on 
-( where Location.city == "Canberra")
+( where Location.countryOrRegion == "ES")
 ```
+
+    >**Note:** You can change the country code to "US" or others.
 
 6. To create a function:
 
