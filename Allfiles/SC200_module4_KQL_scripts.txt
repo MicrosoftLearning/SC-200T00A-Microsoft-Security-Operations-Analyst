@@ -178,35 +178,35 @@ SecurityEvent
 | summarize dcount(IpAddress)
 ```
 
-4. The following statement is a rule to detect MFA failures across multiple applications for the same account. In the Query Window enter the following statement and select **Run**: 
+4. The following statement is a rule to detect Invalid password failures across multiple applications for the same account. In the Query Window enter the following statement and select **Run**: 
 
 ```KQL
 let timeframe = 15d;
 let threshold = 1;
 SigninLogs
 | where TimeGenerated >= ago(timeframe)
-| where ResultDescription has "MFA"
+| where ResultDescription has "Invalid password"
 | summarize applicationCount = dcount(AppDisplayName) by UserPrincipalName, IPAddress
 | where applicationCount >= threshold
 ```
 
 5. The following statement demonstrates the arg_max function.
 
-The following statement will return the most current row from the SecurityEvent table for the computer SQL12.NA.contosohotels.com.  The * in the arg_max function requests all columns for the row. In the Query Window. Enter the following statement and select **Run**: 
+The following statement will return the most current row from the SecurityEvent table for the computer SQL10.NA.contosohotels.com.  The * in the arg_max function requests all columns for the row. In the Query Window. Enter the following statement and select **Run**: 
 
 ```KQL
 SecurityEvent 
-| where Computer == "SQL12.na.contosohotels.com"
+| where Computer == "SQL10.na.contosohotels.com"
 | summarize arg_max(TimeGenerated,*) by Computer
 ```
 
 6. The following statement demonstrates the arg_min function.
 
-In this statement, the oldest SecurityEvent for the computer SQL12.NA.contosohotels.com will be returned as the result set. In the Query Window. Enter the following statement and select **Run**: 
+In this statement, the oldest SecurityEvent for the computer SQL10.NA.contosohotels.com will be returned as the result set. In the Query Window. Enter the following statement and select **Run**: 
 
 ```KQL
 SecurityEvent 
-| where Computer == "SQL12.na.contosohotels.com"
+| where Computer == "SQL10.na.contosohotels.com"
 | summarize arg_min(TimeGenerated,*) by Computer
 ```
 

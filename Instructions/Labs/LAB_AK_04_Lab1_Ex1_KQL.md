@@ -186,31 +186,31 @@ In this task, you will build KQL statements to aggregate data. **Summarize** gro
     | summarize dcount(IpAddress)
     ```
 
-1. The following statement is a rule to detect MFA failures across multiple applications for the same account. In the Query Window enter the following statement and select **Run**: 
+1. The following statement is a rule to detect Invalid password failures across multiple applications for the same account. In the Query Window enter the following statement and select **Run**: 
 
     ```KQL
     let timeframe = 30d;
     let threshold = 1;
     SigninLogs
     | where TimeGenerated >= ago(timeframe)
-    | where ResultDescription has "MFA"
+    | where ResultDescription has "Invalid password"
     | summarize applicationCount = dcount(AppDisplayName) by UserPrincipalName, IPAddress
     | where applicationCount >= threshold
     ```
 
-1. The following statement demonstrates the **arg_max()** function, which returns one or more expressions when the argument is maximized. The following statement will return the most current row from the SecurityEvent table for the computer SQL12.NA.contosohotels.com. The * in the arg_max function requests all columns for the row. In the Query Window enter the following statement and select **Run**: 
+1. The following statement demonstrates the **arg_max()** function, which returns one or more expressions when the argument is maximized. The following statement will return the most current row from the SecurityEvent table for the computer SQL10.NA.contosohotels.com. The * in the arg_max function requests all columns for the row. In the Query Window enter the following statement and select **Run**: 
 
     ```KQL
     SecurityEvent  
-    | where Computer == "SQL12.na.contosohotels.com"
+    | where Computer == "SQL10.na.contosohotels.com"
     | summarize arg_max(TimeGenerated,*) by Computer
     ```
 
-1. The following statement demonstrates the **arg_min()** function, which returns one or more expressions when the argument is minimized. In this statement, the oldest SecurityEvent for the computer SQL12.NA.contosohotels.com will be returned as the result set. In the Query Window enter the following statement and select **Run**: 
+1. The following statement demonstrates the **arg_min()** function, which returns one or more expressions when the argument is minimized. In this statement, the oldest SecurityEvent for the computer SQL10.NA.contosohotels.com will be returned as the result set. In the Query Window enter the following statement and select **Run**: 
 
     ```KQL
     SecurityEvent  
-    | where Computer == "SQL12.na.contosohotels.com"
+    | where Computer == "SQL10.na.contosohotels.com"
     | summarize arg_min(TimeGenerated,*) by Computer
     ```
 
