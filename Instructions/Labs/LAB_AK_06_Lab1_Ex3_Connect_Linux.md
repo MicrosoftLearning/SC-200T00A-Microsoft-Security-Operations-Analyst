@@ -10,7 +10,7 @@ lab:
 
 ![Lab overview.](../Media/SC-200-Lab_Diagrams_Mod6_L1_Ex3.png)
 
-You are a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You must learn how to connect log data from the many data sources in your organization. The next source of data are Linux virtual machines using the Common Event Formatting (CEF) and Syslog connectors.
+You are a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You must learn how to connect log data from the many data sources in your organization. The next source of data are Linux virtual machines using the Common Event Formatting (CEF) via Legacy Agent and Syslog connectors.
 
 
 >**Important:** There are steps within the next Tasks that are done in different virtual machines. Look for the Virtual Machine name references.
@@ -36,9 +36,9 @@ In this task, you will access your Microsoft Sentinel workspace.
 
 ### Task 2: Connect a Linux Host using the Common Event Format connector
 
-In this task, you will connect a Linux host to Microsoft Sentinel with the Common Event Format (CEF) connector.
+In this task, you will connect a Linux host to Microsoft Sentinel with the Common Event Format (CEF) via Legacy Agent connector.
 
-1. Select **Data connectors** from the Configuration area in Microsoft Sentinel. From the Data Connectors tab, search for the **Common Event Format (CEF)** connector and select it from the list.
+1. Select **Data connectors** from the Configuration area in Microsoft Sentinel. From the Data Connectors tab, search for the **Common Event Format (CEF) via Legacy Agent** connector and select it from the list.
 
 1. Select **Open connector page** on the connector information blade.
 
@@ -80,7 +80,7 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
 
 In this task, you will connect a Linux host to Microsoft Sentinel with the Syslog connector.
 
-1. Go back to the Edge browser where you have your Microsoft Sentinel Portal open and close the "Common Event Format (CEF)" data connector page by selecting the 'x' in the top right corner. 
+1. Go back to the Edge browser where you have your Microsoft Sentinel Portal open and close the "Common Event Format (CEF) via Legacy Agent" data connector page by selecting the 'x' in the top right corner. 
 
 1. From the Data Connectors tab, search for the **Syslog** connector and select it from the list.
 
