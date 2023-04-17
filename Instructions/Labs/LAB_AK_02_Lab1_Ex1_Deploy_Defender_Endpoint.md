@@ -106,7 +106,7 @@ In this task, you will configure roles for use with device groups.
 
 1. Select the **Assigned user groups** tab on the top. Select **sg-IT** and then select **Add selected groups**. Make sure it appears under *Azure AD user groups with this role*.
 
-1. Select **Save**. If you receive an error while saving the role, refresh the page and try again.
+1. Select **Submit**. If you receive an error while saving the role, refresh the page and try again.
 
 
 ### Task 4: Configure Device Groups
