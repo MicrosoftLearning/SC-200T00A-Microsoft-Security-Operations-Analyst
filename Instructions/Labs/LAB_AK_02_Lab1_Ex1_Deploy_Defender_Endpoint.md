@@ -1,10 +1,10 @@
 ---
 lab:
-    title: 'Exercise 1 - Deploy Microsoft Defender for Endpoint'
+    title: 'Exercise 01 - Deploy Microsoft Defender for Endpoint'
     module: 'Learning Path 2 - Mitigate threats using Microsoft Defender for Endpoint'
 ---
 
-# Learning Path 2 - Lab 1 - Exercise 1 - Deploy Microsoft Defender for Endpoint
+# Learning Path 2 - Lab 1 - Exercise 01 - Deploy Microsoft Defender for Endpoint
 
 ## Lab scenario
 
@@ -41,16 +41,14 @@ In this task, you will perform the initialization of the Microsoft Defender for 
 
     >**Note:** If you do not see the **Device discovery** option under **Settings**, logout by selecting the top-right circle with your account initials and select **Sign out**. Other options that you might want to try is to refresh the page with Ctrl+F5 or open the page InPrivate. Login again with the **Tenant Email** credentials.
 
-
 1. In Discovery setup make sure **Standard discovery (recommended)** is selected. 
+
     >**Hint:** If you do not see the option, refresh the page.
 
 
 ### Task 2: Onboard a Device.
 
 In this task, you will onboard a device to Microsoft Defender for Endpoint using an onboarding script.
-
-1. If you are not already at the Microsoft 365 Defender portal in your browser, start the Microsoft Edge browser and go to (https://security.microsoft.com) and login with the **Tenant Email** credentials.
 
 1. Select **Settings** from the left menu bar, then from the Settings page select **Endpoints**.
 
@@ -71,18 +69,6 @@ In this task, you will onboard a device to Microsoft Defender for Endpoint using
 1. When the "User Account Control" window is shown, select **Yes** to allow the script to run and answer **Y** to the question presented by the script and press **Enter**. When complete you should see a message in the command screen that says *Successfully onboarded machine to Microsoft Defender for Endpoint*.
 
 1. Press any key to continue. This will close the Command Prompt window.
-
-1. Back in the Onboarding page from the Microsoft 365 Defender portal, under the section "2. Run a detection test", copy the detection test script by selecting the **Copy** button.  
-
-1. In the windows search bar of the WIN1 virtual machine, type **CMD** and choose to **Run as Administrator** on the right pane for the Command Prompt app. 
-
-1. When the "User Account Control" window is shown, select **Yes** to allow the app to run. 
-
-1. Paste the script by right-clicking in the **Administrator: Command Prompt** windows and press **Enter** to run it. **Note:** The window closes automatically after running the script.
-
-1. In the Microsoft 365 Defender portal, in the left-hand menu, under the **Assets** area, select **Devices**. If the device is not shown, complete the next task and come back to check it back later. It can take up to 60 minutes for the first device to be displayed in the portal.
-
-    >**Note:** If you have completed the onboarding process and don't see devices in the Devices list after an hour, it might indicate an onboarding or connectivity problem.
 
 
 ### Task 3: Configure Roles
@@ -106,8 +92,9 @@ In this task, you will configure roles for use with device groups.
 
 1. Select the **Assigned user groups** tab on the top. Select **sg-IT** and then select **Add selected groups**. Make sure it appears under *Azure AD user groups with this role*.
 
-1. Select **Save**. If you receive an error while saving the role, refresh the page and try again.
+1. Select **Submit** and then **Done** when finished.
 
+    >**Note:** If you receive the error *"User can't perform this action since its UserAuthEnforcementMode is Rbac and this action requires one of: RbacV2"*, select **OK** and try again.
 
 ### Task 4: Configure Device Groups
 
@@ -130,11 +117,11 @@ In this task, you will configure device groups that allow for access control and
 
 1. On the Devices tab, for the OS condition select **Windows 10** and select **Next**.
 
-1. On the Preview devices tab, select **Show preview** to see the WIN1 virtual machine, most likely the data is not populated yet. Leave it as is and select **Next**.
+1. On the Preview devices tab, the *Show preview* button could show the WIN1 virtual machine, but most likely the data is not populated yet. Select **Next** to continue.
 
 1. For the User access tab, select **sg-IT** and then select **Add selected groups** button. Make sure it appears under *Azure AD user groups with access to this device group*.
 
-1. Select **Done**.
+1. Select **Submit** and then **Done** when finished.
 
 1. Device group configuration has changed. Select **Apply changes** to check matches and recalculate groupings.
 
