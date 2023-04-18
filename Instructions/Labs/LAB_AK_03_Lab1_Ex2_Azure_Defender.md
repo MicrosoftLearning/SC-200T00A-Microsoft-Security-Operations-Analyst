@@ -1,10 +1,10 @@
 ---
 lab:
-    title: 'Exercise 2 - Mitigate threats using Microsoft Defender for Cloud'
+    title: 'Exercise 02 - Mitigate threats using Microsoft Defender for Cloud'
     module: 'Learning Path 3 - Mitigate threats using Microsoft Defender for Cloud'
 ---
 
-# Learning Path 3 - Lab 1 - Exercise 2 - Mitigate threats using Microsoft Defender for Cloud
+# Learning Path 3 - Lab 1 - Exercise 02 - Mitigate threats using Microsoft Defender for Cloud
 
 ## Lab scenario
 
@@ -37,16 +37,24 @@ In this task, you will review Regulatory compliance configuration in Microsoft D
 
 1. Under *Policy settings*, select **Security policy** in the portal menu.
 
-1. Review the "Industry & regulatory standards" available to you by default.
+1. Scroll down and and review the "Industry & regulatory standards" available to you by default. Note that *ISO 27001* is now deprecated.
 
-1. Select **Add more standards** to review additional standards available.
+1. Select **Add more standards** to add the updated ISO 27001:2013 regulatory standard.
+
+1. Select the **Add** button to right of *ISO 27001:2013*.
+
+1. A new page to assign the Azure Policy initiative opens. Confirm that your subscription is selected under *Scope* and click **Review and create**.
+
+1. Select **Create** to assign the Azure Policy initiative to your subscription.
 
 1. Select Microsoft Defender for Cloud below the search box to return to the main blade.
+
+    >**Note:** You might want to return later to *Regulatory compliance* to review the new standard controls and recommendations.
 
 
 ### Task 2: Explore Security posture and recommendations
 
-In this task, you will review cloud security posture management.  The Secure Score information can take 24 hours to recalculate.  It is beneficial to do this task again in 24 hours.
+In this task, you will review cloud security posture management.  The Secure Score information can take 24 hours to recalculate. It is recommended to do this task again in 24 hours.
 
 1. Under *Cloud Security*, select **Security posture** in the portal menu.
 
@@ -54,7 +62,19 @@ In this task, you will review cloud security posture management.  The Secure Sco
 
 1. Under *General*, select **Recommendations** in the portal menu.
 
-1. Explore Recommendations provided (after 24 hours).
+1. Explore the recommendations provided for your subscription and WINServer (Arc Server).
+
+1. Select any recommendation where the status is not *"Completed"*.
+
+1. Read through the recommendation and scroll down to **select** WINServer checkbox.
+
+1. Select **Assign owner** and then **Select owner**.
+
+1. In the *Email address* box, write down your admin email. **Hint:** You can copy it from the instructions in the *Resources* tab.
+
+1. Select **Back**, change the *Due date* to your preference and click **Save**.
+
+1. Close the recommendation page by selecting the 'X' on the upper right of the window.
 
 
 ### Task 3: Mitigate security alerts
@@ -70,7 +90,9 @@ In this task, you will load sample security alerts and review the alert details.
 
 1. Select **Create sample alerts**.  
 
-    >**Note:** This sample alert creation process may take a few minutes to complete, wait for the "Successfully created sample alerts" notification. Once complete each of the alerts should appear in the *Security alerts* area.
+    >**Note:** This sample alert creation process may take a few minutes to complete, wait for the *"Successfully created sample alerts"* notification. 
+
+1. Once completed, select **Refresh** to see the alerts appear under the *Security alerts* area.
 
 1. For the alerts that grabbed your attention, perform the following actions:
 
