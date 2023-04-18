@@ -134,7 +134,9 @@ In this task, you will configure device groups that allow for access control and
 
 1. For the User access tab, select **sg-IT** and then select **Add selected groups** button. Make sure it appears under *Azure AD user groups with access to this device group*.
 
-1. Select **Done**.
+1. Select **Submit**.
+
+1. Select **Done**
 
 1. Device group configuration has changed. Select **Apply changes** to check matches and recalculate groupings.
 
