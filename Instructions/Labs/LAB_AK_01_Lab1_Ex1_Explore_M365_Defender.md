@@ -1,10 +1,10 @@
 ---
 lab:
-    title: 'Exercise 1 - Explore Microsoft 365 Defender'
+    title: 'Exercise 01 - Explore Microsoft 365 Defender'
     module: 'Learning Path 1 - Mitigate threats using Microsoft 365 Defender'
 ---
 
-# Learning Path 1 - Lab 1 - Exercise 1 - Explore Microsoft 365 Defender
+# Learning Path 1 - Lab 1 - Exercise 01 - Explore Microsoft 365 Defender
 
 ## Lab scenario
 
@@ -39,7 +39,7 @@ In this task, you will assign preset security policies for Exchange Online Prote
 
     >**Note:** If you receive a message "The operation could not be completed. Please try again later. If the problem persists, contact Microsoft support." just click **OK** to continue.  
 
-1. If shown, close the Microsoft 365 Defender quick tour.
+1. If shown, close the Microsoft 365 Defender quick tour pop-up window. **Hint:** Later in this lab, you will need to wait until the Defender workspace is provisioned, you can take this time to navigate through the guided tours to learn more about Microsoft 365 Defender.
 
 1. From the navigation menu, under *Email & Collaboration* area, select **Policies & rules**.
 
