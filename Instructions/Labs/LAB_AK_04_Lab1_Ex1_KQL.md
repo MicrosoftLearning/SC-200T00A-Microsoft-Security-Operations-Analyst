@@ -1,10 +1,10 @@
 ---
 lab:
-    title: 'Exercise 1 - Create queries for Microsoft Sentinel using Kusto Query Language (KQL)'
+    title: 'Exercise 01 - Create queries for Microsoft Sentinel using Kusto Query Language (KQL)'
     module: 'Learning Path 4 - Create queries for Microsoft Sentinel using Kusto Query Language (KQL)'
 ---
 
-# Learning Path 4 - Lab 1 - Exercise 1 - Create queries for Microsoft Sentinel using Kusto Query Language (KQL)
+# Learning Path 4 - Lab 1 - Exercise 01 - Create queries for Microsoft Sentinel using Kusto Query Language (KQL)
 
 ## Lab scenario
 
@@ -21,7 +21,9 @@ In this task, you will access a Log Analytics environment where you can practice
 
 1. Login to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.  
 
-1. Go to https://aka.ms/lademo in your browser. Login with the MOD Administrator credentials. 
+1. Go to https://aka.ms/lademo in your browser. Login with the MOD Administrator credentials.
+
+1. Close the Log Analytics video pop-up window that appears.
 
 1. Explore the available tables listed in the tab on the left side of the screen.
 
@@ -31,36 +33,43 @@ In this task, you will access a Log Analytics environment where you can practice
     SecurityEvent
     ```
 
+1. Notice that you have reached the maximum number of results (30,000).
+
+1. Change the *Time range* to **Last 30 minutes** in the Query Window.
+
 1. Next to the first record, select the **>** to expand the information for the row.
+
 
 ### Task 2: Run Basic KQL Statements
 
 In this task, you will build basic KQL statements.
 
->**Important:**  For each query, clear the previous statement from the Query Window or open a new Query Windows by selecting **+** after the last opened tab (up to 25).
+>**Important:**  For each query, clear the previous statement from the Query Window or open a new Query Window by selecting **+** after the last opened tab (up to 25).
 
 1. The following statement demonstrates the **search** operator, which searches all columns in the table for the value. In the Query Window enter the following statement and select **Run**: 
 
     ```KQL
-    search "err"
+    search "new"
     ```
 
 1. The following statement demonstrates **search** across tables listed within the **in** clause. In the Query Window enter the following statement and select **Run**: 
 
     ```KQL
-    search in (SecurityEvent,SecurityAlert,A*) "err"
+    search in (SecurityEvent,App*) "new"
     ```
 
-1. Change back the **Time range** to **Last 24 hours** in the Query Window.
+1. Change back the *Time range* to **Last 24 hours** in the Query Window.
 
 1. The following statements demonstrates the **where** operator, which filters on a specific predicate. In the Query Window enter the following statement and select **Run**: 
 
-    >**Note:** You should select **Run** after entering each query from the code blocks below.
+    >**Important:** You should select **Run** after entering each query from the code blocks below.
 
     ```KQL
     SecurityEvent  
     | where TimeGenerated > ago(1h)
     ```
+
+    >**Note:** The *Time range* now shows *Set in query* since we are filtering with the TimeGenerated column.
 
     ```KQL
     SecurityEvent  
@@ -70,7 +79,7 @@ In this task, you will build basic KQL statements.
     ```KQL
     SecurityEvent  
     | where TimeGenerated > ago(1h)
-    | where EventID == 4624
+    | where EventID == 4624  
     | where AccountType =~ "user"
     ```
 
@@ -94,7 +103,7 @@ In this task, you will build basic KQL statements.
 
     ```KQL
     let suspiciousAccounts = datatable(account: string) [
-      @"\administrator", 
+      @"NA\timadmin", 
       @"NT AUTHORITY\SYSTEM"
     ];
     SecurityEvent  
@@ -120,8 +129,8 @@ In this task, you will build basic KQL statements.
 
     ```KQL
     SecurityEvent  
-    | where TimeGenerated > ago(1h)
-    | where ProcessName != "" and Process != ""
+    | where TimeGenerated > ago(1h) 
+    | where ProcessName != "" and Process != "" 
     | extend StartDir =  substring(ProcessName,0, string_size(ProcessName)-string_size(Process))
     ```
 
@@ -129,9 +138,9 @@ In this task, you will build basic KQL statements.
 
     ```KQL
     SecurityEvent  
-    | where TimeGenerated > ago(1h)
-    | where ProcessName != "" and Process != ""
-    | extend StartDir =  substring(ProcessName,0, string_size(ProcessName)-string_size(Process))
+    | where TimeGenerated > ago(1h) 
+    | where ProcessName != "" and Process != "" 
+    | extend StartDir =  substring(ProcessName,0, string_size(ProcessName)-string_size(Process)) 
     | order by StartDir desc, Process asc
     ```
 
@@ -139,10 +148,10 @@ In this task, you will build basic KQL statements.
 
     ```KQL
     SecurityEvent  
-    | where TimeGenerated > ago(1h)
-    | where ProcessName != "" and Process != ""
-    | extend StartDir =  substring(ProcessName,0, string_size(ProcessName)-string_size(Process))
-    | order by StartDir desc, Process asc
+    | where TimeGenerated > ago(1h) 
+    | where ProcessName != "" and Process != "" 
+    | extend StartDir =  substring(ProcessName,0, string_size(ProcessName)-string_size(Process)) 
+    | order by StartDir desc, Process asc 
     | project Process, StartDir
     ```
 
@@ -150,10 +159,10 @@ In this task, you will build basic KQL statements.
 
     ```KQL
     SecurityEvent  
-    | where TimeGenerated > ago(1h)
-    | where ProcessName != "" and Process != ""
-    | extend StartDir =  substring(ProcessName,0, string_size(ProcessName)-string_size(Process))
-    | order by StartDir desc, Process asc
+    | where TimeGenerated > ago(1h) 
+    | where ProcessName != "" and Process != "" 
+    | extend StartDir =  substring(ProcessName,0, string_size(ProcessName)-string_size(Process)) 
+    | order by StartDir desc, Process asc 
     | project-away ProcessName
     ```
 
@@ -220,7 +229,7 @@ In this task, you will build KQL statements to aggregate data. **Summarize** gro
 
         ```KQL
         SecurityEvent  
-        | summarize arg_max(TimeGenerated, *) by Account
+        | summarize arg_max(TimeGenerated, *) by Account 
         | where EventID == '4624'  
         ```
 
@@ -306,10 +315,12 @@ In this task, you will build multi-table KQL statements.
         | union (SigninLogs | summarize count() | project count_)
         ```
 
+    >**Note:** The 'empty row' in the results will show the summarized count of SigninLogs.
+
 1. The following statement demonstrates the **union** operator support to union multiple tables with wildcards. In the Query Window enter the following statement and select **Run**: 
 
     ```KQL
-    union Security*  
+    union App*  
     | summarize count() by Type
     ```
 
@@ -318,12 +329,12 @@ In this task, you will build multi-table KQL statements.
     ```KQL
     SecurityEvent  
     | where EventID == "4624" 
-    | summarize LogOnCount=count() by EventID, Account
+    | summarize LogOnCount=count() by  EventID, Account
     | project LogOnCount, Account
     | join kind = inner( 
      SecurityEvent  
     | where EventID == "4634" 
-    | summarize LogOffCount=count() by EventID, Account
+    | summarize LogOffCount=count() by  EventID, Account
     | project LogOffCount, Account
     ) on Account
     ```
@@ -350,7 +361,7 @@ In this task, you will work with structured and unstructured string fields with 
     | where EventID == '4672' and AccountType == 'User' 
     | extend Account_Name = extract(@"^(.*\\)?([^@]*)(@.*)?$", 2, tolower(Account))
     | summarize LoginCount = count() by Account_Name
-    | where Account_Name != ""
+    | where Account_Name != "" 
     | where LoginCount < 10
     ```
 
@@ -365,7 +376,7 @@ In this task, you will work with structured and unstructured string fields with 
     "Event: NotifySliceRelease (resourceName=PipelineScheduler, totalSlices=27, sliceNumber=22, lockTime=02/17/2016 08:41:01, releaseTime=02/17/2016 08:41:00, previousLockTime=02/17/2016 08:40:01)",
     "Event: NotifySliceRelease (resourceName=PipelineScheduler, totalSlices=27, sliceNumber=16, lockTime=02/17/2016 08:41:00, releaseTime=02/17/2016 08:41:00, previousLockTime=02/17/2016 08:40:00)"
     ];
-    Traces  
+    Traces   
     | parse EventText with * "resourceName=" resourceName ", totalSlices=" totalSlices:long * "sliceNumber=" sliceNumber:long * "lockTime=" lockTime ", releaseTime=" releaseTime:date "," * "previousLockTime=" previousLockTime:date ")" *  
     | project resourceName, totalSlices, sliceNumber, lockTime, releaseTime, previousLockTime
     ```
@@ -379,13 +390,10 @@ In this task, you will work with structured and unstructured string fields with 
 1. The following example shows how to break out packed fields for SigninLogs. In the Query Window enter the following statement and select **Run**: 
 
     ```KQL
-    SigninLogs | extend OS = DeviceDetail.operatingSystem, Browser = DeviceDetail.browser
-    | extend CAPol0Name = tostring(ConditionalAccessPolicies[0].displayName), CAPol0Result = tostring(ConditionalAccessPolicies[0].result)
-    | extend CAPol1Name = tostring(ConditionalAccessPolicies[1].displayName), CAPol1Result = tostring(ConditionalAccessPolicies[1].result)
-    | extend CAPol2Name = tostring(ConditionalAccessPolicies[2].displayName), CAPol2Result = tostring(ConditionalAccessPolicies[2].result)
-    | extend StatusCode = tostring(Status.errorCode), StatusDetails = tostring(Status.additionalDetails)
-    | extend Date = startofday(TimeGenerated), City = tostring(LocationDetails.city)
-    | summarize count() by Date, Identity, UserDisplayName, UserPrincipalName, IPAddress, City, ResultType, ResultDescription, StatusCode, StatusDetails, CAPol0Name, CAPol0Result, CAPol1Name, CAPol1Result, CAPol2Name, CAPol2Result
+    SigninLogs | extend OS = DeviceDetail.operatingSystem, Browser = DeviceDetail.browser 
+    | extend StatusCode = tostring(Status.errorCode), StatusDetails = tostring(Status.additionalDetails) 
+    | extend Date = startofday(TimeGenerated) 
+    | summarize count() by Date, Identity, UserDisplayName, UserPrincipalName, IPAddress, ResultType, ResultDescription, StatusCode, StatusDetails 
     | sort by Date
     ```
 
@@ -394,24 +402,26 @@ In this task, you will work with structured and unstructured string fields with 
 1. The following statements demonstrates operators to manipulate JSON stored in string fields. Many logs submit data in JSON format, which requires you to know how to transform JSON data to fields that can be queried. In the Query Window enter the following statement and select **Run**: 
 
     ```KQL
-    SigninLogs | extend Location =  todynamic(LocationDetails)
-    | extend City =  Location.city
-    | extend City2 = Location["city"]
-    | project Location, City, City2
+    SigninLogs | extend AuthDetails =  todynamic(AuthenticationDetails) 
+    | extend AuthMethod =  AuthDetails[0].authenticationMethod 
+    | extend AuthResult = AuthDetails[0].["authenticationStepResultDetail"] 
+    | project AuthMethod, AuthResult, AuthDetails 
     ```
 
 1. The following statement demonstrates the **mv-expand** operator, which turns dynamic arrays into rows (multi-value expansion).
 
     ```KQL
-    SigninLogs | mv-expand Location = todynamic(LocationDetails)
+    SigninLogs | mv-expand AuthDetails = todynamic(AuthenticationDetails) 
+    | project AuthDetails
     ```
+
+1. Expand the first row by selecting ">" and then again next to *AuthDetails* to review the expanded results.
 
 1. The following statement demonstrates the **mv-apply** operator, which applies a subquery to each record and returns the union of the results of all subqueries.
 
     ```KQL
-    SigninLogs  
-    | mv-apply Location = todynamic(LocationDetails) on 
-    ( where Location.countryOrRegion == "ES")
+    SigninLogs | mv-apply AuthDetails = todynamic(AuthenticationDetails) on
+    (where AuthDetails.authenticationMethod == "Password")
     ```
 
 1. A **function** is a log query that can be used in other log queries with the saved name as a command. To create a **function**, after running your query, select the **Save** button and then select **Save As function** from the drop-down. Enter the name your want (for example: *PrivLogins*) in the **Function name** box and enter a **Legacy category** (for example: *General*) and select **Save**. The function will be available in KQL by using the function's alias:
