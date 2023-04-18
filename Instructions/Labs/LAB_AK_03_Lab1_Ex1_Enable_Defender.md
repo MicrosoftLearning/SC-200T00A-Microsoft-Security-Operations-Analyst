@@ -1,10 +1,10 @@
 ---
 lab:
-    title: 'Exercise 1 - Enable Microsoft Defender for Cloud'
+    title: 'Exercise 01 - Enable Microsoft Defender for Cloud'
     module: 'Learning Path 3 - Mitigate threats using Microsoft Defender for Cloud'
 ---
 
-# Learning Path 3 - Lab 1 - Exercise 1 - Enable Microsoft Defender for Cloud
+# Learning Path 3 - Lab 1 - Exercise 01 - Enable Microsoft Defender for Cloud
 
 ## Lab scenario
 
@@ -61,25 +61,30 @@ In this task, you will enable and configure Microsoft Defender for Cloud.
 
 1. On the **Getting started** page, under the **Upgrade** tab, make sure your subscription is selected, and then select the **Upgrade** button at the bottom of the page. Wait for the *Trial started* notification to appear, it takes about 2 minutes. **Hint:** You can click the bell button on the top bar to review your Azure portal notifications.
 
+    >**Note:** If you see the error *"Could not start Azure Defender trial on the subscription"*, continue with the next steps to enable all the Defender plans in Step 5.
+
 1. In the left menu for Microsoft Defender for Cloud, under the Management, select **Environment settings**.
 
 1. Select the **"Azure Pass - Sponsorship"** subscription (or equivalent name in your Language). 
 
 1. Review the Azure resources that are now protected with the Defender for Cloud plans.
 
+    >**Important:** If all Defender plans are *Off*, select **Enable all plans** and then click **Save**. Wait for the *"Resource plan in subscription Azure Pass were saved successfully!"* notification to appear.
+
 1. Select the **Settings & monitoring** tab from the Settings area (next to Save).
 
-1. Review the monitoring extensions. Confirm that **Log Analytics agent/Azure Monitor agent** is **Off**. Close the Settings & monitoring page by selecting the 'X' on the upper right of the page.
+1. Review the monitoring extensions. It includes configurations for Virtual Machines, Containers and Storage Accounts. Close the "Settings & monitoring" page by selecting the 'X' on the upper right of the page.
 
 1. Close the settings page by selecting the 'X' on the upper right of the page to go back to the **Environment settings** and select the '>' to the left of your subscription.
 
 1. Select the Log analytics workspace you created earlier *uniquenameDefender* to review the available options and pricing.
 
-1. Select **Enable all** (to the right of Select Defender plan) and then select **Save**. Wait for the *"Microsoft Defender plan for workspace uniquenameDefender were saved successfully!"* notification to appear.
+1. Select **Enable all plans** (to the right of Select Defender plan) and then select **Save**. Wait for the *"Microsoft Defender plan for workspace uniquenameDefender were saved successfully!"* notification to appear.
 
     >**Note:** If the page is not being displayed, refresh your Edge browser and try again.
 
 1. Close the Defender plans page by selecting the 'X' on the upper right of the page to go back to the **Environment settings**
+
 
 ### Task 4: Install Azure Arc on an On-Premises Server
 
@@ -101,17 +106,15 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 
 1. Select **+ Add**.
 
-1. Select **Generate script** in the "Add a single server" section.
+1. Select **Generate script** from the "Add a single server" section.
 
-1. Select **Next** to get to the Resource details tab.
-
-1. Select the Resource group you created earlier. **Hint:** *RG-Defender*
+1. In the *Add a server with Azure Arc* page, select the Resource group you created earlier under *Project details*. **Hint:** *RG-Defender*
 
     >**Note:** If you haven't already created a resource group, open another tab and create the resource group and start over.
 
 1. Review the *Server details* and *Connectivity method* options. Keep the default values and select **Next** to get to the Tags tab.
 
-1. Select **Next** to get to the Download and run script tab.
+1. Review the default available tags. Select **Next** to get to the Download and run script tab.
 
 1. Scroll down and select the **Download** button. **Hint:** if your browser blocks the download, take action in the browser to allow it. In Edge Browser, select the ellipsis button (...) if needed and then select **Keep**. 
 
@@ -141,17 +144,18 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 
     >**Note:** This could take a couple of minutes.
 
+
 ### Task 5: Protect an On-Premises Server
 
 In this task, you will manually install the required agent on the **WINServer** virtual machine.
 
-1. Go to **Microsoft Defender for Cloud** and select the **Getting Started** page.
+1. Go to **Microsoft Defender for Cloud** and select the **Getting Started** page from the left menu.
 
 1. Select the **Get Started** tab.
 
 1. Scroll down and select **Configure** under the *Add non-Azure servers* section.
 
-1. Select **Upgrade** next to the workspace you created earlier. This might take a few minutes, wait until you see the notification *"Azure Defender plan for workspace uniquenameDefender were saved successfully!"*.
+1. Select **Upgrade** next to the workspace you created earlier. This might take a few minutes, wait until you see the notification *"Microsoft Defender plan for workspace uniquenameDefender were saved successfully!"*.
 
 1. Select **+ Add Servers** next to the workspace you created earlier.
 
@@ -161,11 +165,13 @@ In this task, you will manually install the required agent on the **WINServer** 
 
 1. Select **Open file** to run the downloaded *MMASetup-AMD64.exe* file.
 
-1. Select **Next** until the wizard page for **Agent Setup Options** appears; select **Connect the Agent to Azure Log Analytics (OMS)**, then select **Next**.
+1. Select **Next** until the wizard page for **Agent Setup Options** appears.
+
+1. Select **Connect the Agent to Azure Log Analytics (OMS)**, then select **Next**.
 
 1. Copy and paste the **Workspace ID** and **Primary Key** value in the **Workspace Key** text box from the Azure portal into the wizard page fields as appropriate and select **Next**.
 
-1. Continue with the Install. Select **Finish** when complete.
+1. Continue with the **Install**. Select **Finish** when complete.
 
 1. Go to the "Microsoft Defender for Cloud" portal and select **Inventory**.
 
