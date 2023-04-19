@@ -15,6 +15,8 @@ You are a Security Operations Analyst working at a company that implemented Micr
 
 >**Important:** There are steps within the next Tasks that are done in different virtual machines. Look for the Virtual Machine name references.
 
+**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/SC-200%20Lab%20Simulation%20-%20Connect%20Linux%20hosts%20to%20Microsoft%20Sentinel%20using%20data%20connectors)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
+
 ### Task 1: Access the Microsoft Sentinel Workspace
 
 In this task, you will access your Microsoft Sentinel workspace.
