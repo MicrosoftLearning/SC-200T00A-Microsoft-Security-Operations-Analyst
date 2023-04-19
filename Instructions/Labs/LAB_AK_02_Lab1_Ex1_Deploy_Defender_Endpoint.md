@@ -92,7 +92,7 @@ In this task, you will configure roles for use with device groups.
 
 1. Select the **Assigned user groups** tab on the top. Select **sg-IT** and then select **Add selected groups**. Make sure it appears under *Azure AD user groups with this role*.
 
-1. Select **Submit** and then **Done** when finished.
+1. Select **Submit**. If you receive an error while saving the role, refresh the page and try again.
 
     >**Note:** If you receive the error *"User can't perform this action since its UserAuthEnforcementMode is Rbac and this action requires one of: RbacV2"*, select **OK** and try again.
 
@@ -121,7 +121,9 @@ In this task, you will configure device groups that allow for access control and
 
 1. For the User access tab, select **sg-IT** and then select **Add selected groups** button. Make sure it appears under *Azure AD user groups with access to this device group*.
 
-1. Select **Submit** and then **Done** when finished.
+1. Select **Submit**.
+
+1. Select **Done**
 
 1. Device group configuration has changed. Select **Apply changes** to check matches and recalculate groupings.
 
