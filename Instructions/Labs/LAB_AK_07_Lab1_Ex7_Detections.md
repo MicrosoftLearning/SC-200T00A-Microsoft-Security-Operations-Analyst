@@ -1,10 +1,10 @@
 ---
 lab:
-    title: 'Exercise 7 - Create Detections'
+    title: 'Exercise 07 - Create Detections'
     module: 'Learning Path 7 - Create detections and perform investigations using Microsoft Sentinel'
 ---
 
-# Learning Path 7 - Lab 1 - Exercise 7 - Create Detections
+# Learning Path 7 - Lab 1 - Exercise 07 - Create Detections
 
 ## Lab scenario
 
@@ -12,11 +12,25 @@ You are a Security Operations Analyst working at a company that implemented Micr
 
 Analytics rules search for specific events or sets of events across your environment, alert you when certain event thresholds or conditions are reached, generate incidents for your SOC to triage and investigate, and respond to threats with automated tracking and reMediation processes.
 
-### Task 1: Attack 1 Detection with Defender for Endpoint
+>**Important:** The next steps are done in a different machine than the one you were previously working. Look for the Virtual Machine name references.
 
-In this task, you will create a detection for **Attack 1** on the host (Win1) with the Microsoft Defender for Endpoint configured.
+### Task 1: Persistence Attack Detection
 
-1. In the Microsoft Sentinel portal, select **Logs** from the General section in case you navigated away from this page.
+In this task, you will create a detection for the first attack of the previous exercise.
+
+1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
+
+1. In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
+
+1. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
+
+1. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
+
+1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
+
+1. Select your Microsoft Sentinel Workspace you created earlier.
+
+1. Select **Logs** from the *General* section.
 
 1. **Run** the following KQL Statement again to recall the tables where we have this data:
 
@@ -24,51 +38,25 @@ In this task, you will create a detection for **Attack 1** on the host (Win1) wi
     search "temp\\startup.bat"
     ```
 
-1. This detection will focus on data from Defender for Endpoint. **Run** the following KQL Statement:
+    >**Note:** A result with the event might take up to 5 minutes to appear. Wait until it does. If it does not appear, make sure you have rebooted WIN2 as instructed in the previous exercise and that you have completed the Task #3 of the Learning Path 6 Lab, Exercise 2.
 
-    ```KQL
-    search in (Device*) "temp\\startup.bat"
-    ```
-
-1. The table *DeviceRegistryEvents* looks to have the data already normalized and easy for us to query. Expand the row to see all the columns related to the record.
-
-    >**Important:** If you do not see the *DeviceRegistryEvents* table in the results, an alternative for the following two queries is to use the *DeviceProcessEvents* table as replacement. Being that said, use one of the two provided examples below, depending on the table you see in the previous query.
+1. The table *SecurityEvent* looks to have the data already normalized and easy for us to query. Expand the row to see all the columns related to the record.
 
 1. From the results, we now know that the Threat Actor is using reg.exe to add keys to the Registry key and the program is located in C:\temp. **Run** the following statement to replace the *search* operator with the *where* operator in our query:
 
     ```KQL
-    DeviceRegistryEvents | where ActionType == "RegistryValueSet"
-    | where InitiatingProcessFileName == "reg.exe"
-    | where RegistryValueData startswith "c:\\temp"
-    ```
-
-    Alternatively, you can **Run** the following KQL query using the *DeviceProcessEvents* table:
-
-    ```KQL
-    DeviceProcessEvents | where ActionType == "ProcessCreated"
-    | where FileName == "reg.exe"
-    | where ProcessCommandLine contains "c:\\temp"
+    SecurityEvent | where Activity startswith "4688" 
+    | where Process == "reg.exe" 
+    | where CommandLine startswith "REG" 
     ```
 
 1. It is important to help the Security Operations Center Analyst by providing as much context about the alert as you can. This includes projecting Entities for use in the investigation graph. **Run** the following query:
 
     ```KQL
-    DeviceRegistryEvents
-    | where ActionType == "RegistryValueSet"
-    | where InitiatingProcessFileName == "reg.exe"
-    | where RegistryValueData startswith "c:\\temp"
-    | extend timestamp = TimeGenerated, HostCustomEntity = DeviceName, AccountCustomEntity = InitiatingProcessAccountName
-    ```
-
-   ![Screenshot](../Media/SC200_sysmon_query2.png)
-
-    Alternatively, you can **Run** the following KQL query using the *DeviceProcessEvents* table:
-
-    ```KQL
-    DeviceProcessEvents | where ActionType == "ProcessCreated"
-    | where FileName == "reg.exe"
-    | where ProcessCommandLine contains "c:\\temp"
-    | extend timestamp = TimeGenerated, HostCustomEntity = DeviceName, AccountCustomEntity = InitiatingProcessAccountName
+    SecurityEvent | where Activity startswith "4688" 
+    | where Process == "reg.exe" 
+    | where CommandLine startswith "REG" 
+    | extend timestamp = TimeGenerated, HostCustomEntity = Computer, AccountCustomEntity = SubjectUserName
     ```
 
 1. Now that you have a good detection rule, in the Logs window, select the **+ New alert rule** in the command bar and then select **Create Microsoft Sentinel alert**. This will create a new Scheduled rule. **Hint:** You might need to select the ellipsis (...) button in the command bar.
@@ -77,8 +65,8 @@ In this task, you will create a detection for **Attack 1** on the host (Win1) wi
 
     |Setting|Value|
     |---|---|
-    |Name|**MDE Startup RegKey**|
-    |Description|**MDE Startup Regkey in c:\temp**|
+    |Name|**Startup RegKey**|
+    |Description|**Startup Regkey in c:\temp**|
     |Tactics|**Persistence**|
     |Severity|**High**|
 
@@ -104,9 +92,9 @@ In this task, you will create a detection for **Attack 1** on the host (Win1) wi
 1. On the *Review* tab, select the **Create** button to create the new Scheduled Analytics rule.
 
 
-### Task 2: Attack 2 Detection with SecurityEvent
+### Task 2: Privilege Elevation Attack Detection
 
-In this task, you will create a detection for **Attack 2** on the host (Win2) with the Security Events connector  installed.
+In this task, you will create a detection for the second attack of the previous exercise.
 
 1. In the Microsoft Sentinel portal, select **Logs** from the General section in case you navigated away from this page.
 
@@ -136,8 +124,6 @@ In this task, you will create a detection for **Attack 2** on the host (Win2) wi
     ```
 
    ![Screenshot](../Media/SC200_sysmon_attack3.png)
-
-    >**Note:** This KQL might not return the expected results because of the small dataset used in the lab.
 
 1. Extend the row to show the resulting columns, in the last one, we see the name of the added user under the *UserName1* column we *project* within the KQL query. It is important to help the Security Operations Analyst by providing as much context about the alert as you can. This includes projecting Entities for use in the investigation graph. **Run** the following query:
 
