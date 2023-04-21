@@ -1,10 +1,10 @@
 ---
 lab:
-    title: 'Exercise 2 - Create a Playbook'
+    title: 'Exercise 02 - Create a Playbook'
     module: 'Learning Path 7 - Create detections and perform investigations using Microsoft Sentinel'
 ---
 
-# Learning Path 7 - Lab 1 - Exercise 2 - Create a Playbook
+# Learning Path 7 - Lab 1 - Exercise 02 - Create a Playbook
 
 ## Lab scenario
 
@@ -62,7 +62,7 @@ In this task, you will create a Logic App that will be used as a Playbook in Mic
 
 1. Select the **Community** page under the *Content management* area on the left side of the page.
 
-1. On the right pane, select the **Onboard community content** link. This will open a new tab in the Edge Browser for Microsoft Sentinel GitHub content.
+1. On the right pane, select the **Onboard community content** link. This will open a new tab in the Edge Browser for Microsoft Sentinel GitHub content. **Hint:** You might need to scroll right to see the link. Alternatively, follow this link instead: [Microsoft Sentinel on GitHub](https://github.com/Azure/Azure-Sentinel).
 
 1. Select the **Solutions** folder.
 
@@ -70,9 +70,7 @@ In this task, you will create a Logic App that will be used as a Playbook in Mic
 
 1. Select the **Post-Message-Teams** folder.
 
-1. In the readme.md box, scroll down to the second *Quick Deployment* option, **Deploy with alert trigger** and select the **Deploy to Azure** button.  
-
-    >**VERY IMPORTANT**: Be aware that they are two different Microsoft Sentinel triggers to use, Incident and Alert. Make sure you are selecting the Alert (second) one.
+1. In the readme.md box, scroll down to the *Quick Deployment* section, **Deploy with incident trigger (recommended)** and select the **Deploy to Azure** button.  
 
 1. Make sure your Azure Subscription is selected.
 
@@ -80,11 +78,13 @@ In this task, you will create a Logic App that will be used as a Playbook in Mic
 
 1. Leave **(US) East US** as the default value for *Region*.
 
-1. Make sure the *Playbook Name* is "PostMessageTeams-OnAlert" and select **Review + create**. **Hint:** If the name is different, go back to GitHub and select the **Deploy with alert trigger** playbook.
+1. Rename the *Playbook Name* to "PostMessageTeams-OnIncident" and select **Review + create**.
 
 1. Now select **Create**. 
 
     >**Note:** Wait for the deployment to finish before proceeding to the next task.
+
+1. Repeat the task, but instead of selecting *Deploy with incident trigger (recommended)*, select the **Deploy with alert trigger** playbook. **Hint:** The playbook appears below the one you just deployed in GitHub.
 
 
 ### Task 3: Update a Playbook in Microsoft Sentinel
@@ -97,7 +97,9 @@ In this task, you will update the new playbook you created with the proper conne
 
 1. Select the **Automation** under the *Configuration* area and then select the **Active Playbooks** tab.
 
-1. Select the **PostMessageTeams-OnAlert** playbook. **Hint:** If you do not see the playbook, refresh the Azure portal page by pressing Ctrl+F5.
+1. Select **Refresh** from the command bar in case you don't see any playbook. You should see the two playbooks created from the previous step, but with different triggers.
+
+1. Select the **PostMessageTeams-OnAlert** playbook name.
 
 1. On the Logic App page for *PostMessageTeams-OnAlert*, in the command menu, select **Edit**.
 
@@ -121,8 +123,9 @@ In this task, you will update the new playbook you created with the proper conne
 
 1. Do the same for the *Channel* field, select the **X** at the end of the field to clear the contents. The field will be changed to a drop-down with a listing of the Channels of the SOC Teams. Select **New Alerts**.
 
-1. Select **Save** on the command bar.
+1. Select **Save** on the command bar. The Logic App will be used in a future lab.
 
-The Logic App will be used in a future lab.
+1. Repeat the task, but instead of selecting *PostMessageTeams-OnAlert*, select the **PostMessageTeams-OnIncident** playbook. **Hint:** There is no need to create connections, just reuse the one you created for this task.
+
 
 ## Proceed to Exercise 3
