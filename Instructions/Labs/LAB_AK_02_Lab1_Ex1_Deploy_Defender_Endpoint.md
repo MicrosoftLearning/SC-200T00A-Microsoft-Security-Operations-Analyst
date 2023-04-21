@@ -1,10 +1,10 @@
 ---
 lab:
-    title: 'Exercise 01 - Deploy Microsoft Defender for Endpoint'
+    title: 'Exercise 1 - Deploy Microsoft Defender for Endpoint'
     module: 'Learning Path 2 - Mitigate threats using Microsoft Defender for Endpoint'
 ---
 
-# Learning Path 2 - Lab 1 - Exercise 01 - Deploy Microsoft Defender for Endpoint
+# Learning Path 2 - Lab 1 - Exercise 1 - Deploy Microsoft Defender for Endpoint
 
 ## Lab scenario
 

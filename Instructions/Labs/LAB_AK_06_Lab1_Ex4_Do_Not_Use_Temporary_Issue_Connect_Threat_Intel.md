@@ -1,6 +1,6 @@
  **Do not use. Temporarily not operational.**
 
-# Learning Path 6 - Lab 1 - Exercise 04 - Connect Threat intelligence to Microsoft Sentinel using data connectors
+# Learning Path 6 - Lab 1 - Exercise 4 - Connect Threat intelligence to Microsoft Sentinel using data connectors
 
 ## Lab scenario
 

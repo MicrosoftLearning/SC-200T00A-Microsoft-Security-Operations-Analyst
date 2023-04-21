@@ -1,10 +1,10 @@
 ---
 lab:
-    title: 'Exercise 08 - Investigate Incidents'
+    title: 'Exercise 8 - Investigate Incidents'
     module: 'Learning Path 7 - Create detections and perform investigations using Microsoft Sentinel'
 ---
 
-# Learning Path 7 - Lab 1 - Exercise 08 - Investigate Incidents
+# Learning Path 7 - Lab 1 - Exercise 8 - Investigate Incidents
 
 ## Lab scenario
 

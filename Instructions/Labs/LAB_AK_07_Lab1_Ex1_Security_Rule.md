@@ -1,10 +1,10 @@
 ---
 lab:
-    title: 'Exercise 01 - Modify a Microsoft Security rule'
+    title: 'Exercise 1 - Modify a Microsoft Security rule'
     module: 'Learning Path 7 - Create detections and perform investigations using Microsoft Sentinel'
 ---
 
-# Learning Path 7 - Lab 1 - Exercise 01 - Modify a Microsoft Security rule
+# Learning Path 7 - Lab 1 - Exercise 1 - Modify a Microsoft Security rule
 
 ## Lab scenario
 

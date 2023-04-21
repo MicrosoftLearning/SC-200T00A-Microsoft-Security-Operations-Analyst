@@ -1,10 +1,10 @@
 ---
 lab:
-    title: 'Exercise 02 - Create a Playbook'
+    title: 'Exercise 2 - Create a Playbook'
     module: 'Learning Path 7 - Create detections and perform investigations using Microsoft Sentinel'
 ---
 
-# Learning Path 7 - Lab 1 - Exercise 02 - Create a Playbook
+# Learning Path 7 - Lab 1 - Exercise 2 - Create a Playbook
 
 ## Lab scenario
 

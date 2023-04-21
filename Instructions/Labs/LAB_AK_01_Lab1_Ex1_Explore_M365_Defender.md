@@ -1,10 +1,10 @@
 ---
 lab:
-    title: 'Exercise 01 - Explore Microsoft 365 Defender'
+    title: 'Exercise 1 - Explore Microsoft 365 Defender'
     module: 'Learning Path 1 - Mitigate threats using Microsoft 365 Defender'
 ---
 
-# Learning Path 1 - Lab 1 - Exercise 01 - Explore Microsoft 365 Defender
+# Learning Path 1 - Lab 1 - Exercise 1 - Explore Microsoft 365 Defender
 
 ## Lab scenario
 

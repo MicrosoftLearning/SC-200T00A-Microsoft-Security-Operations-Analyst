@@ -1,10 +1,10 @@
 ---
 lab:
-    title: 'Exercise 01 - Create queries for Microsoft Sentinel using Kusto Query Language (KQL)'
+    title: 'Exercise 1 - Create queries for Microsoft Sentinel using Kusto Query Language (KQL)'
     module: 'Learning Path 4 - Create queries for Microsoft Sentinel using Kusto Query Language (KQL)'
 ---
 
-# Learning Path 4 - Lab 1 - Exercise 01 - Create queries for Microsoft Sentinel using Kusto Query Language (KQL)
+# Learning Path 4 - Lab 1 - Exercise 1 - Create queries for Microsoft Sentinel using Kusto Query Language (KQL)
 
 ## Lab scenario
 

@@ -1,10 +1,10 @@
 ---
 lab:
-    title: 'Exercise 03 - Create a Scheduled Query from a template'
+    title: 'Exercise 3 - Create a Scheduled Query from a template'
     module: 'Learning Path 7 - Create detections and perform investigations using Microsoft Sentinel'
 ---
 
-# Learning Path 7 - Lab 1 - Exercise 03 - Create a Scheduled Query from a template
+# Learning Path 7 - Lab 1 - Exercise 3 - Create a Scheduled Query from a template
 
 ## Lab scenario
 

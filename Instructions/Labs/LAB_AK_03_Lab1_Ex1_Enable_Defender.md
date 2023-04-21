@@ -1,10 +1,10 @@
 ---
 lab:
-    title: 'Exercise 01 - Enable Microsoft Defender for Cloud'
+    title: 'Exercise 1 - Enable Microsoft Defender for Cloud'
     module: 'Learning Path 3 - Mitigate threats using Microsoft Defender for Cloud'
 ---
 
-# Learning Path 3 - Lab 1 - Exercise 01 - Enable Microsoft Defender for Cloud
+# Learning Path 3 - Lab 1 - Exercise 1 - Enable Microsoft Defender for Cloud
 
 ## Lab scenario
 

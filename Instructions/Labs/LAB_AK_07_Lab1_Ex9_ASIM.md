@@ -1,10 +1,10 @@
 ---
 lab:
-    title: 'Exercise 09 - Create ASIM parsers'
+    title: 'Exercise 9 - Create ASIM parsers'
     module: 'Learning Path 7 - Create detections and perform investigations using Microsoft Sentinel'
 ---
 
-# Learning Path 7 - Lab 1 - Exercise 09 - Deploy ASIM parsers
+# Learning Path 7 - Lab 1 - Exercise 9 - Deploy ASIM parsers
 
 ## Lab scenario
 

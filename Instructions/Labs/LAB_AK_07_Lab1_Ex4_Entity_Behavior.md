@@ -1,10 +1,10 @@
 ---
 lab:
-    title: 'Exercise 04 - Explore Entity Behavior Analytics'
+    title: 'Exercise 4 - Explore Entity Behavior Analytics'
     module: 'Learning Path 7 - Create detections and perform investigations using Microsoft Sentinel'
 ---
 
-# Learning Path 7 - Lab 1 - Exercise 04 - Explore Entity Behavior Analytics
+# Learning Path 7 - Lab 1 - Exercise 4 - Explore Entity Behavior Analytics
 
 ## Lab scenario
 
