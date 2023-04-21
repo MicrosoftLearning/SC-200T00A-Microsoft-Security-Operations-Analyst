@@ -73,7 +73,7 @@ In this task, you will build basic KQL statements.
 
     ```KQL
     SecurityEvent  
-    | where TimeGenerated > ago(1h) and EventID == "4624"
+    | where TimeGenerated > ago(1h) and EventID == 4624
     ```
 
     ```KQL
@@ -175,7 +175,7 @@ In this task, you will build KQL statements to aggregate data. **Summarize** gro
 
     ```KQL
     SecurityEvent  
-    | where TimeGenerated > ago(1h) and EventID == '4688'  
+    | where TimeGenerated > ago(1h) and EventID == 4688  
     | summarize count() by Process, Computer
     ```
 
@@ -183,7 +183,7 @@ In this task, you will build KQL statements to aggregate data. **Summarize** gro
 
     ```KQL
     SecurityEvent  
-    | where TimeGenerated > ago(1h) and EventID == '4624'  
+    | where TimeGenerated > ago(1h) and EventID == 4624  
     | summarize cnt=count() by AccountType, Computer
     ```
 
@@ -230,14 +230,14 @@ In this task, you will build KQL statements to aggregate data. **Summarize** gro
         ```KQL
         SecurityEvent  
         | summarize arg_max(TimeGenerated, *) by Account 
-        | where EventID == '4624'  
+        | where EventID == 4624  
         ```
 
     1. **Query 2** will have the most recent login for Accounts that have logged in. The SecurityEvent table will be filtered to only include EventID = 4624. Then these results will be summarized for the most current login row by Account.
 
         ```KQL
         SecurityEvent  
-        | where EventID == '4624'  
+        | where EventID == 4624  
         | summarize arg_max(TimeGenerated, *) by Account
         ```
 
@@ -248,7 +248,7 @@ In this task, you will build KQL statements to aggregate data. **Summarize** gro
     ```KQL
     SecurityEvent  
     | where TimeGenerated > ago(1h)
-    | where EventID == '4624'  
+    | where EventID == 4624  
     | summarize make_list(Account) by Computer
     ```
 
@@ -257,7 +257,7 @@ In this task, you will build KQL statements to aggregate data. **Summarize** gro
     ```KQL
     SecurityEvent  
     | where TimeGenerated > ago(1h)
-    | where EventID == '4624'  
+    | where EventID == 4624  
     | summarize make_set(Account) by Computer
     ```
 
@@ -328,12 +328,12 @@ In this task, you will build multi-table KQL statements.
 
     ```KQL
     SecurityEvent  
-    | where EventID == "4624" 
+    | where EventID == 4624 
     | summarize LogOnCount=count() by  EventID, Account
     | project LogOnCount, Account
     | join kind = inner( 
      SecurityEvent  
-    | where EventID == "4634" 
+    | where EventID == 4634 
     | summarize LogOffCount=count() by  EventID, Account
     | project LogOffCount, Account
     ) on Account
@@ -358,7 +358,7 @@ In this task, you will work with structured and unstructured string fields with 
 
     ```KQL
     SecurityEvent  
-    | where EventID == '4672' and AccountType == 'User' 
+    | where EventID == 4672 and AccountType == 'User' 
     | extend Account_Name = extract(@"^(.*\\)?([^@]*)(@.*)?$", 2, tolower(Account))
     | summarize LoginCount = count() by Account_Name
     | where Account_Name != "" 
