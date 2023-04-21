@@ -1,10 +1,10 @@
 ---
 lab:
-    title: 'Exercise 1 - Perform Threat Hunting in Microsoft Sentinel'
+    title: 'Exercise 01 - Perform Threat Hunting in Microsoft Sentinel'
     module: 'Learning Path 8 - Perform threat hunting in Microsoft Sentinel'
 ---
 
-# Learning Path 8 - Lab 1 - Exercise 1 - Perform Threat Hunting in Microsoft Sentinel
+# Learning Path 8 - Lab 1 - Exercise 01 - Perform Threat Hunting in Microsoft Sentinel
 
 ## Lab scenario
 
@@ -40,119 +40,93 @@ In this task, you will create a hunting query, bookmark a result, and create a L
    >**Important:** Please paste any KQL queries first in Notepad and then copy from there to the *New Query 1* Log window to avoid any errors.
 
     ```KQL
-    let lookback = 2d;
-    DeviceEvents | where TimeGenerated >= ago(lookback) 
-    | where ActionType == "DnsQueryResponse"
-    | extend c2 = substring(tostring(AdditionalFields.DnsQueryString),0,indexof(tostring(AdditionalFields.DnsQueryString),"."))
-    | where c2 startswith "sub"
-    | summarize count() by bin(TimeGenerated, 3m), c2
-    | where count_ > 5
-    | render timechart 
+    let lookback = 2d; 
+    SecurityEvent | where TimeGenerated >= ago(lookback) 
+    | where EventID == 4688 and Process =~ "powershell.exe"
+    | extend PwshParam = trim(@"[^/\\]*powershell(.exe)+" , CommandLine) 
+    | project TimeGenerated, Computer, SubjectUserName, PwshParam 
+    | summarize min(TimeGenerated), count() by Computer, SubjectUserName, PwshParam 
+    | order by count_ desc nulls last 
     ```
 
-    ![Screenshot](../Media/SC200_hunting1.png)
+1. Review the different results. You have now identified PowerShell requests that are running in your environment.
 
-1. The goal of the previous KQL query is to provide a visualization for a C2 beaconing on a consistent basis. Adjust grouping of values by changing the *3m* setting to **1m** within bin() and **Run** the query again.
+1. Select the checkbox of the results that shows the *"-file c2.ps1"*.
 
-1. Change it back to *3m*. Now change the *count_* threshold to **10** and **Run** the query again to witness the impact.
+1. In the middle command bar, select the **Add bookmark** button.
 
-1. You have now identified DNS requests that are beaconing to a C2 server. Next, determine which devices are beaconing. **Run** the following KQL Statement:
+1. Select **+ Add new entity** under *Entity mapping*.
 
-    ```KQL
-    let lookback = 2d;
-    DeviceEvents | where TimeGenerated >= ago(lookback) 
-    | where ActionType == "DnsQueryResponse"
-    | extend c2 = substring(tostring(AdditionalFields.DnsQueryString),0,indexof(tostring(AdditionalFields.DnsQueryString),".")) 
-    | where c2 startswith "sub"
-    | summarize cnt=count() by bin(TimeGenerated, 3m), c2, DeviceName
-    | where cnt > 5
-    ```
+1. For *Entity* select **Host**, then **Hostname** and **Computer** for the values.
 
-    ![Screenshot](../Media/SC200_hunting2.png)
+1. For *Tactics and Techniques*, select **Command and Control**.
 
-    >**Note:** The generated log data is only from the WIN1 device.
+1. Go back to the *Add bookmark* blade, and the select **Create**. We will map this bookmark to an incident later.
 
 1. Close the *Logs* window by selecting the **X** in the top-right of the window and select **OK** to discard the changes. 
 
-1. Select your Microsoft Sentinel workspace again and select the **Hunting** page under the Threat Management area.
+1. Select your Microsoft Sentinel workspace again and select the **Hunting** page under the *Threat Management* area.
 
 1. Select **+ New Query** from the command bar.
 
-1. In the *Create custom query* window, for the *Name* type **C2 Hunt**
+1. In the *Create custom query* window, for the *Name* type **PowerShell Hunt**
 
 1. For the *Custom query* enter the following KQL statement:
 
     ```KQL
-    let lookback = 2d;
-    DeviceEvents | where TimeGenerated >= ago(lookback) 
-    | where ActionType == "DnsQueryResponse"
-    | extend c2 = substring(tostring(AdditionalFields.DnsQueryString),0,indexof(tostring(AdditionalFields.DnsQueryString),"."))
-    | where c2 startswith "sub"
-    | summarize cnt=count() by bin(TimeGenerated, 3m), c2, DeviceName
-    | where cnt > 5
+    let lookback = 2d; 
+    SecurityEvent | where TimeGenerated >= ago(lookback) 
+    | where EventID == 4688 and Process =~ "powershell.exe"
+    | extend PwshParam = trim(@"[^/\\]*powershell(.exe)+" , CommandLine) 
+    | project TimeGenerated, Computer, SubjectUserName, PwshParam 
+    | summarize min(TimeGenerated), count() by Computer, SubjectUserName, PwshParam 
+    | order by count_ desc nulls last 
     ```
 
-1. Scroll down and under *Entity mapping (Preview)* select:
+1. Scroll down and under *Entity mapping* select:
 
     - For the *Entity type* drop-down list select **Host**.
     - For the *Identifier* drop-down list select **HostName**.
-    - For the *Value* drop-down list select **DeviceName**.
+    - For the *Value* drop-down list select **Computer**.
 
 1. Scroll down and under *Tactics & Techniques* select **Command and Control** and then select **Create** to create the hunting query.
 
-1. In the *"Microsoft Sentinel - Hunting"* blade, search for the query you just created in the list, *C2 Hunt*.
+1. In the *"Microsoft Sentinel - Hunting"* blade, search for the query you just created in the list, *PowerShell Hunt*.
 
-1. Select **C2 Hunt** from the list.
+1. Select **PowerShell Hunt** from the list.
 
-1. On the right pane, scroll down and select the **Run Query** button.
+1. Review the number of results in the middle pane under the *Results* column.
 
-1. The number of results is shown in the middle pane under the *Results* column. Alternatively, scroll up to see the count over the *Results* box.
-
-1. Select the **View Results** button. The KQL query will automatically run.
-
-1. Select the checkbox of the first row in the results. 
-
-1. In the middle command bar, select the **Add bookmark** button.
-
-1. Review the values populated by default and in the *Add bookmark* blade, select **Create**.
+1. Select the **View Results** button from the right pane. The KQL query will automatically run.
 
 1. Close the *Logs* window by selecting the **X** in the top-right of the window and select **OK** to discard the changes. 
 
-1. Back in the Hunting page in the Microsoft Sentinel portal, select the **Bookmarks** tab in the middle pane.
+1. Right-click the **PowerShell Hunt** query and select **Add to livestream**. **Hint:** This also can be done by sliding right and selecting the ellipsis **(...)** at the end of the row to open a context menu.
 
-1. Select the **C2 Hunt** bookmark you just created from the results list.
+1. Review that the *Status* is now *Running*. This will be running every 30 seconds in the background and you will receive a notification in the Azure Portal (bell icon) when a new result is found. 
+
+1. Select the **Bookmarks** tab in the middle pane.
+
+1. Select the bookmark you just created from the results list.
 
 1. On the right pane, scroll down and select the **Investigate** button. **Hint:** It might take a couple of minutes to show the investigation graph.
 
-1. Explore the Investigation graph just like you did in the previous module.
+1. Explore the Investigation graph just like you did a the previous module. Notice the high number of *Related alerts* for *WIN2*.
 
-1. Close the *Investigation* graph window by selecting the **X** in the top-right of the window and select **OK** to discard the changes. 
+1. Close the *Investigation* graph window by selecting the **X** in the top-right of the window. 
 
-1. Select the **Queries** tab.
+1. Hide the right blade by selecting the **>>** icon and then the ellipsis **(...)** icon.
 
-1. Search again for and select your **C2 Hunt** query.
+1. Select **Add to existing incident**. All the incidents appear in the right pane.
 
-1. Right-click your query and select **Add to livestream**. **Hint:** This also can be done by sliding right and selecting the ellipsis **(...)** at the end of the row to open a context menu.
-
-1. Review that the *Status* is now *Running*. 
-
-1. In "Module 7 - Lab 1 - Exercise 6 - Task 1 - Attack 3" you executed a PowerShell script to simulate a C2 attack. Go back to the Command Prompt window, enter the following command from C:\Temp and press Enter. 
-
-    >**Note:** A new PowerShell window will open and you will see resolve errors. This is expected.
-
-    ```CommandPrompt
-    Start PowerShell.exe -file c2.ps1
-    ```
-
-1. You will receive a notification in the Azure Portal (bell icon) when we find a result.
+1. Select one of the incidents and then select **Add**. Notice that the *Severity* column is now populated with the incident's data.
 
 
 ### Task 2: Create a NRT query rule
 
 In this task, instead of using a LiveStream, you will create a NRT analytics query rule. NRT rules run every minute and lookback one minute. The benefit to NRT rules are they can use the alert and incident creation logic.
 
-
-1. Select the **Analytics** page in Microsoft Sentinel. 
+1. Select the **Analytics** page under *Configuration* in Microsoft Sentinel. 
 
 1. Select the **Create** tab, then **NRT query rule (Preview)**.
 
@@ -160,8 +134,8 @@ In this task, instead of using a LiveStream, you will create a NRT analytics que
 
     |Setting|Value|
     |---|---|
-    |Name|**NRT C2 Hunt**|
-    |Description|**NRT C2 Hunt**|
+    |Name|**NRT PowerShell Hunt**|
+    |Description|**NRT PowerShell Hunt**|
     |Tactics|**Command and Control**|
     |Severity|**High**|
 
@@ -170,16 +144,27 @@ In this task, instead of using a LiveStream, you will create a NRT analytics que
 1. For the *Rule query* enter the following KQL statement:
 
     ```KQL
-    let lookback = 2d;
-    DeviceEvents | where TimeGenerated >= ago(lookback) 
-    | where ActionType == "DnsQueryResponse"
-    | extend c2 = substring(tostring(AdditionalFields.DnsQueryString),0,indexof(tostring(AdditionalFields.DnsQueryString),"."))
-    | where c2 startswith "sub"
-    | summarize cnt=count() by bin(TimeGenerated, 3m), c2, DeviceName
-    | where cnt > 5
+    let lookback = 2d; 
+    SecurityEvent | where TimeGenerated >= ago(lookback) 
+    | where EventID == 4688 and Process =~ "powershell.exe"
+    | extend PwshParam = trim(@"[^/\\]*powershell(.exe)+" , CommandLine) 
+    | project TimeGenerated, Computer, SubjectUserName, PwshParam 
+    | summarize min(TimeGenerated), count() by Computer, SubjectUserName, PwshParam
     ```
 
-1. Leave the rest of the options with the defaults. Select **Next: Incident settings>** button.
+1. Select **View query results >** to make sure your query does not have any errors.
+
+1. Close the *Logs* window by selecting the **X** in the top-right of the window and select **OK** to discard the changes. 
+
+1. Select **Test with current data** under *Results simulation*. Notice the expected number of *Alerts per day.
+
+1. Under *Entity mapping* select:
+
+    - For the *Entity type* drop-down list select **Host**.
+    - For the *Identifier* drop-down list select **HostName**.
+    - For the *Value* drop-down list select **Computer**.
+
+1. Scroll down and select **Next: Incident settings>** button.
 
 1. For the *Incident settings* tab, leave the default values and select **Next: Automated response >** button.
 
@@ -187,34 +172,27 @@ In this task, instead of using a LiveStream, you will create a NRT analytics que
 
 1. On the *Review* tab, select the **Create** button to create the new Scheduled Analytics rule.
 
-1. Select the **Incidents** page in Microsoft Sentinel, within the *Threat management* section and wait for the new *C2 Hunt* alert to appear.
-
 
 ### Task 3: Create a Search
 
 In this task, you will use a Search job to look for a C2. 
 
-1. Select the **Search (Preview)** page in Microsoft Sentinel. 
+1. Select the **Search** page under *General* in Microsoft Sentinel. 
 
-1. Select the **Restore** button from the command bar.
+1. In the search box, enter **reg.exe** and then select **Start**. 
 
-    >**Note:** The lab does not have Archived tables to restore from. The normal process would restore archived tables to include in the Search job.
+1. A new query windows running the query opens. Select the ellipsis icon **(...)** from the top right and then toggle the **Search job mode**.
 
-1. Review the options available and select the **Cancel** button.
+1. Select **Search job** button from the command bar. 
 
-1. Select the **Search** tab.
+1. The search job creates a new table with your results as soon as they arrive. The results can be consulted from the *Saved Searches* tab.
 
-1. Select the *Table* filter below the search box and change it to **DeviceRegistryEvents** and the select **Apply**.
+1. Close the *Logs* window by selecting the **X** in the top-right of the window and select **OK** to discard the changes. 
+ 
+1. Select the **Restoration** button from the command bar and then the **Restore** button.
 
-1. In the search box, enter **reg.exe** and then select **Run search**.
+    >**Note:** The lab does not have Archived data to restore from.
 
-1. Select the **Saved Searches** tab.
-
-1. The search job will create a new table named **DeviceRegistryEvents_####_SRCH**.
-
-1. Wait for the search job to complete. The status will display *Updating*, then *In progress* and finally *Search completed*.
-
-1. Select **View search results**. This will open a new tab in *Logs* and query your new table name **DeviceRegistryEvents_####_SRCH** and display the results.
-
+1. Review the options available and then select the **Cancel** button.
 
 ## Proceed to Exercise 2
