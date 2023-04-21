@@ -1,10 +1,10 @@
 ---
 lab:
-    title: 'Exercise 3 - Connect Linux hosts to Microsoft Sentinel using data connectors'
+    title: 'Exercise 03 - Connect Linux hosts to Microsoft Sentinel using data connectors'
     module: 'Learning Path 6 - Connect logs to Microsoft Sentinel'
 ---
 
-# Learning Path 6 - Lab 1 - Exercise 3 - Connect Linux hosts to Microsoft Sentinel using data connectors
+# Learning Path 6 - Lab 1 - Exercise 03 - Connect Linux hosts to Microsoft Sentinel using data connectors
 
 ## Lab scenario
 
@@ -143,7 +143,7 @@ In this task, you will configure the Syslog collection facilities.
 
 1. Select the **+ Add facility** button again.
 
-1. Select **authpriv** from the drop-down menu for *Facility name*.
+1. Select **syslog** from the drop-down menu for *Facility name*.
 
 1. Select **Apply** to save your changes.
 
