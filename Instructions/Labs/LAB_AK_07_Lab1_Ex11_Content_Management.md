@@ -25,58 +25,26 @@ In this task, you will enable Entity behavior analytics in Microsoft Sentinel.
 
 1. Select your Microsoft Sentinel Workspace.
 
-1. Select **Analytics** from the Configuration area.
+1. Select **Analytics** under the *Configuration* area from the left blade.
 
-1. Select the **+ Create** button and then select **Scheduled query rule**.
+1. Select the **Startup RegKey** rule that you created earlier.
 
-1. In the Analytics rule wizard, on the General tab, type the Name **Rule from Azure DevOps**.
+1. Select the **Export** from the toolbar. **Hint:** You might need to select the ellipsis icon **(...)** to see it.
 
-1. For Tactics, select **Persistence**.
+1. The rule is exported to a text file named *Azure_Sentinel_analytic_rule.json*.
 
-1. For Severity, select **Low**.
+1. Select **Open file** below the name of the downloaded file and then select **More apps**.
 
-1. Select **Next: Set rule logic >** button:
+1. Select **Notepad** and then select **OK**.
 
-1. For the rule query, paste in the following KQL statement:
-
-    >**Warning:** When using the Paste function to the virtual machine extra (pipe) characters could be added. Make sure you use Notepad first to paste the following query.
-
-    ```KQL
-    SecurityEvent | where EventID == 4732
-    ```
-
-1. Select **View query results**. You should not receive any results nor any errors. If you receive an error, please review that the query appears just like the previous KQL statement. Close the *Logs* window by selecting the upper right **X** and select **OK** to discard to save changes to go back to the wizard.
-
-
-1. Scroll down and under *Query scheduling* set the following:
-
-    |Setting|Value|
-    |---|---|
-    |Run Query every|5 minutes|
-    |Look data from the last|1 Day|
-
-    >**Note:** We are purposely generating many incidents for the same data. This enables the Lab to use these alerts.
-
-1. Under the *Alert threshold* area, leave the value unchanged since we want the alert to register every event.
-
-1. Under the *Event grouping* area, leave the **Group all events into a single alert** as the selected option since we want to generate a single alert every time it runs, as long as the query returns more results than the specified alert threshold above.
-
-1. Select the **Next: Incident settings >** button. 
-
-1. Select the **Next: Automated response >** button.
-
-1. Select the **Next: Review >** button.
- 
-1. Select **Create**.
-
-1. Select the rule just created, then select **Export** from the toolbar.
+1. Review the Azure Resource Manager template and the close it when done.
 
 1. Select the rule just created, then select **Delete**.
 
 
 ### Task 2: Create our Azure DevOps environment
 
-In this task, you will test create and populate an Azure DevOps repository..
+In this task, you will create an Azure DevOps repository.
 
 1. Open another tab in the browser.
 
@@ -84,7 +52,7 @@ In this task, you will test create and populate an Azure DevOps repository..
 
 1. On the *We need a few more details* page, select **Continue**.
 
-1. On the *Get started with Azure DevOps* page, select **Create new organization** and the select **Continue**.
+1. On the *Get started with Azure DevOps* page, select **Create new organization** and then select **Continue**.
 
 1. On the *Almost done...* page, enter a name for your DevOps organization that you would not want to use in the future, like for example, your tenant prefix. **Hint:** It can be found in the Resources tab of your lab (WWLx...).
 
@@ -98,7 +66,7 @@ In this task, you will test create and populate an Azure DevOps repository..
 
 1. The page should show the Files for the Repo.  the only file is README.me.
 
-1. On the Files (right side of the page) blade, the toolbar include options *Set up build*, *Clone*, and *:*.  Select **:** to show more options.
+1. On the Files (right side of the page) blade, the toolbar include options *Set up build*, *Clone*, ... Select the colon icon **(:)** to show more options.
 
 1. Select **Upload Files**.
 
@@ -110,9 +78,9 @@ In this task, you will test create and populate an Azure DevOps repository..
 
 1. Select **Organization settings** from the bottom left of the page.
 
-1. Select **Policies** in the *Security* area.
+1. Select **Policies** under the *Security* area of the left blade.
 
-1. Turn **On** *Third-party application access via OAuth* in the *Application connection policies* area.
+1. Toggle **On** *Third-party application access via OAuth* under the *Application connection policies* area.
 
 
 ### Task 3: Connect Sentinel to Azure DevOps.
@@ -121,7 +89,7 @@ In this task, you will test create and populate an Azure DevOps repository..
 
 1. In Microsoft Sentinel, select **Repositories (Preview)** in the *Content Management* section.
 
-1. Select **Add new** from the toolbar.
+1. Select **+ Add new** button from the toolbar.
 
 1. For the name enter **My Content**.
 

@@ -1,10 +1,10 @@
 ---
 lab:
-    title: 'Exercise 3 - Create a Scheduled Query'
+    title: 'Exercise 3 - Create a Scheduled Query from a template'
     module: 'Learning Path 7 - Create detections and perform investigations using Microsoft Sentinel'
 ---
 
-# Learning Path 7 - Lab 1 - Exercise 3 - Create a Scheduled Query
+# Learning Path 7 - Lab 1 - Exercise 3 - Create a Scheduled Query from a template
 
 ## Lab scenario
 
@@ -31,43 +31,21 @@ In this task, you will create a scheduled query and connect it to the Teams chan
 
 1. Select **Analytics** from the Configuration area.
 
-1. Select the **+ Create** button and then select **Scheduled query rule**.
+1. Make sure that you are in the *Rule templates* tab in the command bar and search for the **New CloudShell User** rule.
 
-1. In the Analytics rule wizard, on the General tab, type the Name *Azure AD Role Assignment Audit Trail*.
+1. From the rule summary blade, make sure you are receiving data by checking the green connected icon under *Data source*.
 
-1. For Tactics, select **Persistence**.
+    >**Note:** If you do not see it in a connected state, make sure you completed Task 3 of the Learning Path 6 Lab, Exercise 01.
 
-1. For Severity, select **Low**.
+1. Select **Create rule** to continue.
+
+1. In the Analytics rule wizard, on the *General* tab, change the *Severity* to **Medium**.
 
 1. Select **Next: Set rule logic >** button:
 
-1. For the rule query, paste in the following KQL statement:
+1. For the rule query, select **View query results**. You should not receive any results nor any errors.
 
-    >**Warning:** When using the Paste function to the virtual machine extra (pipe) characters could be added. Make sure you use Notepad first to paste the following query.
-
-    ```KQL
-    AuditLogs  
-    | where isnotempty(InitiatedBy.user.userPrincipalName) and Result == 'success' and OperationName contains "member to role" and AADOperationType startswith "Assign"
-    | extend InitiatedByUPN = tostring(InitiatedBy.user.userPrincipalName)
-    | extend InitiatedFromIP = iff(tostring(AdditionalDetails.[7].value) == '', tostring(AdditionalDetails.[6].value), tostring(AdditionalDetails.[7].value))
-    | extend TargetUser = tostring(TargetResources.[2].displayName)
-    | extend TargetRoleName = tostring(TargetResources.[0].displayName)
-    | project TimeGenerated, InitiatedByUPN, InitiatedFromIP, TargetUser, TargetRoleName, AADOperationType, OperationName
-    ```
-
-1. Select **View query results**. You should not receive any results nor any errors. If you receive an error, please review that the query appears just like the previous KQL statement. Close the *Logs* window by selecting the upper right **X** and select **OK** to discard to save changes to go back to the wizard.
-
-1. In the to the "Analytics rule wizard - Create new scheduled rule" blade, under the *Alert enrichment* area, select **Entity mapping** and select the following values: 
-
-    - For the *Entity type* drop-down list select **Account**.
-    - For the *Identifier* drop-down list select **FullName**.
-    - For the *Value* drop-down list select **InitiatedByUPN**.
-
-1. Then select **Add new entity** and select the following values:
-
-    - For the *Entity type* drop-down list select **IP**.
-    - For the *Identifier* drop-down list select **Address**.
-    - For the *Value* drop-down list select **InitiatedFromIP**.
+1. Close the *Logs* window by selecting the upper right **X** and select **OK** to discard to save changes to go back to the wizard.
 
 1. Scroll down and under *Query scheduling* set the following:
 
@@ -88,15 +66,17 @@ In this task, you will create a scheduled query and connect it to the Teams chan
 
 1. Select the **Next: Automated response >** button.
 
-1. On the Automated response tab under the *Alert automation (classic)* area, select the playbook *PostMessageTeams-OnAlert* you had created in the previous exercise.
-
-1. Under Automation rules (Preview), select **Add new**.
+1. On the *Automated response* tab under *Automation rules*, select **Add new**.
 
 1. For the *Automation rule name*, enter **Tier 2**.
 
 1. For the *Actions*, select **Assign owner**.
 
 1. Then select **Assign to me**. Then select **Apply**.
+
+1. Scroll down and select the **Alert automation (classic)** bar
+
+1. From the drop-down menu, select the playbook **PostMessageTeams-OnAlert** you had created in the previous exercise.
 
 1. Select the **Next: Review >** button.
   
@@ -107,33 +87,13 @@ In this task, you will create a scheduled query and connect it to the Teams chan
 
 In this task, you will test your new scheduled query rule.
 
-1. In the Search bar of the Azure portal, type *Azure Active Directory*. Then select **Azure Active Directory**.
+1. In the top bar of the Azure Portal, Select the icon **>_** that corresponds to the Cloud Shell. You might need to select the ellipsis icon first **(...)** if your display resolution is too low.
 
-1. Select **Users** in the Manage area so the "Users - All users" page is displayed.
+1. Select **Powershell** and then **Create storage**. Wait until the Cloud Shell is provisioned.
 
-1. Select user **Christie Cline** in the list so the "Christie Cline - Profile" page is displayed.
+1. In the Search bar of the Azure portal, type *Activity* and then select **Activity Log**.
 
-1. Select **Assigned roles** in the Manage area so the "Christie Cline - Assigned roles" page is displayed.
-
-1. Select **+ Add assignments** from the command bar.
-
-1. In the *Directory roles* blade, select the checkbox for **User Administrator**.
-
-1. Select **Add**.
-
-1. Select **Refresh** button form the command bar to see the new role assignment. 
-
-1. Close the "Christie Cline - Assigned roles" and "Users - All users" pages by selecting the 'x' in the top-right, twice.
-
-1. In the "Contoso - Overview" Azure Active Directory page, under *Monitoring*, select **Audit logs**.
-
-1. Select **Export data settings**. Verify that the Microsoft Sentinel's "Azure Active Directory" data connector correctly setup the configuration to send data to your Log Analytics Workspace by reviewing the information under *Diagnostic Settings*.
-
-1. Review that there is a *Diagnostic settings* entry for the *Log Analytics workspace* you created earlier for Sentinel.
-
-1. Close the page by selecting the 'x' in the top-right.
-
-1. Back in the "Contoso - Audit Logs", select **Refresh** until you see the entries for the *Category: RoleManagement* that indicates the change in roles you made earlier.
+1. Make sure the following *Operation name* items appear: **List Storage Account Keys** and **Update Storage Account Create**. These are the operations that the KQL query you reviewed earlier will match to generate the alert. **Hint:** You might need to select **Refresh** to update the list.
 
 1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
@@ -145,10 +105,11 @@ In this task, you will test your new scheduled query rule.
 
 1. You should see the newly created Incident. 
 
-    >**Note:** The event that triggers the alert may take 5+ minutes to process. You may continue with the next exercise and return to this point later.
+    >**Note:** The event that triggers the alert may take 5+ minutes to process. Continue with the next exercise, you will come back to this view later.
 
 1. Select the Incident and review the information in the right blade.
 
 1. Go back to Microsoft Teams by selecting the tab in your Edge browser. If you closed it, just open a new tab and type https://teams.microsoft.com. Go to the *SOC* Teams, select the *New Alerts* channel and see the message post about the incident.
+
 
 ## Proceed to Exercise 4
