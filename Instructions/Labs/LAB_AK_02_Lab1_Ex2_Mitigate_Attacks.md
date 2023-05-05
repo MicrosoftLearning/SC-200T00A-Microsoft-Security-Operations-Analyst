@@ -15,6 +15,9 @@ You are a Security Operations Analyst working at a company that is implementing 
 To explore the Defender for Endpoint attack mitigation capabilities, you will run two simulated attacks.
 
 
+>**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/SC-200%20Lab%20Simulation%20-%20Mitigate%20attacks%20with%20Microsoft%20Defender%20for%20Endpoint)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
+
+
 ### Task 1: Verify Device onboarding
 
 In this task, you will confirm that the device is onboarded successfully and create a test alert.

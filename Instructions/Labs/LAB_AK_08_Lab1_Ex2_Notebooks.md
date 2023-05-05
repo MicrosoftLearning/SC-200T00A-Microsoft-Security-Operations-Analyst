@@ -14,6 +14,7 @@ You are a Security Operations Analyst working at a company that implemented Micr
 - Create data visualizations that are not provided out-of-the box in Microsoft Sentinel, such as custom timelines and process trees.
 - Integrate data sources outside of Microsoft Sentinel, such as an on-premises data set.
 
+>**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/SC-200%20Lab%20Simulation%20-%20Hunt%20for%20threats%20using%20notebooks%20in%20Microsoft%20Sentinel)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
 
 ### Task 1: Explore Notebooks
 
