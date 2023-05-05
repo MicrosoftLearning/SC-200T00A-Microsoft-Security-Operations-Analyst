@@ -1,8 +1,4 @@
----
-lab - Do not use. Temporarily not operational!:
-    title: 'Exercise 4 - Connect Threat intelligence to Microsoft Sentinel using data connectors'
-    module: 'Learning Path 6 - Connect logs to Microsoft Sentinel'
----
+ **Do not use. Temporarily not operational.**
 
 # Learning Path 6 - Lab 1 - Exercise 4 - Connect Threat intelligence to Microsoft Sentinel using data connectors
 

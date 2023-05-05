@@ -14,18 +14,38 @@ You are a Security Operations Analyst working at a company that is implementing 
 
 To explore the Defender for Endpoint attack mitigation capabilities, you will run two simulated attacks.
 
->**Important:** Please wait until WIN1 appears in the Devices page before you continue. Otherwise, you might need to repeat this task to see the alerts that will be generated later.
 
-**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/SC-200%20Lab%20Simulation%20-%20Mitigate%20attacks%20with%20Microsoft%20Defender%20for%20Endpoint)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
+>**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/SC-200%20Lab%20Simulation%20-%20Mitigate%20attacks%20with%20Microsoft%20Defender%20for%20Endpoint)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
 
 
-### Task 1: Simulated Attacks
+### Task 1: Verify Device onboarding
 
-In this task, you will run two simulated attacks to explore the capabilities of Microsoft Defender for Endpoint.
+In this task, you will confirm that the device is onboarded successfully and create a test alert.
 
 1. If you are not already at the Microsoft 365 Defender portal in your Microsoft Edge browser, go to (https://security.microsoft.com) and login as Admin for your tenant.
 
-1. From the menu, under **Endpoints**, select **Evaluation & tutorials** and then select **Tutorials & simulations** from the left side.
+1. In the left-hand menu, under the **Assets** area, select **Devices**. Please wait until WIN1 appears in the Devices page before you continue. Otherwise, you might need to repeat this task to see the alerts that will be generated later.
+
+    >**Note:** If you have completed the onboarding process and don't see devices in the Devices list after an hour, it might indicate an onboarding or connectivity problem.
+
+1. Select **Settings** from the left menu bar, then from the Settings page select **Endpoints**.
+
+1. Select **Onboarding** in the Device management section and make sure *"Windows 10 and 11"* is selected as operating system. The *"First device onboarded"* message now shows *Completed*.
+
+1. Scroll down and under the section *"2. Run a detection test"*, copy the detection test script by selecting the **Copy** button.  
+
+1. In the windows search bar of the WIN1 virtual machine, type **CMD** and choose to **Run as Administrator** on the right pane for the Command Prompt app. 
+
+1. When the "User Account Control" window is shown, select **Yes** to allow the app to run. 
+
+1. Paste the script by right-clicking in the **Administrator: Command Prompt** windows and press **Enter** to run it. **Note:** The window closes automatically after running the script.
+
+
+### Task 2: Simulated Attacks
+
+In this task, you will run two simulated attacks to explore the capabilities of Microsoft Defender for Endpoint.
+
+1. From the left menu, under **Endpoints**, select **Evaluation & tutorials** and then select **Tutorials & simulations** from the left side.
 
 1. Select the **Tutorials** tab.
 
@@ -36,11 +56,13 @@ In this task, you will run two simulated attacks to explore the capabilities of 
 1. Repeat the last 3 steps to run another tutorial, *Automated investigation (fileless attack)*.
 
 
-### Task 2: Investigate the Attacks
+### Task 3: Investigate the Attacks
 
 1. In the Microsoft 365 Defender portal select **Incidents & alerts** from the left menu bar, then select **Incidents**.
 
 1. A new incident called "Multi-stage incident..." is in the right pane. Click the incident name to load its details.
+
+    >**Note:** An incident called "Suspicious..." might appear first. This will later be replaced with the aforementioned incident when Microsoft 365 Defender correlates them a single security issue, including the original test alert created in Task 1.
 
 1. Select the **Manage incident** button and a new window blade appears. 
 
@@ -52,7 +74,7 @@ In this task, you will run two simulated attacks to explore the capabilities of 
 
 1. Under **Informational, expected activity**, select **Security testing**. 
 
-1. Add any comments if desired and click **Save** to finish.
+1. Add any comments if desired and click **Save** to update the incident and select **Close** to finish.
 
 1. Review the contents of the Alerts, Devices, Users, Investigations, Evidence and Response, Graph tabs. **Hint:** Some tabs might be hidden due the size of your display. Select the ellipsis tab (...) to make them appear.
 

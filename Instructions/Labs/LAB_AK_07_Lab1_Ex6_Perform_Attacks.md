@@ -12,14 +12,23 @@ lab:
 
 You are going to simulate the attacks that you will later use to detect and investigate in Microsoft Sentinel.
 
-**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/SC-200%20Lab%20Simulation%20-%20Perform%20simulated%20attacks)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
+
+>**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/SC-200%20Lab%20Simulation%20-%20Perform%20simulated%20attacks)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
 
 
-### Task 1: Attack Windows configured with Defender for Endpoint
+>**Important:** The next steps are done in a different machine than the one you were previously working. Look for the Virtual Machine name references.
 
-In this task, you will perform attacks on a host with Microsoft Defender for Endpoint configured.
+### Task 1: Persistence Attack with Registry Key Add
 
-1. Login to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
+In this task, you will perform attacks on the host with Azure Arc and the Azure Monitor Agent configured.
+
+1. Login to WIN2 virtual machine as Admin with the password: **Pa55w.rd**.  
+
+    >**Important:** The lab *SAVE* functionality can cause Win2 to become disconnected from Azure Arc. A reboot will solve the issue.  
+
+1. Select **Start** in Windows. Then **Power**, next **Restart**.
+
+1. Follow the instructions to log into WIN2 again.
 
 1. In the search of the task bar, enter *Command*. Command Prompt will be displayed in the search results. Right-click on the Command Prompt and select **Run as Administrator**. Select **Yes** in the User Account Control window that appears to allow the app to run.
 
@@ -31,15 +40,25 @@ In this task, you will perform attacks on a host with Microsoft Defender for End
     cd temp
     ```
 
-#### Attack 1 - Persistence with Registry Key Add
-
 1. Copy and run this command to simulate program persistence:
 
     ```CommandPrompt
     REG ADD "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "SOC Test" /t REG_SZ /F /D "C:\temp\startup.bat"
     ```
 
-#### Attack 3 - DNS / C2 
+
+### Task 2: Privilege Elevation Attack with User Add
+
+1. Copy and run this command to simulate the creation of an Admin account. Remember to press Enter after the last row:
+
+    ```CommandPrompt
+    net user theusernametoadd /add
+    net user theusernametoadd ThePassword1!
+    net localgroup administrators theusernametoadd /add
+    ```
+
+
+### Task 3: Command and Contro Attack with DNS
 
 1. Copy and run this command to create a script that will simulate a DNS query to a C2 server:
 
@@ -97,7 +116,7 @@ In this task, you will perform attacks on a host with Microsoft Defender for End
 
 1. Go back to the Command Prompt window, enter the following command and press Enter. 
 
-    >**Note:** A new PowerShell window will open and you will see resolve errors. This is expected.
+    >**Note:** You will see DNS resolve errors. This is expected.
 
     ```CommandPrompt
     Start PowerShell.exe -file c2.ps1
@@ -105,39 +124,5 @@ In this task, you will perform attacks on a host with Microsoft Defender for End
 
 >**Important:** Do not close these windows. Let this PowerShell script run in the background. The command needs to generate log entries for some hours. You can proceed to the next task and next exercises while this script runs. The data created by this task will be used in the Threat Hunting lab later. This process will not create substantial amounts of data or processing.
 
-
-### Task 2: Attack Windows configured with Microsoft Sentinel connector
-
-In this task, you will perform attacks on a host with the Security Events connector from Microsoft Sentinel.
-
->**Important:** The next steps are done in a different machine than the one you were previously working. Look for the Virtual Machine name references.
-
-1. Login to WIN2 virtual machine as Admin with the password: **Pa55w.rd**.  
-
->**Important:** The lab *SAVE* functionality can cause Win2 to become disconnected from Azure Arc.  A reboot will solve the issue.  
-
-1. Select **Start** in Windows. Then **Power**, next **Restart**.
-
-1. Follow the instructions to log into WIN2 again.
-
-1. In the search of the task bar, enter *Command*. Command Prompt will be displayed in the search results. Right-click on the Command Prompt and select **Run as Administrator**. Select **Yes** in the User Account Control window that appears to allow the app to run.
-
-1. In the Command Prompt, create a Temp folder in the root directory. Remember to press Enter after the last row:
-
-    ```CommandPrompt
-    cd \
-    mkdir temp
-    cd \temp
-    ```
-
-#### Attack 2 - User Add and Elevate Privilege
-
-1. Copy and run this command to simulate the creation of an Admin account. Remember to press Enter after the last row:
-
-    ```CommandPrompt
-    net user theusernametoadd /add
-    net user theusernametoadd ThePassword1!
-    net localgroup administrators theusernametoadd /add
-    ```
 
 ## Proceed to Exercise 7
