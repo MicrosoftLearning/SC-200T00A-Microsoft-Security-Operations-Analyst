@@ -118,7 +118,7 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 
 1. Review the default available tags. Select **Next** to get to the Download and run script tab.
 
-1. Scroll down and select the **Download** button. **Hint:** if your browser blocks the download, take action in the browser to allow it. In Edge Browser, select the ellipsis button (...) if needed and then select **Keep**. 
+1. Scroll down and select the **Download** button. **Hint:** if your browser blocks the download, take action in the browser to allow it. In Edge Browser, select the ellipsis button (...) if needed and then select **Keep**.
 
 1. Right-click the Windows Start button and select **Windows PowerShell (Admin)**.
 
