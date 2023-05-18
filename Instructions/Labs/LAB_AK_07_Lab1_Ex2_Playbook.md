@@ -99,7 +99,7 @@ In this task, you will update the new playbook you created with the proper conne
 
 1. Select the **Automation** under the *Configuration* area and then select the **Active Playbooks** tab.
 
-1. Select **Refresh** from the command bar in case you don't see any playbook. You should see the two playbooks created from the previous step, but with different triggers.
+1. Select **Refresh** from the command bar in case you don't see any playbook. You should see the two playbooks created from the previous step, but with different *Trigger kind*.
 
 1. Select the **PostMessageTeams-OnAlert** playbook name.
 

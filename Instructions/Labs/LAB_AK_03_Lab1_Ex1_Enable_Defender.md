@@ -31,9 +31,19 @@ In this task, you will set up an Azure Subscription required to complete this la
 
 1. In the Search bar of the Azure portal, type *Subscription*, then select **Subscriptions**. 
 
-1. If the *"Azure Pass - Sponsorship"* subscription is shown (or equivalent name in your selected language), proceed to Task #2. Otherwise, ask your instructor on how to create the Azure subscription with your tenant admin user credentials. **Note:** The subscription creation process could take up to 10 minutes. 
+1. Select the *"Azure Pass - Sponsorship"* subscription shown (or equivalent name in your selected language).
 
-    >**Important:** These labs have been designed to use less than USD $10 of Azure services during the class.
+    >**Note:** If the subscription is not shown, ask your instructor on how to create the Azure subscription with your tenant admin user credentials. **Note:** The subscription creation process could take up to 10 minutes. 
+
+1. Select **Access control (IAM)** and then **Add role assignment** from the right pane.
+
+1. Select the **Priviledged administrator roles** tab and then select **Owner**. Select **Next** to continue.
+
+1. Under the *Members* tab, click **Select members** and select the **MOD Administrator** account and click **Select** to continue.
+
+1. Select **Review + assign** twice to assign the owner role to your admin account.
+
+>**Important:** These labs have been designed to use less than USD $10 of Azure services during the class.
 
 
 ### Task 2: Create a Log Analytics Workspace
@@ -109,6 +119,8 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 1. Select **+ Add**.
 
 1. Select **Generate script** from the "Add a single server" section.
+
+1. Read through the *Prerequisites* tab and then select **Next** to continue.
 
 1. In the *Add a server with Azure Arc* page, select the Resource group you created earlier under *Project details*. **Hint:** *RG-Defender*
 

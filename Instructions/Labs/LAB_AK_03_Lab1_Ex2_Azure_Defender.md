@@ -33,7 +33,7 @@ In this task, you will review Regulatory compliance configuration in Microsoft D
 
 1. Under *Cloud Security*, select **Regulatory compliance** in the portal menu.
 
-1. Select **Managed compliance policies** on the toolbar.
+1. Select **Manage compliance policies** on the toolbar.
 
 1. Select your subscription.
 
@@ -66,15 +66,17 @@ In this task, you will review cloud security posture management.  The Secure Sco
 
 1. Explore the recommendations provided for your subscription and WINServer (Arc Server).
 
-1. Select any recommendation where the status is not *"Completed"*.
+1. Select any recommendation where the status is not *"Completed"* for WINServer.
 
-1. Read through the recommendation and scroll down to **select** WINServer checkbox.
+1. Read through the recommendation and scroll down to **select** WINServer checkbox. **Hint:** You might need to select **Affected resources** to display it.
 
 1. Select **Assign owner** and then **Select owner**.
 
 1. In the *Email address* box, write down your admin email. **Hint:** You can copy it from the instructions in the *Resources* tab.
 
 1. Select **Back**, change the *Due date* to your preference and click **Save**.
+
+    >**Note:** If you see the error *Failed to create requested assignments*, try again later.
 
 1. Close the recommendation page by selecting the 'X' on the upper right of the window.
 

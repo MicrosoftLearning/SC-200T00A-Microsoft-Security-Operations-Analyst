@@ -35,9 +35,9 @@ In this task, you will create a scheduled query and connect it to the Teams chan
 
 1. Make sure that you are in the *Rule templates* tab in the command bar and search for the **New CloudShell User** rule.
 
-1. From the rule summary blade, make sure you are receiving data by checking the green connected icon under *Data source*.
+1. From the rule summary blade, make sure you are receiving data by reviewing the green icon under *Data sources: Azure Activity*.
 
-    >**Note:** If you do not see it in a connected state, make sure you completed Task 3 of the Learning Path 6 Lab, Exercise 01.
+    >**Note:** If you do not see it in a connected state, make sure you completed Task 3 of the Learning Path 6 Lab, Exercise 1.
 
 1. Select **Create rule** to continue.
 
@@ -76,9 +76,9 @@ In this task, you will create a scheduled query and connect it to the Teams chan
 
 1. Then select **Assign to me**. Then select **Apply**.
 
-1. Scroll down and select the **Alert automation (classic)** bar
+1. Scroll down and select the **Alert automation (classic)** bar.
 
-1. From the drop-down menu, select the playbook **PostMessageTeams-OnAlert** you had created in the previous exercise.
+1. From the drop-down menu, select the playbook **PostMessageTeams-OnAlert** you created in the previous exercise.
 
 1. Select the **Next: Review >** button.
   
@@ -92,6 +92,8 @@ In this task, you will test your new scheduled query rule.
 1. In the top bar of the Azure Portal, Select the icon **>_** that corresponds to the Cloud Shell. You might need to select the ellipsis icon first **(...)** if your display resolution is too low.
 
 1. Select **Powershell** and then **Create storage**. Wait until the Cloud Shell is provisioned.
+
+1. Close the Azure Cloud Shell window.
 
 1. In the Search bar of the Azure portal, type *Activity* and then select **Activity Log**.
 

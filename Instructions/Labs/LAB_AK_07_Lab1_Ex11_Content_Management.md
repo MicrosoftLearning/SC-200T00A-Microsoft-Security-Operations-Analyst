@@ -41,16 +41,12 @@ In this task, you will enable Entity behavior analytics in Microsoft Sentinel.
 
 1. Review the Azure Resource Manager template and the close it when done.
 
-1. Select the rule just created, then select **Delete**.
-
 
 ### Task 2: Create our Azure DevOps environment
 
 In this task, you will create an Azure DevOps repository.
 
-1. Open another tab in the browser.
-
-1. Navigate to https://aexprodcus1.vsaex.visualstudio.com/me?mkt=en-US.
+1. Open another tab in the browser and navigate to (https://aexprodcus1.vsaex.visualstudio.com/me?mkt=en-US).
 
 1. On the *We need a few more details* page, select **Continue**.
 

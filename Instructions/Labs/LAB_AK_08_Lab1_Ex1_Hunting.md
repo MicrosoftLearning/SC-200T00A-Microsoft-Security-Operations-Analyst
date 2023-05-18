@@ -69,9 +69,9 @@ In this task, you will create a hunting query, bookmark a result, and create a L
 
 1. Select your Microsoft Sentinel workspace again and select the **Hunting** page under the *Threat Management* area.
 
-1. Select **+ New Query** from the command bar.
+1. Select the **Queries** tab and then **+ New Query** from the command bar.
 
-1. In the *Create custom query* window, for the *Name* type **PowerShell Hunt**
+1. In the *Create custom query* window, for the *Name* enter **PowerShell Hunt**.
 
 1. For the *Custom query* enter the following KQL statement:
 
@@ -113,15 +113,17 @@ In this task, you will create a hunting query, bookmark a result, and create a L
 
 1. On the right pane, scroll down and select the **Investigate** button. **Hint:** It might take a couple of minutes to show the investigation graph.
 
-1. Explore the Investigation graph just like you did a the previous module. Notice the high number of *Related alerts* for *WIN2*.
+1. Explore the Investigation graph just like you did a the previous module. Notice the high number of *Related alerts* for *WINServer*.
 
 1. Close the *Investigation* graph window by selecting the **X** in the top-right of the window. 
 
-1. Hide the right blade by selecting the **>>** icon and then the ellipsis **(...)** icon.
+1. Hide the right blade by selecting the **>>** icon and then scroll right until you see the ellipsis **(...)** icon.
 
 1. Select **Add to existing incident**. All the incidents appear in the right pane.
 
-1. Select one of the incidents and then select **Add**. Notice that the *Severity* column is now populated with the incident's data.
+1. Select one of the incidents and then select **Add**. 
+
+1. Scroll left to notice that the *Severity* column is now populated with the incident's data.
 
 
 ### Task 2: Create a NRT query rule
@@ -158,7 +160,7 @@ In this task, instead of using a LiveStream, you will create a NRT analytics que
 
 1. Close the *Logs* window by selecting the **X** in the top-right of the window and select **OK** to discard the changes. 
 
-1. Select **Test with current data** under *Results simulation*. Notice the expected number of *Alerts per day.
+1. Select **Test with current data** under *Results simulation*. Notice the expected number of *Alerts per day*.
 
 1. Under *Entity mapping* select:
 
@@ -183,7 +185,7 @@ In this task, you will use a Search job to look for a C2.
 
 1. In the search box, enter **reg.exe** and then select **Start**. 
 
-1. A new query windows running the query opens. Select the ellipsis icon **(...)** from the top right and then toggle the **Search job mode**.
+1. A new window running the query opens. Select the ellipsis icon **(...)** from the top right and then toggle the **Search job mode**.
 
 1. Select **Search job** button from the command bar. 
 
@@ -191,10 +193,14 @@ In this task, you will use a Search job to look for a C2.
 
 1. Close the *Logs* window by selecting the **X** in the top-right of the window and select **OK** to discard the changes. 
  
-1. Select the **Restoration** button from the command bar and then the **Restore** button.
+1. Select the **Restoration** tab from the command bar and then the **Restore** button.
 
-    >**Note:** The lab does not have Archived data to restore from.
+1. Under *Select a table to restore*, search for and select **SecurityEvent**.
 
-1. Review the options available and then select the **Cancel** button.
+1. Review the options available and then select the **Restore** button.
+
+1. The restore job will run for a couple of minutes and your data will be available in a new table.
+
+    >**Important:** The restore jobs should be used to recover Archive data, not interactive logs.
 
 ## Proceed to Exercise 2

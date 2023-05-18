@@ -42,7 +42,7 @@ In this task, you will investigate an incident.
 
 1. Review the incident details on the right blade that opened. Scroll down and select the **View full details** button.
 
-1. If the "New incident experience" pop-up appears, follow the prompts by reading the information and selecting the **Next** button.
+1. If the "New incident experience" pop-up appears, follow the prompts by reading the information by selecting the **Next** button.
 
 1. On the left blade of the incident, change the Status to **Active** and then select **Apply**.
 
@@ -52,7 +52,7 @@ In this task, you will investigate an incident.
 
 1. Hide the left blade by selecting the **<<** icon next to the owner.
 
-1. Review the **Incident timeline** window. For the *Startup RegKey* alert, select the ellipsis **(...)** icon and then **Run playbook**. You will see the *PostMessageTeams-OnAlert* playbook. This option is help to run playbooks manually.
+1. Review the **Incident timeline** window. For the *Startup RegKey* alert, select the ellipsis **(...)** icon and then **Run playbook**. You will see the *PostMessageTeams-OnAlert* playbook. This option help you to run playbooks manually.
 
 1. Close the *Alert playbooks* blade by selecting the **x** icon in the top right.
 
@@ -78,15 +78,15 @@ In this task, you will investigate an incident.
 
     >**Hint:** If the icons are too small for your screen, select **(+)** to magnify them.
 
-1. **Hover** the WIN2 entity icon and wait for new *exploration queries* to be shown. It looks that *Related Alerts* has more data on it. Select the name of the exploration query **Related Alerts** to bring them to the investigation graph or select **Events >** to investigate them with a KQL query.
+1. **Hover** the WINServer entity icon and wait for new *exploration queries* to be shown. It looks that *Related Alerts* has more data on it. Select the name of the exploration query **Related Alerts** to bring them to the investigation graph or select **Events >** to investigate them with a KQL query.
 
 1. Close the query window by selecting the **X** icon at the top right to go back to the *Investigation* page.
 
-1. Now select the **WIN2** entity, a window on the right opens for more detailed information. Review the **Info** page.
+1. Now select the **WINServer** entity, a window on the right opens for more detailed information. Review the **Info** page.
 
 1. Select **Timeline** button. Hover the incidents and see which things on the graph occurred at what point in time.
 
-1. Select **Entities** button and review the *Entities* and *Alerts* related to *WIN2*.
+1. Select **Entities** button and review the *Entities* and *Alerts* related to *WINServer*.
 
 1. Close the investigation graph by selecting the **X** icon at the top right of the page.
 

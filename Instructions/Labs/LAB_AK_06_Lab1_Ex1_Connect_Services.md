@@ -44,6 +44,8 @@ In this task, you will connect the Microsoft Defender for Cloud connector.
 
 1. In the Configuration area, under Subscription, **select** the checkbox for the "Azure Pass - Sponsorship" subscription and slide the **Status** option to the right.
 
+    >**Note:** If it switch back to disconnected, please review the Learning Path 3, Exercise 1, Task 1 to assign the proper permissions to your account.
+
 1. The *Status* should be now **Connected** and "Bi-directional sync" should be *Enabled*.
 
 1. Scroll down and under the "Create incidents - Recommended!" area, select **Enable**. 
