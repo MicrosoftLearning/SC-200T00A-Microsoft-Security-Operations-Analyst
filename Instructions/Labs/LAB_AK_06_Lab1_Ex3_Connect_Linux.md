@@ -91,7 +91,7 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
 1. Select the link for **Download & install agent for non-Azure Linux machine**. 
 
-    >**Note:** Your Log Analytics workspace should show *3 Windows computers connected*. This corresponds to WIN2, WINServer and AZWIN01 virtual machines connected earlier.
+    >**Note:** Your Log Analytics workspace should show *2 Windows computers connected*. This corresponds to WINServer and AZWIN01 virtual machines connected earlier.
 
 1. Select the tab for **Linux servers**.
 

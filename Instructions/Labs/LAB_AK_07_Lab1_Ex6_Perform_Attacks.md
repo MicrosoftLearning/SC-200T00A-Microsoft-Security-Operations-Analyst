@@ -16,19 +16,19 @@ You are going to simulate the attacks that you will later use to detect and inve
 >**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/SC-200%20Lab%20Simulation%20-%20Perform%20simulated%20attacks)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
 
 
->**Important:** The next steps are done in a different machine than the one you were previously working. Look for the Virtual Machine name references.
-
 ### Task 1: Persistence Attack with Registry Key Add
+
+>**Important:** The next steps are done in a different machine than the one you were previously working. Look for the Virtual Machine name references.
 
 In this task, you will perform attacks on the host with Azure Arc and the Azure Monitor Agent configured.
 
-1. Login to WIN2 virtual machine as Admin with the password: **Pa55w.rd**.  
+1. Login to WINServer virtual machine as Admin with the password: **Pa55w.rd**.  
 
-    >**Important:** The lab *SAVE* functionality can cause Win2 to become disconnected from Azure Arc. A reboot will solve the issue.  
+    >**Important:** The lab *SAVE* functionality can cause WINServer to become disconnected from Azure Arc. A reboot will solve the issue.  
 
 1. Select **Start** in Windows. Then **Power**, next **Restart**.
 
-1. Follow the instructions to log into WIN2 again.
+1. Follow the instructions to log into WINServer again.
 
 1. In the search of the task bar, enter *Command*. Command Prompt will be displayed in the search results. Right-click on the Command Prompt and select **Run as Administrator**. Select **Yes** in the User Account Control window that appears to allow the app to run.
 

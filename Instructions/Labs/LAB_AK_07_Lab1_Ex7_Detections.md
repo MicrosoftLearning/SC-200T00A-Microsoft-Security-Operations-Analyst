@@ -16,11 +16,9 @@ Analytics rules search for specific events or sets of events across your environ
 >**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/SC-200%20Lab%20Simulation%20-%20Create%20detections)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
 
 
-### Task 1: Attack 1 Detection with Defender for Endpoint
+### Task 1: Persistence Attack Detection
 
 >**Important:** The next steps are done in a different machine than the one you were previously working. Look for the Virtual Machine name references.
-
-### Task 1: Persistence Attack Detection
 
 In this task, you will create a detection for the first attack of the previous exercise.
 
@@ -44,7 +42,7 @@ In this task, you will create a detection for the first attack of the previous e
     search "temp\\startup.bat"
     ```
 
-    >**Note:** A result with the event might take up to 5 minutes to appear. Wait until it does. If it does not appear, make sure you have rebooted WIN2 as instructed in the previous exercise and that you have completed the Task #3 of the Learning Path 6 Lab, Exercise 2.
+    >**Note:** A result with the event might take up to 5 minutes to appear. Wait until it does. If it does not appear, make sure you have rebooted WINServer as instructed in the previous exercise and that you have completed the Task #3 of the Learning Path 6 Lab, Exercise 2.
 
 1. The table *SecurityEvent* looks to have the data already normalized and easy for us to query. Expand the row to see all the columns related to the record.
 
