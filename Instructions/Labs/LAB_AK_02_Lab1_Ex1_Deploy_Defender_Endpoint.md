@@ -62,7 +62,7 @@ In this task, you'll onboard a device to Microsoft Defender for Endpoint using a
 
 1. Under the *Downloads* pop-up, highlight the "WindowsDefenderATPOnboardingPackage.zip" file with your mouse and select the folder icon **Show in folder**. **Hint:** In case you don't see it, the file should be in the c:\users\admin\downloads directory.
 
-    >[!TIP]
+    >**Tip:**
     > If your browser blocks the download, take action in the browser to allow it. In the Microsoft Edge Browser, you may see the message, "*WindowsDefenderATPOnboardingPackage.zip isn't commonly downloaded. Make sure you trust...*, select the ellipsis button (...) if needed and then select **Keep**. In Microsoft Edge a second pop-up appears with the message,"*Make sure you trust WindowsDefenderATPOnboardingPackage.zip before you open it*", select **Show more** to expand the selections and select **Keep anyway**.
 
 
