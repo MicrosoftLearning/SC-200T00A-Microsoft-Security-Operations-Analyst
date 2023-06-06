@@ -78,6 +78,11 @@ In this task, you will create a detection for the first attack of the previous e
 
 1. On the *Set rule logic* tab, the *Rule query* should be populated already with you KQL query, as well as the entities under *Alert enrichment - Entity mapping*.
 
+    |entity|identifier|data field|
+    |:----|:----|:----|
+    |Account|FullName|AccountCustomEntity|
+    |Host|Hostname|HostCustomEntity|
+
 1. For *Query scheduling* set the following:
 
     |Setting|Value|
