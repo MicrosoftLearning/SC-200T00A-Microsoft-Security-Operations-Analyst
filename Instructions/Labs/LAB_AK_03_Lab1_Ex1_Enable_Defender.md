@@ -126,7 +126,7 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 
     >**Note:** If you haven't already created a resource group, open another tab and create the resource group and start over.
 
-1. Review the *Server details* and *Connectivity method* options. Keep the default values and select **Next** to get to the Tags tab.
+1. In the *Add a server with Azure Arc* page, select a **Region** that supports Azure Arc (as directed by your Instructor).
 
 1. Review the default available tags. Select **Next** to get to the Download and run script tab.
 
