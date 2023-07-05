@@ -39,7 +39,7 @@ In this task, you will set up an Azure Subscription required to complete this la
 
 1. Select the **Priviledged administrator roles** tab and then select **Owner**. Select **Next** to continue.
 
-1. Under the *Members* tab, click **Select members** and select the **MOD Administrator** account and click **Select** to continue.
+1. Under the *Members* tab, click **+ Select members** and select the **MOD Administrator** account and click **Select** to continue.
 
 1. Select **Review + assign** twice to assign the owner role to your admin account.
 
