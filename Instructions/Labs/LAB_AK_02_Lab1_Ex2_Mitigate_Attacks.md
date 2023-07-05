@@ -76,7 +76,7 @@ In this task, you will run two simulated attacks to explore the capabilities of 
 
 1. Add any comments if desired and click **Save** to update the incident and select **Close** to finish.
 
-1. Review the contents of the Alerts, Assets, Investigations, Evidence and Response, Summary tabs. **Hint:** Some tabs might be hidden due the size of your display. Select the ellipsis tab (...) to make them appear.
+1. Review the contents of the Alerts, Assets, Investigations, Evidence and Response, and Summary tabs. **Hint:** Some tabs might be hidden due the size of your display. Select the ellipsis tab (...) to make them appear.
 
 >**Warning:** The simulations and tutorials here are an excellent source of learning through practice.  Simulations and tutorials are being added and edited regularly in the portal.  However, some of these simulations & tutorials may interfere with performance of the labs designed for this training course.  Only perform the simulations and tutorials recommended in the instructions provided for this lab when using the course provided Azure tenant.  You may perform the other simulations and tutorials *after* this training course is complete with this tenant.
 
