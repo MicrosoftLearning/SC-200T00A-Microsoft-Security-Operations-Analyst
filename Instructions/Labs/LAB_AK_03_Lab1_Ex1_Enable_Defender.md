@@ -35,7 +35,7 @@ In this task, you will set up an Azure Subscription required to complete this la
 
     >**Note:** If the subscription is not shown, ask your instructor on how to create the Azure subscription with your tenant admin user credentials. **Note:** The subscription creation process could take up to 10 minutes. 
 
-1. Select **Access control (IAM)** and then **+ Add**, **Add role assignment** from the right pane.
+1. Select **Access control (IAM)** and then **+ Add** > **Add role assignment** from the right pane.
 
 1. Select the **Priviledged administrator roles** tab and then select **Owner**. Select **Next** to continue.
 
