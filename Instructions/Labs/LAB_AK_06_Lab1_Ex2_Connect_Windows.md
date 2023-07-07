@@ -72,6 +72,10 @@ In this task, you will connect an Azure Windows virtual machine to Microsoft Sen
 
 1. Select your Microsoft Sentinel Workspace you created earlier.
 
+1. Under *Content management* select *Content hub*, search for and select **Windows Security Events**, and then select **Install**.
+
+1. After the install completes, in the navigation pane under *Configuration* select **Data connectors** and then select **Refresh**.
+
 1. From the Data Connectors Tab, search for the **Windows Security Events via AMA** connector and select it from the list.
 
 1. Select **Open connector page** on the connector information blade.
