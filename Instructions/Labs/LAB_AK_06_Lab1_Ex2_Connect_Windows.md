@@ -105,7 +105,7 @@ In this task, you will install Azure Arc and connect a non-Azure Windows virtual
 
 1. Make sure you are in the *Windows Security Events via AMA* data connector configuration in your Microsoft Sentinel workspace.
 
-1. Under the *Configuration* section, select the **Create data collection rule**.
+1. Under the *Configuration* section, select **+Create data collection rule**.
 
 1. Enter **WINServer** for Rule Name, then select **Next: Resources**.
 
