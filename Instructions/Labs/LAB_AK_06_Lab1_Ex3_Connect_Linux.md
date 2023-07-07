@@ -39,7 +39,11 @@ In this task, you will access your Microsoft Sentinel workspace.
 
 In this task, you will connect a Linux host to Microsoft Sentinel with the Common Event Format (CEF) via Legacy Agent connector.
 
-1. Select **Data connectors** from the Configuration area in Microsoft Sentinel. From the Data Connectors tab, search for the **Common Event Format (CEF) via Legacy Agent** connector and select it from the list.
+1. Under *Content management* select *Content hub*, search for and select **Common Event Format**, and then select **Install**.
+
+1. After the install completes, in the navigation pane under *Configuration* select **Data connectors** and then select **Refresh**.
+
+1. From the Data Connectors tab, search for the **Common Event Format (CEF) via Legacy Agent** connector and select it from the list.
 
 1. Select **Open connector page** on the connector information blade.
 
