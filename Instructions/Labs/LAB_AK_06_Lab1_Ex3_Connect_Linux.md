@@ -85,7 +85,11 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
 
 In this task, you will connect a Linux host to Microsoft Sentinel with the Syslog connector.
 
-1. Go back to the Edge browser where you have your Microsoft Sentinel Portal open and close the "Common Event Format (CEF) via Legacy Agent" data connector page by selecting the 'x' in the top right corner. 
+1. Go back to the Edge browser where you have your Microsoft Sentinel Portal open and close the "Common Event Format (CEF) via Legacy Agent" data connector page by selecting the 'x' in the top right corner.
+
+1. Under *Content management* select *Content hub*, search for and select **Syslog**, and then select **Install**.
+
+1. After the install completes, in the navigation pane under *Configuration* select **Data connectors** and then select **Refresh**.
 
 1. From the Data Connectors tab, search for the **Syslog** connector and select it from the list.
 
