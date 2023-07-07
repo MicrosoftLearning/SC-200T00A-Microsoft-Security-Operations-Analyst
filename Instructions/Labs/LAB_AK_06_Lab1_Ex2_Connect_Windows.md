@@ -80,7 +80,7 @@ In this task, you will connect an Azure Windows virtual machine to Microsoft Sen
 
 1. Select **Open connector page** on the connector information blade.
 
-1. In the *Configuration* section, select the **Create data collection rule**.
+1. In the *Configuration* section, select the **+Create data collection rule**.
 
 1. Enter **AZWIN01DCR** for Rule Name, then select **Next: Resources**.
 
