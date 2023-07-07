@@ -107,7 +107,7 @@ In this task, you will create an indicator in Microsoft Sentinel.
 
 1. For Domain, enter a domain name, for example type *contoso.com*.
 
-1. On the *New indicator* blade, under *Threat types*, select **+ Add**, type **malicious-activity** and then select **OK**.
+1. For the *Threat types*, write down **malicious-activity** and select **OK**.
 
 1. For the *Name*, enter the same value used for the Domain.
 
