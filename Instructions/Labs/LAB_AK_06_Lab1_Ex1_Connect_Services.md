@@ -38,6 +38,10 @@ In this task, you will access your Microsoft Sentinel workspace.
 
 In this task, you will connect the Microsoft Defender for Cloud connector.
 
+1. Under *Content management* select *Content hub*, search for and select **Microsoft Defender for Cloud**, and then select **Install**.
+
+1. After the install completes, in the navigation pane under *Configuration* select **Data connectors** and then select **Refresh**.
+
 1. From the Data Connectors tab, search for the **Microsoft Defender for Cloud** connector and select it from the list.
 
 1. Select **Open connector page** on the connector information blade.
@@ -52,10 +56,16 @@ In this task, you will connect the Microsoft Defender for Cloud connector.
 
     >**Note:** This option creates automatically an Analytics rule for this connector. You can manually add it later if not enabled here or change its configuration within the *Analytics* blade.
 
+1. Select the **X** at the upper-right to return to the *Microsoft Sentinel* page.
+
 
 ### Task 3: Connect the Azure Activity connector
 
 In this task, you will connect the Azure Activity connector.
+
+1. Under *Content management* select *Content hub*, search for and select **Azure Activity**, and then select **Install**.
+
+1. After the install completes, in the navigation pane under *Configuration* select **Data connectors** and then select **Refresh**.
 
 1. From the Data Connectors Tab, search for the **Azure Activity** connector and select it from the list.
 
@@ -72,5 +82,7 @@ In this task, you will connect the Azure Activity connector.
 1. Select the **Review + Create** button to review the configuration.
 
 1. Select **Create** to finish.
+
+1. Select the **X** at the upper-right to return to the *Microsoft Sentinel* page.
 
 ## Proceed to Exercise 2
