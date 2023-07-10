@@ -64,7 +64,7 @@ In this task, you will deploy the Registry Schema parsers from the Microsoft Sen
 
 1. **Run** the query. You should not get any result nor errors, it is just for validation purposes.
 
-1. Go back to the *Schema and Filter* blade and now hover the **inRegistry** *unifying parser* and then select **Load the function code**.
+1. Go back to the *Schema and Filter* blade and now hover the **imRegistry** *unifying parser* and then select **Load the function code**.
 
 1. Notice that the unifying parsers uses the *union* operator to run all the workspace parsers at once. If you develop a parser for the Registry Schema you will need to add it here.
 
