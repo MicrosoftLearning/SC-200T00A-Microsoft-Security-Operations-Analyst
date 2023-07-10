@@ -54,7 +54,7 @@ In this task, you will save a workbook template and modify it.
 
 1. Select **Edit** in the command bar to enable changes in the workbook.
 
-1. Scroll down to the *Caller activities over time* area, look at the color of the *Activities* column since we are going to format those columns. Select the **Edit** button below the grid.
+1. Scroll down to the *Caller activities* area, look at the color of the *Activities* column since we are going to format those columns. Select the **Edit** button below the grid.
 
 1. Select the **Column Settings** button, it is located to the right of the *Run Query* command bar. **Hint:** This button only appears if there is data from the KQL query.
 
