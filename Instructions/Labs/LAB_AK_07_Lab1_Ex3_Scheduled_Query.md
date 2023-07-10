@@ -123,7 +123,7 @@ In this task, you will test your new scheduled query rule.
 
 1. Select the Incident and review the information in the right blade.
 
-1. Go back to Microsoft Teams by selecting the tab in your Edge browser. If you closed it, just open a new tab and type https://teams.microsoft.com. Go to the *SOC* Teams, select the *New Alerts* channel and see the message post about the incident.
+1. Go back to Microsoft Teams by selecting the tab in your Edge browser. If you closed it, just open a new tab and type **https://teams.microsoft.com**. Go to the *SOC* Team, select the *New Alerts* channel and see the message post about the incident.
 
 
 ## Proceed to Exercise 4
