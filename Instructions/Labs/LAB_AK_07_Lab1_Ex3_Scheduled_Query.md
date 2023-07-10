@@ -84,7 +84,7 @@ In this task, you will create a scheduled query and connect it to the Teams chan
 
 1. Under *Actions*, select **Manage playbook permissions**.
 
-1. 26.	In the *Manage permissions* blade, select **RG-Playbooks** and then select **Apply**.
+1. In the *Manage permissions* blade, select **RG-Playbooks** and then select **Apply**.
 
 1. Back on the *Create new automation rule* blade, under *Actions*, from  the drop-down menu select the playbook **PostMessageTeams-OnAlert** that you created in the previous exercise.
 
