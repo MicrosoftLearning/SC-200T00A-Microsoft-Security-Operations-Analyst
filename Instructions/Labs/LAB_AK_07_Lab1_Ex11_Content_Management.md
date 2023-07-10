@@ -60,6 +60,8 @@ In this task, you will create an Azure DevOps repository.
 
 1. Navigate to **Repos** on the left pane.
 
+2. Select **Switch to the default My Sentinel Content repository**
+
 1. At the bottom of the page in the area *Initialize main branch with a README or gitignore*, select **Initialize**.
 
 1. The page should show the Files for the Repo.  the only file is README.me.
