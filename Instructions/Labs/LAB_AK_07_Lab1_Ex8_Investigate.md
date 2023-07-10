@@ -48,7 +48,7 @@ In this task, you will investigate an incident.
 
 1. Scroll down to the *Tags* area, select **+** and type **RegKey** and select **OK**.
 
-1. Scroll down and in the *Write a comment...* box type: *I will research this* and select the **>** icon to submit the new comment.
+1. Scroll down and in the *Write a comment...* box type: **I will research this** and select the **>** icon to submit the new comment.
 
 1. Hide the left blade by selecting the **<<** icon next to the owner.
 
