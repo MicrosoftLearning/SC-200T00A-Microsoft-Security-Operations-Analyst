@@ -66,7 +66,7 @@ In this task, you will confirm Anomalies analytics rules are enabled.
 
 1. Select **Duplicate** and scroll left to review the new rule with the **FLGT** tab at the beginning of the name.
 
-1. Select **FLGT** rule and then select **Edit** on the rule blade.
+1. Select **FLGT** rule and then select **Edit** from the ellipsis (...) icon at the right.
 
 1. Review the *General* tab information. Notice the *Mode* is **Flighting** and then select **Next: Configuration**.
 
