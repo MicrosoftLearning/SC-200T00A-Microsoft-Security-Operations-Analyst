@@ -35,11 +35,11 @@ In this task, you will set up an Azure Subscription required to complete this la
 
     >**Note:** If the subscription is not shown, ask your instructor on how to create the Azure subscription with your tenant admin user credentials. **Note:** The subscription creation process could take up to 10 minutes. 
 
-1. Select **Access control (IAM)** and then **Add role assignment** from the right pane.
+1. Select **Access control (IAM)** and then select **Add role assignment** from the *Grant access to this resource* box.
 
-1. Select the **Priviledged administrator roles** tab and then select **Owner**. Select **Next** to continue.
+1. Select the **Privileged administrator roles** tab and then select **Owner**. Select **Next** to continue.
 
-1. Under the *Members* tab, click **Select members** and select the **MOD Administrator** account and click **Select** to continue.
+1. Under the *Members* tab, click **+ Select members** and select the **MOD Administrator** account and click **Select** to continue.
 
 1. Select **Review + assign** twice to assign the owner role to your admin account.
 
@@ -71,7 +71,9 @@ In this task, you will enable and configure Microsoft Defender for Cloud.
 
 1. In the Search bar of the Azure portal, type *Defender*, then select **Microsoft Defender for Cloud**.
 
-1. On the **Getting started** page, under the **Upgrade** tab, make sure your subscription is selected, and then select the **Upgrade** button at the bottom of the page. Wait for the *Trial started* notification to appear, it takes about 2 minutes. **Hint:** You can click the bell button on the top bar to review your Azure portal notifications.
+1. On the **Getting started** page, under the **Upgrade** tab, make sure your subscription is selected, and then select the **Upgrade** button at the bottom of the page. Wait for the *Trial started* notification to appear, it takes about 2 minutes. 
+
+    >**Hint:** You can click the bell button on the top bar to review your Azure portal notifications.
 
     >**Note:** If you see the error *"Could not start Azure Defender trial on the subscription"*, continue with the next steps to enable all the Defender plans in Step 5.
 
