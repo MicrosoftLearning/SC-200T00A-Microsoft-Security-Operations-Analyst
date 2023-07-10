@@ -47,7 +47,7 @@ In this task, you will create a scheduled query and connect it to the Teams chan
 
 1. For the rule query, select **View query results**. You should not receive any results nor any errors.
 
-1. Close the *Logs* window by selecting the upper right **X** and select **OK** to discard to save changes to go back to the wizard.
+1. Close the *Logs* window by selecting the upper right **X** and select **OK** to discard the changes to go back to the wizard.
 
 1. Scroll down and under *Query scheduling* set the following:
 
