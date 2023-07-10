@@ -76,13 +76,23 @@ In this task, you will create a scheduled query and connect it to the Teams chan
 
 1. Then select **Assign to me**. Then select **Apply**.
 
-1. Scroll down and select the **Alert automation (classic)** bar.
+1. On the *Automated response* tab under *Automation rules*, select **+ Add new**.
 
-1. From the drop-down menu, select the playbook **PostMessageTeams-OnAlert** you created in the previous exercise.
+1. For the *Automation rule name*, enter **Notify Team**.
+
+1. For the *Trigger*, select **When alert is created**. 
+
+1. Under *Actions*, select **Manage playbook permissions**.
+
+1. 26.	In the *Manage permissions* blade, select **RG-Playbooks** and then select **Apply**.
+
+1. Back on the *Create new automation rule* blade, under *Actions*, from  the drop-down menu select the playbook **PostMessageTeams-OnAlert** that you created in the previous exercise.
 
 1. Select the **Next: Review >** button.
   
-1. Select **Create**.
+1. Select **Save**.
+
+1. Verify that **New CloudShell User V2.0.2** is listed under the *Active rules* tab.
 
 
 ### Task 2: Test our new rule
