@@ -54,7 +54,7 @@ In this task, you will confirm Anomalies analytics rules are enabled.
 
 1. Confirm status column of the rules is *Enabled*.
 
-1. Select any rule and then select **Edit** from the ellipsis (...) icon at the right.
+1. Select any rule and then select **Edit**. **Hint:** If the rule pane is minimized, select **<<** at the right to open it.
 
 1. Review the *General* tab information. Notice the *Mode* is **Production** and then select **Next: Configuration**.
 
