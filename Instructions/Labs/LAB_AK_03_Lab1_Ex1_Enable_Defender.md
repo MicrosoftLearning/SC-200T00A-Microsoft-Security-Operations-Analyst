@@ -160,7 +160,8 @@ In this task, you'll install Azure Arc on an on-premises server to make onboardi
 
     >**Note:** This could take a couple of minutes.
 
-Task 5: Protect an On-Premises Server
+
+### Task 5: Protect an On-Premises Server
 
 In this task, you'll manually install the *Azure Monitor Agent* by adding a *Data Collection Rule (DCR)* on the **WINServer** virtual machine.
 
