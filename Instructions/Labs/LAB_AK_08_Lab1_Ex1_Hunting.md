@@ -165,7 +165,7 @@ In this task, instead of using a LiveStream, you will create a NRT analytics que
 
 1. Select **Test with current data** under the *Results simulation* pane at the right. Notice the expected number of *Alerts per day*. **Hint:** You may need to reduce the zoom in the browser to see the *Results simulation* pane.
 
-1. Under *Entity mapping* select:
+1. Scroll down and expand *Entity mapping*, then select **+Add new entity** and select:
 
     - For the *Entity type* drop-down list select **Host**.
     - For the *Identifier* drop-down list select **HostName**.
@@ -177,7 +177,7 @@ In this task, instead of using a LiveStream, you will create a NRT analytics que
 
 1. For the *Automated response* tab select the **PostMessageTeams-OnAlert** under *Alert automation (classic)* and then select **Next: Review** button.
 
-1. On the *Review* tab, select the **Create** button to create the new Scheduled Analytics rule.
+1. On the *Review and create* tab, select the **Create** button to create the new Scheduled Analytics rule.
 
 
 ### Task 3: Create a Search
