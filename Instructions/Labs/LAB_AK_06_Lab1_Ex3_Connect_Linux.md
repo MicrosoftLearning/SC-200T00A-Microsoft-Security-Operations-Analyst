@@ -130,7 +130,7 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
 In this task, you will configure the Syslog collection facilities.
 
-1. Go back to the Edge browser where you have your Microsoft Sentinel Portal open and close the "Log Analytics workspace" page and the "Syslog" data connector page by selecting the 'x' in the top right corner twice.
+1. Go back to the Edge browser where you have your Microsoft Sentinel Portal open and close the *Log Analytics workspace* page and the *Syslog* data connector page by selecting the '**x**' in the top right corner twice.
 
 1. In Microsoft Sentinel portal, select **Settings** under *Configuration* and then the **Workspace settings** tab.
 
