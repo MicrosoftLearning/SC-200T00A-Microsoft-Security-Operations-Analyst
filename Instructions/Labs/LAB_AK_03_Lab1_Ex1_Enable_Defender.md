@@ -10,14 +10,14 @@ lab:
 
 ![Lab overview.](../Media/SC-200-Lab_Diagrams_Mod3_L1_Ex1.png)
 
-You are a Security Operations Analyst working at a company that is implementing cloud workload protection with Microsoft Defender for Cloud.  In this lab you will enable Microsoft Defender for Cloud.
+You're a Security Operations Analyst working at a company that is implementing cloud workload protection with Microsoft Defender for Cloud.  In this lab, you'll enable Microsoft Defender for Cloud.
 
 >**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/SC-200%20Lab%20Simulation%20-%20Enable%20Microsoft%20Defender%20for%20Cloud)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
 
 
 ### Task 1: Access the Azure portal and set up a Subscription
 
-In this task, you will set up an Azure Subscription required to complete this lab and future labs.
+In this task, you'll set up an Azure Subscription required to complete this lab and future labs.
 
 1. Log in to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.  
 
@@ -39,7 +39,7 @@ In this task, you will set up an Azure Subscription required to complete this la
 
 1. Select the **Privileged administrator roles** tab and then select **Owner**. Select **Next** to continue.
 
-1. Under the *Members* tab, click **+ Select members** and select the **MOD Administrator** account and click **Select** to continue.
+1. Under the *Members* tab, select **+ Select members** and select the **MOD Administrator** account and select **Select** to continue.
 
 1. Select **Review + assign** twice to assign the owner role to your admin account.
 
@@ -48,7 +48,7 @@ In this task, you will set up an Azure Subscription required to complete this la
 
 ### Task 2: Create a Log Analytics Workspace
 
-In this task, you will create a Log Analytics workspace for use with Microsoft Defender for Cloud.
+In this task, you'll create a Log Analytics workspace for use with Microsoft Defender for Cloud.
 
 1. In the Search bar of the Azure portal, type *Log Analytics workspaces*, then select the same service name.
 
@@ -67,7 +67,7 @@ In this task, you will create a Log Analytics workspace for use with Microsoft D
 
 ### Task 3: Enable Microsoft Defender for Cloud
 
-In this task, you will enable and configure Microsoft Defender for Cloud.
+In this task, you'll enable and configure Microsoft Defender for Cloud.
 
 1. In the Search bar of the Azure portal, type *Defender*, then select **Microsoft Defender for Cloud**.
 
@@ -102,7 +102,7 @@ In this task, you will enable and configure Microsoft Defender for Cloud.
 
 ### Task 4: Install Azure Arc on an On-Premises Server
 
-In this task, you will install Azure Arc on an on-premises server to make onboarding easier.
+In this task, you'll install Azure Arc on an on-premises server to make onboarding easier.
 
 >**Important:** The next steps are done in a different machine than the one you were previously working. Look for the Virtual Machine name references.
 
@@ -160,10 +160,9 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 
     >**Note:** This could take a couple of minutes.
 
+Task 5: Protect an On-Premises Server
 
-### Task 5: Protect an On-Premises Server
-
-In this task, you will manually install the required agent on the **WINServer** virtual machine.
+In this task, you'll manually install the *Azure Monitor Agent* by adding a *Data Collection Rule (DCR)* on the **WINServer** virtual machine.
 
 1. Go to **Microsoft Defender for Cloud** and select the **Getting Started** page from the left menu.
 
@@ -175,24 +174,44 @@ In this task, you will manually install the required agent on the **WINServer** 
 
 1. Select **+ Add Servers** next to the workspace you created earlier.
 
-1. Select **Log Analytics agent instructions**
+1. Select **Data Collection Rules**
 
-1. Select **Download Windows Agent (64 bit)**.
+1. Select **+ Create**.
 
-1. Select **Open file** to run the downloaded *MMASetup-AMD64.exe* file.
+1. Enter **WINServer** for Rule Name.
 
-1. Select **Next** until the wizard page for **Agent Setup Options** appears.
+1. Select your *Azure Pass - Sponsorship* subscription and select a Resource Group. **Hint:** *RG-Defender*
 
-1. Select **Connect the Agent to Azure Log Analytics (OMS)**, then select **Next**.
+1. You can keep the default *East US* region or select another preferable location.
 
-1. Copy and paste the **Workspace ID** and **Primary Key** value in the **Workspace Key** text box from the Azure portal into the wizard page fields as appropriate and select **Next**.
+1. Select the **Windows** radio button for *Platform Type* and select **Next:Resources**.
 
-1. Continue with the **Install**. Select **Finish** when complete.
+1. In the **Resources** tab, **+ Add resources**.
 
-1. Go to the "Microsoft Defender for Cloud" portal and select **Inventory**.
+1. In the **Select a scope** page, expand the *Scope* column for **RG-Defender** (or the Resource Group your created), then select **WINServer** and select **Apply**.
 
-1. The **WINServer** virtual machine will appear after at least 5 minutes. You may have to select **Refresh** to see it. **Hint:** If you see the number 1 under *Total resources* remove the filter to show the *WINServer* virtual machine.
+    >**Note:** You may need to set the column filter for *Resource type* to *Server-Azure Arc* if **WINServer** is not displayed.
 
-1. You can move on to the next lab and return later to review the **Inventory** section of **Microsoft Defender for Cloud**.
+1. Select **Next:Collect and deliver**
+
+1. In the **Collect and deliver** tab, select **+ Add data source**
+
+1. In the **Add a data source** page, select **Performance Counters** from *Data source type*.
+
+    >**Note:** For the purposes of this lab you could select *Windows Event Logs*. These selections can be revised later.
+
+1. Select **Add data source** and select **Review + create**
+
+1. Select **Create** after *Validation passed* is displayed.
+
+1. The **Data Collection Rule** creation initiates the installation of the *AzureMonitorWindowsAgent* extension on **WINServer**.
+
+1. When the *Data Collection Rule* creation completes, enter **WINServer** in the *Search resources, services and docs* search bar, and select **WINServer** from *Resources*.
+
+1. On **WINServer** scroll down through the left menu to *Settings* and *Extensions*.
+
+1. The **AzureMonitorWindowsAgent** should be listed with a *Status* of **Succeeded**.
+
+1. You can move on to the next lab and return later to review the **Inventory** section of **Microsoft Defender for Cloud** to verify that **WINServer** is included.
 
 ## Proceed to Exercise 2

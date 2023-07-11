@@ -10,18 +10,18 @@ lab:
 
 ![Lab overview.](../Media/SC-200-Lab_Diagrams_Mod6_L1_Ex2.png)
 
-You are a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You must learn how to connect log data from the many data sources in your organization. The next source of data are Windows virtual machines inside and outside of Azure, like On-Premises environments or other Public Clouds.
+You're a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You must learn how to connect log data from the many data sources in your organization. The next source of data is Windows virtual machines inside and outside of Azure, like On-Premises environments or other Public Clouds.
 
 >**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/SC-200%20Lab%20Simulation%20-%20Connect%20Windows%20devices%20to%20Microsoft%20Sentinel%20using%20data%20connectors)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
 
 
 ### Task 1: Create a Windows Virtual Machine in Azure
 
-In this task, you will create a Windows virtual machine in Azure.
+In this task, you'll create a Windows virtual machine in Azure.
 
 1. Login to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.  
 
-1. In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
+1. In the Microsoft Edge browser, navigate to the Azure portal at https://portal.azure.com.
 
 1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
@@ -49,7 +49,7 @@ In this task, you will create a Windows virtual machine in Azure.
 
 1. Scroll down and review the *Image* for the virtual machine. If it appears empty, select **Windows 10 Enterprise, version 22H2**.
 
-1. Review the *Size* for the virtual machine. If it appears empty, select **See all sizes**, choose the first VM size under *Most used by Azure users* and click **Select**.
+1. Review the *Size* for the virtual machine. If it appears empty, select **See all sizes**, choose the first VM size under *Most used by Azure users* and select **Select**.
 
 1. Scroll down and enter a *Username* of your choosing. **Hint:** Avoid reserved words like admin or root.
 
@@ -66,7 +66,7 @@ In this task, you will create a Windows virtual machine in Azure.
 
 ### Task 2: Connect an Azure Windows virtual machine
 
-In this task, you will connect an Azure Windows virtual machine to Microsoft Sentinel.
+In this task, you'll connect an Azure Windows virtual machine to Microsoft Sentinel.
 
 1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
@@ -78,9 +78,9 @@ In this task, you will connect an Azure Windows virtual machine to Microsoft Sen
 
 1. In the *Configuration* section, select the **Create data collection rule**.
 
-1. Enter **AZWIN01DCR** for Rule Name, then select **Next: Resources**.
+1. Enter **AZWINDCR** for Rule Name, then select **Next: Resources**.
 
-1. Select **+Add resource(s)** to select the Virtual Machine we just created.
+1. Select **+Add resource(s)** to select the Virtual Machine we created.
 
 1. Expand **RG-AZWIN01**, then select **AZWIN01**.
 
@@ -92,34 +92,26 @@ In this task, you will connect an Azure Windows virtual machine to Microsoft Sen
 
 1. Wait a minute and then select **Refresh** to see the new data collection rule listed.
 
-
 ### Task 3: Connect a non-Azure Windows Machine
 
-In this task, you will install Azure Arc and connect a non-Azure Windows virtual machine to Microsoft Sentinel.  
+In this task, you'll add an Azure Arc connected, non-Azure Windows virtual machine to Microsoft Sentinel.  
 
->**Important:** The *Windows Security Events via AMA* data connector requires Azure Arc for non-Azure devices. 
+>**Important:** The *Windows Security Events via AMA* data connector requires Azure Arc for non-Azure devices.
 
 1. Make sure you are in the *Windows Security Events via AMA* data connector configuration in your Microsoft Sentinel workspace.
 
-1. Under the *Configuration* section, select the **Create data collection rule**.
+1. In the **Instructions** tab, under the *Configuration* section, edit the **AZWINDCR** *data collection rule* by selecting the *pencil* icon.
 
-1. Enter **WINServer** for Rule Name, then select **Next: Resources**.
-
-1. Select **+Add resource(s)**.
+1. Select **Next: Resources**, and **+Add resource(s)**.
 
 1. Expand **RG-Defender** (or the Resource Group your created), then select **WINServer**.
 
     >**Important:** If you do not see WINServer, please refer to the Learning Path 3, Exercise 1, Task 4 where you installed Azure Arc in this server.
 
-    >**Note:** In that previous exercise, we deployed the legacy Log Analytics Agent, now we will deploy the Azure Monitor Agent (AMA) using a Data Collection Rule (DCR).
-
 1. Select **Apply**.
 
 1. Select **Next: Collect**, then **Next: Review + create**.
 
-1. Select **Create**.
-
-1. Wait a minute and then select **Refresh** to see the new data collection rule listed.
-
+1. Select **Create** after *Validation passed* is displayed.
 
 ## Proceed to Exercise 3
