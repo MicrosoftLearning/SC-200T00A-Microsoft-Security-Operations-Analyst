@@ -132,7 +132,7 @@ In this task, instead of using a LiveStream, you will create a NRT analytics que
 
 1. Select the **Analytics** page under *Configuration* in Microsoft Sentinel. 
 
-1. Select the **Create** tab, then **NRT query rule (Preview)**.
+1. In the command bar, select **Create**, then **NRT query rule (Preview)**.
 
 1. This starts the "Analytics rule wizard". For the *General* tab type:
 
