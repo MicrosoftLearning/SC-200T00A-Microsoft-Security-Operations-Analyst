@@ -163,7 +163,7 @@ In this task, instead of using a LiveStream, you will create a NRT analytics que
 
 1. Close the *Logs* window by selecting the **X** in the top-right of the window and select **OK** to discard the changes. 
 
-1. Select **Test with current data** under *Results simulation*. Notice the expected number of *Alerts per day*.
+1. Select **Test with current data** under the *Results simulation* pane at the right. Notice the expected number of *Alerts per day*. **Hint:** You may need to reduce the zoom in the browser to see the *Reslts simulation* pane.
 
 1. Under *Entity mapping* select:
 
