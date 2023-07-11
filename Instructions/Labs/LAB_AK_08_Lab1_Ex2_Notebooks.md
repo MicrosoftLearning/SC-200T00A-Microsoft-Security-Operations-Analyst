@@ -69,7 +69,7 @@ In this task, you will explore using notebooks in Microsoft Sentinel.
 
 1. Type a unique name in the *Compute name* field. This will identify you compute instance.
 
-1. Scroll down and select the first option available. **Hint:** Workload type: Development on Notebooks and light weight testing.
+1. Scroll down and under *Virtual machine size* select the first option available. **Hint:** Workload type: Development on Notebooks (or other IDE) and light weight testing.
 
 1. Select the **Create** button at the bottom of the screen. Close any feedback window that may appear. This will take a few minutes, you will see a notification (bell icon) when it is done and the *Compute instance* left icon turns from blue to green.
 
