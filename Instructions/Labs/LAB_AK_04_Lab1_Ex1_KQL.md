@@ -386,13 +386,15 @@ In this task, you will work with structured and unstructured string fields with 
 1. The following statement demonstrates working with **dynamic** fields, which are special since they can take on any value of other data types. In this example, The DeviceDetail field from the SigninLogs table is of type **dynamic**. In the Query Window enter the following statement and select **Run**: 
 
     ```KQL
-    SigninLogs | extend OS = DeviceDetail.operatingSystem
+    SigninLogs
+    | extend OS = DeviceDetail.operatingSystem
     ```
 
 1. The following example shows how to break out packed fields for SigninLogs. In the Query Window enter the following statement and select **Run**: 
 
     ```KQL
-    SigninLogs | extend OS = DeviceDetail.operatingSystem, Browser = DeviceDetail.browser 
+    SigninLogs
+    | extend OS = DeviceDetail.operatingSystem, Browser = DeviceDetail.browser 
     | extend StatusCode = tostring(Status.errorCode), StatusDetails = tostring(Status.additionalDetails) 
     | extend Date = startofday(TimeGenerated) 
     | summarize count() by Date, Identity, UserDisplayName, UserPrincipalName, IPAddress, ResultType, ResultDescription, StatusCode, StatusDetails 
@@ -404,7 +406,8 @@ In this task, you will work with structured and unstructured string fields with 
 1. The following statements demonstrates operators to manipulate JSON stored in string fields. Many logs submit data in JSON format, which requires you to know how to transform JSON data to fields that can be queried. In the Query Window enter the following statement and select **Run**: 
 
     ```KQL
-    SigninLogs | extend AuthDetails =  todynamic(AuthenticationDetails) 
+    SigninLogs
+    | extend AuthDetails =  todynamic(AuthenticationDetails) 
     | extend AuthMethod =  AuthDetails[0].authenticationMethod 
     | extend AuthResult = AuthDetails[0].["authenticationStepResultDetail"] 
     | project AuthMethod, AuthResult, AuthDetails 
@@ -413,7 +416,8 @@ In this task, you will work with structured and unstructured string fields with 
 1. The following statement demonstrates the **mv-expand** operator, which turns dynamic arrays into rows (multi-value expansion).
 
     ```KQL
-    SigninLogs | mv-expand AuthDetails = todynamic(AuthenticationDetails) 
+    SigninLogs
+    | mv-expand AuthDetails = todynamic(AuthenticationDetails) 
     | project AuthDetails
     ```
 
@@ -422,7 +426,8 @@ In this task, you will work with structured and unstructured string fields with 
 1. The following statement demonstrates the **mv-apply** operator, which applies a subquery to each record and returns the union of the results of all subqueries.
 
     ```KQL
-    SigninLogs | mv-apply AuthDetails = todynamic(AuthenticationDetails) on
+    SigninLogs
+    | mv-apply AuthDetails = todynamic(AuthenticationDetails) on
     (where AuthDetails.authenticationMethod == "Password")
     ```
 
