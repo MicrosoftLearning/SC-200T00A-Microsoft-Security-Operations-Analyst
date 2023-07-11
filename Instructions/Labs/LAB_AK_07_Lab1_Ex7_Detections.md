@@ -49,7 +49,8 @@ In this task, you will create a detection for the first attack of the previous e
 1. From the results, we now know that the Threat Actor is using reg.exe to add keys to the Registry key and the program is located in C:\temp. **Run** the following statement to replace the *search* operator with the *where* operator in our query:
 
     ```KQL
-    SecurityEvent | where Activity startswith "4688" 
+    SecurityEvent
+    | where Activity startswith "4688" 
     | where Process == "reg.exe" 
     | where CommandLine startswith "REG" 
     ```
@@ -57,7 +58,8 @@ In this task, you will create a detection for the first attack of the previous e
 1. It is important to help the Security Operations Center Analyst by providing as much context about the alert as you can. This includes projecting Entities for use in the investigation graph. **Run** the following query:
 
     ```KQL
-    SecurityEvent | where Activity startswith "4688" 
+    SecurityEvent
+    | where Activity startswith "4688" 
     | where Process == "reg.exe" 
     | where CommandLine startswith "REG" 
     | extend timestamp = TimeGenerated, HostCustomEntity = Computer, AccountCustomEntity = SubjectUserName
@@ -110,20 +112,23 @@ In this task, you will create a detection for the second attack of the previous 
 1. **Run** the following KQL Statement to identify any entry that refers to administrators:
 
     ```KQL
-    search "administrators" | summarize count() by $table
+    search "administrators"
+    | summarize count() by $table
     ```
 
 1. The result might show events from different tables, but in our case, we want to investigate the SecurityEvent table. The EventID and Event that we are looking is "4732 - A member was added to a security-enabled local group". With this, we will identify adding a member to a privileged group. **Run** the following KQL query to confirm:
 
     ```KQL
-    SecurityEvent | where EventID == 4732
+    SecurityEvent
+    | where EventID == 4732
     | where TargetAccount == "Builtin\\Administrators"
     ```
 
 1. Expand the row to see all the columns related to the record. The username of the account added as Administrator does not show. The issue is that instead of storing the username, we have the Security IDentifier (SID). **Run** the following KQL to match the SID to the username that was added to the Administrators group:
 
     ```KQL
-    SecurityEvent | where EventID == 4732
+    SecurityEvent
+    | where EventID == 4732
     | where TargetAccount == "Builtin\\Administrators"
     | extend Acct = MemberSid, MachId = SourceComputerId  
     | join kind=leftouter (
@@ -137,7 +142,8 @@ In this task, you will create a detection for the second attack of the previous 
 1. Extend the row to show the resulting columns, in the last one, we see the name of the added user under the *UserName1* column we *project* within the KQL query. It is important to help the Security Operations Analyst by providing as much context about the alert as you can. This includes projecting Entities for use in the investigation graph. **Run** the following query:
 
     ```KQL
-    SecurityEvent | where EventID == 4732
+    SecurityEvent
+    | where EventID == 4732
     | where TargetAccount == "Builtin\\Administrators"
     | extend Acct = MemberSid, MachId = SourceComputerId  
     | join kind=leftouter (
