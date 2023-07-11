@@ -87,7 +87,7 @@ In this task, you will create a hunting query, bookmark a result, and create a L
     | order by count_ desc nulls last 
     ```
 
-1. Scroll down and under *Entity mapping* select:
+1. Scroll down and expand *Entity mapping*, then select **+Add new entity** and select:
 
     - For the *Entity type* drop-down list select **Host**.
     - For the *Identifier* drop-down list select **HostName**.
