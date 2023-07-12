@@ -170,12 +170,9 @@ In this task, instead of using a LiveStream, you will create a NRT analytics que
 
 1. Scroll down and select **Next: Incident settings>** button.
 
-1. For the *Incident settings* tab, leave the default values and select **Next: Automated response >** button.
+1. For the *Incident settings* tab, leave the default values and select **Next: Review and create >** button.
 
-1. For the *Automated response* tab select the **PostMessageTeams-OnAlert** under *Alert automation (classic)* and then select **Next: Review** button.
-
-1. On the *Review* tab, select the **Create** button to create the new Scheduled Analytics rule.
-
+1. On the *Review and create* tab, select the **Save** button to create and save the new Scheduled Analytics rule.
 
 ### Task 3: Create a Search
 
