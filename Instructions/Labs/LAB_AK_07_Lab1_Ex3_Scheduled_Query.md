@@ -10,7 +10,7 @@ lab:
 
 ![Lab overview.](../Media/SC-200-Lab_Diagrams_Mod7_L1_Ex3.png)
 
-You are a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You must learn how to detect and mitigate threats using Microsoft Sentinel. After connecting your data sources to Microsoft Sentinel, you create custom analytics rules to help discover threats and anomalous behaviors in your environment.
+You're a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You must learn how to detect and mitigate threats using Microsoft Sentinel. After connecting your data sources to Microsoft Sentinel, you create custom analytics rules to help discover threats and anomalous behaviors in your environment.
 
 Analytics rules search for specific events or sets of events across your environment, alert you when certain event thresholds or conditions are reached, generate incidents for your SOC to triage and investigate, and respond to threats with automated tracking and reMediation processes.
 
@@ -19,7 +19,7 @@ Analytics rules search for specific events or sets of events across your environ
 
 ### Task 1: Create a Scheduled Query
 
-In this task, you will create a scheduled query and connect it to the Teams channel you created in the previous exercise.
+In this task, you'll create a scheduled query and connect it to the Teams channel you created in the previous exercise.
 
 1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
@@ -35,7 +35,7 @@ In this task, you will create a scheduled query and connect it to the Teams chan
 
 1. Make sure that you are in the *Rule templates* tab in the command bar and search for the **New CloudShell User** rule.
 
-1. From the rule summary blade, make sure you are receiving data by reviewing the green icon under *Data sources: Azure Activity*.
+1. From the rule summary blade, make sure you're receiving data by reviewing the green icon under *Data sources: Azure Activity*.
 
     >**Note:** If you do not see it in a connected state, make sure you completed Task 3 of the Learning Path 6 Lab, Exercise 1.
 
@@ -45,7 +45,7 @@ In this task, you will create a scheduled query and connect it to the Teams chan
 
 1. Select **Next: Set rule logic >** button:
 
-1. For the rule query, select **View query results**. You should not receive any results nor any errors.
+1. For the rule query, select **View query results**. You shouldn't receive any results nor any errors.
 
 1. Close the *Logs* window by selecting the upper right **X** and select **OK** to discard to save changes to go back to the wizard.
 
@@ -95,11 +95,11 @@ In this task, you will create a scheduled query and connect it to the Teams chan
 1. Select **Save**.
 
 
-### Task 2: Test our new rule
+### Task 2: Test your new rule
 
-In this task, you will test your new scheduled query rule.
+In this task, you'll test your new scheduled query rule.
 
-1. In the top bar of the Azure Portal, Select the icon **>_** that corresponds to the Cloud Shell. You might need to select the ellipsis icon first **(...)** if your display resolution is too low.
+1. In the top bar of the Azure portal, Select the icon **>_** that corresponds to the Cloud Shell. You might need to select the ellipsis icon first **(...)** if your display resolution is too low.
 
 1. Select **Powershell** and then **Create storage**. Wait until the Cloud Shell is provisioned.
 
@@ -119,11 +119,11 @@ In this task, you will test your new scheduled query rule.
 
 1. You should see the newly created Incident.
 
-    >**Note:** The event that triggers the alert may take 5+ minutes to process. Continue with the next exercise, you will come back to this view later.
+    >**Note:** The event that triggers the incident may take 5+ minutes to process. Continue with the next exercise, you will come back to this view later.
 
 1. Select the Incident and review the information in the right blade.
 
-1. Go back to Microsoft Teams by selecting the tab in your Edge browser. If you closed it, just open a new tab and type https://teams.microsoft.com. Go to the *SOC* Teams, select the *New Alerts* channel and see the message post about the incident.
+1. Go back to Microsoft Teams by selecting the tab in your Microsoft Edge browser. If you closed it, just open a new tab and type https://teams.microsoft.com. Go to the *SOC* Teams, select the *New Alerts* channel and see the message post about the incident.
 
 
 ## Proceed to Exercise 4
