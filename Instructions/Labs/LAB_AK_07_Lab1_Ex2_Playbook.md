@@ -99,35 +99,26 @@ In this task, you will update the new playbook you created with the proper conne
 
 1. Select the **Automation** under the *Configuration* area and then select the **Active Playbooks** tab.
 
-1. Select **Refresh** from the command bar in case you don't see any playbook. You should see the two playbooks created from the previous step, but with different *Trigger kind*.
+1. Select **Refresh** from the command bar in case you don't see any playbook. You should the playbook created from the previous step with the **Microsoft Sentinel Incident** *Trigger kind*.
 
-1. Select the **PostMessageTeams-OnAlert** playbook name.
+1. Select the **PostMessageTeams** playbook name.
 
 1. On the Logic App page for *PostMessageTeams-OnAlert*, in the command menu, select **Edit**.
 
-1. Select the *first* block, **Microsoft Sentinel alert**.
+1. Select the *first* block, **Microsoft Sentinel incident (Preview)**.
 
 1. Select the **Change connection** link.
 
 1. Select **Add new** and select **Sign in**. In the new window, select your Azure subscription admin credentials when prompted. The last line of the block should now read "Connected to your-admin-username".
 
-1. Now select the *second* block, **Alert - Get incident**.
-
-1. Select the **Change connection** link.
-
-1. Select the connection that has your Azure admin username under *Display Name*. **Hint:** admin@ZZZZZZ.onmicrosoft.com. The last line of the block should now read "Connected to your-admin-username".
-
-1. Now select the *third* block, **Connections**.
+1. Now select the *second* block, **Connections**.
 
 1. Select **Add new** and select your Azure admin credentials when prompted. The last line of the block should now read "Connected to your-admin-username".
 
-1. The block has now been renamed to **Post a message (V3)**, at the end of the *Team* field, select the **X** to clear the contents. The field will be changed to a drop-down with a listing of the available Teams from Microsoft Teams. Select **SOC**.
+1. The block has now been renamed to **Post a message (V3)(Preview)**, at the end of the *Team* field, select the **X** to clear the contents. The field will be changed to a drop-down with a listing of the available Teams from Microsoft Teams. Select **SOC**.
 
 1. Do the same for the *Channel* field, select the **X** at the end of the field to clear the contents. The field will be changed to a drop-down with a listing of the Channels of the SOC Teams. Select **New Alerts**.
 
 1. Select **Save** on the command bar. The Logic App will be used in a future lab.
-
-1. Repeat the task, but instead of selecting *PostMessageTeams-OnAlert*, select the **PostMessageTeams-OnIncident** playbook. **Hint:** There is no need to create connections, just reuse the one you created for this task.
-
 
 ## Proceed to Exercise 3

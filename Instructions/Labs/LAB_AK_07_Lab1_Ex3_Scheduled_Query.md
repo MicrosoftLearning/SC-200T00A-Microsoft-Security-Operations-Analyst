@@ -54,7 +54,7 @@ In this task, you will create a scheduled query and connect it to the Teams chan
     |Setting|Value|
     |---|---|
     |Run Query every|5 minutes|
-    |Look data from the last|1 Days|
+    |Lookup data from the last|1 Days|
 
     >**Note:** We are purposely generating many incidents for the same data. This enables the Lab to use these alerts.
 
@@ -74,15 +74,25 @@ In this task, you will create a scheduled query and connect it to the Teams chan
 
 1. For the *Actions*, select **Assign owner**.
 
-1. Then select **Assign to me**. Then select **Apply**.
+1. Then select **Assign to me**. Then select **+ Add action**.
 
-1. Scroll down and select the **Alert automation (classic)** bar.
+1. Use the *And then* dropdown menus to select **Run playbook**
+
+1. A second drop down menu appears with an *Information (i)* message regarding playbook permissions and a **Manage playbook permissions link**
+
+    >**Note:** The playbooks will appear grayed out in the drop down list until permissions are configured.
+
+1. Select the **Manage playbook permissions link**
+
+1. On the *Manage Permissions* page select the **RG-Playbooks** resource group you created in the previous lab, and select **Apply**.
 
 1. From the drop-down menu, select the playbook **PostMessageTeams-OnAlert** you created in the previous exercise.
 
-1. Select the **Next: Review >** button.
+1. Select **Apply**
+
+1. Select the **Next: Review and create >** button.
   
-1. Select **Create**.
+1. Select **Save**.
 
 
 ### Task 2: Test our new rule
@@ -107,7 +117,7 @@ In this task, you will test your new scheduled query rule.
 
 1. Select the **Auto-refresh incidents** toggle.
 
-1. You should see the newly created Incident. 
+1. You should see the newly created Incident.
 
     >**Note:** The event that triggers the alert may take 5+ minutes to process. Continue with the next exercise, you will come back to this view later.
 
