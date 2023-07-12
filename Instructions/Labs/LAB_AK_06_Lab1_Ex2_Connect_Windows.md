@@ -96,7 +96,7 @@ In this task, you'll connect an Azure Windows virtual machine to Microsoft Senti
 
 In this task, you'll add an Azure Arc connected, non-Azure Windows virtual machine to Microsoft Sentinel.  
 
->**Important:** The *Windows Security Events via AMA* data connector requires Azure Arc for non-Azure devices.
+   >**Note:** The *Windows Security Events via AMA* data connector requires Azure Arc for non-Azure devices.
 
 1. Make sure you are in the *Windows Security Events via AMA* data connector configuration in your Microsoft Sentinel workspace.
 
