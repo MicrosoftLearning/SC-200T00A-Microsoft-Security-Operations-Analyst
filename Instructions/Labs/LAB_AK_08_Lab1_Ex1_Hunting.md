@@ -43,7 +43,8 @@ In this task, you will create a hunting query, bookmark a result, and create a L
 
     ```KQL
     let lookback = 2d; 
-    SecurityEvent | where TimeGenerated >= ago(lookback) 
+    SecurityEvent 
+    | where TimeGenerated >= ago(lookback) 
     | where EventID == 4688 and Process =~ "powershell.exe"
     | extend PwshParam = trim(@"[^/\\]*powershell(.exe)+" , CommandLine) 
     | project TimeGenerated, Computer, SubjectUserName, PwshParam 
@@ -77,7 +78,8 @@ In this task, you will create a hunting query, bookmark a result, and create a L
 
     ```KQL
     let lookback = 2d; 
-    SecurityEvent | where TimeGenerated >= ago(lookback) 
+    SecurityEvent 
+    | where TimeGenerated >= ago(lookback) 
     | where EventID == 4688 and Process =~ "powershell.exe"
     | extend PwshParam = trim(@"[^/\\]*powershell(.exe)+" , CommandLine) 
     | project TimeGenerated, Computer, SubjectUserName, PwshParam 
@@ -149,7 +151,8 @@ In this task, instead of using a LiveStream, you will create a NRT analytics que
 
     ```KQL
     let lookback = 2d; 
-    SecurityEvent | where TimeGenerated >= ago(lookback) 
+    SecurityEvent 
+    | where TimeGenerated >= ago(lookback) 
     | where EventID == 4688 and Process =~ "powershell.exe"
     | extend PwshParam = trim(@"[^/\\]*powershell(.exe)+" , CommandLine) 
     | project TimeGenerated, Computer, SubjectUserName, PwshParam 

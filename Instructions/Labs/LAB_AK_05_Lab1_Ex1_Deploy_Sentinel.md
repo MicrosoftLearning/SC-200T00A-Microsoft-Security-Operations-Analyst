@@ -130,7 +130,8 @@ In this task, you will create an indicator in Microsoft Sentinel.
 1. Scroll the results to the right to see the DomainName column. You can also run the following KQL statement to just see the DomainName column. 
 
     ```KQL
-    ThreatIntelligenceIndicator | project DomainName
+    ThreatIntelligenceIndicator 
+    | project DomainName
     ```
 
 
