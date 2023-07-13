@@ -39,11 +39,19 @@ In this task, you will access your Microsoft Sentinel workspace.
 
 In this task, you will connect a Linux host to Microsoft Sentinel with the Common Event Format (CEF) via Legacy Agent connector.
 
-1. Select **Data connectors** from the Configuration area in Microsoft Sentinel. From the Data Connectors tab, search for the **Common Event Format (CEF) via Legacy Agent** connector and select it from the list.
+1. In the Microsoft Sentinel left menus, scroll down to the *Content management* section and select **Content Hub**.
 
-1. Select **Open connector page** on the connector information blade.
+1. In the *Content hub*, search for the **Common Event Format** solution and select it from the list.
 
-1. Under *Configuration*, copy to the clipboard the command shown in *1.2 Install the CEF collector on the Linux machine*.
+1. On the *Common Event Format* solution page select **Install**.
+
+1. When the installation completes select **Manage**
+
+    >**Note:** The *Common Event Format* solution installs both the *Common Events Format (CEF) via AMA* and the *Common Events Format (CEF)* Data connectors.
+
+1. Select the *Common Events Format (CEF)* Data connector, and select **Open connector page** on the connector information blade.
+
+1. In the *Configuration* section, under the *Instructions* tab, copy to the clipboard the command shown in *1.2 Install the CEF collector on the Linux machine*.
 
 1. Launch your **LIN1** virtual machine. Login with the username and password provided by your lab hoster. **Hint:** You might need to press the Enter key to see the login prompt. 
 
@@ -81,15 +89,23 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
 
 In this task, you will connect a Linux host to Microsoft Sentinel with the Syslog connector.
 
-1. Go back to the Edge browser where you have your Microsoft Sentinel Portal open and close the "Common Event Format (CEF) via Legacy Agent" data connector page by selecting the 'x' in the top right corner. 
+1. Go back to the Microsoft Edge browser where you have your Microsoft Sentinel Portal open and close the "Common Event Format (CEF) via Legacy Agent" data connector page by selecting the 'x' in the top right corner.
 
-1. From the Data Connectors tab, search for the **Syslog** connector and select it from the list.
+1. 1. In the Microsoft Sentinel left menus, scroll down to the *Content management* section and select **Content Hub**.
 
-1. Select **Open connector page** on the connector information blade.
+1. In the *Content hub*, search for the **Syslog** solution and select it from the list.
 
-1. Under *Configuration*, open the **Install agent on a non-Azure Linux Machine** section.
+1. On the *Common Event Format* solution page select **Install**.
 
-1. Select the link for **Download & install agent for non-Azure Linux machine**. 
+1. When the installation completes select **Manage**
+
+    >**Note:** The *Syslog* solution installs the *Syslog* Data connector, 5 Analytics rules, 9 Hunting queries, and 1 Workbook.
+
+1. Select the *Syslog* Data connector, and select **Open connector page** on the connector information blade
+
+1. In the *Configuration* section, expand **Install agent on a non-Azure Linux Machine**.
+
+1. Select the link for **Download & install agent for non-Azure Linux machine**.
 
     >**Note:** Your Log Analytics workspace should show *2 Windows computers connected*. This corresponds to WINServer and AZWIN01 virtual machines connected earlier.
 

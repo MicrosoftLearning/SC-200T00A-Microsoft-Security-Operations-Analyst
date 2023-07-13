@@ -79,7 +79,7 @@ In this task, you'll connect an Azure Windows virtual machine to Microsoft Senti
 
 1. When the installation completes select **Manage**
 
-    >**Note:** The *Windows Security Events* solution installs the both the *Windows Security Events via AMA* and the *Security Events via Legacy Agent* Data connectors. Plus 2 Workbooks, 20 Analytic Rules, and 43 Hunting Queries.
+    >**Note:** The *Windows Security Events* solution installs both the *Windows Security Events via AMA* and the *Security Events via Legacy Agent* Data connectors. Plus 2 Workbooks, 20 Analytic Rules, and 43 Hunting Queries.
 
 1. Select the *Windows Security Events via AMA* Data connector, and select **Open connector page** on the connector information blade.
 
