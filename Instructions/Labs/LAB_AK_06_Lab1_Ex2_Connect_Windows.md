@@ -63,7 +63,6 @@ In this task, you'll create a Windows virtual machine in Azure.
 
 1. Select **Create**. Wait for the Resource to be created, this may take a few minutes.
 
-
 ### Task 2: Connect an Azure Windows virtual machine
 
 In this task, you'll connect an Azure Windows virtual machine to Microsoft Sentinel.
@@ -72,11 +71,19 @@ In this task, you'll connect an Azure Windows virtual machine to Microsoft Senti
 
 1. Select your Microsoft Sentinel Workspace you created earlier.
 
-1. From the Data Connectors Tab, search for the **Windows Security Events via AMA** connector and select it from the list.
+1. 1. In the Microsoft Sentinel left menus, scroll down to the *Content management* section and select **Content Hub**.
 
-1. Select **Open connector page** on the connector information blade.
+1. In the *Content hub*, search for the **Windows Security Events** solution and select it from the list.
 
-1. In the *Configuration* section, select the **Create data collection rule**.
+1. On the *Windows Security Events* solution page select **Install**.
+
+1. When the installation completes select **Manage**
+
+    >**Note:** The *Windows Security Events* solution installs the both the *Windows Security Events via AMA* and the *Security Events via Legacy Agent* Data connectors. Plus 2 Workbooks, 20 Analytic Rules, and 43 Hunting Queries.
+
+1. Select the *Windows Security Events via AMA* Data connector, and select **Open connector page** on the connector information blade.
+
+1. In the *Configuration* section, under the *Instructions* tab, select the **Create data collection rule**.
 
 1. Enter **AZWINDCR** for Rule Name, then select **Next: Resources**.
 
