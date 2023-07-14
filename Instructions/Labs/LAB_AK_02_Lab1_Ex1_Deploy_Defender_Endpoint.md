@@ -87,7 +87,7 @@ In this task, you'll configure roles for use with device groups.
 
 1. Select the **Turn on roles** button.
 
-1. Select **+ Add item**.
+1. Select **+ Add role**.
 
 1. In the Add role dialog, enter the following:
 
