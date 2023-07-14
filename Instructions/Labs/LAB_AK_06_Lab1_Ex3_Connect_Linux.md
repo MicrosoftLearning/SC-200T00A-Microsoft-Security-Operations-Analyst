@@ -95,7 +95,7 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
 1. In the *Content hub*, search for the **Syslog** solution and select it from the list.
 
-1. On the *Common Event Format* solution page select **Install**.
+1. On the *Syslog* solution page select **Install**.
 
 1. When the installation completes select **Manage**
 
