@@ -60,7 +60,7 @@ In this task, you will run two simulated attacks to explore the capabilities of 
 
 1. In the Microsoft 365 Defender portal select **Incidents & alerts** from the left menu bar, then select **Incidents**.
 
-1. A new incident called "Multi-stage incident..." is in the right pane. Click the incident name to load its details.
+1. A new incident called "Multi-stage incident..." is in the right pane. Select the incident name to load its details.
 
     >**Note:** An incident called "Suspicious..." might appear first. This will later be replaced with the aforementioned incident when Microsoft 365 Defender correlates them a single security issue, including the original test alert created in Task 1.
 
@@ -74,9 +74,9 @@ In this task, you will run two simulated attacks to explore the capabilities of 
 
 1. Under **Informational, expected activity**, select **Security testing**. 
 
-1. Add any comments if desired and click **Save** to update the incident and select **Close** to finish.
+1. Add any comments if desired and select **Save** to update the incident and finish.
 
-1. Review the contents of the Alerts, Devices, Users, Investigations, Evidence and Response, Graph tabs. **Hint:** Some tabs might be hidden due the size of your display. Select the ellipsis tab (...) to make them appear.
+1. Review the contents of the *Attack story, Alerts, Assets, Investigations, Evidence and Response*, and *Summary* tabs. Devices and Users are under the *Assets* tab. The *Attack story* tab displays the *Incident graph*. The **Hint:** Some tabs might be hidden due the size of your display. Select the ellipsis tab (...) to make them appear.
 
 >**Warning:** The simulations and tutorials here are an excellent source of learning through practice.  Simulations and tutorials are being added and edited regularly in the portal.  However, some of these simulations & tutorials may interfere with performance of the labs designed for this training course.  Only perform the simulations and tutorials recommended in the instructions provided for this lab when using the course provided Azure tenant.  You may perform the other simulations and tutorials *after* this training course is complete with this tenant.
 

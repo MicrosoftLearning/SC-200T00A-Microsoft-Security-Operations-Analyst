@@ -107,11 +107,13 @@ In this task, you will create an indicator in Microsoft Sentinel.
 
 1. For Domain, enter a domain name, for example type *contoso.com*.
 
-1. For the *Threat types*, write down **malicious-activity** and select **OK**.
+1. For the *Threat types*, select **+ Add** and type in **malicious-activity**. Select **OK**.
 
-1. For the *Name*, enter the same value used for the Domain.
+1. Enter a **Description**
 
-1. Set the *Valid from* field to today's date.
+1. For the **Name**, enter the same value used for the Domain.
+
+1. Set the **Valid from** field to today's date.
 
 1. Select **Apply**.
 
@@ -128,7 +130,8 @@ In this task, you will create an indicator in Microsoft Sentinel.
 1. Scroll the results to the right to see the DomainName column. You can also run the following KQL statement to just see the DomainName column. 
 
     ```KQL
-    ThreatIntelligenceIndicator | project DomainName
+    ThreatIntelligenceIndicator 
+    | project DomainName
     ```
 
 
