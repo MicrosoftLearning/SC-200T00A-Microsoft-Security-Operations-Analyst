@@ -85,12 +85,14 @@ In this task, you will create a detection for the first attack of the previous e
     |Account|FullName|AccountCustomEntity|
     |Host|Hostname|HostCustomEntity|
 
+1. If **Hostname** isn't selected for *Host* Entity, select it from the drop-down list.
+
 1. For *Query scheduling* set the following:
 
     |Setting|Value|
     |---|---|
     |Run Query every|5 minutes|
-    |Look data from the last|1 Day|
+    |Lookup data from the last|1 Days|
 
     >**Note:** We are purposely generating many incidents for the same data. This enables the Lab to use these alerts.
 
@@ -98,9 +100,27 @@ In this task, you will create a detection for the first attack of the previous e
 
 1. For the *Incident settings* tab, leave the default values and select **Next: Automated response >** button.
 
-1. For the *Automated response* tab select the **PostMessageTeams-OnAlert** under *Alert automation (classic)* and then select **Next: Review** button.
+1. On the *Automated response* tab under *Automation rules*, select **Add new**.
 
-1. On the *Review* tab, select the **Create** button to create the new Scheduled Analytics rule.
+1. For the *Automation rule name*, enter **Startup RegKey**.
+
+1. The *Trigger* should default to **When incident is created**.
+
+1. For the *Actions*, select **Assign owner**.
+
+1. Then select **Assign to me**. Then select **+ Add action**.
+
+1. Use the *And then* drop-down menus to select **Run playbook**
+
+    >**Note:** You have already assigned permissions to the playbook, so it will be available.
+
+1. From the drop-down menu, select the playbook **PostMessageTeams-OnAlert** you created in the previous exercise.
+
+1. Select **Apply**
+
+1. Select the **Next: Review >** button.
+  
+1. On the *Review and created* tab, select the **Create** button to create the new Scheduled Analytics rule.
 
 
 ### Task 2: Privilege Elevation Attack Detection
@@ -173,13 +193,35 @@ In this task, you will create a detection for the second attack of the previous 
     |Setting|Value|
     |---|---|
     |Run Query every|5 minutes|
-    |Look data from the last|1 Day|
+    |Look data from the last|1 Days|
 
     >**Note:** We are purposely generating many incidents for the same data. This enables the Lab to use these alerts.
 
 1. Leave the rest of the options with the defaults. Select **Next: Incident settings>** button.
 
 1. For the *Incident settings* tab, leave the default values and select **Next: Automated response >** button.
+
+1. On the *Automated response* tab under *Automation rules*, select **Add new**.
+
+1. For the *Automation rule name*, enter **SecurityEvent Local Administrators User Add**.
+
+1. The *Trigger* should default to **When incident is created**.
+
+1. For the *Actions*, select **Assign owner**.
+
+1. Then select **Assign to me**. Then select **+ Add action**.
+
+1. Use the *And then* drop-down menus to select **Run playbook**
+
+    >**Note:** You have already assigned permissions to the playbook, so it will be available.
+
+1. From the drop-down menu, select the playbook **PostMessageTeams-OnAlert** you created in the previous exercise.
+
+1. Select **Apply**
+
+1. Select the **Next: Review >** button.
+  
+1. On the *Review and created* tab, select the **Create** button to create the new Scheduled Analytics rule.
 
 1. For the *Automated response* tab select the **PostMessageTeams-OnAlert** under *Alert automation (classic)* and then select **Next: Review** button.
 
