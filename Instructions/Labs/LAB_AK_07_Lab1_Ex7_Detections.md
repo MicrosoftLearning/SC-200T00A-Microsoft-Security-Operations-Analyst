@@ -186,14 +186,14 @@ In this task, you will create a detection for the second attack of the previous 
 
 1. Select **Next: Set rule logic >** button. 
 
-1. On the *Set rule logic* tab, the *Rule query* should be populated already with you KQL query, as well the entities under *Alert enrichment - Entitiy mapping*.
+1. On the *Set rule logic* tab, the *Rule query* should be populated already with you KQL query, as well the entities under *Alert enrichment - Entity mapping*.
 
 1. For *Query scheduling* set the following:
 
     |Setting|Value|
     |---|---|
     |Run Query every|5 minutes|
-    |Look data from the last|1 Days|
+    |Lookup data from the last|1 Days|
 
     >**Note:** We are purposely generating many incidents for the same data. This enables the Lab to use these alerts.
 
