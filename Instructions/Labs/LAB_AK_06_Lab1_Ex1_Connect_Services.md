@@ -65,7 +65,7 @@ In this task, you will connect the Microsoft Defender for Cloud data connector.
 
 1. The *Status* should be now **Connected** and "Bi-directional sync" should be *Enabled*.
 
-1. Scroll down and under the *Create incidents - Recommended!* area, and verify that *Create incidents automatically from all alerts generated in this connected service* is **Enabled**.
+1. Scroll down and under the *Create incidents - Recommended!* area, verify that *Create incidents automatically from all alerts generated in this connected service* is **Enabled**.
 
 ### Task 3: Connect the Azure Activity data connector
 
