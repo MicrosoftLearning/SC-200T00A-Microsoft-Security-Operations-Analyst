@@ -98,7 +98,16 @@ In this task, you will create a detection for the first attack of the previous e
 
 1. For the *Incident settings* tab, leave the default values and select **Next: Automated response >** button.
 
-1. For the *Automated response* tab select the **PostMessageTeams-OnAlert** under *Alert automation (classic)* and then select **Next: Review** button.
+1. For the Automated response tab select [+Add new].
+
+   |Setting|Value|
+   |:----|:----|
+   |Automation rule name|PostMessage|
+   |Trigger|When incident is created|
+   |Actions |Run playbook|
+   |playbook |PostMessageTeams-OnAlert|
+
+1. Select **Next: Review and create** button.
 
 1. On the *Review* tab, select the **Create** button to create the new Scheduled Analytics rule.
 
@@ -181,7 +190,16 @@ In this task, you will create a detection for the second attack of the previous 
 
 1. For the *Incident settings* tab, leave the default values and select **Next: Automated response >** button.
 
-1. For the *Automated response* tab select the **PostMessageTeams-OnAlert** under *Alert automation (classic)* and then select **Next: Review** button.
+1. For the Automated response tab select [+Add new].
+
+   |Setting|Value|
+   |:----|:----|
+   |Automation rule name|PostMessage|
+   |Trigger|When incident is created|
+   |Actions |Run playbook|
+   |playbook |PostMessageTeams-OnAlert|
+
+1. Select **Next: Review and create** button.
 
 1. On the *Review* tab, select the **Create** button to create the new Scheduled Analytics rule.
 
