@@ -71,10 +71,10 @@ In this task, you will create a detection for the first attack of the previous e
 
     |Setting|Value|
     |---|---|
-    |Name|**Startup RegKey**|
-    |Description|**Startup Regkey in c:\temp**|
-    |Tactics|**Persistence**|
-    |Severity|**High**|
+    |Name|Startup RegKey|
+    |Description|Startup RegKey in c:\temp|
+    |Tactics|Persistence|
+    |Severity|High|
 
 1. Select **Next: Set rule logic >** button.
 
@@ -102,26 +102,22 @@ In this task, you will create a detection for the first attack of the previous e
 
 1. On the *Automated response* tab under *Automation rules*, select **Add new**.
 
-1. For the *Automation rule name*, enter **Startup RegKey**.
+1. Use the settings in the table to configure the automation rule.
 
-1. The *Trigger* should default to **When incident is created**.
-
-1. For the *Actions*, select **Assign owner**.
-
-1. Then select **Assign to me**. Then select **+ Add action**.
-
-1. Use the *And then* drop-down menus to select **Run playbook**
+    |Setting|Value|
+    |:----|:----|
+    |Automation rule name|Startup RegKey|
+    |Trigger|When incident is created|
+    |Actions |Run playbook|
+    |playbook |PostMessageTeams-OnAlert|
 
     >**Note:** You have already assigned permissions to the playbook, so it will be available.
 
-1. From the drop-down menu, select the playbook **PostMessageTeams-OnAlert** you created in the previous exercise.
-
 1. Select **Apply**
 
-1. Select the **Next: Review >** button.
+1. Select the **Next: Review and create >** button.
   
-1. On the *Review and created* tab, select the **Create** button to create the new Scheduled Analytics rule.
-
+1. On the *Review and create* tab, select the **Create** button to create the new Scheduled Analytics rule.
 
 ### Task 2: Privilege Elevation Attack Detection
 
@@ -203,28 +199,21 @@ In this task, you will create a detection for the second attack of the previous 
 
 1. On the *Automated response* tab under *Automation rules*, select **Add new**.
 
-1. For the *Automation rule name*, enter **SecurityEvent Local Administrators User Add**.
+1. Use the settings in the table to configure the automation rule.
 
-1. The *Trigger* should default to **When incident is created**.
+   |Setting|Value|
+   |:----|:----|
+   |Automation rule name|SecurityEvent Local Administrators User Add|
+   |Trigger|When incident is created|
+   |Actions |Run playbook|
+   |playbook |PostMessageTeams-OnAlert|
 
-1. For the *Actions*, select **Assign owner**.
-
-1. Then select **Assign to me**. Then select **+ Add action**.
-
-1. Use the *And then* drop-down menus to select **Run playbook**
-
-    >**Note:** You have already assigned permissions to the playbook, so it will be available.
-
-1. From the drop-down menu, select the playbook **PostMessageTeams-OnAlert** you created in the previous exercise.
+   >**Note:** You have already assigned permissions to the playbook, so it will be available.
 
 1. Select **Apply**
 
-1. Select the **Next: Review >** button.
+1. Select the **Next: Review and create >** button.
   
-1. On the *Review and created* tab, select the **Create** button to create the new Scheduled Analytics rule.
-
-1. For the *Automated response* tab select the **PostMessageTeams-OnAlert** under *Alert automation (classic)* and then select **Next: Review** button.
-
-1. On the *Review* tab, select the **Create** button to create the new Scheduled Analytics rule.
+1. On the *Review and create* tab, select the **Create** button to create the new Scheduled Analytics rule.
 
 ## Proceed to Exercise 8
