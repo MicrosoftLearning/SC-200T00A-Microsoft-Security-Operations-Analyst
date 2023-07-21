@@ -102,6 +102,8 @@ In this task, you'll update the new playbook you created with the proper connect
 
 1. On the Logic App page for *PostMessageTeams-OnAlert*, in the command menu, select **Edit**.
 
+    >**Note:** You may need to refresh the page.
+
 1. Select the *first* block, **Microsoft Sentinel incident (Preview)**.
 
 1. Select the **Change connection** link.

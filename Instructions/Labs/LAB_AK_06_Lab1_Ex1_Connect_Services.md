@@ -33,6 +33,15 @@ In this task, you will access your Microsoft Sentinel workspace.
 
 1. Select your Microsoft Sentinel Workspace that you created in the previous lab.
 
+1. Select Analytics from the navigation menu.
+
+1. Select *Create incidents based on Microsoft Defender for Cloud* from the rule templates.
+
+1. Select **Create rule** in the connector information blade.
+
+1. In the Analytics rule wizard, select **Next: Automated response**, then select **Next: Review and create**.
+
+1. Select **save**.
 
 ### Task 2: Connect the Microsoft Defender for Cloud data connector
 
@@ -56,7 +65,7 @@ In this task, you will connect the Microsoft Defender for Cloud data connector.
 
 1. The *Status* should be now **Connected** and "Bi-directional sync" should be *Enabled*.
 
-1. Scroll down and under the "Create incidents - Recommended!" area, select **Enable**.
+1. Scroll down and under the *Create incidents - Recommended!* area, verify that *Create incidents automatically from all alerts generated in this connected service* is **Enabled**.
 
 ### Task 3: Connect the Azure Activity data connector
 

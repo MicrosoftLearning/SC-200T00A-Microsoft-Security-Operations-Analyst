@@ -20,7 +20,7 @@ You are going to simulate the attacks that you will later use to detect and inve
 
 >**Important:** The next steps are done in a different machine than the one you were previously working. Look for the Virtual Machine name references.
 
-In this task, you will perform attacks on the host with Azure Arc and the Azure Monitor Agent configured.
+In this task, you will perform attacks on the host connected with Azure Arc and that has the Azure Monitor Agent configured.
 
 1. Login to WINServer virtual machine as Admin with the password: **Pa55w.rd**.  
 
@@ -58,7 +58,7 @@ In this task, you will perform attacks on the host with Azure Arc and the Azure 
     ```
 
 
-### Task 3: Command and Contro Attack with DNS
+### Task 3: Command and Control Attack with DNS
 
 1. Copy and run this command to create a script that will simulate a DNS query to a C2 server:
 

@@ -71,10 +71,10 @@ In this task, you will create a detection for the first attack of the previous e
 
     |Setting|Value|
     |---|---|
-    |Name|**Startup RegKey**|
-    |Description|**Startup Regkey in c:\temp**|
-    |Tactics|**Persistence**|
-    |Severity|**High**|
+    |Name|Startup RegKey|
+    |Description|Startup RegKey in c:\temp|
+    |Tactics|Persistence|
+    |Severity|High|
 
 1. Select **Next: Set rule logic >** button.
 
@@ -85,12 +85,14 @@ In this task, you will create a detection for the first attack of the previous e
     |Account|FullName|AccountCustomEntity|
     |Host|Hostname|HostCustomEntity|
 
+1. If **Hostname** isn't selected for *Host* Entity, select it from the drop-down list.
+
 1. For *Query scheduling* set the following:
 
     |Setting|Value|
     |---|---|
     |Run Query every|5 minutes|
-    |Look data from the last|1 Day|
+    |Lookup data from the last|1 Days|
 
     >**Note:** We are purposely generating many incidents for the same data. This enables the Lab to use these alerts.
 
@@ -98,10 +100,24 @@ In this task, you will create a detection for the first attack of the previous e
 
 1. For the *Incident settings* tab, leave the default values and select **Next: Automated response >** button.
 
-1. For the *Automated response* tab select the **PostMessageTeams-OnAlert** under *Alert automation (classic)* and then select **Next: Review** button.
+1. On the *Automated response* tab under *Automation rules*, select **Add new**.
 
-1. On the *Review* tab, select the **Create** button to create the new Scheduled Analytics rule.
+1. Use the settings in the table to configure the automation rule.
 
+    |Setting|Value|
+    |:----|:----|
+    |Automation rule name|Startup RegKey|
+    |Trigger|When incident is created|
+    |Actions |Run playbook|
+    |playbook |PostMessageTeams-OnAlert|
+
+    >**Note:** You have already assigned permissions to the playbook, so it will be available.
+
+1. Select **Apply**
+
+1. Select the **Next: Review and create >** button.
+  
+1. On the *Review and create* tab, select the **Create** button to create the new Scheduled Analytics rule.
 
 ### Task 2: Privilege Elevation Attack Detection
 
@@ -166,14 +182,14 @@ In this task, you will create a detection for the second attack of the previous 
 
 1. Select **Next: Set rule logic >** button. 
 
-1. On the *Set rule logic* tab, the *Rule query* should be populated already with you KQL query, as well the entities under *Alert enrichment - Entitiy mapping*.
+1. On the *Set rule logic* tab, the *Rule query* should be populated already with you KQL query, as well the entities under *Alert enrichment - Entity mapping*.
 
 1. For *Query scheduling* set the following:
 
     |Setting|Value|
     |---|---|
     |Run Query every|5 minutes|
-    |Look data from the last|1 Day|
+    |Lookup data from the last|1 Days|
 
     >**Note:** We are purposely generating many incidents for the same data. This enables the Lab to use these alerts.
 
@@ -181,8 +197,23 @@ In this task, you will create a detection for the second attack of the previous 
 
 1. For the *Incident settings* tab, leave the default values and select **Next: Automated response >** button.
 
-1. For the *Automated response* tab select the **PostMessageTeams-OnAlert** under *Alert automation (classic)* and then select **Next: Review** button.
+1. On the *Automated response* tab under *Automation rules*, select **Add new**.
 
-1. On the *Review* tab, select the **Create** button to create the new Scheduled Analytics rule.
+1. Use the settings in the table to configure the automation rule.
+
+   |Setting|Value|
+   |:----|:----|
+   |Automation rule name|SecurityEvent Local Administrators User Add|
+   |Trigger|When incident is created|
+   |Actions |Run playbook|
+   |playbook |PostMessageTeams-OnAlert|
+
+   >**Note:** You have already assigned permissions to the playbook, so it will be available.
+
+1. Select **Apply**
+
+1. Select the **Next: Review and create >** button.
+  
+1. On the *Review and create* tab, select the **Create** button to create the new Scheduled Analytics rule.
 
 ## Proceed to Exercise 8
