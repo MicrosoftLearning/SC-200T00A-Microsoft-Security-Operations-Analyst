@@ -8,6 +8,7 @@ lab:
 
 ## Lab scenario
 
+![Lab overview.](../Media/SC-200-Lab_Diagrams_Mod7_L1_Ex8.png)
 
 You are a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You already created Scheduled and Microsoft Security Analytics rules. The Fusion and Anomalies Analytics rules are also enabled in your environment. Now is the time to investigate the Incidents created by them.
 

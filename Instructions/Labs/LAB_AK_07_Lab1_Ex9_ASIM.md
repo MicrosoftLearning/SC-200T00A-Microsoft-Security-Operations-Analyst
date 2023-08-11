@@ -8,6 +8,8 @@ lab:
 
 ## Lab scenario
 
+![Lab overview.](../Media/SC-200-Lab_Diagrams_Mod7_L1_Ex9.png)
+
 You are a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You need to model ASIM parsers for a specific Windows registry event. These simplified parsers will be finalized at a later time following the [Advanced Security Information Model (ASIM) Registry Event normalization schema reference](https://docs.microsoft.com/en-us/azure/sentinel/registry-event-normalization-schema).
 
 
