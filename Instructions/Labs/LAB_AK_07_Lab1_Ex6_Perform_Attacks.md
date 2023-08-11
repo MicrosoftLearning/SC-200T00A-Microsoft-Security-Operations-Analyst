@@ -68,7 +68,7 @@ In this task, you will perform attacks on the host connected with Azure Arc and 
 
 1. Select **Yes** to create a new file and copy the following PowerShell script into *c2.ps1*.
 
-    >**Note:** Paste into the virtual machine might have a limited length. Make sure the script looks as it does in these instructions within the *c2.ps1* file.
+    >**Note:** Pasting into the virtual machine file might not show the full script length. Make sure the script matches  the instructions within the *c2.ps1* file.
 
     ```PowerShell
     param(
