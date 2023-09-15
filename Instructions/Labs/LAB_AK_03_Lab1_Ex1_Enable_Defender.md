@@ -116,9 +116,9 @@ In this task, you'll install Azure Arc on an on-premises server to make onboardi
 
 1. In the Search bar of the Azure portal, type *Arc*, then select **Azure Arc**.
 
-1. In the navigation pane under **Infrastructure** select **Servers**
+1. In the navigation pane under **Infrastructure** select **Machines**
 
-1. Select **+ Add**.
+1. Select **+ Add/Create**, then select **Add a machine**.
 
 1. Select **Generate script** from the "Add a single server" section.
 
@@ -154,7 +154,7 @@ In this task, you'll install Azure Arc on an on-premises server to make onboardi
 
 1. The setup process will open a new Edge browser tab to authenticate the Azure Arc agent. Select your admin account, wait for the message "Authentication complete" and then go back to the Windows PowerShell window.
 
-1. When the installation finishes, go back to the Azure portal page where you downloaded the script and select **Close**. Close the **Add servers with Azure Arc** to go back to the Azure Arc **Servers** page.
+1. When the installation finishes, go back to the Azure portal page where you downloaded the script and select **Close**. Close the **Add servers with Azure Arc** to go back to the Azure Arc **Machines** page.
 
 1. Select **Refresh** until WINServer server name appears and the Status is *Connected*.
 
