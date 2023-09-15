@@ -51,6 +51,8 @@ In this task, you'll create a Windows virtual machine in Azure.
 
 1. Review the *Size* for the virtual machine. If it appears empty, select **See all sizes**, choose the first VM size under *Most used by Azure users* and select **Select**.
 
+    >**Note:** If you see the message: *This image is not supported for Azure Automanage. To disable this feature,navigate to the Management tab. Otherwise, select a supported image.* Go to the Management tab and disable "Automanage". The creation process will succeed afterwards.
+
 1. Scroll down and enter a *Username* of your choosing. **Hint:** Avoid reserved words like admin or root.
 
 1. Enter a *Password* of your choosing. **Hint:** It might be easier to re-use your tenant password. It can be found in the resources tab.
