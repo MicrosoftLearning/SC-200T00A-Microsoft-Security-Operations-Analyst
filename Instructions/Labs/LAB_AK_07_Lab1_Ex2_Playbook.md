@@ -94,13 +94,13 @@ In this task, you'll update the new playbook you created with the proper connect
 
 1. Select your Microsoft Sentinel Workspace.
 
-1. Select the **Automation** under the *Configuration* area and then select the **Active Playbooks** tab.
+1. Select **Automation** under the *Configuration* area and then select the **Active Playbooks** tab.
 
-1. Select **Refresh** from the command bar in case you don't see any playbook. You should see the playbook created from the previous step with the **Microsoft Sentinel Incident** *Trigger kind*.
+1. Select **Refresh** from the command bar in case you don't see any playbooks. You should see the playbook created from the previous step with the **Microsoft Sentinel Incident** *Trigger kind*.
 
 1. Select the **PostMessageTeams** playbook name.
 
-1. On the Logic App page for *PostMessageTeams-OnAlert*, in the command menu, select **Edit**.
+1. On the Logic App page for *PostMessageTeams*, in the command menu, select **Edit**.
 
     >**Note:** You may need to refresh the page.
 
