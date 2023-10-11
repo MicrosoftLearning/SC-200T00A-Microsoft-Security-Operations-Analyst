@@ -2,7 +2,7 @@
 
 
 
-**Note** Successful completion of this demo depends on completing all of the steps in the  [Pre-requisites document](00-prerequisites.md). 
+**Note** Successful completion of this demo depends on completing all of the steps in the  [Pre-requisites document](00-prerequisites.md).
 
 ## Simulated Attacks
 
@@ -22,4 +22,4 @@ In this task, you will run one simulated attack to explore the capabilities of M
     1. Open the incident page and click **Manage Incident**. Click **Resolve incident** to resolve all of the active alerts.
 
 
-## You have completed the Demo.
+## You have completed the Demo

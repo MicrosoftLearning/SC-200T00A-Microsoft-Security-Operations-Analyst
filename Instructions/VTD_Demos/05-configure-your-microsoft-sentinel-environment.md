@@ -8,7 +8,7 @@
 
 1. Navigate around the newly created Microsoft Sentinel workspace to become familiar with the user interface options.
 
-## Create a Watchlist.
+## Create a Watchlist
 
 In this task, you will create a Watchlist.
 
