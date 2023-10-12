@@ -2,30 +2,54 @@
 
 **Note** Successful completion of this demo depends on completing all of the steps in the  [Pre-requisites document](00-prerequisites.md). 
 
-## Access the KQL testing area.
+## Access the KQL testing area
 
 In this task, you will access a Log Analytics environment where you can practice writing KQL statements.
 
 1. Login to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
-2. Go to https://aka.ms/lademo in your browser. Login with the MOD Administrator credentials. 
+1. Go to https://aka.ms/lademo in your browser. Login with the MOD Administrator credentials. 
 
-3. Explore the available tables listed in the tab on the left side of the screen.
+1. Explore the available tables listed in the tab on the left side of the screen.
 
-4. In the query editor, enter the following query and select the Run button.  You should see the query results in the bottom window.
+1. In the query editor, enter the following query and select the Run button.  You should see the query results in the bottom window.
 
     ```KQL
     SecurityEvent
     ```
 
-5. Next to the first record, select the **>** to expand the information for the row.
+1. Next to the first record, select the **>** to expand the information for the row.
 
 ### Task 2: Run Basic KQL Statements
 
 In this task, you will build basic KQL statements.
 
-1. The following statement demonstrates the use of the let statement to declare variables. In the Query Window, enter the following statement and select **run**: 
+1. The `search` operator provides a multi-table/multi-column search experience. The following queries demonstrates the use of the`search` operator.
 
+```KQL
+search "err" 
+
+search in (SecurityEvent,SecurityAlert,A*) "err"
+```
+
+1. The `where` operator filters a table to the subset of rows that satisfy a predicate. The following queries demonstrates the use of the`where` operator.
+
+```KQL
+SecurityEvent | where EventID in (4624, 4625)
+
+SecurityEvent 
+| where TimeGenerated > ago(1d) 
+
+SecurityEvent 
+| where TimeGenerated > ago(1h) and EventID == "4624" 
+
+SecurityEvent 
+| where TimeGenerated > ago(1h) 
+| where EventID == 4624 
+| where AccountType =~ "user" 
+```
+
+1. The following statement demonstrates the use of the `let` statement to declare variables. In the Query Window, enter the following statement and select **run**: 
 
 ```KQL
 let timeOffset = 7d;
@@ -35,8 +59,7 @@ SecurityEvent
 | where EventID != discardEventId
 ```
 
-1. The following statement demonstrates the use of the let statement to declare a dynamic list. In the Query Window enter the following statement and select **run**: 
-
+1. The following statement demonstrates the use of the `let` statement to declare a dynamic list. In the Query Window enter the following statement and select **run**: 
 
 ```KQL
 let suspiciousAccounts = datatable(account: string) [
@@ -46,7 +69,7 @@ let suspiciousAccounts = datatable(account: string) [
 SecurityEvent | where Account in (suspiciousAccounts)
 ```
 
-1. The following statement demonstrates searching across all tables and columns for records within the query time range display in the query window. In the Query Window before running this script change the Time range to "Last hour". Enter the following statement and select **run**: 
+1. The following statement demonstrates searching across all tables and columns for records within the query time range display in the query window. In the Query Window before running this script change the Time range to "Last hour". Enter the following statement and select **run**:
 
 ```KQL
 search "err"
@@ -66,7 +89,7 @@ SecurityEvent
 | render barchart
 ```
 
-2. The following statement demonstrates the render function visualizing results with a time series.
+1. The following statement demonstrates the render function visualizing results with a time series.
 
 The bin() function rounds values down to an integer multiple of the given bin size.  Used frequently in combination with summarize by .... If you have a scattered set of values, the values are grouped into a smaller set of specific values.  Combining the generated time series and pipe to a render operator with a type of timechart provides a time series visualization. In the Query Window. Enter the following statement and select **run**: 
 
@@ -76,5 +99,4 @@ SecurityEvent
 | render timechart
 ```
 
-## You have completed the demo.
-
+## You have completed the demo
