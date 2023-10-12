@@ -27,15 +27,15 @@ In this task, you will familiarize yourself with the Microsoft 365 Defender port
 1. Do the same with **Hunting** to expose the **Advanced hunting** Query page. 
     1. You can run KQL queries here.
 1. Selecting **Actions & Submissions** will expose the **Action Center** and **Submissions**
-1. Select **Threat analytics**. This page provides insights into the Common Vulnerabilities and Exposures (CVE) you need to track
-1. Select the **Secure Score** and explore the tabs. Take a look at **Recommendations** here.
-1. Select **Endpoints** and **Device Inventory** options are available. You can onboard devices here or work with an existing inventory.
-1. Also in the **Endpoints** section is **Vulnerability management**. Vulnerability management has a Dashboard where yu can look review your Exposure score.
+1. Select **Threat intelligence** and then **Threat analytics**. This page provides insights into the Common Vulnerabilities and Exposures (CVE) you need to track1. Select the **Secure Score** and explore the tabs. Take a look at **Recommended actions** here.
+1. Select **Assets** and **Devices** for your `Device Inventory`. You can onboard devices here or work with an existing inventory.
+1. Also under `Assets` are **Identities**
+1. In the **Endpoints** section is **Vulnerability management**. `Vulnerability management` has a `Dashboard` where you can look review your Exposure score.
 1. Another capability within **Endpoints** is **Evaluations & simulations**. The **Evaluation lab** allows you to setup isolated devices for exploring malware.
-1. In the **Email & collaboration** section are the Defender for Office 365 capabilities. **Investigations** is where you see results of Automated investigation and Response (AIR) threat investigations.
+1. In the **Email & collaboration** section are the `Defender for Office 365` capabilities. **Investigations** is where you see results of Automated investigation and Response (AIR) threat investigations.
 1. Also in **Email & collaboration** are **Polices & rules**. You will configure **Threat & Alert** polices here.
 1. Scroll down to **Cloud apps**. This the **Microsoft Defender for Cloud Apps** service section. Under **App governance** is where you set app policies.
-1. The next section is where you can find **Reports** for the Microsoft 365 Defender services, **AUdit**, where you can enable tracking of admin actions, and **Permissions** and **Settings**.
+1. The next section is where you can find **Reports** for the Microsoft 365 Defender services, **AUdit**, is where you can enable recording of user admin activity, and **Permissions** and **Settings**.
 1. In **Permissions** you can configure **Azure AD** and **Endpoint** roles.
 1. **Settings** is where general configuration such as timezone and email notifications are entered, plus granular settings for Endpoints, Identities and Device discovery.
 1. Select **Settings**, then **Endpoints**. You can view and add **Licenses** here. Next select **Advanced features**. Scroll thorough the list of features, but don't make any changes now.
