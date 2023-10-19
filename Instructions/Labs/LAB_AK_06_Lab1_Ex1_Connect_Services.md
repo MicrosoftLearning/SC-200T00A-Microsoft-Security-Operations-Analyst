@@ -75,7 +75,7 @@ In this task, you will connect the *Azure Activity* data connector.
 
 1. In the *Content hub*, search for the **Azure Activity** solution and select it from the list.
 
-1. On the *Microsoft Defender for Cloud* solution page select **Install**.
+1. On the *Azure Activity* solution page select **Install**.
 
 1. When the installation completes select **Manage**
 
