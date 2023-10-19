@@ -91,7 +91,7 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
 1. Go back to the Microsoft Edge browser where you have your Microsoft Sentinel Portal open and close the "Common Event Format (CEF) via Legacy Agent" data connector page by selecting the 'x' in the top right corner.
 
-1. 1. In the Microsoft Sentinel left menus, scroll down to the *Content management* section and select **Content Hub**.
+1. In the Microsoft Sentinel left menus, scroll down to the *Content management* section and select **Content Hub**.
 
 1. In the *Content hub*, search for the **Syslog** solution and select it from the list.
 
