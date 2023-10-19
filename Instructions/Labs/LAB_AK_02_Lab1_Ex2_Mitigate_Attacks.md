@@ -53,7 +53,7 @@ In this task, you will run two simulated attacks to explore the capabilities of 
 
 1. In the new browser tab, locate the section named **Run the simulation** (page 5, starting at step 2) and follow the steps to run the attack. **Hint:** The simulation file *RS4_WinATP-Intro-Invoice.docm* can be found back in portal, just below the **Read the walkthrough** you selected in the previous step by selecting the **Get simulation file** button. 
 
-1. Repeat the last 3 steps to run another tutorial, *Automated investigation (fileless attack)*.
+<!--- 1. Repeat the last 3 steps to run another tutorial, *Automated investigation (fileless attack)*. This is no longer working due to win1 AV --->
 
 
 ### Task 3: Investigate the Attacks
