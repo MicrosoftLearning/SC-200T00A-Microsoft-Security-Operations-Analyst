@@ -102,7 +102,7 @@ In this task, you'll update the new playbook you created with the proper connect
 
 1. Select the **PostMessageTeams-OnIncident** playbook name.
 
-1. On the Logic App page for *PostMessageTeams*, in the command menu, select **Edit**.
+1. On the Logic App page for *PostMessageTeams-OnIncident*, in the command menu, select **Edit**.
 
     >**Note:** You may need to refresh the page.
 
