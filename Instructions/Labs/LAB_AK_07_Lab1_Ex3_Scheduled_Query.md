@@ -86,7 +86,7 @@ In this task, you'll create a scheduled query and connect it to the Teams channe
 
 1. On the *Manage Permissions* page, select the **RG-Playbooks** resource group you created in the previous lab, and select **Apply**.
 
-1. From the drop-down menu, select the playbook **PostMessageTeams-OnAlert** you created in the previous exercise.
+1. From the drop-down menu, select the playbook **PostMessageTeams-OnIncident** you created in the previous exercise.
 
 1. Select **Apply**
 
