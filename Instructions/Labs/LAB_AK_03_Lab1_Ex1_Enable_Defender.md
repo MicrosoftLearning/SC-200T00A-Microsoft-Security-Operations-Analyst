@@ -41,6 +41,8 @@ In this task, you'll set up an Azure Subscription required to complete this lab 
 
 1. Under the *Members* tab, select **+ Select members** and select the **MOD Administrator** account and select **Select** to continue.
 
+    >**Note:** If you see the **Conditions** tab (with a red dot), select **Next**, and then select **Not constrained** from the *Delegation type.
+
 1. Select **Review + assign** twice to assign the owner role to your admin account.
 
 >**Important:** These labs have been designed to use less than USD $10 of Azure services during the class.
@@ -127,6 +129,8 @@ In this task, you'll install Azure Arc on an on-premises server to make onboardi
 1. In the *Add a server with Azure Arc* page, select the Resource group you created earlier under *Project details*. **Hint:** *RG-Defender*
 
     >**Note:** If you haven't already created a resource group, open another tab and create the resource group and start over.
+
+1. For *Region*, select **(US) East Us** from the drop-down list.
 
 1. Review the *Server details* and *Connectivity method* options. Keep the default values and select **Next** to get to the Tags tab.
 
