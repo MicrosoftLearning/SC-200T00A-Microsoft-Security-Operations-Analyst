@@ -111,13 +111,13 @@ In this task, you will create a detection for the first attack of the previous e
     |Automation rule name|Startup RegKey|
     |Trigger|When incident is created|
     |Actions |Run playbook|
-    |playbook |PostMessageTeams-OnAlert|
+    |playbook |PostMessageTeams-OnIncident|
 
     >**Note:** You have already assigned permissions to the playbook, so it will be available.
 
 1. Select **Apply**
 
-1. Select the **Next: Review and create >** button.
+1. Select the **Next: Review >** button.
   
 1. On the *Review and create* tab, select the **Create** button to create the new Scheduled Analytics rule.
 
