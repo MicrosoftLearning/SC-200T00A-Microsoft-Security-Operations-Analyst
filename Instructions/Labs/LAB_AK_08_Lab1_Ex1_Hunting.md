@@ -14,7 +14,7 @@ You are a Security Operations Analyst working at a company that implemented Micr
 
 >**Important:** The log data used in the lab was created in the previous module. See **Attack 3** on WIN1 server in Exercise 5.
 
->**Note:** Because you already experienced the process of exploring data in a previous module, this lab provides a KQL statement to start with. 
+>**Note:** Because you already experienced the process of exploring data in a previous module, this lab provides a KQL statement to start with.
 
 >**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/SC-200%20Lab%20Simulation%20-%20Perform%20threat%20hunting%20in%20Microsoft%20Sentinel)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
 
@@ -177,13 +177,15 @@ In this task, instead of using a LiveStream, you will create a NRT analytics que
 
 1. On the *Review and create* tab, select the **Save** button to create and save the new Scheduled Analytics rule.
 
-### Task 3: Create a Search
+### Task 3: Create a Search job
 
-In this task, you will use a Search job to look for a C2. 
+In this task, you will use a Search job to look for a C2.
 
-1. Select the **Search** page under *General* in Microsoft Sentinel. 
+>**Note:** The *Restore* operation incurs costs that can deplete your Azure Pass subscription credits. For that reason, you will not be performing the restore operation in this lab. However, you can follow the steps below to perform the restore operation in your own environment.
 
-1. In the search box, enter **reg.exe** and then select **Start**. 
+1. Select the **Search** page under *General* in Microsoft Sentinel.
+
+1. In the search box, enter **reg.exe** and then select **Start**.
 
 1. A new window running the query opens. Select the ellipsis icon **(...)** from the top right and then toggle the **Search job mode**.
 
@@ -191,16 +193,14 @@ In this task, you will use a Search job to look for a C2.
 
 1. The search job creates a new table with your results as soon as they arrive. The results can be consulted from the *Saved Searches* tab.
 
-1. Close the *Logs* window by selecting the **X** in the top-right of the window and select **OK** to discard the changes. 
- 
+1. Close the *Logs* window by selecting the **X** in the top-right of the window and select **OK** to discard the changes.
+
 1. Select the **Restoration** tab from the command bar and then the **Restore** button.
 
 1. Under *Select a table to restore*, search for and select **SecurityEvent**.
 
-1. Review the options available and then select the **Restore** button.
+1. Review the options available and then select the **Cancel** button.
 
-1. The restore job will run for a couple of minutes and your data will be available in a new table.
-
-    >**Important:** The restore jobs should be used to recover Archive data, not interactive logs.
+    >**Note:** If you were running the job, the restore would run for a couple of minutes and your data would be available in a new table.
 
 ## Proceed to Exercise 2
