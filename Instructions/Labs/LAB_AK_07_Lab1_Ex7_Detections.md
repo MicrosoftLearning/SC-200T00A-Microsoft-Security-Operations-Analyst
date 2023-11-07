@@ -208,7 +208,7 @@ In this task, you will create a detection for the second attack of the previous 
    |Automation rule name|SecurityEvent Local Administrators User Add|
    |Trigger|When incident is created|
    |Actions |Run playbook|
-   |playbook |PostMessageTeams-OnAlert|
+   |playbook |PostMessageTeams-OnIncident|
 
    >**Note:** You have already assigned permissions to the playbook, so it will be available.
 
