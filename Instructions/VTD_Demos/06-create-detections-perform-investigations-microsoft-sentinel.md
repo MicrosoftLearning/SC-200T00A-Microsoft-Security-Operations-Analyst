@@ -2,7 +2,7 @@
 
 **Note** Successful completion of this demo depends on completing all of the steps in the  [Pre-requisites document](00-prerequisites.md). 
 
-## Create a NRT query rule
+## Create an NRT query rule
 
 In this task, you will create a NRT (Near Real Time) analytics query rule.
 
