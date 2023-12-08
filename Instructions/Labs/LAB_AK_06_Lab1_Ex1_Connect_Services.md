@@ -55,9 +55,9 @@ In this task, you will connect the Microsoft Defender for Cloud data connector.
 
 1. When the installation completes select **Manage**
 
-    >**Note:** The *Microsoft Defender for Cloud* solution installs the *Microsoft Defender for Cloud* Data connector and an Analytic rule.
+    >**Note:** The *Microsoft Defender for Cloud* solution installs the *Subscription-based Microsoft Defender for Cloud (Legacy)* Data connector, the *Tenant-based Microsoft Defender for Cloud (Preview)* Data connector, and an Analytics rule.
 
-1. Select the *Microsoft Defender for Cloud* Data connector and select **Open connector page**.
+1. Select the *Subscription-based Microsoft Defender for Cloud (Legacy)* Data connector check-box, and select **Open connector page**.
 
 1. In the *Configuration* section, under the *Instructions* tab, **select** the checkbox for the "Azure Pass - Sponsorship" subscription and slide the **Status** option to the right.
 
