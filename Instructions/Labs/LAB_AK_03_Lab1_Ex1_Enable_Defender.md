@@ -41,7 +41,7 @@ In this task, you'll set up an Azure Subscription required to complete this lab 
 
 1. Under the *Members* tab, select **+ Select members** and select the **MOD Administrator** account and select **Select** to continue.
 
-    >**Note:** If you see the **Conditions** tab (with a red dot), select **Next**, and then select **Not constrained** from the *Delegation type.
+    >**Note:** If the **Conditions** tab displays a red dot, select **Next**, and either select **Not constrained** if presented with the *Delegation* type, or select **Allow user to assign all roles (highly privileged)** if presented with *What user can do*.
 
 1. Select **Review + assign** twice to assign the owner role to your admin account.
 
