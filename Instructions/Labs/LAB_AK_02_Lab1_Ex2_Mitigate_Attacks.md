@@ -10,6 +10,7 @@ lab:
 
 ![Lab overview.](../Media/SC-200-Lab_Diagrams_Mod2_L1_Ex2_10_19.png)
 
+
 You are a Security Operations Analyst working at a company that is implementing Microsoft Defender for Endpoint. Your manager plans to onboard a few devices to provide insight into required changes to the Security Operations (SecOps) team response procedures.
 
 To explore the Defender for Endpoint attack mitigation capabilities, you will run two simulated attacks.
@@ -42,6 +43,7 @@ In this task, you will confirm that the device is onboarded successfully and cre
 
 
 ### Task 2: Simulated Attacks
+**Note:** The evaluation lab environment has been set to be removed by end of January 2024.  If the Tutorials are not available, please complete the Interactive lab simulation by clicking the link above.
 
 In this task, you will run two simulated attacks to explore the capabilities of Microsoft Defender for Endpoint.
 
