@@ -37,17 +37,13 @@ In this task, you will review Regulatory compliance configuration in Microsoft D
 
 1. Select your subscription.
 
-1. Under *Policy settings*, select **Security policy** in the portal menu.
+1. Under *Policy settings*, select **Security policies** in the portal menu.
 
-1. Scroll down and and review the "Industry & regulatory standards" available to you by default. Note that *ISO 27001* is now deprecated.
+1. On the **Standards** tab, search for ISO
 
-1. Select **Add more standards** to add the updated ISO 27001:2013 regulatory standard.
+1. Select the **Off** toggle to right of *ISO 27001:2013* to turn on.
 
-1. Select the **Add** button to right of *ISO 27001:2013*.
-
-1. A new page to assign the Azure Policy initiative opens. Confirm that your subscription is selected under *Scope* and click **Review and create**.
-
-1. Select **Create** to assign the Azure Policy initiative to your subscription.
+1. This will automatically create an Azure Policy and assign it to your Subscriptions
 
 1. Select Microsoft Defender for Cloud below the search box to return to the main blade.
 
@@ -64,19 +60,21 @@ In this task, you will review cloud security posture management.  The Secure Sco
 
 1. Under *General*, select **Recommendations** in the portal menu.
 
-1. Explore the recommendations provided for your subscription and WINServer (Arc Server).
+1. Filter  the recommendations provided for your subscription by changine *Resource type ==* to **Machines - Azure Arc**.
 
-1. Select any recommendation where the status is not *"Completed"* for WINServer.
+1. Select any recommendation where the status is *"Unassigned"*.
 
-1. Read through the recommendation and scroll down to **select** WINServer checkbox. **Hint:** You might need to select **Affected resources** to display it.
+1. Read through the recommendation and scroll down to **select** WINServer checkbox. 
 
-1. Select **Assign owner** and then **Select owner**.
+1. Select **Assign owner** and expand **Assignment Details**.
 
-1. In the *Email address* box, write down your admin email. **Hint:** You can copy it from the instructions in the *Resources* tab.
+1. In the *Email address* box, type in your admin email. **Hint:** You can copy it from the instructions in the *Resources* tab.
 
-1. Select **Back**, change the *Due date* to your preference and click **Save**.
+1. Change the *Due date* to your preference and click **Save**.
 
-    >**Note:** If you see the error *Failed to create requested assignments*, try again later.
+1. Click **Create**.
+
+   >**Note:** If you see the error *Failed to create requested assignments*, try again later.
 
 1. Close the recommendation page by selecting the 'X' on the upper right of the window.
 
@@ -107,5 +105,7 @@ In this task, you will load sample security alerts and review the alert details.
     - Select the **Take action** tab or select the **Next: Take Action** button at the end of the page.
 
     - Review the *Take action* information. Notice the sections available to take action depending on the type of alert: Inspect resource context, Mitigate the threat, Prevent future attacks, Trigger automated response and Suppress similar alerts.
+
+1. Close the Security Alert by selecting the 'X' on the upper right of the window.
 
 ## You have completed the lab.
