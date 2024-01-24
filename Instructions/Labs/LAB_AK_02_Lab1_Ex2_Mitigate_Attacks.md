@@ -38,7 +38,9 @@ In this task, you will confirm that the device is onboarded successfully and cre
 
 1. When the "User Account Control" window is shown, select **Yes** to allow the app to run. 
 
-1. Paste the script by right-clicking in the **Administrator: Command Prompt** windows and press **Enter** to run it. **Note:** The window closes automatically after running the script.
+1. Paste the script by right-clicking in the **Administrator: Command Prompt** windows and press **Enter** to run it.
+
+    >**Note:** The window closes automatically after running the script.
 
 ### Task 2: Simulated Attacks
 
@@ -69,7 +71,7 @@ In this task, you will run two simulated attacks from the `Atomic Red Team` usin
     Invoke-WebRequest "https://raw.githubusercontent.com/BloodHoundAD/BloodHound/804503962b6dc554ad7d324cfa7f2b4a566a14e2/Ingestors/SharpHound.ps1" -OutFile "PathToAtomicsFolder\..\ExternalPayloads\SharpHound.ps1"
     ```
 
->**Note:** It is recommended to copy, paste and run the commands one at a time. You can open *Notepad* and copy the commands into a temporary file to accomplish this. The first command creates a folder named *ExternalPayloads* in the same folder where the *Atomic Red Team* folder is located. The second command downloads the *SharpHound.ps1* file from the *BloodHound* GitHub repository and saves it in the *ExternalPayloads* folder.
+    >**Note:** It is recommended to copy, paste and run the commands one at a time. You can open *Notepad* and copy the commands into a temporary file to accomplish this. The first command creates a folder named *ExternalPayloads* in the same folder where the *Atomic Red Team* folder is located. The second command downloads the *SharpHound.ps1* file from the *BloodHound* GitHub repository and saves it in the *ExternalPayloads* folder.
 
 1. You should see a  pop-up message from `Windows Security Virus and threats protection` displaying *Threats found*.
 
@@ -90,7 +92,6 @@ In this task, you will run two simulated attacks from the `Atomic Red Team` usin
 1. In the new browser tab, locate the section named **Run the simulation** (page 5, starting at step 2) and follow the steps to run the attack. **Hint:** The simulation file *RS4_WinATP-Intro-Invoice.docm* can be found back in portal, just below the **Read the walkthrough** you selected in the previous step by selecting the **Get simulation file** button. 
 
 1. Repeat the last 3 steps to run another tutorial, *Automated investigation (fileless attack)*. This is no longer working due to win1 AV --->
-
 
 ### Task 3: Investigate the Attacks
 
