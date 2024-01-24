@@ -37,7 +37,7 @@ In this task, you will access your Microsoft Sentinel workspace.
 
 1. Select *Create incidents based on Microsoft Defender for Cloud* from the rule templates.
 
-1. Select **Create rule** in the connector information blade.
+1. Select **Create rule** in the rule information pane, or select the ellipsis (...) and **+ Create rule**.
 
 1. In the Analytics rule wizard, select **Next: Automated response**, then select **Next: Review and create**.
 
