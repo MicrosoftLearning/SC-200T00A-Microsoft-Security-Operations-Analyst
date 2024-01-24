@@ -14,7 +14,6 @@ You are a Security Operations Analyst working at a company that is implementing 
 
 To explore the Defender for Endpoint attack mitigation capabilities, you will run two simulated attacks.
 
-
 >**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/SC-200%20Lab%20Simulation%20-%20Mitigate%20attacks%20with%20Microsoft%20Defender%20for%20Endpoint)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
 
 
@@ -103,7 +102,7 @@ In this task, you will run two simulated attacks from the `Atomic Red Team` usin
 
 1. Select the **Manage incident** button and a new window blade appears. 
 
-1. Under **Incident tags** type "Tutorial" and select **Simulation (Create new)** to create a new tag. 
+1. Under **Incident tags** type "Simulation" and select **Simulation (Create new)** to create a new tag. 
 
 1. Select the toggle **Assign to**  and add your user account (Me) as owner of the incident. 
 
@@ -115,6 +114,6 @@ In this task, you will run two simulated attacks from the `Atomic Red Team` usin
 
 1. Review the contents of the *Attack story, Alerts, Assets, Investigations, Evidence and Response*, and *Summary* tabs. Devices and Users are under the *Assets* tab. The *Attack story* tab displays the *Incident graph*. The **Hint:** Some tabs might be hidden due the size of your display. Select the ellipsis tab (...) to make them appear.
 
->**Warning:** The simulated attacks here are an excellent source of learning through practice. Only perform the attacks in the instructions provided for this lab when using the course provided Azure tenant.  You may perform other simulated attacks *after* this training course is complete with this tenant.
+    >**Warning:** The simulated attacks here are an excellent source of learning through practice. Only perform the attacks in the instructions provided for this lab when using the course provided Azure tenant.  You may perform other simulated attacks *after* this training course is complete with this tenant.
 
 ## You have completed the lab.
