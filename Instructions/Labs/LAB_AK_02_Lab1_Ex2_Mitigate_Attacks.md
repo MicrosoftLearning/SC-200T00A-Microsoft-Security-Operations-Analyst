@@ -22,7 +22,7 @@ To explore the Defender for Endpoint attack mitigation capabilities, you will ru
 
 In this task, you will confirm that the device is onboarded successfully and create a test alert.
 
-1. If you are not already at the Microsoft 365 Defender portal in your Microsoft Edge browser, go to (https://security.microsoft.com) and login as Admin for your tenant.
+1. If you are not already at the Microsoft Defender XDR portal in your Microsoft Edge browser, go to (https://security.microsoft.com) and login as Admin for your tenant.
 
 1. In the left-hand menu, under the **Assets** area, select **Devices**. Please wait until WIN1 appears in the Devices page before you continue. Otherwise, you might need to repeat this task to see the alerts that will be generated later.
 
@@ -39,7 +39,6 @@ In this task, you will confirm that the device is onboarded successfully and cre
 1. When the "User Account Control" window is shown, select **Yes** to allow the app to run. 
 
 1. Paste the script by right-clicking in the **Administrator: Command Prompt** windows and press **Enter** to run it. **Note:** The window closes automatically after running the script.
-
 
 ### Task 2: Simulated Attacks
 
@@ -80,8 +79,7 @@ In this task, you will run two simulated attacks from the `Atomic Red Team` usin
     Test-Path "PathToAtomicsFolder\..\ExternalPayloads\SharpHound.ps1"
     ```
 
-1. If the output is *True*, the Malware payload file has not been removed by Microsoft Defender Antivirus. If the output is *False*, the Malware payload file has been removed by Microsoft Defender Antivirus.
-
+1. If the output is *True*, the Malware payload file has not been removed by Microsoft Defender Antivirus. If the output is *False*, the Malware payload file has been removed by Microsoft Defender Antivirus. Use the up-arrow key to repeat the command until the output is *False*.
 
 <!---1. From the left menu, under **Endpoints**, select **Evaluation & tutorials** and then select **Tutorials & simulations** from the left side.
 
