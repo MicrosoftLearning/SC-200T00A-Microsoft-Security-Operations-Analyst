@@ -43,7 +43,7 @@ In this task, you will confirm that the device is onboarded successfully and cre
 
 ### Task 2: Simulated Attacks
 
-In this task, you will run two simulated attacks from the `Atomic Red Team` using *PowerShell* on *WIN1* to explore the capabilities of Microsoft Defender for Endpoint.
+In this task, you will run two *simulated* attacks using *PowerShell* on *WIN1* to explore the capabilities of Microsoft Defender for Endpoint.
 
 `Attack 1: Mimikatz - Credential Dumping`
 

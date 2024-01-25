@@ -37,22 +37,23 @@ In this task, you will review Regulatory compliance configuration in Microsoft D
 
 1. Select your subscription.
 
-1. Under *Policy settings*, select **Security policy** in the portal menu.
+    >**Hint:** Select **Expand all** to find your subscription if you a hierarchy of Management Groups.
 
-1. Scroll down and and review the "Industry & regulatory standards" available to you by default. Note that *ISO 27001* is now deprecated.
+1. Under *Settings*, select **Security policy** in the portal menu.
 
-1. Select **Add more standards** to add the updated ISO 27001:2013 regulatory standard.
+1. Scroll down and and review the "Security standards" available to you by default.
 
-1. Select the **Add** button to right of *ISO 27001:2013*.
+1. Use the search box to find *ISO 27001:2013*.
 
-1. A new page to assign the Azure Policy initiative opens. Confirm that your subscription is selected under *Scope* and click **Review and create**.
+1. Select and move the **Status** slider to right of *ISO 27001:2013* to **On**.
 
-1. Select **Create** to assign the Azure Policy initiative to your subscription.
+    >**Note:** Some standards require you to assign ane Azure Policy initiative.
 
-1. Select Microsoft Defender for Cloud below the search box to return to the main blade.
+1. Select **Refresh** on the page menu to confirm that *ISO 27001:2013* is set to *On* for your subscription.
+
+1. Close the *Security policies* page by selecting the 'X' on the upper right of the page to go back to the **Environment settings**.
 
     >**Note:** You might want to return later to *Regulatory compliance* to review the new standard controls and recommendations.
-
 
 ### Task 2: Explore Security posture and recommendations
 
