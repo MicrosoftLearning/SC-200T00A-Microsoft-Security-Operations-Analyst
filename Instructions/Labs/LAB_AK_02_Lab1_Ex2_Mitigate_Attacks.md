@@ -43,7 +43,7 @@ In this task, you will confirm that the device is onboarded successfully and cre
 
 ### Task 2: Simulated Attacks
 
->**Note:** THe Evaluation lab and the Tutorials & simulations section of the portal is no longer available. The following steps are provided for reference only. Please refer to the **[interactive lab simulation](https://mslabs.cloudguides.com/guides/SC-200%20Lab%20Simulation%20-%20Mitigate%20attacks%20with%20Microsoft%20Defender%20for%20Endpoint)** for a demonstration of the simulated attacks. We are working to find a replacement for the simulated attacks.
+>**Note:** The Evaluation lab and the Tutorials & simulations section of the portal is no longer available. The following steps are provided for reference only. Please refer to the **[interactive lab simulation](https://mslabs.cloudguides.com/guides/SC-200%20Lab%20Simulation%20-%20Mitigate%20attacks%20with%20Microsoft%20Defender%20for%20Endpoint)** for a demonstration of the simulated attacks. We are working to find a replacement for the simulated attacks.
 
 <!--- In this task, you will run two *simulated* attacks using *PowerShell* on *WIN1* to explore the capabilities of Microsoft Defender for Endpoint.
 
