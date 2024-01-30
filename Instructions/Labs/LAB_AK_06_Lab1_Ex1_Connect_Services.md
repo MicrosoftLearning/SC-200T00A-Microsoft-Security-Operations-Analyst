@@ -51,9 +51,11 @@ In this task, you will connect the Microsoft Defender for Cloud data connector.
 
 1. In the *Content hub*, search for the **Microsoft Defender for Cloud** solution and select it from the list.
 
-1. On the *Microsoft Defender for Cloud* solution page select **Install**.
+1. On the *Microsoft Defender for Cloud* solution details page select **Install**.
 
-1. When the installation completes select **Manage**
+1. When the installation completes,  search for the **Microsoft Defender for Cloud** solution and select it.
+
+1. On the *Microsoft Defender for Cloud* solution details page select **Manage**
 
     >**Note:** The *Microsoft Defender for Cloud* solution installs the *Subscription-based Microsoft Defender for Cloud (Legacy)* Data connector, the *Tenant-based Microsoft Defender for Cloud (Preview)* Data connector, and an Analytics rule.
 
