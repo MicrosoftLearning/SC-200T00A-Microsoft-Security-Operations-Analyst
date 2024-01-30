@@ -37,7 +37,7 @@ In this task, you will review Regulatory compliance configuration in Microsoft D
 
 1. Select your subscription.
 
-    >**Hint:** Select **Expand all** to find your subscription if you a hierarchy of Management Groups.
+    >**Hint:** Select **Expand all** to find your subscription if you have a hierarchy of Management Groups.
 
 1. Under *Settings*, select **Security policy** in the portal menu.
 
