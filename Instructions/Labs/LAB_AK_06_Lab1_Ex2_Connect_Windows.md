@@ -111,7 +111,9 @@ In this task, you'll add an Azure Arc connected, non-Azure Windows virtual machi
 
 1. In the **Instructions** tab, under the *Configuration* section, edit the **AZWINDCR** *data collection rule* by selecting the *pencil* icon.
 
-1. Select **Next: Resources**, and **+Add resource(s)**.
+1. Select **Next: Resources**, and expand your *Subscription* under *Scope* on the *Resources* tab.
+
+    >**Hint:** You can expand the whole *Scope* hierarchy by selecting the ">" before the *Scope* column.
 
 1. Expand **RG-Defender** (or the Resource Group your created), then select **WINServer**.
 

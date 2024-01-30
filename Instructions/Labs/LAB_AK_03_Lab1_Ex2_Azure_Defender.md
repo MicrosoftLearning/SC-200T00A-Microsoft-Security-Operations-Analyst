@@ -89,7 +89,7 @@ In this task, you will load sample security alerts and review the alert details.
 
 1. Under *General*, select **Security alerts** in the portal menu.
 
-1. Select **Sample alerts** from the command bar. **Hint:** you may need to select the ellipsis (...) button from the command bar).
+1. Select **Sample alerts** from the command bar. **Hint:** you may need to select the ellipsis (...) button from the command bar.
 
 1. In the Create sample alerts (Preview) pane make sure your subscription is selected and that all sample alerts are selected in the *Defender for Cloud plans* area.
 
