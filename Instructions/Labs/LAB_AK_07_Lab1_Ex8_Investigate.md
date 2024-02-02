@@ -53,9 +53,9 @@ In this task, you will investigate an incident.
 
 1. Hide the left blade by selecting the **<<** icon next to the owner.
 
-1. Review the **Incident timeline** window. For the *Startup RegKey* alert, select the ellipsis **(...)** icon and then **Run playbook**. You will see the *PostMessageTeams-OnAlert* playbook. This option help you to run playbooks manually.
+1. Review the **Incident timeline** window. Select the **Incident Actions** button at top-right and then **Run playbook**. You will see the *PostMessageTeams-OnIncident* playbook. This option help you to run playbooks manually.
 
-1. Close the *Alert playbooks* blade by selecting the **x** icon in the top right.
+1. Close the *Run playbook on incident* blade by selecting the **x** icon in the top right.
 
 1. Review the **Entities** window. At least the *Host* entity that we mapped within the KQL query from the previous exercise should appear. **Hint:** If no entities are shown, refresh the page.
 
