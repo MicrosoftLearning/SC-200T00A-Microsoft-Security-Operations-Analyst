@@ -124,7 +124,7 @@ In this task, you'll install Azure Arc on an on-premises server to make onboardi
 
 1. Select **Generate script** from the "Add a single server" section.
 
-1. Read through the *Prerequisites* tab and then select **Next** to continue.
+    <!--- 1. Read through the *Prerequisites* tab and then select **Next** to continue.--->
 
 1. In the *Add a server with Azure Arc* page, select the Resource group you created earlier under *Project details*. **Hint:** *RG-Defender*
 
