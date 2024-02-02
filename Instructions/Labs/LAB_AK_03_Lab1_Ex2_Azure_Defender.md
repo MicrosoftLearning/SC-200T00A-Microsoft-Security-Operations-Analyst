@@ -61,21 +61,27 @@ In this task, you will review cloud security posture management.  The Secure Sco
 
 1. Under *Cloud Security*, select **Security posture** in the portal menu.
 
-1. The Secure score most likely will show *N/A* until the score is calculated.
+1. The *Secure score* will default to the *Azure environment*.
 
-1. Under *General*, select **Recommendations** in the portal menu.
+1. Under the *Environment* tab, select **View recommendations >**.
 
-1. Explore the recommendations provided for your subscription and WINServer (Arc Server).
+1. On the *Recommendations* page, select the **All recommendation** tab.
 
-1. Select any recommendation where the status is not *"Completed"* for WINServer.
+    >**Note:** You could also use the *Secure score recommendations*.
 
-1. Read through the recommendation and scroll down to **select** WINServer checkbox. **Hint:** You might need to select **Affected resources** to display it.
+1. Select the **Resource type** filter and the **Value** dropdown selector.
 
-1. Select **Assign owner** and then **Select owner**.
+1. Select the **Machines - Azure Arc** checkbox and then select the **OK** button.
 
-1. In the *Email address* box, write down your admin email. **Hint:** You can copy it from the instructions in the *Resources* tab.
+1. Select any recommendation where the status is not *"Completed"*.
 
-1. Select **Back**, change the *Due date* to your preference and click **Save**.
+1. Read through the recommendation and scroll down to **select** WINServer checkbox. **Hint:** You might need to expand and scroll down through **Affected resources** to display it.
+
+1. Select **Assign owner** and then expand **Assignment details**.
+
+1. In the `Set owner` *Email address* box, type in your admin email. **Hint:** You can copy it from the instructions in the *Resources* tab.
+
+1. Explore the *Set remediation timeframe* and *Set email notifications* options and select **Create**.
 
     >**Note:** If you see the error *Failed to create requested assignments*, try again later.
 
@@ -95,17 +101,17 @@ In this task, you will load sample security alerts and review the alert details.
 
 1. Select **Create sample alerts**.  
 
-    >**Note:** This sample alert creation process may take a few minutes to complete, wait for the *"Successfully created sample alerts"* notification. 
+    >**Note:** This sample alert creation process may take a few minutes to complete, wait for the *"Successfully created sample alerts"* notification.
 
-1. Once completed, select **Refresh** to see the alerts appear under the *Security alerts* area.
+1. Once completed, select **Refresh** (if needed) to see the alerts appear under the *Security alerts* area.
 
-1. For the alerts that grabbed your attention, perform the following actions:
+1. Choose an interesting alert with a *Severity* of *High* and perform the following actions:
 
-    - Select the alert, information about the alert should appear. Select **View full details**.
+    - Select the alert checkbox and the alert detail pane should appear. Select **View full details**.
 
     - Review and read the *Alert details* tab.
 
-    - Select the **Take action** tab or select the **Next: Take Action** button at the end of the page.
+    - Select the **Take action** tab or scroll down and select the **Next: Take Action** button at the end of the page.
 
     - Review the *Take action* information. Notice the sections available to take action depending on the type of alert: Inspect resource context, Mitigate the threat, Prevent future attacks, Trigger automated response and Suppress similar alerts.
 
