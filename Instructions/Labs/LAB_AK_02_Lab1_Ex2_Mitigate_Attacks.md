@@ -100,11 +100,11 @@ In this task, you will simulate an attack on the WIN1 virtual machine and verify
 
 1. A new incident called *Multi-stage incident involving Defense evasion & Discovery on one endpoint* is in the right pane. Select the incident name to load its details.
 
-1. Under the *Attack story* tab, collapse the **Alerts** and **Incident details** to view the full **Incident graph**.
+1. Under the *Attack story* tab, collapse the **Alerts** and **Incident details** panes to view the full **Incident graph**.
 
 1. Mouse over and select the **Incident graph nodes** to review the *entities*.
 
-1. Re expand the **Alerts** section (left-side) and select the **Play attack story** *Run* icon. This shows the attack timeline alert by alert and dynamically populates the *Incident graph*.
+1. Re expand the **Alerts** pane (left-side) and select the **Play attack story** *Run* icon. This shows the attack timeline alert by alert and dynamically populates the *Incident graph*.
 
 1. Review the contents of the *Attack story, Alerts, Assets, Investigations, Evidence and Response*, and *Summary* tabs. Devices and Users are under the *Assets* tab. **Hint:** Some tabs might be hidden due the size of your display. Select the ellipsis tab (...) to make them appear.
 
