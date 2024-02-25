@@ -97,7 +97,7 @@ In this task, you will assign preset security policies for Exchange Online Prote
 
 1. On the **Home** portal page, **Welcome to Microsoft 365 Defender** is displayed.
 
-1. Scroll down through the tiles until you find the tile labeled **Microsoft 365 Defender** with the message, **Turn on Microsoft 365 Defender.**
+1. Scroll down through the tiles until you find the tile labeled **Microsoft Defender XDR** with the message, **Turn on Microsoft Defender XDR.**
 
     >**Hint:** It should be at the bottom right of the tiles.
 
