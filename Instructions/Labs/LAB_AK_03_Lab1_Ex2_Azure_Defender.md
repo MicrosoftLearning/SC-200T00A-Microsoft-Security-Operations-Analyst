@@ -33,7 +33,7 @@ In this task, you will review Regulatory compliance configuration in Microsoft D
 
 1. Under *Cloud Security*, select **Regulatory compliance** in the portal menu.
 
-1. Select **Manage compliance policies** on the toolbar.
+1. Select **Manage compliance standards** on the toolbar.
 
 1. Select your subscription.
 
@@ -47,7 +47,7 @@ In this task, you will review Regulatory compliance configuration in Microsoft D
 
 1. Select and move the **Status** slider to right of *ISO 27001:2013* to **On**.
 
-    >**Note:** Some standards require you to assign ane Azure Policy initiative.
+    >**Note:** Some standards require you to assign an Azure Policy initiative.
 
 1. Select **Refresh** on the page menu to confirm that *ISO 27001:2013* is set to *On* for your subscription.
 
@@ -58,6 +58,8 @@ In this task, you will review Regulatory compliance configuration in Microsoft D
 ### Task 2: Explore Security posture and recommendations
 
 In this task, you will review cloud security posture management.  The Secure Score information can take 24 hours to recalculate. It is recommended to do this task again in 24 hours.
+
+1. Select the **Microsoft Defender for Cloud** breadcrumb.
 
 1. Under *Cloud Security*, select **Security posture** in the portal menu.
 
