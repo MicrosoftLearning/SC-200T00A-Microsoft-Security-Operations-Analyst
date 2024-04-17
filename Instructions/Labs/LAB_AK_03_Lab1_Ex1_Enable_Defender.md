@@ -205,7 +205,15 @@ In this task, you'll manually install the *Azure Monitor Agent* by adding a *Dat
 
     >**Note:** For the purposes of this lab you could select *Windows Event Logs*. These selections can be revised later.
 
-1. Select **Add data source** and select **Review + create**
+1. Click the **Destination** tab
+
+1. Select **Azure Monitor Logs** in the **Destination Type** dropdown
+
+1. Select your *Azure Pass - Sponsorship* subscription from the **Subscription** dropdown
+
+1. Select your workspace name **Hint:** *RG-Defender* from the **Account or namespace** dropdown
+
+1.  Select **Add data source** and select **Review + create**
 
 1. Select **Create** after *Validation passed* is displayed.
 
