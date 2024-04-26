@@ -30,6 +30,8 @@ In this task, you'll create a Microsoft Teams team for use in the lab.
 
 1. Close any Teams pop-ups that may appear.
 
+    >**Note:** If prompted to use **New Teams** accept and proceed with the exercise.
+
 1. If not already selected, select **Teams** on the left menu, then at the top, select the ![plus sign icon](../Media/plus-sign-icon-lab.png) icon.
 
 1. Select the **Create Team** option.
@@ -97,25 +99,25 @@ In this task, you'll update the new playbook you created with the proper connect
 
 1. Select **Automation** under the *Configuration* area and then select the **Active Playbooks** tab.
 
-1. Select **Refresh** from the command bar in case you don't see any playbooks. You should see the playbook created from the previous step with the **Microsoft Sentinel Incident** *Trigger kind*.
+1. Select **Refresh** from the command bar in case you don't see any playbooks. You should see the playbook created from the previous step.
 
-1. Select the **PostMessageTeams-OnIncident** playbook name.
+1. Select the **PostMessageTeams** playbook name.
 
-1. On the Logic App page for *PostMessageTeams-OnIncident*, in the command menu, select **Edit**.
+1. On the Logic App page for *PostMessageTeams*, in the command menu, select **Edit**.
 
     >**Note:** You may need to refresh the page.
 
-1. Select the *first* block, **Microsoft Sentinel incident (Preview)**.
+1. Select the *first* block, **Microsoft Sentinel incident**.
 
 1. Select the **Change connection** link.
 
 1. Select **Add new** and select **Sign in**. In the new window, select your Azure subscription admin credentials when prompted. The last line of the block should now read "Connected to your-admin-username".
 
-1. Now select the *second* block, **Connections**.
+1. Now select the *second* block, **Post a message (V3)**.
 
-1. Select **Add new** and select your Azure admin credentials when prompted. The last line of the block should now read "Connected to your-admin-username".
+1. In the Prameters tab, scroll down and select the **Change connection** link and then select **Add new** and **Sign in**. Chose your Azure admin credentials when prompted. The Prameters tab should now read "Connected to your-admin-username".
 
-1. The block has now been renamed to **Post a message (V3)(Preview)**, at the end of the *Team* field, select the **X** to clear the contents. The field is changed to a drop-down with a listing of the available Teams from Microsoft Teams. Select **SOC**.
+1. At the end of the *Team* field, select the **X** to clear the contents. The field is changed to a drop-down with a listing of the available Teams from Microsoft Teams. Select **SOC**.
 
 1. Do the same for the *Channel* field, select the **X** at the end of the field to clear the contents. The field is changed to a drop-down with a listing of the Channels of the SOC Teams. Select **New Alerts**.
 
