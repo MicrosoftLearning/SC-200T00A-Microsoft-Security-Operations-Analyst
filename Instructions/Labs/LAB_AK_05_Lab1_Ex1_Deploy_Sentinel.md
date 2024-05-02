@@ -37,8 +37,9 @@ In this task, you will create a Microsoft Sentinel workspace.
 
     >**Note:** If you do not see a Log Analytics workspace here, please refer to Module 3, Exercise 1, Task 2 to create one.
 
-1. Navigate around the newly created Microsoft Sentinel workspace to become familiar with the user interface options.
+1. In **Microsoft Sentinel** you should be in the **General** section *News & Guides* and see a notice stating *Microsoft Sentinel free trial activated*. Press the **OK** button.
 
+1. Navigate around the newly created Microsoft Sentinel workspace to become familiar with the user interface options.
 
 ### Task 2: Create a Watchlist
 

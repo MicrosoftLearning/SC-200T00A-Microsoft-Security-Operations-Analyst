@@ -33,21 +33,13 @@ In this task, you will access your Microsoft Sentinel workspace.
 
 1. Select your Microsoft Sentinel Workspace that you created in the previous lab.
 
-1. Select Analytics from the navigation menu.
-
-1. Select *Create incidents based on Microsoft Defender for Cloud* from the rule templates.
-
-1. Select **Create rule** in the rule information pane, or select the ellipsis (...) and **+ Create rule**.
-
-1. In the Analytics rule wizard, select **Next: Automated response**, then select **Next: Review and create**.
-
-1. Select **save**.
+1. Proceed to the next task.
 
 ### Task 2: Connect the Microsoft Defender for Cloud data connector
 
 In this task, you will connect the Microsoft Defender for Cloud data connector.
 
-1. In the Microsoft Sentinel left menus, scroll down to the *Content management* section and select **Content Hub**.
+1. In the Microsoft Sentinel left menus, scroll down to the **Content management** section and select **Content Hub**.
 
 1. In the *Content hub*, search for the **Microsoft Defender for Cloud** solution and select it from the list.
 
