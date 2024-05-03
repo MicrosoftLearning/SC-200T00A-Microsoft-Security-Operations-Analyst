@@ -118,7 +118,7 @@ In this task, you'll install Azure Arc on an on-premises server to make onboardi
 
 1. In the Search bar of the Azure portal, type *Arc*, then select **Azure Arc**.
 
-1. In the navigation pane under **Infrastructure** select **Machines**
+1. In the navigation pane under **Azure Arc resources** select **Machines**
 
 1. Select **+ Add/Create**, then select **Add a machine**.
 
