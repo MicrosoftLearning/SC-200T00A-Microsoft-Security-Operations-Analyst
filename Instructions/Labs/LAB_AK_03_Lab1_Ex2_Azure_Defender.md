@@ -59,7 +59,7 @@ In this task, you will review Regulatory compliance configuration in Microsoft D
 
 In this task, you will review cloud security posture management.  The Secure Score information can take 24 hours to recalculate. It is recommended to do this task again in 24 hours.
 
-1. Select the **Microsoft Defender for Cloud** breadcrumb.
+1. Select the **Microsoft Defender for Cloud | Regulatory compliance** link at the top of the page to return to the top menus.
 
 1. Under *Cloud Security*, select **Security posture** in the portal menu.
 
