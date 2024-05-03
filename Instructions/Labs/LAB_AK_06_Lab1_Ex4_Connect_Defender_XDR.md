@@ -32,11 +32,11 @@ In this task, you'll deploy the Microsoft Defender XDR connector.
 
 1. In the *Content hub*, search for the **Microsoft Defender XDR** solution and select it from the list.
 
-1. On the *Microsoft Defender for Cloud* solution details page select **Install**.
+1. On the *Microsoft Defender XDR* solution details page select **Install**.
 
 1. When the installation completes,  search for the **Microsoft Defender XDR** solution and select it.
 
-1. On the *Microsoft Defender for Cloud* solution details page select **Manage**
+1. On the *Microsoft Defender XDR* solution details page select **Manage**
 
 >**Note:** The *Microsoft Defender XDR* solution installs the *Microsoft Defender XDR* Data connector, Hunting queries, Workbooks and Analytics rules.
 
