@@ -23,13 +23,13 @@ You start by initializing the Defender for Endpoint environment. Next, you onboa
 
 ### Task 1: Initialize Microsoft Defender for Endpoint
 
-In this task, you'll perform the initialization of the Microsoft Defender for Endpoint portal.
+In this task, you'll perform the initialization of the Microsoft Defender for Endpoint.
 
 1. Log in to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.  
 
-1. If you aren't already at the Microsoft 365 Defender portal, start the Microsoft Edge browser.
+1. If you aren't already at the Microsoft Defender XDR portal, start the Microsoft Edge browser.
 
-1. In the Edge browser, go to the Microsoft 365 Defender portal at (https://security.microsoft.com).
+1. In the Edge browser, go to the Defender XDR portal at (https://security.microsoft.com).
 
 1. In the **Sign in** dialog box, copy, and paste in the tenant Email account for the admin username provided by your lab hosting provider and then select **Next**.
 
@@ -37,7 +37,7 @@ In this task, you'll perform the initialization of the Microsoft Defender for En
 
     >**Tip:** The admin's tenant email account and password can be found on the Resources tab.
 
-1. On the **Microsoft 365 Defender** portal, from the navigation menu, select **Settings** from the left.
+1. On the **Defender XDR** portal, from the navigation menu, select **Settings** from the left.
 
 1. On the Settings page, select **Device discovery**. 
 
@@ -81,7 +81,7 @@ In this task, you'll onboard a device to Microsoft Defender for Endpoint using a
 
 In this task, you'll configure roles for use with device groups.
 
-1. In the Microsoft 365 Defender portal select **Settings** from the left menu bar, then select **Endpoints**. 
+1. In the Microsoft Defender XDR portal select **Settings** from the left menu bar, then select **Endpoints**. 
 
 1. Select **Roles** under the permissions area.
 
@@ -108,7 +108,7 @@ In this task, you'll configure roles for use with device groups.
 
 In this task, you'll configure device groups that allow for access control and automation configuration.
 
-1. In the Microsoft 365 Defender portal select **Settings** from the left menu bar, then select **Endpoints**. 
+1. In the Microsoft Defender XDR portal select **Settings** from the left menu bar, then select **Endpoints**. 
 
 1. Select **Device groups** under the permissions area.
 
