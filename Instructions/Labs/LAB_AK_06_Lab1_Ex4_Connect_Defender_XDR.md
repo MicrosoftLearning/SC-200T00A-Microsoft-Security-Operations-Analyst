@@ -76,7 +76,7 @@ In this task, you'll connect a Microsoft Sentinel workspace to Microsoft Defende
 
 1. On the *Review changes* page, verify that the *Workspace* selection is correct and review the bulleted items under the *What to expect when the workspace is connected* section. Select the **Connect** button.
 
-1. You should a *Connecting the workspace* message followed by a *Workspace successfully connected* message.
+1. You should see a *Connecting the workspace* message followed by a *Workspace successfully connected* message.
 
 1. Select the **Close** button. 
 
