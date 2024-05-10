@@ -80,14 +80,14 @@ In this task, you will create a detection for the first attack of the previous e
 
 1. Select **Next: Set rule logic >** button.
 
-1. On the *Set rule logic* tab, the *Rule query* should be populated already with you KQL query, as well as the entities under *Alert enrichment - Entity mapping*.
+1. On the *Set rule logic* tab, the *Rule query* should be populated already with you KQL query, as well as the entities under *Alert enhancement - Entity mapping*.
 
     |Entity|Identifier|Data Field|
     |:----|:----|:----|
     |Account|FullName|AccountCustomEntity|
     |Host|Hostname|HostCustomEntity|
 
-1. If **Hostname** isn't selected for *Host* Entity, select it from the drop-down list.
+1. If **Hostname** isn't selected for *Host* Entity, select it from the drop-down list and use the parameters in the preceding table to populate the fields.
 
 1. For *Query scheduling* set the following:
 
@@ -117,9 +117,9 @@ In this task, you will create a detection for the first attack of the previous e
 
 1. Select **Apply**
 
-1. Select the **Next: Review >** button.
+1. Select the **Next: Review + create >** button.
   
-1. On the *Review and create* tab, select the **Create** button to create the new Scheduled Analytics rule.
+1. On the *Review and create* tab, select the **Save** button to create the new Scheduled Analytics rule.
 
 ### Task 2: Privilege Elevation Attack Detection
 
@@ -182,9 +182,16 @@ In this task, you will create a detection for the second attack of the previous 
     |Tactics|**Privilege Escalation**|
     |Severity|**High**|
 
-1. Select **Next: Set rule logic >** button. 
+1. Select **Next: Set rule logic >** button.
 
-1. On the *Set rule logic* tab, the *Rule query* should be populated already with you KQL query, as well the entities under *Alert enrichment - Entity mapping*.
+1. On the *Set rule logic* tab, the *Rule query* should be populated already with you KQL query, as well the entities under *Alert enhancement - Entity mapping*.
+
+    |Entity|Identifier|Data Field|
+    |:----|:----|:----|
+    |Account|FullName|AccountCustomEntity|
+    |Host|Hostname|HostCustomEntity|
+
+1. If **Hostname** isn't selected for *Host* Entity, select it from the drop-down list and use the parameters in the preceding table to populate the fields.
 
 1. For *Query scheduling* set the following:
 
