@@ -19,7 +19,7 @@ Analytics rules search for specific events or sets of events across your environ
 
 ### Task 1: Create a Scheduled Query
 
-In this task, you'll create a scheduled query and connect it to the Teams channel you created in the previous exercise.
+In this task, you create a scheduled query and connect it to the Teams channel you created in the previous exercise.
 
 1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
@@ -97,13 +97,19 @@ In this task, you'll create a scheduled query and connect it to the Teams channe
 
 ### Task 2: Test your new rule
 
-In this task, you'll test your new scheduled query rule.
+In this task, you test your new scheduled query rule.
 
 1. In the top bar of the Azure portal, Select the icon **>_** that corresponds to the Cloud Shell. You might need to select the ellipsis icon first **(...)** if your display resolution is too low.
 
-1. Select **Powershell** and then **Create storage**. Wait until the Cloud Shell is provisioned.
+1. In the *Welcome to Azure Cloud Shell* window, select **Powershell**.
 
-1. Close the Azure Cloud Shell window.
+1. On the *Getting started* page, select **Mount storage account**, and then select your **Azure Pass - Sponsorship** from the *storage account subscription* drop-down menu item and select the **Apply** button.
+
+    >**Important:** Do not select the *No storage account required* radio button option. This wil cause the incident creation to fail.
+
+1. On the *Mount storage account* page, select **We will create a storage account for you**, and then select **Next**.
+
+1. Wait until the Cloud Shell is provisioned, then close the Azure Cloud Shell window.
 
 1. In the Search bar of the Azure portal, type *Activity* and then select **Activity Log**.
 
