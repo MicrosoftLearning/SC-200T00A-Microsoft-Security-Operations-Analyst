@@ -41,7 +41,7 @@ In this task, you will build basic KQL statements.
 1. The following statement demonstrates the **search** operator, which searches all columns in the table for the value. In the Query Window enter the following statement and select **Run**: 
 
 ```KQL
-search "new"
+search "location"
 ```
 
 2. The following statement demonstrates searching across tables listed with the "in" clause. Enter the following statement and select **Run**: 
