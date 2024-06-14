@@ -10,7 +10,7 @@ lab:
 
 ![Lab overview.](../Media/SC-200-Lab_Diagrams_Mod2_L1_Ex1.png)
 
-You are a Security Operations Analyst working at a company that is implementing Microsoft Defender for Endpoint. Your manager plans to onboard a few devices to provide insight into required changes to the Security Operations (SecOps) team response procedures.
+You're a Security Operations Analyst working at a company that is implementing Microsoft Defender for Endpoint. Your manager plans to onboard a few devices to provide insight into required changes to the Security Operations (SecOps) team response procedures.
 
 You start by initializing the Defender for Endpoint environment. Next, you onboard the initial devices for your deployment by running the onboarding script on the devices. You configure security for the environment. Lastly, you create Device groups and assign the appropriate devices.
 
@@ -25,11 +25,11 @@ You start by initializing the Defender for Endpoint environment. Next, you onboa
 
 In this task, you'll perform the initialization of the Microsoft Defender for Endpoint.
 
-1. Log in to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.  
+1. Sign-in to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.  
 
 1. If you aren't already at the Microsoft Defender XDR portal, start the Microsoft Edge browser.
 
-1. In the Edge browser, go to the Defender XDR portal at (https://security.microsoft.com).
+1. In the Microsoft Edge browser, go to the Defender XDR portal at (https://security.microsoft.com).
 
 1. In the **Sign in** dialog box, copy, and paste in the tenant Email account for the admin username provided by your lab hosting provider and then select **Next**.
 
@@ -37,9 +37,9 @@ In this task, you'll perform the initialization of the Microsoft Defender for En
 
     >**Tip:** The admin's tenant email account and password can be found on the Resources tab.
 
-1. On the **Defender XDR** portal, from the navigation menu, select **Settings** from the left.
+1. On the **Defender XDR** portal, from the navigation menu on the left, scroll down and expand the **System** section and select **Settings**.
 
-1. On the Settings page, select **Device discovery**. 
+1. On the Settings page, select **Device discovery**.
 
     >**Note:** If you do not see the **Device discovery** option under **Settings**, logout by selecting the top-right circle with your account initials and select **Sign out**. Other options that you might want to try is to refresh the page with Ctrl+F5 or open the page InPrivate. Login again with the **Tenant Email** credentials.
 
@@ -48,11 +48,11 @@ In this task, you'll perform the initialization of the Microsoft Defender for En
     >**Hint:** If you do not see the option, refresh the page.
 
 
-### Task 2: Onboard a Device.
+### Task 2: Onboard a Device
 
 In this task, you'll onboard a device to Microsoft Defender for Endpoint using an onboarding script.
 
-1. Select **Settings** from the left menu bar, then from the Settings page select **Endpoints**.
+1. In the **Defender XDR** portal, from the navigation menu on the left, scroll down and expand the **System** section and select **Settings**, then from the Settings page select **Endpoints**.
 
 1. Select **Onboarding** in the Device management section.
 
@@ -70,8 +70,8 @@ In this task, you'll onboard a device to Microsoft Defender for Endpoint using a
 
 1. Right-click on the extracted file "WindowsDefenderATPLocalOnboardingScript.cmd" and select **Properties**. Select the **Unblock** checkbox in the bottom right of the Properties windows and select **OK**.
 
-1. Right-click on the extracted file "WindowsDefenderATPLocalOnboardingScript.cmd" again and choose **Run as Administrator**.  **Hint:** If you encounter the Windows SmartScreen window, select on **More info**, and choose **Run anyway**. 
-    
+1. Right-click on the extracted file "WindowsDefenderATPLocalOnboardingScript.cmd" again and choose **Run as Administrator**.  **Hint:** If you encounter the Windows SmartScreen window, select on **More info**, and choose **Run anyway**.
+
 1. When the "User Account Control" window is shown, select **Yes** to allow the script to run and answer **Y** to the question presented by the script and press **Enter**. When complete you should see a message in the command screen that says *Successfully onboarded machine to Microsoft Defender for Endpoint*.
 
 1. Press any key to continue. This closes the Command Prompt window.
@@ -81,7 +81,7 @@ In this task, you'll onboard a device to Microsoft Defender for Endpoint using a
 
 In this task, you'll configure roles for use with device groups.
 
-1. In the Microsoft Defender XDR portal select **Settings** from the left menu bar, then select **Endpoints**. 
+1. In the Microsoft Defender XDR portal left menu bar, expand the **System** section and select **Settings**, then select **Endpoints**.
 
 1. Select **Roles** under the permissions area.
 
@@ -108,7 +108,7 @@ In this task, you'll configure roles for use with device groups.
 
 In this task, you'll configure device groups that allow for access control and automation configuration.
 
-1. In the Microsoft Defender XDR portal select **Settings** from the left menu bar, then select **Endpoints**. 
+1. In the Microsoft Defender XDR portal left menu bar, expand the **System** section and select **Settings**, then select **Endpoints**.
 
 1. Select **Device groups** under the permissions area.
 
@@ -124,7 +124,7 @@ In this task, you'll configure device groups that allow for access control and a
 1. Select **Next**.
 
 1. On the Devices tab, for the OS condition select **Windows 10** and select **Next**.
- 
+
     >**Note:** Some lab hosting providers may have configured *Windows 11* images for WIN1. You can select either or both.
 
 1. On the Preview devices tab, the *Show preview* button could show the WIN1 virtual machine, but most likely the data isn't populated yet. Select **Next** to continue.
@@ -135,6 +135,6 @@ In this task, you'll configure device groups that allow for access control and a
 
 1. Device group configuration has changed. Select **Apply changes** to check matches and recalculate groupings.
 
-1. You're going to have two device groups now; the "Regular" you just created and the "Ungrouped devices (default)" with the same remediation level.
+1. You're going to have two device groups now; the "Regular" you created and the "Ungrouped devices (default)" with the same remediation level.
 
 ## Proceed to Exercise 2
