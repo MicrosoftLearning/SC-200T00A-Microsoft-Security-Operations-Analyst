@@ -63,22 +63,36 @@ In this task, you will explore using notebooks in Microsoft Sentinel.
 
 1. Select **Close** if an informational window appears in the Microsoft Azure Machine Learning Studio.
 
-1. In the command bar, to the right of the **Compute instance:**  selector, select the **+** symbol to create a new compute instance. **Hint:** It might be hidden inside the ellipsis icon **(...)**.
+1. In the command bar, to the right of the **Compute:**  selector, select the **+** symbol to create a new compute instance. **Hint:** It might be hidden inside the ellipsis icon **(...)**.
 
-     >**Note:** You can have more screen space by hiding the Azure ML Studio left blade by selecting the 3 lines on the top left, as well as the Notebooks Files selecting the **<<** icon.
+     >**Note:** You can have more screen space by hiding the Azure ML Studio left blade by selecting the *Hamburger menu* (3 horizontal lines on the top left), as well as by collapsing the Notebooks Files by selecting the **<<** icon.
 
 1. Type a unique name in the *Compute name* field. This will identify you compute instance.
 
-1. Scroll down and select the first option available. **Hint:** Workload type: Development on Notebooks and light weight testing.
+1. Scroll down and select the first option available. **Hint:** Workload type: Development on Notebooks (or other IDE) and light weight testing.
 
-1. Select the **Create** button at the bottom of the screen. Close any feedback window that may appear. This will take a few minutes, you will see a notification (bell icon) when it is done and the *Compute instance* left icon turns from blue to green.
+1. Select the **Review + Create** button at the bottom of the screen, then scroll down and select **Create**. Close any feedback window that may appear. This will take a few minutes, you will see a notification (bell icon) when it is done and the *Compute instance* left icon turns from blue to green.
 
-1. Once the Compute has been created and running, verify that the kernel to use is *Python 3.8 - AzureML*. **Hint:** This is shown in the right of the command bar.
+1. Once the Compute has been created and running, verify that the kernel to use is *Python 3.8 - Pytorch and Tensorflow*. **Hint:** This is shown in the right of the command bar.
 
 1. Select the **Authenticate** button and wait for the authentication to complete.
 
-1. Clear all the results from the notebook by selecting the **Clear all outputs** from the command bar and follow the *Getting Started* tutorial. **Hint:** This can be found by selecting the ellipsis (...) from the command bar.
+1. Clear all the results from the notebook by selecting the **Clear all outputs** (Eraser icon) from the command bar and follow the *Getting Started* tutorial. **Hint:** This can be found by selecting the ellipsis (...) from the command bar.
+
+1. Review section *1 Introdution* in the notebook and proceed to section *2 Initializing the notebook and MSTICPy*.
+
+1. In section *2 Initializing the notebook and MSTICPy*, review the content on initalizing the notebook and installing the MSTICPy package.
+
+1. Run the *Python code* to initialize the cell by selecting the **Run cell** button (Play icon) to the left of the code.
+
+1. It should take approximately 15 seconds to run. Once it is done, review the output messages and disregard any warnings about the Python kernel version. The code ran successfully if *msticpyconfig.yaml* was created in the *utils* folder in the *file explorer* pane on the left.
+
+    >**Hint:** You can clear the output messages by using *sguare with an x* icon above the code cell.
+
+1. Select the **msticpyconfig.yaml** file in the *file explorer* pane on the left to review the contents of the file and then close it.
+
+1. Proceed to section *3 Querying data with MSTICPy* and review the contents. Do not run the *Multiple Microsoft Sentinel workspaces* code cell as it will fail, but the other code cells can be run successfully.
 
 >**Note:** If you cannot complete the steps above to access the Notebook, you can follow it on its GitHub viewwer page instead. [Getting Started with Azure ML Notebooks and Microsoft Sentinel](https://nbviewer.org/github/Azure/Azure-Sentinel-Notebooks/blob/master/A%20Getting%20Started%20Guide%20For%20Azure%20Sentinel%20ML%20Notebooks.ipynb) 
 
-## You have completed the lab.
+## You have completed the lab
