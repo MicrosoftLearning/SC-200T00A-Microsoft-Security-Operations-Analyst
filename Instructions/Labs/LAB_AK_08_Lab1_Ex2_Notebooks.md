@@ -87,7 +87,7 @@ In this task, you will explore using notebooks in Microsoft Sentinel.
 
 1. It should take approximately 15 seconds to run. Once it is done, review the output messages and disregard any warnings about the Python kernel version. The code ran successfully if *msticpyconfig.yaml* was created in the *utils* folder in the *file explorer* pane on the left.
 
-    >**Hint:** You can clear the output messages by using *sguare with an x* icon above the code cell.
+    >**Hint:** You can clear the output messages by using *square with an x* icon above the code cell.
 
 1. Select the **msticpyconfig.yaml** file in the *file explorer* pane on the left to review the contents of the file and then close it.
 
