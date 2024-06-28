@@ -85,7 +85,7 @@ In this task, you'll enable and configure Microsoft Defender for Cloud.
 
 1. Review the Azure resources that are now protected with the Defender for Cloud plans.
 
-    >**Important:** If all Defender plans are *Off*, select **Enable all plans** and then click **Save**. Wait for the *"Resource plan in subscription Azure Pass were saved successfully!"* notification to appear.
+    >**Important:** If all Defender plans are *Off*, select **Enable all plans**. Select the *$200/month Microsoft Defender for APIs Plan 1* and then select **Save**. Select **Save** at the top of the page and wait for the *"Defender plans (for your) subscription were saved successfully!"* notifications to appear.
 
 1. Select the **Settings & monitoring** tab from the Settings area (next to Save).
 
