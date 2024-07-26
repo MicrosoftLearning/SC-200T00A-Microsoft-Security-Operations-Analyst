@@ -40,8 +40,6 @@ In this task, you deploy the Microsoft Defender XDR connector.
 
 1. On the *Microsoft Defender XDR* solution details page, select **Manage**
 
->**Note:** The *Microsoft Defender XDR* solution installs the *Microsoft Defender XDR* Data connector, Hunting queries, Workbooks and Analytics rules.
-
 1. Select the *Microsoft Defender XDR* Data connector check-box, and select **Open connector page**.
 
 1. In the *Configuration* section, under the *Instructions* tab, **deselect** the checkbox for the *Turn off all Microsoft incident creation rules for these products. Recommended*, and select the **Connect incidents & alerts** button.
@@ -58,7 +56,7 @@ In this task, you'll connect a Microsoft Sentinel workspace to Microsoft Defende
 
 1. Start the Microsoft Edge browser.
 
-1. In the Edge browser, go to the Microsoft Defender XDR portal at (https://security.microsoft.com).
+1. In the Edge browser, go to the Microsoft Defender XDR portal at <https://security.microsoft.com>.
 
 1. In the **Sign in** dialog box, copy, and paste in the tenant Email account for the admin username provided by your lab hosting provider and then select **Next**.
 
@@ -80,7 +78,7 @@ In this task, you'll connect a Microsoft Sentinel workspace to Microsoft Defende
 
 1. You should see a *Connecting the workspace* message followed by a *Workspace successfully connected* message.
 
-1. Select the **Close** button. 
+1. Select the **Close** button.
 
 1. On the **Defender XDR** portal **Home** screen, you should see a banner at the top with the message, *Your unified SIEM and XDR is ready*. Select the **Start Hunting** button.
 
@@ -88,6 +86,6 @@ In this task, you'll connect a Microsoft Sentinel workspace to Microsoft Defende
 
 1. Expand the left main menu pane if collapsed and  expand the new **Microsoft Sentinel** menu items. You should see *Threat management*, *Content management* and *Configuration* selections.
 
- >**Note:** Some features may not be available in the public preview, and the user interface may differ from the lab instructions. Also, the syncronization between Microsoft Sentinel and Microsoft Defender XDR may take a few minutes to complete, so you may not see all the installed *Data connectors* for example.
+ >**Note:** The syncronization between Microsoft Sentinel and Microsoft Defender XDR may take a few minutes to complete, so you may not see all the installed *Data connectors* for example.
 
 ## You completed the lab

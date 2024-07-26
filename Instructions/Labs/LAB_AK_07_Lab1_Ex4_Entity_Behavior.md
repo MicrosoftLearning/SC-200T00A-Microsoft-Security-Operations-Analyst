@@ -35,13 +35,13 @@ In this task, you will explore Entity behavior analytics in Microsoft Sentinel.
 
 1. On the popup from *Entity behavior settings*, select **Set UEBA**.
 
-1. On the next page, select  **Set UEBA**.
+1. On the *Settings* tab under *Entity behaviour analytics*, select  **Set UEBA**.
 
 1. Review the three pre-requisite steps to enable entity behavior analytics.
 
 1. Close the *Entity behavior configuration* page by selecting the 'x' at the top right of the page.
 
-1. Scroll down the *Settings* page and read through the *Anomalies* paragraph.
+1. Scroll down the *Settings* tab to the *Anomalies* sectiom and read through the paragraph.
 
 1. Select **Go to analytics in oder to configure the anomalies**.
 
@@ -74,7 +74,7 @@ In this task, you will confirm Anomalies analytics rules are enabled.
 
 1. Set the value to **1** and then select **Next: Submit Feedback**.
 
-1. Select **Next: Review** and then **Save** to update the rule.
+1. Select **Next: Review and Create** and then **Save** to update the rule.
 
     >**Note:** You can upgrade the **Flighting** rule to **Production** by changing the setting on this rule and save the changes. The **Production** rule will become the **Flighting** rule afterwards.
     

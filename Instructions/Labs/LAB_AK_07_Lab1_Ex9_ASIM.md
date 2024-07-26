@@ -64,8 +64,10 @@ In this task, you'll review the Registry Schema parsers that are included with t
 
     >**Hint:** Typing ctrl+f in the code window brings up *Find* and makes searching for *EventID: 4657* much easier.
 
+1. In *Logs* Open a New Query tab.
+
 1. Go back to the *Schema and Filter* blade and now hover the **_Im_RegistryEvent_MicrosoftWindowsEventxxx** *Registry Event ASIM filtering parser for Microsoft Windows Events and Security Events* and then select **Use in editor**.
 
-1. **Run** the ASIM function query. You shouldn't get any result nor errors, it's just for validation purposes.
+1. **Run** the ASIM function query. If you've completed the previous lab exercises you should see results and noerror messages.
 
 ## Proceed to Exercise 10
