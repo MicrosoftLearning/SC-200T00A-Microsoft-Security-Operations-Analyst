@@ -10,7 +10,7 @@ lab:
 
 ![Lab overview.](../Media/SC-200-Lab_Diagrams_Mod3_L1_Ex1.png)
 
-You're a Security Operations Analyst working at a company that is implementing cloud workload protection with Microsoft Defender for Cloud.  In this lab, you'll enable Microsoft Defender for Cloud.
+You're a Security Operations Analyst working at a company that is implementing cloud workload protection with Microsoft Defender for Cloud. In this lab, you enable Microsoft Defender for Cloud.
 
 >**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/SC-200%20Lab%20Simulation%20-%20Enable%20Microsoft%20Defender%20for%20Cloud)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
 
@@ -23,7 +23,7 @@ In this task, you'll set up an Azure Subscription required to complete this lab 
 
 1. Open the Microsoft Edge browser or open a new tab if already open.
 
-1. In the Edge browser, navigate to the Azure portal at (https://portal.azure.com).
+1. In the Microsoft Edge browser, navigate to the Azure portal at <https://portal.azure.com>.
 
 1. In the **Sign in** dialog box, copy, and paste in the tenant Email account for the admin username provided by your lab hosting provider and then select **Next**.
 
@@ -50,7 +50,7 @@ In this task, you'll set up an Azure Subscription required to complete this lab 
 
 ### Task 2: Create a Log Analytics Workspace
 
-In this task, you'll create a Log Analytics workspace for use with Microsoft Defender for Cloud.
+In this task, you create a Log Analytics workspace for use with Azure Monitoring, Microsoft Sentinel and Microsoft Defender for Cloud.
 
 1. In the Search bar of the Azure portal, type *Log Analytics workspaces*, then select the same service name.
 
@@ -89,7 +89,7 @@ In this task, you'll enable and configure Microsoft Defender for Cloud.
 
 1. Select the **Settings & monitoring** tab from the Settings area (next to Save).
 
-1. Review the monitoring extensions. It includes configurations for Virtual Machines, Containers and Storage Accounts. Close the "Settings & monitoring" page by selecting the 'X' on the upper right of the page.
+1. Review the monitoring extensions. It includes configurations for Virtual Machines, Containers, and Storage Accounts. Close the "Settings & monitoring" page by selecting the 'X' on the upper right of the page.
 
 1. Close the settings page by selecting the 'X' on the upper right of the page to go back to the **Environment settings** and select the '>' to the left of your subscription.
 
@@ -104,17 +104,17 @@ In this task, you'll enable and configure Microsoft Defender for Cloud.
 
 ### Task 4: Install Azure Arc on an On-Premises Server
 
-In this task, you'll install Azure Arc on an on-premises server to make onboarding easier.
+In this task, you install Azure Arc on an on-premises server to make onboarding easier.
 
 >**Important:** The next steps are done in a different machine than the one you were previously working. Look for the Virtual Machine name references.
 
-1. Log in to **WINServer** virtual machine as Administrator with the password: **Passw0rd!** if required.  
+1. Log in to **WINServer** virtual machine as Administrator with the password: **Passw0rd!** if necessary.  
 
-1. Open the Microsoft Edge browser and navigate to the Azure portal at https://portal.azure.com.
+1. Open the Microsoft Edge browser and navigate to the Azure portal at <https://portal.azure.com>.
 
 1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
-1. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
+1. In the **Enter password** dialog box, copy, and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
 1. In the Search bar of the Azure portal, type *Arc*, then select **Azure Arc**.
 
@@ -136,7 +136,7 @@ In this task, you'll install Azure Arc on an on-premises server to make onboardi
 
 1. Review the default available tags. Select **Next** to get to the Download and run script tab.
 
-1. Scroll down and select the **Download** button. **Hint:** if your browser blocks the download, take action in the browser to allow it. In Edge Browser, select the ellipsis button (...) if needed and then select **Keep**.
+1. Scroll down and select the **Download** button. **Hint:** if your browser blocks the download, take action in the browser to allow it. In Microsoft Edge Browser, select the ellipsis button (...) if needed and then select **Keep**.
 
 1. Right-click the Windows Start button and select **Windows PowerShell (Admin)**.
 
@@ -156,7 +156,7 @@ In this task, you'll install Azure Arc on an on-premises server to make onboardi
 
 1. Enter **R** to Run once and press enter (this may take a couple minutes).
 
-1. The setup process will open a new Edge browser tab to authenticate the Azure Arc agent. Select your admin account, wait for the message "Authentication complete" and then go back to the Windows PowerShell window.
+1. The setup process opens a new Microsoft Edge browser tab to authenticate the Azure Arc agent. Select your admin account, wait for the message "Authentication complete" and then go back to the Windows PowerShell window.
 
 1. When the installation finishes, go back to the Azure portal page where you downloaded the script and select **Close**. Close the **Add servers with Azure Arc** to go back to the Azure Arc **Machines** page.
 
@@ -167,7 +167,7 @@ In this task, you'll install Azure Arc on an on-premises server to make onboardi
 
 ### Task 5: Protect an On-Premises Server
 
-In this task, you'll manually install the *Azure Monitor Agent* by adding a *Data Collection Rule (DCR)* on the **WINServer** virtual machine.
+In this task, you manually install the *Azure Monitor Agent* by adding a *Data Collection Rule (DCR)* on the **WINServer** virtual machine.
 
 1. Go to **Microsoft Defender for Cloud** and select the **Getting Started** page from the left menu.
 
@@ -175,7 +175,7 @@ In this task, you'll manually install the *Azure Monitor Agent* by adding a *Dat
 
 1. Scroll down and select **Configure** under the *Add non-Azure servers* section.
 
-1. Select **Upgrade** next to the workspace you created earlier. This might take a few minutes, wait until you see the notification *"Microsoft Defender plan for workspace uniquenameDefender were saved successfully!"*.
+1. Select **Upgrade** next to the workspace you created earlier. This might take a few minutes. Wait until you see the notification *"Microsoft Defender plan for workspace uniquenameDefender were saved successfully!"*.
 
 1. Select **+ Add Servers** next to the workspace you created earlier.
 
@@ -189,7 +189,7 @@ In this task, you'll manually install the *Azure Monitor Agent* by adding a *Dat
 
 1. You can keep the default *East US* region or select another preferable location.
 
-1. Select the **Windows** radio button for *Platform Type* and select **Next:Resources**.
+1. Select the **Windows** radio button for *Platform Type* and select **Next: Resources**.
 
 1. In the **Resources** tab, **+ Add resources**.
 
@@ -197,7 +197,7 @@ In this task, you'll manually install the *Azure Monitor Agent* by adding a *Dat
 
     >**Note:** You may need to set the column filter for *Resource type* to *Server-Azure Arc* if **WINServer** is not displayed.
 
-1. Select **Next:Collect and deliver**
+1. Select **Next: Collect and deliver**
 
 1. In the **Collect and deliver** tab, select **+ Add data source**
 
@@ -205,7 +205,7 @@ In this task, you'll manually install the *Azure Monitor Agent* by adding a *Dat
 
     >**Note:** For the purposes of this lab you could select *Windows Event Logs*. These selections can be revised later.
 
-1. Click the **Destination** tab
+1. Select the **Destination** tab
 
 1. Select **Azure Monitor Logs** in the **Destination Type** dropdown
 
@@ -213,7 +213,7 @@ In this task, you'll manually install the *Azure Monitor Agent* by adding a *Dat
 
 1. Select your workspace name **Hint:** *RG-Defender* from the **Account or namespace** dropdown
 
-1.  Select **Add data source** and select **Review + create**
+1. Select **Add data source** and select **Review + create**
 
 1. Select **Create** after *Validation passed* is displayed.
 

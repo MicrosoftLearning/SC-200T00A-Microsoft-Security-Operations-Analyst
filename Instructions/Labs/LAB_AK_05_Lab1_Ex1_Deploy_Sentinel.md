@@ -65,7 +65,7 @@ In this task, you will create a watchlist in Microsoft Sentinel.
 
 1. In Microsoft Sentinel, select the **Watchlist** option under the Configuration area.
 
-1. Select **+ Add new** from the command bar.
+1. Select **+ New** from the command bar.
 
 1. In the Watchlist wizard, enter the following:
 
@@ -108,7 +108,7 @@ In this task, you will create an indicator in Microsoft Sentinel.
 
 1. For Domain, enter a domain name, for example type *contoso.com*.
 
-1. For the *Threat types*, select **+ Add** and type in **malicious-activity**. Select **OK**.
+1. For the *Threat types*, select **+ Add** and type in **malicious-activity**. Select **Apply**.
 
 1. Enter a **Description**
 

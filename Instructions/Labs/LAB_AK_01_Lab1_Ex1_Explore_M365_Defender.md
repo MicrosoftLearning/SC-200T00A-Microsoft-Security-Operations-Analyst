@@ -87,7 +87,7 @@ In this task, you'll assign preset security policies for Exchange Online Protect
 
 1. Read the content under *Review and confirm your changes* and select **Confirm** to apply the changes and then select **Done** to finish.
 
-    >**Note:** If you receive the message *"The URI 'https://outlook.office365.com/psws/service.svc/AntiPhishPolicy' is not valid for PUT operation. The URI must point to a single resource for PUT operations."* just select **OK** and then select **Cancel** to return to the main page. You will see the *Strict protection is on* option enabled.
+    >**Note:** If you receive the message *"The URI '<https://outlook.office365.com/psws/service.svc/AntiPhishPolicy>' is not valid for PUT operation. The URI must point to a single resource for PUT operations."* just select **OK** and then select **Cancel** to return to the main page. You will see the *Strict protection is on* option enabled.
 
 ### Task 3: Preparing the Microsoft Defender XDR workspace
 
@@ -95,14 +95,12 @@ In this task, you'll assign preset security policies for Exchange Online Protect
 
     >**Note:** You may need to scroll all the way to the menu top.
 
-1. On the **Home** portal page, the **Get your SIEM and XDR in one place** banner is displayed.
-
 1. Scroll down the menu items to **Assets** and select **Devices**.
 
 1. The process to deploy the Defender XDR workspace should start and you should see messages saying *loading and Initializing* briefly displayed at the top of the page, and then you're going to see an image of a coffee mug and a message that reads: **Hang on! We're preparing new spaces for your data and connecting them.** It takes approximately 5 minutes to finish. *Leave the page open and make sure it finishes since it's required for the next Lab.*
 
     >**Note:** Disregard pop-up error messages saying *Some of your data cannot be retrieved*. If the message "Hang on! We're preparing new spaces for your data and connecting them" does not appear, or the "Settings > Microsoft Defender XDR > Account" page opens, but you see the message *Failed to load data storage location. Please try again later*, select "Alert service settings" from the "General" menu.
 
-1. When the new space completes successfully, you're going to see the Microsoft Defender XDR General settings for Account, Email notifications, Alert service settings, Permissions and roles and Streaming API. You'll also see **Preview Features** turned on.
+1. When the new workspace initialization completes successfully, the **Home** portal page will display a **Get your SIEM and XDR in one place** banner. And, in **Settings**, the Microsoft Defender XDR General settings for Account, Email notifications, **Preview Features**, Alert service settings, Permissions and roles and Streaming API are now turned on.
 
 ## You have completed the lab

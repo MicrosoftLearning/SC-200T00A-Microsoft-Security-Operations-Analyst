@@ -80,14 +80,14 @@ In this task, you will create a detection for the first attack of the previous e
 
 1. Select **Next: Set rule logic >** button.
 
-1. On the *Set rule logic* tab, the *Rule query* should be populated already with you KQL query, as well as the entities under *Alert enhancement - Entity mapping*.
+1. On the *Set rule logic* tab, the *Rule query* should be populated already with your KQL query.
+
+1. Configure the entities under *Alert enhancement - Entity mapping* using the parameters in the table below.
 
     |Entity|Identifier|Data Field|
     |:----|:----|:----|
     |Account|FullName|AccountCustomEntity|
     |Host|Hostname|HostCustomEntity|
-
-1. If **Hostname** isn't selected for *Host* Entity, select it from the drop-down list and use the parameters in the preceding table to populate the fields.
 
 1. For *Query scheduling* set the following:
 

@@ -23,7 +23,7 @@ In this task, you'll review Regulatory compliance configuration in Microsoft Def
 
 1. Log in to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.  
 
-1. In the Microsoft Edge browser, open the Azure portal at (https://portal.azure.com).
+1. In the Microsoft Edge browser, open the Azure portal at <https://portal.azure.com>.
 
 1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
@@ -39,7 +39,7 @@ In this task, you'll review Regulatory compliance configuration in Microsoft Def
 
     >**Hint:** Select **Expand all** to find your subscription if you have a hierarchy of Management Groups.
 
-1. Under *Settings*, select **Security policy** in the portal menu.
+1. Under *Settings*, select **Security policies** in the portal menu.
 
 1. Scroll down and review the "Security standards" available to you by default.
 
