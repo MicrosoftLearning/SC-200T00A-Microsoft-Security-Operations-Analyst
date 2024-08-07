@@ -26,13 +26,13 @@ In this task, you will perform attacks on the host connected with Azure Arc and 
 
     >**Important:** The lab *SAVE* functionality can cause WINServer to become disconnected from Azure Arc. A reboot will solve the issue.  
 
-1. Select **Start** in Windows. Then **Power**, next **Restart**.
+2. Select **Start** in Windows. Then **Power**, next **Restart**.
 
-1. Follow the instructions to log into WINServer again.
+3. Follow the instructions to log into WINServer again.
 
-1. In the search of the task bar, enter *Command*. Command Prompt will be displayed in the search results. Right-click on the Command Prompt and select **Run as Administrator**. Select **Yes** in the User Account Control window that appears to allow the app to run.
+4. In the search of the task bar, enter *Command*. Command Prompt will be displayed in the search results. Right-click on the Command Prompt and select **Run as Administrator**. Select **Yes** in the User Account Control window that appears to allow the app to run.
 
-1. In the Command Prompt, create a Temp folder in the root directory. Remember to press Enter after the last row:
+5. In the Command Prompt, create a Temp folder in the root directory. Remember to press Enter after the last row:
 
     ```CommandPrompt
     cd \
@@ -40,7 +40,7 @@ In this task, you will perform attacks on the host connected with Azure Arc and 
     cd temp
     ```
 
-1. Copy and run this command to simulate program persistence:
+6. Copy and run this command to simulate program persistence:
 
     ```CommandPrompt
     REG ADD "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "SOC Test" /t REG_SZ /F /D "C:\temp\startup.bat"
@@ -66,7 +66,7 @@ In this task, you will perform attacks on the host connected with Azure Arc and 
     notepad c2.ps1
     ```
 
-1. Select **Yes** to create a new file and copy the following PowerShell script into *c2.ps1*.
+2. Select **Yes** to create a new file and copy the following PowerShell script into *c2.ps1*.
 
     >**Note:** Pasting into the virtual machine file might not show the full script length. Make sure the script matches  the instructions within the *c2.ps1* file.
 
@@ -112,9 +112,9 @@ In this task, you will perform attacks on the host connected with Azure Arc and 
     Until ($TimeNow -ge $RunEnd)
     ```
 
-1. In the Notepad menu, select **File** and then **Save**. 
+2. In the Notepad menu, select **File** and then **Save**. 
 
-1. Go back to the Command Prompt window, enter the following command and press Enter. 
+3. Go back to the Command Prompt window, enter the following command and press Enter. 
 
     >**Note:** You will see DNS resolve errors. This is expected.
 
