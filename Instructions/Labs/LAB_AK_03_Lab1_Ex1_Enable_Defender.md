@@ -21,29 +21,29 @@ In this task, you'll set up an Azure Subscription required to complete this lab 
 
 1. Log in to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.  
 
-2. Open the Microsoft Edge browser or open a new tab if already open.
+1. Open the Microsoft Edge browser or open a new tab if already open.
 
-3. In the Edge browser, navigate to the Azure portal at (https://portal.azure.com).
+1. In the Edge browser, navigate to the Azure portal at (https://portal.azure.com).
 
-4. In the **Sign in** dialog box, copy, and paste in the tenant Email account for the admin username (i.e User1-xxxxxx@ZZZZZZ.onmicrosoft.com) provided by your lab hosting provider and then select **Next**.
+1. In the **Sign in** dialog box, copy, and paste in the tenant Email account for the admin username (i.e User1-xxxxxx@ZZZZZZ.onmicrosoft.com) provided by your lab hosting provider and then select **Next**.
 
-5. In the **Enter password** dialog box, copy, and paste in the admin's tenant password provided by your lab hosting provider and then select **Sign in**.
+1. In the **Enter password** dialog box, copy, and paste in the admin's tenant password provided by your lab hosting provider and then select **Sign in**.
 
-6. In the Search bar of the Azure portal, type *Subscription*, then select **Subscriptions**. 
+1. In the Search bar of the Azure portal, type *Subscription*, then select **Subscriptions**. 
 
-7. Select the *"Azure Pass - Sponsorship"* subscription shown (or equivalent name in your selected language).
+1. Select the *"Azure Pass - Sponsorship"* subscription shown (or equivalent name in your selected language).
 
     >**Note:** If the subscription is not shown, ask your instructor on how to create the Azure subscription with your tenant admin user credentials. **Note:** The subscription creation process could take up to 10 minutes. 
 
-8. Select **Access control (IAM)** and then select **Add role assignment** from the *Grant access to this resource* box.
+1. Select **Access control (IAM)** and then select **Add role assignment** from the *Grant access to this resource* box.
 
-9. Select the **Privileged administrator roles** tab and then select **Owner**. Select **Next** to continue.
+1. Select the **Privileged administrator roles** tab and then select **Owner**. Select **Next** to continue.
 
-10. Under the *Members* tab, select **+ Select members** and select the **MOD Administrator** account and select **Select** to continue.
+1. Under the *Members* tab, select **+ Select members** and select the **MOD Administrator** account and select **Select** to continue.
 
     >**Note:** If the **Conditions** tab displays a red dot, select **Next**, and either select **Not constrained** if presented with the *Delegation* type, or select **Allow user to assign all roles (highly privileged)** if presented with *What user can do*.
 
-11. Select **Review + assign** twice to assign the owner role to your admin account.
+1. Select **Review + assign** twice to assign the owner role to your admin account.
 
 >**Important:** These labs have been designed to use less than USD $10 of Azure services during the class.
 
@@ -54,17 +54,17 @@ In this task, you'll create a Log Analytics workspace for use with Microsoft Def
 
 1. In the Search bar of the Azure portal, type *Log Analytics workspaces*, then select the same service name.
 
-2. Select **+Create** from the command bar.
+1. Select **+Create** from the command bar.
 
-3. Select **Create new** for the Resource group.
+1. Select **Create new** for the Resource group.
 
-4. Enter *RG-Defender* and select **Ok**.
+1. Enter *RG-Defender* and select **Ok**.
 
-5. For the Name, enter something unique like: *uniquenameDefender*.
+1. For the Name, enter something unique like: *uniquenameDefender*.
 
-6. Select **Review + Create**.
+1. Select **Review + Create**.
 
-7. Once the workspace validation has passed, select **Create**. Wait for the new workspace to be provisioned, this may take a few minutes.
+1. Once the workspace validation has passed, select **Create**. Wait for the new workspace to be provisioned, this may take a few minutes.
 
 
 ### Task 3: Enable Microsoft Defender for Cloud
@@ -73,33 +73,33 @@ In this task, you'll enable and configure Microsoft Defender for Cloud.
 
 1. In the Search bar of the Azure portal, type *Defender*, then select **Microsoft Defender for Cloud**.
 
-2. On the **Getting started** page, under the **Upgrade** tab, make sure your subscription is selected, and then select the **Upgrade** button at the bottom of the page. Wait for the *Trial started* notification to appear, it takes about 2 minutes. 
+1. On the **Getting started** page, under the **Upgrade** tab, make sure your subscription is selected, and then select the **Upgrade** button at the bottom of the page. Wait for the *Trial started* notification to appear, it takes about 2 minutes. 
 
     >**Hint:** You can click the bell button on the top bar to review your Azure portal notifications.
 
     >**Note:** If you see the error *"Could not start Azure Defender trial on the subscription"*, continue with the next steps to enable all the Defender plans in Step 5.
 
-3. In the left menu for Microsoft Defender for Cloud, under the Management, select **Environment settings**.
+1. In the left menu for Microsoft Defender for Cloud, under the Management, select **Environment settings**.
 
-4. Select the **"Azure Pass - Sponsorship"** subscription (or equivalent name in your Language). 
+1. Select the **"Azure Pass - Sponsorship"** subscription (or equivalent name in your Language). 
 
-5. Review the Azure resources that are now protected with the Defender for Cloud plans.
+1. Review the Azure resources that are now protected with the Defender for Cloud plans.
 
     >**Important:** If all Defender plans are *Off*, select **Enable all plans**. Select the *$200/month Microsoft Defender for APIs Plan 1* and then select **Save**. Select **Save** at the top of the page and wait for the *"Defender plans (for your) subscription were saved successfully!"* notifications to appear.
 
-6. Select the **Settings & monitoring** tab from the Settings area (next to Save).
+1. Select the **Settings & monitoring** tab from the Settings area (next to Save).
 
-7. Review the monitoring extensions. It includes configurations for Virtual Machines, Containers and Storage Accounts. Close the "Settings & monitoring" page by selecting the 'X' on the upper right of the page.
+1. Review the monitoring extensions. It includes configurations for Virtual Machines, Containers and Storage Accounts. Close the "Settings & monitoring" page by selecting the 'X' on the upper right of the page.
 
-8. Close the settings page by selecting the 'X' on the upper right of the page to go back to the **Environment settings** and select the '>' to the left of your subscription.
+1. Close the settings page by selecting the 'X' on the upper right of the page to go back to the **Environment settings** and select the '>' to the left of your subscription.
 
-9. Select the Log analytics workspace you created earlier *uniquenameDefender* to review the available options and pricing.
+1. Select the Log analytics workspace you created earlier *uniquenameDefender* to review the available options and pricing.
 
-10. Select **Enable all plans** (to the right of Select Defender plan) and then select **Save**. Wait for the *"Microsoft Defender plan for workspace uniquenameDefender were saved successfully!"* notification to appear.
+1. Select **Enable all plans** (to the right of Select Defender plan) and then select **Save**. Wait for the *"Microsoft Defender plan for workspace uniquenameDefender were saved successfully!"* notification to appear.
 
     >**Note:** If the page is not being displayed, refresh your Edge browser and try again.
 
-11. Close the Defender plans page by selecting the 'X' on the upper right of the page to go back to the **Environment settings**
+1. Close the Defender plans page by selecting the 'X' on the upper right of the page to go back to the **Environment settings**
 
 
 ### Task 4: Install Azure Arc on an On-Premises Server
@@ -110,57 +110,57 @@ In this task, you'll install Azure Arc on an on-premises server to make onboardi
 
 1. Log in to **WINServer** virtual machine as Administrator with the password: **Passw0rd!** if required.  
 
-2. Open the Microsoft Edge browser and navigate to the Azure portal at https://portal.azure.com.
+1. Open the Microsoft Edge browser and navigate to the Azure portal at https://portal.azure.com.
 
-3. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
+1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
-4. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
+1. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
-5. In the Search bar of the Azure portal, type *Arc*, then select **Azure Arc**.
+1. In the Search bar of the Azure portal, type *Arc*, then select **Azure Arc**.
 
-6. In the navigation pane under **Azure Arc resources** select **Machines**
+1. In the navigation pane under **Azure Arc resources** select **Machines**
 
-7. Select **+ Add/Create**, then select **Add a machine**.
+1. Select **+ Add/Create**, then select **Add a machine**.
 
-8. Select **Generate script** from the "Add a single server" section.
+1. Select **Generate script** from the "Add a single server" section.
 
     <!--- 1. Read through the *Prerequisites* tab and then select **Next** to continue.--->
 
-9. In the *Add a server with Azure Arc* page, select the Resource group you created earlier under *Project details*. **Hint:** *RG-Defender*
+1. In the *Add a server with Azure Arc* page, select the Resource group you created earlier under *Project details*. **Hint:** *RG-Defender*
 
     >**Note:** If you haven't already created a resource group, open another tab and create the resource group and start over.
 
-10. For *Region*, select **(US) East Us** from the drop-down list.
+1. For *Region*, select **(US) East Us** from the drop-down list.
 
-11. Review the *Server details* and *Connectivity method* options. Keep the default values and select **Next** to get to the Tags tab.
+1. Review the *Server details* and *Connectivity method* options. Keep the default values and select **Next** to get to the Tags tab.
 
-12. Review the default available tags. Select **Next** to get to the Download and run script tab.
+1. Review the default available tags. Select **Next** to get to the Download and run script tab.
 
-13. Scroll down and select the **Download** button. **Hint:** if your browser blocks the download, take action in the browser to allow it. In Edge Browser, select the ellipsis button (...) if needed and then select **Keep**.
+1. Scroll down and select the **Download** button. **Hint:** if your browser blocks the download, take action in the browser to allow it. In Edge Browser, select the ellipsis button (...) if needed and then select **Keep**.
 
-14. Right-click the Windows Start button and select **Windows PowerShell (Admin)**.
+1. Right-click the Windows Start button and select **Windows PowerShell (Admin)**.
 
-15. Enter *Administrator* for "Username" and *Passw0rd!* for "Password" if you get a UAC prompt.
+1. Enter *Administrator* for "Username" and *Passw0rd!* for "Password" if you get a UAC prompt.
 
-16. Enter: cd C:\Users\Administrator\Downloads
+1. Enter: cd C:\Users\Administrator\Downloads
 
     >**Important:** If you do not have this directory, most likely means that you are in the wrong machine. Go back to the beginning of Task 4 and change to WINServer and start over.
 
-17. Type *Set-ExecutionPolicy -ExecutionPolicy Unrestricted* and press enter.
+1. Type *Set-ExecutionPolicy -ExecutionPolicy Unrestricted* and press enter.
 
-18. Enter **A** for Yes to All and press enter.
+1. Enter **A** for Yes to All and press enter.
 
-19. Type *.\OnboardingScript.ps1* and press enter.  
+1. Type *.\OnboardingScript.ps1* and press enter.  
 
     >**Important:** If you get the error *"The term .\OnboardingScript.ps1 is not recognized..."*, make sure you are doing the steps for Task 4 in the WINServer virtual machine. Other issue might be that the name of the file changed due to multiple downloads, search for *".\OnboardingScript (1).ps1"* or other file numbers in the running directory.
 
-20. Enter **R** to Run once and press enter (this may take a couple minutes).
+1. Enter **R** to Run once and press enter (this may take a couple minutes).
 
-21. The setup process will open a new Edge browser tab to authenticate the Azure Arc agent. Select your admin account, wait for the message "Authentication complete" and then go back to the Windows PowerShell window.
+1. The setup process will open a new Edge browser tab to authenticate the Azure Arc agent. Select your admin account, wait for the message "Authentication complete" and then go back to the Windows PowerShell window.
 
-22. When the installation finishes, go back to the Azure portal page where you downloaded the script and select **Close**. Close the **Add servers with Azure Arc** to go back to the Azure Arc **Machines** page.
+1. When the installation finishes, go back to the Azure portal page where you downloaded the script and select **Close**. Close the **Add servers with Azure Arc** to go back to the Azure Arc **Machines** page.
 
-23. Select **Refresh** until WINServer server name appears and the Status is *Connected*.
+1. Select **Refresh** until WINServer server name appears and the Status is *Connected*.
 
     >**Note:** This could take a couple of minutes.
 

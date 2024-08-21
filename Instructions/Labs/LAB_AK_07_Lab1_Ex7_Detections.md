@@ -26,19 +26,19 @@ In this task, you will create a detection for the first attack of the previous e
 
 1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
-2. In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
+1. In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
 
-3. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
+1. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
-4. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
+1. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
-5. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
+1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
-6. Select your Microsoft Sentinel Workspace you created earlier.
+1. Select your Microsoft Sentinel Workspace you created earlier.
 
-7. Select **Logs** from the *General* section.
+1. Select **Logs** from the *General* section.
 
-8. **Run** the following KQL Statement again to recall the tables where we have this data:
+1. **Run** the following KQL Statement again to recall the tables where we have this data:
 
     ```KQL
     search "temp\\startup.bat"
@@ -46,9 +46,9 @@ In this task, you will create a detection for the first attack of the previous e
 
     >**Note:** A result with the event might take up to 5 minutes to appear. Wait until it does. If it does not appear, make sure you have rebooted WINServer as instructed in the previous exercise and that you have completed the Task #3 of the Learning Path 6 Lab, Exercise 2.
 
-9. The table *SecurityEvent* looks to have the data already normalized and easy for us to query. Expand the row to see all the columns related to the record.
+1. The table *SecurityEvent* looks to have the data already normalized and easy for us to query. Expand the row to see all the columns related to the record.
 
-10. From the results, we now know that the Threat Actor is using reg.exe to add keys to the Registry key and the program is located in C:\temp. **Run** the following statement to replace the *search* operator with the *where* operator in our query:
+1. From the results, we now know that the Threat Actor is using reg.exe to add keys to the Registry key and the program is located in C:\temp. **Run** the following statement to replace the *search* operator with the *where* operator in our query:
 
     ```KQL
     SecurityEvent 
@@ -57,7 +57,7 @@ In this task, you will create a detection for the first attack of the previous e
     | where CommandLine startswith "REG" 
     ```
 
-11. It is important to help the Security Operations Center Analyst by providing as much context about the alert as you can. This includes projecting Entities for use in the investigation graph. **Run** the following query:
+1. It is important to help the Security Operations Center Analyst by providing as much context about the alert as you can. This includes projecting Entities for use in the investigation graph. **Run** the following query:
 
     ```KQL
     SecurityEvent 
@@ -67,9 +67,9 @@ In this task, you will create a detection for the first attack of the previous e
     | extend timestamp = TimeGenerated, HostCustomEntity = Computer, AccountCustomEntity = SubjectUserName
     ```
 
-12. Now that you have a good detection rule, in the Logs window, select the **+ New alert rule** in the command bar and then select **Create Microsoft Sentinel alert**. This will create a new Scheduled rule. **Hint:** You might need to select the ellipsis (...) button in the command bar.
+1. Now that you have a good detection rule, in the Logs window, select the **+ New alert rule** in the command bar and then select **Create Microsoft Sentinel alert**. This will create a new Scheduled rule. **Hint:** You might need to select the ellipsis (...) button in the command bar.
 
-13. This starts the "Analytics rule wizard". For the *General* tab type:
+1. This starts the "Analytics rule wizard". For the *General* tab type:
 
     |Setting|Value|
     |---|---|
@@ -78,18 +78,18 @@ In this task, you will create a detection for the first attack of the previous e
     |Tactics|Persistence|
     |Severity|High|
 
-14. Select **Next: Set rule logic >** button.
+1. Select **Next: Set rule logic >** button.
 
-15. On the *Set rule logic* tab, the *Rule query* should be populated already with you KQL query, as well as the entities under *Alert enhancement - Entity mapping*.
+1. On the *Set rule logic* tab, the *Rule query* should be populated already with you KQL query, as well as the entities under *Alert enhancement - Entity mapping*.
 
     |Entity|Identifier|Data Field|
     |:----|:----|:----|
     |Account|FullName|AccountCustomEntity|
     |Host|Hostname|HostCustomEntity|
 
-16. If **Hostname** isn't selected for *Host* Entity, select it from the drop-down list and use the parameters in the preceding table to populate the fields.
+1. If **Hostname** isn't selected for *Host* Entity, select it from the drop-down list and use the parameters in the preceding table to populate the fields.
 
-17. For *Query scheduling* set the following:
+1. For *Query scheduling* set the following:
 
     |Setting|Value|
     |---|---|
@@ -98,13 +98,13 @@ In this task, you will create a detection for the first attack of the previous e
 
     >**Note:** We are purposely generating many incidents for the same data. This enables the Lab to use these alerts.
 
-18. Leave the rest of the options with the defaults. Select **Next: Incident settings>** button.
+1. Leave the rest of the options with the defaults. Select **Next: Incident settings>** button.
 
-19. For the *Incident settings* tab, leave the default values and select **Next: Automated response >** button.
+1. For the *Incident settings* tab, leave the default values and select **Next: Automated response >** button.
 
-20. On the *Automated response* tab under *Automation rules*, select **Add new**.
+1. On the *Automated response* tab under *Automation rules*, select **Add new**.
 
-21. Use the settings in the table to configure the automation rule.
+1. Use the settings in the table to configure the automation rule.
 
     |Setting|Value|
     |:----|:----|
@@ -115,11 +115,11 @@ In this task, you will create a detection for the first attack of the previous e
 
     >**Note:** You have already assigned permissions to the playbook, so it will be available.
 
-22. Select **Apply**
+1. Select **Apply**
 
-23. Select the **Next: Review + create >** button.
+1. Select the **Next: Review + create >** button.
   
-24. On the *Review and create* tab, select the **Save** button to create the new Scheduled Analytics rule.
+1. On the *Review and create* tab, select the **Save** button to create the new Scheduled Analytics rule.
 
 ### Task 2: Privilege Elevation Attack Detection
 
@@ -127,14 +127,14 @@ In this task, you will create a detection for the second attack of the previous 
 
 1. In the Microsoft Sentinel portal, select **Logs** from the General section in case you navigated away from this page.
 
-2. **Run** the following KQL Statement to identify any entry that refers to administrators:
+1. **Run** the following KQL Statement to identify any entry that refers to administrators:
 
     ```KQL
     search "administrators" 
     | summarize count() by $table
     ```
 
-3. The result might show events from different tables, but in our case, we want to investigate the SecurityEvent table. The EventID and Event that we are looking is "4732 - A member was added to a security-enabled local group". With this, we will identify adding a member to a privileged group. **Run** the following KQL query to confirm:
+1. The result might show events from different tables, but in our case, we want to investigate the SecurityEvent table. The EventID and Event that we are looking is "4732 - A member was added to a security-enabled local group". With this, we will identify adding a member to a privileged group. **Run** the following KQL query to confirm:
 
     ```KQL
     SecurityEvent 
@@ -142,7 +142,7 @@ In this task, you will create a detection for the second attack of the previous 
     | where TargetAccount == "Builtin\\Administrators"
     ```
 
-4. Expand the row to see all the columns related to the record. The username of the account added as Administrator does not show. The issue is that instead of storing the username, we have the Security IDentifier (SID). **Run** the following KQL to match the SID to the username that was added to the Administrators group:
+1. Expand the row to see all the columns related to the record. The username of the account added as Administrator does not show. The issue is that instead of storing the username, we have the Security IDentifier (SID). **Run** the following KQL to match the SID to the username that was added to the Administrators group:
 
     ```KQL
     SecurityEvent 
@@ -157,7 +157,7 @@ In this task, you will create a detection for the second attack of the previous 
 
    ![Screenshot](../Media/SC200_sysmon_attack3.png)
 
-5. Extend the row to show the resulting columns, in the last one, we see the name of the added user under the *UserName1* column we *project* within the KQL query. It is important to help the Security Operations Analyst by providing as much context about the alert as you can. This includes projecting Entities for use in the investigation graph. **Run** the following query:
+1. Extend the row to show the resulting columns, in the last one, we see the name of the added user under the *UserName1* column we *project* within the KQL query. It is important to help the Security Operations Analyst by providing as much context about the alert as you can. This includes projecting Entities for use in the investigation graph. **Run** the following query:
 
     ```KQL
     SecurityEvent 
@@ -171,9 +171,9 @@ In this task, you will create a detection for the second attack of the previous 
     | extend timestamp = TimeGenerated, HostCustomEntity = Computer, AccountCustomEntity = UserName1
     ```
 
-6. Now that you have a good detection rule, in the Logs window, select **+ New alert rule** in the command bar and then select **Create Microsoft Sentinel alert**. **Hint:** You might need to select the ellipsis (...) button in the command bar.
+1. Now that you have a good detection rule, in the Logs window, select **+ New alert rule** in the command bar and then select **Create Microsoft Sentinel alert**. **Hint:** You might need to select the ellipsis (...) button in the command bar.
 
-7. This starts the "Analytics rule wizard". For the *General* tab type:
+1. This starts the "Analytics rule wizard". For the *General* tab type:
 
     |Setting|Value|
     |---|---|
@@ -182,18 +182,18 @@ In this task, you will create a detection for the second attack of the previous 
     |Tactics|**Privilege Escalation**|
     |Severity|**High**|
 
-8. Select **Next: Set rule logic >** button.
+1. Select **Next: Set rule logic >** button.
 
-9. On the *Set rule logic* tab, the *Rule query* should be populated already with you KQL query, as well the entities under *Alert enhancement - Entity mapping*.
+1. On the *Set rule logic* tab, the *Rule query* should be populated already with you KQL query, as well the entities under *Alert enhancement - Entity mapping*.
 
     |Entity|Identifier|Data Field|
     |:----|:----|:----|
     |Account|FullName|AccountCustomEntity|
     |Host|Hostname|HostCustomEntity|
 
-10. If **Hostname** isn't selected for *Host* Entity, select it from the drop-down list and use the parameters in the preceding table to populate the fields.
+1. If **Hostname** isn't selected for *Host* Entity, select it from the drop-down list and use the parameters in the preceding table to populate the fields.
 
-11. For *Query scheduling* set the following:
+1. For *Query scheduling* set the following:
 
     |Setting|Value|
     |---|---|
@@ -202,13 +202,13 @@ In this task, you will create a detection for the second attack of the previous 
 
     >**Note:** We are purposely generating many incidents for the same data. This enables the Lab to use these alerts.
 
-12. Leave the rest of the options with the defaults. Select **Next: Incident settings>** button.
+1. Leave the rest of the options with the defaults. Select **Next: Incident settings>** button.
 
-13. For the *Incident settings* tab, leave the default values and select **Next: Automated response >** button.
+1. For the *Incident settings* tab, leave the default values and select **Next: Automated response >** button.
 
-14. On the *Automated response* tab under *Automation rules*, select **Add new**.
+1. On the *Automated response* tab under *Automation rules*, select **Add new**.
 
-15. Use the settings in the table to configure the automation rule.
+1. Use the settings in the table to configure the automation rule.
 
    |Setting|Value|
    |:----|:----|
@@ -219,10 +219,10 @@ In this task, you will create a detection for the second attack of the previous 
 
    >**Note:** You have already assigned permissions to the playbook, so it will be available.
 
-16. Select **Apply**
+1. Select **Apply**
 
-17. Select the **Next: Review and create >** button.
+1. Select the **Next: Review and create >** button.
   
-18. On the *Review and create* tab, select the **Save** button to create the new Scheduled Analytics rule..
+1. On the *Review and create* tab, select the **Save** button to create the new Scheduled Analytics rule..
 
 ## Proceed to Exercise 8

@@ -22,31 +22,31 @@ In this task, you'll create a Microsoft Teams team for use in the lab.
 
 1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
-2. In the Microsoft Edge browser, open a new tab and navigate to the Microsoft Teams portal at (https://teams.microsoft.com).
+1. In the Microsoft Edge browser, open a new tab and navigate to the Microsoft Teams portal at (https://teams.microsoft.com).
 
-3. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
+1. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
-4. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
+1. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
-5. Close any Teams pop-ups that may appear.
+1. Close any Teams pop-ups that may appear.
 
     >**Note:** If prompted to use **New Teams** accept and proceed with the exercise.
 
-6. If not already selected, select **Teams** on the left menu, then at the top, select the ![plus sign icon](../Media/plus-sign-icon-lab.png) icon.
+1. If not already selected, select **Teams** on the left menu, then at the top, select the ![plus sign icon](../Media/plus-sign-icon-lab.png) icon.
 
-7. Select the **Create Team** option.
+1. Select the **Create Team** option.
 
-8. Select the **From scratch** button.
+1. Select the **From scratch** button.
 
-9. Select the **Private** button.
+1. Select the **Private** button.
 
-10. Give the team the name: type **SOC** and select the **Create** button.
+1. Give the team the name: type **SOC** and select the **Create** button.
 
-11. In the Add members to SOC screen, select the **Skip** button. 
+1. In the Add members to SOC screen, select the **Skip** button. 
 
-12. Scroll down the Teams blade to locate the newly created SOC team, select the ellipsis **(...)** on the right side of the name and select **Add channel**.
+1. Scroll down the Teams blade to locate the newly created SOC team, select the ellipsis **(...)** on the right side of the name and select **Add channel**.
 
-13. Enter a channel name of *New Alerts* then select **Standard** on the **Choose a channel type** and select the **Create** button.
+1. Enter a channel name of *New Alerts* then select **Standard** on the **Choose a channel type** and select the **Create** button.
 
 
 ### Task 2: Create a Playbook in Microsoft Sentinel
@@ -57,35 +57,35 @@ In this task, you'll create a Logic App that is used as a Playbook in Microsoft 
 
 <!--- the Azure portal at https://portal.azure.com.
 
-2. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
+1. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
-3. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
+1. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
-4. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
+1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
-5. Select your Microsoft Sentinel Workspace you created earlier.
+1. Select your Microsoft Sentinel Workspace you created earlier.
 
-6. Select the **Community** page under the *Content management* area on the left side of the page.
+1. Select the **Community** page under the *Content management* area on the left side of the page.
 
-7. On the right pane, select the **Onboard community content** link. This opens a new tab in the Microsoft Edge Browser for Microsoft Sentinel GitHub content. **Hint:** You might need to scroll right to see the link. Alternatively, follow this link instead: [Microsoft Sentinel on GitHub](https://github.com/Azure/Azure-Sentinel). --->
+1. On the right pane, select the **Onboard community content** link. This opens a new tab in the Microsoft Edge Browser for Microsoft Sentinel GitHub content. **Hint:** You might need to scroll right to see the link. Alternatively, follow this link instead: [Microsoft Sentinel on GitHub](https://github.com/Azure/Azure-Sentinel). --->
 
-8. Scroll down and select the **Solutions** folder.
+1. Scroll down and select the **Solutions** folder.
 
-9. Next select the **SentinelSOARessentials** folder, then the **Playbooks** folder.
+1. Next select the **SentinelSOARessentials** folder, then the **Playbooks** folder.
 
-10. Select the **Post-Message-Teams** folder.
+1. Select the **Post-Message-Teams** folder.
 
-11. In the readme.md box, scroll down to the *Quick Deployment* section, **Deploy with incident trigger (recommended)** and select the **Deploy to Azure** button.  
+1. In the readme.md box, scroll down to the *Quick Deployment* section, **Deploy with incident trigger (recommended)** and select the **Deploy to Azure** button.  
 
-12. Make sure your Azure Subscription is selected.
+1. Make sure your Azure Subscription is selected.
 
-13. For Resource Group, select **Create New**, enter *RG-Playbooks* and select **OK**.
+1. For Resource Group, select **Create New**, enter *RG-Playbooks* and select **OK**.
 
-14. Leave **(US) East US** as the default value for *Region*.
+1. Leave **(US) East US** as the default value for *Region*.
 
-15. Rename the *Playbook Name* to "PostMessageTeams-OnIncident" and select **Review + create**.
+1. Rename the *Playbook Name* to "PostMessageTeams-OnIncident" and select **Review + create**.
 
-16. Now select **Create**. 
+. Now select **Create**. 
 
     >**Note:** Wait for the deployment to finish before proceeding to the next task.
 
@@ -95,32 +95,32 @@ In this task, you'll update the new playbook you created with the proper connect
 
 1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
-2. Select your Microsoft Sentinel Workspace.
+1. Select your Microsoft Sentinel Workspace.
 
-3. Select **Automation** under the *Configuration* area and then select the **Active Playbooks** tab.
+1. Select **Automation** under the *Configuration* area and then select the **Active Playbooks** tab.
 
-4. Select **Refresh** from the command bar in case you don't see any playbooks. You should see the playbook created from the previous step.
+1. Select **Refresh** from the command bar in case you don't see any playbooks. You should see the playbook created from the previous step.
 
-5. Select the **PostMessageTeams** playbook name.
+1. Select the **PostMessageTeams** playbook name.
 
-6. On the Logic App page for *PostMessageTeams*, in the command menu, select **Edit**.
+1. On the Logic App page for *PostMessageTeams*, in the command menu, select **Edit**.
 
     >**Note:** You may need to refresh the page.
 
-7. Select the *first* block, **Microsoft Sentinel incident**.
+1. Select the *first* block, **Microsoft Sentinel incident**.
 
-8. Select the **Change connection** link.
+1. Select the **Change connection** link.
 
-9. Select **Add new** and select **Sign in**. In the new window, select your Azure subscription admin credentials when prompted. The last line of the block should now read "Connected to your-admin-username".
+1. Select **Add new** and select **Sign in**. In the new window, select your Azure subscription admin credentials when prompted. The last line of the block should now read "Connected to your-admin-username".
 
-10. Now select the *second* block, **Post a message (V3)**.
+1. Now select the *second* block, **Post a message (V3)**.
 
-11. In the Prameters tab, scroll down and select the **Change connection** link and then select **Add new** and **Sign in**. Chose your Azure admin credentials when prompted. The Prameters tab should now read "Connected to your-admin-username".
+1. In the Prameters tab, scroll down and select the **Change connection** link and then select **Add new** and **Sign in**. Chose your Azure admin credentials when prompted. The Prameters tab should now read "Connected to your-admin-username".
 
-12. At the end of the *Team* field, select the **X** to clear the contents. The field is changed to a drop-down with a listing of the available Teams from Microsoft Teams. Select **SOC**.
+1. At the end of the *Team* field, select the **X** to clear the contents. The field is changed to a drop-down with a listing of the available Teams from Microsoft Teams. Select **SOC**.
 
-13. Do the same for the *Channel* field, select the **X** at the end of the field to clear the contents. The field is changed to a drop-down with a listing of the Channels of the SOC Teams. Select **New Alerts**.
+1. Do the same for the *Channel* field, select the **X** at the end of the field to clear the contents. The field is changed to a drop-down with a listing of the Channels of the SOC Teams. Select **New Alerts**.
 
-14. Select **Save** on the command bar. The Logic App will be used in a future lab.
+1. Select **Save** on the command bar. The Logic App will be used in a future lab.
 
 ## Proceed to Exercise 3

@@ -21,19 +21,19 @@ In this task, you will access your Microsoft Sentinel workspace.
 
 1. Log in to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.  
 
-2. Open the Microsoft Edge browser.
+1. Open the Microsoft Edge browser.
 
-3. In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
+1. In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
 
-4. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
+1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
-5. In the **Enter password** dialog box, copy, and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
+1. In the **Enter password** dialog box, copy, and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
-6. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
+1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
-7. Select your Microsoft Sentinel Workspace that you created in the previous lab.
+1. Select your Microsoft Sentinel Workspace that you created in the previous lab.
 
-8. Proceed to the next task.
+1. Proceed to the next task.
 
 ### Task 2: Connect the Microsoft Defender for Cloud data connector
 
@@ -41,23 +41,23 @@ In this task, you will connect the Microsoft Defender for Cloud data connector.
 
 1. In the Microsoft Sentinel left menus, scroll down to the **Content management** section and select **Content Hub**.
 
-2. In the *Content hub*, search for the **Microsoft Defender for Cloud** solution and select it from the list.
+1. In the *Content hub*, search for the **Microsoft Defender for Cloud** solution and select it from the list.
 
-3. On the *Microsoft Defender for Cloud* solution details page select **Install**.
+1. On the *Microsoft Defender for Cloud* solution details page select **Install**.
 
-4. When the installation completes,  search for the **Microsoft Defender for Cloud** solution and select it.
+1. When the installation completes,  search for the **Microsoft Defender for Cloud** solution and select it.
 
-5. On the *Microsoft Defender for Cloud* solution details page select **Manage**
+1. On the *Microsoft Defender for Cloud* solution details page select **Manage**
 
     >**Note:** The *Microsoft Defender for Cloud* solution installs the *Subscription-based Microsoft Defender for Cloud (Legacy)* Data connector, the *Tenant-based Microsoft Defender for Cloud (Preview)* Data connector, and an Analytics rule. The *Tenant-based Microsoft Defender for Cloud (Preview)* Data connector is used when a tenant has multiple subscriptions.
 
-6. Select the *Subscription-based Microsoft Defender for Cloud (Legacy)* Data connector check-box, and select **Open connector page**.
+1. Select the *Subscription-based Microsoft Defender for Cloud (Legacy)* Data connector check-box, and select **Open connector page**.
 
-7. In the *Configuration* section, under the *Instructions* tab, **select** the checkbox for the "Azure Pass - Sponsorship" subscription and slide the **Status** option to the right.
+1. In the *Configuration* section, under the *Instructions* tab, **select** the checkbox for the "Azure Pass - Sponsorship" subscription and slide the **Status** option to the right.
 
     >**Note:** If it switches back to disconnected, please review the Learning Path 3, Exercise 1, Task 1 to assign the proper permissions to your account.
 
-8. The *Status* should be now **Connected** and "Bi-directional sync" should be *Enabled*.
+1. The *Status* should be now **Connected** and "Bi-directional sync" should be *Enabled*.
 
     <!--- 1. Scroll down and under the *Create incidents - Recommended!* area, verify that *Create incidents automatically from all alerts generated in this connected service* is **Enabled**. --->
 
@@ -67,26 +67,26 @@ In this task, you will connect the *Azure Activity* data connector.
 
 1. In the Microsoft Sentinel left menus, scroll down to the *Content management* section and select **Content Hub**.
 
-2. In the *Content hub*, search for the **Azure Activity** solution and select it from the list.
+1. In the *Content hub*, search for the **Azure Activity** solution and select it from the list.
 
-3. On the *Azure Activity* solution page select **Install**.
+1. On the *Azure Activity* solution page select **Install**.
 
-4. When the installation completes select **Manage**
+1. When the installation completes select **Manage**
 
     >**Note:** The *Azure Activity* solution installs the *Azure Activity* Data connector, 12 Analytic rules, 14 Hunting queries and 1 Workbook.
 
-5. Select the *Azure Activity* Data connector and select **Open connector page**.
+1. Select the *Azure Activity* Data connector and select **Open connector page**.
 
-6. In the *Configuration* area under the *Instructions* tab, scroll down to "2. Connect your subscriptions...", and select **Launch Azure Policy Assignment Wizard>**.
+1. In the *Configuration* area under the *Instructions* tab, scroll down to "2. Connect your subscriptions...", and select **Launch Azure Policy Assignment Wizard>**.
 
-7. In the **Basics** tab, select the ellipsis button (...) under **Scope** and select your "Azure Pass - Sponsorship" subscription from the drop-down list and click **Select**.
+1. In the **Basics** tab, select the ellipsis button (...) under **Scope** and select your "Azure Pass - Sponsorship" subscription from the drop-down list and click **Select**.
 
-8. Select the **Parameters** tab, choose your *uniquenameDefender* workspace from the **Primary Log Analytics workspace** drop-down list. This action will apply the subscription configuration to send the information to the Log Analytics workspace.
+1. Select the **Parameters** tab, choose your *uniquenameDefender* workspace from the **Primary Log Analytics workspace** drop-down list. This action will apply the subscription configuration to send the information to the Log Analytics workspace.
 
-9. Select the **Remediation** tab and select the **Create a remediation task** checkbox. This action will apply the policy to existing Azure resources.
+1. Select the **Remediation** tab and select the **Create a remediation task** checkbox. This action will apply the policy to existing Azure resources.
 
-10. Select the **Review + Create** button to review the configuration.
+1. Select the **Review + Create** button to review the configuration.
 
-11. Select **Create** to finish.
+1. Select **Create** to finish.
 
 ## Proceed to Exercise 2

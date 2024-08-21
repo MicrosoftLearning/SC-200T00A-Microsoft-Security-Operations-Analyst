@@ -21,25 +21,25 @@ In this task, you will create a Microsoft Sentinel workspace.
 
 1. Log in to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.  
 
-2. Open the Edge browser.
+1. Open the Edge browser.
 
-3. In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
+1. In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
 
-4. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
+1. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
-5. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
+1. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
-6. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
+1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
-7. Select **+ Create**.
+1. Select **+ Create**.
 
-8. Next, select the Log Analytics workspace you created earlier, for example *uniquenameDefender* and select **Add**. The activation could take a few minutes.
+1. Next, select the Log Analytics workspace you created earlier, for example *uniquenameDefender* and select **Add**. The activation could take a few minutes.
 
     >**Note:** If you do not see a Log Analytics workspace here, please refer to Module 3, Exercise 1, Task 2 to create one.
 
-9. In **Microsoft Sentinel** you should be in the **General** section *News & Guides* and see a notice stating *Microsoft Sentinel free trial activated*. Press the **OK** button.
+1. In **Microsoft Sentinel** you should be in the **General** section *News & Guides* and see a notice stating *Microsoft Sentinel free trial activated*. Press the **OK** button.
 
-10. Navigate around the newly created Microsoft Sentinel workspace to become familiar with the user interface options.
+1. Navigate around the newly created Microsoft Sentinel workspace to become familiar with the user interface options.
 
 ### Task 2: Create a Watchlist
 
@@ -47,9 +47,9 @@ In this task, you will create a watchlist in Microsoft Sentinel.
 
 1. In the search box at the bottom of the Windows 10 screen, enter *Notepad*. Select **Notepad** from the results.
 
-2. Type *Hostname* then enter for a new line.
+1. Type *Hostname* then enter for a new line.
 
-3. From row 2 of the notepad, copy the following hostnames, each one in a different line:
+1. From row 2 of the notepad, copy the following hostnames, each one in a different line:
 
     ```Notepad
     Host1
@@ -59,15 +59,15 @@ In this task, you will create a watchlist in Microsoft Sentinel.
     Host5
     ```
 
-4. From the menu select, **File - Save As**, Name the file *HighValue.csv*, change the file type to **All files(*.*)** and select **Save**. **Hint:** The file can be saved in the *Documents* folder.
+1. From the menu select, **File - Save As**, Name the file *HighValue.csv*, change the file type to **All files(*.*)** and select **Save**. **Hint:** The file can be saved in the *Documents* folder.
 
-5. Close Notepad.
+1. Close Notepad.
 
-6. In Microsoft Sentinel, select the **Watchlist** option under the Configuration area.
+1. In Microsoft Sentinel, select the **Watchlist** option under the Configuration area.
 
-7. Select **+ Add new** from the command bar.
+1. Select **+ Add new** from the command bar.
 
-8. In the Watchlist wizard, enter the following:
+1. In the Watchlist wizard, enter the following:
 
     |General setting|Value|
     |---|---|
@@ -75,25 +75,25 @@ In this task, you will create a watchlist in Microsoft Sentinel.
     |Description|**High Value Hosts**|
     |Watchlist alias|**HighValueHosts**|
 
-9. Select, **Next: Source >**.
+1. Select, **Next: Source >**.
 
-10. Select **Browse for files** under *Upload file* and browse for the *HighValue.csv* file you just created.
+1. Select **Browse for files** under *Upload file* and browse for the *HighValue.csv* file you just created.
 
-11. In the *SearchKey field* select **Hostname**.
+1. In the *SearchKey field* select **Hostname**.
 
-12. Select **Next: Review and Create >**.
+1. Select **Next: Review and Create >**.
 
-13. Review the settings you entered and select **Create**.
+1. Review the settings you entered and select **Create**.
 
-14. The screen returns to the Watchlist page.
+1. The screen returns to the Watchlist page.
 
-15. Select the *HighValueHosts* watchlist and on the right pane, select **View in logs**.
+1. Select the *HighValueHosts* watchlist and on the right pane, select **View in logs**.
 
     >**Important:** It could take up to ten minutes for the watchlist to appear. **Please continue to with the following task and run this command on the next lab**.
     
     >**Note:** You can now use the _GetWatchlist('HighValueHosts') in your own KQL statements to access the list. The column to reference would be *Hostname*.
 
-16. Close the *Logs* window by selecting the 'x' in the top-right and select **OK** to discard the unsaved edits.
+1. Close the *Logs* window by selecting the 'x' in the top-right and select **OK** to discard the unsaved edits.
 
 
 ### Task 3: Create a Threat Indicator
@@ -102,25 +102,25 @@ In this task, you will create an indicator in Microsoft Sentinel.
 
 1. In Microsoft Sentinel, select the **Threat intelligence** option in the Threat management area.
 
-2. Select **+ Add New** from the command bar.
+1. Select **+ Add New** from the command bar.
 
-3. Review the different indicator types available in the *Types* dropdown. Select the **domain-name**. 
+1. Review the different indicator types available in the *Types* dropdown. Select the **domain-name**. 
 
-4. For Domain, enter a domain name, for example type *contoso.com*.
+1. For Domain, enter a domain name, for example type *contoso.com*.
 
-5. For the *Threat types*, select **+ Add** and type in **malicious-activity**. Select **OK**.
+1. For the *Threat types*, select **+ Add** and type in **malicious-activity**. Select **OK**.
 
-6. Enter a **Description**
+1. Enter a **Description**
 
-7. For the **Name**, enter the same value used for the Domain.
+1. For the **Name**, enter the same value used for the Domain.
 
-8. Set the **Valid from** field to today's date.
+1. Set the **Valid from** field to today's date.
 
-9. Select **Apply**.
+1. Select **Apply**.
 
-10. Select the **Logs** option under the General area. You might want to disable the "Always show queries" option and close the *Queries* window to run the KQL statements.
+1. Select the **Logs** option under the General area. You might want to disable the "Always show queries" option and close the *Queries* window to run the KQL statements.
 
-11. Run the following KQL statement.
+1. Run the following KQL statement.
 
     ```KQL
     ThreatIntelligenceIndicator
@@ -128,7 +128,7 @@ In this task, you will create an indicator in Microsoft Sentinel.
 
     >**Note:** It could take up to five minutes for the indicator to appear.
 
-12. Scroll the results to the right to see the DomainName column. You can also run the following KQL statement to just see the DomainName column. 
+1. Scroll the results to the right to see the DomainName column. You can also run the following KQL statement to just see the DomainName column. 
 
     ```KQL
     ThreatIntelligenceIndicator 
@@ -142,17 +142,17 @@ In this task, you will change the retention period for the SecurityEvent table.
 
 1. In Microsoft Sentinel, select the **Settings** option under the *Configuration* area.
 
-2. Select **Workspace settings**.
+1. Select **Workspace settings**.
 
-3. In Log Analytics workspace, select the **Tables** option under the *Settings* area.
+1. In Log Analytics workspace, select the **Tables** option under the *Settings* area.
 
-4. Search and select the table **SecurityEvent**, and then select the ellipsis button (...).
+1. Search and select the table **SecurityEvent**, and then select the ellipsis button (...).
 
-5. Select **Manage Table**.
+1. Select **Manage Table**.
 
-6. Select **180 days** for *Total retention period*. Notice that *Archive period* is only 150 days, since it uses 30 days from the (default) *Interactive retention*.
+1. Select **180 days** for *Total retention period*. Notice that *Archive period* is only 150 days, since it uses 30 days from the (default) *Interactive retention*.
 
-7. Select **Save** to apply the changes.
+1. Select **Save** to apply the changes.
 
 
 ## You have completed the lab.
