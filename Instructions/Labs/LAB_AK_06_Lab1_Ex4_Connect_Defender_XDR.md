@@ -88,4 +88,4 @@ In this task, you'll connect a Microsoft Sentinel workspace to Microsoft Defende
 
  >**Note:** The syncronization between Microsoft Sentinel and Microsoft Defender XDR may take a few minutes to complete, so you may not see all the installed *Data connectors* for example.
 
-## You completed the lab
+## You completed the lab - Please proceed to Learning Path 7 - Lab 1 - Exercise 2 - Create a Playbook in Microsoft Sentinel
