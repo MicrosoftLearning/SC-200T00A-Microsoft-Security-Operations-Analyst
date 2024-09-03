@@ -18,6 +18,8 @@ The labs for this course require both a Microsoft 365 E5 licensed tenant as well
 
 ## Activate Azure Pass
 
+>**Note:** The are certain demos that require an Azure subscription connected to an Microsoft 365 E5 tenant. You can use your own Azure subscription and Microsoft 365 E5 tenant if Azure Passes are not available. Visit the [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program/) website to request membership and set up a free Microsoft 365 E5 developer subsription.
+
 ## Deploy Defender for Endpoint
 
 ### Obtain Your Microsoft 365 Credentials
@@ -36,31 +38,29 @@ In this task, you will perform the initialization of the Microsoft Defender for 
 
 1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
-1. In the Edge browser, go to the Microsoft 365 Defender portal at (https://security.microsoft.com).
+1. In the Edge browser, go to the Microsoft Defender portal at (https://security.microsoft.com).
 
 1. In the **Sign in** dialog box, copy and paste in the tenant Email account for the admin username provided by your lab hosting provider and then select **Next**.
 
 1. In the **Enter password** dialog box, copy and paste in the admin's tenant password provided by your lab hosting provider and then select **Sign in**.
 
-On the **Microsoft 365 Defender** portal, from the navigation menu, select **Home** from the left.
+On the **Microsoft Defender** portal, from the navigation menu, select **Home** from the left.
 
     >**Note:** You may need to scroll all the way to the menu top.
 
-1. On the **Home** portal page, **Welcome to Microsoft 365 Defender** is displayed.
+1. On the **Home** portal page, **Welcome to Microsoft Defender** is displayed.
 
-1. Scroll down through the tiles until you find the tile labeled **Microsoft 365 Defender** with the message, **Turn on Microsoft 365 Defender.**
+1. Scroll down the menu items to **Assets** and select **Devices**.
 
-    >**Hint:** It should be at the bottom right of the tiles.
+1. The process to deploy the Defender XDR workspace should start and you should see messages saying *loading and Initializing* briefly displayed at the top of the page, and then you're going to see an image of a coffee mug and a message that reads: **Hang on! We're preparing new spaces for your data and connecting them.** It takes approximately 5 minutes to finish. *Leave the page open and make sure it finishes since it's required for the next Lab.*
 
-1. Select the button that says **Turn new features on.**
+    >**Note:** Disregard pop-up error messages saying *Some of your data cannot be retrieved*. If the message "Hang on! We're preparing new spaces for your data and connecting them" does not appear, or the "Settings > Microsoft Defender XDR > Account" page opens, but you see the message *Failed to load data storage location. Please try again later*, select "Alert service settings" from the "General" menu.
 
-1. You will see messages saying *loading and Initializing* briefly displayed at the top of the page, and then you're going to see an image of a coffee mug and a message that reads: **Hang on! We're preparing new spaces for your data and connecting them.** It will take approximately 5 minutes to finish. *Leave the page open and make sure it finishes since it is required for the next Lab.*
-
-    >**Note:** If the message "Hang on! We're preparing new spaces for your data and connecting them" does not appear, or the "Settings > Microsoft 365 Defender > Account" page opens, but you see the message "Failed to load data storage location. Please try again later",  select "Alert service settings" from the "General" menu, or go to the navigation menu, scroll down to the "Assets" section and select "Devices".
+1. When the new workspace initialization completes successfully, the **Home** portal page will display a **Get your SIEM and XDR in one place** banner. And, in **Settings**, the Microsoft Defender XDR General settings for Account, Email notifications, **Preview Features**, Alert service settings, Permissions and roles and Streaming API are now turned on.
 
 1. When the new space completes successfully, you are going to see the Microsoft 365 Defender General settings for Account, Email notifications, Alert service settings, Permissions and roles and Streaming API. You will also see **Preview Features** turned on.
 
-**Note**: In the hosted lab environment your data storage location should be selected for you. And, it should be in the appropriate Geography for where this training tenant is being managed. You can still select the Data Retention length, but it is not required.
+    >**Note:**: In the hosted lab environment your data storage location should be selected for you. And, it should be in the appropriate Geography for where this training tenant is being managed. You can still select the Data Retention length, but it is not required.
 
 1. While in **Settings** select **Endpoints**.
 
@@ -395,7 +395,6 @@ In this task, you'll install Azure Arc on an on-premises server to make onboardi
 
     >**Note:** This could take a couple of minutes.
 
-
 ### Task 6: Protect an On-Premises Server
 
 In this task, you'll add an Azure Arc connected, non-Azure Windows virtual machine to Microsoft Sentinel.  
@@ -418,6 +417,37 @@ In this task, you'll add an Azure Arc connected, non-Azure Windows virtual machi
 
 1. Select **Create** after *Validation passed* is displayed.
 
+### Task 7: Connect Defender XDR
+
+In this task, you deploy the Microsoft Defender XDR connector.
+
+1. Login to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
+
+1. In the Microsoft Edge browser, navigate to the Azure portal at (<https://portal.azure.com>).
+
+1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
+
+1. In the **Enter password** dialog box, copy, and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
+
+1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
+
+1. Select your Microsoft Sentinel Workspace you created earlier.
+
+1. In the Microsoft Sentinel left menus, scroll down to the **Content management** section and select **Content Hub**.
+
+1. In the *Content hub*, search for the **Microsoft Defender XDR** solution and select it from the list.
+
+1. On the *Microsoft Defender XDR* solution details page, select **Install**.
+
+1. When the installation completes,  search for the **Microsoft Defender XDR** solution and select it.
+
+1. On the *Microsoft Defender XDR* solution details page, select **Manage**
+
+1. Select the *Microsoft Defender XDR* Data connector check-box, and select **Open connector page**.
+
+1. In the *Configuration* section, under the *Instructions* tab, **deselect** the checkbox for the *Turn off all Microsoft incident creation rules for these products. Recommended*, and select the **Connect incidents & alerts** button.
+
+1. You should see a message that the connection was successful.
 
 <!--- ### Task 4: Connect the Microsoft Defender for Cloud connector.
 
