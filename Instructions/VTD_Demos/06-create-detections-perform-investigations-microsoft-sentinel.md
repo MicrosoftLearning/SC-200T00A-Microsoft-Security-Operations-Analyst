@@ -1,6 +1,8 @@
 # Module 6 Create detections and perform investigations with Microsoft Sentinel
 
-**Note** Successful completion of this demo depends on completing all of the steps in the  [Pre-requisites document](00-prerequisites.md). 
+**Note** Successful completion of this demo depends on completing all of the steps in the  [Pre-requisites document](00-prerequisites.md).
+
+**Important:** This demo is not required for VTD-5002-FY25.
 
 ## Create an NRT query rule
 
