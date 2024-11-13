@@ -28,18 +28,19 @@ In this task, you'll assign preset security policies for Exchange Online Protect
 
 1. In the **More resources** pane, select the **Open** button om the *Microsoft Purview portal* tile.
 
-1. In the Microsoft Purview compliance portal left navigation menu select **Solutiona**.
-1. In the **Solutions** pane, select **Audit**.
+1. When the Microsoft Purview portal opens, a message about the *new Microsoft Purview portal* will appear on the screen. Select the option to agree with the terms of data flow disclosure and the privacy statement, then select **Try now**.
 
-1. If auditing isn't enabled, a banner is displayed prompting you to **Start recording user and admin activity**. Select this banner to enable auditing.
-  
+    ![Screenshot showing the Welcome to the new Microsoft Purview portal screen.](../Media/welcome-purview-portal.png)
+
+1. Select **Solutions** from the left sidebar, then select **Audit**.
+
+1. On the **Search** page, select the blue **Start recording user and admin activity** bar to enable audit logging.
+
+    ![Screenshot showing the Start recording user and admin activity button.](../Media/enable-audit-button.png)
+
+1. Once you select this option, the blue bar should disappear from this page.
+
     >**Note:**
     > It might take 60 minutes to start recording activities.
 
-
-
-More resources
-Microsoft Purview portal
-Solutions
-Audit
-Start auditing
+## You have completed the lab.
