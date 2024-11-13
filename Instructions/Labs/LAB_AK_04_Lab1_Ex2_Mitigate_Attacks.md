@@ -4,7 +4,7 @@ lab:
     module: 'Learning Path 2 - Mitigate threats using Microsoft Defender for Endpoint'
 ---
 
-# Learning Path 2 - Lab 1 - Exercise 2 - Mitigate Attacks with Microsoft Defender for Endpoint
+# Learning Path 4 - Lab 1 - Exercise 2 - Mitigate Attacks with Microsoft Defender for Endpoint
 
 ## Lab scenario
 
@@ -20,7 +20,7 @@ To explore the Defender for Endpoint attack mitigation capabilities, you will ve
 
 In this task, you will confirm that the device is onboarded successfully and create a test alert.
 
-1. If you are not already at the Microsoft Defender XDR portal in your Microsoft Edge browser, go to (https://security.microsoft.com) and login as Admin for your tenant.
+1. If you are not already at the Microsoft Defender XDR portal in your Microsoft Edge browser, go to (<https://security.microsoft.com>) and login as Admin for your tenant.
 
 1. In the left-hand menu, under the **Assets** area, select **Devices**. Please wait until WIN1 appears in the Devices page before you continue. Otherwise, you might need to repeat this task to see the alerts that will be generated later.
 

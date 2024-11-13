@@ -4,7 +4,7 @@ lab:
     module: 'Learning Path 7 - Create detections and perform investigations using Microsoft Sentinel'
 ---
 
-# Learning Path 7 - Lab 1 - Exercise 1 - Modify a Microsoft Security rule
+# Learning Path 9 - Lab 1 - Exercise 1 - Modify a Microsoft Security rule
 
 ## Lab scenario
 

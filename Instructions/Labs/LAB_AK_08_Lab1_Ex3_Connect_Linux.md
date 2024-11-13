@@ -1,10 +1,10 @@
 ---
 lab:
     title: 'Exercise 3 - Connect Linux hosts to Microsoft Sentinel using data connectors'
-    module: 'Learning Path 6 - Connect logs to Microsoft Sentinel'
+    module: 'Learning Path 8 - Connect logs to Microsoft Sentinel'
 ---
 
-# Learning Path 6 - Lab 1 - Exercise 3 - Connect Linux hosts to Microsoft Sentinel using data connectors
+# Learning Path 8 - Lab 1 - Exercise 3 - Connect Linux hosts to Microsoft Sentinel using data connectors
 
 ## Lab scenario
 
@@ -49,7 +49,7 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
 
     >**Note:** The *Common Event Format* solution installs both the *Common Events Format (CEF) via AMA* and the *Common Events Format (CEF)* Data connectors.
 
-1. Select the *Common Events Format (CEF)* Data connector, and select **Open connector page** on the connector information blade.
+1. Select the *Common Events Format (CEF) via AMA* Data connector, and select **Open connector page** on the connector information blade.
 
 1. In the *Configuration* section, under the *Instructions* tab, copy to the clipboard the command shown in *1.2 Install the CEF collector on the Linux machine*.
 

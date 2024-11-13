@@ -77,6 +77,5 @@ In this task, you will confirm Anomalies analytics rules are enabled.
 1. Select **Next: Review and Create** and then **Save** to update the rule.
 
     >**Note:** You can upgrade the **Flighting** rule to **Production** by changing the setting on this rule and save the changes. The **Production** rule will become the **Flighting** rule afterwards.
-    
 
 ## Proceed to Exercise 5
