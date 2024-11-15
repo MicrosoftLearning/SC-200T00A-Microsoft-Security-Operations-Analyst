@@ -12,10 +12,7 @@ lab:
 
 You are a Security Operations Analyst working at a company that is implementing Microsoft Sentinel. You are responsible for performing log data analysis to search for malicious activity, display visualizations, and perform threat hunting. To query log data, you use the Kusto Query Language (KQL).
 
->**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/SC-200%20Lab%20Simulation%20-%20Create%20queries%20for%20Microsoft%20Sentinel%20using%20Kusto%20Query%20Language)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
-
->**Important:** This lab involves entering many KQL scripts into Microsoft Sentinel. The scripts were provided in a file at the beginning of this lab. An alternate location to download them is:  https://github.com/MicrosoftLearning/SC-200T00A-Microsoft-Security-Operations-Analyst/tree/master/Allfiles
-
+>**Important:** This lab involves entering many KQL scripts into Microsoft Sentinel. The scripts were provided in a file at the beginning of this lab. An alternate location to download them is:  <https://github.com/MicrosoftLearning/SC-200T00A-Microsoft-Security-Operations-Analyst/tree/master/Allfiles>
 
 ### Task 1: Access the KQL testing area
 
@@ -23,7 +20,7 @@ In this task, you will access a Log Analytics environment where you can practice
 
 1. Login to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.  
 
-1. Go to https://aka.ms/lademo in your browser. Login with the MOD Administrator credentials.
+1. Go to <https://aka.ms/lademo> in your browser. Login with the MOD Administrator credentials.
 
 1. Close the Log Analytics video pop-up window that appears.
 
@@ -48,7 +45,7 @@ In this task, you will build basic KQL statements.
 
 >**Important:**  For each query, clear the previous statement from the Query Window or open a new Query Window by selecting **+** after the last opened tab (up to 25).
 
-1. The following statement demonstrates the **search** operator, which searches all columns in the table for the value. 
+1. The following statement demonstrates the **search** operator, which searches all columns in the table for the value.
 
 1. Change the *Time range* to **Last 30 minutes** in the Query Window.
 
@@ -97,7 +94,7 @@ In this task, you will build basic KQL statements.
  
     ```
 
-1. The following statement demonstrates the use of the **let** statement to declare *variables*. In the Query Window enter the following statement and select **Run**: 
+1. The following statement demonstrates the use of the **let** statement to declare *variables*. In the Query Window enter the following statement and select **Run**:
 
     ```KQL
     let timeOffset = 1h;
@@ -107,7 +104,7 @@ In this task, you will build basic KQL statements.
     | where EventID != discardEventId
     ```
 
-1. The following statement demonstrates the use of the **let** statement to declare a *dynamic list*. In the Query Window enter the following statement and select **Run**: 
+1. The following statement demonstrates the use of the **let** statement to declare a *dynamic list*. In the Query Window enter the following statement and select **Run**:
 
     ```KQL
     let suspiciousAccounts = datatable(account: string) [
@@ -121,7 +118,7 @@ In this task, you will build basic KQL statements.
 
     >**Tip:** You can re-format the query easily by selecting the ellipsis (...) in the Query window and select **Format query**.
 
-1. The following statement demonstrates the use of the **let** statement to declare a *dynamic table*. In the Query Window enter the following statement and select **Run**: 
+1. The following statement demonstrates the use of the **let** statement to declare a *dynamic table*. In the Query Window enter the following statement and select **Run**:
 
     ```KQL
     let LowActivityAccounts =
@@ -332,7 +329,7 @@ In this task, you will build multi-table KQL statements.
     | summarize count() by Type
     ```
 
-1. The following statement demonstrates the **join** operator, which merges the rows of two tables to form a new table by matching values of the specified column(s) from each table. In the Query Window enter the following statement and select **Run**: 
+1. The following statement demonstrates the **join** operator, which merges the rows of two tables to form a new table by matching values of the specified column(s) from each table. In the Query Window enter the following statement and select **Run**:
 
     ```KQL
     SecurityEvent  
@@ -388,6 +385,8 @@ In this task, you will work with structured and unstructured string fields with 
     | parse EventText with * "resourceName=" resourceName ", totalSlices=" totalSlices:long * "sliceNumber=" sliceNumber:long * "lockTime=" lockTime ", releaseTime=" releaseTime:date "," * "previousLockTime=" previousLockTime:date ")" *  
     | project resourceName, totalSlices, sliceNumber, lockTime, releaseTime, previousLockTime
     ```
+
+>**Important:** The following queries do not currently produce results in the lademo environment used for this lab. Entries in the *SigninLogs* table have been removed. However, the KQL queries demonstrate important concepts and use cases, so please take time to review them.
 
 1. The following statement demonstrates working with **dynamic** fields, which are special since they can take on any value of other data types. In this example, The DeviceDetail field from the SigninLogs table is of type **dynamic**. In the Query Window enter the following statement and select **Run**: 
 
@@ -445,4 +444,4 @@ In this task, you will work with structured and unstructured string fields with 
     PrivLogins  
     ```
 
-## You have completed the lab.
+## You have completed the lab
