@@ -18,9 +18,6 @@ You start by initializing the Defender for Endpoint environment. Next, you onboa
 
 >**Note:** Make sure you have completed successfully Task 3 of the previous module.
 
->**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/SC-200%20Lab%20Simulation%20-%20Deploy%20Microsoft%20Defender%20for%20Endpoint)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
-
-
 ### Task 1: Initialize Microsoft Defender for Endpoint
 
 In this task, you'll perform the initialization of the Microsoft Defender for Endpoint.
@@ -29,7 +26,7 @@ In this task, you'll perform the initialization of the Microsoft Defender for En
 
 1. If you aren't already at the Microsoft Defender XDR portal, start the Microsoft Edge browser.
 
-1. In the Microsoft Edge browser, go to the Defender XDR portal at (https://security.microsoft.com).
+1. In the Microsoft Edge browser, go to the Defender XDR portal at (<https://security.microsoft.com>).
 
 1. In the **Sign in** dialog box, copy, and paste in the tenant Email account for the admin username provided by your lab hosting provider and then select **Next**.
 
@@ -38,6 +35,8 @@ In this task, you'll perform the initialization of the Microsoft Defender for En
     >**Tip:** The admin's tenant email account and password can be found on the Resources tab.
 
 1. On the **Defender XDR** portal, from the navigation menu on the left, scroll down and expand the **System** section and select **Settings**.
+
+    >**Note:** Some versions of the portal may not have the **Settings** option under the **System** section. **Settings** may be grouped with *Reports* and *Audit*.
 
 1. On the Settings page, select **Device discovery**.
 
@@ -65,7 +64,6 @@ In this task, you'll onboard a device to Microsoft Defender for Endpoint using a
     >**Tip:**
     > If your browser blocks the download, take action in the browser to allow it. In the Microsoft Edge Browser, you may see the message, "*WindowsDefenderATPOnboardingPackage.zip isn't commonly downloaded. Make sure you trust...*, select the ellipsis button (...) if needed and then select **Keep**. In Microsoft Edge a second pop-up appears with the message,"*Make sure you trust WindowsDefenderATPOnboardingPackage.zip before you open it*", select **Show more** to expand the selections and select **Keep anyway**.
 
-
 1. Right-click the downloaded zip file and select **Extract All...**, make sure that *Show extracted files when complete* is checked and select **Extract**.
 
 1. Right-click on the extracted file "WindowsDefenderATPLocalOnboardingScript.cmd" and select **Properties**. Select the **Unblock** checkbox in the bottom right of the Properties windows and select **OK**.
@@ -76,14 +74,15 @@ In this task, you'll onboard a device to Microsoft Defender for Endpoint using a
 
 1. Press any key to continue. This closes the Command Prompt window.
 
-
 ### Task 3: Configure Roles
 
 In this task, you'll configure roles for use with device groups.
 
 1. In the Microsoft Defender XDR portal left menu bar, expand the **System** section and select **Settings**, then select **Endpoints**.
 
-1. Select **Roles** under the permissions area.
+    >**Note:** Some versions of the portal may not have the **Settings** option under the **System** section. **Settings** may be grouped with *Reports* and *Audit*.
+
+1. Select **Roles** under the permissions section.
 
 1. Select the **Turn on roles** button.
 
@@ -98,7 +97,7 @@ In this task, you'll configure roles for use with device groups.
 
 1. Select **Next**.
 
-1. Select the **Assigned user groups** tab on the top. Select **sg-IT** and then select **Add selected groups**. Make sure it appears under *Azure AD user groups with this role*.
+1. On the **Assigned user groups** page, type **sg-IT** in the *Filter user groups* form, and then select **Add selected groups**. Make sure it appears under *Azure AD user groups with this role*.
 
 1. Select **Submit** and then **Done** when finished.
 
