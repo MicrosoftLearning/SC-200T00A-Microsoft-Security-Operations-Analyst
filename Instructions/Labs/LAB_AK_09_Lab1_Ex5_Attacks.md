@@ -1,10 +1,10 @@
 ---
 lab:
     title: 'Exercise 5 - Understand Detection Modeling'
-    module: 'Learning Path 7 - Create detections and perform investigations using Microsoft Sentinel'
+    module: 'Learning Path 9 - Create detections and perform investigations using Microsoft Sentinel'
 ---
 
-# Learning Path 7 - Lab 1 - Exercise 5 - Understand Detection Modeling
+# Learning Path 9 - Lab 1 - Exercise 5 - Understand Detection Modeling
 
 ![Lab overview.](../Media/SC-200-Lab_Diagrams_Mod7_L1_Ex5.png)
 ### Task 1: Understand the Attacks
@@ -77,7 +77,6 @@ Do {
 }
 Until ($TimeNow -ge $RunEnd)
 ```
-
 
 ### Task 2: Understand Detection Modeling
 

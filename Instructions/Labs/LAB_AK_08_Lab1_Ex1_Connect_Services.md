@@ -12,9 +12,6 @@ lab:
 
 You are a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You must learn how to connect log data from the many data sources in your organization. The organization has data from Microsoft 365, Microsoft 365 Defender, Azure resources, non-azure virtual machines, etc. You start connecting the Microsoft sources first.
 
->**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/SC-200%20Lab%20Simulation%20-%20Connect%20data%20to%20Microsoft%20Sentinel%20using%20data%20connectors)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
-
-
 ### Task 1: Access the Microsoft Sentinel Workspace
 
 In this task, you will access your Microsoft Sentinel workspace.
@@ -23,7 +20,7 @@ In this task, you will access your Microsoft Sentinel workspace.
 
 1. Open the Microsoft Edge browser.
 
-1. In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
+1. In the Edge browser, navigate to the Azure portal at <https://portal.azure.com>.
 
 1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 

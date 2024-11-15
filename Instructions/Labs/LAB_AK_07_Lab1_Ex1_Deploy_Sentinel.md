@@ -12,9 +12,6 @@ lab:
 
 You are a Security Operations Analyst working at a company that is implementing Microsoft Sentinel. You are responsible for setting up the Microsoft Sentinel environment to meet the company requirement to minimize cost, meet compliance regulations, and provide the most manageable environment for your security team to perform their daily job responsibilities.
 
->**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/SC-200%20Lab%20Simulation%20-%20Configure%20your%20Microsoft%20Sentinel%20environment)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
-
-
 ### Task 1: Initialize the Microsoft Sentinel Workspace
 
 In this task, you will create a Microsoft Sentinel workspace.
@@ -23,7 +20,7 @@ In this task, you will create a Microsoft Sentinel workspace.
 
 1. Open the Edge browser.
 
-1. In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
+1. In the Edge browser, navigate to the Azure portal at <https://portal.azure.com>.
 
 1. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
@@ -154,5 +151,4 @@ In this task, you will change the retention period for the SecurityEvent table.
 
 1. Select **Save** to apply the changes.
 
-
-## You have completed the lab.
+## You have completed the lab

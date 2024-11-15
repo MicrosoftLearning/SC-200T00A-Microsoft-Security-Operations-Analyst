@@ -1,10 +1,10 @@
 ---
 lab:
     title: 'Exercise 10 - Create workbooks'
-    module: 'Learning Path 7 - Create detections and perform investigations using Microsoft Sentinel'
+    module: 'Learning Path 9 - Create detections and perform investigations using Microsoft Sentinel'
 ---
 
-# Learning Path 7 - Lab 1 - Exercise 10 - Create workbooks
+# Learning Path 9 - Lab 1 - Exercise 10 - Create workbooks
 
 ## Lab scenario
 

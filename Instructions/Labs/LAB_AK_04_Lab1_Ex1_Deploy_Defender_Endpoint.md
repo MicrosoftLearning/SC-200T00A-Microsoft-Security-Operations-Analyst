@@ -16,10 +16,7 @@ You start by initializing the Defender for Endpoint environment. Next, you onboa
 
 >**Important:**  The lab Virtual Machines are used through different modules. SAVE your virtual machines. If you exit the lab without saving, you will be required to re-run some configurations again.
 
->**Note:** Make sure you have completed successfully Task 3 of the previous module.
-
->**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/SC-200%20Lab%20Simulation%20-%20Deploy%20Microsoft%20Defender%20for%20Endpoint)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
-
+>**Note:** Make sure you have completed successfully Task 3 of the first module.
 
 ### Task 1: Initialize Microsoft Defender for Endpoint
 
@@ -29,7 +26,7 @@ In this task, you'll perform the initialization of the Microsoft Defender for En
 
 1. If you aren't already at the Microsoft Defender XDR portal, start the Microsoft Edge browser.
 
-1. In the Microsoft Edge browser, go to the Defender XDR portal at (https://security.microsoft.com).
+1. In the Microsoft Edge browser, go to the Defender XDR portal at (<https://security.microsoft.com>).
 
 1. In the **Sign in** dialog box, copy, and paste in the tenant Email account for the admin username provided by your lab hosting provider and then select **Next**.
 
@@ -98,7 +95,7 @@ In this task, you'll configure roles for use with device groups.
 
 1. Select **Next**.
 
-1. Select the **Assigned user groups** tab on the top. Select **sg-IT** and then select **Add selected groups**. Make sure it appears under *Azure AD user groups with this role*.
+1. On the **Assigned user groups** page, type **sg-IT** in the *Filter user groups* form, and then select **Add selected groups**. Make sure it appears under *Azure AD user groups with this role*.
 
 1. Select **Submit** and then **Done** when finished.
 

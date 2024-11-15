@@ -44,7 +44,7 @@ In this task, you'll assign preset security policies for Exchange Online Protect
 
 1. If shown, close the Microsoft Defender XDR quick tour pop-up window. **Hint:** Later in this lab, you'll need to wait until the Defender workspace is provisioned, you can take this time to navigate through the guided tours to learn more about Microsoft Defender XDR.
 
-1. From the navigation menu, under *Email & Collaboration* area, select **Policies & rules**.
+1. From the navigation menu, expand the *Email & Collaboration* section, and select **Policies & rules**.
 
 1. On the *Policy & rules* dashboard, select **Threat policies**.
 

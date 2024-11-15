@@ -43,4 +43,4 @@ In this task, you'll assign preset security policies for Exchange Online Protect
     >**Note:**
     > It might take 60 minutes to start recording activities.
 
-## You have completed the lab.
+## You have completed the lab

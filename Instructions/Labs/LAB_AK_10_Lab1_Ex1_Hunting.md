@@ -1,10 +1,10 @@
 ---
 lab:
     title: 'Exercise 1 - Perform Threat Hunting in Microsoft Sentinel'
-    module: 'Learning Path 8 - Perform threat hunting in Microsoft Sentinel'
+    module: 'Learning Path 10 - Perform threat hunting in Microsoft Sentinel'
 ---
 
-# Learning Path 8 - Lab 1 - Exercise 1 - Perform Threat Hunting in Microsoft Sentinel
+# Learning Path 10 - Lab 1 - Exercise 1 - Perform Threat Hunting in Microsoft Sentinel
 
 ## Lab scenario
 

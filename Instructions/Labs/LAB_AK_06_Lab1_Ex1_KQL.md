@@ -12,8 +12,6 @@ lab:
 
 You are a Security Operations Analyst working at a company that is implementing Microsoft Sentinel. You are responsible for performing log data analysis to search for malicious activity, display visualizations, and perform threat hunting. To query log data, you use the Kusto Query Language (KQL).
 
->**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/SC-200%20Lab%20Simulation%20-%20Create%20queries%20for%20Microsoft%20Sentinel%20using%20Kusto%20Query%20Language)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
-
 >**Important:** This lab involves entering many KQL scripts into Microsoft Sentinel. The scripts were provided in a file at the beginning of this lab. An alternate location to download them is:  https://github.com/MicrosoftLearning/SC-200T00A-Microsoft-Security-Operations-Analyst/tree/master/Allfiles
 
 
@@ -23,11 +21,11 @@ In this task, you will access a Log Analytics environment where you can practice
 
 1. Login to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.  
 
-1. Go to https://aka.ms/lademo in your browser. Login with the MOD Administrator credentials.
+1. In the Microsoft Edge browser, go to <https://aka.ms/lademo> and login with the Administrator credentials.
 
 1. Close the Log Analytics video pop-up window that appears.
 
-1. Explore the available tables listed in the tab on the left side of the screen.
+1. Explore the available tables and other tools listed in the *schema and filter pane* on the left side of the screen.
 
 1. In the query editor, enter the following query and select the **Run** button. You should see the query results in the bottom window.
 
@@ -48,7 +46,7 @@ In this task, you will build basic KQL statements.
 
 >**Important:**  For each query, clear the previous statement from the Query Window or open a new Query Window by selecting **+** after the last opened tab (up to 25).
 
-1. The following statement demonstrates the **search** operator, which searches all columns in the table for the value. 
+1. The following statement demonstrates the **search** operator, which searches all columns in the table for the value.
 
 1. Change the *Time range* to **Last 30 minutes** in the Query Window.
 
@@ -347,7 +345,8 @@ In this task, you will build multi-table KQL statements.
     ) on Account
     ```
 
-    >**Important:** The first table specified in the join is considered the Left table. The table after the **join** operator is the right table. When working with columns from the tables, the $left.Column name and $right.Column name is to distinguish which tables column are referenced. The **join** operator supports a full range of types: flouter, inner, innerunique, leftanti, leftantisemi, leftouter, leftsemi, rightanti, rightantisemi, rightouter, rightsemi.
+    >**Important:**
+     The first table specified in the join is considered the Left table. The table after the **join** operator is the right table. When working with columns from the tables, the $left.Column name and $right.Column name is to distinguish which tables column are referenced. The **join** operator supports a full range of types: flouter, inner, innerunique, leftanti, leftantisemi, leftouter, leftsemi, rightanti, rightantisemi, rightouter, rightsemi.    
 
 1. Change back the **Time range** to **Last 24 hours** in the Query Window.
 
@@ -389,6 +388,8 @@ In this task, you will work with structured and unstructured string fields with 
     | project resourceName, totalSlices, sliceNumber, lockTime, releaseTime, previousLockTime
     ```
 
+>**Important:** The following queries do not currently produce results in the lademo environment used for this lab. Entries in the *SigninLogs* table have been removed. However, the KQL queries demonstrate important concepts and use cases, so please take time to review them.
+
 1. The following statement demonstrates working with **dynamic** fields, which are special since they can take on any value of other data types. In this example, The DeviceDetail field from the SigninLogs table is of type **dynamic**. In the Query Window enter the following statement and select **Run**: 
 
     ```KQL
@@ -396,7 +397,7 @@ In this task, you will work with structured and unstructured string fields with 
     | extend OS = DeviceDetail.operatingSystem
     ```
 
-1. The following example shows how to break out packed fields for SigninLogs. In the Query Window enter the following statement and select **Run**: 
+1. The following example shows how to break out packed fields for SigninLogs. In the Query Window enter the following statement and select **Run**:
 
     ```KQL
     SigninLogs 
