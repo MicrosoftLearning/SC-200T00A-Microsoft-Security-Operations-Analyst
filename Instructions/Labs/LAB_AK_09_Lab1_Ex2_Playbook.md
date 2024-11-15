@@ -44,7 +44,7 @@ In this task, you'll create a Logic App that is used as a Playbook in Microsoft 
 
 1. For Resource Group, select **Create New**, enter **RG-Playbooks** and select OK.
 
-1. Remove  *for* from the name (limit of 64 exceeded).
+1. Remove  **for** from the playbook name (would exceed limit of 64 characters).
 
 1. Select **Connections**.
 
