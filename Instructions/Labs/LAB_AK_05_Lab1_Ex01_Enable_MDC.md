@@ -16,6 +16,18 @@ You're a Security Operations Analyst working at a company that is implementing c
 
 In this task, you create a Log Analytics workspace for use with Azure Monitoring, Microsoft Sentinel and Microsoft Defender for Cloud.
 
+1. Log in to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.  
+
+1. Open the Microsoft Edge browser or open a new tab if already open.
+
+1. In the Microsoft Edge browser, navigate to the Azure portal at <https://portal.azure.com>.
+
+    >**Note:** Select the **Resourses** tab for the *Username* and *Password* for the lab. Use the **<LabUser-XXXXXXXX@LODSPRODXXX.onmicrosoft.com>** account for this lab.
+
+1. In the **Sign in** dialog box, copy, and paste in the tenant Email account for the admin username provided by your lab hosting provider and then select **Next**.
+
+1. In the **Enter password** dialog box, copy, and paste in the admin's tenant password provided by your lab hosting provider and then select **Sign in**.
+
 1. In the Search bar of the Azure portal, type *Log Analytics workspaces*, then select the same service name.
 
 1. Select **+Create** from the command bar.
@@ -33,18 +45,6 @@ In this task, you create a Log Analytics workspace for use with Azure Monitoring
 ### Task 2: Enable Microsoft Defender for Cloud
 
 In this task, you'll enable and configure Microsoft Defender for Cloud.
-
-1. Log in to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.  
-
-1. Open the Microsoft Edge browser or open a new tab if already open.
-
-1. In the Microsoft Edge browser, navigate to the Azure portal at <https://portal.azure.com>.
-
-    >**Note:** Select the **Resourses** tab for the *Username* and *Password* for the lab. Use the **<LabUser-XXXXXXXX@LODSPRODXXX.onmicrosoft.com>** account for this lab.
-
-1. In the **Sign in** dialog box, copy, and paste in the tenant Email account for the admin username provided by your lab hosting provider and then select **Next**.
-
-1. In the **Enter password** dialog box, copy, and paste in the admin's tenant password provided by your lab hosting provider and then select **Sign in**.
 
 1. In the Search bar of the Microsoft Azure portal, type *Defender*, then select **Microsoft Defender for Cloud**.
 
