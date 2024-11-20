@@ -12,8 +12,9 @@ lab:
 
 You are a Security Operations Analyst working at a company that is implementing Microsoft Sentinel. You are responsible for performing log data analysis to search for malicious activity, display visualizations, and perform threat hunting. To query log data, you use the Kusto Query Language (KQL).
 
->**Important:** This lab involves entering many KQL scripts into Microsoft Sentinel. The scripts were provided in a file at the beginning of this lab. An alternate location to download them is:  https://github.com/MicrosoftLearning/SC-200T00A-Microsoft-Security-Operations-Analyst/tree/master/Allfiles
+>**Important:** This lab involves entering many KQL scripts into Microsoft Sentinel. The scripts were provided in a file at the beginning of this lab. An alternate location to download them is:  <https://github.com/MicrosoftLearning/SC-200T00A-Microsoft-Security-Operations-Analyst/tree/master/Allfiles>
 
+### Estimated time to complete this lab: 60 minutes
 
 ### Task 1: Access the KQL testing area
 
@@ -171,7 +172,6 @@ In this task, you will build basic KQL statements.
     | order by StartDir desc, Process asc 
     | project-away ProcessName
     ```
-
 
 ### Task 3: Analyze Results in KQL with the Summarize Operator
 
@@ -346,10 +346,9 @@ In this task, you will build multi-table KQL statements.
     ```
 
     >**Important:**
-     The first table specified in the join is considered the Left table. The table after the **join** operator is the right table. When working with columns from the tables, the $left.Column name and $right.Column name is to distinguish which tables column are referenced. The **join** operator supports a full range of types: flouter, inner, innerunique, leftanti, leftantisemi, leftouter, leftsemi, rightanti, rightantisemi, rightouter, rightsemi.    
+     The first table specified in the join is considered the Left table. The table after the **join** operator is the right table. When working with columns from the tables, the $left.Column name and $right.Column name is to distinguish which tables column are referenced. The **join** operator supports a full range of types: flouter, inner, innerunique, leftanti, leftantisemi, leftouter, leftsemi, rightanti, rightantisemi, rightouter, rightsemi.
 
 1. Change back the **Time range** to **Last 24 hours** in the Query Window.
-
 
 ### Task 6: Work with string data in KQL
 

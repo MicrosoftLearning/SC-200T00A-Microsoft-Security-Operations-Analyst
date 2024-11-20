@@ -18,6 +18,8 @@ You start by initializing the Defender for Endpoint environment. Next, you onboa
 
 >**Note:** Make sure you have completed successfully Task 3 of the first module.
 
+### Estimated time to complete this lab: 30 minutes
+
 ### Task 1: Initialize Microsoft Defender for Endpoint
 
 In this task, you'll perform the initialization of the Microsoft Defender for Endpoint.

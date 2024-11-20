@@ -17,6 +17,8 @@ If you are being provided with a tenant as a part of an instructor-led training 
 Tenants should not be shared or used for purposes outside of hands-on labs. The tenant used in this course is a trial tenant and cannot be used or accessed after the class is over and are not eligible for extension.
 Tenants must not be converted to a paid subscription. Tenants obtained as a part of this course remain the property of Microsoft Corporation and we reserve the right to obtain access and repossess at any time.
 
+### Estimated time to complete this lab: 30 minutes
+
 ### Task 1: Obtain Your Microsoft 365 Credentials
 
 Once you launch the lab, a Microsoft 365 E5 tenant is made available to you to access in the Microsoft virtual Lab environment. This tenant is automatically assigned a unique username and password. You must retrieve this username and password so that you can sign into and Microsoft 365 within the Microsoft Virtual Lab environment.

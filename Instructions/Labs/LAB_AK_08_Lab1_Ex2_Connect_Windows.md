@@ -12,8 +12,7 @@ lab:
 
 You're a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You must learn how to connect log data from the many data sources in your organization. The next source of data is Windows virtual machines inside and outside of Azure, like On-Premises environments or other Public Clouds.
 
->**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/SC-200%20Lab%20Simulation%20-%20Connect%20Windows%20devices%20to%20Microsoft%20Sentinel%20using%20data%20connectors)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
-
+### Estimated time to complete this lab: 30 minutes
 
 ### Task 1: Create a Windows Virtual Machine in Azure
 
@@ -65,7 +64,67 @@ In this task, you'll create a Windows virtual machine in Azure.
 
 1. Select **Create**. Wait for the Resource to be created, this may take a few minutes.
 
-### Task 2: Connect an Azure Windows virtual machine
+### Task 2: Install Azure Arc on an On-Premises Server
+
+In this task, you install Azure Arc on an on-premises server to make onboarding easier.
+
+>**Important:** The next steps are done in a different machine than the one you were previously working. Look for the Virtual Machine name references.
+
+1. Log in to **WINServer** virtual machine as Administrator with the password: **Passw0rd!** if necessary.  
+
+1. Open the Microsoft Edge browser and navigate to the Azure portal at <https://portal.azure.com>.
+
+1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
+
+1. In the **Enter password** dialog box, copy, and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
+
+1. In the Search bar of the Azure portal, type *Arc*, then select **Azure Arc**.
+
+1. In the navigation pane under **Azure Arc resources** select **Machines**
+
+1. Select **+ Add/Create**, then select **Add a machine**.
+
+1. Select **Generate script** from the "Add a single server" section.
+
+1. In the *Add a server with Azure Arc* page, select the Resource group you created earlier under *Project details*. **Hint:** *RG-Defender*
+
+    >**Note:** If you haven't already created a resource group, open another tab and create the resource group and start over.
+
+1. For *Region*, select **(US) East Us** from the drop-down list.
+
+1. Review the *Server details* and *Connectivity method* options. Keep the default values and select **Next** to get to the Tags tab.
+
+1. Review the default available tags. Select **Next** to get to the Download and run script tab.
+
+1. Scroll down and select the **Download** button. **Hint:** if your browser blocks the download, take action in the browser to allow it. In Microsoft Edge Browser, select the ellipsis button (...) if needed and then select **Keep**.
+
+1. Right-click the Windows Start button and select **Windows PowerShell (Admin)**.
+
+1. Enter *Administrator* for "Username" and *Passw0rd!* for "Password" if you get a UAC prompt.
+
+1. Enter: cd C:\Users\Administrator\Downloads
+
+    >**Important:** If you do not have this directory, most likely means that you are in the wrong machine. Go back to the beginning of Task 4 and change to WINServer and start over.
+
+1. Type *Set-ExecutionPolicy -ExecutionPolicy Unrestricted* and press enter.
+
+1. Enter **A** for Yes to All and press enter.
+
+1. Type *.\OnboardingScript.ps1* and press enter.  
+
+    >**Important:** If you get the error *"The term .\OnboardingScript.ps1 is not recognized..."*, make sure you are doing the steps for Task 4 in the WINServer virtual machine. Other issue might be that the name of the file changed due to multiple downloads, search for *".\OnboardingScript (1).ps1"* or other file numbers in the running directory.
+
+1. Enter **R** to Run once and press enter (this may take a couple minutes).
+
+1. The setup process opens a new Microsoft Edge browser tab to authenticate the Azure Arc agent. Select your admin account, wait for the message "Authentication complete" and then go back to the Windows PowerShell window.
+
+1. When the installation finishes, go back to the Azure portal page where you downloaded the script and select **Close**. Close the **Add servers with Azure Arc** to go back to the Azure Arc **Machines** page.
+
+1. Select **Refresh** until WINServer server name appears and the Status is *Connected*.
+
+    >**Note:** This could take a couple of minutes.
+
+### Task 3: Connect an Azure Windows virtual machine
 
 In this task, you'll connect an Azure Windows virtual machine to Microsoft Sentinel.
 
@@ -101,7 +160,7 @@ In this task, you'll connect an Azure Windows virtual machine to Microsoft Senti
 
 1. Wait a minute and then select **Refresh** to see the new data collection rule listed.
 
-### Task 3: Connect a non-Azure Windows Machine
+### Task 4: Connect a non-Azure Windows Machine
 
 In this task, you'll add an Azure Arc connected, non-Azure Windows virtual machine to Microsoft Sentinel.  
 

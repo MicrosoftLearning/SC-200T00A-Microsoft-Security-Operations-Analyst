@@ -10,8 +10,7 @@ lab:
 
 You are a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You already created Scheduled and Microsoft Security Analytics rules.  You need to centralize analytical rules in an Azure DevOps repository.  Then connect Sentinel to the Azure DevOps repository and import the content. 
 
->**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/SC-200%20Lab%20Simulation%20-%20Use%20repositories%20in%20Microsoft%20Sentinel)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
-
+### Estimated time to complete this lab: 30 minutes
 
 ### Task 1: Create and export an analytical rule
 
@@ -41,7 +40,6 @@ In this task, you will enable Entity behavior analytics in Microsoft Sentinel.
 
 1. Review the Azure Resource Manager template and the close it when done.
 
-
 ### Task 2: Create our Azure DevOps environment
 
 In this task, you will create an Azure DevOps repository.
@@ -52,7 +50,11 @@ In this task, you will create an Azure DevOps repository.
 
 1. On the *Get started with Azure DevOps* page, select **Create new organization** and then select **Continue**.
 
-1. On the *Almost done...* page, enter a name for your DevOps organization that you would not want to use in the future, like for example, your tenant prefix. **Hint:** It can be found in the Resources tab of your lab (WWLx...).
+    >**Note:** If this operation doesn't complete after a minute or more, **Refresh (Ctrl-R)** the browser page.
+
+1. On the *Almost done...* page, enter a name for your DevOps organization that you would not want to use in the future, like for example, your tenant prefix.
+
+    >**Hint:** It can be found in the Resources tab of your lab (WWLx...).
 
 1. *Enter characters you see*, then **Continue**.
 
@@ -68,7 +70,7 @@ In this task, you will create an Azure DevOps repository.
 
 1. Select **Upload Files**.
 
-1. Select **Browse** and select the file **Azure_Sentinel_analytic_rule.json** from your *Downloads* directory.
+1. Select **Browse** and select the file **Azure_Sentinel_analytic_rule.json** from your *Downloads* directory, and select **Open**.
 
 1. Select **Commit**.
 
@@ -112,6 +114,5 @@ In this task, you will create an Azure DevOps repository.
 1. Go to the *Repositories (Preview)* page, select **Refresh**. Wait until *Last deployment status* is *Failed*.  
 
     >**Note:** The *Failed* status is due to limitations in the hosted lab environment. You would normally see *Succeeded*. Then you can see in the *Analytics* the imported rule *Rule from Azure DevOps*.
-
 
 ## You have completed the lab.

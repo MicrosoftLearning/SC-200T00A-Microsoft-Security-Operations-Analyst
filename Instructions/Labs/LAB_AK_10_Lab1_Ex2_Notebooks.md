@@ -14,7 +14,7 @@ You're a Security Operations Analyst working at a company that implemented Micro
 - Create data visualizations that aren't provided out-of-the-box in Microsoft Sentinel, such as custom timelines and process trees.
 - Integrate data sources outside of Microsoft Sentinel, such as an on-premises data set.
 
->**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/SC-200%20Lab%20Simulation%20-%20Hunt%20for%20threats%20using%20notebooks%20in%20Microsoft%20Sentinel)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
+### Estimated time to complete this lab: 30 minutes
 
 ### Task 1: Explore Notebooks
 
@@ -22,7 +22,7 @@ In this task, you'll explore using notebooks in Microsoft Sentinel.
 
 1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
-1. In the Microsoft Edge browser, navigate to the Azure portal at https://portal.azure.com.
+1. In the Microsoft Edge browser, navigate to the Azure portal at <https://portal.azure.com>.
 
 1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
@@ -55,7 +55,7 @@ In this task, you'll explore using notebooks in Microsoft Sentinel.
 
 1. Select **Notebooks** again and then select the **Templates** tab from the middle command bar. 
 
-1. Select **A Getting Started Guide for Microsoft Sentinel ML Notebooks**. 
+1. Select **A Getting Started Guide for Microsoft Sentinel ML Notebooks**.
 
 1. On the right pane, scroll down and select **Create from template** button. Review the default options and then select **Save**.
 
@@ -63,7 +63,7 @@ In this task, you'll explore using notebooks in Microsoft Sentinel.
 
 1. Select **Close** if an informational window appears in the Microsoft Azure Machine Learning studio.
 
-1. In the command bar, to the right of the **Compute:**  selector, select the **+** symbol to create a new compute instance. **Hint:** It might be hidden inside the ellipsis icon **(...)**.
+1. In the command bar, to the right of the **Compute:**  selector, select the **+** symbol to *Create Azure ML compute* instance. **Hint:** It might be hidden inside the ellipsis icon **(...)**.
 
      >**Note:** You can have more screen space by hiding the Azure ML Studio left blade by selecting the *Hamburger menu* (3 horizontal lines on the top left), as well as by collapsing the Notebooks Files by selecting the **<<** icon.
 
@@ -85,9 +85,9 @@ In this task, you'll explore using notebooks in Microsoft Sentinel.
 
 1. Run the *Python code* to initialize the cell by selecting the **Run cell** button (Play icon) to the left of the code.
 
-1. It should take approximately 15 seconds to run. Once it's done, review the output messages and disregard any warnings about the Python kernel version. The code ran successfully if *msticpyconfig.yaml* was created in the *utils* folder in the *file explorer* pane on the left.
+1. It should take approximately 15 seconds to run. Once it's done, review the output messages and disregard any warnings about the Python kernel version. The code ran successfully if *msticpyconfig.yaml* was created in the *utils* folder in the *file explorer* pane on the left. It may take another 30 seconds for the file to appear.
 
-    >**Hint:** You can clear the output messages by using *square with an x* icon above the code cell.
+    >**Hint:** You can clear the output messages by selecting the ellipsis (...) on the left of the code window for the *Output menu* and selecting the *Clear output* (square with an x*) icon.
 
 1. Select the **msticpyconfig.yaml** file in the *file explorer* pane on the left to review the contents of the file and then close it.
 

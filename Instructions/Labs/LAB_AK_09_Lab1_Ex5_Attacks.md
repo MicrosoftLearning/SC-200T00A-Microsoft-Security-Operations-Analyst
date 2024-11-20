@@ -6,13 +6,17 @@ lab:
 
 # Learning Path 9 - Lab 1 - Exercise 5 - Understand Detection Modeling
 
+## Lab scenario
+
 ![Lab overview.](../Media/SC-200-Lab_Diagrams_Mod7_L1_Ex5.png)
+
+### Estimated time to complete this lab: 30 minutes
+
 ### Task 1: Understand the Attacks
 
 >**Important: You will perform no actions in this exercise.**  These instructions are only an explanation of the attacks you will perform in the next exercise. Please carefully read this page.
 
-The attack patterns are based on an open-source project: https://github.com/redcanaryco/atomic-red-team
-
+The attack patterns are based on an open-source project: <https://github.com/redcanaryco/atomic-red-team>
 
 #### Attack 1 - Persistence with Registry Key Add
 
@@ -32,7 +36,7 @@ net user theusernametoadd ThePassword1!
 net localgroup administrators theusernametoadd /add
 ```
 
-#### Attack 3 - DNS / C2 
+#### Attack 3 - DNS / C2
 
 Attacker will send a large volume of DNS queries to a command and control (C2) server. The intent is to trigger threshold-based detection on the number of DNS queries either from a single source system or to a single target domain.
 
@@ -83,7 +87,6 @@ Until ($TimeNow -ge $RunEnd)
 The attack-detect configuration cycle used in this lab represents all data sources even though you are only focused on two specific data sources.
 
 To build a detection, you first start with building a KQL statement. Since you will attack a host, you will have representative data to start building the KQL statement.
-
 
 After you have the KQL statement, you create the Analytical Rule.
 
