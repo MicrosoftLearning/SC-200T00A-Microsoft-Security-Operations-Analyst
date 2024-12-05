@@ -34,16 +34,9 @@ In this task, you will explore Entity behavior analytics in Microsoft Sentinel.
 
 1. On the popup from *Entity behavior settings*, select **Set UEBA**.
 
-1. On the *Settings* tab under *Entity behaviour analytics*, select  **Set UEBA**.
+1. On the *Settings* tab under *Entity behaviour analytics*, scroll down the *Anomalies* section and verify read through the paragraph, and verify that the *switch* is *On*.
 
-1. Review the three pre-requisite steps to enable entity behavior analytics.
-
-1. Close the *Entity behavior configuration* page by selecting the 'x' at the top right of the page.
-
-1. Scroll down the *Settings* tab to the *Anomalies* sectiom and read through the paragraph.
-
-1. Select **Go to analytics in oder to configure the anomalies**.
-
+1. Select the **Go to analytics in oder to configure the anomalies** link.
 
 ### Task 2: Confirm and review Anomalies rules
 

@@ -1,16 +1,16 @@
 ---
 lab:
-    title: 'Exercise 1 - Explore use cases in Microsoft Copilot for Security'
-    module: 'Learning Path 2 - Mitigate threats using Microsoft Copilot for Security'
+    title: 'Exercise 1 - Explore use cases in Microsoft Security Copilot'
+    module: 'Learning Path 2 - Mitigate threats using Microsoft Security Copilot'
 ---
 
 # Learning Path 2 - Lab 1 - Exercise 1 - Explore Microsoft Security Copilot
 
 ## Lab scenario
 
-The organization you work for wants to increase the efficiency and capabilities for its security operations analysts, and to improve security outcomes. In support of that objective, the office of the CISO determined that deploying Microsoft Copilot for Security is a key step towards that objective. As a Security administrator for your organization, you're tasked with setting up Copilot.
+The organization you work for wants to increase the efficiency and capabilities for its security operations analysts, and to improve security outcomes. In support of that objective, the office of the CISO determined that deploying Microsoft Security Copilot is a key step towards that objective. As a Security administrator for your organization, you're tasked with setting up Copilot.
 
-In this exercise, you go through the *first run experience* of Microsoft Copilot for Security to provision Copilot with one security compute unit (SCU).
+In this exercise, you go through the *first run experience* of Microsoft Security Copilot to provision Copilot with one security compute unit (SCU).
 
 >**Note:**
 > The environment for this exercise is a simulation generated from the product. As a limited simulation, links on a page may not be enabled and text-based inputs that fall outside of the specified script may not be supported. A pop-up message will display stating, "This feature is not available within the simulation." When this occurs, select OK and continue the exercise steps.  
@@ -20,7 +20,7 @@ In this exercise, you go through the *first run experience* of Microsoft Copilot
 
 ### Task 1: Provision Microsoft Security Copilot
 
-For this exercise, you're logged in as Avery Howard and you have the global administrator role in Microsoft Entra. You'll work in both the Azure portal and Microsoft Copilot for Security.
+For this exercise, you're logged in as Avery Howard and you have the global administrator role in Microsoft Entra. You'll work in both the Azure portal and Microsoft Security Copilot.
 
 This exercise should take approximately **15** minutes to complete.
 
@@ -62,12 +62,12 @@ As an owner to the Azure subscription, you'll now be able to provision capacity 
 
 In this task, you go through the steps of provisioning capacity for your organization. There are two options for provisioning capacity:
 
-- Provision capacity within Copilot for Security (recommended)
+- Provision capacity within Security Copilot (recommended)
 - Provision capacity through Azure
 
-For this exercise, you provision capacity through Copilot for Security. When you first open Copilot for Security, a wizard guides you through the steps in setting up capacity for your organization.
+For this exercise, you provision capacity through Security Copilot. When you first open Security Copilot, a wizard guides you through the steps in setting up capacity for your organization.
 
-1. Open the simulated environment by selecting this link: **[Microsoft Copilot for Security](https://app.highlights.guide/start/6373500f-1f10-4584-a14e-ca0b4aa7399f?link=0&token=40f793d4-2956-40a4-b11a-6b3d4f92557f&azure-portal=true)**.
+1. Open the simulated environment by selecting this link: **[Microsoft Security Copilot](https://app.highlights.guide/start/6373500f-1f10-4584-a14e-ca0b4aa7399f?link=0&token=40f793d4-2956-40a4-b11a-6b3d4f92557f&azure-portal=true)**.
 
 1. Follow the steps in the Wizard, select **Get started**.
 1. On this page, you set up your security capacity. For any of the fields listed below, you can select the information icon for more information.
@@ -93,9 +93,9 @@ For this exercise, you provision capacity through Copilot for Security. When you
 
 The security administrator for your organization provisioned Copilot. Since you're the senior analyst on the team, the administrator added you as a Copilot owner and asked you to familiarize yourself with the solution.
 
-In this exercise, you explore all the key landmarks in the landing page of the standalone experience of Microsoft Copilot for Security.
+In this exercise, you explore all the key landmarks in the landing page of the standalone experience of Microsoft Security Copilot.
 
-You're logged in as Avery Howard and have the Copilot owner role. You'll work in the standalone experience of Microsoft Copilot for Security.
+You're logged in as Avery Howard and have the Copilot owner role. You'll work in the standalone experience of Microsoft Security Copilot.
 
 This exercise should take approximately **15** minutes to complete.
 
@@ -103,7 +103,7 @@ This exercise should take approximately **15** minutes to complete.
 
 In this task, you start your exploration in the home menu.
 
-1. Open the simulated environment by selecting this link: **[Microsoft Copilot for Security](https://app.highlights.guide/start/2cac767e-42c4-4058-afbb-a9413aac461d?link=0&token=40f793d4-2956-40a4-b11a-6b3d4f92557f&azure-portal=true)**.
+1. Open the simulated environment by selecting this link: **[Microsoft Security Copilot](https://app.highlights.guide/start/2cac767e-42c4-4058-afbb-a9413aac461d?link=0&token=40f793d4-2956-40a4-b11a-6b3d4f92557f&azure-portal=true)**.
 
 1. Select the **Menu** icon ![home menu icon](../media/home-menu-icon.png), which is sometimes referred to as the hamburger icon.
 
@@ -120,9 +120,9 @@ In this task, you start your exploration in the home menu.
     1. Select the home menu icon to open the home menu.
 
 1. Select **Owner settings**. These settings are available to you as a Copilot owner. A Copilot contributor does have not access to these menu options.
-    1. For plugins for Copilot for Security, select the drop-down for Who can add and manage their own custom plugins to view the available options.
+    1. For plugins for Security Copilot, select the drop-down for Who can add and manage their own custom plugins to view the available options.
     1. Select drop-down for Who can add and manage custom plugins for everyone in the organization to view the available options. Note, this option is greyed out if Who can add and manage their own custom plugins is set to owners only.
-    1. Select the information icon next to "Allow Copilot for Security to access data from your Microsoft 365 Services."  This setting must be enabled if you want to use the Microsoft Purview plugin. You'll work with this setting in a later exercise.
+    1. Select the information icon next to "Allow Security Copilot to access data from your Microsoft 365 Services."  This setting must be enabled if you want to use the Microsoft Purview plugin. You'll work with this setting in a later exercise.
     1. Select the drop-down for who can upload files to view the available options.
     1. Select the home menu icon to open the home menu.
 
@@ -199,16 +199,16 @@ At the bottom center of the page is the prompt bar. The prompt bar includes the 
 At the bottom right corner of the window is the help icon where you can easily access documentation and find solutions to common problems. From the help icon, you also submit a support case to the Microsoft support team if you have the appropriate role permissions.
 
 1. Select the **Help (?)** icon.
-    1. Select **Documentation**. This selection opens a new browser tab to the Microsoft Copilot for Security documentation. Return to the Microsoft Copilot for Security browser tab.
+    1. Select **Documentation**. This selection opens a new browser tab to the Microsoft Security Copilot documentation. Return to the Microsoft Security Copilot browser tab.
     1. Select **Help**.
-        1. Anyone with access to Copilot for Security can access the self help widget by selecting the help icon then selecting the Help tab. Here you can find solutions to common problems by entering something about the problem.
+        1. Anyone with access to Security Copilot can access the self help widget by selecting the help icon then selecting the Help tab. Here you can find solutions to common problems by entering something about the problem.
         1. Users with a minimum role of Service Support Administrator or Helpdesk Administrator role can submit a support case to the Microsoft support team. If you have this role, a headset icon is displayed. Close the contact support page.
 
 ### Task 3: Explore the Microsoft Security Copilot embedded experience
 
 In this exercise, you investigate an incident in Microsoft Defender XDR. As part of the investigation, you explore the key features of Microsoft Copilot in Microsoft Defender XDR, including incident summary, device summary, script analysis, and more. You also pivot your investigation to the standalone experience and use the pin board as a way to share details of your investigation with your colleagues.
 
-You're logged in as Avery Howard and have the Copilot owner role. You'll work in Microsoft Defender, using the new unified security operations platform, to access the embedded Copilot capabilities in Microsoft Defender XDR. Towards the end of the exercise, you pivot to the standalone experience of Microsoft Copilot for Security.
+You're logged in as Avery Howard and have the Copilot owner role. You'll work in Microsoft Defender, using the new unified security operations platform, to access the embedded Copilot capabilities in Microsoft Defender XDR. Towards the end of the exercise, you pivot to the standalone experience of Microsoft Security Copilot.
 
 This exercise should take approximately **30** minutes to complete.
 
@@ -292,6 +292,6 @@ This task is complex and requires the involvement of more senior analysts. In th
 
 ## Summary and additional resources
 
-In this exercise, you explored the first run experience of Microsoft Copilot for Security, provisioned capacity, and explored the standalone and embedded experiences of Copilot. You investigated an incident in Microsoft Defender XDR, explored the incident summary, device summary, script analysis, and more. You also pivoted your investigation to the standalone experience and used the pin board as a way to share details of your investigation with your colleagues.
+In this exercise, you explored the first run experience of Microsoft Security Copilot, provisioned capacity, and explored the standalone and embedded experiences of Copilot. You investigated an incident in Microsoft Defender XDR, explored the incident summary, device summary, script analysis, and more. You also pivoted your investigation to the standalone experience and used the pin board as a way to share details of your investigation with your colleagues.
 
 To run additional Microsoft Security Copilot use case simulations, browse to [Explore Microsoft Security Copilot use case simulations](/training/modules/security-copilot-exercises/)

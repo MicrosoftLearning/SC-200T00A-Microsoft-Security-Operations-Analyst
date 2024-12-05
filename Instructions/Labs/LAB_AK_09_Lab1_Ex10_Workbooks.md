@@ -22,7 +22,7 @@ In this task, you will explore the Microsoft Sentinel workbook templates.
 
 1. Login to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
-1. In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
+1. In the Edge browser, navigate to the Azure portal at <https://portal.azure.com>.
 
 1. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
@@ -32,20 +32,23 @@ In this task, you will explore the Microsoft Sentinel workbook templates.
 
 1. Select your Microsoft Sentinel Workspace.
 
-1. Select **Workbooks** under the *Threat Management* left blade. The *Templates* tab is selected by default.
+1. Select **Workbooks** under the *Threat Management* section of the navigation menu.
 
-1. Search for and select the **Azure Activity** template workbook. In the right pane, scroll down and select the **View template** button.
+1. Select the *Templates* tab, and search for and select the **Azure Activity** template workbook.
+
+1. In the right details pane, scroll down and select the **View template** button.
 
 1. Review the contents of the workbook. It shows insights of your Azure subscription operations by collecting and analyzing the data from the Activity Log.
 
 1. Close the workbook by selecting the **X** in the top-right corner.
 
-
 ### Task 2: Save and modify a workbook template
 
 In this task, you will save a workbook template and modify it.
 
-1. You should be back in the **Microsoft Sentinel - Workbooks - Templates** tab. Scroll down again and select the **Save** button for the *Azure Activity* workbook. 
+1. You should be back in the **Microsoft Sentinel | Workbooks | Templates** tab with the *Azure Activity* workbook still selected.
+
+1. Scroll down again and select the **Save** button in the *Azure Activity* workbook details pane.
 
 1. Leave **East US** as the default value for *Region* and select **OK**.
 
@@ -53,7 +56,7 @@ In this task, you will save a workbook template and modify it.
 
 1. Select **Edit** in the command bar to enable changes in the workbook.
 
-1. Scroll down to the *Caller activities over time* area, look at the color of the *Activities* column since we are going to format those columns. Select the **Edit** button below the grid.
+1. Scroll down to the *Caller activities* area, look at the color of the *Activities* column since we are going to format those columns. Select the **Edit** button below the grid.
 
 1. Select the **Column Settings** button, it is located to the right of the *Run Query* command bar. **Hint:** This button only appears if there is data from the KQL query.
 
@@ -61,7 +64,7 @@ In this task, you will save a workbook template and modify it.
 
 1. Change the value for *Column renderer* to **Heatmap**. For *Color palette*, scroll down to select **32-color categorical**.
 
-1. Select **Save and Close**. Notice the change in the *Activities* column.
+1. Select **Apply**, then **Save and Close**. Notice the change in the *Activities* column.
 
 1. Select **Done Editing** at the bottom of the query (not the top menu).
 
@@ -110,7 +113,7 @@ In this task, you will create a new workbook with advanced visualizations.
 
 1. Now select **Advanced Settings** tab from the query's command bar.
 
-1. Select **Show refresh icon when not editing** box. 
+1. Select **Show refresh icon when not editing** box.
 
 1. Scroll down and select **Done Editing** on the bottom menu, for the new *Editing query item: query - 2*.
 
@@ -136,7 +139,7 @@ In this task, you will create a new workbook with advanced visualizations.
 
 1. Select the **RG-Defender** resource group if needed and leave other values as default.
 
-1.  Select **Apply** to commit the changes. 
+1. Select **Apply** to commit the changes. 
 
 1. Close the workbook by selecting the **X** at the top-right or select **Workbooks** in the Microsoft Sentinel portal.
 

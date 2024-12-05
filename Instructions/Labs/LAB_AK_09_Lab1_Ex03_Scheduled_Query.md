@@ -8,8 +8,6 @@ lab:
 
 ## Lab scenario
 
-![Lab overview.](../Media/SC-200-Lab_Diagrams_Mod7_L1_Ex3.png)
-
 You're a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You must learn how to detect and mitigate threats using Microsoft Sentinel. After connecting your data sources to Microsoft Sentinel, you create custom analytics rules to help discover threats and anomalous behaviors in your environment.
 
 Analytics rules search for specific events or sets of events across your environment, alert you when certain event thresholds or conditions are reached, generate incidents for your SOC to triage and investigate, and respond to threats with automated tracking and reMediation processes.
@@ -61,9 +59,31 @@ In this task, you create a scheduled query and connect it to the Teams channel y
 
 1. Under the *Event grouping* area, leave the **Group all events into a single alert** as the selected option since we want to generate a single alert every time it runs, as long as the query returns more results than the specified alert threshold above.
 
-1. Select the **Next: Incident settings >** button. 
+1. Select the **Next: Incident settings >** button.
 
 1. On the *Incident settings* tab, review the default options.
+
+1. Select the **Next: Automated response >** button.
+
+1. Select the **Next: Review and create >** button.
+  
+1. Select **Save**.
+
+### Task 2: Edit your new rule
+
+1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
+
+1. Select your Microsoft Sentinel Workspace.
+
+1. Select **Analytics** from the Configuration area.
+
+1. Make sure that you are in the *Active rules* tab in the command bar and select the **New CloudShell User** rule.
+
+1. Right click the rule and select **Edit** from the *pop-up* menu.
+
+1. Select the **Next: Set rule logic >** button.
+
+1. Select the **Next: Incident settings >** button.
 
 1. Select the **Next: Automated response >** button.
 
@@ -73,19 +93,7 @@ In this task, you create a scheduled query and connect it to the Teams channel y
 
 1. For the *Actions*, select **Assign owner**.
 
-1. Then select **Assign to me**. Then select **+ Add action**.
-
-1. Use the *And then* drop-down menus to select **Run playbook**
-
-1. A second drop-down menu appears with an *Information (i)* message regarding playbook permissions and a **Manage playbook permissions link**
-
-    >**Note:** The playbooks will appear grayed out in the drop-down list until permissions are configured.
-
-1. Select the **Manage playbook permissions link**
-
-1. On the *Manage Permissions* page, select the **RG-Playbooks** resource group you created in the previous lab, and select **Apply**.
-
-1. From the drop-down menu, select the playbook **PostMessageTeams-OnIncident** you created in the previous exercise.
+1. Then select **Assign to me**.
 
 1. Select **Apply**
 
@@ -93,8 +101,7 @@ In this task, you create a scheduled query and connect it to the Teams channel y
   
 1. Select **Save**.
 
-
-### Task 2: Test your new rule
+### Task 3: Test your new rule
 
 In this task, you test your new scheduled query rule.
 
@@ -127,8 +134,5 @@ In this task, you test your new scheduled query rule.
     >**Note:** The event that triggers the incident may take 5+ minutes to process. Continue with the next exercise, you will come back to this view later.
 
 1. Select the Incident and review the information in the right blade.
-
-1. Go back to Microsoft Teams by selecting the tab in your Microsoft Edge browser. If you closed it, just open a new tab and type <https://teams.microsoft.com>. Go to the *SOC* Teams, select the *New Alerts* channel and see the message post about the incident.
-
 
 ## Proceed to Exercise 4

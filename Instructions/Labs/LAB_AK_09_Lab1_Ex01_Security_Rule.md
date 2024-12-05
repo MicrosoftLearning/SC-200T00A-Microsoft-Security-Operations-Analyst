@@ -34,16 +34,16 @@ In this task, you will activate a Microsoft Security rule.
 
 1. Select the **+ Create** button from the command bar and select **Microsoft incident creation rule**.
 
-1. Under *Name*, enter **Create incidents based on Defender for Endpoint**.
+1. Under *Name*, enter **Create incidents based on Defender for Cloud**.
 
-1. Scroll down and under *Microsoft security service* select **Microsoft Defender for Endpoint**.
+1. Scroll down and under *Microsoft security service* select **Microsoft Defender for Cloud**.
 
 1. Under *Filter by Severity*, select the *Custom* option and select **Low**, **Medium** and **High** for the severity level and go back to the rule.
 
 1. Select the **Next: Automated response** button and then select the **Next: Review and create** button.
 
-1. Review the changes made and select the **Save** button. The Analytics rule will be saved and incidents will be created if there is an Alert in Defender for Endpoint.
+1. Review the changes made and select the **Save** button. The Analytics rule will be saved and incidents will be created if there is an Alert in Defender for Cloud.
 
-1. You will now have the one *Fusion* and two *Microsoft Security* alert types.
+1. You will now have the one *Fusion* and one *Microsoft Security* alert types.
 
 ## Proceed to Exercise 2

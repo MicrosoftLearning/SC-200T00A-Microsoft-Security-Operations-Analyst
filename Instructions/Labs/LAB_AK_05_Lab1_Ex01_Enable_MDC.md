@@ -10,41 +10,21 @@ lab:
 
 You're a Security Operations Analyst working at a company that is implementing cloud workload protections with Microsoft Defender for Cloud. In this lab, you enable Microsoft Defender for Cloud.
 
-### Estimated time to complete this lab: 20 minutes
+### Estimated time to complete this lab: 15 minutes
 
-### Task 1: Create a Log Analytics Workspace
+### Task 1: Enable Microsoft Defender for Cloud
 
-In this task, you create a Log Analytics workspace for use with Azure Monitoring, Microsoft Sentinel and Microsoft Defender for Cloud.
+In this task, you'll enable and configure Microsoft Defender for Cloud.
 
-1. Log in to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.  
-
-1. Open the Microsoft Edge browser or open a new tab if already open.
+1. Log in to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.
 
 1. In the Microsoft Edge browser, navigate to the Azure portal at <https://portal.azure.com>.
-
-    >**Note:** Select the **Resourses** tab for the *Username* and *Password* for the lab. Use the **<LabUser-XXXXXXXX@LODSPRODXXX.onmicrosoft.com>** account for this lab.
+  
+    >**Note:** Select the **Resources** tab for the *Username* and *Password* for the lab. Use the **<LabUser-XXXXXXXX@LODSPRODXXX.onmicrosoft.com>** account for this lab.
 
 1. In the **Sign in** dialog box, copy, and paste in the tenant Email account for the admin username provided by your lab hosting provider and then select **Next**.
 
 1. In the **Enter password** dialog box, copy, and paste in the admin's tenant password provided by your lab hosting provider and then select **Sign in**.
-
-1. In the Search bar of the Azure portal, type *Log Analytics workspaces*, then select the same service name.
-
-1. Select **+Create** from the command bar.
-
-1. Select **Create new** for the Resource group.
-
-1. Enter *RG-Defender* and select **Ok**.
-
-1. For the Name, enter something unique like: *uniquenameDefender*.
-
-1. Select **Review + Create**.
-
-1. Once the workspace validation has passed, select **Create**. Wait for the new workspace to be provisioned, this may take a few minutes.
-
-### Task 2: Enable Microsoft Defender for Cloud
-
-In this task, you'll enable and configure Microsoft Defender for Cloud.
 
 1. In the Search bar of the Microsoft Azure portal, type *Defender*, then select **Microsoft Defender for Cloud**.
 

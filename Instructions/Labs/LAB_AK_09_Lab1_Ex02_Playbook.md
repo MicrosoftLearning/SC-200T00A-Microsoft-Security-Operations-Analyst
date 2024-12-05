@@ -36,7 +36,7 @@ In this task, you'll create a Logic App that is used as a Playbook in Microsoft 
 
 1. Once installed, select Manage.
 
-1. Find the **Defender_XDR_Ransomware_Playbook_for_SecOps_Tasks** playbook and select it.
+1. Find the **Defender_XDR_Ransomware_Playbook_for_SecOps-Tasks** playbook and select the name.
 
 1. Select the **Incident tasks - Microsoft Defender XDR Ransomware Playbook for SecOps** template.
 
@@ -98,7 +98,9 @@ In this task, you’ll update the new playbook you created with the proper conne
 
 1. From the drop down, select Tactics.
 
-1. Select the following:
+1. Select the **Contains** operator from the dropdown.
+
+1. Select the following tactics:
     - Reconnaissance
     - Execution
     - Persistence
@@ -108,13 +110,14 @@ In this task, you’ll update the new playbook you created with the proper conne
 
 1. Under Actions, select Run Playbook.
 
-1. Select Manage playbook permissions.
+1. Select the link to **Manage playbook permissions**.
 
-1. Find the resource group, select it, and select apply.
+1. On the *Manage Permissions* page, select the **RG-Playbooks** resource group you created in the previous lab, and select **Apply**.
 
 1. From the drop down list, select the **Defender_XDR_Ransomware_Playbook_SecOps_Tasks** playbook.
 
-1. Select Apply at the bottom.
+1. Select **Apply** at the bottom.
+
 From here, depending on your role, you will either continue doing more architect exercises or you will pivot to the analyst exercises.
 
 ## Proceed to Exercise 3
