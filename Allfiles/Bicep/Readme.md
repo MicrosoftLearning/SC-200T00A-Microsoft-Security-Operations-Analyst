@@ -6,15 +6,15 @@ Use to pre-install Microsoft Sentinel and Content Hub Solutions from WIN1.
 
 1. Create a *Resource Group* for the deployment.
 
-```azurecli
- az group create --location eastus --resource-group defender-RG
-```
+    ```azurecli
+     az group create --location eastus --resource-group defender-RG
+    ```
 
 1. Deploy the Bicep template.
 
-```azurecli
-az deployment group create --name testDeploy --template-file .\sentinel.bicep --parameters .\sentinelParams.bicepparam --resource-group defender-RG
-```
+    ```azurecli
+    az deployment group create --name testDeploy --template-file .\sentinel.bicep --parameters .\sentinelParams.bicepparam --resource-group defender-RG
+    ```
 
 ### Additional Information
 
