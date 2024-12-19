@@ -12,6 +12,8 @@ You're a Security Operations Analyst working at a company that implemented Micro
 
 With a playbook, you can help automate and orchestrate your threat response, integrate with other systems both internal and external, and can be set to run automatically in response to specific alerts or incidents, when triggered by an analytics rule or an automation rule, respectively.
 
+>**Important:** The lab exercises for Learning Path #9 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
+
 ### Task 1: Create a Playbook in Microsoft Sentinel
 
 In this task, you'll create a Logic App that is used as a Playbook in Microsoft Sentinel.

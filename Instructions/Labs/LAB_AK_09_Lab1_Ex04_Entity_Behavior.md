@@ -12,6 +12,8 @@ You are a Security Operations Analyst working at a company that implemented Micr
 
 You need to configure Microsoft Sentinel to perform Entity Behavior Analytics to discover anomalies and provide entity analytic pages.
 
+>**Important:** The lab exercises for Learning Path #9 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
+
 ### Estimated time to complete this lab: 15 minutes
 
 ### Task 1: Explore Entity Behavior
@@ -28,7 +30,7 @@ In this task, you will explore Entity behavior analytics in Microsoft Sentinel.
 
 1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
-1. Select your Microsoft Sentinel Workspace you created earlier.
+1. Select your Microsoft Sentinel Workspace.
 
 1. Select the **Entity behavior** page.
 

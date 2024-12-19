@@ -12,9 +12,9 @@ lab:
 
 You are a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You have received threat intelligence about a Command and Control (C2 or C&C) technique. You need to perform a hunt and watch for the threat.
 
->**Important:** The log data used in the lab was created in the previous module. See **Attack 3** on WIN1 server in Exercise 5.
+>**Important:** The lab exercises for Learning Path #10 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
 
->**Note:** Because you already experienced the process of exploring data in a previous module, this lab provides a KQL statement to start with.
+>**Note:** The log data created in the previous Learning Path *Perform Attacks* lab exercises will not be available in this lab without rerunning the **Attack 3** on WIN1 server in Exercise 5.
 
 ### Estimated time to complete this lab: 30 minutes
 
@@ -34,7 +34,7 @@ In this task, you will create a hunting query, bookmark a result, and create a L
 
 1. Select your Microsoft Sentinel Workspace.
 
-1. Select **Logs** 
+1. Select **Logs**
 
 1. Enter the following KQL Statement in the *New Query 1* space:
 
@@ -126,7 +126,6 @@ In this task, you will create a hunting query, bookmark a result, and create a L
 
 1. Scroll left to notice that the *Severity* column is now populated with the incident's data.
 
-
 ### Task 2: Create a NRT query rule
 
 In this task, instead of using a LiveStream, you will create a NRT analytics query rule. NRT rules run every minute and lookback one minute. The benefit to NRT rules are they can use the alert and incident creation logic.
@@ -182,7 +181,7 @@ In this task, instead of using a LiveStream, you will create a NRT analytics que
 
 In this task, you will use a Search job to look for a C2.
 
->**Note:** The *Restore* operation incurs costs that can deplete your Azure Pass subscription credits. For that reason, you will not be performing the restore operation in this lab. However, you can follow the steps below to perform the restore operation in your own environment.
+<!--- >**Note:** The *Restore* operation incurs costs that can deplete your Azure Pass subscription credits. For that reason, you will not be performing the restore operation in this lab. However, you can follow the steps below to perform the restore operation in your own environment. --->
 
 1. Select the **Search** page under *General* in Microsoft Sentinel.
 
@@ -203,5 +202,58 @@ In this task, you will use a Search job to look for a C2.
 1. Review the options available and then select the **Cancel** button.
 
     >**Note:** If you were running the job, the restore would run for a couple of minutes and your data would be available in a new table.
+
+### Task 4: Create a hunt that combines multiple queries into a MITRE tactic
+
+1. The MITRE ATT&CK map helps you identify specific gaps in your detection coverage. Use predefined hunting queries for specific MITRE ATT&CK techniques as a starting point to develop new detection logic.
+
+1. In Microsoft Sentinel, expand **Threat management** from the left navigation menus.
+
+1. Select **MITRE ATT&CK (Preview)**.
+
+1. Unselect items in the *Active rules* drop-down menu.
+
+1. Select **Hunting queries** in the *Simulated rules* filter to see which techniques have hunting queries associated with them.
+
+1. Select the card for **Account Manipulation**.
+
+1. In the details pane locate *Simulated coverage* and select the **View** link next to *Hunting queries*.
+
+1. This link takes you to a filtered view of the Queries tab on the Hunting page based on the technique you selected.
+
+1. Select all the queries for that technique by selecting the box near the top of the list on the left.
+
+1. Select the **Hunt actions** drop down menu near the middle of the screen above the filters.
+
+1. Select **Create new hunt**. All the queries you selected are cloned for this new hunt.
+
+1. Fill out the hunt name and optional fields. The description is a good place to verbalize your hypothesis. The Hypothesis pull down menu is where you set the status of your working hypothesis.
+
+1. Select **Create** to get started.
+
+1. Select the **Hunts (Preview)** tab to view your new hunt.
+
+1. Select the hunt link by name to view the details and take actions.
+
+1. View the details pane with the Hunt name, Description, Content, Last update time, and Creation time.
+
+1. Select all of the queries by using the box next to the *Query* column.
+
+1. Either select **Run selected queries** or uncheck the selected rows and *right click* and **Run** a single query.
+
+1. You can also select a single query and select **View results** in the details pane.
+
+1. Review which queries returned results.
+
+1. Based on the results, determine if there is enough strong evidence to validate the hypothesis. If there isn’t, close the Hunt and mark it as invalidated.
+
+1. Alternative Steps:
+    - Go to Microsoft Sentinel.
+    - Expand Threat management.
+    - Choose Hunting.
+    - Select ‘add filter’.
+    - Set the filter to tactics:persistence.
+    - Add another filter.
+    - Set the second filter to have techniques: T1098.
 
 ## Proceed to Exercise 2

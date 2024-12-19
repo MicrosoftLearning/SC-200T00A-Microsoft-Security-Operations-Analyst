@@ -14,6 +14,8 @@ You are a Security Operations Analyst working at a company that implemented Micr
 
 Microsoft Sentinel allows you to create custom workbooks across your data, and also comes with built-in workbook templates to allow you to quickly gain insights across your data as soon as you connect a data source.
 
+>**Important:** The lab exercises for Learning Path #9 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
+
 ### Estimated time to complete this lab: 30 minutes
 
 ### Task 1: Explore workbook templates

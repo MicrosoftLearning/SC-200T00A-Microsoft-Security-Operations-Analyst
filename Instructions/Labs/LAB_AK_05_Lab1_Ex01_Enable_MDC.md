@@ -10,6 +10,8 @@ lab:
 
 You're a Security Operations Analyst working at a company that is implementing cloud workload protections with Microsoft Defender for Cloud. In this lab, you enable Microsoft Defender for Cloud.
 
+>**Important:** The lab exercises for Learning Path #5 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
+
 ### Estimated time to complete this lab: 15 minutes
 
 ### Task 1: Enable Microsoft Defender for Cloud
@@ -28,7 +30,9 @@ In this task, you'll enable and configure Microsoft Defender for Cloud.
 
 1. In the Search bar of the Microsoft Azure portal, type *Defender*, then select **Microsoft Defender for Cloud**.
 
-1. In the left navigation menu for Microsoft Defender for Cloud, expand the Management section , and select **Environment settings**.
+1. In the left navigation menu for Microsoft Defender for Cloud, expand the *Management* section , and select **Environment settings**.
+
+1. Select the **Expand all** button to view all subscriptions and resources.
 
 1. Select the **MOC Subscription-lodxxxxxxxx** subscription (or equivalent name in your Language).
 
@@ -38,17 +42,19 @@ In this task, you'll enable and configure Microsoft Defender for Cloud.
 
 1. Select the **Settings & monitoring** tab from the Settings area (next to Save).
 
-1. Review the monitoring extensions. It includes configurations for Virtual Machines, Containers, and Storage Accounts. Close the "Settings & monitoring" page by selecting the 'X' on the upper right of the page.
+1. Review the monitoring extensions. It includes configurations for Virtual Machines, Containers, and Storage Accounts.
 
-1. Close the settings page by selecting the 'X' on the upper right of the page to go back to the **Environment settings** and select the '>' to the left of your subscription.
+1. Select the **Continue** button, or cClose the "Settings & monitoring" page by selecting the 'X' on the upper right of the page.
 
-1. Select the Log analytics workspace you created earlier *uniquenameDefender* to review the available options and pricing.
+1. Close the settings page by selecting the 'X' on the upper right of the page to go back to the **Environment settings**.
+
+<!---1. Select the Log analytics workspace you created earlier *uniquenameDefender* to review the available options and pricing.
 
 1. Select **Enable all plans** (to the right of Select Defender plan) and then select **Save**. Wait for the *"Microsoft Defender plan for workspace uniquenameDefender were saved successfully!"* notification to appear.
 
     >**Note:** If the page is not being displayed, refresh your Edge browser and try again.
 
-1. Close the Defender plans page by selecting the 'X' on the upper right of the page to go back to the **Environment settings**
+1. Close the Defender plans page by selecting the 'X' on the upper right of the page to go back to the **Environment settings**. --->
 
 ### Task 3: Understanding the Microsoft Defender for Cloud Dashboard
 

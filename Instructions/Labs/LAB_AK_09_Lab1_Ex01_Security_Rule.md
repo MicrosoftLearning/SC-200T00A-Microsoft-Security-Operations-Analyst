@@ -12,6 +12,8 @@ lab:
 
 You are a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You must learn how to detect and mitigate threats using Microsoft Sentinel. First, you need to filter the alerts coming from Defender for Cloud into Microsoft Sentinel, by Severity.
 
+>**Important:** The lab exercises for Learning Path #9 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
+
 ### Estimated time to complete this lab: 10 minutes
 
 ### Task 1: Activate a Microsoft Security Rule
@@ -28,7 +30,7 @@ In this task, you will activate a Microsoft Security rule.
 
 1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
-1. Select your Microsoft Sentinel Workspace you created in the previous labs.
+1. Select the Microsoft Sentinel Workspace provided.
 
 1. Select **Analytics** from the Configuration area.
 

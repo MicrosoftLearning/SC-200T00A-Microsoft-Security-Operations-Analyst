@@ -1,6 +1,6 @@
 using './Sentinel.bicep'
 
-param workspaceName = 'defenderworkspace'
+param workspaceName = 'defenderWorkspace'
 param retentionInDays = 90
 param contentSolutions = [
   'Microsoft Defender For Cloud'

@@ -10,6 +10,10 @@ lab:
 
 You are a Security Operations Analyst working at a company that is implementing Microsoft Sentinel. You are responsible for setting up the Microsoft Sentinel environment to meet the company requirement to minimize cost, meet compliance regulations, and provide the most manageable environment for your security team to perform their daily job responsibilities.
 
+>**Important:** The lab exercises for Learning Path #7 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
+
+### Estimated time to complete this lab: 30 minutes
+
 ### Task 1 - Create a Log Analytics workspace
 
 Create a Log Analytics workspace, including region option. Learn more about [onboarding Microsoft Sentinel](https://learn.microsoft.com/azure/sentinel/quickstart-onboard).
@@ -32,9 +36,9 @@ Create a Log Analytics workspace, including region option. Learn more about [onb
 
 1. Select **Create new** for the Resource group.
 
-1. Enter *RG-Defender* and select **Ok**.
+1. Enter *Defender-RG* and select **Ok**.
 
-1. For the Name, enter something unique like: *uniquenameDefender*.
+1. For the Name, enter *defenderWorkspace*.
 
 1. You can leave the default region for the workspace.
 

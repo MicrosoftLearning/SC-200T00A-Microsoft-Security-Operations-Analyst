@@ -14,6 +14,8 @@ You're a Security Operations Analyst working at a company that implemented Micro
 - Create data visualizations that aren't provided out-of-the-box in Microsoft Sentinel, such as custom timelines and process trees.
 - Integrate data sources outside of Microsoft Sentinel, such as an on-premises data set.
 
+>**Important:** The lab exercises for Learning Path #10 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
+
 ### Estimated time to complete this lab: 30 minutes
 
 ### Task 1: Explore Notebooks
