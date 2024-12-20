@@ -22,8 +22,6 @@ Create a Log Analytics workspace, including region option. Learn more about [onb
 
 1. In the Microsoft Edge browser, navigate to the Azure portal at <https://portal.azure.com>.
   
-    >**Note:** Select the **Resourses** tab for the *Username* and *Password* for the lab. Use the **<LabUser-XXXXXXXX@LODSPRODXXX.onmicrosoft.com>** account for this lab.
-
 1. In the **Sign in** dialog box, copy, and paste in the tenant Email account for the admin username provided by your lab hosting provider and then select **Next**.
 
 1. In the **Enter password** dialog box, copy, and paste in the admin's tenant password provided by your lab hosting provider and then select **Sign in**.
