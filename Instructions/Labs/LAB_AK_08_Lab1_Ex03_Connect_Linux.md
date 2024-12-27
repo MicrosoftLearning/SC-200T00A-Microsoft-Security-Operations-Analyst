@@ -34,8 +34,7 @@ In this task, you will access your Microsoft Sentinel workspace.
 
 1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
-1. Select your Microsoft Sentinel Workspace you created in a previous lab.
-
+1. Select the **defenderWorkspace** Microsoft Sentinel Workspace.
 
 ### Task 2: Connect a Linux Host using the Common Event Format connector
 
