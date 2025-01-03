@@ -70,7 +70,6 @@ resource uebaAnalytics 'Microsoft.SecurityInsights/settings@2023-02-01-preview' 
     EntityAnalytics
   ]
 } 
-*/
 
 //Create the user identity to interact with Azure
 @description('The user identity for the deployment script.')
@@ -107,6 +106,7 @@ resource roleAssignment 'Microsoft.Authorization/roleAssignments@2022-04-01' = {
     pauseScript
   ]
 }
+*/
 
 //  Call the external PowerShell script to deploy the solutions and rules
 resource deploymentScript 'Microsoft.Resources/deploymentScripts@2023-08-01' = {
