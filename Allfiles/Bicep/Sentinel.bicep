@@ -74,8 +74,9 @@ resource uebaAnalytics 'Microsoft.SecurityInsights/settings@2023-02-01-preview' 
 
 //Create the user identity to interact with Azure
 @description('The user identity for the deployment script.')
+var randomSuffix = uniqueString(resourceGroup().id)
 resource scriptIdentity 'Microsoft.ManagedIdentity/userAssignedIdentities@2023-01-31' = {
-  name: 'script-identity'
+  name: 'script-identity-${randomSuffix}'
   location: location
 }
 
