@@ -14,7 +14,7 @@ In this exercise, you go through the *first run experience* of Microsoft Securit
 
 >**Note:**
 > The environment for this exercise is a simulation generated from the product. As a limited simulation, links on a page may not be enabled and text-based inputs that fall outside of the specified script may not be supported. A pop-up message will display stating, "This feature is not available within the simulation." When this occurs, select OK and continue the exercise steps.  
->:::image type="content" source="../media/simulation-pop-up-error.png" alt-text="Screenshot of pop-up screen indicating that this feature is not available within the simulation.":::
+>:::image type="content" source="../Media/simulation-pop-up-error.png" alt-text="Screenshot of pop-up screen indicating that this feature is not available within the simulation.":::
 
 ### Estimated time to complete this lab: 45 minutes
 
@@ -105,7 +105,7 @@ In this task, you start your exploration in the home menu.
 
 1. Open the simulated environment by selecting this link: **[Microsoft Security Copilot](https://app.highlights.guide/start/2cac767e-42c4-4058-afbb-a9413aac461d?link=0&token=40f793d4-2956-40a4-b11a-6b3d4f92557f&azure-portal=true)**.
 
-1. Select the **Menu** icon ![home menu icon](../media/home-menu-icon.png), which is sometimes referred to as the hamburger icon.
+1. Select the **Menu** icon ![home menu icon](../Media/home-menu-icon.png), which is sometimes referred to as the hamburger icon.
 
 1. Select **My sessions** and note the available options.
     1. Select recent to view the most recent sessions
@@ -176,7 +176,7 @@ The next section of the Copilot landing page revolves around promptbooks. The la
 
 At the bottom center of the page is the prompt bar. The prompt bar includes the prompts and sources icon, which you explore in this task. In subsequent exercises you'll enter inputs directly in the prompt bar.
 
-1. From the prompt bar, you can select the prompts icon to select a built-in prompt or a promptbook. Select the **prompts icon** ![prompts icon](../media/prompt-icon.png).
+1. From the prompt bar, you can select the prompts icon to select a built-in prompt or a promptbook. Select the **prompts icon** ![prompts icon](../Media/prompt-icon.png).
     1. Select **See all promptbooks**
         1. Scroll to view all the available promptbooks.
         1. Select the **back-arrow** next to the search bar to go back.
@@ -184,7 +184,7 @@ At the bottom center of the page is the prompt bar. The prompt bar includes the 
         1. Scroll to view all the available promptbooks.
         1. Select the **back-arrow** next to the search bar to go back.
 
-1. Select the **sources icon** ![sources icon](../media/sources-icon.png).
+1. Select the **sources icon** ![sources icon](../Media/sources-icon.png).
     1. The sources icon opens the manage sources window. From here, you can access Plugins or Files. The **Plugins** tab is selected by default.
         1. Select whether you want to view all plugins, those that are enabled (on), or those that are disabled (off).
         1. Expand/collapse list of Microsoft, non-Microsoft, and custom plugins.
@@ -248,13 +248,15 @@ This exercise should take approximately **30** minutes to complete.
 
 #### Sub-task 3:  Explore script analysis
 
-1. Let's Focus on the alert story. Select **Maximize ![maximize icon](../media/maximize-icon.png)**, located on the main panel of the alert, just beneath the card labeled 'partycity\jonaw' to get a better view of the process tree. From maximized view, you begin to get a clearer view of how this incident came to be. Many line items indicate that powershell.exe executed a script. Since the user Jonathan Wolcott is an account executive, it's reasonable to assume that executing PowerShell scripts isn't something this user is likely to be doing regularly.
+1. Let's Focus on the alert story. Select **Maximize ![maximize icon](../Media/maximize-icon.png)**, located on the main panel of the alert, just beneath the card labeled 'partycity\jonaw' to get a better view of the process tree. From maximized view, you begin to get a clearer view of how this incident came to be. Many line items indicate that powershell.exe executed a script. Since the user Jonathan Wolcott is an account executive, it's reasonable to assume that executing PowerShell scripts isn't something this user is likely to be doing regularly.
 
 1. Expand the first instance of **powershell.exe execute a script**, it's the one showing the timestamp of 4:57:11 AM. Copilot has the capability to analyze scripts. Select **Analyze**.
     1. Copilot generates an analysis of the script and suggests it could be a phishing attempt or used to deliver a web-based exploit.
     1. Select **Show code**. The code shows a defanged URL.
 
 1. There are several other items that indicate powershell.exe executed a script. Expand the one labeled **powershell.exe -EncodedCommand...** with the timestamp 5:00:47 AM. The original script was base 64 encoded, but Defender has decoded that for you. For the decoded version, select **Analyze**. The analysis highlights the sophistication of the script used in this attack.
+
+    >**Note:** The timestamp will be adjusted to reflect the time zone of the user's browser. The time zone in the simulation is set to Pacific Time.
 
 1. Close the alert story page by selecting the **X** (the X that is to the left of Copilot panel). Now use the breadcrumb to return to the incident. Select **Human-operated ransomware attack was launched from a compromised asset (attack disruption)**.
 
@@ -276,15 +278,15 @@ This task is complex and requires the involvement of more senior analysts. In th
 
 1. Select the ellipses next to Copilot's Incident summary and select **Open in Copilot for Security**.
 
-1. Copilot opens in the standalone experience and shows the incident summary. You can also run more prompts. In this case, you'll run the promptbook for an incident. Select the **prompt icon** ![prompt icon](../media/prompt-icon.png). 
+1. Copilot opens in the standalone experience and shows the incident summary. You can also run more prompts. In this case, you'll run the promptbook for an incident. Select the **prompt icon** ![prompt icon](../Media/prompt-icon.png). 
     1. Select **See all promptbooks**.
     1. Select **Microsoft 365 Defender incident investigation**.
     1. The promptbook page opens and asks for the Defender Incident ID. Enter **30342** then select **Run**.
     1. Review the information provided. By pivoting to the standalone experience and running the promptbook, the investigation is able to invoke capabilities from a broader set security solution, beyond just Defender XDR, based on the plugins enabled.
 
-1. Select the **box icon ![box icon](../media/box-icon.png)** next to the pin icon to select all the prompts and and the corresponding responses, then select the **Pin icon ![pin icon](../media/pin-icon.png)** to save those responses to the pin board.
+1. Select the **box icon ![box icon](../Media/box-icon.png)** next to the pin icon to select all the prompts and and the corresponding responses, then select the **Pin icon ![pin icon](../Media/pin-icon.png)** to save those responses to the pin board.
 
-1. The pin board opens automatically. The pin board holds your saved prompts and responses, along with a summary of each one. You can open and close the pin board by selecting the **pin board icon ![pin board icon](../media/pinboard-icon.png)**.
+1. The pin board opens automatically. The pin board holds your saved prompts and responses, along with a summary of each one. You can open and close the pin board by selecting the **pin board icon ![pin board icon](../Media/pinboard-icon.png)**.
 
 1. From the top of the page, select **Share** to view your options. By sharing the incident via a link or email, people in your organization with Copilot access can view this session. Close the window by selecting the **X**.
 
