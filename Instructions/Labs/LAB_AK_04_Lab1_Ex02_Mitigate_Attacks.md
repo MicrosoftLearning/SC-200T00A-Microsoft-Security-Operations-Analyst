@@ -84,27 +84,6 @@ In this task, you will simulate an attack on the WIN1 virtual machine (by runnin
 
 1. When the "User Account Control" window is shown, select **Yes** to allow the app to run.
 
-<!--- 1. Copy and paste the following simulation script into the PowerShell window and press **Enter** to run it:
-
-    ```PowerShell
-    [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12;
-    $xor = [System.Text.Encoding]::UTF8.GetBytes('WinATP-Intro-Injection');
-    $base64String = (Get-Content -Path "C:\Allfiles\recon.txt");
-    Try{ $contentBytes = [System.Convert]::FromBase64String($base64String) } Catch { $contentBytes = [System.Convert]::FromBase64String($base64String.Substring(3)) }
-    $i = 0;
-    $decryptedBytes = @();
-    $contentBytes.foreach{ $decryptedBytes += $_ -bxor $xor[$i];
-        $i++; 
-        if ($i -eq $xor.Length) {
-            $i = 0
-        }
-    }
-    Invoke-Expression ([System.Text.Encoding]::UTF8.GetString($decryptedBytes))
-    ```
-
-
-    >**Note:** If you experience errors (in red) while running the script, you can open the Notepad app and copy the script into a blank file. Make sure *word wrap* is turned on in Notepad. Then, copy and run each line of the script separately in PowerShell. Also, a PowerShell script (attacksim.ps1) was provided in the files downloaded at the beginning of the labs. --->
-
 1. To run the script, in **Windows PowerShell (Admin)** navigate to the *\Users\Admin\Desktop\Allfiles* folder and type *.\AttackScript.ps1* and press **Enter** to run it. Next, type **R** and press **Enter** to *Run Once*.
 
 1. The script will produce several lines of output and a message that it *Failed to resolve Domain Controllers in the domain*. A few seconds later, the *Notepad* app will open. A simulated attack code will be injected into Notepad. Keep the automatically generated Notepad instance open to experience the full scenario. The simulated attack code will attempt to communicate to an external IP address (simulating a C2 server).
