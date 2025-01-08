@@ -130,17 +130,17 @@ In this task, you install Azure Arc on an on-premises server to make onboarding 
 
 In this task, you'll connect an Azure Windows virtual machine to Microsoft Sentinel.
 
+>**Note:** Microsoft Sentinel has been predeployed in your Azure subscription with the name **defenderWorkspace**, and the *Content Hub* has been prepopulated with the necessary solutions.
+
 1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
-1. Select your Microsoft Sentinel Workspace you created earlier.
+1. Select the Microsoft Sentinel **defenderWorkspace**.
 
-1. 1. In the Microsoft Sentinel left menus, scroll down to the *Content management* section and select **Content Hub**.
+1. 1. In the Microsoft Sentinel left navigation menu, scroll down to the *Content management* section and select **Content Hub**.
 
 1. In the *Content hub*, search for the **Windows Security Events** solution and select it from the list.
 
-1. On the *Windows Security Events* solution page select **Install**.
-
-1. When the installation completes select **Manage**
+1. On the *Windows Security Events* solution page select **Manage**.
 
     >**Note:** The *Windows Security Events* solution installs both the *Windows Security Events via AMA* and the *Security Events via Legacy Agent* Data connectors. Plus 2 Workbooks, 20 Analytic Rules, and 43 Hunting Queries.
 

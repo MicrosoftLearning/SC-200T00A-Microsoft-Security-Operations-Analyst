@@ -97,12 +97,27 @@ resource pauseScript 'Microsoft.Resources/deploymentScripts@2023-08-01' = {
   ]
 }
 
+/*
 //Assign the Sentinel Contributor rights on the Resource Group to the User Identity that was just created
 resource roleAssignment 'Microsoft.Authorization/roleAssignments@2022-04-01' = {
   name: guid(resourceGroup().name, roleDefinitionId)
   properties: {
     roleDefinitionId: subscriptionResourceId('Microsoft.Authorization/roleDefinitions', roleDefinitionId)
     principalId: scriptIdentity.properties.principalId
+  }
+  dependsOn: [
+    pauseScript
+  ]
+}
+*/
+
+resource roleAssignment 'Microsoft.Authorization/roleAssignments@2022-04-01' = {
+  name: guid(subscription().id, resourceGroup().id, scriptIdentity.name, roleDefinitionId)
+  scope: resourceGroup()
+  properties: {
+    roleDefinitionId: subscriptionResourceId('Microsoft.Authorization/roleDefinitions', roleDefinitionId)
+    principalId: scriptIdentity.properties.principalId
+    principalType: 'ServicePrincipal'
   }
   dependsOn: [
     pauseScript
