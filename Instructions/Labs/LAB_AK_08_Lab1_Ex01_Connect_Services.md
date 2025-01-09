@@ -32,7 +32,7 @@ In this task, you will access your Microsoft Sentinel workspace.
 
 1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
-1. Select your Microsoft Sentinel Workspace that you created in the previous lab.
+1. Select the Microsoft Sentinel **defenderWorkspace**.
 
 1. Proceed to the next task.
 
@@ -40,23 +40,19 @@ In this task, you will access your Microsoft Sentinel workspace.
 
 In this task, you will connect the Microsoft Defender for Cloud data connector.
 
-1. In the Microsoft Sentinel left menus, scroll down to the **Content management** section and select **Content Hub**.
+   >**Important:** To *Enable* Bi-directional sync, please review the Learning Path 5, Exercise 1, Task 1, and select **Setup** from the *Microsoft Defender for Cloud* navigation menu to verify all eligible Azure subscriptions are onboarded.
+
+1. In the Microsoft Sentinel navigation menu, scroll down to the **Content management** section and select **Content Hub**.
 
 1. In the *Content hub*, search for the **Microsoft Defender for Cloud** solution and select it from the list.
 
-1. On the *Microsoft Defender for Cloud* solution details page select **Install**.
-
-1. When the installation completes,  search for the **Microsoft Defender for Cloud** solution and select it.
-
-1. On the *Microsoft Defender for Cloud* solution details page select **Manage**
+1. On the *Microsoft Defender for Cloud* solution details page select **Manage**.
 
     >**Note:** The *Microsoft Defender for Cloud* solution installs the *Subscription-based Microsoft Defender for Cloud (Legacy)* Data connector, the *Tenant-based Microsoft Defender for Cloud (Preview)* Data connector, and an Analytics rule. The *Tenant-based Microsoft Defender for Cloud (Preview)* Data connector is used when a tenant has multiple subscriptions.
 
 1. Select the *Subscription-based Microsoft Defender for Cloud (Legacy)* Data connector check-box, and select **Open connector page**.
 
 1. In the *Configuration* section, under the *Instructions* tab, **select** the checkbox for the "Azure Pass - Sponsorship" subscription and slide the **Status** option to the right.
-
-    >**Note:** If it switches back to disconnected, please review the Learning Path 3, Exercise 1, Task 1 to assign the proper permissions to your account.
 
 1. The *Status* should be now **Connected** and "Bi-directional sync" should be *Enabled*.
 
@@ -66,13 +62,11 @@ In this task, you will connect the Microsoft Defender for Cloud data connector.
 
 In this task, you will connect the *Azure Activity* data connector.
 
-1. In the Microsoft Sentinel left menus, scroll down to the *Content management* section and select **Content Hub**.
+1. In the Microsoft Sentinel navigation menu, scroll down to the *Content management* section and select **Content Hub**.
 
 1. In the *Content hub*, search for the **Azure Activity** solution and select it from the list.
 
-1. On the *Azure Activity* solution page select **Install**.
-
-1. When the installation completes select **Manage**
+1. On the *Azure Activity* solution details page select **Manage**.
 
     >**Note:** The *Azure Activity* solution installs the *Azure Activity* Data connector, 12 Analytic rules, 14 Hunting queries and 1 Workbook.
 

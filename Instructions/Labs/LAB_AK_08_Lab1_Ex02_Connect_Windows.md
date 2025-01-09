@@ -136,7 +136,7 @@ In this task, you'll connect an Azure Windows virtual machine to Microsoft Senti
 
 1. Select the Microsoft Sentinel **defenderWorkspace**.
 
-1. 1. In the Microsoft Sentinel left navigation menu, scroll down to the *Content management* section and select **Content Hub**.
+1. In the Microsoft Sentinel left navigation menu, scroll down to the *Content management* section and select **Content Hub**.
 
 1. In the *Content hub*, search for the **Windows Security Events** solution and select it from the list.
 
