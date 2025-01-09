@@ -44,9 +44,7 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
 
 1. In the *Content hub*, search for the **Common Event Format** solution and select it from the list.
 
-1. On the *Common Event Format* solution page select **Install**.
-
-1. When the installation completes select **Manage**
+1. On the *Common Event Format* solution page select **Manage**.
 
     >**Note:** The *Common Event Format* solution installs both the *Common Events Format (CEF) via AMA* and the *Common Events Format (CEF)* Data connectors.
 
@@ -96,9 +94,7 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
 1. In the *Content hub*, search for the **Syslog** solution and select it from the list.
 
-1. On the *Syslog* solution page select **Install**.
-
-1. When the installation completes select **Manage**
+1. On the *Syslog* solution page select **Manage**.
 
     >**Note:** The *Syslog* solution installs the *Syslog* Data connector, 5 Analytics rules, 9 Hunting queries, and 1 Workbook.
 
