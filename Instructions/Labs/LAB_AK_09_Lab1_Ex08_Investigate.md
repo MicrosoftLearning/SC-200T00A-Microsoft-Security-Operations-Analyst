@@ -22,6 +22,8 @@ An incident can include multiple alerts. It is an aggregation of all the relevan
 
 In this task, you will investigate an incident.
 
+>**Note:** Microsoft Sentinel has been predeployed in your Azure subscription with the name **defenderWorkspace**, and the required *Content Hub* solutions have been installed.
+
 1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
 1. In the Edge browser, navigate to the Azure portal at <https://portal.azure.com>.
@@ -32,7 +34,7 @@ In this task, you will investigate an incident.
 
 1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
-1. Select your Microsoft Sentinel Workspace.
+1. Select the Microsoft Sentinel **defenderWorkspace**.
 
 1. Select the **Incidents** page.
 

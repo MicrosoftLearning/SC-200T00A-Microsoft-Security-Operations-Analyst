@@ -22,6 +22,8 @@ Microsoft Sentinel allows you to create custom workbooks across your data, and a
 
 In this task, you will explore the Microsoft Sentinel workbook templates.
 
+>**Note:** Microsoft Sentinel has been predeployed in your Azure subscription with the name **defenderWorkspace**, and the required *Content Hub* solutions have been installed.
+
 1. Login to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
 1. In the Edge browser, navigate to the Azure portal at <https://portal.azure.com>.
@@ -32,7 +34,7 @@ In this task, you will explore the Microsoft Sentinel workbook templates.
 
 1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
-1. Select your Microsoft Sentinel Workspace.
+1. Select the Microsoft Sentinel **defenderWorkspace**.
 
 1. Select **Workbooks** under the *Threat Management* section of the navigation menu.
 

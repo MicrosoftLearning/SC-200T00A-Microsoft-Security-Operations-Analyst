@@ -54,7 +54,7 @@ In this task, you'll enable and configure Microsoft Defender for Cloud.
 
 1. Close the Defender plans page by selecting the 'X' on the upper right of the page to go back to the **Environment settings**. --->
 
-### Task 3: Understanding the Microsoft Defender for Cloud Dashboard
+### Task 2: Understanding the Microsoft Defender for Cloud Dashboard
 
 1. In the Search bar of the Microsoft Azure portal, type *Defender*, then select **Microsoft Defender for Cloud**.
 

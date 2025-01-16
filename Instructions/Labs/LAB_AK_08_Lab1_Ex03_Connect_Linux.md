@@ -22,6 +22,8 @@ You are a Security Operations Analyst working at a company that implemented Micr
 
 In this task, you will access your Microsoft Sentinel workspace.
 
+>**Note:** Microsoft Sentinel has been predeployed in your Azure subscription with the name **defenderWorkspace**, and the required *Content Hub* solutions have been installed.
+
 1. Log in to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.  
 
 1. Start the Microsoft Edge browser.
@@ -34,7 +36,7 @@ In this task, you will access your Microsoft Sentinel workspace.
 
 1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
-1. Select the **defenderWorkspace** Microsoft Sentinel Workspace.
+1. Select the Microsoft Sentinel **defenderWorkspace**.
 
 ### Task 2: Connect a Linux Host using the Common Event Format connector
 
