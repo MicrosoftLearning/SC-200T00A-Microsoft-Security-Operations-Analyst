@@ -8,7 +8,7 @@ lab:
 
 ## Lab scenario
 
-![Lab overview.](../Media/SC-200-Lab_Diagrams_Mod7_L1_Ex5.png)
+![Lab overview.](../Media/SC-200-Lab_Diagrams_Mod9_L1_Ex5.png)
 
 ### Estimated time to complete this lab: 30 minutes
 
@@ -37,8 +37,6 @@ As described above, Azure Arc has been pre-installed on the **WINServer** machin
 1. Type **Enter** to run the command (this may take a couple minutes).
 
 1. In the *Sign in* dialog box, enter your **Tenant Email** and **Tenant Password** provided by your lab hosting provider and select **Sign in**. Wait for the *Authentication complete* message, close the browser tab and return to the *Command Prompt* window.
-
- >**Note:** If you recieve the *Pick an account* dialog box, select your account, wait for the message that you can close the tab and then go back to the *Command Prompt* window.
 
 1. When the commands complete running, leave the *Command Prompt* window open and type the following command to confirm that the connection was successful:
 
@@ -160,7 +158,7 @@ Do {
 Until ($TimeNow -ge $RunEnd)
 ```
 
-### Task 2: Understand Detection Modeling
+### Task 4: Understand Detection Modeling
 
 The attack-detect configuration cycle used in this lab represents all data sources even though you are only focused on two specific data sources.
 
