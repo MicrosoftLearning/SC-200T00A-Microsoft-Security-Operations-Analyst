@@ -20,6 +20,8 @@ You're a Security Operations Analyst working at a company that implemented Micro
 
 In this task, you'll review the Registry Schema parsers that are included with the Microsoft Sentinel deployment.
 
+>**Note:** Microsoft Sentinel has been predeployed in your Azure subscription with the name **defenderWorkspace**, and the required *Content Hub* solutions have been installed.
+
 1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
 1. In the Microsoft Edge browser, navigate to the Azure portal at <https://portal.azure.com>.
@@ -30,7 +32,7 @@ In this task, you'll review the Registry Schema parsers that are included with t
 
 1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
-1. Select your Microsoft Sentinel Workspace.
+1. Select the Microsoft Sentinel **defenderWorkspace**.
 
 <!--- 1. In the Edge browser, open a new tab (Ctrl+T) and navigate to the Microsoft Sentinel GitHub ASIM page <https://github.com/Azure/Azure-Sentinel/tree/master/ASIM>.
 
@@ -50,7 +52,7 @@ In this task, you'll review the Registry Schema parsers that are included with t
 
 1. After the deployment completes return to the *Microsoft Sentinel* tab. --->
 
-1. Select **Logs** under the *General* left menu.
+1. Select **Logs** under the *General* section of the navigation menu.
 
 1. Open the *Schema and Filter* blade by selecting **>>** if needed.
 

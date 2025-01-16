@@ -20,6 +20,8 @@ You are a Security Operations Analyst working at a company that implemented Micr
 
 In this task, you will access your Microsoft Sentinel workspace.
 
+>**Note:** Microsoft Sentinel has been predeployed in your Azure subscription with the name **defenderWorkspace**, and the required *Content Hub* solutions have been installed.
+
 1. Log in to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.  
 
 1. Open the Microsoft Edge browser.

@@ -66,7 +66,7 @@ In this task, you'll create a Windows virtual machine in Azure.
 
 1. Select **Create**. Wait for the Resource to be created, this may take a few minutes.
 
-### Task 2: Install Azure Arc on an On-Premises Server
+<!--- ### Task 2: Install Azure Arc on an On-Premises Server
 
 In this task, you install Azure Arc on an on-premises server to make onboarding easier.
 
@@ -124,13 +124,13 @@ In this task, you install Azure Arc on an on-premises server to make onboarding 
 
 1. Select **Refresh** until WINServer server name appears and the Status is *Connected*.
 
-    >**Note:** This could take a couple of minutes.
+    >**Note:** This could take a couple of minutes. --->
 
-### Task 3: Connect an Azure Windows virtual machine
+### Task 2: Connect an Azure Windows virtual machine
 
 In this task, you'll connect an Azure Windows virtual machine to Microsoft Sentinel.
 
->**Note:** Microsoft Sentinel has been predeployed in your Azure subscription with the name **defenderWorkspace**, and the *Content Hub* has been prepopulated with the necessary solutions.
+>**Note:** Microsoft Sentinel has been predeployed in your Azure subscription with the name **defenderWorkspace**, and the required *Content Hub* solutions have been installed.
 
 1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 

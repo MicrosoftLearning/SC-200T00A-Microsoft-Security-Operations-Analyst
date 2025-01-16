@@ -20,6 +20,8 @@ Analytics rules search for specific events or sets of events across your environ
 
 In this task, you create a scheduled query and connect it to the Teams channel you created in the previous exercise.
 
+>**Note:** Microsoft Sentinel has been predeployed in your Azure subscription with the name **defenderWorkspace**, and the required *Content Hub* solutions have been installed.
+
 1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
 1. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
@@ -28,7 +30,7 @@ In this task, you create a scheduled query and connect it to the Teams channel y
 
 1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
-1. Select your Microsoft Sentinel Workspace.
+1. Select the Microsoft Sentinel **defenderWorkspace**.
 
 1. Select **Analytics** from the Configuration area.
 

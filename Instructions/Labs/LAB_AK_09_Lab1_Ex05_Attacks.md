@@ -1,10 +1,10 @@
 ---
 lab:
-    title: 'Exercise 5 - Understand Detection Modeling'
+    title: 'Exercise 5 - Prepare to perform simulated attacks'
     module: 'Learning Path 9 - Create detections and perform investigations using Microsoft Sentinel'
 ---
 
-# Learning Path 9 - Lab 1 - Exercise 5 - Understand Detection Modeling
+# Learning Path 9 - Lab 1 - Exercise 5 - Prepare to perform simulated attacks
 
 ## Lab scenario
 
@@ -12,7 +12,85 @@ lab:
 
 ### Estimated time to complete this lab: 30 minutes
 
-### Task 1: Understand the Attacks
+### Task 1: Connect an On-Premises Server
+
+In this task, you'll connect an on-premises server to your Azure subscription. Azure Arc was pre-installed on this server. The server will be used in next exercises to run simulated attacks that you will later detect and investigate in Microsoft Sentinel.
+
+>**Note**: The lab exercises for Learning Path #9 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
+
+1. Log in to **WINServer** virtual machine as Administrator with the password: **Passw0rd!** if necessary.  
+
+As described above, Azure Arc has been pre-installed on the **WINServer** machine. You will now connect this machine to your Azure subscription.
+
+1. On the *WINServer* machine, select the *search* icon and type **cmd**.
+
+1. In search results right click *Command Prompt* and select **Run as administrator**.
+
+1. In the Command Prompt window, type the following command. *Do not press enter*:
+
+    ```cmd
+    azcmagent connect -g "defender-RG" -l "EastUS" -s "Subscription ID string"
+    ```
+
+1. Replace the **Subscription ID string** with the *Subscription ID* provided by your lab hoster (*Resources tab). Make sure to keep the quotes.
+
+1. Type **Enter** to run the command (this may take a couple minutes).
+
+1. In the *Sign in* dialog box, enter your **Tenant Email** and **Tenant Password** provided by your lab hosting provider and select **Sign in**. Wait for the *Authentication complete* message, close the browser tab and return to the *Command Prompt* window.
+
+ >**Note:** If you recieve the *Pick an account* dialog box, select your account, wait for the message that you can close the tab and then go back to the *Command Prompt* window.
+
+1. When the commands complete running, leave the *Command Prompt* window open and type the following command to confirm that the connection was successful:
+
+    ```cmd
+    azcmagent show
+    ```
+
+1. In the command output, verify that *Agent status* is **Connected**.
+
+## Task 2: Connect a non-Azure Windows Machine
+
+In this task, you'll add an Azure Arc connected, on-premises machine to Microsoft Sentinel.  
+
+>**Note:** Microsoft Sentinel has been predeployed in your Azure subscription with the name **defenderWorkspace**, and the required *Content Hub* solutions have been installed.
+
+1. Login to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.  
+
+1. In the Microsoft Edge browser, navigate to the Azure portal at <https://portal.azure.com>.
+
+1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
+
+1. In the **Enter password** dialog box, copy, and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
+
+1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
+
+1. Select the Microsoft Sentinel **defenderWorkspace**.
+
+1. In the Microsoft Sentinel left navigation menu, scroll down to the *Configuration* section and select **Data connectors**.
+
+1. In the *Data connectors*, search for the **Windows Security Events via AMA** solution and select it from the list.
+
+1. On the *Windows Security Events via AMA* details pane, select **Open connector page**.
+
+    >**Note:** The *Windows Security Events* solution installs both the *Windows Security Events via AMA* and the *Security Events via Legacy Agent* Data connectors. Plus 2 Workbooks, 20 Analytic Rules, and 43 Hunting Queries.
+
+1. In the *Configuration* section, under the *Instructions* tab, select the **Create data collection rule**.
+
+1. Enter **AZWINDCR** for Rule Name, then select **Next: Resources**.
+
+1. Expand your *Subscription* under *Scope* on the *Resources* tab.
+
+    >**Hint:** You can expand the whole *Scope* hierarchy by selecting the ">" before the *Scope* column.
+
+1. Expand **defender-RG** Resource Group, then select **WINServer**.
+
+1. Select **Next: Collect**, and leave the *All Security Events* selected.
+
+1. Select **Next: Review + create**.
+
+1. Select **Create** after *Validation passed* is displayed.
+
+### Task 3: Understand the Attacks
 
 >**Important: You will perform no actions in this exercise.**  These instructions are only an explanation of the attacks you will perform in the next exercise. Please carefully read this page.
 
