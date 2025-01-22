@@ -12,9 +12,45 @@ You're a Security Operations Analyst working at a company that is implementing c
 
 >**Important:** The lab exercises for Learning Path #5 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
 
-### Estimated time to complete this lab: 15 minutes
+### Estimated time to complete this lab: 25 minutes
 
-### Task 1: Enable Microsoft Defender for Cloud
+### Task 1: Connect an On-Premises Server
+
+In this task, you'll connect an on-premises server to your Azure subscription. Azure Arc was pre-installed on this server. The server will be used in the next exercises to provide a resource for applying compliance standards and workload protections.
+
+>**Important:** The next steps are done on a different machine than the one you were previously working. Look for the Virtual Machine name in the references tab.
+
+1. Log in to **WINServer** virtual machine as Administrator with the password: **Passw0rd!** if necessary.  
+
+As described above, Azure Arc has been pre-installed on the **WINServer** machine. You will now connect this machine to your Azure subscription.
+
+1. On the *WINServer* machine, select the *search* icon and type **cmd**.
+
+1. In search results right click *Command Prompt* and select **Run as administrator**.
+
+1. In the Command Prompt window, type the following command. *Do not press enter*:
+
+    ```cmd
+    azcmagent connect -g "defender-RG" -l "EastUS" -s "Subscription ID string"
+    ```
+
+1. Replace the **Subscription ID string** with the *Subscription ID* provided by your lab hoster (*Resources tab). Make sure to keep the quotes.
+
+1. Type **Enter** to run the command (this may take a couple minutes).
+
+    >**Note**: If you see the *How do you want to open this?* browser selection window, select **Microsoft Edge**.
+
+1. In the *Sign in* dialog box, enter your **Tenant Email** and **Tenant Password** provided by your lab hosting provider and select **Sign in**. Wait for the *Authentication complete* message, close the browser tab and return to the *Command Prompt* window.
+
+1. When the commands complete running, leave the *Command Prompt* window open and type the following command to confirm that the connection was successful:
+
+    ```cmd
+    azcmagent show
+    ```
+
+1. In the command output, verify that *Agent status* is **Connected**.
+
+### Task 2: Enable Microsoft Defender for Cloud
 
 In this task, you'll enable and configure Microsoft Defender for Cloud.
 
@@ -54,7 +90,7 @@ In this task, you'll enable and configure Microsoft Defender for Cloud.
 
 1. Close the Defender plans page by selecting the 'X' on the upper right of the page to go back to the **Environment settings**. --->
 
-### Task 2: Understanding the Microsoft Defender for Cloud Dashboard
+### Task 3: Understanding the Microsoft Defender for Cloud Dashboard
 
 1. In the Search bar of the Microsoft Azure portal, type *Defender*, then select **Microsoft Defender for Cloud**.
 

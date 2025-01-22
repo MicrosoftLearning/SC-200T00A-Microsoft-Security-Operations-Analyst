@@ -14,9 +14,13 @@ You are a Security Operations Analyst working at a company that implemented Micr
 
 >**Important:** The lab exercises for Learning Path #10 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
 
->**Note:** The log data created in the previous Learning Path *Perform Attacks* lab exercises will not be available in this lab without rerunning the **Attack 3** on WIN1 server in Exercise 5.
+>**Note:** The log data created in the Learning Path 9 lab exercises will not be available in this lab without rerunning tasks 1 & 2 of exercise 5, and rerunning *Attack 3* on the WIN1 server in Exercise 6. You can open those instructions in a new browser tab by selecting these links:
 
-### Estimated time to complete this lab: 30 minutes
+**[Lab 09 Exercise 5](https://microsoftlearning.github.io/SC-200T00A-Microsoft-Security-Operations-Analyst/Instructions/Labs/LAB_AK_09_Lab1_Ex05_Attacks.html)**
+
+**[Lab 09 Exercise 6](https://microsoftlearning.github.io/SC-200T00A-Microsoft-Security-Operations-Analyst/Instructions/Labs/LAB_AK_09_Lab1_Ex06_Perform_Attacks.html)**
+
+### Estimated time to complete this lab: 40 minutes
 
 ### Task 1: Create a hunting query
 
