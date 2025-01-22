@@ -10,13 +10,15 @@ lab:
 
 ![Lab overview.](../Media/SC-200-Lab_Diagrams_Mod9_L1_Ex5.png)
 
+>**Important**: The lab exercises for Learning Path #9 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
+
 ### Estimated time to complete this lab: 30 minutes
 
 ### Task 1: Connect an On-Premises Server
 
 In this task, you'll connect an on-premises server to your Azure subscription. Azure Arc was pre-installed on this server. The server will be used in next exercises to run simulated attacks that you will later detect and investigate in Microsoft Sentinel.
 
->**Note**: The lab exercises for Learning Path #9 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
+>**Important:** The next steps are done on a different machine than the one you were previously working. Look for the Virtual Machine name in the references tab.
 
 1. Log in to **WINServer** virtual machine as Administrator with the password: **Passw0rd!** if necessary.  
 
@@ -35,6 +37,8 @@ As described above, Azure Arc has been pre-installed on the **WINServer** machin
 1. Replace the **Subscription ID string** with the *Subscription ID* provided by your lab hoster (*Resources tab). Make sure to keep the quotes.
 
 1. Type **Enter** to run the command (this may take a couple minutes).
+
+    >**Note**: If you see the *How do you want to open this?* browser selection window, select **Microsoft Edge**.
 
 1. In the *Sign in* dialog box, enter your **Tenant Email** and **Tenant Password** provided by your lab hosting provider and select **Sign in**. Wait for the *Authentication complete* message, close the browser tab and return to the *Command Prompt* window.
 

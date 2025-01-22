@@ -18,7 +18,7 @@ You are going to simulate the attacks that you will later use to detect and inve
 
 ### Task 1: Persistence Attack with Registry Key Add
 
->**Important:** The next steps are done in a different machine than the one you were previously working. Look for the Virtual Machine name references.
+>**Important:** The next steps are done on a different machine than the one you were previously working. Look for the Virtual Machine name in the references tab.
 
 In this task, you will perform attacks on the host connected with Azure Arc and that has the Azure Monitor Agent configured.
 
@@ -123,6 +123,5 @@ In this task, you will perform attacks on the host connected with Azure Arc and 
     ```
 
 >**Important:** Do not close these windows. Let this PowerShell script run in the background. The command needs to generate log entries for some hours. You can proceed to the next task and next exercises while this script runs. The data created by this task will be used in the Threat Hunting lab later. This process will not create substantial amounts of data or processing.
-
 
 ## Proceed to Exercise 7
