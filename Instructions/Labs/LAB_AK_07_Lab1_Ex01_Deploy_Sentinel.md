@@ -130,19 +130,23 @@ In this task, you will create an indicator in Microsoft Sentinel.
 
 1. Select **+ Add New** from the command bar.
 
-1. Review the different indicator types available in the *Types* dropdown. Select the **domain-name**. 
+1. Select the **TI Object**.
+
+1. From the *Object type* dropdown, select **Indicator**.
+
+1. Select the **+ New observable** dropdown and select **Domain name**.
 
 1. For Domain, enter a domain name, for example type *contoso.com*.
 
-1. For the *Threat types*, select **+ Add** and type in **malicious-activity**. Select **Apply**.
+1. In the **Name** field enter the same value used for the Domain.
+
+1. In the *Indicator types*, select **malicious-activity**.
 
 1. Enter a **Description**
 
-1. For the **Name**, enter the same value used for the Domain.
-
 1. Set the **Valid from** field to today's date.
 
-1. Select **Apply**.
+1. Select **Add**.
 
 1. Select the **Logs** option under the General area. You might want to disable the "Always show queries" option and close the *Queries* window to run the KQL statements.
 
@@ -154,7 +158,7 @@ In this task, you will create an indicator in Microsoft Sentinel.
 
     >**Note:** It could take up to five minutes for the indicator to appear.
 
-1. Scroll the results to the right to see the DomainName column. You can also run the following KQL statement to just see the DomainName column. 
+1. Scroll the results to the right to see the DomainName column. You can also run the following KQL statement to just see the DomainName column.
 
     ```KQL
     ThreatIntelligenceIndicator 
