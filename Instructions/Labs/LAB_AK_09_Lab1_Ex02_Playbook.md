@@ -68,7 +68,7 @@ In this task, you’ll update the new playbook you created with the proper conne
 
 1. Select Refresh from the command bar in case you don’t see any playbooks. You should see the playbook created from the previous step.
 
-1. Select the **Defender_XDR_Ransomware_Playbook_SecOps_Tasks** playbook name.
+1. Select the **Defender_XDR_Ransomware_Playbook_SecOps_Tasks** playbook name link.
 
 1. On the Logic App page for **Defender_XDR_Ransomware_Playbook_SecOps_Tasks**, in the command menu, select Edit.
 
@@ -80,13 +80,13 @@ In this task, you’ll update the new playbook you created with the proper conne
 
 1. Select Add new and select Sign in. In the new window, select your Azure subscription admin credentials when prompted. The last line of the block should now read “Connected to your-admin-username”.
 
-1. Below within the logic split, select Add task to incident.
+<!--- 1. Below within the logic split (+ sign), select Add an action to incident.--->
 
 1. Select Save on the command bar. The Logic App will be used in a future lab.
 
 ### Task 3: Create an Automation Rule
 
-1. Within Microsoft Sentinel, go to Automation under Configuration.
+1. Within Microsoft Sentinel, expand *Configuration* in the navigation menu and select *Automation*.
 
 1. Select Create and choose Automation Rule.
 
@@ -96,7 +96,7 @@ In this task, you’ll update the new playbook you created with the proper conne
 
 1. Leave the Analytic rule name as All.
 
-1. Click Add and choose And.
+1. Click Add and choose *Condition (And)*.
 
 1. From the drop down, select Tactics.
 
@@ -120,6 +120,6 @@ In this task, you’ll update the new playbook you created with the proper conne
 
 1. Select **Apply** at the bottom.
 
-From here, depending on your role, you will either continue doing more architect exercises or you will pivot to the analyst exercises.
+You have now created a playbook and an automation rule in Microsoft Sentinel.
 
 ## Proceed to Exercise 3
