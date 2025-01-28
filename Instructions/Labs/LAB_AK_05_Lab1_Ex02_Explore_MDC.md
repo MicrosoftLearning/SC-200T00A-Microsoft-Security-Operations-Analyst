@@ -56,29 +56,25 @@ In this task, you'll review Regulatory compliance configuration in Microsoft Def
 
     >**Note:** You might want to return later to *Regulatory compliance* to review the new standard controls and recommendations.
 
-### Task 2: Explore Security posture and recommendations
+### Task 2: Explore Security Recommendations
 
-In this task, you'll review cloud security posture management.  The Secure Score information can take 24 hours to recalculate. It's recommended to do this task again in 24 hours.
+In this task, you'll review cloud security posture management recommendations.
 
-1. Under *Cloud Security*, select **Security posture** from the left menu items.
-
-1. The *Secure score* defaults to the *Azure environment*.
-
-1. Under the *Environment* tab, select **View recommendations >** link.
+1. In the *General* section, select **Recommendations** from the navigation menu.
 
 1. Select **Add filter** and then select **Resource type**.
 
 1. Select the **Machines - Azure Arc** checkbox and then select the **Apply** button.
 
-    >**Note:** If you don't see **Machines - Azure Arc** listed, make sure you have completed Learning Path 3 - Lab 1 - Exercise 1 Task 4..
+    >**Note:** If you don't see **Machines - Azure Arc** listed, refresh the page.
 
-1. Select any recommendation where the status isn't *"Completed"*.
+1. Select any recommendation where the status isn't *Completed*. You may need to scroll to the right to see the *Status* column.
 
 1. Review the recommendation and in the **Take action** tab scroll down to **Delegate** and select **Assign owner & set due date**.
 
 1. In the **Create assignment** window, leave *Type* set to *Defender for Cloud* and expand the **Assignment details**.
 
-1. In the `Set owner` *Email address* box, type in your admin email. **Hint:** You can copy it from the instructions in the *Resources* tab.
+1. In the *Email address* box, type in your admin email. **Hint:** You can copy it from the instructions in the *Resources* tab.
 
 1. Explore the *Set remediation timeframe* and *Set email notifications* options and select **Create**.
 
