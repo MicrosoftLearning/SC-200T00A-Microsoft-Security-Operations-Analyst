@@ -140,7 +140,6 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
 1. When it finished, type **exit** to close the remote shell connection to LIN2.
 
-
 ### Task 4: Configure the facilities you want to collect and their severities for the Syslog connector
 
 In this task, you will configure the Syslog collection facilities.

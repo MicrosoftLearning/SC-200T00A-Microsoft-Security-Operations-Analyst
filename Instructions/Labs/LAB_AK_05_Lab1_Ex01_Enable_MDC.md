@@ -72,7 +72,14 @@ In this task, you'll enable and configure Microsoft Defender for Cloud.
 
 1. Review the Azure resources that are now protected with the Defender for Cloud plans.
 
-    >**Important:** If all Defender plans are *Off*, select **Enable all plans**. Select the *$200/month Microsoft Defender for APIs Plan 1* and then select **Save**. Select **Save** at the top of the page and wait for the *"Defender plans (for your) subscription were saved successfully!"* notifications to appear.
+<!---
+    >**Important:** If all Defender plans are *Off*, select **Enable all plans**. Select the *$200/month Microsoft Defender for APIs Plan 1* and then select **Save**. Select **Save** at the top of the page and wait for the *"Defender plans (for your) subscription were saved successfully!"* notifications to appear.--->
+
+1. In the *Cloud Security Posture Management (CSPM)* section, select **On** for the *Defender CSPM*.
+
+1. In the *Cloud Workload Protection (CWP)* section, select **On** for the *Servers Plan 2*.
+
+1. Select  the **Save** button at the top of the page.
 
 1. Select the **Settings & monitoring** tab from the Settings area (next to Save).
 
@@ -107,6 +114,8 @@ In this task, you'll enable and configure Microsoft Defender for Cloud.
 1. From the top menu bar, select **Azure subscriptions**. This will bring you into the environment settings where you can select from the available subscriptions.
 
 1. Return to the **Overview** page, and review the **Security posture** tile. You can see your current *Secure score* along with the number of completed controls and recommendations. Selecting this tile will redirect you to a drill-down view across subscriptions
+
+    >**Note:** The Secure Score and other information on the *Security posture* tile can take up to 24 hours to calculate. It may not fully populate during this lab.
 
 1. On the **Regulatory compliance** tile, you can get insights into your compliance posture based on continuous assessment of both Azure and hybrid cloud environments. This tile shows the following standards which are Microsoft Cloud Security benchmark, and Lowest compliance regulatory standard. To view the data we first need to add Security policies.
 
