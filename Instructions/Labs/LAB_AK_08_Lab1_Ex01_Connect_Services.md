@@ -42,7 +42,7 @@ In this task, you will access your Microsoft Sentinel workspace.
 
 In this task, you will connect the Microsoft Defender for Cloud data connector.
 
-   >**Important:** To *Enable* Bi-directional sync, please review the Learning Path 5, Exercise 1, Task 1, and select **Setup** from the *Microsoft Defender for Cloud* navigation menu to verify all eligible Azure subscriptions are onboarded.
+   >**Important:** To *Enable* Bi-directional sync, please rerun  **[Lab 05 Exercise 1](https://microsoftlearning.github.io/SC-200T00A-Microsoft-Security-Operations-Analyst/Instructions/Labs/LAB_AK_05_Lab1_Ex01_Enable_MDC.html)**, Task 2, and select **Setup** from the *Microsoft Defender for Cloud* navigation menu to verify all eligible Azure subscriptions are onboarded.
 
 1. In the Microsoft Sentinel navigation menu, scroll down to the **Content management** section and select **Content Hub**.
 
@@ -54,7 +54,7 @@ In this task, you will connect the Microsoft Defender for Cloud data connector.
 
 1. Select the *Subscription-based Microsoft Defender for Cloud (Legacy)* Data connector check-box, and select **Open connector page**.
 
-1. In the *Configuration* section, under the *Instructions* tab, **select** the checkbox for the "Azure Pass - Sponsorship" subscription and slide the **Status** option to the right.
+1. In the *Configuration* section, under the *Instructions* tab, **select** the checkbox for the *MOC Subscription-XXXXXXXXXXX* and slide the **Status** option to the right.
 
 1. The *Status* should be now **Connected** and "Bi-directional sync" should be *Enabled*.
 
@@ -76,7 +76,7 @@ In this task, you will connect the *Azure Activity* data connector.
 
 1. In the *Configuration* area under the *Instructions* tab, scroll down to "2. Connect your subscriptions...", and select **Launch Azure Policy Assignment Wizard>**.
 
-1. In the **Basics** tab, select the ellipsis button (...) under **Scope** and select your "Azure Pass - Sponsorship" subscription from the drop-down list and click **Select**.
+1. In the **Basics** tab, select the ellipsis button (...) under **Scope** and select your *MOC Subscription-XXXXXXXXXXX* subscription from the drop-down list and click **Select**.
 
 1. Select the **Parameters** tab, choose your *uniquenameDefender* workspace from the **Primary Log Analytics workspace** drop-down list. This action will apply the subscription configuration to send the information to the Log Analytics workspace.
 

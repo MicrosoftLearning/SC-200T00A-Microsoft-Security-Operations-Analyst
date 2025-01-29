@@ -115,7 +115,7 @@ In this task, you test your new scheduled query rule.
 
 1. In the *Welcome to Azure Cloud Shell* window, select **Powershell**.
 
-1. On the *Getting started* page, select **Mount storage account**, and then select your **Azure Pass - Sponsorship** from the *storage account subscription* drop-down menu item and select the **Apply** button.
+1. On the *Getting started* page, select **Mount storage account**, and then select your **MOC Subscription-XXXXXXXXXXX** from the *storage account subscription* drop-down menu item and select the **Apply** button.
 
     >**Important:** Do not select the *No storage account required* radio button option. This wil cause the incident creation to fail.
 
