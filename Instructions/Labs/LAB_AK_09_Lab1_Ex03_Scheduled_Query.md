@@ -14,15 +14,47 @@ Analytics rules search for specific events or sets of events across your environ
 
 >**Important:** The lab exercises for Learning Path #9 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
 
-### Estimated time to complete this lab: 30 minutes
-
-### Task 1: Create a Scheduled Query
-
-In this task, you create a scheduled query and connect it to the Teams channel you created in the previous exercise.
+### Estimated time to complete this lab: 45 minutes
 
 >**Note:** Microsoft Sentinel has been predeployed in your Azure subscription with the name **defenderWorkspace**, and the required *Content Hub* solutions have been installed.
 
->**Important:** To sucessfully complete this task you wil need to rerun Task 3 of **[Lab 08 Exercise 1](https://microsoftlearning.github.io/SC-200T00A-Microsoft-Security-Operations-Analyst/Instructions/Labs/LAB_AK_08_Lab1_Ex01_Connect_Services.html)**.
+<!--- >>**Important:** To sucessfully complete this task you wil need to rerun Task 3 of **[Lab 08 Exercise 1](https://microsoftlearning.github.io/SC-200T00A-Microsoft-Security-Operations-Analyst/Instructions/Labs/LAB_AK_08_Lab1_Ex01_Connect_Services.html)** to connect the Azure Activity data connector. --->
+
+To sucessfully complete this task you wil need to complete the following prerequisite tasks.
+
+### Prerequisite task: Connect the Azure Activity data connector
+
+In this task, you will connect the *Azure Activity* data connector.
+
+1. In the Microsoft Sentinel navigation menu, scroll down to the *Content management* section and select **Content Hub**.
+
+1. In the *Content hub*, search for the **Azure Activity** solution and select it from the list.
+
+1. On the *Azure Activity* solution details page select **Manage**.
+
+    >**Note:** The *Azure Activity* solution installs the *Azure Activity* Data connector, 12 Analytic rules, 14 Hunting queries and 1 Workbook.
+
+1. Select the *Azure Activity* Data connector and select **Open connector page**.
+
+1. In the *Configuration* area under the *Instructions* tab, scroll down to "2. Connect your subscriptions...", and select **Launch Azure Policy Assignment Wizard>**.
+
+1. In the **Basics** tab, select the ellipsis button (...) under **Scope** and select your *MOC Subscription-XXXXXXXXXXX* subscription from the drop-down list and click **Select**.
+
+1. Select the **Parameters** tab, choose your *uniquenameDefender* workspace from the **Primary Log Analytics workspace** drop-down list. This action will apply the subscription configuration to send the information to the Log Analytics workspace.
+
+1. Select the **Remediation** tab and select the **Create a remediation task** checkbox. This action will apply the policy to existing Azure resources.
+
+1. Select the **Review + Create** button to review the configuration.
+
+1. Select **Create** to finish.
+
+1. Please wait for the *Azure Activity* data connector to display a *Connected* status before proceeding.
+
+### Task 1: Create a Scheduled Query rule
+
+In this task, you create a *Microsoft Sentinel analytics scheduled query rule*.
+
+>**Note:** The following tasks currently work best in the Azure Preview portal - <https://preview.portal.azure.com/>.
 
 1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
@@ -40,7 +72,7 @@ In this task, you create a scheduled query and connect it to the Teams channel y
 
 1. From the rule summary blade, make sure you're receiving data by reviewing the green icon under *Data sources: Azure Activity*.
 
-    >**Note:** If you do not see it in a connected state, make sure you completed Task 3 of the Learning Path 6 Lab, Exercise 1.
+    >**Note:** If you do not see it in a connected state, and you reran Learning Path 8 Lab, Exercise 1, Task 3, as noted above, you may need to wait a few minutes for the process to complete.
 
 1. Select **Create rule** to continue.
 
