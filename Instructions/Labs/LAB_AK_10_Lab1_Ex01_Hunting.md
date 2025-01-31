@@ -14,13 +14,157 @@ You're a Security Operations Analyst working at a company that implemented Micro
 
 >**Important:** The lab exercises for Learning Path #10 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
 
->**Note:** The log data created in the Learning Path 9 lab exercises will not be available in this lab without rerunning tasks 1 & 2 of exercise 5, and rerunning *Attack 3* on the WIN1 server in Exercise 6. You can open those instructions in a new browser tab by selecting these links:
+The log data created in the Learning Path 9 lab exercises will not be available in this lab without rerunning the following prerequisite tasks.
 
-**[Lab 09 Exercise 5](https://microsoftlearning.github.io/SC-200T00A-Microsoft-Security-Operations-Analyst/Instructions/Labs/LAB_AK_09_Lab1_Ex05_Attacks.html)**
+<!--- **[Lab 09 Exercise 5](https://microsoftlearning.github.io/SC-200T00A-Microsoft-Security-Operations-Analyst/Instructions/Labs/LAB_AK_09_Lab1_Ex05_Attacks.html)**
 
-**[Lab 09 Exercise 6](https://microsoftlearning.github.io/SC-200T00A-Microsoft-Security-Operations-Analyst/Instructions/Labs/LAB_AK_09_Lab1_Ex06_Perform_Attacks.html)**
+**[Lab 09 Exercise 6](https://microsoftlearning.github.io/SC-200T00A-Microsoft-Security-Operations-Analyst/Instructions/Labs/LAB_AK_09_Lab1_Ex06_Perform_Attacks.html)** --->
 
-### Estimated time to complete this lab: 40 minutes
+### Estimated time to complete this lab: 45 - 60 minutes
+
+### Prerequisite task 1: Connect an On-Premises Server
+
+In this task, you'll connect an on-premises server to your Azure subscription. Azure Arc was pre-installed on this server. The server will be used in next exercises to run simulated attacks that you will later detect and investigate in Microsoft Sentinel.
+
+>**Important:** The next steps are done on a different machine than the one you were previously working. Look for the Virtual Machine name in the references tab.
+
+1. Log in to **WINServer** virtual machine as Administrator with the password: **Passw0rd!** if necessary.  
+
+As described above, Azure Arc has been pre-installed on the **WINServer** machine. You will now connect this machine to your Azure subscription.
+
+1. On the *WINServer* machine, select the *search* icon and type **cmd**.
+
+1. In search results right click *Command Prompt* and select **Run as administrator**.
+
+1. In the Command Prompt window, type the following command. *Do not press enter*:
+
+    ```cmd
+    azcmagent connect -g "defender-RG" -l "EastUS" -s "Subscription ID string"
+    ```
+
+1. Replace the **Subscription ID string** with the *Subscription ID* provided by your lab hoster (*Resources tab). Make sure to keep the quotes.
+
+1. Type **Enter** to run the command (this may take a couple minutes).
+
+    >**Note**: If you see the *How do you want to open this?* browser selection window, select **Microsoft Edge**.
+
+1. In the *Sign in* dialog box, enter your **Tenant Email** and **Tenant Password** provided by your lab hosting provider and select **Sign in**. Wait for the *Authentication complete* message, close the browser tab and return to the *Command Prompt* window.
+
+1. When the commands complete running, leave the *Command Prompt* window open and type the following command to confirm that the connection was successful:
+
+    ```cmd
+    azcmagent show
+    ```
+
+1. In the command output, verify that *Agent status* is **Connected**.
+
+## Prerequisite task 2: Connect a non-Azure Windows Machine
+
+In this task, you'll add an Azure Arc connected, on-premises machine to Microsoft Sentinel.  
+
+>**Note:** Microsoft Sentinel has been predeployed in your Azure subscription with the name **defenderWorkspace**, and the required *Content Hub* solutions have been installed.
+
+1. Login to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.  
+
+1. In the Microsoft Edge browser, navigate to the Azure portal at <https://portal.azure.com>.
+
+1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
+
+1. In the **Enter password** dialog box, copy, and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
+
+1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
+
+1. Select the Microsoft Sentinel **defenderWorkspace**.
+
+1. In the Microsoft Sentinel left navigation menu, scroll down to the *Configuration* section and select **Data connectors**.
+
+1. In the *Data connectors*, search for the **Windows Security Events via AMA** solution and select it from the list.
+
+1. On the *Windows Security Events via AMA* details pane, select **Open connector page**.
+
+    >**Note:** The *Windows Security Events* solution installs both the *Windows Security Events via AMA* and the *Security Events via Legacy Agent* Data connectors. Plus 2 Workbooks, 20 Analytic Rules, and 43 Hunting Queries.
+
+1. In the *Configuration* section, under the *Instructions* tab, select the **Create data collection rule**.
+
+1. Enter **AZWINDCR** for Rule Name, then select **Next: Resources**.
+
+1. Expand your *Subscription* under *Scope* on the *Resources* tab.
+
+    >**Hint:** You can expand the whole *Scope* hierarchy by selecting the ">" before the *Scope* column.
+
+1. Expand **defender-RG** Resource Group, then select **WINServer**.
+
+1. Select **Next: Collect**, and leave the *All Security Events* selected.
+
+1. Select **Next: Review + create**.
+
+1. Select **Create** after *Validation passed* is displayed.
+
+### Prerequisite task 3: Command and Control Attack with DNS
+
+1. Copy and run this command to create a script that will simulate a DNS query to a C2 server:
+
+    ```CommandPrompt
+    notepad c2.ps1
+    ```
+
+1. Select **Yes** to create a new file and copy the following PowerShell script into *c2.ps1*.
+
+    >**Note:** Pasting into the virtual machine file might not show the full script length. Make sure the script matches  the instructions within the *c2.ps1* file.
+
+    ```PowerShell
+    param(
+        [string]$Domain = "microsoft.com",
+        [string]$Subdomain = "subdomain",
+        [string]$Sub2domain = "sub2domain",
+        [string]$Sub3domain = "sub3domain",
+        [string]$QueryType = "TXT",
+        [int]$C2Interval = 8,
+        [int]$C2Jitter = 20,
+        [int]$RunTime = 240
+    )
+    $RunStart = Get-Date
+    $RunEnd = $RunStart.addminutes($RunTime)
+    $x2 = 1
+    $x3 = 1 
+    Do {
+        $TimeNow = Get-Date
+        Resolve-DnsName -type $QueryType $Subdomain".$(Get-Random -Minimum 1 -Maximum 999999)."$Domain -QuickTimeout
+        if ($x2 -eq 3 )
+        {
+            Resolve-DnsName -type $QueryType $Sub2domain".$(Get-Random -Minimum 1 -Maximum 999999)."$Domain -QuickTimeout
+            $x2 = 1
+        }
+        else
+        {
+            $x2 = $x2 + 1
+        }    
+        if ($x3 -eq 7 )
+        {
+            Resolve-DnsName -type $QueryType $Sub3domain".$(Get-Random -Minimum 1 -Maximum 999999)."$Domain -QuickTimeout
+            $x3 = 1
+        }
+        else
+        {
+            $x3 = $x3 + 1
+        }
+        $Jitter = ((Get-Random -Minimum -$C2Jitter -Maximum $C2Jitter) / 100 + 1) +$C2Interval
+        Start-Sleep -Seconds $Jitter
+    }
+    Until ($TimeNow -ge $RunEnd)
+    ```
+
+1. In the Notepad menu, select **File** and then **Save**. 
+
+1. Go back to the Command Prompt window, enter the following command and press Enter. 
+
+    >**Note:** You will see DNS resolve errors. This is expected.
+
+    ```CommandPrompt
+    Start PowerShell.exe -file c2.ps1
+    ```
+
+>**Important:** Do not close these windows. Let this PowerShell script run in the background. The command needs to generate log entries for some hours. You can proceed to the next task and next exercises while this script runs. The data created by this task will be used in the Threat Hunting lab later. This process will not create substantial amounts of data or processing.
 
 ### Task 1: Create a hunting query
 

@@ -60,6 +60,8 @@ In this task, you'll create a Logic App that is used as a Playbook in Microsoft 
 
 In this task, you’ll update the new playbook you created with the proper connection information.
 
+1. When the previous task completed you should be in the *Defender_XDR_Ransomware_Playbook_SecOps-Tasks | Logic app designer* page. If you are not, complete steps 1-5 below.
+
 1. In the Search bar of the Azure portal, type Sentinel, then select Microsoft Sentinel.
 
 1. Select your Microsoft Sentinel Workspace.
@@ -70,7 +72,7 @@ In this task, you’ll update the new playbook you created with the proper conne
 
 1. Select the **Defender_XDR_Ransomware_Playbook_SecOps_Tasks** playbook name link.
 
-1. On the Logic App page for **Defender_XDR_Ransomware_Playbook_SecOps_Tasks**, in the command menu, select Edit.
+1. On the Logic app designer page for **Defender_XDR_Ransomware_Playbook_SecOps_Tasks**, in the command menu, select Edit.
 
     >**Note:** You may need to refresh the page.
 
@@ -96,7 +98,7 @@ In this task, you’ll update the new playbook you created with the proper conne
 
 1. Leave the Analytic rule name as All.
 
-1. Click Add and choose *Condition (And)*.
+1. Select **+ Add** and choose *Condition (And)*.
 
 1. From the drop down, select Tactics.
 
