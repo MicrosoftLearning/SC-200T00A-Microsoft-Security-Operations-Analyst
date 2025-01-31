@@ -58,7 +58,7 @@ In this task, you will connect the Microsoft Defender for Cloud data connector.
 
 1. To enable bi-directional sync, select the **Enable Microsoft Defender for all subscriptions** link.
 
-1. On the *Microsoft Defender for Cloud | Getting started* page, the checkbox for the *MOC Subscription-XXXXXXXXXXX* should be selected, and the *Microsoft Defender plan* should dispLay *On - Partial (30 trial days left)*.
+1. On the *Microsoft Defender for Cloud - Getting started* page, the checkbox for the *MOC Subscription-XXXXXXXXXXX* should be selected, and the *Microsoft Defender plan* should dispLay *On - Partial (30 trial days left)*.
 
 1. Select the **X (Close)** button on the upper right to close the *Getting started* page. You should be back on the *Microsoft Defender for Cloud* configuration page.
 
