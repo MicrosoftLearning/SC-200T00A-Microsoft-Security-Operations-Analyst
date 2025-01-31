@@ -42,7 +42,7 @@ In this task, you will access your Microsoft Sentinel workspace.
 
 In this task, you will connect the Microsoft Defender for Cloud data connector.
 
-   >**Important:** To *Enable* Bi-directional sync, please rerun  **[Lab 05 Exercise 1](https://microsoftlearning.github.io/SC-200T00A-Microsoft-Security-Operations-Analyst/Instructions/Labs/LAB_AK_05_Lab1_Ex01_Enable_MDC.html)**, Task 2, and select **Setup** from the *Microsoft Defender for Cloud* navigation menu to verify all eligible Azure subscriptions are onboarded.
+   <!--- >>**Important:** To *Enable* Bi-directional sync, please rerun  **[Lab 05 Exercise 1](https://microsoftlearning.github.io/SC-200T00A-Microsoft-Security-Operations-Analyst/Instructions/Labs/LAB_AK_05_Lab1_Ex01_Enable_MDC.html)**, Task 2, and select **Setup** from the *Microsoft Defender for Cloud* navigation menu to verify all eligible Azure subscriptions are onboarded. --->
 
 1. In the Microsoft Sentinel navigation menu, scroll down to the **Content management** section and select **Content Hub**.
 
@@ -54,9 +54,15 @@ In this task, you will connect the Microsoft Defender for Cloud data connector.
 
 1. Select the *Subscription-based Microsoft Defender for Cloud (Legacy)* Data connector check-box, and select **Open connector page**.
 
-1. In the *Configuration* section, under the *Instructions* tab, **select** the checkbox for the *MOC Subscription-XXXXXXXXXXX* and slide the **Status** option to the right.
+1. In the *Configuration* section, **select** the checkbox for the *MOC Subscription-XXXXXXXXXXX* and either select the **Connect** link, or slide the **Status** option to the right.
 
-1. The *Status* should be now **Connected** and "Bi-directional sync" should be *Enabled*.
+1. To enable bi-directional sync, select the **Enable Microsoft Defender for all subscriptions** link.
+
+1. On the *Microsoft Defender for Cloud | Getting started* page, the checkbox for the *MOC Subscription-XXXXXXXXXXX* should be selected, and the *Microsoft Defender plan* should dispLay *On - Partial (30 trial days left)*.
+
+1. Select the **X (Close)** button on the upper right to close the *Getting started* page. You should be back on the *Microsoft Defender for Cloud* configuration page.
+
+1. The *Status* for the *MOC Subscription-XXXXXXXXXXX* should be now **Connected** and *Bi-directional sync* should be *Enabled*.
 
     <!--- 1. Scroll down and under the *Create incidents - Recommended!* area, verify that *Create incidents automatically from all alerts generated in this connected service* is **Enabled**. --->
 
