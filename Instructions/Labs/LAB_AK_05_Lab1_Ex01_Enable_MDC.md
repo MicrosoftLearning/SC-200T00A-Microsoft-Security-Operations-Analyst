@@ -85,7 +85,7 @@ In this task, you'll enable and configure Microsoft Defender for Cloud.
 
 1. Review the monitoring extensions. It includes configurations for Virtual Machines, Containers, and Storage Accounts.
 
-1. Select the **Continue** button, or cClose the "Settings & monitoring" page by selecting the 'X' on the upper right of the page.
+1. Select the **Continue** button, or close the "Settings & monitoring" page by selecting the 'X' on the upper right of the page.
 
 1. Close the settings page by selecting the 'X' on the upper right of the page to go back to the **Environment settings**.
 

@@ -9,5 +9,4 @@ param contentSolutions = [
   'Windows Security Events'
   'Common Event Format'
   'Syslog'
-  'Threat Intelligence'
 ]
