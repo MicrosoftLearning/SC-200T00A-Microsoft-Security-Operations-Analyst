@@ -119,7 +119,7 @@ In this task, you start your exploration in the home menu.
     1. Select filter to view the available options, then select the X to close.
     1. Select the home menu icon to open the home menu.
 
-1. Select **Owner settings**. These settings are available to you as a Copilot owner. A Copilot contributor does have not access to these menu options.
+1. Select **Owner settings**. These settings are available to you as a Copilot owner. A Copilot contributor does not have access to these menu options.
     1. For plugins for Security Copilot, select the drop-down for Who can add and manage their own custom plugins to view the available options.
     1. Select drop-down for Who can add and manage custom plugins for everyone in the organization to view the available options. Note, this option is greyed out if Who can add and manage their own custom plugins is set to owners only.
     1. Select the information icon next to "Allow Security Copilot to access data from your Microsoft 365 Services."  This setting must be enabled if you want to use the Microsoft Purview plugin. You'll work with this setting in a later exercise.
@@ -276,7 +276,7 @@ This task is complex and requires the involvement of more senior analysts. In th
 
 1. Return to the incident page by selecting the **Attack story** tab from the top of the page.
 
-1. Select the ellipses next to Copilot's Incident summary and select **Open in Copilot for Security**.
+1. Select the ellipses next to Copilot's Incident summary and select **Open in Security Copilot**.
 
 1. Copilot opens in the standalone experience and shows the incident summary. You can also run more prompts. In this case, you'll run the promptbook for an incident. Select the **prompt icon** ![prompt icon](../Media/prompt-icon.png). 
     1. Select **See all promptbooks**.
