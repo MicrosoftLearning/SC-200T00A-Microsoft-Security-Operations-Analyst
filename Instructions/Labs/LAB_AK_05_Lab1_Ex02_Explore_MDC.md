@@ -34,6 +34,8 @@ In this task, you'll review Regulatory compliance configuration in Microsoft Def
 
 1. Under *Cloud Security*, select **Regulatory compliance** from the left menu items.
 
+    >**Note:** You may need to refresh this page if you do not see the *toolbar* tabs.
+
 1. Select **Manage compliance standards** on the toolbar.
 
 1. Select your subscription.
