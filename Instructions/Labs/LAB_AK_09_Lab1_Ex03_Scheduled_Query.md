@@ -72,7 +72,7 @@ In this task, you create a *Microsoft Sentinel analytics scheduled query rule*.
 
 1. From the rule summary blade, make sure you're receiving data by reviewing the green icon under *Data sources: Azure Activity*.
 
-    >**Note:** If you do not see it in a connected state, and you reran Learning Path 8 Lab, Exercise 1, Task 3, as noted above, you may need to wait a few minutes for the process to complete.
+    >**Note:** If you do not see it in a connected state, and you ran the *Prerequisite task* above, you may need to wait longer for the process to complete.
 
 1. Select **Create rule** to continue.
 
