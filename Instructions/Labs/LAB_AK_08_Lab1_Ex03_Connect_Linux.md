@@ -98,9 +98,9 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
 1. On the *Syslog* solution page select **Manage**.
 
-    >**Note:** The *Syslog* solution installs the *Syslog* Data connector, 5 Analytics rules, 9 Hunting queries, and 1 Workbook.
+    >**Note:** The *Syslog* solution installs two *Syslog* Data connector, 7 Analytics rules, 9 Hunting queries, 2 Parsers and 21 Workbooks.
 
-1. Select the *Syslog* Data connector, and select **Open connector page** on the connector information blade
+1. Select the *Syslog via Legacy Agent* Data connector, and select **Open connector page** on the connector information blade
 
 1. In the *Configuration* section, expand **Install agent on a non-Azure Linux Machine**.
 
