@@ -32,13 +32,13 @@ In this task, you will connect the *Azure Activity* data connector.
 
 1. On the *Azure Activity* solution details page select **Manage**.
 
-    >**Note:** The *Azure Activity* solution installs the *Azure Activity* Data connector, 12 Analytic rules, 14 Hunting queries and 1 Workbook.
-
 1. Select the *Azure Activity* Data connector and select **Open connector page**.
 
 1. In the *Configuration* area under the *Instructions* tab, scroll down to "2. Connect your subscriptions...", and select **Launch Azure Policy Assignment Wizard>**.
 
 1. In the **Basics** tab, select the ellipsis button (...) under **Scope** and select your *MOC Subscription-XXXXXXXXXXX* subscription from the drop-down list and click **Select**.
+
+    >**Note:** *Do not* select an optional Resource Group.
 
 1. Select the **Parameters** tab, choose your *uniquenameDefender* workspace from the **Primary Log Analytics workspace** drop-down list. This action will apply the subscription configuration to send the information to the Log Analytics workspace.
 
