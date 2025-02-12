@@ -52,9 +52,9 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
 
 1. Select the *Common Events Format (CEF) via AMA* Data connector, and select **Open connector page** on the connector information blade.
 
-1. In the *Configuration* section, under the *Instructions* tab, copy to the clipboard the command shown in *1.2 Install the CEF collector on the Linux machine*.
+1. In the *Configuration* section, copy to the clipboard the command shown in *Run the following command to install and apply the CEF collector:*.
 
-1. Launch your **LIN1** virtual machine. Login with the username and password provided by your lab hoster. **Hint:** You might need to press the Enter key to see the login prompt.
+1. Launch your **LIN1** virtual machine. Login with the username and password provided by your lab hoster. **Hint:** You might need to press the Enter key to see the login prompt, and it is a good idea to write down the *Username and Password*.
 
 1. Note the IP address for your LIN1 server. See the screenshot below as an example:
 
@@ -72,16 +72,17 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
 
     ![linux login](../Media/PSconnectLinux.png)
 
-1. You are now ready to paste the *1.2 Install the CEF collector on the Linux machine* command from the earlier step. Make sure that script from Azure is in the clipboard. In PowerShell right-click the top bar and choose **Edit** and then **Paste**. 
+1. You are now ready to paste the *Run the following command to install and apply the CEF collector:* command from the earlier step. Make sure that script from Azure is in the clipboard. In the PowerShell ssh session, right-click to paste the command at the command prompt.
 
-1. Once pasted and before to press Enter, add the character **3** to the word *python* as shown below:
+1. Once pasted and before you press *Enter*, add the character **3** to the word *python* as shown below:
 
     ![ConnectorScript](../Media/ConnectorScript.png)
-
 
 1. Once the script is adjusted press Enter. The script will run against your Linux server remotely. When the script processes properly it should look like this screen:
 
     ![ConnectorScript](../Media/LinuxConnected.png)
+
+    >**Note:** Your screen may not be exactly as shown, but you should see that the *Installation completed successfully*e.
 
 1. Type **exit** to close the remote shell connection to LIN1.
 

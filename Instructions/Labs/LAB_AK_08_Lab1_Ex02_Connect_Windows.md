@@ -70,11 +70,11 @@ In this task, you'll create a Windows virtual machine in Azure.
 
 In this task, you'll connect an on-premises server to your Azure subscription. Azure Arc was pre-installed on this server. The server will be used in next exercises to run simulated attacks that you will later detect and investigate in Microsoft Sentinel.
 
->**Important:** The next steps are done on a different machine than the one you were previously working. Look for the Virtual Machine name in the references tab.
+>**Important:** The next steps are done on a different machine than the one you were previously working.
 
 1. Log in to **WINServer** virtual machine as Administrator with the password: **Passw0rd!** if necessary.  
 
-As described above, Azure Arc has been pre-installed on the **WINServer** machine. You will now connect this machine to your Azure subscription.
+    >**Note:** As described above, Azure Arc has been pre-installed on the **WINServer** machine. You will now connect this machine to your Azure subscription.
 
 1. On the *WINServer* machine, select the *search* icon and type **cmd**.
 
@@ -108,6 +108,10 @@ In this task, you'll connect an Azure Windows virtual machine to Microsoft Senti
 
 >**Note:** Microsoft Sentinel has been predeployed in your Azure subscription with the name **defenderWorkspace**, and the required *Content Hub* solutions have been installed.
 
+1. Login to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.  
+
+1. If necessary, open the Microsoft Edge browser, navigate to the Azure portal at <https://portal.azure.com>, and sign in with the provided credentials.
+
 1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
 1. Select the Microsoft Sentinel **defenderWorkspace**.
@@ -122,15 +126,17 @@ In this task, you'll connect an Azure Windows virtual machine to Microsoft Senti
 
 1. Select the *Windows Security Events via AMA* Data connector, and select **Open connector page** on the connector information blade.
 
-1. In the *Configuration* section, under the *Instructions* tab, select the **Create data collection rule**.
+1. In the *Configuration* section, select the **Create data collection rule**.
 
 1. Enter **AZWINDCR** for Rule Name, then select **Next: Resources**.
 
-1. Select **+Add resource(s)** to select the Virtual Machine we created.
+1. Expand your *MOC Subscription* under *Scope* on the *Resources* tab.
 
-1. Expand **RG-AZWIN01**, then select **AZWIN01**.
+    >**Hint:** You can expand the whole *Scope* hierarchy by selecting the ">" before the *Scope* column.
 
-1. Select **Apply** and then select **Next: Collect**.
+1. Expand **defender-RG**, then select **AZWIN01**.
+
+1. Select **Next: Collect**.
 
 1. Review the different Security Event collection option. Keep *All Security Events* and then select **Next: Review + create**.
 
@@ -146,17 +152,15 @@ In this task, you'll add an Azure Arc connected, non-Azure Windows virtual machi
 
 1. Make sure you are in the *Windows Security Events via AMA* data connector configuration in your Microsoft Sentinel workspace.
 
-1. In the **Instructions** tab, under the *Configuration* section, edit the **AZWINDCR** *data collection rule* by selecting the *pencil* icon.
+1. In the *Configuration* section, edit the **AZWINDCR** *data collection rule* by selecting the *pencil* icon.
 
-1. Select **Next: Resources**, and expand your *Subscription* under *Scope* on the *Resources* tab.
+1. Select **Next: Resources**, and expand your *MOC Subscription* under *Scope* on the *Resources* tab.
 
     >**Hint:** You can expand the whole *Scope* hierarchy by selecting the ">" before the *Scope* column.
 
 1. Expand **defender-RG** (or the Resource Group your created), then select **WINServer**.
 
     >**Important:** If you do not see WINServer, please refer to the Learning Path 3, Exercise 1, Task 4 where you installed Azure Arc in this server.
-
-1. Select **Apply**.
 
 1. Select **Next: Collect**, then **Next: Review + create**.
 

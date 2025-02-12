@@ -48,7 +48,11 @@ Create a Log Analytics workspace, including region option. Learn more about [onb
 
 Deploy Microsoft Sentinel to the workspace.
 
-1. When the workspace deployment completes, select **Refresh** to display the new workspace.
+1. When the workspace deployment completes, select **Home** from the Microsoft Azure "breadcrumb" menu.
+
+1. You should see **Microsoft Sentinel** in the *Azure services* section of the portal. Select it.
+
+1. Select **+ Create** from the menu items.
 
 1. Select the workspace you want to add Sentinel to (created in Task 1).
 
@@ -62,7 +66,7 @@ Deploy Microsoft Sentinel to the workspace.
 
 1. Expand the *Settings* section in the navigation menu and select **Usage and estimated costs**.
 
-1. Select **Data retention**.
+1. Select **Data retention** from the menu items.
 
 1. Change data retention period to **180 days**.
 
@@ -90,6 +94,10 @@ In this task, you will create a watchlist in Microsoft Sentinel.
 
 1. Close Notepad.
 
+1. Select **Home** from the Microsoft Azure "breadcrumb" menu.
+
+1. You should see **Microsoft Sentinel** in the *Azure services* section of the portal. Select it.
+
 1. In Microsoft Sentinel, select the **Watchlist** option under the Configuration area.
 
 1. Select **+ New** from the command bar.
@@ -113,6 +121,8 @@ In this task, you will create a watchlist in Microsoft Sentinel.
 1. Review the settings you entered and select **Create**.
 
 1. The screen returns to the Watchlist page.
+
+1. Select **Refresh** from the menu to see the new watchlist.
 
 1. Select the *HighValueHosts* watchlist and on the right pane, select **View in logs**.
 
@@ -142,13 +152,17 @@ In this task, you will create an indicator in Microsoft Sentinel.
 
 1. In the *Indicator types*, select **malicious-activity**.
 
-1. Enter a **Description**
-
 1. Set the **Valid from** field to today's date.
+
+1. Scroll down to the **Description** and enter *This domain is known to be malicious*.
 
 1. Select **Add**.
 
-1. Select the **Logs** option under the General area. You might want to disable the "Always show queries" option and close the *Queries* window to run the KQL statements.
+1. Select the **Logs** option under the *General* area of the *Sentinel* navigation menu. You might want to disable the "Always show queries" option and close the *Queries* window to run the KQL statements.
+
+    >**Note:** In the default *New Query 1* tab, the **_GetWatchList('HighValueHosts')** query should still be there, and will now produce results if run.
+
+1. Select the *+* sign to create a new query tab.
 
 1. Run the following KQL statement.
 
@@ -175,11 +189,15 @@ In this task, you will change the retention period for the SecurityEvent table.
 
 1. In Log Analytics workspace, select the **Tables** option under the *Settings* area.
 
-1. Search and select the table **SecurityEvent**, and then select the ellipsis button (...).
+1. Search and select the table **SecurityEvent**, and then select the ellipsis link (...).
+
+    >**Note:** You may need to scroll to the right to see the ellipsis link.
 
 1. Select **Manage Table**.
 
-1. Select **180 days** for *Total retention period*. Notice that *Archive period* is only 150 days, since it uses 30 days from the (default) *Interactive retention*.
+1. Change the *Interactive retention period* to **90 days**.
+
+1. Reset the *Total retention period* to **180 days** (if needed). Notice that *Archive period* is set now set to *90 days*, because *Azure Monitor* automatically treats the remaining 90 days of total retention as low-cost, long-term retention.
 
 1. Select **Save** to apply the changes.
 
