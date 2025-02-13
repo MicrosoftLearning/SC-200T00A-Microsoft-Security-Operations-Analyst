@@ -113,7 +113,7 @@ In this task, you will create a detection for the first attack of the previous e
     |Automation rule name|Startup RegKey|
     |Trigger|When incident is created|
     |Actions |Run playbook|
-    |playbook |PostMessageTeams-OnIncident|
+    |playbook |Defender_XDR_Ransomware_Playbook_SecOps-Tasks|
 
     >**Note:** You have already assigned permissions to the playbook, so it will be available.
 

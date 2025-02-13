@@ -102,6 +102,14 @@ In this task, you'll add an Azure Arc connected, on-premises machine to Microsof
 
 ### Prerequisite task 3: Command and Control Attack with DNS
 
+>**Important:** The next steps are done on a different machine than the one you were previously working. Look for the Virtual Machine name in the references tab.
+
+1. Log in to **WINServer** virtual machine as Administrator with the password: **Passw0rd!** if necessary.
+
+1. On the *WINServer* machine, select the *search* icon and type **cmd**.
+
+1. In search results right click *Command Prompt* and select **Run as administrator**.
+
 1. Copy and run this command to create a script that will simulate a DNS query to a C2 server:
 
     ```CommandPrompt
@@ -375,7 +383,7 @@ In this task, you'll use a Search job to look for a C2.
 
 1. Select the **Hunt actions** drop down menu near the middle of the screen above the filters.
 
-1. Select **Create new hunt**. All the queries you selected are cloned for this new hunt.
+1. Select **Create hunt**. All the queries you selected are cloned for this new hunt.
 
 1. Fill out the hunt name and optional fields. The description is a good place to verbalize your hypothesis. The Hypothesis pull down menu is where you set the status of your working hypothesis.
 
