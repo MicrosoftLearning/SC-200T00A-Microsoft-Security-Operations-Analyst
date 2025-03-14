@@ -8,41 +8,37 @@ This document is for presenters preparing to teach the Microsoft Security Virtua
 
 ## Demo prerequisites
 
-The labs for this course require both a Microsoft 365 E5 licensed tenant as well as an Azure subscription.
+The labs for this course require a Microsoft 365 E5 licensed tenant with a Microsoft Defender for Endpoint P2 license and an Azure subscription.
 
-* You can request Microsoft Learning Azure Passes for yourself.
-* Ensure that you request these passes at least two weeks before you will be performing the demos. After receiving the pass, you will need to activate it. 
-* The Azure pass effectively functions in the same way as the publicly available Microsoft Azure Trial Subscription. This means there are limitations on what you can do with the pass.
+* Like the SC-200 Microsoft Security Operations Analyst course, these demos are designed to be run in sn authorized lab hosting environment.
 * The lab instructions are in the [SC-200 Microsoft Learning GitHub repository](https://github.com/MicrosoftLearning/SC-200T00A-Microsoft-Security-Operations-Analyst/tree/master/Instructions/VTD_Demos/).
-* Ensure that the computer you will be using for the demos has the new Microsoft Edge browser installed.
+* Ensure that the computer you are using for the demos has the new Microsoft Edge browser installed.
 
-## Activate Azure Pass
-
->**Note:** The are certain demos that require an Azure subscription connected to an Microsoft 365 E5 tenant. You can use your own Azure subscription and Microsoft 365 E5 tenant if Azure Passes are not available. Visit the [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program/) website to request membership and set up a free Microsoft 365 E5 developer subsription.
+>**Note:** As previously stated, there are demos that require an Azure subscription connected to an Microsoft 365 E5 tenant. You can use your own Azure subscription and Microsoft 365 E5 tenant. Visit the [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program/) website to request membership and set up a free Microsoft 365 E5 developer subsription.
 
 ## Deploy Defender for Endpoint
 
 ### Obtain Your Microsoft 365 Credentials
 
-Once you launch the lab, a free trial tenant will be made available to you to access in the Microsoft Virtual Lab environment. This tenant will be automatically assigned a unique username and password. You must retrieve this username and password so that you can sign in to Azure and Microsoft 365 within the Microsoft Virtual Lab environment.
+Once you launch the hosted lab, a free trial tenant is made available to you in the Microsoft Virtual Lab environment. This tenant is automatically assigned a unique username and password. You must retrieve this username and password so that you can sign in to Azure and Microsoft 365 within the Microsoft Virtual Lab environment.
 
-Because this course can be offered by learning partners using any one of several authorized lab hosting providers, the actual steps involved to retrieve the tenant ID associated with your tenant may vary by lab hosting provider. Therefore, your instructor will provide you with the necessary instructions on how to retrieve this information for your course. The information that you should note for later use includes:
+Because this course can be offered by learning partners using any one of several authorized lab hosting providers, the actual steps involved to retrieve the tenant ID associated with your tenant may vary by lab hosting provider. Therefore, your instructor provides you with the necessary instructions on how to retrieve this information for your course. The information that you should note for later use includes:
 
-	- **Tenant suffix ID.** This ID is for the onmicrosoft.com accounts that you will use to sign in to Microsoft 365 throughout the labs. This is in the format of **{username}@M365xZZZZZZ.onmicrosoft.com**, where ZZZZZZ is your unique tenant suffix ID provided by your lab hosting provider. Record this ZZZZZZ value for later use. When any of the lab steps direct you to sign in to Microsoft 365 portals, you must enter the ZZZZZZ value that you obtained here.
-	- **Tenant password.** This is the password for the admin account provided by your lab hosting provider.
-	
+-**Tenant suffix ID.** This ID is for the onmicrosoft.com accounts that you use to sign in to Microsoft 365 throughout the labs. This is in the format of **{username}@M365xZZZZZZ.onmicrosoft.com**, where ZZZZZZ is your unique tenant suffix ID provided by your lab hosting provider. Record this ZZZZZZ value for later use. When any of the lab steps direct you to sign in to Microsoft 365 portals, you must enter the ZZZZZZ value that you obtained here.
+
+-**Tenant password.** This is the password for the admin account provided by your lab hosting provider.
 
 ### Initialize Microsoft Defender for Endpoint
 
-In this task, you will perform the initialization of the Microsoft Defender for Endpoint.
+In this task, you perform the initialization of the Microsoft Defender for Endpoint.
 
-1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
+1. Sign-in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
-1. In the Edge browser, go to the Microsoft Defender portal at (https://security.microsoft.com).
+1. In the Microsoft Edge browser, go to the Microsoft Defender portal at (https://security.microsoft.com).
 
-1. In the **Sign in** dialog box, copy and paste in the tenant Email account for the admin username provided by your lab hosting provider and then select **Next**.
+1. In the **Sign in** dialog box, copy, and paste in the tenant Email account for the admin username provided by your lab hosting provider and then select **Next**.
 
-1. In the **Enter password** dialog box, copy and paste in the admin's tenant password provided by your lab hosting provider and then select **Sign in**.
+1. In the **Enter password** dialog box, copy, and paste in the admin's tenant password provided by your lab hosting provider and then select **Sign in**.
 
 On the **Microsoft Defender** portal, from the navigation menu, select **Home** from the left.
 
@@ -56,9 +52,9 @@ On the **Microsoft Defender** portal, from the navigation menu, select **Home** 
 
     >**Note:** Disregard pop-up error messages saying *Some of your data cannot be retrieved*. If the message "Hang on! We're preparing new spaces for your data and connecting them" does not appear, or the "Settings > Microsoft Defender XDR > Account" page opens, but you see the message *Failed to load data storage location. Please try again later*, select "Alert service settings" from the "General" menu.
 
-1. When the new workspace initialization completes successfully, the **Home** portal page will display a **Get your SIEM and XDR in one place** banner. And, in **Settings**, the Microsoft Defender XDR General settings for Account, Email notifications, **Preview Features**, Alert service settings, Permissions and roles and Streaming API are now turned on.
+1. When the new workspace initialization completes successfully, the **Home** portal page displays a **Get your SIEM and XDR in one place** banner. And, in **Settings**, the Microsoft Defender XDR General settings for Account, Email notifications, **Preview Features**, Alert service settings, Permissions, and roles and Streaming API are now turned on.
 
-1. When the new space completes successfully, you are going to see the Microsoft 365 Defender General settings for Account, Email notifications, Alert service settings, Permissions and roles and Streaming API. You will also see **Preview Features** turned on.
+1. When the new space completes successfully, you're going to see the Microsoft 365 Defender General settings for Account, Email notifications, Alert service settings, Permissions, and roles and Streaming API. You'll also see **Preview Features** turned on.
 
     >**Note:**: In the hosted lab environment your data storage location should be selected for you. And, it should be in the appropriate Geography for where this training tenant is being managed. You can still select the Data Retention length, but it is not required.
 
@@ -87,7 +83,7 @@ On the **Microsoft Defender** portal, from the navigation menu, select **Home** 
 
 ### Configure Role
 
-In this task, you will configure roles for use with device groups.
+In this task, you configure roles for use with device groups.
 
 1. In the Microsoft 365 Defender portal select **Settings** from the left menu bar. 
 
@@ -112,7 +108,7 @@ In this task, you will configure roles for use with device groups.
 
 ### Configure Device Groups
 
-In this task, you will configure device groups that allow for access control and automation configuration.
+In this task, you configure device groups that allow for access control and automation configuration.
 
 1. Select **Settings** from the left menu bar. 
 
@@ -132,7 +128,7 @@ In this task, you will configure device groups that allow for access control and
 1. . On the Devices tab, for the OS condition select **Windows 10** and select **Next**.
 
 1. On the Preview devices tab, select **Show preview** to see the WIN1 virtual machine. Select **Next**. 
-**Hint:** If you do not see the virtual machine in the preview list, go back and select also *None* for the OS condition. The data for the VM is not populated yet.
+**Hint:** If you don't see the virtual machine in the preview list, go back and select also *None* for the OS condition. The data for the VM isn't populated yet.
 
 1. For the User access tab, select **sg-IT** and then select **Add selected groups**
 
@@ -140,7 +136,7 @@ In this task, you will configure device groups that allow for access control and
 
 1. Device group configuration has changed. Select **Apply changes** to check matches and recalculate groupings.
 
-1. You are going to have two device groups now; the "Regular" you just created and the "Ungrouped devices (default)" with the same reMediation level.
+1. You're going to have two device groups now; the "Regular" you created and the "Ungrouped devices (default)" with the same remediation level.
 
 <!--- 
 ## Deploy sample alerts for Demo in Module 3
@@ -167,15 +163,15 @@ In this task, you will load sample security alerts and review the alert details.
 
 ## Deploy Microsoft Sentinel Workspace for Demo in Module 4
 
-In this task, you will create an Microsoft Sentinel workspace.
+In this task, you create a Microsoft Sentinel workspace.
 
- >**Note:** You will need to have an Azure Pass or other Azure subscription active for the following demo.
+ >**Note:** You will need to have an Azure subscription active for the following demo.
 
-1. In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
+1. In the Microsoft Edge browser, navigate to the Azure portal at https://portal.azure.com.
 
-1. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
+1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
-1. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
+1. In the **Enter password** dialog box, copy, and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
 1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
@@ -205,17 +201,17 @@ In this task, you will create an Microsoft Sentinel workspace.
 
 ### Task 1: Access the Microsoft Sentinel Workspace
 
-In this task, you will access your Microsoft Sentinel workspace.
+In this task, you access your Microsoft Sentinel workspace.
 
-1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
+1. Sign in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
-1. Open the browser, search for, download, and install the new Microsoft Edge browser. Start the new Edge browser.
+1. Open the browser, search for, download, and install the new Microsoft Edge browser. Start the new Microsoft Edge browser.
 
-1. In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
+1. In the Microsoft Edge browser, navigate to the Azure portal at https://portal.azure.com.
 
-1. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
+1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
-1. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
+1. In the **Enter password** dialog box, copy, and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
 1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
@@ -223,7 +219,7 @@ In this task, you will access your Microsoft Sentinel workspace.
 
 ### Task 2: Connect the Azure Activity data connector.
 
-In this task, you will connect the *Azure Activity* data connector.
+In this task, you'll connect the *Azure Activity* data connector.
 
 1. In the Microsoft Sentinel left menus, scroll down to the *Content management* section and select **Content Hub**.
 
@@ -239,11 +235,11 @@ In this task, you will connect the *Azure Activity* data connector.
 
 1. In the *Configuration* area under the *Instructions* tab, scroll down to "2. Connect your subscriptions...", and select **Launch Azure Policy Assignment Wizard>**.
 
-1. In the **Basics** tab, select the ellipsis button (...) under **Scope** and select your "Azure Pass - Sponsorship" subscription from the drop-down list and click **Select**.
+1. In the **Basics** tab, select the ellipsis button (...) under **Scope** and select your hosted Azure subscription from the drop-down list and select **Select**.
 
-1. Select the **Parameters** tab, choose your workspace from the **Primary Log Analytics workspace** drop-down list. This action will apply the subscription configuration to send the information to the Log Analytics workspace.
+1. Select the **Parameters** tab, choose your workspace from the **Primary Log Analytics workspace** drop-down list. This action applies the subscription configuration to send the information to the Log Analytics workspace.
 
-1. Select the **Remediation** tab and select the **Create a remediation task** checkbox. This action will apply the policy to existing Azure resources.
+1. Select the **Remediation** tab and select the **Create a remediation task** checkbox. This action applies the policy to existing Azure resources.
 
 1. Select the **Review + Create** button to review the configuration.
 
@@ -253,7 +249,7 @@ In this task, you will connect the *Azure Activity* data connector.
 
 In this task, you'll create a Windows virtual machine in Azure.
 
-1. Login to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.  
+1. Sign in to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.  
 
 1. In the Microsoft Edge browser, navigate to the Azure portal at https://portal.azure.com.
 
@@ -261,7 +257,7 @@ In this task, you'll create a Windows virtual machine in Azure.
 
 1. In the **Enter password** dialog box, copy, and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
-1. Select **+ Create a Resource**. **Hint:** If you were already in the Azure Portal, you might need to select *Microsoft Azure* from the top bar to go Home.
+1. Select **+ Create a Resource**. **Hint:** If you were already in the Azure portal, you might need to select *Microsoft Azure* from the top bar to go Home.
 
 1. In the **Search services and marketplace** box, enter *Windows 10* and select **Microsoft Window 10** from the drop-down list.
 
@@ -289,7 +285,7 @@ In this task, you'll create a Windows virtual machine in Azure.
 
 1. Scroll down and enter a *Username* of your choosing. **Hint:** Avoid reserved words like admin or root.
 
-1. Enter a *Password* of your choosing. **Hint:** It might be easier to re-use your tenant password. It can be found in the resources tab.
+1. Enter a *Password* of your choosing. **Hint:** It might be easier to reuse your tenant password. It can be found in the resources tab.
 
 1. Scroll down to the bottom of the page and select the checkbox below *Licensing* to confirm you have the eligible license.
 
@@ -301,7 +297,7 @@ In this task, you'll create a Windows virtual machine in Azure.
 
 ### Task 4: Connect an Azure Windows virtual machine
 
-In this task, you'll connect an Azure Windows virtual machine to Microsoft Sentinel.
+In this task, you connect an Azure Windows virtual machine to Microsoft Sentinel.
 
 1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
@@ -335,19 +331,19 @@ In this task, you'll connect an Azure Windows virtual machine to Microsoft Senti
 
 1. Wait a minute and then select **Refresh** to see the new data collection rule listed.
 
-### Task 5: Install Azure Arc and connect an On-Premises server
+### Task 5: Install Azure Arc and connect an on-premises server
 
-In this task, you'll install Azure Arc on an on-premises server to make onboarding easier.
+In this task, you install Azure Arc on an on-premises server to make onboarding easier.
 
 >**Important:** The next steps are done in a different machine than the one you were previously working. Look for the Virtual Machine name references.
 
-1. Log in to **WINServer** virtual machine as Administrator with the password: **Passw0rd!** if required.  
+1. Sign in to **WINServer** virtual machine as Administrator with the password: **Passw0rd!** if necessary.  
 
 1. Open the Microsoft Edge browser and navigate to the Azure portal at https://portal.azure.com.
 
 1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
-1. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
+1. In the **Enter password** dialog box, copy, and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
 1. In the Search bar of the Azure portal, type *Arc*, then select **Azure Arc**.
 
@@ -367,7 +363,7 @@ In this task, you'll install Azure Arc on an on-premises server to make onboardi
 
 1. Review the default available tags. Select **Next** to get to the Download and run script tab.
 
-1. Scroll down and select the **Download** button. **Hint:** if your browser blocks the download, take action in the browser to allow it. In Edge Browser, select the ellipsis button (...) if needed and then select **Keep**.
+1. Scroll down and select the **Download** button. **Hint:** if your browser blocks the download, take action in the browser to allow it. In Microsoft Edge Browser, select the ellipsis button (...) if needed and then select **Keep**.
 
 1. Right-click the Windows Start button and select **Windows PowerShell (Admin)**.
 
@@ -387,7 +383,7 @@ In this task, you'll install Azure Arc on an on-premises server to make onboardi
 
 1. Enter **R** to Run once and press enter (this may take a couple minutes).
 
-1. The setup process will open a new Edge browser tab to authenticate the Azure Arc agent. Select your admin account, wait for the message "Authentication complete" and then go back to the Windows PowerShell window.
+1. The setup process opens a new Microsoft Edge browser tab to authenticate the Azure Arc agent. Select your admin account, wait for the message "Authentication complete" and then go back to the Windows PowerShell window.
 
 1. When the installation finishes, go back to the Azure portal page where you downloaded the script and select **Close**. Close the **Add servers with Azure Arc** to go back to the Azure Arc **Machines** page.
 
@@ -395,9 +391,9 @@ In this task, you'll install Azure Arc on an on-premises server to make onboardi
 
     >**Note:** This could take a couple of minutes.
 
-### Task 6: Protect an On-Premises Server
+### Task 6: Protect an on-premises Server
 
-In this task, you'll add an Azure Arc connected, non-Azure Windows virtual machine to Microsoft Sentinel.  
+In this task, you add an Azure Arc connected, non-Azure Windows virtual machine to Microsoft Sentinel.  
 
    >**Note:** The *Windows Security Events via AMA* data connector requires Azure Arc for non-Azure devices.
 
@@ -421,7 +417,7 @@ In this task, you'll add an Azure Arc connected, non-Azure Windows virtual machi
 
 In this task, you deploy the Microsoft Defender XDR connector.
 
-1. Login to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
+1. Sign in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
 1. In the Microsoft Edge browser, navigate to the Azure portal at (<https://portal.azure.com>).
 
@@ -604,11 +600,11 @@ You should still be connected to the WIN2 virtual machine.  The following instru
 
 ### Task 1: Attack Windows configured with Defender for Endpoint
 
-In this task, you will perform attacks on a host with Microsoft Defender for Endpoint configured.
+In this task, you'll perform attacks on a host with Microsoft Defender for Endpoint configured.
 
-1. Login to `WIN1` virtual machine as Admin with the password: **Pa55w.rd**.  
+1. Sign in to `WIN1` virtual machine as Admin with the password: **Pa55w.rd**.  
 
-1. In the search of the task bar, enter *Command*.  Command Prompt will be displayed in the search results.  Right-click on the Command Prompt and select **Run as Administrator**. Confirm any User Account Control prompts that appear.
+1. In the search of the task bar, enter *Command*.  Command Prompt is displayed in the search results.  Right-click on the Command Prompt and select **Run as Administrator**. Confirm any User Account Control prompts that appear.
 
 1. In the command prompt, enter the command in each row pressing Enter key after each row:
 
@@ -626,9 +622,9 @@ In this task, you will perform attacks on a host with Microsoft Defender for End
 
 ### Task 2: Create C2 (command and control) attack
 
-1. Login to `WIN1` virtual machine as Admin with the password: **Pa55w.rd**.  
+1. Sign in to `WIN1` virtual machine as Admin with the password: **Pa55w.rd**.  
 
-1. In the search of the task bar, enter *Command*.  Command Prompt will be displayed in the search results.  Right-click on the Command Prompt and select **Run as Administrator**. Confirm any User Account Control prompts that appear.
+1. In the search of the task bar, enter *Command*.  Command Prompt is displayed in the search results.  Right-click on the Command Prompt and select **Run as Administrator**. Confirm any User Account Control prompts that appear.
 
 1. Attack 2 - Copy and run this command:
 
@@ -695,7 +691,7 @@ Select **Yes** to create a new file and copy the following PowerShell script int
     Until ($TimeNow -ge $RunEnd)
     ```
 
-At the command prompt, enter the following, enter the command in each row pressing Enter key after each row:
+At the command prompt, enter the following. Enter the command in each row pressing Enter key after each row:
 
     ```PowerShell
     .\c2.ps1
@@ -706,11 +702,11 @@ At the command prompt, enter the following, enter the command in each row pressi
 
 ### Task 2: Attack Windows configured with the Azure Monitor Agent (AMA)
 
-In this task, you will perform attacks on a host with the Security Events connector configured and Sysmon configured.
+In this task, you'll perform attacks on a host with the Security Events connector configured and Sysmon configured.
 
 1. Select the `AZWIN01` virtual machine you created earlier.  
 
-1. In the left menu scroll down to **Operations** and select **Run command**
+1. In the left navigation menu, scroll down to **Operations** and select **Run command**
 
 1. On the **Run command** pane, select **RunPowerShellScript**
 
