@@ -10,7 +10,7 @@ This document is for presenters preparing to teach the Microsoft Security Virtua
 
 The labs for this course require a Microsoft 365 E5 licensed tenant with a Microsoft Defender for Endpoint P2 license and an Azure subscription.
 
-* Like the SC-200 Microsoft Security Operations Analyst course, these demos are designed to be run in sn authorized lab hosting environment.
+* Like the SC-200 Microsoft Security Operations Analyst course, these demos are designed to be run in an authorized lab hosting environment.
 * The lab instructions are in the [SC-200 Microsoft Learning GitHub repository](https://github.com/MicrosoftLearning/SC-200T00A-Microsoft-Security-Operations-Analyst/tree/master/Instructions/VTD_Demos/).
 * Ensure that the computer you are using for the demos has the new Microsoft Edge browser installed.
 
