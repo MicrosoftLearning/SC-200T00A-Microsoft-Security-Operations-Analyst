@@ -10,6 +10,20 @@ lab:
 
 You're a Security Operations Analyst working at a company that is implementing Microsoft Defender XDR and Microsoft Purview. You're assisting colleagues on the the IT compliance team with configuring both Purview Audit (Standard) and Audit (Premium). Their objective is to ensure that all access and modifications to patient data in our network of healthcare facilitie sare accurately logged to meet health data protection regulations.
 
+>**ALERT:** If you receive an error message and are unable to start Audit recording in this exercise, please use these steps as a work around:
+>
+>1. Open an elevated PowerShell session by typing *PowerShell* in the Windows Search form, and then select **Run as Administrator**.
+>1. Install the ExchangeOnlineManagement module by running `Install-Module -Name ExchangeOnlineManagement`
+>1. Connect to ExchangeOnlineManagement by running `Connect-ExchangeOnline`
+>1. When prompted, login by entering the administrator username and password from your lab hosting provider.
+>1. To verify if Audit is enabled, run `Get-AdminAuditLogConfig | FL UnifiedAuditLogIngestionEnabled`
+>1. If false, then the audit log is turned off.
+>1. To enable Audit, run `Set-AdminAuditLogConfig -UnifiedAuditLogIngestionEnabled $true`
+>1. If you receive an error that you are unable to run the script in your organization, run `Enable-OrganizationCustomization`
+>1. Try again to run `Set-AdminAuditLogConfig -UnifiedAuditLogIngestionEnabled $true`
+>1. To confirm Audit is enabled, run `Get-AdminAuditLogConfig | FL UnifiedAuditLogIngestionEnabled`
+>1. Once complete, run `Disconnect-ExchangeOnline` to end your session
+
 ### Estimated time to complete this lab: 15 minutes
 
 ### Task 1: Enable Purview Audit logs
