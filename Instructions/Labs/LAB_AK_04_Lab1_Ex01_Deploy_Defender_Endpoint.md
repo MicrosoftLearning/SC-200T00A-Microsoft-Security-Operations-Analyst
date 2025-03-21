@@ -121,9 +121,9 @@ In this task, you'll configure device groups that allow for access control and a
 
 1. Select **Next**.
 
-1. On the Devices tab, for the OS condition select **Windows 10** and select **Next**.
+1. On the Devices tab, for the OS condition select **Windows 11** and select **Next**.
 
-    >**Note:** Some lab hosting providers may have configured *Windows 11* images for WIN1. You can select either or both.
+    >**Note:** Some lab hosting providers may still have *Windows 10* images for WIN1. You can select either or both.
 
 1. On the Preview devices tab, the *Show preview* button could show the WIN1 virtual machine, but most likely the data isn't populated yet. Select **Next** to continue.
 
