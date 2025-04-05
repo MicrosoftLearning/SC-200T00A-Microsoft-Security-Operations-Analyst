@@ -118,7 +118,7 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
 
 1. Expand **defender-RG**, then select **LIN1**.
 
-    >**Note:** You're *LIN1* virtual machine amy appear with a different name, like ubuntuxxx.
+    >**Note:** You're *LIN1* virtual machine may appear with a different name, like ubuntuxxx.
 
 1. Select **Next: Collect**. In the *Collect* tab, select the  *LOG_ALERT* drop-down menu, and select **LOG_WARNING**.
 
