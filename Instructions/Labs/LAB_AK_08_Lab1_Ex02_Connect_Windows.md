@@ -126,7 +126,7 @@ In this task, you'll connect an Azure Windows virtual machine to Microsoft Senti
 
 1. Select the *Windows Security Events via AMA* Data connector, and select **Open connector page** on the connector information blade.
 
-1. In the *Configuration* section, select the **Create data collection rule**.
+1. In the *Configuration* section, select the **+Create data collection rule** button.
 
 1. Enter **AZWINDCR** for Rule Name, then select **Next: Resources**.
 
