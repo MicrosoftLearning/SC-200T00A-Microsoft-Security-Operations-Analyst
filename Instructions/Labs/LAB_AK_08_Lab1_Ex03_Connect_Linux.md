@@ -65,7 +65,7 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
 1. In the SSH session, at the linux prompt, type the following command. *Do not press enter*:
 
     ```cmd
-    azcmagent connect -g "defender-RG" -l "EastUS" -s "Subscription ID string"
+    azcmagent connect -g "RG-AZWIN01" -l "EastUS" -s "Subscription ID string"
     ```
 
 1. Replace the **Subscription ID string** with the *Subscription ID* provided by your lab hoster (*Resources tab). Make sure to keep the quotes.
