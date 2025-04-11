@@ -134,7 +134,7 @@ In this task, you'll connect an Azure Windows virtual machine to Microsoft Senti
 
     >**Hint:** You can expand the whole *Scope* hierarchy by selecting the ">" before the *Scope* column.
 
-1. Expand **defender-RG**, then select **AZWIN01**.
+1. Expand **RG-AZWIN01**, then select **AZWIN01**.
 
 1. Select **Next: Collect**.
 
