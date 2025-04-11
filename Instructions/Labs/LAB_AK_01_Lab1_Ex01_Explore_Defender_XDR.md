@@ -90,11 +90,7 @@ In this task, you'll assign preset security policies for Exchange Online Protect
 
 ### Task 3: Preparing the Microsoft Defender XDR workspace
 
-1. On the **Microsoft Defender** portal, from the navigation menu, select **Home** from the left.
-
-    >**Note:** You may need to scroll all the way to the menu top.
-
-1. Scroll down the menu items to **Assets** and select **Devices**.
+1. At the **Microsoft Defender** portal *Home* screen, scroll down the navigation menu items to the **Assets** section, and select **Devices**.
 
 1. The process to deploy the Defender XDR workspace should start and you should see messages saying *loading and Initializing* briefly displayed at the top of the page, and then you're going to see an image of a coffee mug and a message that reads: **Hang on! We're preparing new spaces for your data and connecting them.** It takes approximately 5 minutes to finish. *Leave the page open and make sure it finishes since it's required for the next Lab.*
 
