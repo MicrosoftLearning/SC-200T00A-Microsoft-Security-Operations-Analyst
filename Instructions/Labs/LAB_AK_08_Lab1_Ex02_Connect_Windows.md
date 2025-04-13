@@ -10,7 +10,7 @@ lab:
 
 ![Lab overview.](../Media/SC-200-Lab_Diagrams_Mod6_L1_Ex2.png)
 
-You're a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You must learn how to connect log data from the many data sources in your organization. The next source of data is Windows virtual machines inside and outside of Azure, like On-Premises environments or other Public Clouds.
+You're a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You must learn how to connect log data from the many data sources in your organization. The next source of data is Windows virtual machines inside and outside of Azure, like on-premises environments or other Public Clouds.
 
 >**Important:** The lab exercises for Learning Path #8 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
 
@@ -18,7 +18,7 @@ You're a Security Operations Analyst working at a company that implemented Micro
 
 ### Task 1: Create a Windows Virtual Machine in Azure
 
-In this task, you'll create a Windows virtual machine in Azure.
+In this task, you create a Windows virtual machine in Azure.
 
 1. Login to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.  
 
@@ -28,7 +28,7 @@ In this task, you'll create a Windows virtual machine in Azure.
 
 1. In the **Enter password** dialog box, copy, and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
-1. Select **+ Create a Resource**. **Hint:** If you were already in the Azure Portal, you might need to select *Microsoft Azure* from the top bar to go Home.
+1. Select **+ Create a Resource**. **Hint:** If you were already in the Azure portal, you might need to select *Microsoft Azure* from the top bar to go Home.
 
 1. In the **Search services and marketplace** box, enter *Windows 10* and select **Microsoft Window 10** from the drop-down list.
 
@@ -40,7 +40,7 @@ In this task, you'll create a Windows virtual machine in Azure.
 
 1. Select **Dev/Test** and then select **Continue to create a VM**.
 
-1. Select **Create new** for *Resource group*, enter RG-AZWIN01 as Name and select **OK**.
+1. Select **Create new** for *Resource group*, enter RG-AZWIN01 as Name and, select **OK**.
 
     >**Note:** This will be a new resource group for tracking purposes. 
 
@@ -56,7 +56,7 @@ In this task, you'll create a Windows virtual machine in Azure.
 
 1. Scroll down and enter a *Username* of your choosing. **Hint:** Avoid reserved words like admin or root.
 
-1. Enter a *Password* of your choosing. **Hint:** It might be easier to re-use your tenant password. It can be found in the resources tab.
+1. Enter a *Password* of your choosing. **Hint:** It might be easier to reuse your tenant password. It can be found in the resources tab.
 
 1. Scroll down to the bottom of the page and select the checkbox below *Licensing* to confirm you have the eligible license.
 
@@ -66,9 +66,9 @@ In this task, you'll create a Windows virtual machine in Azure.
 
 1. Select **Create**. Wait for the Resource to be created, this may take a few minutes.
 
-### Task 2: Connect an On-Premises Server to Azure
+### Task 2: Connect an on-premises Server to Azure
 
-In this task, you'll connect an on-premises server to your Azure subscription. Azure Arc was pre-installed on this server. The server will be used in next exercises to run simulated attacks that you will later detect and investigate in Microsoft Sentinel.
+In this task, you connect an on-premises server to your Azure subscription. Azure Arc was preinstalled on this server. The server will be used in next exercises to run simulated attacks that you'll later detect and investigate in Microsoft Sentinel.
 
 >**Important:** The next steps are done on a different machine than the one you were previously working.
 
@@ -104,7 +104,7 @@ In this task, you'll connect an on-premises server to your Azure subscription. A
 
 ### Task 3: Connect an Azure Windows virtual machine
 
-In this task, you'll connect an Azure Windows virtual machine to Microsoft Sentinel.
+In this task, you connect an Azure Windows virtual machine to Microsoft Sentinel.
 
 >**Note:** Microsoft Sentinel has been predeployed in your Azure subscription with the name **defenderWorkspace**, and the required *Content Hub* solutions have been installed.
 
@@ -134,7 +134,7 @@ In this task, you'll connect an Azure Windows virtual machine to Microsoft Senti
 
     >**Hint:** You can expand the whole *Scope* hierarchy by selecting the ">" before the *Scope* column.
 
-1. Expand **defender-RG**, then select **AZWIN01**.
+1. Expand **RG-AZWIN01**, then select **AZWIN01**.
 
 1. Select **Next: Collect**.
 
