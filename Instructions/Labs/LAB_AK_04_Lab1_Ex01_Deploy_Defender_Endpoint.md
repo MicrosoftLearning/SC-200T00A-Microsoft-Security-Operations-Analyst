@@ -98,6 +98,7 @@ In this task, you'll configure roles for use with device groups.
 1. On the **Permissions** page, select the following permissions:
 
     |Permissions group|Description|
+    |---|---|
     |Security Operations|Manages day-to-day operations and responds to incidents and advisories|
 
 1. In the pop-out page for *Security operations*, select the **All read and manage permissions** radio button.
@@ -111,7 +112,7 @@ In this task, you'll configure roles for use with device groups.
     |Assignment setting|Value|
     |---|---|
     |Assignment name|**Tier 1 Support**|
-    |Employees|****sg-IT**|
+    |Employees|**sg-IT**|
     |Data sources|**Leave default**|
 
 1. Select **Add**, then select **Next**.
