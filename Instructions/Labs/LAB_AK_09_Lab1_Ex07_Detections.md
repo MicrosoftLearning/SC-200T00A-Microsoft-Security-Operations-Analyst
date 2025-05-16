@@ -127,6 +127,8 @@ In this task, you will create a detection for the first attack of the previous e
 
 In this task, you will create a detection for the second attack of the previous exercise.
 
+>**Note:** We have configured the Local Security Policy on the WINServer machine to log 4732 events. This is configured in the *Advanced Audit Policy Configuration > System Audit Policies - Local Group Policy Object > Account Management > Audit Security Group Management: Success and failure*.
+
 1. In the Microsoft Sentinel portal, select **Logs** from the General section in case you navigated away from this page.
 
 1. **Run** the following KQL Statement to identify any entry that refers to administrators:
@@ -217,7 +219,7 @@ In this task, you will create a detection for the second attack of the previous 
    |Automation rule name|SecurityEvent Local Administrators User Add|
    |Trigger|When incident is created|
    |Actions |Run playbook|
-   |playbook |PostMessageTeams-OnIncident|
+   |playbook |Defender_XDR_Ransomware_Playbook_SecOps-Tasks|
 
    >**Note:** You have already assigned permissions to the playbook, so it will be available.
 
