@@ -30,11 +30,11 @@ In this task, you create a Windows virtual machine in Azure.
 
 1. Select **+ Create a Resource**. **Hint:** If you were already in the Azure portal, you might need to select *Microsoft Azure* from the top bar to go Home.
 
-1. In the **Search services and marketplace** box, enter *Windows 10* and select **Microsoft Window 10** from the drop-down list.
+1. In the **Search services and marketplace** box, enter *Windows 11* and select **Windows 11** from the drop-down list.
 
-1. Select the box for **Microsoft Window 10**.
+1. Select the box for **Windows 11**.
 
-1. Open the *Plan* drop-down list and select **Windows 10 Enterprise, version 22H2**.
+1. Open the *Plan* drop-down list and select **Windows 11 Enterprise, version 22H2**.
 
 1. Select **Start with a pre-set configuration** to continue.
 
@@ -48,15 +48,15 @@ In this task, you create a Windows virtual machine in Azure.
 
 1. Leave **(US) East US** as the default value for *Region*.
 
-1. Scroll down and review the *Image* for the virtual machine. If it appears empty, select **Windows 10 Enterprise, version 22H2**.
+1. Scroll down and review the *Image* for the virtual machine. If it appears empty, select **Windows 11 Enterprise, version 22H2**.
 
-1. Review the *Size* for the virtual machine. If it appears empty, select **See all sizes**, choose the first VM size under *Most used by Azure users* and select **Select**.
+1. Review the *Size* for the virtual machine. If it appears empty, select **See all sizes**, choose the first (D-series) VM size listed and select **Select**.
 
     >**Note:** If you see the message: *This image is not supported for Azure Automanage. To disable this feature,navigate to the Management tab. Otherwise, select a supported image.* Go to the Management tab and disable "Automanage". The creation process will succeed afterwards.
 
 1. Scroll down and enter a *Username* of your choosing. **Hint:** Avoid reserved words like admin or root.
 
-1. Enter a *Password* of your choosing. **Hint:** It might be easier to reuse your tenant password. It can be found in the resources tab.
+1. Enter a *Password* of your choosing. **Hint:** It might be easier to reuse your LabUser password. It can be found in the resources tab. You may need to enter it twice.
 
 1. Scroll down to the bottom of the page and select the checkbox below *Licensing* to confirm you have the eligible license.
 
