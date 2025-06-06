@@ -77,7 +77,7 @@ In this task, you'll explore using notebooks in Microsoft Sentinel.
 
 1. Select the **Review + Create** button at the bottom of the screen, then scroll down and select **Create**. Close any feedback window that may appear. This takes a few minutes, you'll see a notification (bell icon) when it's done and the *Compute instance* left icon turns from blue to green.
 
-1. Once the Compute has been created and running, verify that the kernel to use is *Python 3.8 - Pytorch and Tensorflow*. **Hint:** This is shown in the right of the command bar.
+1. Once the Compute has been created and running, verify that the kernel to use is *Python 3.10 - Pytorch and Tensorflow*. **Hint:** This is shown in the right of the command bar.
 
 1. Select the **Authenticate** button and wait for the authentication to complete.
 
