@@ -14,7 +14,7 @@ You're a Security Operations Analyst working at a company that is implementing M
 
 >**Important:** The [LA Demo](https://aka.ms/lademo) Log Analytics workspace used for this lab, is undergoing a transition. If you are unable access the environment or if you receive an error message, you can try running the queries in your own Azure Subscription with Microsoft Sentinel deployed. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/?azure-portal=true) before you begin.
 
->**Note:** If you do choose to use the [LA Demo](https://aka.ms/lademo) Log Analytics workspace for this lab, setting a Custom Time Range in the Query Window is rerequired. We reccomend setting the custom time range to April 1, 2025.
+>**Note:** If you do choose to use the [LA Demo](https://aka.ms/lademo) Log Analytics workspace for this lab, setting a Custom Time Range in the Query Window is required. We reccomend setting the custom time range to April 1, 2025.
 
 <!--- 
 >**Note:** Per Microsoft's *Secure Future Initiative* (SFI), any information that could be considered *Personally Identifiable Information* (PII), such as locations, usernames, IP addresses, resource IDs etc.. have been removed from the LA Demo tables such as *SigninLogs*. This may produce *No results were found* messages for some queries. --->
@@ -25,7 +25,7 @@ You're a Security Operations Analyst working at a company that is implementing M
 
 ### Task 1: Access the KQL testing area
 
-In this task, you'll access a Log Analytics environment where you can practice writing KQL statements.
+In this task, you access a Log Analytics environment where you can practice writing KQL statements.
 
   >**Note:** If you receive the message that *No results were found* for the default time period, change the *Time range* to *Last 7 days*.
 
