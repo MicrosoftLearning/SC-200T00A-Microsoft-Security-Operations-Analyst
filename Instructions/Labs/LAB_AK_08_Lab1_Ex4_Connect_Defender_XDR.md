@@ -14,9 +14,7 @@ You're a Security Operations Analyst working at a company that deployed both Mic
 
 >**Note:**
 > The environment for this exercise is a simulation generated from the product. As a limited simulation, links on a page may not be enabled and text-based inputs that fall outside of the specified script may not be supported. A pop-up message will display stating, "This feature is not available within the simulation." When this occurs, select OK and continue the exercise steps.
->
->
->:::image type="content" source="../Media/simulation-pop-up-error.png" alt-text="Screenshot of pop-up screen indicating that this feature is not available within the simulation.":::
+![Pop-up error message](../Media/simulation-pop-up-error.png)
 
 ### Task 1: Connect Defender XDR
 
