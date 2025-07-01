@@ -37,7 +37,7 @@ In this task, you walk through the process of ensuring you have the appropriate 
 
 Once you're assigned the User Access Administrator role in Azure, you can assign a user the necessary access to provision SCUs for Copilot.  For the purpose of this exercise only, which is to show you the steps involved,  you will be assigning yourself the necessary access.  The steps that follow will guide you through the process.
 
-1. Open the simulated environment by selecting this link: **[Azure portal](https://app.highlights.guide/start/6373500f-1f10-4584-a14e-ca0b4aa7399f?link=1&token=40f793d4-2956-40a4-b11a-6b3d4f92557f&azure-portal=true)**.
+1. Open the simulated environment by selecting this link: **[Azure portal](https://app.highlights.guide/start/6d7270b9-7187-456a-ac16-97bc227d5c27?token=045faae1-1078-4eac-bf56-e12472eddaf9&link=1&azure-portal=true)**.
 
 1. You'll start by enabling Access management for Azure resources. To access this setting:
     1. From the Azure portal, select **Microsoft Entra ID**.
@@ -68,7 +68,7 @@ In this task, you go through the steps of provisioning capacity for your organiz
 
 For this exercise, you provision capacity through Security Copilot. When you first open Security Copilot, a wizard guides you through the steps in setting up capacity for your organization.
 
-1. Open the simulated environment by selecting this link: **[Microsoft Security Copilot](https://app.highlights.guide/start/6373500f-1f10-4584-a14e-ca0b4aa7399f?link=0&token=40f793d4-2956-40a4-b11a-6b3d4f92557f&azure-portal=true)**.
+1. Open the simulated environment by selecting this link: **[Microsoft Security Copilot](https://app.highlights.guide/start/6d7270b9-7187-456a-ac16-97bc227d5c27?token=045faae1-1078-4eac-bf56-e12472eddaf9&azure-portal=true)**.
 
 1. Follow the steps in the Wizard, select **Get started**.
 1. On this page, you set up your security capacity. For any of the fields listed below, you can select the information icon for more information.
@@ -104,7 +104,7 @@ This exercise should take approximately **15** minutes to complete.
 
 In this task, you start your exploration in the home menu.
 
-1. Open the simulated environment by selecting this link: **[Microsoft Security Copilot](https://app.highlights.guide/start/2cac767e-42c4-4058-afbb-a9413aac461d?link=0&token=40f793d4-2956-40a4-b11a-6b3d4f92557f&azure-portal=true)**.
+1. Open the simulated environment by selecting this link: **[Microsoft Security Copilot](https://app.highlights.guide/start/7608581a-ee3a-4fe0-be03-309a58b78c60?token=045faae1-1078-4eac-bf56-e12472eddaf9&azure-portal=true)**.
 
 1. Select the **Menu** icon ![home menu icon](../Media/home-menu-icon.png), which is sometimes referred to as the hamburger icon.
 
@@ -215,7 +215,7 @@ This exercise should take approximately **30** minutes to complete.
 
 #### Sub-task 1: Explore Incident summary and guided responses
 
-1. Open the simulated environment by selecting this link: **[Microsoft Defender portal](https://app.highlights.guide/start/f4f590f6-8937-40f9-91ec-632de546ab98?token=40f793d4-2956-40a4-b11a-6b3d4f92557f&azure-portal=true)**.
+1. Open the simulated environment by selecting this link: **[Microsoft Defender portal](https://app.highlights.guide/start/be8a91c3-3979-4048-ad38-fd38deaf7117?token=045faae1-1078-4eac-bf56-e12472eddaf9&azure-portal=true)**.
 
 1. From the Microsoft Defender portal:
     1. Expand **Investigation & response**.
