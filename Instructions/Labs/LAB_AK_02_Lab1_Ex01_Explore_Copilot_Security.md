@@ -235,7 +235,7 @@ This exercise should take approximately **30** minutes to complete.
 
 #### Sub-task 2:  Explore device and identity summary
 
-1. From the incident page, select the first alert **Suspicious URL clicked**.
+1. From the incident page, select the first alert **Suspicious RDP session**.
 
 1. Copilot  automatically generates an **Alert summary**, which provides a wealth of information for further analysis. For example, the summary identifies suspicious activity, it identifies data collection activities, credential access, malware, discovery activities, and more.
 
