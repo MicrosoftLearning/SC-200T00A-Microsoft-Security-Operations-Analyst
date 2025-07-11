@@ -9,4 +9,5 @@ param contentSolutions = [
   'Windows Security Events'
   'Common Event Format'
   'Syslog'
+  'Microsoft Defender XDR'
 ]
