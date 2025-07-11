@@ -36,6 +36,8 @@ In this task, you will access your Microsoft Sentinel workspace.
 
 1. Select the Microsoft Sentinel **defenderWorkspace**.
 
+   >**NOTE**: You may want to select the Hide panel "**<<**" button at the top-right of the Microsoft Sentinel workspace pane to have more room in the details pane.
+
 1. Proceed to the next task.
 
 ### Task 2: Connect the Microsoft Defender for Cloud data connector
@@ -88,7 +90,7 @@ In this task, you will connect the *Azure Activity* data connector.
 
     >**Note:** *Do not* select an optional Resource Group.
 
-1. Select the **Parameters** tab, choose your *uniquenameDefender* workspace from the **Primary Log Analytics workspace** drop-down list. This action will apply the subscription configuration to send the information to the Log Analytics workspace.
+1. Select the **Parameters** tab, choose **defenderWorkspace** from the **Primary Log Analytics workspace** drop-down list and click **Select**. This action will apply the subscription configuration to send the information to the Log Analytics workspace.
 
 1. Select the **Remediation** tab and select the **Create a remediation task** checkbox. This action will apply the policy to existing Azure resources.
 
