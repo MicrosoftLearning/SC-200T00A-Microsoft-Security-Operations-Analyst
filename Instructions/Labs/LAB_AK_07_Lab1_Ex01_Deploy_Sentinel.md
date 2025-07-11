@@ -100,7 +100,7 @@ In this task, you will create a watchlist in Microsoft Sentinel.
 
 1. Select your workspace.
    
-   >**NOTE**: You may want to select the Hide panel "**<<**" button at the top-right of the Microsoft Sentinel workspace pane to have more room in the details pane.
+   >**Hint**: You may want to select the Hide panel "**<<**" button at the top-right of the Microsoft Sentinel workspace pane to have more room in the details pane.
 
 1. In Microsoft Sentinel, select the **Watchlist** option under the Configuration area.
 
