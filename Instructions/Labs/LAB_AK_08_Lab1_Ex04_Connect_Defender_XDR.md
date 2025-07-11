@@ -23,7 +23,7 @@ In this task, you deploy the Microsoft Defender XDR connector.
 
 1. Login to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
-1. In the Microsoft Edge browser, open the simulated environment by selecting this link: **[Azure portal]( https://app.highlights.guide/start/1c894b46-4b0a-40cb-b0f0-1e1c86c615f3?token=16d48b6c-eace-4a1f-8050-098d29d23a89)**.
+1. In the Microsoft Edge browser, open the simulated environment by selecting this link: [**Azure portal**]( https://app.highlights.guide/start/1c894b46-4b0a-40cb-b0f0-1e1c86c615f3?token=16d48b6c-eace-4a1f-8050-098d29d23a89).
 
 1. On the Azure portal *Home* page, select the **Microsoft Sentinel** icon.
 
@@ -70,6 +70,10 @@ In this task, you continue with the simulation and connect a Microsoft Sentinel 
 1. Select the **Close** button.
 
 1. On the **Defender XDR** portal **Home** screen, you should see a banner at the top with the message, *Your unified SIEM and XDR is ready*. Select the **Start Hunting** button.
+
+   >**Hint**: If you do not see the blue "Start hunting" button below "Your unified SIEM and XDR is ready", make the Edge windows wider or reduce the Zoom to less than 100%. As an alternative, in the navigation pane on the left expand **Investigation & response**, then expand **Hunting** and select **Advanced hunting**.
+
+   >**Hint**: Once the Advanced hunting pane is open, select the "**X**" at the upper-right corner of the Copilot pane to close it.
 
 1. In *Advanced hunting*, you should see a message to "Explore your content from Microsoft Sentinel". In the *Advanced hunting* navigation menu, you can find the *Microsoft Sentinel* tables, functions, and queries under the corresponding tabs.
 

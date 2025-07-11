@@ -38,6 +38,8 @@ In this task, you will access your Microsoft Sentinel workspace.
 
 1. Select the Microsoft Sentinel **defenderWorkspace**.
 
+   >**Hint**: You may want to select the Hide panel "**<<**" button at the top-right of the Microsoft Sentinel workspace pane to have more room in the details pane.
+
 ### Task 2: Connect a Linux Host using the Common Event Format connector
 
 In this task, you will connect a Linux host to Microsoft Sentinel with the Common Event Format (CEF) via AMA data connector. You will also create a Data Collection Rule (DCR) to collect the events. Azure Arc was pre-installed on this Linux host as required for creating a DCR.
@@ -97,6 +99,8 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
 1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
 1. Select the Microsoft Sentinel **defenderWorkspace**.
+
+   >**Hint**: You may want to select the Hide panel "**<<**" button at the top-right of the Microsoft Sentinel workspace pane to have more room in the details pane.
 
 1. In the Microsoft Sentinel left navigation menu, scroll down to the *Content management* section and select **Content Hub**.
 
