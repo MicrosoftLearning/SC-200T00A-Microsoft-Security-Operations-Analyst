@@ -83,7 +83,7 @@ In this task, you connect an on-premises server to your Azure subscription. Azur
 1. In the Command Prompt window, type the following command. *Do not press enter*:
 
     ```cmd
-    azcmagent connect -g "defender-RG" -l "EastUS" -s "Subscription ID string"
+    azcmagent connect -g "RG-AZWIN01" -l "EastUS" -s "Subscription ID string"
     ```
 
 1. Replace the **Subscription ID string** with the *Subscription ID* provided by your lab hoster (*Resources tab). Make sure to keep the quotes.
@@ -115,6 +115,8 @@ In this task, you connect an Azure Windows virtual machine to Microsoft Sentinel
 1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
 1. Select the Microsoft Sentinel **defenderWorkspace**.
+
+   >**Hint**: You may want to select the Hide panel "**<<**" button at the top-right of the Microsoft Sentinel workspace pane to have more room in the details pane.
 
 1. In the Microsoft Sentinel left navigation menu, scroll down to the *Content management* section and select **Content Hub**.
 
@@ -158,7 +160,7 @@ In this task, you'll add an Azure Arc connected, non-Azure Windows virtual machi
 
     >**Hint:** You can expand the whole *Scope* hierarchy by selecting the ">" before the *Scope* column.
 
-1. Expand **defender-RG** (or the Resource Group your created), then select **WINServer**.
+1. Expand **RG-AZWIN01** (or the Resource Group your created), then select **WINServer**.
 
     >**Important:** If you do not see WINServer, please refer to the Learning Path 3, Exercise 1, Task 4 where you installed Azure Arc in this server.
 
