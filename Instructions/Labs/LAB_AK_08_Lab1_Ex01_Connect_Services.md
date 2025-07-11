@@ -36,7 +36,7 @@ In this task, you will access your Microsoft Sentinel workspace.
 
 1. Select the Microsoft Sentinel **defenderWorkspace**.
 
-   >**NOTE**: You may want to select the Hide panel "**<<**" button at the top-right of the Microsoft Sentinel workspace pane to have more room in the details pane.
+   >**Hint**: You may want to select the Hide panel "**<<**" button at the top-right of the Microsoft Sentinel workspace pane to have more room in the details pane.
 
 1. Proceed to the next task.
 
