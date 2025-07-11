@@ -62,7 +62,7 @@ Deploy Microsoft Sentinel to the workspace.
 
 1. In the Microsoft Azure "breadcrumb" menu, select **Home**.
 
-1. In the Search bar of the Azure portal, type "Log Analytics" and select the workspace created in Task 1.
+1. In the Search bar of the Azure portal, type *Workspace* and, under "Resources", select the workspace created in Task 1.
 
 1. Expand the *Settings* section in the navigation menu and select **Usage and estimated costs**.
 
@@ -98,6 +98,10 @@ In this task, you will create a watchlist in Microsoft Sentinel.
 
 1. You should see **Microsoft Sentinel** in the *Azure services* section of the portal. Select it.
 
+1. Select your workspace.
+   
+   >**NOTE**: You may want to select the Hide panel "**<<**" button at the top-right of the Microsoft Sentinel workspace pane to have more room in the details pane.
+
 1. In Microsoft Sentinel, select the **Watchlist** option under the Configuration area.
 
 1. Select **+ New** from the command bar.
@@ -124,7 +128,7 @@ In this task, you will create a watchlist in Microsoft Sentinel.
 
 1. Select **Refresh** from the menu to see the new watchlist.
 
-1. Select the *HighValueHosts* watchlist and on the right pane, select **View in logs**.
+1. Select the *HighValueHosts* watchlist and on the right pane, select **View in logs**. If the right-side pane does not open when you select *HighValueHosts*, select the show panel "**<<**" button in the right margin.
 
     >**Important:** It could take up to ten minutes for the watchlist to appear. **Please continue to with the following task and run this command on the next lab**.
 
@@ -138,7 +142,7 @@ In this task, you will create an indicator in Microsoft Sentinel.
 
 1. In Microsoft Sentinel, select the **Threat intelligence** option in the Threat management area.
 
-1. Select **+ Add New** from the command bar.
+1. Select **+ New** from the command bar.
 
 1. Select the **TI Object**.
 
