@@ -10,7 +10,7 @@ lab:
 
 ![Lab overview.](../Media/SC-200-Lab_Diagrams_Mod6_L1_Ex1.png)
 
-You are a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You must learn how to connect log data from the many data sources in your organization. The organization has data from Microsoft 365, Microsoft 365 Defender, Azure resources, non-azure virtual machines, etc. You start connecting the Microsoft sources first.
+You're a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You must learn how to connect log data from the many data sources in your organization. The organization has data from Microsoft 365, Microsoft Defender XDR, Azure resources, nonazure virtual machines, etc. You start connecting the Microsoft sources first.
 
 >**Important:** The lab exercises for Learning Path #8 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
 
@@ -18,7 +18,7 @@ You are a Security Operations Analyst working at a company that implemented Micr
 
 ### Task 1: Access the Microsoft Sentinel Workspace
 
-In this task, you will access your Microsoft Sentinel workspace.
+In this task, you'll access your Microsoft Sentinel workspace.
 
 >**Note:** Microsoft Sentinel has been predeployed in your Azure subscription with the name **defenderWorkspace**, and the required *Content Hub* solutions have been installed.
 
@@ -40,29 +40,29 @@ In this task, you will access your Microsoft Sentinel workspace.
 
 ### Task 2: Connect the Microsoft Defender for Cloud data connector
 
-In this task, you will connect the Microsoft Defender for Cloud data connector.
-
-   <!--- >>**Important:** To *Enable* Bi-directional sync, please rerun  **[Lab 05 Exercise 1](https://microsoftlearning.github.io/SC-200T00A-Microsoft-Security-Operations-Analyst/Instructions/Labs/LAB_AK_05_Lab1_Ex01_Enable_MDC.html)**, Task 2, and select **Setup** from the *Microsoft Defender for Cloud* navigation menu to verify all eligible Azure subscriptions are onboarded. --->
+In this task, you'll connect the Microsoft Defender for Cloud data connector.
 
 1. In the Microsoft Sentinel navigation menu, scroll down to the **Content management** section and select **Content Hub**.
 
 1. In the *Content hub*, search for the **Microsoft Defender for Cloud** solution and select it from the list.
 
-1. On the *Microsoft Defender for Cloud* solution details page select **Manage**.
+1. On the Microsoft Defender for Cloud solution details page, select **Manage**.
 
     >**Note:** The *Microsoft Defender for Cloud* solution installs the *Subscription-based Microsoft Defender for Cloud (Legacy)* Data connector, the *Tenant-based Microsoft Defender for Cloud (Preview)* Data connector, and an Analytics rule. The *Tenant-based Microsoft Defender for Cloud (Preview)* Data connector is used when a tenant has multiple subscriptions.
 
 1. Select the *Subscription-based Microsoft Defender for Cloud (Legacy)* Data connector check-box, and select **Open connector page**.
 
-1. In the *Configuration* section, **select** the checkbox for the *MOC Subscription-XXXXXXXXXXX* and either select the **Connect** link, or slide the **Status** option to the right.
+1. In the *Configuration* section, **select** the checkbox for the *MOC Subscription-XXXXXXXXXXX* and select the **Connect** link.
 
 1. To enable bi-directional sync, select the **Enable Microsoft Defender for all subscriptions** link.
 
     >**Note:** You may have to scroll to the right to see the link.
 
-1. On the *Microsoft Defender for Cloud - Getting started* page, the checkbox for the *MOC Subscription-XXXXXXXXXXX* should be selected, and the *Microsoft Defender plan* should display *On - Partial (30 trial days left)*.
+1. On the *Microsoft Defender for Cloud - Getting started* page, the checkbox for the *MOC Subscription-XXXXXXXXXXX* should be selected, and the *Microsoft Defender plan* should display *Off (30 trial days left)*.
 
 1. Select the **X (Close)** button on the upper right to close the *Getting started* page. You should be back on the *Microsoft Defender for Cloud* configuration page.
+
+1. Slide the **Status** option to the right.
 
 1. The *Status* for the *MOC Subscription-XXXXXXXXXXX* should now be **Connected** and *Bi-directional sync* should be *Enabled*.
 
@@ -70,7 +70,7 @@ In this task, you will connect the Microsoft Defender for Cloud data connector.
 
 ### Task 3: Connect the Azure Activity data connector
 
-In this task, you will connect the *Azure Activity* data connector.
+In this task, you'll connect the *Azure Activity* data connector.
 
 1. In the Microsoft Sentinel navigation menu, scroll down to the *Content management* section and select **Content Hub**.
 
@@ -88,9 +88,9 @@ In this task, you will connect the *Azure Activity* data connector.
 
     >**Note:** *Do not* select an optional Resource Group.
 
-1. Select the **Parameters** tab, choose your *uniquenameDefender* workspace from the **Primary Log Analytics workspace** drop-down list. This action will apply the subscription configuration to send the information to the Log Analytics workspace.
+1. Select the **Parameters** tab, choose your *uniquenameDefender* workspace from the **Primary Log Analytics workspace** drop-down list. This action applies the subscription configuration to send the information to the Log Analytics workspace.
 
-1. Select the **Remediation** tab and select the **Create a remediation task** checkbox. This action will apply the policy to existing Azure resources.
+1. Select the **Remediation** tab and select the **Create a remediation task** checkbox. This action applies the policy to existing Azure resources.
 
 1. Select the **Review + Create** button to review the configuration.
 
