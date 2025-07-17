@@ -8,7 +8,7 @@ lab:
 
 ## Lab scenario
 
-You are a Security Operations Analyst working at a company that is implementing Microsoft Sentinel. You are responsible for setting up the Microsoft Sentinel environment to meet the company requirement to minimize cost, meet compliance regulations, and provide the most manageable environment for your security team to perform their daily job responsibilities.
+You're a Security Operations Analyst working at a company that is implementing Microsoft Sentinel. You're responsible for setting up the Microsoft Sentinel environment to meet the company requirement to minimize cost, meet compliance regulations, and provide the most manageable environment for your security team to perform their daily job responsibilities.
 
 >**Important:** The lab exercises for Learning Path #7 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
 
@@ -54,7 +54,7 @@ Deploy Microsoft Sentinel to the workspace.
 
 1. Select **+ Create** from the menu items.
 
-1. Select the workspace you want to add Sentinel to (created in Task 1).
+1. Select the workspace you want to add Microsoft Sentinel to (created in Task 1).
 
 1. Select **Add**.
 
@@ -74,7 +74,7 @@ Deploy Microsoft Sentinel to the workspace.
 
 ### Task 4: Create a Watchlist
 
-In this task, you will create a watchlist in Microsoft Sentinel.
+In this task, you'll create a watchlist in Microsoft Sentinel.
 
 1. In the search box at the bottom of the Windows 10 screen, enter *Notepad*. Select **Notepad** from the results.
 
@@ -96,7 +96,9 @@ In this task, you will create a watchlist in Microsoft Sentinel.
 
 1. Select **Home** from the Microsoft Azure "breadcrumb" menu.
 
-1. You should see **Microsoft Sentinel** in the *Azure services* section of the portal. Select it.
+1. You should see **Microsoft Sentinel** tile in the *Azure services* section of the portal. Select it.
+
+1. Select the **defenderWorkspace** Microsoft Sentinel workspace.
 
 1. In Microsoft Sentinel, select the **Watchlist** option under the Configuration area.
 
@@ -112,9 +114,9 @@ In this task, you will create a watchlist in Microsoft Sentinel.
 
 1. Select, **Next: Source >**.
 
-1. Select **Browse for files** under *Upload file* and browse for the *HighValue.csv* file you just created.
+1. Select **Browse for files** under *Upload file* and browse for the *HighValue.csv* file you created.
 
-1. In the *SearchKey field* select **Hostname**.
+1. In the *SearchKey field,* select **Hostname**.
 
 1. Select **Next: Review and Create >**.
 
@@ -134,7 +136,7 @@ In this task, you will create a watchlist in Microsoft Sentinel.
 
 ### Task 5: Create a Threat Indicator
 
-In this task, you will create an indicator in Microsoft Sentinel.
+In this task, you'll create an indicator in Microsoft Sentinel.
 
 1. In Microsoft Sentinel, select the **Threat intelligence** option in the Threat management area.
 
@@ -148,7 +150,7 @@ In this task, you will create an indicator in Microsoft Sentinel.
 
 1. For Domain, enter a domain name, for example type *contoso.com*.
 
-1. In the **Name** field enter the same value used for the Domain.
+1. In the **Name** field, enter the same value used for the Domain.
 
 1. In the *Indicator types*, select **malicious-activity**.
 
@@ -181,7 +183,7 @@ In this task, you will create an indicator in Microsoft Sentinel.
 
 ### Task 6: Configure log retention
 
-In this task, you will change the retention period for the SecurityEvent table.
+In this task, you'll change the retention period for the SecurityEvent table.
 
 1. In Microsoft Sentinel, select the **Settings** option under the *Configuration* area.
 
@@ -197,7 +199,7 @@ In this task, you will change the retention period for the SecurityEvent table.
 
 1. Change the *Interactive retention period* to **90 days**.
 
-1. Reset the *Total retention period* to **180 days** (if needed). Notice that *Archive period* is set now set to *90 days*, because *Azure Monitor* automatically treats the remaining 90 days of total retention as low-cost, long-term retention.
+1. Reset the *Total retention period* to **180 days** (if needed). Notice that *Archive period* is set to *90 days*, because *Azure Monitor* automatically treats the remaining 90 days of total retention as low-cost, long-term retention.
 
 1. Select **Save** to apply the changes.
 
