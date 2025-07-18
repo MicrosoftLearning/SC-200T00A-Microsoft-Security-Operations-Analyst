@@ -26,7 +26,7 @@ Create a Log Analytics workspace, including region option. Learn more about [onb
 
 1. In the **Enter password** dialog box, copy, and paste in the admin's tenant password provided by your lab hosting provider and then select **Sign in**.
 
-1. In the Search bar of the Azure portal, type "Microsoft Sentinel", then select
+1. In the Search bar of the Azure portal, type "Microsoft Sentinel," then select
 
 1. Select **+ Create**.
 
@@ -50,11 +50,11 @@ Deploy Microsoft Sentinel to the workspace.
 
 1. When the workspace deployment completes, select **Home** from the Microsoft Azure "breadcrumb" menu.
 
-1. You should see **Microsoft Sentinel** in the *Azure services* section of the portal. Select it.
+1. You should see a **Microsoft Sentinel** tile in the *Azure services* section of the portal. Select it.
 
 1. Select **+ Create** from the menu items.
 
-1. Select the workspace you want to add Microsoft Sentinel to (created in Task 1).
+1. Select the *defenderWorkspace* you created in Task 1.
 
 1. Select **Add**.
 
@@ -62,7 +62,9 @@ Deploy Microsoft Sentinel to the workspace.
 
 1. In the Microsoft Azure "breadcrumb" menu, select **Home**.
 
-1. In the Search bar of the Azure portal, type "Log Analytics" and select the workspace created in Task 1.
+1. In the Search bar of the Azure portal, type "Log Analytics" and select **Log Analytics workspaces** from the *Services* section.
+
+1. Select the *defenderWorkspace* you created in Task 1.
 
 1. Expand the *Settings* section in the navigation menu and select **Usage and estimated costs**.
 
@@ -74,7 +76,7 @@ Deploy Microsoft Sentinel to the workspace.
 
 ### Task 4: Create a Watchlist
 
-In this task, you'll create a watchlist in Microsoft Sentinel.
+In this task, you create a watchlist in Microsoft Sentinel.
 
 1. In the search box at the bottom of the Windows 10 screen, enter *Notepad*. Select **Notepad** from the results.
 
@@ -136,7 +138,7 @@ In this task, you'll create a watchlist in Microsoft Sentinel.
 
 ### Task 5: Create a Threat Indicator
 
-In this task, you'll create an indicator in Microsoft Sentinel.
+In this task, you create an indicator in Microsoft Sentinel.
 
 1. In Microsoft Sentinel, select the **Threat intelligence** option in the Threat management area.
 
