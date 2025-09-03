@@ -1,9 +1,9 @@
 # SC-200: Microsoft Security Operations Analyst
 
 - **[Link to labs (HTML format)](https://microsoftlearning.github.io/SC-200T00A-Microsoft-Security-Operations-Analyst/)**
-- **Are you a MCT?** - Have a look at our [GitHub User Guide for MCTs](https://microsoftlearning.github.io/MCT-User-Guide/)
-- **Need to manually build the lab instructions?** - Instructions are available in the [MicrosoftLearning/Docker-Build](https://github.com/MicrosoftLearning/Docker-Build) repository
-- To preview this course in a self-paced format, see our **[interactive lab simulations](https://mslabs.cloudguides.com/guides/SC-200%20Lab%20Simulations%20-%20Microsoft%20Security%20Operations%20Analyst)**. You may find slight differences between the interactive simulations and the hosted labs, but the core concepts and ideas being demonstrated are the same.
+- **Are you a MCT?** - Have a look at our [GitHub User Guide for MCTs](https://microsoftlearning.github.io/MCT-User-Guide/).  
+    <!--- - **Need to manually build the lab instructions?** - Instructions are available in the [MicrosoftLearning/Docker-Build](https://github.com/MicrosoftLearning/Docker-Build) repository
+    - To preview this course in a self-paced format, see our **[interactive lab simulations](https://mslabs.cloudguides.com/guides/SC-200%20Lab%20Simulations%20-%20Microsoft%20Security%20Operations%20Analyst)**. You may find slight differences between the interactive simulations and the hosted labs, but the core concepts and ideas being demonstrated are the same. --->
 
 ## What are we doing?
 
