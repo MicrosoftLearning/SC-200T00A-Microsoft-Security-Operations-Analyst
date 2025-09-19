@@ -82,12 +82,11 @@ In this task, you'll build basic KQL statements.
 
 1. The *Time range* should default to **Last 24 hours** in the Query Window.
 
-    <!--- 1. In the Query Window, enter the following statement and select **Run**:
+1. In the Query Window, enter the following statement and select **Run**:
 
     ```KQL
-    search "location"
+    search "Computer"
     ```
-    --->
 
     >**Note:** Using the *Search* operator without specific tables or qualifying clauses is less efficient than table-specific and column-specific text filtering.
 
