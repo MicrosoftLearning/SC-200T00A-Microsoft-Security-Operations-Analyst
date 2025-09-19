@@ -54,19 +54,19 @@ In this task, you'll connect the Microsoft Defender for Cloud data connector.
 
 1. In the *Configuration* section, **select** the checkbox for the *MOC Subscription-XXXXXXXXXXX* and select the **Connect** link.
 
+1. The **Status** should now be **Connected**.
+
 1. To enable bi-directional sync, select the **Enable Microsoft Defender for all subscriptions** link.
 
     >**Note:** You may have to scroll to the right to see the link.
 
-1. On the *Microsoft Defender for Cloud - Getting started* page, the checkbox for the *MOC Subscription-XXXXXXXXXXX* should be selected, and the *Microsoft Defender plan* should display *Off (30 trial days left)*.
+1. On the *Microsoft Defender for Cloud - Getting started* page, the checkbox for the *MOC Subscription-XXXXXXXXXXX* should be selected, and the *Microsoft Defender plan* should display *On - Partial (30 trial days left)*.
 
 1. Select the **X (Close)** button on the upper right to close the *Getting started* page. You should be back on the *Microsoft Defender for Cloud* configuration page.
 
-1. Slide the **Status** option to the right.
+1. The *Status* for the *MOC Subscription-XXXXXXXXXXX* should be *Connected* and *Bi-directional sync* should be **Enabled**.
 
-1. The *Status* for the *MOC Subscription-XXXXXXXXXXX* should now be **Connected** and *Bi-directional sync* should be *Enabled*.
-
-    >**Note:** You may need to refresh the page.
+    >**Note:** You may need to retry this procedure to see *Bi-directional sync Enabled*. After re-running the steps, try setting the *Bi-directional sync* drop-down to **Enabled**.
 
 ### Task 3: Connect the Azure Activity data connector
 

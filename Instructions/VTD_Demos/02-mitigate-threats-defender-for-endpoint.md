@@ -6,7 +6,7 @@
 
 In this task, you will run two simulated attack to explore the capabilities of Microsoft Defender for Endpoint.
 
-1. If you are not already at the Microsoft Defender XDR portal in your browser, go to Microsoft Defender XDR at (https://security.microsoft.com) logged in as Admin for your tenant.
+1. If you are not already at the Microsoft Defender XDR portal in your browser, go to Microsoft Defender XDR at (<https://security.microsoft.com>) logged in as Admin for your tenant.
 
 You will run the *simulated* attacks using *PowerShell* on *WIN1* to explore the capabilities of Microsoft Defender for Endpoint.
 
