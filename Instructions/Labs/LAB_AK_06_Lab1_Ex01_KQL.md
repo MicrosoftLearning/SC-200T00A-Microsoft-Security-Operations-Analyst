@@ -161,49 +161,6 @@ In this task, you'll build basic KQL statements.
     LowActivityAccounts | where Account_s contains "sql"
     ```
 
-    <!--- 1. Change the **Time range** to **Last hour** in the Query Window. This limits our results for the following statements.
-    
-        1. The following statement demonstrates the **extend** operator, which creates a calculated column and adds it to the result set. In the Query Window, enter the following statement and select **Run**: 
-    
-        ```KQL
-        SecurityEvent_CL  
-        | where TimeGenerated > ago(7d) 
-        | where ProcessName != "" and Process != "" 
-        | extend StartDir =  substring(ProcessName,0, string_size(ProcessName)-string_size(Process))
-        ```
-    
-        1. The following statement demonstrates the **order by** operator, which sorts the rows of the input table by one or more columns in ascending or descending order. The **order by** operator is an alias to the **sort by** operator. In the Query Window, enter the following statement and select **Run**: 
-    
-        ```KQL
-        SecurityEvent_CL  
-        | where TimeGenerated > ago(7d) 
-        | where ProcessName != "" and Process != "" 
-        | extend StartDir =  substring(ProcessName,0, string_size(ProcessName)-string_size(Process)) 
-        | order by StartDir desc, Process asc
-        ```
-    
-        1. The following statements demonstrate the **project** operator, which selects the columns to include in the order specified. In the Query Window, enter the following statement and select **Run**: 
-    
-        ```KQL
-        SecurityEvent_CL  
-        | where TimeGenerated > ago(7d) 
-        | where ProcessName != "" and Process != "" 
-        | extend StartDir =  substring(ProcessName,0, string_size(ProcessName)-string_size(Process)) 
-        | order by StartDir desc, Process asc 
-        | project Process, StartDir
-        ```
-    
-        1. The following statements demonstrate the **project-away** operator, which selects the columns to exclude from the output. In the Query Window, enter the following statement and select **Run**: 
-    
-        ```KQL
-        SecurityEvent_CL  
-        | where TimeGenerated > ago(7d) 
-        | where ProcessName != "" and Process != "" 
-        | extend StartDir =  substring(ProcessName,0, string_size(ProcessName)-string_size(Process)) 
-        | order by StartDir desc, Process asc 
-        | project-away ProcessName 
-        ```--->
-
 ### Task 4: Analyze Results in KQL with the Summarize Operator
 
 In this task, you'll build KQL statements to aggregate data. **Summarize** groups the rows according to the **by** group columns, and calculates aggregations over each group.
@@ -415,35 +372,6 @@ In this task, you'll work with structured and unstructured string fields with KQ
     | parse EventText with * "resourceName=" resourceName ", totalSlices=" totalSlices:long * "sliceNumber=" sliceNumber:long * "lockTime=" lockTime ", releaseTime=" releaseTime:date "," * "previousLockTime=" previousLockTime:date ")" *  
     | project resourceName, totalSlices, sliceNumber, lockTime, releaseTime, previousLockTime
     ```
-
-    <!--- 1. The following statement demonstrates working with **dynamic** fields, which are special since they can take on any value of other data types. In this example, The DeviceDetail_s field from the SigninLogs_CL table is of type **dynamic**. In the Query Window, enter the following statement and select **Run**:
-
-    ```KQL
-    SigninLogs
-    | extend OS = DeviceDetail.operatingSystem
-    ```
-
-     1. The following example shows how to break out packed fields for SigninLogs_CL. In the Query Window, enter the following statement and select **Run**:
-
-    ```KQL
-    SigninLogs_CL 
-    | extend OS = DeviceDetail.operatingSystem, Browser = DeviceDetail.browser 
-    | extend StatusCode = tostring(Status.errorCode), StatusDetails = tostring(Status.additionalDetails) 
-    | extend Date = startofday(TimeGenerated) 
-    | summarize count() by Date, Identity, UserDisplayName, UserPrincipalName, IPAddress, ResultType, ResultDescription, StatusCode, StatusDetails 
-    | sort by Date
-
-    SigninLogs_CL 
-    | extend OS = todynamic(DeviceDetail_s)
-    | where OS = DeviceDetail_s.operatingSystem, Browser = DeviceDetail_s.browser
-    | extend StatusCode = tostring(Status_s.errorCode), StatusDetails = tostring(Status_s.additionalDetails) 
-    | extend Date = startofday(TimeGenerated) 
-    | summarize count() by Date, UserDisplayName_s, UserPrincipalName_s, IPAddress, ResultType, ResultDescription, StatusCode, StatusDetails, OS, Browser 
-    | sort by Date
-
-    ```
-
-    >**Important:** Although the dynamic type appears JSON-like, it can hold values that the JSON model does not represent because they do not exist in JSON. Therefore, in serializing dynamic values into a JSON representation, values that JSON cannot represent are serialized into string values. --->
 
 1. The following statements demonstrate operators to manipulate JSON stored in string fields. Many logs submit data in JSON format, which requires you to know how to transform JSON data to fields that can be queried. In the Query Window, enter the following statement and select **Run**:
 
