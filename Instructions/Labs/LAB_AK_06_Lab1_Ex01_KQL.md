@@ -161,7 +161,7 @@ In this task, you'll build basic KQL statements.
     LowActivityAccounts | where Account_s contains "sql"
     ```
 
-    <!-- 1. Change the **Time range** to **Last hour** in the Query Window. This limits our results for the following statements.
+    <!--- 1. Change the **Time range** to **Last hour** in the Query Window. This limits our results for the following statements.
     
         1. The following statement demonstrates the **extend** operator, which creates a calculated column and adds it to the result set. In the Query Window, enter the following statement and select **Run**: 
     
@@ -208,7 +208,7 @@ In this task, you'll build basic KQL statements.
 
 In this task, you'll build KQL statements to aggregate data. **Summarize** groups the rows according to the **by** group columns, and calculates aggregations over each group.
 
-1. The following statement demonstrates the **count()** function, which returns a count of the group. In the Query Window enter the following statement and select **Run**: 
+1. The following statement demonstrates the **count()** function, which returns a count of the group. In the Query Window enter the following statement and select **Run**:
 
     ```KQL
     SecurityEvent_CL  
@@ -216,7 +216,7 @@ In this task, you'll build KQL statements to aggregate data. **Summarize** group
     | summarize count() by Computer
     ```
 
-1. The following statement demonstrates the **count()** function, but in this example, we name the column as *cnt*. In the Query Window, enter the following statement and select **Run**: 
+1. The following statement demonstrates the **count()** function, but in this example, we name the column as *cnt*. In the Query Window, enter the following statement and select **Run**:
 
     ```KQL
     SecurityEvent_CL  
