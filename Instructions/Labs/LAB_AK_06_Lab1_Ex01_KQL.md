@@ -161,48 +161,48 @@ In this task, you'll build basic KQL statements.
     LowActivityAccounts | where Account_s contains "sql"
     ```
 
-    <!--- 1. Change the **Time range** to **Last hour** in the Query Window. This limits our results for the following statements.
-
-    1. The following statement demonstrates the **extend** operator, which creates a calculated column and adds it to the result set. In the Query Window, enter the following statement and select **Run**: 
-
-    ```KQL
-    SecurityEvent_CL  
-    | where TimeGenerated > ago(7d) 
-    | where ProcessName != "" and Process != "" 
-    | extend StartDir =  substring(ProcessName,0, string_size(ProcessName)-string_size(Process))
-    ```
-
-    1. The following statement demonstrates the **order by** operator, which sorts the rows of the input table by one or more columns in ascending or descending order. The **order by** operator is an alias to the **sort by** operator. In the Query Window, enter the following statement and select **Run**: 
-
-    ```KQL
-    SecurityEvent_CL  
-    | where TimeGenerated > ago(7d) 
-    | where ProcessName != "" and Process != "" 
-    | extend StartDir =  substring(ProcessName,0, string_size(ProcessName)-string_size(Process)) 
-    | order by StartDir desc, Process asc
-    ```
-
-    1. The following statements demonstrate the **project** operator, which selects the columns to include in the order specified. In the Query Window, enter the following statement and select **Run**: 
-
-    ```KQL
-    SecurityEvent_CL  
-    | where TimeGenerated > ago(7d) 
-    | where ProcessName != "" and Process != "" 
-    | extend StartDir =  substring(ProcessName,0, string_size(ProcessName)-string_size(Process)) 
-    | order by StartDir desc, Process asc 
-    | project Process, StartDir
-    ```
-
-    1. The following statements demonstrate the **project-away** operator, which selects the columns to exclude from the output. In the Query Window, enter the following statement and select **Run**: 
-
-    ```KQL
-    SecurityEvent_CL  
-    | where TimeGenerated > ago(7d) 
-    | where ProcessName != "" and Process != "" 
-    | extend StartDir =  substring(ProcessName,0, string_size(ProcessName)-string_size(Process)) 
-    | order by StartDir desc, Process asc 
-    | project-away ProcessName --->
-    ```
+    <!-- 1. Change the **Time range** to **Last hour** in the Query Window. This limits our results for the following statements.
+    
+        1. The following statement demonstrates the **extend** operator, which creates a calculated column and adds it to the result set. In the Query Window, enter the following statement and select **Run**: 
+    
+        ```KQL
+        SecurityEvent_CL  
+        | where TimeGenerated > ago(7d) 
+        | where ProcessName != "" and Process != "" 
+        | extend StartDir =  substring(ProcessName,0, string_size(ProcessName)-string_size(Process))
+        ```
+    
+        1. The following statement demonstrates the **order by** operator, which sorts the rows of the input table by one or more columns in ascending or descending order. The **order by** operator is an alias to the **sort by** operator. In the Query Window, enter the following statement and select **Run**: 
+    
+        ```KQL
+        SecurityEvent_CL  
+        | where TimeGenerated > ago(7d) 
+        | where ProcessName != "" and Process != "" 
+        | extend StartDir =  substring(ProcessName,0, string_size(ProcessName)-string_size(Process)) 
+        | order by StartDir desc, Process asc
+        ```
+    
+        1. The following statements demonstrate the **project** operator, which selects the columns to include in the order specified. In the Query Window, enter the following statement and select **Run**: 
+    
+        ```KQL
+        SecurityEvent_CL  
+        | where TimeGenerated > ago(7d) 
+        | where ProcessName != "" and Process != "" 
+        | extend StartDir =  substring(ProcessName,0, string_size(ProcessName)-string_size(Process)) 
+        | order by StartDir desc, Process asc 
+        | project Process, StartDir
+        ```
+    
+        1. The following statements demonstrate the **project-away** operator, which selects the columns to exclude from the output. In the Query Window, enter the following statement and select **Run**: 
+    
+        ```KQL
+        SecurityEvent_CL  
+        | where TimeGenerated > ago(7d) 
+        | where ProcessName != "" and Process != "" 
+        | extend StartDir =  substring(ProcessName,0, string_size(ProcessName)-string_size(Process)) 
+        | order by StartDir desc, Process asc 
+        | project-away ProcessName 
+        ```--->
 
 ### Task 4: Analyze Results in KQL with the Summarize Operator
 
