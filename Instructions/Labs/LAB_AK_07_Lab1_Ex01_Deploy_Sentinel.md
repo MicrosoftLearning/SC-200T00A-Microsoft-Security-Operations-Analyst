@@ -199,9 +199,9 @@ In this task, you'll change the retention period for the SecurityEvent table.
 
 1. Select **Manage Table**.
 
-1. Change the *Interactive retention period* to **90 days**.
+1. Change the *Analytics retention* to **90 days**.
 
-1. Reset the *Total retention period* to **180 days** (if needed). Notice that *Archive period* is set to *90 days*, because *Azure Monitor* automatically treats the remaining 90 days of total retention as low-cost, long-term retention.
+1. Reset the *Total retention* to **180 days** (if needed). Notice that *Long term retention* is set to *90 days*, because *Azure Monitor* automatically treats the remaining 90 days of total retention as low-cost, long-term retention.
 
 1. Select **Save** to apply the changes.
 
