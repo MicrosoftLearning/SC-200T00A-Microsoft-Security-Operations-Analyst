@@ -321,7 +321,9 @@ In this task, instead of using a LiveStream, you'll create an NRT analytics quer
 
 1. Select **Test with current data** under *Results simulation*. Notice the expected number of *Alerts per day*.
 
-1. Under *Entity mapping* select:
+1. In *Alert enhancement* section, select *Entity mapping >*, **+ Add new entity**.
+
+1. In the *Entity* select:
 
     - For the *Entity type* drop-down list select **Host**.
     - For the *Identifier* drop-down list select **HostName**.
