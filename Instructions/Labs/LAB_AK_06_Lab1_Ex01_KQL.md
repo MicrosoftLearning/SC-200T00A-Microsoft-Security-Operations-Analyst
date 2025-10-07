@@ -130,10 +130,10 @@ In this task, you'll build basic KQL statements.
 1. The following statement demonstrates the use of the **let** statement to declare *variables*. In the Query Window, enter the following statement and select **Run**:
 
     ```KQL
-    let timeOffset = 1h;
+    let timeOffset = 10m;
     let discardEventID = 4688;
     SecurityEvent_CL
-    | where TimeGenerated > ago(timeOffset*2) and TimeGenerated < ago(timeOffset)
+    | where TimeGenerated > ago(timeOffset*60) and TimeGenerated < ago(timeOffset)
     | where EventID_s != discardEventID
     ```
 
@@ -189,14 +189,14 @@ In this task, you'll build KQL statements to aggregate data. **Summarize** group
     | summarize dcount(IpAddress)
     ```
 
-1. The following statement is a rule to detect Invalid password failures across multiple applications for the same account. In the Query Window, enter the following statement and select **Run**:
+1. The following statement is a rule to detect *User account is disabled* failures across multiple applications for the same account. In the Query Window, enter the following statement and select **Run**:
 
     ```KQL
     let timeframe = 30d;
     let threshold = 1;
     SigninLogs_CL
     | where TimeGenerated >= ago(timeframe)
-    | where ResultDescription has "Invalid password"
+    | where ResultDescription has "User account is disabled"
     | summarize applicationCount = dcount(AppDisplayName_s) by UserPrincipalName_s, IPAddress
     | where applicationCount >= threshold
     ```
@@ -309,10 +309,10 @@ In this task, you'll build multi-table KQL statements.
 
     >**Note:** The 'empty row' in the results will show the summarized count of SigninLogs_CL.
 
-1. The following statement demonstrates the **union** operator support to union multiple tables with wildcards. In the Query Window, enter the following statement and select **Run**: 
+1. The following statement demonstrates the **union** operator support to union multiple tables with wildcards. In the Query Window, enter the following statement and select **Run**:
 
     ```KQL
-    union App*  
+    union Sec*  
     | summarize count() by Type
     ```
 
