@@ -64,6 +64,14 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
 
     ![linux login](../Media/PSconnectLinux.png)
 
+
+1. In the SSH session, at the linux prompt, type the following command to install azcmagent on LIN2.
+   ```cmd
+    wget https://aka.ms/azcmagent -O ~/Install_linux_azcmagent.sh
+    bash ~/Install_linux_azcmagent.sh
+   ```
+
+
 1. In the SSH session, at the linux prompt, type the following command. *Do not press enter*:
 
     ```cmd
