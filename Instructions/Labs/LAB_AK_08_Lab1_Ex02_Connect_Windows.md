@@ -34,7 +34,7 @@ In this task, you create a Windows virtual machine in Azure.
 
 1. Select the box for **Windows 11**.
 
-1. Open the *Plan* drop-down list and select **Windows 11 Enterprise, version 22H2**.
+1. Open the *Plan* drop-down list and select **Windows 11 Enterprise, version 23H2**.
 
 1. Select **Start with a pre-set configuration** to continue.
 
