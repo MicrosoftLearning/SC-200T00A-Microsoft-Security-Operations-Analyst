@@ -124,12 +124,13 @@ In this task, you start your exploration in the home menu.
     1. Select filter to view the available options, then select the X to close.
     1. Select the home menu icon to open the home menu.
 
-1. Select **Owner settings**. These settings are available to you as a Copilot owner. A Copilot contributor does not have access to these menu options.
-    1. For plugins for Security Copilot, select the drop-down for Who can add and manage their own custom plugins to view the available options.
+1. From the *Home* menu, select **Owner settings**. These settings are available to you as a Copilot owner. A Copilot contributor does not have access to these menu options.
+    1. Select the drop-down for who can upload files to view the available options.
+
+1. Return to the *Home* menu and explore the *Plugin* options:
+    1. Select the *Plugin settings* for Who can add and manage their own custom plugins to view the available options.
     1. Select drop-down for Who can add and manage custom plugins for everyone in the organization to view the available options. Note, this option is greyed out if Who can add and manage their own custom plugins is set to owners only.
     1. Select the information icon next to "Allow Security Copilot to access data from your Microsoft 365 Services."  This setting must be enabled if you want to use the Microsoft Purview plugin. You'll work with this setting in a later exercise.
-    1. Select the drop-down for who can upload files to view the available options.
-    1. Select the home menu icon to open the home menu.
 
 1. Select **Role assignment**.
     1. Select Add members, then close.
@@ -163,7 +164,7 @@ In the center of the landing page, there are cards representing your most recent
 
 The next section of the Copilot landing page revolves around promptbooks. The landing page shows tiles for some Microsoft security promptbooks. Here you explore access to promptbooks and the promptbook library. In a subsequent exercise, you explore creating and running a promptbook.
 
-1. To the right of where it says "Get started with these promptbooks" are a left and right arrow key that allows you to scroll through the tiles for Microsoft security promptbooks. Select the **right arrow >**
+1. Select the *Promptbooks* button.
 
 1. Each tile shows the title of the promptbook, a brief description, the number of prompts, and a run icon. Select the title of any of the promptbook tiles to open that promptbook. Select **Vulnerability impact assessment**, as an example.
     1. The window for the selected promptbook provides information, including who created the promptbook, tags, a brief description, inputs required to run the promptbook, and a listing of the prompts.
