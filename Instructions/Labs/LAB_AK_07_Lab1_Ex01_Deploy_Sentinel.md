@@ -171,7 +171,7 @@ In this task, you create an indicator in Microsoft Sentinel.
 1. Run the following KQL statement.
 
     ```KQL
-    ThreatIntelligenceIndicator
+    ThreatIntelIndicators
     ```
 
     >**Note:** It could take up to five minutes for the indicator to appear.
@@ -179,7 +179,7 @@ In this task, you create an indicator in Microsoft Sentinel.
 1. Scroll the results to the right to see the DomainName column. You can also run the following KQL statement to just see the DomainName column.
 
     ```KQL
-    ThreatIntelligenceIndicator 
+    ThreatIntelIndicators
     | project DomainName
     ```
 
