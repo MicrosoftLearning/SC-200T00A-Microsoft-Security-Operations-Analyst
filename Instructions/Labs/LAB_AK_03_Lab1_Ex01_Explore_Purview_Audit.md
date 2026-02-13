@@ -40,7 +40,7 @@ In this task, you'll assign preset security policies for Exchange Online Protect
 
 1. In the **Enter password** dialog box, copy, and paste in the admin's tenant password provided by your lab hosting provider and then select **Sign in**.
 
-1. From the navigation menu, expand *Operational technology* and select **More resources**.
+1. From the navigation menu select **More resources**.
 
 1. In the **More resources** pane, select the **Open** button on the *Microsoft Purview portal* tile.
 
