@@ -149,8 +149,6 @@ In this task, you'll build basic KQL statements.
     | where Account_s in (suspiciousAccounts)
     ```
 
-    <!--- :** You can re-format the query easily by selecting the ellipsis (...) in the Query window and select **Format query**.--->
-
 1. The following statement demonstrates the use of the **let** statement to declare a *dynamic table*. In the Query Window, enter the following statement and select **Run**:
 
     ```KQL
@@ -259,13 +257,13 @@ In this task, you'll build KQL statements to aggregate data. **Summarize** group
 
 In this task, you'll use generate visualizations with KQL statements.
 
-1. The following statement demonstrates the **render** operator (which renders results as a graphical output), using a **barchart** visualization. In the Query Window, enter the following statement and select **Run**: 
+1. The following statement demonstrates the **render** operator (which renders results as a graphical output), using a **columnchart** visualization. In the Query Window, enter the following statement and select **Run**: 
 
     ```KQL
     SecurityEvent_CL  
     | where TimeGenerated > ago(5d)
     | summarize count() by Account_s
-    | render barchart
+    | render columnchart
     ```
 
 1. The following statement demonstrates the **render** operator visualizing results with a time series. The **bin()** function rounds all values in a timeframe and groups them, used frequently in combination with **summarize**. If you have a scattered set of values, the values are grouped into a smaller set of specific values. Combining the generated results and pipe them to a **render** operator with a **timechart** provides a time series visualization. In the Query Window, enter the following statement and select **Run**: 
