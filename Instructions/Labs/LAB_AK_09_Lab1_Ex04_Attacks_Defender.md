@@ -4,7 +4,7 @@ lab:
     module: 'Learning Path 9 - Create detections and perform investigations using Microsoft Sentinel'
 ---
 
-# Learning Path 9 - Lab 1 - Exercise 5 - Prepare to perform simulated attacks
+# Learning Path 9 - Lab 1 - Exercise 4 - Prepare to perform simulated attacks
 
 ## Lab scenario
 
