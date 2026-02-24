@@ -44,9 +44,17 @@ In this task, you will explore Entity behavior analytics in Microsoft Sentinel.
 
 1. Select **Configure UEBA**.
 
-1. On the *Settings* tab under *Entity behaviour analytics*, scroll down the *Anomalies* section and verify read through the paragraph, and verify that the *switch* is *On*.
+1. On the *UEBA (User and Entity Behavior Analytics)* page, on the *UEBA* tab,verify that the *UEBA feature* is enabled, and review the *connected data sources*.
 
-1. Select the **Go to analytics in oder to configure the anomalies** link.
+1. Use the *breadcrumb* links at the top of the page to go back to the *Microsoft Sentinel* settings page.
+
+1. Select the **sentinelworkspace-01** workspace.
+
+1. On the *Settings* page, scroll down and expand the *Anomalies* section. 
+
+1. Read through the paragraph, and verify that the **Detect Anomalies** switchis *On*.
+
+1. Select the **Configure anomalies in analytics** link.
 
 ### Task 2: Confirm and review Anomalies rules
 
@@ -54,7 +62,7 @@ In this task, you will confirm Anomalies analytics rules are enabled.
 
 1. You should be now at the *Analytics* page, *Anomalies* tab.
 
-1. Confirm status column of the rules is *Enabled*.
+1. Confirm that the **Status** column for the rules is *Enabled*.
 
 1. Select any rule and then select **Edit** on the rule blade.
 
@@ -62,7 +70,7 @@ In this task, you will confirm Anomalies analytics rules are enabled.
 
 1. Review the *Configuration* tab information. Notice that you cannot change the **Anomaly score threshold**.
 
-1. Then select **X** in the top right corner to exit the Analytics rule wizard.
+1. Then select **Cancel** button on the lower right to exit the Analytics rule wizard.
 
 1. Scroll right to the analytics rule you selected until see and select the ellipsis **(...)** icon.
 
