@@ -132,4 +132,4 @@ In this task, you update the new playbook you created with the proper connection
 
 You have now created a playbook and an automation rule in Microsoft Sentinel.
 
-## Proceed to Exercise 3
+## Proceed to Exercise 2

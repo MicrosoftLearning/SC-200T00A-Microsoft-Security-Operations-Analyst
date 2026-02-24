@@ -20,23 +20,29 @@ You need to configure Microsoft Sentinel to perform Entity Behavior Analytics to
 
 In this task, you will explore Entity behavior analytics in Microsoft Sentinel.
 
->**Note:** Microsoft Sentinel has been predeployed in your Azure subscription with the name **defenderWorkspace**, and the required *Content Hub* solutions have been installed.
+>**Note:** Microsoft Sentinel has been predeployed in your Azure subscription with the name **sentinelworkspace-01**, and the required *Content Hub* solutions have been installed.
 
 1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
-1. In the Edge browser, navigate to the Azure portal at <https://portal.azure.com>.
+1. Open the Microsoft Edge browser.
 
-1. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
+1. In the Edge browser, navigate to Microsoft Defender XDR at <https://security.microsoft.com>.
 
-1. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
+1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
-1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
+1. In the **Enter password** dialog box, copy, and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
-1. Select the Microsoft Sentinel **defenderWorkspace**.
+    >**Note:** You may be prompted to enter the *Temporary Access Pass* (TAP) instead of a password. This is also provided in the resources tab. If prompted, copy and paste the TAP value and select **Sign in**.
 
-1. Select the **Entity behavior** page.
+1. In the Microsoft Defender navigation menu, scroll down and expand the **System** section.
 
-1. On the popup from *Entity behavior settings*, select **Set UEBA**.
+1. Select **Settings**, and then select **Microsoft Sentinel**.
+
+1. Select the **sentinelworkspace-01** workspace.
+
+1. In the popout window, select and expand the **Entity behavior analytics** section.
+
+1. Select **Configure UEBA**.
 
 1. On the *Settings* tab under *Entity behaviour analytics*, scroll down the *Anomalies* section and verify read through the paragraph, and verify that the *switch* is *On*.
 
@@ -74,4 +80,4 @@ In this task, you will confirm Anomalies analytics rules are enabled.
 
     >**Note:** You can upgrade the **Flighting** rule to **Production** by changing the setting on this rule and save the changes. The **Production** rule will become the **Flighting** rule afterwards.
 
-## Proceed to Exercise 5
+## Proceed to Exercise 4

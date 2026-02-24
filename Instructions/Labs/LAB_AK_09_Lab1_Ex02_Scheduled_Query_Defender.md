@@ -4,7 +4,7 @@ lab:
     module: 'Learning Path 9 - Create detections and perform investigations using Microsoft Sentinel'
 ---
 
-# Learning Path 9 - Lab 1 - Exercise 3 - Create a Scheduled Query from a template
+# Learning Path 9 - Lab 1 - Exercise 2 - Create a Scheduled Query from a template
 
 ## Lab scenario
 
@@ -175,4 +175,4 @@ In this task, you test your new scheduled query rule. You start by enabling *Clo
 
 1. Select the Incident and review the information in the right blade.
 
-## Proceed to Exercise 4
+## Proceed to Exercise 3
