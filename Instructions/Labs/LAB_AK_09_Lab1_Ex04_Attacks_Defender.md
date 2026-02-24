@@ -1,6 +1,6 @@
 ---
 lab:
-    title: 'Exercise 5 - Prepare to perform simulated attacks'
+    title: 'Exercise 4 - Prepare to perform simulated attacks'
     module: 'Learning Path 9 - Create detections and perform investigations using Microsoft Sentinel'
 ---
 

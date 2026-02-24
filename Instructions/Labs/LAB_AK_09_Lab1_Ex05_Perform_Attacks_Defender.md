@@ -1,6 +1,6 @@
 ---
 lab:
-    title: 'Exercise 6 - Conduct attacks'
+    title: 'Exercise 5 - Conduct attacks'
     module: 'Learning Path 9 - Create detections and perform investigations using Microsoft Sentinel'
 ---
 

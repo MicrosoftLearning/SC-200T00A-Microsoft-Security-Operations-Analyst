@@ -1,6 +1,6 @@
 ---
 lab:
-    title: 'Exercise 4 - Explore Entity Behavior Analytics'
+    title: 'Exercise 3 - Explore Entity Behavior Analytics'
     module: 'Learning Path 9 - Create detections and perform investigations using Microsoft Sentinel'
 ---
 

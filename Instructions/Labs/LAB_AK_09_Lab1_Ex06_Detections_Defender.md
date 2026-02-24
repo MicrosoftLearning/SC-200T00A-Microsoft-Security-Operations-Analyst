@@ -1,6 +1,6 @@
 ---
 lab:
-    title: 'Exercise 7 - Create Detections'
+    title: 'Exercise 6 - Create Detections'
     module: 'Learning Path 9 - Create detections and perform investigations using Microsoft Sentinel'
 ---
 
