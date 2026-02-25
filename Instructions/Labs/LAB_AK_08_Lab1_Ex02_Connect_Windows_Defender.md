@@ -12,7 +12,7 @@ lab:
 
 You're a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You must learn how to connect log data from the many data sources in your organization. The next source of data is Windows virtual machines inside and outside of Azure, like on-premises environments or other Public Clouds.
 
->**Important:** The lab exercises for Learning Path #8 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
+>**Important:** TThe lab exercises for Learning Path #9 are in a *standalone, shared* environment. Other students are using the same environment. You will need to coordinate with the other students on who will perform these tasks. First, we will check to see if the environment is already configured before you proceed. Also, if you exit the lab before completing it, you will be required to re-run the configurations again..
 
 ### Estimated time to complete this lab: 30 minutes
 
@@ -74,7 +74,7 @@ In this task, you create a Windows virtual machine in Azure.
 
 In this task, you connect an on-premises server to your Azure subscription. Azure Arc was preinstalled on this server. The server will be used in next exercises to run simulated attacks that you'll later detect and investigate in Microsoft Sentinel.
 
->**Important:** The next steps are done on a different machine than the one you were previously working.
+>**Important:** The next steps are done on a different machine than the one you were previously working on.
 
 1. Log in to **WINServer** virtual machine as Administrator with the password: **Passw0rd!** if necessary.  
 

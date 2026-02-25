@@ -22,7 +22,7 @@ You are going to simulate the attacks that you will later use to detect and inve
 
 In this task, you will perform attacks on the host connected with Azure Arc and that has the Azure Monitor Agent configured.
 
-1. Login to WINServer virtual machine as Admin with the password: **Pa55w.rd**.  
+1. Login to *WINServer* virtual machine as Admin with the password: **Pa55w.rd**.  
 
     >**Important:** The lab *SAVE* functionality can cause WINServer to become disconnected from Azure Arc. A reboot will solve the issue.  
 
