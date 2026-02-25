@@ -130,7 +130,7 @@ In this task, you'll build basic KQL statements.
 1. The following statement demonstrates the use of the **let** statement to declare *variables*. In the Query Window, enter the following statement and select **Run**:
 
     ```KQL
-    let timeOffset = 1d
+    let timeOffset = 1d;
     let discardEventID = 4688;
     SecurityEvent_CL
     | where TimeGenerated > ago(timeOffset*60) and TimeGenerated < ago(timeOffset)
@@ -141,12 +141,12 @@ In this task, you'll build basic KQL statements.
 
     ```KQL
     let suspiciousAccounts = datatable(account: string) [
-      @"NA\timadmin", 
+      @"NA\timadmin",
       @"NT AUTHORITY\SYSTEM"
     ];
-    SecurityEvent_CL  
-    | where TimeGenerated > ago(5d)
-    | where Account_s in (suspiciousAccounts)
+    SecurityEvent_CL
+    | where TimeGenerated > ago(7d)
+    | where Account_s in (suspiciousAccounts)
     ```
 
 1. The following statement demonstrates the use of the **let** statement to declare a *dynamic table*. In the Query Window, enter the following statement and select **Run**:
@@ -286,22 +286,22 @@ In this task, you'll build multi-table KQL statements.
     1. **Query 1** returns all rows of SecurityEvent_CL and all rows of SigninLogs_CL.
 
         ```KQL
-        SecurityEvent_CL  
-        | union SigninLogs_CL  
+        SecurityEvent_CL
+        | union SigninLogs_CL
         ```
 
     1. **Query 2** returns one row and column, which is the count of all rows of SigninLogs_CL and all rows of SecurityEvent_CL.
 
         ```KQL
-        SecurityEvent_CL  
-        | union SigninLogs_CL  
-        | summarize count() 
+        SecurityEvent_CL
+        | union SigninLogs_CL
+        | summarize count()
         ```
 
     1. **Query 3** returns all rows of SecurityEvent_CL and one (last) row for SigninLogs_CL. The last row for SigninLogs_CL has the summarized count of the total number of rows.
 
         ```KQL
-        SecurityEvent_CL  
+        SecurityEvent_CL
         | union (SigninLogs_CL | summarize count() | project count_)
         ```
 
