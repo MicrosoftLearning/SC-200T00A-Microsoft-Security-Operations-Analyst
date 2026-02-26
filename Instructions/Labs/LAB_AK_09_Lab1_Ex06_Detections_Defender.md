@@ -28,17 +28,19 @@ In this task, you will create a detection for the first attack of the previous e
 
 1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
-1. In the Edge browser, navigate to the Azure portal at <https://portal.azure.com>.
+1. Open the Microsoft Edge browser.
 
-1. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
+1. In the Edge browser, navigate to Microsoft Defender XDR at <https://security.microsoft.com>.
 
-1. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
+1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
-1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
+1. In the **Enter password** dialog box, copy, and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
-1. Select the Microsoft Sentinel **defenderWorkspace**.
+    >**Note:** You may be prompted to enter the *Temporary Access Pass* (TAP) instead of a password. This is also provided in the resources tab. If prompted, copy and paste the TAP value and select **Sign in**.
 
-1. Select **Logs** from the *General* section.
+1. In the Microsoft Defender navigation menu, scroll down and expand the **Investigation & response** section.
+
+1. Expand the **Hunting** section and select **Advanced hunting**.
 
 1. **Run** the following KQL Statement again to recall the tables where we have this data:
 

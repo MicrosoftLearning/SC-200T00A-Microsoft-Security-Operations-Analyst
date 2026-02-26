@@ -20,49 +20,33 @@ You're a Security Operations Analyst working at a company that implemented Micro
 
 In this task, you'll review the Registry Schema parsers that are included with the Microsoft Sentinel deployment.
 
->**Note:** Microsoft Sentinel has been predeployed in your Azure subscription with the name **defenderWorkspace**, and the required *Content Hub* solutions have been installed.
+>**Note:** Microsoft Sentinel has been predeployed and onboarded to Microsoft Defender XDR with the name **sentinelworkspace-01**, and the required *Content Hub* solutions have been installed.
 
 1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
-1. In the Microsoft Edge browser, navigate to the Azure portal at <https://portal.azure.com>.
+1. Open the Microsoft Edge browser.
+
+1. In the Edge browser, navigate to the Azure portal at <https://security.microsoft.com>.
 
 1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
 1. In the **Enter password** dialog box, copy, and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
-1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
+    >**Note:** You may be prompted to enter the *Temporary Access Pass* (TAP) instead of a password. This is also provided in the resources tab. If prompted, copy and paste the TAP value and select **Sign in**.
 
-1. Select the Microsoft Sentinel **defenderWorkspace**.
+1. In the Microsoft Defender navigation menu, scroll down and expand the **Investigation & response** section.
 
-<!--- 1. In the Edge browser, open a new tab (Ctrl+T) and navigate to the Microsoft Sentinel GitHub ASIM page <https://github.com/Azure/Azure-Sentinel/tree/master/ASIM>.
+1. Expand the **Hunting** section and select **Advanced hunting**.
 
- 1. On the right pane, select the **Onboard community content** link. This will open a new tab in the Edge Browser for Microsoft Sentinel GitHub content. **Hint:** You might need to scroll right to see the link. Alternatively, follow this link instead: [Microsoft Sentinel on GitHub](https://github.com/Azure/Azure-Sentinel).
+1. Open the *Schema and Search* blade by selecting **>** if needed.
 
-    >**Note:** In the **ASIM** folder you can deploy templates that contain all ASIM parsers, but we will only focus on the Registry Schema.
-
-1. Scroll down and next to **Registry Event**, select the **Deploy to Azure** button.
-
-1. For *Resource Group*, select **RG-Defender** where your Sentinel workspace resides.
-
-1. For *Workspace*, type your Sentinel workspace name, like *uniquenameDefender*.
-
-1. Leave the other default values and select **Review + create**.
-
-1. Select **Create** to deploy the template. Notice the Names of the different resources. 
-
-1. After the deployment completes return to the *Microsoft Sentinel* tab. --->
-
-1. Select **Logs** under the *General* section of the navigation menu.
-
-1. Open the *Schema and Filter* blade by selecting **>>** if needed.
-
-1. Select the **Functions** tab (next to the Tables and Queries tabs). **Hint:** You might need to select the ellipsis icon **(...)** to select the tab.
+1. Select the **Functions** tab (next to the Queries tab). **Hint:** You might need to select the ellipsis icon **(...)** to select the tab.
 
 1. In the *Search* bar type **registry**, and scroll down through the ASIM parser functions until you see the following *_Im_RegistryEvent_MicrosoftWindowsEventxxx*for Microsoft Windows under the *Microsoft Sentinel* heading.
 
     >**Note:** We're using the xxx in the ASIM parser function name to account for version changes. At the time this lab was updated the function was _Im_RegistryEvent_MicrosoftWindowsEvent*V02*.
 
-1. Hover over the **_Im_RegistryEvent_MicrosoftWindowsEventxxx** ASIM function and then select **Load the function code** in the popup window.
+1. Locate the **_Im_RegistryEvent_MicrosoftWindowsEventxxx** ASIM function and then select **Load the function code** from the ellipsis icon **(...)**.
 
 1. Review the KQL that is parsing the Event ID 4657 to simplifying your analysis of the data in the Microsoft Sentinel workspace.
 
@@ -74,4 +58,4 @@ In this task, you'll review the Registry Schema parsers that are included with t
 
 1. **Run** the ASIM function query. If you've completed the previous lab exercises you should see results and noerror messages.
 
-## Proceed to Exercise 10
+## Proceed to Exercise 9
