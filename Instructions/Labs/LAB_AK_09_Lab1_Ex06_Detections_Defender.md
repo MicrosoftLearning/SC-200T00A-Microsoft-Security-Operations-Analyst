@@ -16,7 +16,7 @@ Analytics rules search for specific events or sets of events across your environ
 
 >**Important:** The lab exercises for Learning Path #9 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
 
-### Estimated time to complete this lab: 30 minutes
+### Estimated time to complete this lab: 45 minutes
 
 ### Task 1: Persistence Attack Detection
 
@@ -75,7 +75,7 @@ In this task, you will create a detection for the first attack of the previous e
 
     >**Note:** If you don't see the option, make sure you have selected the row with the event in the results.
 
-1. This opens the "Custom detection" page. For the *General* tab type:
+1. This opens the "Custom detection" page. For the *General* page type:
 
     |Setting|Value|
     |---|---|
@@ -95,7 +95,7 @@ In this task, you will create a detection for the first attack of the previous e
 
     >**Note:** We are purposely generating many incidents for the same data. This enables the Lab to use these alerts.
 
-1. Leave the rest of the options with the defaults. Select **Next** button.
+1. Leave the rest of the options with the defaults. Select the **Next** button.
 
 1. On the *Alert settings* page, in the *Alert details* section, enter the following:
     
@@ -166,7 +166,7 @@ In this task, you will create a detection for the second attack of the previous 
     | summarize count() by $table
     ```
 
-1. The result might show events from different tables, but in our case, we want to investigate the SecurityEvent table. The EventID and Event that we are looking is "4732 - A member was added to a security-enabled local group". With this, we will identify adding a member to a privileged group. **Run** the following KQL query to confirm:
+1. The result might show events from different tables, but in our case, we want to investigate the SecurityEvent table. The EventID and Event that we are looking for is *4732 - A member was added to a security-enabled local group*. With this, we will identify adding a member to a privileged group. **Run** the following KQL query to confirm:
 
     ```KQL
     SecurityEvent 
@@ -187,7 +187,7 @@ In this task, you will create a detection for the second attack of the previous 
         | project Acct1 = TargetSid, MachId1 = SourceComputerId, UserName1 = TargetUserName) on $left.MachId == $right.MachId1, $left.Acct == $right.Acct1
     ```
 
-   ![Screenshot](../Media/SC200_sysmon_attack3.png)
+       <!--- ![Screenshot](../Media/SC200_sysmon_attack3.png)--->
 
 1. Extend the row to show the resulting columns, in the last one, we see the name of the added user under the *UserName1* column we *project* within the KQL query. It is important to help the Security Operations Analyst by providing as much context about the alert as you can. This includes projecting Entities for use in the investigation graph. **Run** the following query:
 
@@ -203,27 +203,35 @@ In this task, you will create a detection for the second attack of the previous 
     | extend timestamp = TimeGenerated, HostCustomEntity = Computer, AccountCustomEntity = UserName1
     ```
 
-1. Now that you have a good detection rule, in the Logs window, select **+ New alert rule** in the command bar and then select **Create Microsoft Sentinel alert**. **Hint:** You might need to select the ellipsis (...) button in the command bar.
+1. Now that you have a good detection rule, select **Create detection rule** in the command bar.
 
-1. This starts the "Analytics rule wizard". For the *General* tab type:
+1. This opens the "Custom detection" page.
+
+1. For this rule we're going to use *Create analytics rule instead* option. 
+
+1. Select the **Create analytics rule instead** link at the upper right of the page.
+
+1. This starts the *Analytics rule wizard*. On the *General* page type:
 
     |Setting|Value|
     |---|---|
     |Name|**SecurityEvent Local Administrators User Add**|
     |Description|**User added to Local Administrators group**|
-    |Tactics|**Privilege Escalation**|
+    |MITRE ATT&CK|**Privilege Escalation**|
     |Severity|**High**|
 
 1. Select **Next: Set rule logic >** button.
 
-1. On the *Set rule logic* tab, the *Rule query* should be populated already with you KQL query, as well the entities under *Alert enhancement - Entity mapping*.
+1. On the *Set rule logic* page, the *Rule query* should be populated already with your KQL query.
+
+1.  Under *Alert enhancement - Entity mapping*, select **+ Add new entity**, and use the following settings:
 
     |Entity|Identifier|Data Field|
     |:----|:----|:----|
     |Account|FullName|AccountCustomEntity|
     |Host|Hostname|HostCustomEntity|
 
-1. If **Hostname** isn't selected for *Host* Entity, select it from the drop-down list and use the parameters in the preceding table to populate the fields.
+1. If **Hostname** isn't selected for *Host* Entity, select **+ Add new entity** again, and select it from the drop-down list and use the parameters in the preceding table to populate the fields.
 
 1. For *Query scheduling* set the following:
 
@@ -257,4 +265,4 @@ In this task, you will create a detection for the second attack of the previous 
   
 1. On the *Review and create* tab, select the **Create** button to create the new Scheduled Analytics rule.
 
-## Proceed to Exercise 8
+## Proceed to Exercise 7
