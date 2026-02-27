@@ -71,44 +71,68 @@ In this task, you will create a detection for the first attack of the previous e
     | extend timestamp = TimeGenerated, HostCustomEntity = Computer, AccountCustomEntity = SubjectUserName
     ```
 
-1. Now that you have a good detection rule, in the Logs window, select the **+ New alert rule** in the command bar and then select **Create Microsoft Sentinel alert**. This will create a new Scheduled rule. **Hint:** You might need to select the ellipsis (...) button in the command bar.
+1. Now that you have a good detection rule KQL query, select **Create detection rule** in the command bar. This will create a new Scheduled rule.
 
-1. This starts the "Analytics rule wizard". For the *General* tab type:
+    >**Note:** If you don't see the option, make sure you have selected the row with the event in the results.
+
+1. This opens the "Custom detection" page. For the *General* tab type:
 
     |Setting|Value|
     |---|---|
     |Name|Startup RegKey|
     |Description|Startup RegKey in c:\temp|
-    |Tactics|Persistence|
+    |Category|Persistence|
     |Severity|High|
 
-1. Select **Next: Set rule logic >** button.
+1. The *Rule query* should be populated already with your KQL query.
 
-1. On the *Set rule logic* tab, the *Rule query* should be populated already with your KQL query.
-
-1. Configure the entities under *Alert enhancement - Entity mapping* using the parameters in the table below.
-
-    |Entity|Identifier|Data Field|
-    |:----|:----|:----|
-    |Account|FullName|AccountCustomEntity|
-    |Host|Hostname|HostCustomEntity|
-
-1. For *Query scheduling* set the following:
+1. For *Frequency* you can leave the default *Continuos (NRT)* setting, or select *Custom* from the dropdown menu and enter the following:
 
     |Setting|Value|
     |---|---|
     |Run Query every|5 minutes|
-    |Lookup data from the last|1 Days|
+    |Lookback|set automatically|
 
     >**Note:** We are purposely generating many incidents for the same data. This enables the Lab to use these alerts.
 
-1. Leave the rest of the options with the defaults. Select **Next: Incident settings>** button.
+1. Leave the rest of the options with the defaults. Select **Next** button.
 
-1. For the *Incident settings* tab, leave the default values and select **Next: Automated response >** button.
+1. On the *Alert settings* page, in the *Alert details* section, enter the following:
+    
+    |Setting|Value|
+    |---|---|
+    |Alert title|**Alert from {{Computer}}**|
+    |Description|**Alert from {{Process}} at {{TimeGenerated}}**|
 
-1. On the *Automated response* tab under *Automation rules*, select **Add new**.
+1. In the *Custom details* section, enter a key-value pair as follows:
 
-1. Use the settings in the table to configure the automation rule.
+    |Key|Parameter|
+    |:----|:----|
+    |Activity|EventID|
+
+1. configure the entities under *Entity mapping* using the parameters in the table below.
+
+    |Entity|Identifier|Column|
+    |:----|:----|:----|    
+    |Device|Hostname|HostCustomEntity|
+
+1. Select **Next**.
+
+    <!--- 1. For the *Incident settings* tab, leave the default values and select **Next: Automated response >** button. --->
+
+1. On the *Automated actions* page under *Remediation actions to take*, expand the *Devices* section and select the following:`
+
+    - **Collect investigation package**
+    - **Initialize investigation**
+
+
+1. Select **Next**.
+
+1. On the *Review and create* page, review the detection rule settings and select the **Submit** button to create the new Custom detection rule.
+
+1. You should see that the rule was saved successfully, and be back in *Advanced hunting* query page.
+
+     <!--- 1. Use the settings in the table to configure the automation rule.
 
     |Setting|Value|
     |:----|:----|
@@ -119,11 +143,11 @@ In this task, you will create a detection for the first attack of the previous e
 
     >**Note:** You have already assigned permissions to the playbook, so it will be available.
 
-1. Select **Apply**
+    1. Select **Apply**
 
-1. Select the **Next: Review + create >** button.
+    1. Select the **Next: Review + create >** button.
   
-1. On the *Review and create* tab, select the **Save** button to create the new Scheduled Analytics rule.
+    1. On the *Review and create* tab, select the **Save** button to create the new Scheduled Analytics rule. --->
 
 ### Task 2: Privilege Elevation Attack Detection
 
@@ -131,7 +155,9 @@ In this task, you will create a detection for the second attack of the previous 
 
 >**Note:** We have configured the Local Security Policy on the WINServer machine to log 4732 events. This is configured in the *Advanced Audit Policy Configuration > System Audit Policies - Local Group Policy Object > Account Management > Audit Security Group Management: Success and failure*.
 
-1. In the Microsoft Sentinel portal, select **Logs** from the General section in case you navigated away from this page.
+1. In the Microsoft Defender navigation menu, scroll down and expand the **Investigation & response** section.
+
+1. Expand the **Hunting** section and select **Advanced hunting**.
 
 1. **Run** the following KQL Statement to identify any entry that refers to administrators:
 

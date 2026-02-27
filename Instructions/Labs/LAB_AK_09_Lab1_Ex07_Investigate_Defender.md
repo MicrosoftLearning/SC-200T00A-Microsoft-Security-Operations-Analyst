@@ -22,7 +22,7 @@ An incident can include multiple alerts. It is an aggregation of all the relevan
 
 In this task, you will investigate an incident.
 
->**Note:** Microsoft Sentinel has been predeployed in your Azure subscription with the name **defenderWorkspace**, and the required *Content Hub* solutions have been installed.
+>**Note:** Microsoft Sentinel has been predeployed in your Azure subscription with the name **sentinelworkspace-01**, and the required *Content Hub* solutions have been installed.
 
 1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
@@ -46,21 +46,23 @@ In this task, you will investigate an incident.
   
 1. Select one of the **Startup RegKey** incidents.
 
-1. Review the incident details on the right blade that opened. Scroll down and select the **View full details** button.
+1. Review the incident details on the page that opened.
 
-1. If the "New incident experience" pop-up appears, follow the prompts by reading the information by selecting the **Next** button.
+1. Select **Manage incident** from the toolbar. It will have a *pencil* icon.
 
-1. On the left blade of the incident, change the Status to **Active** and then select **Apply**.
+1. On the *Manage incident* page for the incident, very the *Status* is *Active*. If not, change the Status to **Active** and then select **Save**.
 
-1. Scroll down to the *Tags* area, select **+** and type **RegKey** and select **OK**.
+1. In the *Incident tags* field, type **RegKey** and select **RegKey (Create new)**.
 
-1. Scroll down and in the *Write a comment...* box type: *I will research this* and select the **>** icon to submit the new comment.
+1. In the *Assign to* field, select the box and then select **Assign to me** from the dropdown.
 
-1. Hide the left blade by selecting the **<<** icon next to the owner.
+1. Select the **Save** button and the page closes.
 
-1. Review the **Incident timeline** window. Select the **Incident Actions** button at top-right and then **Run playbook**. You will see the *PostMessageTeams-OnIncident* playbook. This option help you to run playbooks manually.
+1. Review the **Attack story** tab. Select the **Run playbook** from the toolbar. **Hint**: You might need to select the ellipsis icon **(...)** to see it.
 
-1. Close the *Run playbook on incident* blade by selecting the **x** icon in the top right.
+1. You will see the *PostMessageTeams-OnIncident* playbook. This option help you to run playbooks manually.
+
+1. Close the *Run playbook on incident* blade by selecting the **X** icon in the top right.
 
 1. Review the **Entities** window. At least the *Host* entity that we mapped within the KQL query from the previous exercise should appear. **Hint:** If no entities are shown, refresh the page.
 

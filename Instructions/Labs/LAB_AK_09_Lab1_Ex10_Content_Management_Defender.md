@@ -18,19 +18,23 @@ You are a Security Operations Analyst working at a company that implemented Micr
 
 In this task, you will enable Entity behavior analytics in Microsoft Sentinel.
 
->**Note:** Microsoft Sentinel has been predeployed in your Azure subscription with the name **defenderWorkspace**, and the required *Content Hub* solutions have been installed.
+>**Note:** Microsoft Sentinel has been predeployed in your Azure subscription with the name **sentinelworkspace-01**, and the required *Content Hub* solutions have been installed.
 
 1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
-1. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
+1. Open the Microsoft Edge browser.
 
-1. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
+1. In the Edge browser, navigate to Microsoft Defender XDR at <https://security.microsoft.com>.
 
-1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
+1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
-1. Select the Microsoft Sentinel **defenderWorkspace**.
+1. In the **Enter password** dialog box, copy, and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
-1. Select **Analytics** under the *Configuration* area from the left blade.
+    >**Note:** You may be prompted to enter the *Temporary Access Pass* (TAP) instead of a password. This is also provided in the resources tab. If prompted, copy and paste the TAP value and select **Sign in**.
+
+1. In the Microsoft Defender navigation menu, scroll down and expand the **Microsoft Sentinel** section.
+
+1. Expand the **Configuration** section and select **Analytics**.
 
 1. Select the **Startup RegKey** rule that you created earlier.
 

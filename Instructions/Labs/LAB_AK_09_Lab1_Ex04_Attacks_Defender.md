@@ -37,7 +37,7 @@ As described above, the Azure Arc Connected Machine agent (azcmagent) has been p
 
 1. If it is not connected, perform the following steps before proceeding to reconnect *WINServer* to Azure Arc:
 
-    1. In the Azure portal, verify that it is not listed as a resource in the *SentinelStatic* resource group. If it is, select it and delete it from the resource group.
+    1. Open the the Azure portal <https://portal.azure.com> in the *Edge* browser, and verify that it is not listed as a resource in the *SentinelStatic* resource group. If it is, select it and delete it from the resource group.
     
     1. After *WINServer* is deleted from the resource group, run the following command from the *WINServer* command Prompt to make sure it is disconnected from Azure Arc:
 
@@ -56,6 +56,8 @@ As described above, the Azure Arc Connected Machine agent (azcmagent) has been p
     >**Note**: If you see the *How do you want to open this?* browser selection window, select **Microsoft Edge**.
 
 1. In the *Sign in* dialog box, enter your **Tenant Email** and **Tenant Password** provided by your lab hosting provider and select **Sign in**. Wait for the *Authentication complete* message, close the browser tab and return to the *Command Prompt* window.
+
+    >**Note:** You may be prompted to enter the *Temporary Access Pass* (TAP) instead of a password. This is also provided in the resources tab. If prompted, copy and paste the TAP value and select **Sign in**.
 
 1. When the commands complete running, leave the *Command Prompt* window open and type the following command to confirm that the connection was successful:
 
@@ -94,7 +96,9 @@ In this task, you'll add an Azure Arc connected, on-premises machine to Microsof
 
 1. In the *Configuration* section, under the *Instructions* tab, select the **Create data collection rule**.
 
-1. Enter **AZWINDCR** for Rule Name, then select **Next: Resources**.
+1. Enter a Rule Name like **WINSERVERDCR** for the DCR, then select **Next: Resources**.
+
+    >**Note:** Use a unique name for the Rule Name, consider using your *Student* username number to make it unique, for example, **WINXXXXXXXXDCR**.
 
 1. Expand your *Subscription* under *Scope* on the *Resources* tab.
 
