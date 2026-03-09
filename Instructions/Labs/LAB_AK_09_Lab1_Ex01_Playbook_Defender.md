@@ -48,7 +48,7 @@ In this task, you create a Logic App that is used as a Playbook in Microsoft Sen
 
 1. On the details pane, select **Create playbook**.
 
-1. For Resource Group, select **Create New**, enter **RG-Playbooks** and select OK.
+1. For Resource Group, select **SentinelStatic** and select OK.
 
 1. Remove  **for** and the extra *underscores* from the playbook name (would exceed limit of 64 characters). It should read **Defender_XDR_Ransomware_Playbook_SecOps_Tasks**.
 
@@ -66,7 +66,7 @@ In this task, you create a Logic App that is used as a Playbook in Microsoft Sen
 
 In this task, you update the new playbook you created with the proper connection information.
 
-1. When the previous task completes you should be in the *Defender_XDR_Ransomware_Playbook_SecOps-Tasks | Logic app designer* page. If you aren't, complete steps 1-5 below.
+1. When the previous task completes you should be in the *Defender_XDR_Ransomware_Playbook_SecOps-Tasks | Logic app designer* page. If you aren't, complete steps 2-7 below.
 
 1. In the Search bar of the Azure portal, type Sentinel, then select Microsoft Sentinel.
 
@@ -88,7 +88,7 @@ In this task, you update the new playbook you created with the proper connection
 
 1. Select **Add new** and select **Sign in**. In the new window, select your Azure subscription admin credentials when prompted. The last line of the block should now read “Connected to your-Student-username”.
 
-<!--- 1. Below within the logic split (+ sign), select Add an action to incident.--->
+    <!--- 1. Below within the logic split (+ sign), select Add an action to incident.--->
 
 1. Select **Save** on the command bar.
 
@@ -120,9 +120,9 @@ In this task, you update the new playbook you created with the proper connection
 
 1. Under Actions, select **Run Playbook**.
 
-1. Select the link to **Manage playbook permissions**.
+    <!--- 1. Select the link to **Manage playbook permissions**. -->
 
-1. On the *Manage Permissions* page, select the **SentinelStatic** resource group, and select **Apply**.
+    <!---1. On the *Manage Permissions* page, select the **SentinelStatic** resource group, and select **Apply**. --->
 
 1. From the drop-down list, select the **Defender_XDR_Ransomware_Playbook_SecOps_Tasks** playbook.
 

@@ -166,4 +166,4 @@ In this task, you will create a new workbook with advanced visualizations.
 
 1. On the right pane, select **View saved workbook** to review your workbook.
 
-## Proceed to Exercise 10
+## You have completed the lab.

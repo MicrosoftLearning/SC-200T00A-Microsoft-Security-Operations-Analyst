@@ -44,6 +44,8 @@ As described above, the Azure Arc Connected Machine agent (azcmagent) has been p
         ```cmd
         azcmagent disconnect --force-local-only
         ```
+    1. Leave the browser and Command Prompt windows open for the next steps.
+
 1. Run the following command to connect the machine to Azure Arc:
 
     ```cmd
@@ -196,4 +198,4 @@ Next, you will make other changes to the analytics rule.
 
 >**Note:** Some alerts will be triggered in a smaller time-frame just for our lab purpose.
 
-## Proceed to Exercise 6
+## Proceed to Exercise 5

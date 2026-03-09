@@ -29,39 +29,7 @@ To understand how Microsoft Sentinel is onboarded to Microsoft Defender XDR, you
 1. In the **Enter password** dialog box, copy, and paste in the admin's tenant password provided by your lab hosting provider and then select **Sign in**.
 
     >**Note:** You may be prompted to enter the *Temporary Access Pass* (TAP) instead of a password.
-
-<!--- 1. In the Search bar of the Azure portal, type "Microsoft Sentinel," then select
-
-1. Select **+ Create**.
-
-1. Select **Create a new workspace**.
-
-1. Select **Create new** for the Resource group.
-
-1. Enter *Defender-RG* and select **Ok**.
-
-1. For the Name, enter *defenderWorkspace*.
-
-1. You can leave the default region for the workspace.
-
-1. Select **Review + create** to validate the new workspace.
-
-1. Select **Create** to deploy the workspace.
-
-### Task 2 - Deploy Microsoft Sentinel to a workspace
-
-Deploy Microsoft Sentinel to the workspace.
-
-1. When the workspace deployment completes, select **Home** from the Microsoft Azure "breadcrumb" menu.
-
-1. You should see a **Microsoft Sentinel** tile in the *Azure services* section of the portal. Select it.
-
-1. Select **+ Create** from the menu items.
-
-1. Select the *defenderWorkspace* you created in Task 1.
-
-1. Select **Add**. --->
-
+   
 1. In the Microsoft Defender navigation menu, scroll down and expand the **System** section.
 
 1. Select **Settings**, and then select **Microsoft Sentinel**.
@@ -187,7 +155,7 @@ In this task, you create an indicator in Microsoft Sentinel.
 1. Run the following KQL statement.
 
     ```KQL
-    ThreatIntelligenceIndicator
+    ThreatIntelIndicators
     ```
 
     >**Note:** It could take up to five minutes for the indicator to appear.
@@ -195,7 +163,7 @@ In this task, you create an indicator in Microsoft Sentinel.
 1. Scroll the results to the right to see the DomainName column. You can also run the following KQL statement to just see the DomainName column.
 
     ```KQL
-    ThreatIntelligenceIndicator 
+    ThreatIntelIndicators 
     | project DomainName
     ```
 
