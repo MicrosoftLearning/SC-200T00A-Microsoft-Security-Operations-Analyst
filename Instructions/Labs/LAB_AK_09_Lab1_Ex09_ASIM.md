@@ -1,7 +1,12 @@
 ---
 lab:
-    title: 'Exercise 9 - Create ASIM parsers'
-    module: 'Learning Path 9 - Create detections and perform investigations using Microsoft Sentinel'
+  title: Exercise 9 - Create ASIM parsers
+  module: Learning Path 9 - Create detections and perform investigations using Microsoft
+    Sentinel
+  description: '![Lab overview.](../Media/SC-200-Lab_Diagrams_Mod7_L1_Ex9.png)'
+  duration: 30 minutes
+  level: 200
+  islab: true
 ---
 
 # Learning Path 9 - Lab 1 - Exercise 9 - Deploy ASIM parsers
