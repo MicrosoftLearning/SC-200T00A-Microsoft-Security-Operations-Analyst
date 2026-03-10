@@ -1,7 +1,19 @@
 ---
 lab:
-    title: 'Exercise 11 - Use Repositories in Microsoft Sentinel'
-    module: 'Learning Path 9 - Create detections and perform investigations using Microsoft Sentinel'
+  title: Exercise 11 - Use Repositories in Microsoft Sentinel
+  module: Learning Path 9 - Create detections and perform investigations using Microsoft
+    Sentinel
+  description: You are a Security Operations Analyst working at a company that implemented
+    Microsoft Sentinel. You already created Scheduled and Microsoft Security Analytics
+    rules.  You need to centralize analytical rules in an Azure DevOps repository.  Then
+    connect Sentinel to the Azure DevOps repository and import the content.
+  duration: 30 minutes
+  level: 100
+  islab: true
+  primarytopics:
+  - Azure
+  - Azure DevOps
+  - Microsoft Sentinel
 ---
 
 # Learning Path 9 - Lab 1 - Exercise 11 - Use Repositories in Microsoft Sentinel
