@@ -1,7 +1,17 @@
 ---
 lab:
-    title: 'Exercise 2 - Create a Playbook'
-    module: 'Learning Path 9 - Create detections and perform investigations using Microsoft Sentinel'
+  title: Exercise 2 - Create a Playbook
+  module: Learning Path 9 - Create detections and perform investigations using Microsoft
+    Sentinel
+  description: You're a Security Operations Analyst working at a company that implemented
+    Microsoft Sentinel. You must learn how to detect and mitigate threats using Microsoft
+    Sentinel. Now, you want to respond and remediate actions that can be run from
+    Microsoft Sentinel as a routine.
+  duration: 110 minutes
+  level: 200
+  islab: true
+  primarytopics:
+  - Microsoft Sentinel
 ---
 
 # Learning Path 9 - Lab 1 - Exercise 2 - Create a Playbook in Microsoft Sentinel
