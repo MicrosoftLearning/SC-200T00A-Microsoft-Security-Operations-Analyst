@@ -1,3 +1,15 @@
+---
+lab:
+  title: Module 1 - Mitigate threats using Microsoft 365 Defender
+  description: '**Note** Successful completion of this demo depends on completing
+    all of the steps in the  [Pre-requisites document](00-prerequisites.md).'
+  duration: 10 minutes
+  level: 300
+  islab: true
+  primarytopics:
+  - Microsoft 365
+---
+
 # Module 1 - Mitigate threats using Microsoft 365 Defender
 
 **Note** Successful completion of this demo depends on completing all of the steps in the  [Pre-requisites document](00-prerequisites.md).
