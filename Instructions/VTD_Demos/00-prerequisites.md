@@ -1,3 +1,11 @@
+---
+lab:
+  title: Microsoft Security Operations Analyst
+  description: Trainer Preparation Guide
+  duration: 5 minutes
+  level: 500
+  islab: true
+---
 
 # Microsoft Security Operations Analyst
 Trainer Preparation Guide
