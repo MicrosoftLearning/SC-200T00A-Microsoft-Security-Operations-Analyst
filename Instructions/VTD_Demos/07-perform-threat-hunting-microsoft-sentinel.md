@@ -1,3 +1,15 @@
+---
+lab:
+  title: Module 7 - Threat hunting in Microsoft Sentinel
+  description: '**Note** Successful completion of this demo depends on completing
+    all of the steps in the  [Pre-requisites document](00-prerequisites.md).'
+  duration: 84 minutes
+  level: 100
+  islab: true
+  primarytopics:
+  - Microsoft Sentinel
+---
+
 # Module 7 - Threat hunting in Microsoft Sentinel
 
 **Note** Successful completion of this demo depends on completing all of the steps in the  [Pre-requisites document](00-prerequisites.md).
