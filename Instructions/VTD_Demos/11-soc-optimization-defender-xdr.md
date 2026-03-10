@@ -1,3 +1,15 @@
+---
+lab:
+  title: Module 11 - SOC Optimization with Microsoft Defender XDR
+  description: '![Pop-up error message](../Media/simulation-pop-up-error.png)'
+  duration: 40 minutes
+  level: 100
+  islab: true
+  primarytopics:
+  - Microsoft Defender
+  - Microsoft Defender XDR
+---
+
 # Module 11 - SOC Optimization with Microsoft Defender XDR
 
 >**Note**
