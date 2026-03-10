@@ -1,7 +1,13 @@
 ---
 lab:
-    title: 'Exercise 3 - Connect Linux hosts to Microsoft Sentinel using data connectors'
-    module: 'Learning Path 8 - Connect logs to Microsoft Sentinel'
+  title: Exercise 3 - Connect Linux hosts to Microsoft Sentinel using data connectors
+  module: Learning Path 8 - Connect logs to Microsoft Sentinel
+  description: '![Lab overview.](../Media/SC-200-Lab_Diagrams_Mod6_L1_Ex3.png)'
+  duration: 30 minutes
+  level: 300
+  islab: true
+  primarytopics:
+  - Microsoft Sentinel
 ---
 
 # Learning Path 8 - Lab 1 - Exercise 3 - Connect Linux hosts to Microsoft Sentinel using data connectors
