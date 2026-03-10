@@ -1,7 +1,13 @@
 ---
 lab:
-    title: 'Exercise 1 - Perform Threat Hunting in Microsoft Sentinel'
-    module: 'Learning Path 10 - Perform threat hunting in Microsoft Sentinel'
+  title: Exercise 1 - Perform Threat Hunting in Microsoft Sentinel
+  module: Learning Path 10 - Perform threat hunting in Microsoft Sentinel
+  description: '![Lab overview.](../Media/SC-200-Lab_Diagrams_Mod8_L1_Ex1.png)'
+  duration: 60 minutes
+  level: 300
+  islab: true
+  primarytopics:
+  - Microsoft Sentinel
 ---
 
 # Learning Path 10 - Lab 1 - Exercise 1 - Perform Threat Hunting in Microsoft Sentinel
