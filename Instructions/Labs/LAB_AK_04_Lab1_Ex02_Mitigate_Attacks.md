@@ -1,7 +1,14 @@
 ---
 lab:
-    title: 'Exercise 4 - Mitigate Attacks with Microsoft Defender for Endpoint'
-    module: 'Learning Path 4 - Mitigate threats using Microsoft Defender for Endpoint'
+  title: Exercise 4 - Mitigate Attacks with Microsoft Defender for Endpoint
+  module: Learning Path 4 - Mitigate threats using Microsoft Defender for Endpoint
+  description: '![Lab overview.](../Media/SC-200-Lab_Diagrams_Mod2_L1_Ex2_10_19.png)'
+  duration: 30 minutes
+  level: 100
+  islab: true
+  primarytopics:
+  - Microsoft Defender
+  - Microsoft Defender for Endpoint
 ---
 
 # Learning Path 4 - Lab 1 - Exercise 2 - Mitigate Attacks with Microsoft Defender for Endpoint
