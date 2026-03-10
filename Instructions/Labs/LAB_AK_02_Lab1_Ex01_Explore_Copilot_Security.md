@@ -1,7 +1,15 @@
 ---
 lab:
-    title: 'Exercise 1 - Explore use cases in Microsoft Security Copilot'
-    module: 'Learning Path 2 - Mitigate threats using Microsoft Security Copilot'
+  title: Exercise 1 - Explore use cases in Microsoft Security Copilot
+  module: Learning Path 2 - Mitigate threats using Microsoft Security Copilot
+  description: The organization you work for wants to increase the efficiency and
+    capabilities for its security operations analysts, and to improve security outcomes.
+    In support of that objective, the office of the CISO determined that deploying
+    Microsoft Security Copilot is a key step towards that objective. As a Security
+    administrator for your organization, you're tasked with setting up Copilot.
+  duration: 15 minutes
+  level: 400
+  islab: true
 ---
 
 # Learning Path 2 - Lab 1 - Exercise 1 - Explore Microsoft Security Copilot
