@@ -1,3 +1,16 @@
+---
+lab:
+  title: Module 2 Demo - Mitigate Attacks with Microsoft Defender for Endpoint
+  description: '**Note** Successful completion of this demo depends on completing
+    all of the steps in the  [Pre-requisites document](00-prerequisites.md).'
+  duration: 34 minutes
+  level: 200
+  islab: true
+  primarytopics:
+  - Microsoft Defender
+  - Microsoft Defender for Endpoint
+---
+
 # Module 2 Demo - Mitigate Attacks with Microsoft Defender for Endpoint
 
 **Note** Successful completion of this demo depends on completing all of the steps in the  [Pre-requisites document](00-prerequisites.md).
