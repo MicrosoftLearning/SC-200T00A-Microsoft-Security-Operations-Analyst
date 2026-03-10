@@ -1,7 +1,12 @@
 ---
 lab:
-    title: 'Exercise 1 - Modify a Microsoft Security rule'
-    module: 'Learning Path 9 - Create detections and perform investigations using Microsoft Sentinel'
+  title: Exercise 1 - Modify a Microsoft Security rule
+  module: Learning Path 9 - Create detections and perform investigations using Microsoft
+    Sentinel
+  description: '![Lab overview.](../Media/SC-200-Lab_Diagrams_Mod7_L1_Ex1.png)'
+  duration: 10 minutes
+  level: 300
+  islab: true
 ---
 
 # Learning Path 9 - Lab 1 - Exercise 1 - Modify a Microsoft Security rule
