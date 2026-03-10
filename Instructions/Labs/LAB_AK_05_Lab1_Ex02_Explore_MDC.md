@@ -1,7 +1,14 @@
 ---
 lab:
-    title: 'Exercise 2 - Mitigate threats using Microsoft Defender for Cloud'
-    module: 'Learning Path 5 - Mitigate threats using Microsoft Defender for Cloud'
+  title: Exercise 2 - Mitigate threats using Microsoft Defender for Cloud
+  module: Learning Path 5 - Mitigate threats using Microsoft Defender for Cloud
+  description: '![Lab overview.](../Media/SC-200-Lab_Diagrams_Mod3_L1_Ex2.png)'
+  duration: 15 minutes
+  level: 200
+  islab: true
+  primarytopics:
+  - Microsoft Defender
+  - Microsoft Defender for Cloud
 ---
 
 # Learning Path 5 - Lab 1 - Exercise 2 - Mitigate threats using Microsoft Defender for Cloud
