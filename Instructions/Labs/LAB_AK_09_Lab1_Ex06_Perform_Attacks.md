@@ -1,7 +1,12 @@
 ---
 lab:
-    title: 'Exercise 6 - Conduct attacks'
-    module: 'Learning Path 9 - Create detections and perform investigations using Microsoft Sentinel'
+  title: Exercise 6 - Conduct attacks
+  module: Learning Path 9 - Create detections and perform investigations using Microsoft
+    Sentinel
+  description: '![Lab overview.](../Media/SC-200-Lab_Diagrams_Mod7_L1_Ex6.png)'
+  duration: 30 minutes
+  level: 300
+  islab: true
 ---
 
 # Learning Path 9 - Lab 1 - Exercise 6 - Conduct attacks
