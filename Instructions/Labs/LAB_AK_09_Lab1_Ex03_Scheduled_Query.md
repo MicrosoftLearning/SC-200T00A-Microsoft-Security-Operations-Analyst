@@ -1,7 +1,18 @@
 ---
 lab:
-    title: 'Exercise 3 - Create a Scheduled Query from a template'
-    module: 'Learning Path 9 - Create detections and perform investigations using Microsoft Sentinel'
+  title: Exercise 3 - Create a Scheduled Query from a template
+  module: Learning Path 9 - Create detections and perform investigations using Microsoft
+    Sentinel
+  description: You're a Security Operations Analyst working at a company that implemented
+    Microsoft Sentinel. You must learn how to detect and mitigate threats using Microsoft
+    Sentinel. After connecting your data sources to Microsoft Sentinel, you create
+    custom analytics rules to help discover threats and anomalous behaviors in your
+    environment.
+  duration: 45 minutes
+  level: 400
+  islab: true
+  primarytopics:
+  - Microsoft Sentinel
 ---
 
 # Learning Path 9 - Lab 1 - Exercise 3 - Create a Scheduled Query from a template
