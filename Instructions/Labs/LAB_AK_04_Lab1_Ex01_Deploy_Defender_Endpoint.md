@@ -1,7 +1,14 @@
 ---
 lab:
-    title: 'Exercise 1 - Deploy Microsoft Defender for Endpoint'
-    module: 'Learning Path 4 - Mitigate threats using Microsoft Defender for Endpoint'
+  title: Exercise 1 - Deploy Microsoft Defender for Endpoint
+  module: Learning Path 4 - Mitigate threats using Microsoft Defender for Endpoint
+  description: You're a Security Operations Analyst working at a company that is implementing Microsoft Defender for Endpoint. Your manager plans to onboard a few devices to provide insight into required changes to the Security Operations (SecOps) team response procedures.
+  duration: 30 minutes
+  level: 200
+  islab: true
+  primarytopics:
+    - Microsoft Defender
+    - Microsoft Defender for Endpoint
 ---
 
 # Learning Path 4 - Lab 1 - Exercise 1 - Deploy Microsoft Defender for Endpoint
