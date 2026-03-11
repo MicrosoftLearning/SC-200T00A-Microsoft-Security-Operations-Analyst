@@ -1,7 +1,11 @@
 ---
 lab:
-    title: 'Exercise 1 - Explore use cases in Microsoft Security Copilot'
-    module: 'Learning Path 2 - Mitigate threats using Microsoft Security Copilot'
+  title: Exercise 1 - Explore use cases in Microsoft Security Copilot
+  module: Learning Path 2 - Mitigate threats using Microsoft Security Copilot
+  description: In this exercise, you explore all the key landmarks in the landing page of the standalone experience of Microsoft Security Copilot.
+  duration: 15 minutes
+  level: 400
+  islab: true
 ---
 
 # Learning Path 2 - Lab 1 - Exercise 1 - Explore Microsoft Security Copilot
