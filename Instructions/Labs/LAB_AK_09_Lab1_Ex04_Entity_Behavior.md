@@ -1,7 +1,13 @@
 ---
 lab:
-    title: 'Exercise 4 - Explore Entity Behavior Analytics'
-    module: 'Learning Path 9 - Create detections and perform investigations using Microsoft Sentinel'
+  title: Exercise 4 - Explore Entity Behavior Analytics
+  module: Learning Path 9 - Create detections and perform investigations using Microsoft Sentinel
+  description: In this task, you will explore Entity behavior analytics in Microsoft Sentinel.
+  duration: 15 minutes
+  level: 200
+  islab: true
+  primarytopics:
+    - Microsoft Sentinel
 ---
 
 # Learning Path 9 - Lab 1 - Exercise 4 - Explore Entity Behavior Analytics
