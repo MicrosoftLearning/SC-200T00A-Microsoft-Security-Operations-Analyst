@@ -1,3 +1,14 @@
+---
+lab:
+  title: Module 4 Create queries for Microsoft Sentinel using Kusto Query Language (KQL)
+  description: In this task, you will access a Microsoft Sentinel Log Analytics environment where you can practice writing KQL statements.
+  duration: 30 minutes
+  level: 300
+  islab: true
+  primarytopics:
+    - Microsoft Sentinel
+---
+
 # Module 4 Create queries for Microsoft Sentinel using Kusto Query Language (KQL)
 
 <!--- **Note** Successful completion of this demo depends on completing all of the steps in the  [Pre-requisites document](00-prerequisites.md). --->
