@@ -1,3 +1,15 @@
+---
+lab:
+  title: Module 11 - SOC Optimization with Microsoft Defender XDR
+  description: In this task, we will explore SOC Optimization capabilities and perform suggested optimization actions.
+  duration: 40 minutes
+  level: 100
+  islab: true
+  primarytopics:
+    - Microsoft Defender
+    - Microsoft Defender XDR
+---
+
 # Module 11 - SOC Optimization with Microsoft Defender XDR
 
 >**Note**
