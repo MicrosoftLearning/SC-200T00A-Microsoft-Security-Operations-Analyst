@@ -1,7 +1,11 @@
 ---
 lab:
-    title: 'Exercise 8 - Investigate Incidents'
-    module: 'Learning Path 9 - Create detections and perform investigations using Microsoft Sentinel'
+  title: Exercise 8 - Investigate Incidents
+  module: Learning Path 9 - Create detections and perform investigations using Microsoft Sentinel
+  description: In this task, you will investigate an incident.
+  duration: 30 minutes
+  level: 200
+  islab: true
 ---
 
 # Learning Path 9 - Lab 1 - Exercise 8 - Investigate Incidents
