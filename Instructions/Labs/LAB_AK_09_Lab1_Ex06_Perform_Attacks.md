@@ -1,7 +1,15 @@
 ---
 lab:
-    title: 'Exercise 6 - Conduct attacks'
-    module: 'Learning Path 9 - Create detections and perform investigations using Microsoft Sentinel'
+  title: Exercise 6 - Conduct attacks
+  module: Learning Path 9 - Create detections and perform investigations using Microsoft Sentinel
+  description: In this task, you will perform attacks on the host connected with Azure Arc and that has the Azure Monitor Agent configured.
+  duration: 30 minutes
+  level: 300
+  islab: true
+  primarytopics:
+    - Azure
+    - Azure Arc
+    - Azure Monitor
 ---
 
 # Learning Path 9 - Lab 1 - Exercise 6 - Conduct attacks
