@@ -4,7 +4,7 @@ lab:
   description: In this task, you will access a Microsoft Sentinel Log Analytics environment where you can practice writing KQL statements.
   duration: 30 minutes
   level: 300
-  islab: true
+  islab: false
   primarytopics:
     - Microsoft Sentinel
 ---
