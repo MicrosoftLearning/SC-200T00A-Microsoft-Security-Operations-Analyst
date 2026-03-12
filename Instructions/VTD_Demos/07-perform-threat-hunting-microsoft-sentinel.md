@@ -2,9 +2,9 @@
 lab:
   title: Module 7 - Threat hunting in Microsoft Sentinel
   description: In this task, you will create a hunting query, bookmark a result, and create a Livestream.
-  duration: 84 minutes
+  duration: 20 minutes
   level: 100
-  islab: true
+  islab: false
   primarytopics:
     - Microsoft Sentinel
 ---
