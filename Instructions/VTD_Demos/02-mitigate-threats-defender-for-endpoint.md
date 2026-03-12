@@ -4,7 +4,7 @@ lab:
   description: In this task, you will run two simulated attack to explore the capabilities of Microsoft Defender for Endpoint.
   duration: 34 minutes
   level: 200
-  islab: true
+  islab: false
   primarytopics:
     - Microsoft Defender
     - Microsoft Defender for Endpoint
