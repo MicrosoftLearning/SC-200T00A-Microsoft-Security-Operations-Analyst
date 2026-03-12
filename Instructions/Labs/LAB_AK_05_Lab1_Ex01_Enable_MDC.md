@@ -4,7 +4,7 @@ lab:
   module: Learning Path 5 - Mitigate threats using Microsoft Defender for Cloud
   description: You're a Security Operations Analyst working at a company that is implementing cloud workload protections with Microsoft Defender for Cloud. In this lab, you enable Microsoft Defender for Cloud.
   duration: 25 minutes
-  level: 300
+  level: 200
   islab: true
   primarytopics:
     - Microsoft Defender
