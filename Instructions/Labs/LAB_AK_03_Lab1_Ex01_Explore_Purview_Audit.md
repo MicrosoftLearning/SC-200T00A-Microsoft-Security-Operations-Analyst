@@ -3,8 +3,8 @@ lab:
   title: Exercise 1 - Explore Microsoft Purview Audit logs
   module: Learning Path 3 - Mitigate threats using Microsoft Purview
   description: You're a Security Operations Analyst working at a company that is implementing Microsoft Defender XDR and Microsoft Purview. You're assisting colleagues on the the IT compliance team with configuring both Purview Audit (Standard) and Audit (Premium). Their objective is to ensure that all access and modifications to patient data in our network of healthcare facilitie sare accurately logged to meet health data protection regulations.
-  duration: 15 minutes
-  level: 100
+  duration: 20 minutes
+  level: 200
   islab: true
   primarytopics:
     - Microsoft Defender
