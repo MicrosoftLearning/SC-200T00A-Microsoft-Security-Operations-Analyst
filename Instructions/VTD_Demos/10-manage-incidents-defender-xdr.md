@@ -4,7 +4,7 @@ lab:
   description: In this task, you will explore incident management capabilities in Microsoft Defender XDR, including incident investigation, response actions, and collaboration features.
   duration: 82 minutes
   level: 200
-  islab: true
+  islab: false
   primarytopics:
     - Microsoft Defender
     - Microsoft Defender XDR
