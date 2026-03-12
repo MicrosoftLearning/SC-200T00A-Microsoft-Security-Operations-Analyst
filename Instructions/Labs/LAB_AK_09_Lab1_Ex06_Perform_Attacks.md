@@ -6,11 +6,7 @@ lab:
   duration: 30 minutes
   level: 300
   islab: true
-  primarytopics:
-    - Azure
-    - Azure Arc
-    - Azure Monitor
----
+  ---
 
 # Learning Path 9 - Lab 1 - Exercise 6 - Conduct attacks
 
