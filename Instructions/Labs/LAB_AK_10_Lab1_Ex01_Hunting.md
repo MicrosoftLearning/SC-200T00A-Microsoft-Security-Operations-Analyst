@@ -1,7 +1,13 @@
 ---
 lab:
-    title: 'Exercise 1 - Perform Threat Hunting in Microsoft Sentinel'
-    module: 'Learning Path 10 - Perform threat hunting in Microsoft Sentinel'
+  title: Exercise 1 - Perform Threat Hunting in Microsoft Sentinel
+  module: Learning Path 10 - Perform threat hunting in Microsoft Sentinel
+  description: The log data created in the Learning Path 9 lab exercises will not be available in this lab without rerunning the following prerequisite tasks.
+  duration: 60 minutes
+  level: 300
+  islab: true
+  primarytopics:
+    - Microsoft Sentinel
 ---
 
 # Learning Path 10 - Lab 1 - Exercise 1 - Perform Threat Hunting in Microsoft Sentinel

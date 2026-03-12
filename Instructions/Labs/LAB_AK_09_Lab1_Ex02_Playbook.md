@@ -1,7 +1,13 @@
 ---
 lab:
-    title: 'Exercise 2 - Create a Playbook'
-    module: 'Learning Path 9 - Create detections and perform investigations using Microsoft Sentinel'
+  title: Exercise 2 - Create a Playbook
+  module: Learning Path 9 - Create detections and perform investigations using Microsoft Sentinel
+  description: You have now created a playbook and an automation rule in Microsoft Sentinel.
+  duration: 110 minutes
+  level: 200
+  islab: true
+  primarytopics:
+    - Microsoft Sentinel
 ---
 
 # Learning Path 9 - Lab 1 - Exercise 2 - Create a Playbook in Microsoft Sentinel

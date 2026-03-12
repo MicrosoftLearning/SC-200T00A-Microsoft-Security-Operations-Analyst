@@ -1,7 +1,13 @@
 ---
 lab:
-    title: 'Exercise 3 - Create a Scheduled Query from a template'
-    module: 'Learning Path 9 - Create detections and perform investigations using Microsoft Sentinel'
+  title: Exercise 3 - Create a Scheduled Query from a template
+  module: Learning Path 9 - Create detections and perform investigations using Microsoft Sentinel
+  description: In this task, you will connect the Azure Activity data connector.
+  duration: 45 minutes
+  level: 400
+  islab: true
+  primarytopics:
+    - Azure
 ---
 
 # Learning Path 9 - Lab 1 - Exercise 3 - Create a Scheduled Query from a template
