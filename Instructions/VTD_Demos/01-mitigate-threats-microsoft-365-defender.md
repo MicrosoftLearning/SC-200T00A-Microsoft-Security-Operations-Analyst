@@ -4,7 +4,7 @@ lab:
   description: In this task, you will familiarize yourself with the Microsoft 365 Defender portal capabilities.
   duration: 10 minutes
   level: 300
-  islab: true
+  islab: false
   primarytopics:
     - Microsoft 365
 ---
