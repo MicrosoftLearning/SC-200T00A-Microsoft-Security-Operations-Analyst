@@ -4,7 +4,7 @@ lab:
   description: In this task, we will explore SOC Optimization capabilities and perform suggested optimization actions.
   duration: 40 minutes
   level: 100
-  islab: true
+  islab: false
   primarytopics:
     - Microsoft Defender
     - Microsoft Defender XDR
