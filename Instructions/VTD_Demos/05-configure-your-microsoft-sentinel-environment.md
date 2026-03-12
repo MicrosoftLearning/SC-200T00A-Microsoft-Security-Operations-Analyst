@@ -2,9 +2,9 @@
 lab:
   title: Module 5 Configure your Microsoft Sentinel Environment
   description: In this task, you will create a Watchlist.
-  duration: 72 minutes
+  duration: 20 minutes
   level: 300
-  islab: true
+  islab: false
   primarytopics:
     - Microsoft Sentinel
 ---
