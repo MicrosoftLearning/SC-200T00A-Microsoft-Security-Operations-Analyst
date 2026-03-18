@@ -64,7 +64,7 @@ In this task, you will create an Azure DevOps repository.
 
 1. At the bottom of the page in the area *Initialize main branch with a README or gitignore*, select **Initialize**.
 
-1. The page should show the Files for the Repo.  the only file is README.me.
+1. The page should show the Files for the Repo.  the only file is README.md.
 
 1. On the Files (right side of the page) pane, Contents tab, the toolbar include options *Set up build*, *Clone*, and three vertical dots (*More options*). Select the three vertical dots to show *More options*.
 
@@ -88,9 +88,11 @@ In this task, you will connect Microsoft Sentinel to the Azure DevOps repository
 
 1. In Microsoft Sentinel, select **Repositories** in the *Content Management* section.
 
-1. Select **+ Add new** button from the toolbar.
+1. Select **+ Add new** button from the *Continuous deployment* toolbar.
 
 1. For the name enter **My Content**.
+
+    >**Note:** You may want to choose a more descriptive name for your repository to distinguish it from other users' repositories.
 
 1. For Source control, select **Azure DevOps**.
 
@@ -108,10 +110,14 @@ In this task, you will connect Microsoft Sentinel to the Azure DevOps repository
 
 1. Then select **Create**.
 
-1. Go back to Microsoft Sentinel workspace if needed
+1. On the *Repositories* page, select **Refresh**. Wait until *Last deployment status* is *Succeeded*.  
 
-1. Go to the *Repositories (Preview)* page, select **Refresh**. Wait until *Last deployment status* is *Failed*.  
+1. Select the *My Content* repository and in the *fly-out* window, review the *Content types* and *Last deployment status*.
 
-    >**Note:** The *Failed* status is due to limitations in the hosted lab environment. You would normally see *Succeeded*. Then you can see in the *Analytics* the imported rule *Rule from Azure DevOps*.
+1. Select the **Delete** button from the *Continuous deployment* toolbar.
+
+1. Select **Authorize** when prompted.
+ 
+    >**Note:** We're deleting this repository connection to clean up after the lab.
 
 ## You have completed the lab.

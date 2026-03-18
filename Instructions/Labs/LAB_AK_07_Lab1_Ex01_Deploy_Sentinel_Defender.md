@@ -18,7 +18,49 @@ You're a Security Operations Analyst working at a company that implemented Micro
 
 To understand how Microsoft Sentinel is onboarded to Microsoft Defender XDR, you can perform the instructions for this simulated exercise - **[Connect Microsoft Sentinel to Defender XDR](https://learn.microsoft.com/training/modules/integrate-microsoft-defender-xdr-with-microsoft-sentinel/simulation-exercise-deploy-sentinel-to-defender)**.
 
-### Task 1 - Explore Microsoft Sentinel settings in Defender XDR
+  <!---### Task 1 - Explore Microsoft Sentinel settings in Defender XDR --->
+    
+   <!---1. Log in to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.
+        
+            1. In the Microsoft Edge browser, navigate to Defender XDR at <https://security.microsoft.com>.
+          
+            1. In the **Sign in** dialog box, copy, and paste in the tenant Email account for the admin username provided by your lab hosting provider and then select **Next**.
+        
+            1. In the **Enter password** dialog box, copy, and paste in the admin's tenant password provided by your lab hosting provider and then select **Sign in**.
+        
+                >**Note:** You may be prompted to enter the *Temporary Access Pass* (TAP) instead of a password.
+           
+            1. In the Microsoft Defender navigation menu, scroll down and expand the **System** section.
+        
+            1. Select **Settings**, and then select **Microsoft Sentinel**.
+        
+            1. In the *SIEM workspaces*, *Workspaces* pane, the **SentinelWorkspace-01** workspace is listed as Primary and shows a *Connected* Status.
+        
+            1. Select the **SentinelWorkspace-01** to open the workspace settings options.
+        
+            1. Expand each of the different sections to explore the available configuration options.
+        
+            >**Warning:** Do not select the *Disconnect* or *Remove Microsoft Sentinel* icon links. Doing so can impact the functionality of your environment. --->
+
+   <!---### Task 2 - Configure data retention --->
+
+   <!---1. While still on the  workspace settings options page, expand **Log Analytics settings**, and select the **Configure Log Analytics workspace** link.
+
+        1. This opens a new browser tab to the Azure portal's Log Analytics workspace settings for the **SentinelWorkspace-01**.
+        
+        1. Scroll down the navigation menu and expand the *Settings* section, then select **Usage and estimated costs**.
+        
+        1. Select **Data retention** from the menu items.
+        
+        1. Change data retention period to **180 days**.
+        
+        1. Select **OK**.
+        
+        1. Return to the Microsoft Defender XDR browser tab, and close the workspace settings options page. --->
+
+### Task 1: Create a Watchlist
+
+In this task, you create a watchlist in Microsoft Sentinel.
 
 1. Log in to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.
 
@@ -29,38 +71,6 @@ To understand how Microsoft Sentinel is onboarded to Microsoft Defender XDR, you
 1. In the **Enter password** dialog box, copy, and paste in the admin's tenant password provided by your lab hosting provider and then select **Sign in**.
 
     >**Note:** You may be prompted to enter the *Temporary Access Pass* (TAP) instead of a password.
-   
-1. In the Microsoft Defender navigation menu, scroll down and expand the **System** section.
-
-1. Select **Settings**, and then select **Microsoft Sentinel**.
-
-1. In the *SIEM workspaces*, *Workspaces* pane, the **SentinelWorkspace-01** workspace is listed as Primary and shows a *Connected* Status.
-
-1. Select the **SentinelWorkspace-01** to open the workspace settings options.
-
-1. Expand each of the different sections to explore the available configuration options.
-
->**Warning:** Do not select the *Disconnect* or *Remove Microsoft Sentinel* icon links. Doing so can impact the functionality of your environment.
-
-### Task 2 - Configure data retention
-
-1. While still on the  workspace settings options page, expand **Log Analytics settings**, and select the **Configure Log Analytics workspace** link.
-
-1. This opens a new browser tab to the Azure portal's Log Analytics workspace settings for the **SentinelWorkspace-01**.
-
-1. Scroll down the navigation menu and expand the *Settings* section, then select **Usage and estimated costs**.
-
-1. Select **Data retention** from the menu items.
-
-1. Change data retention period to **180 days**.
-
-1. Select **OK**.
-
-1. Return to the Microsoft Defender XDR browser tab, and close the workspace settings options page.
-
-### Task 3: Create a Watchlist
-
-In this task, you create a watchlist in Microsoft Sentinel.
 
 1. In the search box at the bottom of the Windows 11 screen, enter *Notepad*. Select **Notepad** from the results.
 
@@ -114,7 +124,7 @@ In this task, you create a watchlist in Microsoft Sentinel.
 
     >**Note:** You can now use the _GetWatchlist('HighValueHosts') in your own KQL statements to access the list. The column to reference would be *Hostname*.
 
-### Task 5: Create a Threat Indicator
+### Task 2: Create a Threat Indicator
 
 In this task, you create an indicator in Microsoft Sentinel.
 
@@ -160,14 +170,14 @@ In this task, you create an indicator in Microsoft Sentinel.
 
     >**Note:** It could take up to five minutes for the indicator to appear.
 
-1. Scroll the results to the right to see the DomainName column. You can also run the following KQL statement to just see the DomainName column.
+1. Scroll the results to the right to see the ObservableValue column. You can also run the following KQL statement to just see the ObservableValue column.
 
     ```KQL
     ThreatIntelIndicators 
-    | project DomainName
+    | project ObservableValue
     ```
 
-### Task 6: Configure log retention
+### Task 3: Configure log retention
 
 In this task, you'll change the retention period for the SecurityEvent table.
 
