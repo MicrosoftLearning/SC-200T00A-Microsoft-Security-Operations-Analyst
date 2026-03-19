@@ -1,7 +1,15 @@
 ---
 lab:
-    title: 'Exercise 4 - Connect Defender XDR to Microsoft Sentinel using data connectors'
-    module: 'Learning Path 8 - Connect logs to Microsoft Sentinel'
+  title: Exercise 4 - Connect Defender XDR to Microsoft Sentinel using data connectors
+  module: Learning Path 8 - Connect logs to Microsoft Sentinel
+  description: In this task, you deploy the Microsoft Defender XDR connector.
+  duration: 78 minutes
+  level: 200
+  islab: true
+  primarytopics:
+    - Microsoft Defender
+    - Microsoft Defender XDR
+    - Microsoft Sentinel
 ---
 
 # Learning Path 8 - Lab 1 - Exercise 4 - Connect Defender XDR to Microsoft Sentinel using data connectors
@@ -23,7 +31,9 @@ In this task, you deploy the Microsoft Defender XDR connector.
 
 1. Login to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
-1. In the Microsoft Edge browser, open the simulated environment by selecting this link: [Azure portal]( https://app.highlights.guide/start/1c894b46-4b0a-40cb-b0f0-1e1c86c615f3?token=16d48b6c-eace-4a1f-8050-098d29d23a89).
+1. In the Microsoft Edge browser, open the simulated environment by selecting this link: <https://app.highlights.guide/start/1c894b46-4b0a-40cb-b0f0-1e1c86c615f3?token=16d48b6c-eace-4a1f-8050-098d29d23a89>
+
+    <!--- [Azure portal]( https://app.highlights.guide/start/1c894b46-4b0a-40cb-b0f0-1e1c86c615f3?token=16d48b6c-eace-4a1f-8050-098d29d23a89). --->
 
 1. On the Azure portal *Home* page, select the **Microsoft Sentinel** icon.
 

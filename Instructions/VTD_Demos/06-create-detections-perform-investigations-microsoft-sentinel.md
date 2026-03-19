@@ -1,3 +1,14 @@
+---
+lab:
+  title: Module 6 Create detections and perform investigations with Microsoft Sentinel
+  description: In this task, you will create a NRT (Near Real Time) analytics query rule.
+  duration: 20 minutes
+  level: 300
+  islab: false
+  primarytopics:
+    - Microsoft Sentinel
+---
+
 # Module 6 Create detections and perform investigations with Microsoft Sentinel
 
 **Note** Successful completion of this demo depends on completing all of the steps in the  [Pre-requisites document](00-prerequisites.md).

@@ -1,7 +1,15 @@
 ---
 lab:
-    title: 'Exercise 1 - Explore Microsoft Purview Audit logs'
-    module: 'Learning Path 3 - Mitigate threats using Microsoft Purview'
+  title: Exercise 1 - Explore Microsoft Purview Audit logs
+  module: Learning Path 3 - Mitigate threats using Microsoft Purview
+  description: You're a Security Operations Analyst working at a company that is implementing Microsoft Defender XDR and Microsoft Purview. You're assisting colleagues on the the IT compliance team with configuring both Purview Audit (Standard) and Audit (Premium). Their objective is to ensure that all access and modifications to patient data in our network of healthcare facilitie sare accurately logged to meet health data protection regulations.
+  duration: 20 minutes
+  level: 200
+  islab: true
+  primarytopics:
+    - Microsoft Defender
+    - Microsoft Defender XDR
+    - Microsoft Purview
 ---
 
 # Learning Path 3 - Lab 1 - Exercise 1 - Explore Microsoft Purview Audit logs
@@ -40,7 +48,7 @@ In this task, you'll assign preset security policies for Exchange Online Protect
 
 1. In the **Enter password** dialog box, copy, and paste in the admin's tenant password provided by your lab hosting provider and then select **Sign in**.
 
-1. From the navigation menu, expand *Operational technology* and select **More resources**.
+1. From the navigation menu select **More resources**.
 
 1. In the **More resources** pane, select the **Open** button on the *Microsoft Purview portal* tile.
 
