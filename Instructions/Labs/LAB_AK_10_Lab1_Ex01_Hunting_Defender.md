@@ -70,7 +70,7 @@ In this task, you'll add an Azure Arc connected, on-premises machine to Microsof
 
 1. Login to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.  
 
-1. In the Microsoft Edge browser, navigate to the Microsoft Defender portal at <https://security.microsoft.com>.
+1. In the Microsoft Edge browser, navigate to Defender XDR at `https://security.microsoft.com`.
 
 1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
@@ -188,13 +188,13 @@ In this task, you'll create a hunting query, and create a Livestream.
 
 1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
-1. In the Microsoft Edge browser, navigate to the Microsoft Defender portal at <https://security.microsoft.com>.
+1. In the Microsoft Edge browser, navigate to Defender XDR at `https://security.microsoft.com`.
 
 1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
 1. In the **Enter password** dialog box, copy, and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
-    >**Note:** You may be prompted to enter the *Temporary Access Pass* (TAP) instead of a password.
+    >**Note:** You may be prompted to enter the *Temporary Access Pass* (TAP) instead of a password. This is also provided in the resources tab. If prompted, copy and paste the TAP value and select **Sign in**.
 
 1. In the Microsoft Defender navigation menu, scroll down and expand the **Investigation & Response** section.
 

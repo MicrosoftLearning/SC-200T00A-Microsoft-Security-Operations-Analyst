@@ -24,6 +24,18 @@ This task explores Notebooks in Microsoft Sentinel Data lake. You will be using 
 
 >**Note:** Visual Studio Code is already installed on the lab VM. Prior experience with Visual Studio Code, Jupyter Notebooks and Python coding is recommended.
 
+1. Login to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.  
+
+1. In the Microsoft Edge browser, navigate to Defender XDR at `https://security.microsoft.com`.
+
+1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
+
+1. In the **Enter password** dialog box, copy, and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
+
+    >**Note:** You may be prompted to enter the *Temporary Access Pass* (TAP) instead of a password. This is also provided in the resources tab. If prompted, copy and paste the TAP value and select **Sign in**.
+
+1. In the Microsoft Defender navigation menu, scroll down and expand the **Microsoft Sentinel** section.
+
 1. Expand *Data lake exploration* in Microsoft Sentinel and select **Notebooks**.
 
 1. The *Notebooks* page displays the list of steps to perform to use Data lake Jupyter notebooks, and provides links to available resources.
@@ -48,7 +60,7 @@ This task explores Notebooks in Microsoft Sentinel Data lake. You will be using 
 
 1. Look for **MCP: Add server**, and select that option.
 
-1. Choose the HTTP option and enter the URL: <https://sentinel.microsoft.com/mcp/data-exploration>.
+1. Choose the HTTP option and enter the URL: `https://sentinel.microsoft.com/mcp/data-exploration>`.
 
 1. Select **Enter** to use the default server ID.
 

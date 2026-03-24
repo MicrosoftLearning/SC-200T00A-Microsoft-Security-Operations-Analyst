@@ -26,7 +26,7 @@ In this task, you will explore Entity behavior analytics in Microsoft Sentinel.
 
 1. Open the Microsoft Edge browser.
 
-1. In the Edge browser, navigate to Microsoft Defender XDR at <https://security.microsoft.com>.
+1. In the Edge browser, navigate to Defender XDR at `https://security.microsoft.com`.
 
 1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 

@@ -24,7 +24,7 @@ In this task, you will enable Entity behavior analytics in Microsoft Sentinel.
 
 1. Open the Microsoft Edge browser.
 
-1. In the Edge browser, navigate to Microsoft Defender XDR at <https://security.microsoft.com>.
+1. In the Edge browser, navigate to Defender XDR at `https://security.microsoft.com`.
 
 1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
@@ -52,7 +52,7 @@ In this task, you will enable Entity behavior analytics in Microsoft Sentinel.
 
 In this task, you will create an Azure DevOps repository.
 
-1. Open another tab in the browser and navigate to <https://aexprodcus1.vsaex.visualstudio.com/me?mkt=en-US>.
+1. Open another tab in the browser and navigate to `https://aexprodcus1.vsaex.visualstudio.com/me?mkt=en-US>`.
 
 1. After verifying your account, on the *We need a few more details* page, select **Continue**.
 

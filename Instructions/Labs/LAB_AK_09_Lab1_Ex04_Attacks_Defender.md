@@ -37,7 +37,7 @@ As described above, the Azure Arc Connected Machine agent (azcmagent) has been p
 
 1. If it is not connected, perform the following steps before proceeding to reconnect *WINServer* to Azure Arc:
 
-    1. Open the the Azure portal <https://portal.azure.com> in the *Edge* browser, and verify that it is not listed as a resource in the *SentinelStatic* resource group. If it is, select it and delete it from the resource group.
+    1. Open the the Azure portal `https://portal.azure.com` in the *Edge* browser, and verify that it is *not* listed as a resource in the *SentinelStatic* resource group. If it is, select it and delete it from the resource group.
     
     1. After *WINServer* is deleted from the resource group, run the following command from the *WINServer* command Prompt to make sure it is disconnected from Azure Arc:
 
@@ -78,7 +78,7 @@ In this task, you'll add an Azure Arc connected, on-premises machine to Microsof
 
 1. Open the Microsoft Edge browser.
 
-1. In the Edge browser, navigate to Microsoft Defender XDR at <https://security.microsoft.com>.
+1. In the Edge browser, navigate to Defender XDR at `https://security.microsoft.com`.
 
 1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
@@ -118,7 +118,7 @@ In this task, you'll add an Azure Arc connected, on-premises machine to Microsof
 
 >**Important: You will perform no actions in this exercise.**  These instructions are only an explanation of the attacks you will perform in the next exercise. Please carefully read this page.
 
-The attack patterns are based on an open-source project: <https://github.com/redcanaryco/atomic-red-team>
+The attack patterns are based on an open-source project: `https://github.com/redcanaryco/atomic-red-team`
 
 #### Attack 1 - Persistence with Registry Key Add
 

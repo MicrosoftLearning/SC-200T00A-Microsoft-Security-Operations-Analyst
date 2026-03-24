@@ -56,7 +56,7 @@ In this task, you create a *Microsoft Sentinel analytics scheduled query rule*.
 
 1. Open the Microsoft Edge browser.
 
-1. In the Edge browser, navigate to Microsoft Defender XDR at <https://security.microsoft.com>.
+1. In the Edge browser, navigate to Defender XDR at `https://security.microsoft.com`.
 
 1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
@@ -141,7 +141,7 @@ In this task, you create a *Microsoft Sentinel analytics scheduled query rule*.
 
 In this task, you test your new scheduled query rule. You start by enabling *Cloud Shell* in the Azure portal, which will trigger the rule you created in the previous task and generate an incident.
 
-1. In the Microsoft Edge browser, navigate to the Azure portal at <https://portal.azure.com>.
+1. In the Microsoft Edge browser, navigate to the Azure portal at `https://portal.azure.com`.
 
 1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
@@ -165,7 +165,7 @@ In this task, you test your new scheduled query rule. You start by enabling *Clo
 
 1. Make sure the following *Operation name* items appear: **List Storage Account Keys** and **Update Storage Account Create**. These are the operations that the KQL query you reviewed earlier will match to generate the alert. **Hint:** You might need to select **Refresh** to update the list.
 
-1. Return to Microsoft Defender XDR at <https://security.microsoft.com>.
+1. Return to Defender XDR at `https://security.microsoft.com`.
 
 1. In the Microsoft Defender navigation menu, scroll down and expand the *Investigation & response* section. Next,expand the *Incidents & alerts* section and select **Incidents**.
 
