@@ -33,7 +33,7 @@ In this task, you install the **Microsoft Sentinel Training Lab Solution** from 
 
 1. Login to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.  
 
-1. In the Microsoft Edge browser, go to <https://portal.azure.com> and login with the assigned credentials.
+1. In the Microsoft Edge browser, go to [Azure Portal](https://portal.azure.com) and login with the assigned credentials.
 
 1. In the Azure search bar, type **Microsoft Sentinel Training Lab Solution** and select it from the results.
 
@@ -53,7 +53,7 @@ In this task, you install the **Microsoft Sentinel Training Lab Solution** from 
 
 ### Task 2: Query log data with KQL in Defender XDR
 
-1. In the Microsoft Edge browser, navigate to the Microsoft Defender portal at <https://security.microsoft.com>.
+1. In the Microsoft Edge browser, navigate to [Microsoft Defender XDR](https://security.microsoft.com).
 
 1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 

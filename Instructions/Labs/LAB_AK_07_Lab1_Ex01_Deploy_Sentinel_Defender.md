@@ -64,7 +64,7 @@ In this task, you create a watchlist in Microsoft Sentinel.
 
 1. Log in to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.
 
-1. In the Microsoft Edge browser, navigate to Defender XDR at <https://security.microsoft.com>.
+1. In the Microsoft Edge browser, navigate to [Defender XDR](https://security.microsoft.com).
   
 1. In the **Sign in** dialog box, copy, and paste in the tenant Email account for the admin username provided by your lab hosting provider and then select **Next**.
 

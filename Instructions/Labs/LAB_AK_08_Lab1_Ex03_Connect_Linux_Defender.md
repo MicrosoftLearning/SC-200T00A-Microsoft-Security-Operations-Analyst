@@ -28,7 +28,7 @@ In this task, you'll access your Microsoft Sentinel workspace.
 
 1. Open the Microsoft Edge browser.
 
-1. In the Edge browser, navigate to the Azure portal at <https://security.microsoft.com>.
+1. In the Edge browser, navigate to [Defender XDR](https://security.microsoft.com).
 
 1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
@@ -86,7 +86,7 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
 
 1. Start the Microsoft Edge browser.
 
-1. In the Edge browser, navigate to Microsoft Defender XDR at <https://security.microsoft.com>.
+1. In the Edge browser, navigate to [Defender XDR](https://security.microsoft.com).
 
 1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
@@ -198,7 +198,7 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
 1. Start the Microsoft Edge browser.
 
-1. In the Microsoft Edge browser, navigate to the Microsoft Defender portal at <https://security.microsoft.com>.
+1. In the Microsoft Edge browser, navigate to the [Microsoft Defender portal](https://security.microsoft.com).
 
 1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 

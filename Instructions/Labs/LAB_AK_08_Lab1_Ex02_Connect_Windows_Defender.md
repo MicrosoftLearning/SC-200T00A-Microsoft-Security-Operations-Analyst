@@ -22,7 +22,7 @@ In this task, you create a Windows virtual machine in Azure.
 
 1. Login to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.  
 
-1. In the Microsoft Edge browser, navigate to the Azure portal at <https://portal.azure.com>.
+1. In the Microsoft Edge browser, navigate to the [Azure portal](https://portal.azure.com).
 
 1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
@@ -114,7 +114,7 @@ In this task, you connect an Azure Windows virtual machine to Microsoft Sentinel
 
 1. Login to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.  
 
-1. If necessary, open the Microsoft Edge browser, and navigate to the Defender portal at <https://security.microsoft.com>, and sign in with the provided credentials.
+1. If necessary, open the Microsoft Edge browser, and navigate to [Defender XDR](https://security.microsoft.com), and sign in with the provided credentials.
 
 1. In the Microsoft Defender navigation menu, scroll down and expand the **Microsoft Sentinel** section.
 
