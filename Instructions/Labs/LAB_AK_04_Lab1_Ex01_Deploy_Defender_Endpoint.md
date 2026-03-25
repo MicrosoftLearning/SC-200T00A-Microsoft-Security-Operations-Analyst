@@ -65,18 +65,22 @@ In this task, you'll onboard a device to Microsoft Defender for Endpoint using a
 
     >**Note:** You can also perform device onboarding from the **Assets** section of the left menu bar. Expand Assets and select Devices. On the Device Inventory page, with Computers & Mobile selected, scroll down to **Onboard devices.** This takes you to the **Settings > Endpoints** page.
 
-1. In the "1. Onboard a device" area make sure "Local Script (for up to 10 devices)" is displayed in the Deployment method drop-down and select the **Download onboarding package** button.
+1. Leave the default operating system selection for **Windows 10 and 11**.
 
-1. Under the *Downloads* pop-up, highlight the "WindowsDefenderATPOnboardingPackage.zip" file with your mouse and select the folder icon **Show in folder**. **Hint:** In case you don't see it, the file should be in the c:\users\admin\downloads directory.
+1. In the *1. Onboard a device* area, leave the default *Connectivity* set to *Streamlined*, and the *Deployment method* set to *Local Script (for up to 10 devices)*.
+
+1. Select the **Download onboarding package** button.
+
+1. Under the *Downloads* pop-up, highlight the *GatewayWindowsDefenderATPOnboardingPackage.zip* file with your mouse and select the folder icon **Show in folder**. **Hint:** In case you don't see it, the file should be in the c:\users\admin\downloads directory.
 
     >**Tip:**
-    > If your browser blocks the download, take action in the browser to allow it. In the Microsoft Edge Browser, you may see the message, "*WindowsDefenderATPOnboardingPackage.zip isn't commonly downloaded. Make sure you trust...*, select the ellipsis button (...) if needed and then select **Keep**. In Microsoft Edge a second pop-up appears with the message,"*Make sure you trust WindowsDefenderATPOnboardingPackage.zip before you open it*", select **Show more** to expand the selections and select **Keep anyway**.
+    > If your browser blocks the download, take action in the browser to allow it. In the Microsoft Edge Browser, you may see the message, *GatewayWindowsDefenderATPOnboardingPackage.zip isn't commonly downloaded. Make sure you trust...*, select the ellipsis button (...) if needed and then select **Keep**. In Microsoft Edge a second pop-up appears with the message,"*Make sure you trust GatewayWindowsDefenderATPOnboardingPackage.zip before you open it*, select **Show more** to expand the selections and select **Keep anyway**.
 
 1. Right-click the downloaded zip file and select **Extract All...**, make sure that *Show extracted files when complete* is checked and select **Extract**.
 
-1. Right-click on the extracted file "WindowsDefenderATPLocalOnboardingScript.cmd" and select **Properties**. Select the **Unblock** checkbox in the bottom right of the Properties windows and select **OK**.
+1. Right-click on the extracted file *WindowsDefenderATPLocalOnboardingScript.cmd* and select **Properties**. Select the **Unblock** checkbox in the bottom right of the Properties windows and select **OK**.
 
-1. Right-click on the extracted file "WindowsDefenderATPLocalOnboardingScript.cmd" again and choose **Run as Administrator**.  **Hint:** If you encounter the Windows SmartScreen window, select on **More info**, and choose **Run anyway**.
+1. Right-click on the extracted file *WindowsDefenderATPLocalOnboardingScript.cmd* again and choose **Run as Administrator**.  **Hint:** If you encounter the Windows SmartScreen window, select on **More info**, and choose **Run anyway**.
 
 1. When the "User Account Control" window is shown, select **Yes** to allow the script to run and answer **Y** to the question presented by the script and press **Enter**. When complete you should see a message in the command screen that says *Successfully onboarded machine to Microsoft Defender for Endpoint*.
 
