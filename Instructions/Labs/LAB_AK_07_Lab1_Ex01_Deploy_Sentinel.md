@@ -1,7 +1,13 @@
 ---
 lab:
-    title: 'Exercise 1 - Configure your Microsoft Sentinel environment'
-    module: 'Learning Path 7 - Configure your Microsoft Sentinel environment'
+  title: Exercise 1 - Configure your Microsoft Sentinel environment
+  module: Learning Path 7 - Configure your Microsoft Sentinel environment
+  description: You're a Security Operations Analyst working at a company that is implementing Microsoft Sentinel. You're responsible for setting up the Microsoft Sentinel environment to meet the company requirement to minimize cost, meet compliance regulations, and provide the most manageable environment for your security team to perform their daily job responsibilities.
+  duration: 30 minutes
+  level: 300
+  islab: true
+  primarytopics:
+    - Microsoft Sentinel
 ---
 
 # Learning Path 7 - Lab 1 - Exercise 1 - Configure your Microsoft Sentinel environment

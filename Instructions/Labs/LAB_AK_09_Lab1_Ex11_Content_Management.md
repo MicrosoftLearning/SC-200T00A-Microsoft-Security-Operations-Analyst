@@ -1,7 +1,15 @@
 ---
 lab:
-    title: 'Exercise 11 - Use Repositories in Microsoft Sentinel'
-    module: 'Learning Path 9 - Create detections and perform investigations using Microsoft Sentinel'
+  title: Exercise 11 - Use Repositories in Microsoft Sentinel
+  module: Learning Path 9 - Create detections and perform investigations using Microsoft Sentinel
+  description: In this task, you will create an Azure DevOps repository.
+  duration: 30 minutes
+  level: 100
+  islab: true
+  primarytopics:
+    - Azure
+    - Azure DevOps
+    - Microsoft Sentinel
 ---
 
 # Learning Path 9 - Lab 1 - Exercise 11 - Use Repositories in Microsoft Sentinel

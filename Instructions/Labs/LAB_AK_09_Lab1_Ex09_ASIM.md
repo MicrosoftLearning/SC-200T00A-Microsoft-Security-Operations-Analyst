@@ -1,7 +1,14 @@
 ---
 lab:
-    title: 'Exercise 9 - Create ASIM parsers'
-    module: 'Learning Path 9 - Create detections and perform investigations using Microsoft Sentinel'
+  title: Exercise 9 - Create ASIM parsers
+  module: Learning Path 9 - Create detections and perform investigations using Microsoft Sentinel
+  description: You're a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You need to model ASIM parsers for a specific Windows registry event. These parsers will be finalized at a later time following the Advanced Security Information Model (ASIM) Registry Event normalization schema reference.
+  duration: 30 minutes
+  level: 200
+  islab: true
+  primarytopics:
+    - Microsoft Sentinel
+    - Windows
 ---
 
 # Learning Path 9 - Lab 1 - Exercise 9 - Deploy ASIM parsers
