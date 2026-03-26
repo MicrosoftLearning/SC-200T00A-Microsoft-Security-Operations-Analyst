@@ -92,7 +92,7 @@ In this task, you'll configure roles for use with device groups.
 
 1. In the Microsoft Defender XDR portal navigation menu, expand the **System** section and select **Settings**, then select **Microsoft Defender XDR**.
 
-1. Select **Permissions and Roles** under the *Account* section.
+1. Select **Permissions and Roles** under the *General* section.
 
 1. Scroll down the page and select the **Go to Permissions and roles** link.
 
