@@ -1,14 +1,10 @@
 ---
 lab:
-  title: Exercise 6 - Conduct attacks
-  module: Learning Path 9 - Create detections and perform investigations using Microsoft Sentinel
-  description: In this task, you will perform attacks on the host connected with Azure Arc and that has the Azure Monitor Agent configured.
-  duration: 30 minutes
-  level: 300
-  islab: true
-  ---
+    title: 'Exercise 5 - Conduct attacks'
+    module: 'Learning Path 9 - Create detections and perform investigations using Microsoft Sentinel'
+---
 
-# Learning Path 9 - Lab 1 - Exercise 6 - Conduct attacks
+# Learning Path 9 - Lab 1 - Exercise 5 - Conduct attacks
 
 ## Lab scenario
 
@@ -26,7 +22,7 @@ You are going to simulate the attacks that you will later use to detect and inve
 
 In this task, you will perform attacks on the host connected with Azure Arc and that has the Azure Monitor Agent configured.
 
-1. Login to WINServer virtual machine as Admin with the password: **Pa55w.rd**.  
+1. Login to *WINServer* virtual machine as Admin with the password: **Pa55w.rd**.  
 
     >**Important:** The lab *SAVE* functionality can cause WINServer to become disconnected from Azure Arc. A reboot will solve the issue.  
 
@@ -127,4 +123,4 @@ In this task, you will perform attacks on the host connected with Azure Arc and 
 
 >**Important:** Do not close these windows. Let this PowerShell script run in the background. The command needs to generate log entries for some hours. You can proceed to the next task and next exercises while this script runs. The data created by this task will be used in the Threat Hunting lab later. This process will not create substantial amounts of data or processing.
 
-## Proceed to Exercise 7
+## Proceed to Exercise 6

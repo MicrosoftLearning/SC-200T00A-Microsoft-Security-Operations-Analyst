@@ -50,7 +50,7 @@ In this task, you'll assign preset security policies for Exchange Online Protect
 
 1. In the **Enter password** dialog box, copy, and paste in the admin's tenant password provided by your lab hosting provider and then select **Sign in**.
 
-    >**Note:** If you receive a message "The operation could not be completed. Please try again later. If the problem persists, contact Microsoft support." just click **OK** to continue.  
+    >**Note:** You may be prompted to enter the *Temporary Access Pass* (TAP) instead of a password..  
 
 1. If shown, close the Microsoft Defender XDR quick tour pop-up window. **Hint:** Later in this lab, you'll need to wait until the Defender workspace is provisioned, you can take this time to navigate through the guided tours to learn more about Microsoft Defender XDR.
 

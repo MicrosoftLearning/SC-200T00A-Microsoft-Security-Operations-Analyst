@@ -4,5 +4,8 @@
         "MD025": {
             "front_matter_title": ""
         }
-    }
+    },
+    "python.analysis.extraPaths": [
+        "c:\\Users\\kelawson\\.vscode\\extensions\\ms-security.ms-sentinel-1.0.0\\python"
+    ]
 }

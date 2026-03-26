@@ -1,24 +1,16 @@
 ---
 lab:
-  title: Exercise 5 - Prepare to perform simulated attacks
-  module: Learning Path 9 - Create detections and perform investigations using Microsoft Sentinel
-  description: In this task, you'll connect an on-premises server to your Azure subscription. Azure Arc was pre-installed on this server. The server will be used in next exercises to run simulated attacks that you will later detect and investigate in Microsoft Sentinel.
-  duration: 30 minutes
-  level: 300
-  islab: true
-  primarytopics:
-    - Azure
-    - Azure Arc
-    - Microsoft Sentinel
+    title: 'Exercise 4 - Prepare to perform simulated attacks'
+    module: 'Learning Path 9 - Create detections and perform investigations using Microsoft Sentinel'
 ---
 
-# Learning Path 9 - Lab 1 - Exercise 5 - Prepare to perform simulated attacks
+# Learning Path 9 - Lab 1 - Exercise 4 - Prepare to perform simulated attacks
 
 ## Lab scenario
 
 ![Lab overview.](../Media/SC-200-Lab_Diagrams_Mod9_L1_Ex5.png)
 
->**Important**: The lab exercises for Learning Path #9 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
+>**Important**: The lab exercises for Learning Path #9 are in a *standalone, shared* environment. Other students are using the same environment. You will need to coordinate with the other students on who will perform these tasks. First, we will check to see if the environment is already configured before you proceed. Also, if you exit the lab before completing it, you will be required to re-run the configurations again.
 
 ### Estimated time to complete this lab: 30 minutes
 
@@ -28,20 +20,37 @@ In this task, you'll connect an on-premises server to your Azure subscription. A
 
 >**Important:** The next steps are done on a different machine than the one you were previously working. Look for the Virtual Machine name in the references tab.
 
-1. Log in to **WINServer** virtual machine as Administrator with the password: **Passw0rd!** if necessary.  
+As described above, the Azure Arc Connected Machine agent (azcmagent) has been pre-installed on the **WINServer** machine. Before you attempt to connect this machine to your Azure subscription we will check the connection status.
 
-As described above, Azure Arc has been pre-installed on the **WINServer** machine. You will now connect this machine to your Azure subscription.
+1. Log in to **WINServer** virtual machine as Administrator with the password: **Passw0rd!** if necessary.  
 
 1. On the *WINServer* machine, select the *search* icon and type **cmd**.
 
 1. In search results right click *Command Prompt* and select **Run as administrator**.
 
-1. In the Command Prompt window, type the following command. *Do not press enter*:
+1. In the Command Prompt window, type the following command to check the connection status of the Azure Arc agent:
 
     ```cmd
-    azcmagent connect -g "defender-RG" -l "EastUS" -s "Subscription ID string"
+    azcmagent show
     ```
+1. If the command output shows that *Agent status* is **Connected**. proceed to **Task 2**. 
 
+1. If it is not connected, perform the following steps before proceeding to reconnect *WINServer* to Azure Arc:
+
+    1. Open the the Azure portal <https://portal.azure.com> in the *Edge* browser, and verify that it is not listed as a resource in the *SentinelStatic* resource group. If it is, select it and delete it from the resource group.
+    
+    1. After *WINServer* is deleted from the resource group, run the following command from the *WINServer* command Prompt to make sure it is disconnected from Azure Arc:
+
+        ```cmd
+        azcmagent disconnect --force-local-only
+        ```
+    1. Leave the browser and Command Prompt windows open for the next steps.
+
+1. Run the following command to connect the machine to Azure Arc:
+
+    ```cmd
+    azcmagent connect -g "SentinelStatic" -l "CentralUS" -s "Subscription ID string"
+    ```
 1. Replace the **Subscription ID string** with the *Subscription ID* provided by your lab hoster (*Resources tab). Make sure to keep the quotes.
 
 1. Type **Enter** to run the command (this may take a couple minutes).
@@ -50,33 +59,36 @@ As described above, Azure Arc has been pre-installed on the **WINServer** machin
 
 1. In the *Sign in* dialog box, enter your **Tenant Email** and **Tenant Password** provided by your lab hosting provider and select **Sign in**. Wait for the *Authentication complete* message, close the browser tab and return to the *Command Prompt* window.
 
+    >**Note:** You may be prompted to enter the *Temporary Access Pass* (TAP) instead of a password. This is also provided in the resources tab. If prompted, copy and paste the TAP value and select **Sign in**.
+
 1. When the commands complete running, leave the *Command Prompt* window open and type the following command to confirm that the connection was successful:
 
     ```cmd
     azcmagent show
     ```
-
 1. In the command output, verify that *Agent status* is **Connected**.
 
 ## Task 2: Connect a non-Azure Windows Machine
 
 In this task, you'll add an Azure Arc connected, on-premises machine to Microsoft Sentinel.  
 
->**Note:** Microsoft Sentinel has been predeployed in your Azure subscription with the name **defenderWorkspace**, and the required *Content Hub* solutions have been installed.
+>**Note:** Microsoft Sentinel has been predeployed in your Azure subscription with the name **sentinelworkspace-01**, and the required *Content Hub* solutions have been installed.
 
-1. Login to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.  
+1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
-1. In the Microsoft Edge browser, navigate to the Azure portal at <https://portal.azure.com>.
+1. Open the Microsoft Edge browser.
+
+1. In the Edge browser, navigate to Microsoft Defender XDR at <https://security.microsoft.com>.
 
 1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
 1. In the **Enter password** dialog box, copy, and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
-1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
+    >**Note:** You may be prompted to enter the *Temporary Access Pass* (TAP) instead of a password. This is also provided in the resources tab. If prompted, copy and paste the TAP value and select **Sign in**.
 
-1. Select the Microsoft Sentinel **defenderWorkspace**.
+1. In the Microsoft Defender navigation menu, scroll down and expand the **Microsoft Sentinel** section.
 
-1. In the Microsoft Sentinel left navigation menu, scroll down to the *Configuration* section and select **Data connectors**.
+1. Expand the **Configuration** section and select **Data connectors**.
 
 1. In the *Data connectors*, search for the **Windows Security Events via AMA** solution and select it from the list.
 
@@ -86,13 +98,15 @@ In this task, you'll add an Azure Arc connected, on-premises machine to Microsof
 
 1. In the *Configuration* section, under the *Instructions* tab, select the **Create data collection rule**.
 
-1. Enter **AZWINDCR** for Rule Name, then select **Next: Resources**.
+1. Enter a Rule Name like **WINSERVERDCR** for the DCR, then select **Next: Resources**.
+
+    >**Note:** Use a unique name for the Rule Name, consider using your *Student* username number to make it unique, for example, **WINXXXXXXXXDCR**.
 
 1. Expand your *Subscription* under *Scope* on the *Resources* tab.
 
     >**Hint:** You can expand the whole *Scope* hierarchy by selecting the ">" before the *Scope* column.
 
-1. Expand **defender-RG** Resource Group, then select **WINServer**.
+1. Expand **SentinelStatic** Resource Group, then select **WINServer**.
 
 1. Select **Next: Collect**, and leave the *All Security Events* selected.
 
@@ -184,4 +198,4 @@ Next, you will make other changes to the analytics rule.
 
 >**Note:** Some alerts will be triggered in a smaller time-frame just for our lab purpose.
 
-## Proceed to Exercise 6
+## Proceed to Exercise 5

@@ -1,14 +1,10 @@
 ---
 lab:
-  title: Exercise 8 - Investigate Incidents
-  module: Learning Path 9 - Create detections and perform investigations using Microsoft Sentinel
-  description: In this task, you will investigate an incident.
-  duration: 30 minutes
-  level: 200
-  islab: true
+    title: 'Exercise 7 - Investigate Incidents'
+    module: 'Learning Path 9 - Create detections and perform investigations using Microsoft Sentinel'
 ---
 
-# Learning Path 9 - Lab 1 - Exercise 8 - Investigate Incidents
+# Learning Path 9 - Lab 1 - Exercise 7 - Investigate Incidents
 
 ## Lab scenario
 
@@ -26,21 +22,23 @@ An incident can include multiple alerts. It is an aggregation of all the relevan
 
 In this task, you will investigate an incident.
 
->**Note:** Microsoft Sentinel has been predeployed in your Azure subscription with the name **defenderWorkspace**, and the required *Content Hub* solutions have been installed.
+>**Note:** Microsoft Sentinel has been predeployed in your Azure subscription with the name **sentinelworkspace-01**, and the required *Content Hub* solutions have been installed.
 
 1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
-1. In the Edge browser, navigate to the Azure portal at <https://portal.azure.com>.
+1. Open the Microsoft Edge browser.
 
-1. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
+1. In the Edge browser, navigate to Microsoft Defender XDR at <https://security.microsoft.com>.
 
-1. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
+1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
-1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
+1. In the **Enter password** dialog box, copy, and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
-1. Select the Microsoft Sentinel **defenderWorkspace**.
+    >**Note:** You may be prompted to enter the *Temporary Access Pass* (TAP) instead of a password. This is also provided in the resources tab. If prompted, copy and paste the TAP value and select **Sign in**.
 
-1. Select the **Incidents** page.
+1. In the Microsoft Defender navigation menu, scroll down and expand the **Investigation & response** section.
+
+1. Expand the **Incidents & alerts** section and select **Incidents**.
 
 1. Review the list of incidents.
 
@@ -48,21 +46,23 @@ In this task, you will investigate an incident.
   
 1. Select one of the **Startup RegKey** incidents.
 
-1. Review the incident details on the right blade that opened. Scroll down and select the **View full details** button.
+1. Review the incident details on the page that opened.
 
-1. If the "New incident experience" pop-up appears, follow the prompts by reading the information by selecting the **Next** button.
+1. Select **Manage incident** from the toolbar. It will have a *pencil* icon.
 
-1. On the left blade of the incident, change the Status to **Active** and then select **Apply**.
+1. On the *Manage incident* page for the incident, very the *Status* is *Active*. If not, change the Status to **Active** and then select **Save**.
 
-1. Scroll down to the *Tags* area, select **+** and type **RegKey** and select **OK**.
+1. In the *Incident tags* field, type **RegKey** and select **RegKey (Create new)**.
 
-1. Scroll down and in the *Write a comment...* box type: *I will research this* and select the **>** icon to submit the new comment.
+1. In the *Assign to* field, select the box and then select **Assign to me** from the dropdown.
 
-1. Hide the left blade by selecting the **<<** icon next to the owner.
+1. Select the **Save** button and the page closes.
 
-1. Review the **Incident timeline** window. Select the **Incident Actions** button at top-right and then **Run playbook**. You will see the *PostMessageTeams-OnIncident* playbook. This option help you to run playbooks manually.
+1. Review the **Attack story** tab. Select the **Run playbook** from the toolbar. **Hint**: You might need to select the ellipsis icon **(...)** to see it.
 
-1. Close the *Run playbook on incident* blade by selecting the **x** icon in the top right.
+1. You will see the *PostMessageTeams-OnIncident* playbook. This option help you to run playbooks manually.
+
+1. Close the *Run playbook on incident* blade by selecting the **X** icon in the top right.
 
 1. Review the **Entities** window. At least the *Host* entity that we mapped within the KQL query from the previous exercise should appear. **Hint:** If no entities are shown, refresh the page.
 
@@ -102,4 +102,4 @@ In this task, you will investigate an incident.
 
 1. In the *Select classification* drop-down review the different options. After that, select **True positive - suspicious activity** and then select **Apply**.
 
-## Proceed to Exercise 9
+## Proceed to Exercise 8
