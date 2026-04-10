@@ -1,4 +1,4 @@
-﻿---
+---
 lab:
     title: 'Exercise 10 - Use Repositories in Microsoft Sentinel'
     module: 'Learning Path 9 - Create detections and perform investigations using Microsoft Sentinel'
