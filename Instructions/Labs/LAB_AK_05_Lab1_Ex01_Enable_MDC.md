@@ -1,14 +1,7 @@
 ---
 lab:
-  title: Exercise 1 - Enable Microsoft Defender for Cloud
-  module: Learning Path 5 - Mitigate threats using Microsoft Defender for Cloud
-  description: You're a Security Operations Analyst working at a company that is implementing cloud workload protections with Microsoft Defender for Cloud. In this lab, you enable Microsoft Defender for Cloud.
-  duration: 25 minutes
-  level: 200
-  islab: true
-  primarytopics:
-    - Microsoft Defender
-    - Microsoft Defender for Cloud
+    title: 'Exercise 1 - Enable Microsoft Defender for Cloud'
+    module: 'Learning Path 5 - Mitigate threats using Microsoft Defender for Cloud'
 ---
 
 # Learning Path 5 - Lab 1 - Exercise 1 - Enable Microsoft Defender for Cloud
@@ -27,11 +20,10 @@ In this task, you'll connect an on-premises server to your Azure subscription. A
 
 >**Important:** The next steps are done on a different machine than the one you were previously working. Look for the Virtual Machine name in the references tab.
 
-1. Log in to **WINServer** virtual machine as Administrator with the password: **Passw0rd!** if necessary.  
-
+1. Sign in to the **WINServer** virtual machine as Administrator using the provided credentials.
 As described above, Azure Arc has been pre-installed on the **WINServer** machine. You will now connect this machine to your Azure subscription.
 
-1. On the *WINServer* machine, select the *search* icon and type **cmd**.
+1. On the **WINServer** virtual machine, select the *search* icon and type **cmd**.
 
 1. In search results right click *Command Prompt* and select **Run as administrator**.
 
@@ -41,7 +33,7 @@ As described above, Azure Arc has been pre-installed on the **WINServer** machin
     azcmagent connect -g "defender-RG" -l "EastUS" -s "Subscription ID string"
     ```
 
-1. Replace the **Subscription ID string** with the *Subscription ID* provided by your lab hoster (*Resources tab). Make sure to keep the quotes.
+1. Replace the **Subscription ID string** with the *Subscription ID* provided by your lab hoster (*Resources* tab). Make sure to keep the quotes.
 
 1. Type **Enter** to run the command (this may take a couple minutes).
 
@@ -61,9 +53,9 @@ As described above, Azure Arc has been pre-installed on the **WINServer** machin
 
 In this task, you'll enable and configure Microsoft Defender for Cloud.
 
-1. Log in to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.
+1. Sign in to the **WIN1** virtual machine using the provided credentials.
 
-1. In the Microsoft Edge browser, navigate to the Azure portal at <https://portal.azure.com>.
+1. In the Microsoft Edge browser, navigate to the **Azure portal** at `https://portal.azure.com`.
   
 1. In the **Sign in** dialog box, copy, and paste in the tenant Email account for the admin username provided by your lab hosting provider and then select **Next**.
 
@@ -71,7 +63,7 @@ In this task, you'll enable and configure Microsoft Defender for Cloud.
 
 1. In the Search bar of the Microsoft Azure portal, type *Defender*, then select **Microsoft Defender for Cloud**.
 
-1. In the left navigation menu for Microsoft Defender for Cloud, expand the *Management* section , and select **Environment settings**.
+1. In the left navigation menu for Microsoft Defender for Cloud, expand the *Management* section, and select **Environment settings**.
 
 1. Select the **Expand all** button to view all subscriptions and resources.
 
@@ -108,7 +100,7 @@ In this task, you'll enable and configure Microsoft Defender for Cloud.
 
 1. In the Search bar of the Microsoft Azure portal, type *Defender*, then select **Microsoft Defender for Cloud**.
 
-1. In the left navigation menu for Microsoft Defender for Cloud, under the *General* section, select **Overview**.
+1. In the left navigation menu for Microsoft Defender for Cloud, under the **General** section, select **Overview**.
 
 1. The Overview blade provides a unified view into the security posture and includes multiple independent cloud security pillars such as Security posture, Regulatory compliance, Workload protections, Firewall Manager, Inventory, and Information Protection (preview). Each of these pillars also has its dedicated dashboard allowing deeper insights and actions around that vertical, providing easy access and better visibility for security professionals.
 
