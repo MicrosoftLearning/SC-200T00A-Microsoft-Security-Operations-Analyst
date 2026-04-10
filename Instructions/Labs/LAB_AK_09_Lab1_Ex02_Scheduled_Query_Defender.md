@@ -1,16 +1,10 @@
 ---
 lab:
-  title: Exercise 3 - Create a Scheduled Query from a template
-  module: Learning Path 9 - Create detections and perform investigations using Microsoft Sentinel
-  description: In this task, you will connect the Azure Activity data connector.
-  duration: 45 minutes
-  level: 400
-  islab: true
-  primarytopics:
-    - Azure
+    title: 'Exercise 2 - Create a Scheduled Query from a template'
+    module: 'Learning Path 9 - Create detections and perform investigations using Microsoft Sentinel'
 ---
 
-# Learning Path 9 - Lab 1 - Exercise 3 - Create a Scheduled Query from a template
+# Learning Path 9 - Lab 1 - Exercise 2 - Create a Scheduled Query from a template
 
 ## Lab scenario
 
@@ -22,11 +16,9 @@ Analytics rules search for specific events or sets of events across your environ
 
 ### Estimated time to complete this lab: 45 minutes
 
->**Note:** Microsoft Sentinel has been predeployed in your Azure subscription with the name **defenderWorkspace**, and the required *Content Hub* solutions have been installed.
+>**Note:** Microsoft Sentinel has been predeployed in your Azure subscription with the name **sentinelworkspace-01**, and the *Azure Activity* solution and data connector have been installed and connected.
 
-<!--- >>**Important:** To sucessfully complete this task you wil need to rerun Task 3 of **[Lab 08 Exercise 1](https://microsoftlearning.github.io/SC-200T00A-Microsoft-Security-Operations-Analyst/Instructions/Labs/LAB_AK_08_Lab1_Ex01_Connect_Services.html)** to connect the Azure Activity data connector. --->
-
-To sucessfully complete this task you wil need to complete the following prerequisite tasks.
+<!--- To sucessfully complete this task you wil need to complete the following prerequisite tasks.
 
 ### Prerequisite task: Connect the Azure Activity data connector
 
@@ -46,7 +38,7 @@ In this task, you will connect the *Azure Activity* data connector.
 
     >**Note:** *Do not* select an optional Resource Group.
 
-1. Select the **Parameters** tab, choose your *uniquenameDefender* workspace from the **Primary Log Analytics workspace** drop-down list. This action will apply the subscription configuration to send the information to the Log Analytics workspace.
+1. Select the **Parameters** tab, choose your *sentinelworkspace-01* workspace from the **Primary Log Analytics workspace** drop-down list. This action will apply the subscription configuration to send the information to the Log Analytics workspace.
 
 1. Select the **Remediation** tab and select the **Create a remediation task** checkbox. This action will apply the policy to existing Azure resources.
 
@@ -54,25 +46,27 @@ In this task, you will connect the *Azure Activity* data connector.
 
 1. Select **Create** to finish.
 
-1. Please wait for the *Azure Activity* data connector to display a *Connected* status before proceeding.
+1. Please wait for the *Azure Activity* data connector to display a *Connected* status before proceeding. --->
 
 ### Task 1: Create a Scheduled Query rule
 
 In this task, you create a *Microsoft Sentinel analytics scheduled query rule*.
 
->**Note:** The following tasks currently work best in the Azure Preview portal - <https://preview.portal.azure.com/>.
-
 1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
 
-1. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
+1. Open the Microsoft Edge browser.
 
-1. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
+1. In the Edge browser, navigate to Microsoft Defender XDR at <https://security.microsoft.com>.
 
-1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
+1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
-1. Select the Microsoft Sentinel **defenderWorkspace**.
+1. In the **Enter password** dialog box, copy, and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
-1. Select **Analytics** from the Configuration area.
+    >**Note:** You may be prompted to enter the *Temporary Access Pass* (TAP) instead of a password. This is also provided in the resources tab. If prompted, copy and paste the TAP value and select **Sign in**.
+
+1. In the Microsoft Defender navigation menu, scroll down and expand the **Microsoft Sentinel** section.
+
+1. Expand the **Configuration** section and select **Analytics**.
 
 1. Make sure that you are in the *Rule templates* tab in the command bar and search for the **New CloudShell User** rule.
 
@@ -115,11 +109,9 @@ In this task, you create a *Microsoft Sentinel analytics scheduled query rule*.
 
 ### Task 2: Edit your new rule
 
-1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
+1. In the Microsoft Defender navigation menu, scroll down and expand the **Microsoft Sentinel** section.
 
-1. Select your Microsoft Sentinel Workspace.
-
-1. Select **Analytics** from the Configuration area.
+1. Expand the **Configuration** section and select **Analytics**.
 
 1. Make sure that you are in the *Active rules* tab in the command bar and select the **New CloudShell User** rule.
 
@@ -147,13 +139,21 @@ In this task, you create a *Microsoft Sentinel analytics scheduled query rule*.
 
 ### Task 3: Test your new rule
 
-In this task, you test your new scheduled query rule.
+In this task, you test your new scheduled query rule. You start by enabling *Cloud Shell* in the Azure portal, which will trigger the rule you created in the previous task and generate an incident.
 
-1. In the top bar of the Azure portal, Select the icon **>_** that corresponds to the Cloud Shell. You might need to select the ellipsis icon first **(...)** if your display resolution is too low.
+1. In the Microsoft Edge browser, navigate to the Azure portal at <https://portal.azure.com>.
+
+1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
+
+1. In the **Enter password** dialog box, copy, and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
+
+    >**Note:** You may be prompted to enter the *Temporary Access Pass* (TAP) instead of a password. This is also provided in the resources tab. If prompted, copy and paste the TAP value and select **Sign in**.
+
+1. On the menu bar of the Azure portal, Select the icon **>_** that corresponds to *Cloud Shell*. You might need to select the ellipsis icon first **(...)** if your display resolution is too low.
 
 1. In the *Welcome to Azure Cloud Shell* window, select **Powershell**.
 
-1. On the *Getting started* page, select **Mount storage account**, and then select your **MOC Subscription-XXXXXXXXXXX** from the *storage account subscription* drop-down menu item and select the **Apply** button.
+1. On the *Getting started* page, select **Mount storage account**, and then select your **_XXXXXXXXX-MicrosoftSentinelLabs** from the *storage account subscription* drop-down menu item and select the **Apply** button.
 
     >**Important:** Do not select the *No storage account required* radio button option. This wil cause the incident creation to fail.
 
@@ -165,13 +165,9 @@ In this task, you test your new scheduled query rule.
 
 1. Make sure the following *Operation name* items appear: **List Storage Account Keys** and **Update Storage Account Create**. These are the operations that the KQL query you reviewed earlier will match to generate the alert. **Hint:** You might need to select **Refresh** to update the list.
 
-1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
+1. Return to Microsoft Defender XDR at <https://security.microsoft.com>.
 
-1. Select your Microsoft Sentinel Workspace.
-
-1. Select the **Incidents** menu option under *Threat management*.
-
-1. Select the **Auto-refresh incidents** toggle.
+1. In the Microsoft Defender navigation menu, scroll down and expand the *Investigation & response* section. Next,expand the *Incidents & alerts* section and select **Incidents**.
 
 1. You should see the newly created Incident.
 
@@ -179,4 +175,4 @@ In this task, you test your new scheduled query rule.
 
 1. Select the Incident and review the information in the right blade.
 
-## Proceed to Exercise 4
+## Proceed to Exercise 3

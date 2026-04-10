@@ -1,15 +1,7 @@
 ---
 lab:
-  title: Exercise 3 - Connect Linux hosts to Microsoft Sentinel using data connectors
-  module: Learning Path 8 - Connect logs to Microsoft Sentinel
-  description: In this task, you will connect a Linux host to Microsoft Sentinel with the Common Event Format (CEF) via AMA data connector. You will also create a Data Collection Rule (DCR) to collect the events. Azure Arc was pre-installed on this Linux host as required for creating a DCR.
-  duration: 30 minutes
-  level: 300
-  islab: true
-  primarytopics:
-    - Azure
-    - Azure Arc
-    - Microsoft Sentinel
+    title: 'Exercise 3 - Connect Linux hosts to Microsoft Sentinel using data connectors'
+    module: 'Learning Path 8 - Connect logs to Microsoft Sentinel'
 ---
 
 # Learning Path 8 - Lab 1 - Exercise 3 - Connect Linux hosts to Microsoft Sentinel using data connectors
@@ -28,25 +20,21 @@ You are a Security Operations Analyst working at a company that implemented Micr
 
 ### Task 1: Access the Microsoft Sentinel Workspace
 
-In this task, you will access your Microsoft Sentinel workspace.
+In this task, you'll access your Microsoft Sentinel workspace.
 
->**Note:** Microsoft Sentinel has been predeployed in your Azure subscription with the name **defenderWorkspace**, and the required *Content Hub* solutions have been installed.
+>**Note:** Microsoft Sentinel has been predeployed in your Azure subscription with the name **sentinelworkspace-01**, and the required *Content Hub* solutions have been installed.
 
 1. Log in to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.  
 
-1. Start the Microsoft Edge browser.
+1. Open the Microsoft Edge browser.
 
-1. In the Edge browser, navigate to the Azure portal at <https://portal.azure.com>.
+1. In the Edge browser, navigate to the Azure portal at <https://security.microsoft.com>.
 
 1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
 1. In the **Enter password** dialog box, copy, and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
-    >**Note:** You may be prompted to enter the *Temporary Access Pass* (TAP) instead of a password.ssh
-
-1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
-
-1. Select the Microsoft Sentinel **defenderWorkspace**.
+    >**Note:** You may be prompted to enter the *Temporary Access Pass* (TAP) instead of a password. This is also provided in the resources tab. If prompted, copy and paste the TAP value and select **Sign in**.
 
 ### Task 2: Connect a Linux Host using the Common Event Format connector
 
@@ -75,7 +63,7 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
 1. In the SSH session, at the linux prompt, type the following command. *Do not press enter*:
 
     ```cmd
-    azcmagent connect -g "defender-RG" -l "EastUS" -s "Subscription ID string"
+    azcmagent connect -g "SentinelStatic" -l "CentralUS" -s "Subscription ID string"
     ```
 
 1. Replace the **Subscription ID string** with the *Subscription ID* provided by your lab hoster (*Resources tab). Make sure to keep the quotes.
@@ -88,8 +76,6 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
 
 1. In the *Pick an account* dialog box, select your **Tenant Email** provided by your lab hosting provider. Wait for the *Authentication complete* message, close the browser tab and return to the *Command Prompt* window. Or, if you see the *Sign in* dialog box, enter your **Tenant Email** and **Tenant Password** provided by your lab hosting provider and select **Sign in**. Wait for the *Authentication complete* message, close the browser tab and return to the *Command Prompt* window.
 
-    >**Note:** You may be prompted to enter the *Temporary Access Pass* (TAP) instead of a password.
-
 1. When the commands complete running, leave the *Command Prompt* window open and type the following command to confirm that the connection was successful:
 
     ```cmd
@@ -100,7 +86,7 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
 
 1. Start the Microsoft Edge browser.
 
-1. In the Edge browser, navigate to the Azure portal at <https://portal.azure.com>.
+1. In the Edge browser, navigate to Microsoft Defender XDR at <https://security.microsoft.com>.
 
 1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
@@ -108,11 +94,9 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
 
     >**Note:** You may be prompted to enter the *Temporary Access Pass* (TAP) instead of a password.
 
-1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
+1. In the Microsoft Defender navigation menu, scroll down and expand the **Microsoft Sentinel** section.
 
-1. Select the Microsoft Sentinel **defenderWorkspace**.
-
-1. In the Microsoft Sentinel left navigation menu, scroll down to the *Content management* section and select **Content Hub**.
+1. Expand the **Content management** section and select **Content Hub**.
 
 1. In the *Content hub*, search for the **Common Event Format** solution and select it from the list.
 
@@ -124,13 +108,15 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
 
 1. In the *Configuration* section, select the **+Create data collection rule** button.
 
-1. On the *Create data collection rule* page, *Basic* tab, enter **AZLINDCR** for Rule Name, then select **Next: Resources**.
+    >**Important:** You need to enter a unique name for the Rule Name, consider using your *Student* username number, for example, **AZLINxxxxxxxxDCR**.
+
+1. On the *Create data collection rule* page, *Basic* tab, enter **AZLINxxxxxxxxDCR** for Rule Name, then select **Next: Resources**.
 
 1. On the *Resources* tab, expand your *MOC Subscription* under *Scope*.
 
     >**Hint:** You can expand the whole *Scope* hierarchy by selecting the ">" before the *Scope* column.
 
-1. Expand **defender-RG**, then select **LIN1**.
+1. Expand **SentinelStatic**, then select **LIN1**.
 
     >**Note:** You're *LIN1* virtual machine may appear with a different name, like ubuntuxxx.
 
@@ -142,19 +128,9 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
 
 1. The *Common Event Format (CEF) via AMA* Data connector should now show **Connected**.
 
-1. Next, in the Configuration* section, copy the script to install the AMA Forwarder by using the "Copy to clipboard" icon.
+1. The data collection rule installs the Azure Monitor Agent (AMA), and the The *CEF collector* install commands were pre-deployed on the LIN1 machine to install the CEF collector.
 
-1. Return to the *PowerShell Command Prompt* window. You should still be connected to the LIN2 virtual machine.
-
-1. At the linux prompt, paste the AMA Forwarder installation script you copied in the previous step.
-
-1. You will need to edit the script for the correct *Python* version installed on your LIN2 machine.
-
-1. Change the script section that contains the *python Forwarder_AMA_installer.py* commands to *python3 Forwarder_AMA_installer.py*.
-
-1. Press **Enter** to run the script
-
-1. You should see the *Installation completed successfully* message.
+1. Return to the *PowerShell Command Prompt* window. You should still be connected to the LIN1 virtual machine.
 
 1. At the linux prompt, type the following command, and press enter:
 
@@ -195,7 +171,7 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 1. In the SSH session, at the linux prompt, type the following command. *Do not press enter*:
 
     ```cmd
-    azcmagent connect -g "defender-RG" -l "EastUS" -s "Subscription ID string"
+    azcmagent connect -g "SentinelStatic" -l "CentralUS" -s "Subscription ID string"
     ```
 
 1. Replace the **Subscription ID string** with the *Subscription ID* provided by your lab hoster (*Resources tab). Make sure to keep the quotes.
@@ -222,19 +198,17 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
 1. Start the Microsoft Edge browser.
 
-1. In the Edge browser, navigate to the Azure portal at <https://portal.azure.com>.
+1. In the Microsoft Edge browser, navigate to the Microsoft Defender portal at <https://security.microsoft.com>.
 
 1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
 1. In the **Enter password** dialog box, copy, and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
-    >**Note:** You may be prompted to enter the *Temporary Access Pass* (TAP) instead of a password.ssh
+    >**Note:** You may be prompted to enter the *Temporary Access Pass* (TAP) instead of a password.
 
-1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
+1. In the Microsoft Defender navigation menu, scroll down and expand Microsoft Sentinel
 
-1. Select the Microsoft Sentinel **defenderWorkspace**.
-
-1. In the Microsoft Sentinel left navigation menu, scroll down to the *Content management* section and select **Content Hub**.
+1. In the Microsoft Sentinel navigation menus, scroll down to the *Content management* section and select **Content Hub**.
 
 1. In the *Content hub*, search for the **Syslog** solution and select it from the list.
 
@@ -246,13 +220,15 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
 1. In the *Configuration* section, select **+Create data collection rule**.
 
-1. On the *Create data collection rule* page, *Basic* tab, enter **AZLINDCR2** for Rule Name, then select **Next: Resources**.
+    >**Important:** You need to enter a unique name for the Rule Name, consider using your *Student* username number, for example, **AZLINxxxxxxxxDCR2**.
+
+1. On the *Create data collection rule* page, *Basic* tab, enter **AZLINxxxxxxxxDCR2** for Rule Name, then select **Next: Resources**.
 
 1. On the *Resources* tab, expand your *MOC Subscription* under *Scope*.
 
     >**Hint:** You can expand the whole *Scope* hierarchy by selecting the ">" before the *Scope* column.
 
-1. Expand **defender-RG**, then select **LIN2**.
+1. Expand **SentinelStatic**, then select **LIN2**.
 
     >**Note:** You're *LIN2* virtual machine may appear with a different name, like ubuntuxxx.
 
@@ -264,19 +240,9 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
     >**Note:** You may need to refresh the page.
 
-1. Next, in the Configuration* section, copy the script to install the AMA Forwarder by using the "Copy to clipboard" icon.
+1. The data collection rule installs the Azure Monitor Agent (AMA), and the The *AMA Forwarder* install commands were pre-deployed on the LIN2 machine to install the AMA Forwarder.
 
 1. Return to the *PowerShell Command Prompt* window. You should still be connected to the LIN2 virtual machine.
-
-1. At the linux prompt, paste the AMA Forwarder installation script you copied in the previous step.
-
-1. You will need to edit the script for the correct *Python* version installed on your LIN2 machine.
-
-1. Change the script section that contains the *python Forwarder_AMA_installer.py* commands to *python3 Forwarder_AMA_installer.py*.
-
-1. Press **Enter** to run the script
-
-1. You should see the *Installation completed successfully* message.
 
 1. At the linux prompt, type the following command, and press enter:
 
@@ -288,6 +254,6 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
     >**Note:** You can query the *Syslog* table for Syslog events.
 
-1. Type **exit** to close the remote shell connection to LIN1.
+1. Type **exit** to close the remote shell connection to LIN2.
 
 ## Proceed to Exercise 4
