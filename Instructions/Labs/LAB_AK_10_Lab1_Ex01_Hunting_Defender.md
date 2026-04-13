@@ -30,7 +30,7 @@ In this task, you'll connect an on-premises server to your Azure subscription. A
 
 >**Important:** The next steps are done on a different machine than the one you were previously working. Look for the Virtual Machine name in the references tab.
   
-1. Sign in to the **WINServer** virtual machine as Administrator using the provided credentials.
+1. Sign in to **WINServer** virtual machine as Administrator using the provided credentials.
 
 As described above, Azure Arc has been pre-installed on the **WINServer** machine. You will now connect this machine to your Azure subscription.
 
@@ -68,7 +68,7 @@ In this task, you'll add an Azure Arc connected, on-premises machine to Microsof
 
 >**Note:** Microsoft Sentinel has been predeployed in your Azure subscription with the name **'sentinelworkspace-01'**, and the required *Content hub* solutions have been installed.
 
-1. Sign in to the **WIN1** virtual machine as Admin using the provided credentials.
+1. Sign in to **WIN1** virtual machine as Admin using the provided credentials.
 
 1. In the **Microsoft Edge** browser, navigate to **Microsoft Defender XDR** at `https://security.microsoft.com`.
 
@@ -110,7 +110,7 @@ In this task, you'll add an Azure Arc connected, on-premises machine to Microsof
 
 >**Important:** The next steps are done on a different machine than the one you were previously working. Look for the Virtual Machine name in the references tab.
 
-1. Sign in to the **WINServer** virtual machine using the provided credentials.
+1. Sign in to **WINServer** virtual machine using the provided credentials.
 
 1. On the **WINServer** virtual machine, select the **search** icon and type **cmd**.
 
@@ -186,7 +186,7 @@ In this task, you'll create a hunting query, and create a Livestream.
 
 >**Note:** *Advanced hunting* doesn't support creating bookmarks in the Microsoft Defender portal, but they can be created in the *Hunting Livestreams*.
 
-1. Sign in to the **WIN1** virtual machine using the provided credentials.
+1. Sign in to **WIN1** virtual machine using the provided credentials.
 
 1. In the **Microsoft Edge** browser, navigate to **Microsoft Defender XDR** at `https://security.microsoft.com`.
 
