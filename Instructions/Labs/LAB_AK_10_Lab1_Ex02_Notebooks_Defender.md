@@ -24,7 +24,7 @@ This task explores Notebooks in Microsoft Sentinel Data lake. You will be using 
 
 >**Note:** Visual Studio Code is already installed on the lab VM. Prior experience with Visual Studio Code, Jupyter Notebooks and Python coding is recommended.
 
-1. Sign in to the **WIN1** virtual machine using the provided credentials.
+1. Sign in to **WIN1** virtual machine using the provided credentials.
 
 1. In the **Microsoft Edge** browser, navigate to **Microsoft Defender XDR** at `https://security.microsoft.com`.
 
