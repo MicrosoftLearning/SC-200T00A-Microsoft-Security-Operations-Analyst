@@ -21,7 +21,7 @@ You're a Security Operations Analyst working at a company that deployed both Mic
 
 In this task, you deploy the Microsoft Defender XDR connector.
 
-1. Sign in to the **WIN1** virtual machine as Admin using the provided credentials.
+1. Sign in to **WIN1** virtual machine as Admin using the provided credentials.
 
 1. In the Microsoft Edge browser, open the simulated environment by selecting this link: [Azure portal]( https://app.highlights.guide/start/1c894b46-4b0a-40cb-b0f0-1e1c86c615f3?token=16d48b6c-eace-4a1f-8050-098d29d23a89).
 
