@@ -31,7 +31,7 @@ You're a Security Operations Analyst working at a company that is implementing M
 
 In this task, you install the **Microsoft Sentinel Training Lab Solution** from the Marketplace which will populate a Log Analytics workspace with sample data that you can use to practice writing KQL statements.
 
-1. Login to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.  
+1. Sign in to the **WIN1** virtual machine as Admin using the provided credentials. 
 
 1. In the Microsoft Edge browser, go to the Azure Portal at `https://portal.azure.com` and login with the assigned credentials.
 
