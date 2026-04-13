@@ -22,7 +22,7 @@ In this task, you'll review Regulatory compliance configuration in Microsoft Def
 
 >**Important:** The next steps are done on a different machine than the one you were previously working. Look for the Virtual Machine name references.
 
-1. Sign in to the **WIN1** virtual machine as Admin using the provided credentials.
+1. Sign in to **WIN1** virtual machine as Admin using the provided credentials.
 
 1. In the Microsoft Edge browser, navigate to the **Azure portal** at `https://portal.azure.com`.
 
