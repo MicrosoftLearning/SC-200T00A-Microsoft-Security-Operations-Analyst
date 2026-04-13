@@ -20,7 +20,7 @@ You're a Security Operations Analyst working at a company that implemented Micro
 
 In this task, you create a Windows virtual machine in Azure.
 
-1. Login to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.  
+1. Sign in to the **WIN1** virtual machine as Admin using the provided credentials.
 
 1. In the Microsoft Edge browser, navigate to the Azure portal at `https://portal.azure.com`.
 
