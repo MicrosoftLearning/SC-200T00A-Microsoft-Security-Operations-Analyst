@@ -62,7 +62,7 @@ To understand how Microsoft Sentinel is onboarded to Microsoft Defender XDR, you
 
 In this task, you create a watchlist in Microsoft Sentinel.
 
-1. Sign in to the **WIN1** virtual machine as Admin using the provided credentials.
+1. Sign in to **WIN1** virtual machine as Admin using the provided credentials.
 
 1. In the Microsoft Edge browser, navigate to Defender XDR at `https://security.microsoft.com`.
   
