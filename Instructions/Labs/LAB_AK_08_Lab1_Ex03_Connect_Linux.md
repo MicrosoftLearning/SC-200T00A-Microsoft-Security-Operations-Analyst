@@ -144,11 +144,11 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
 
 1. Next, in the Configuration* section, copy the script to install the AMA Forwarder by using the "Copy to clipboard" icon.
 
-1. Return to the *PowerShell Command Prompt* window. You should still be connected to the LIN2 virtual machine.
+1. Return to the *PowerShell Command Prompt* window. You should still be connected to the LIN1 virtual machine.
 
 1. At the linux prompt, paste the AMA Forwarder installation script you copied in the previous step.
 
-1. You will need to edit the script for the correct *Python* version installed on your LIN2 machine.
+1. You will need to edit the script for the correct *Python* version installed on your LIN1 machine.
 
 1. Change the script section that contains the *python Forwarder_AMA_installer.py* commands to *python3 Forwarder_AMA_installer.py*.
 
@@ -288,6 +288,6 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
     >**Note:** You can query the *Syslog* table for Syslog events.
 
-1. Type **exit** to close the remote shell connection to LIN1.
+1. Type **exit** to close the remote shell connection to LIN2.
 
 ## Proceed to Exercise 4
