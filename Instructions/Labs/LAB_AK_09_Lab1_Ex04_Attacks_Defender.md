@@ -22,7 +22,7 @@ In this task, you'll connect an on-premises server to your Azure subscription. A
 
 As described above, the Azure Arc Connected Machine agent (azcmagent) has been pre-installed on the **WINServer** machine. Before you attempt to connect this machine to your Azure subscription we will check the connection status.
 
-1. Sign in to the **WINServer** virtual machine using the provided credentials.
+1. Sign in to the **WINServer** virtual machine as Administrator using the provided credentials.
 
 1. On the **WINServer** virtual machine, select the **search** icon and type *cmd*.
 
