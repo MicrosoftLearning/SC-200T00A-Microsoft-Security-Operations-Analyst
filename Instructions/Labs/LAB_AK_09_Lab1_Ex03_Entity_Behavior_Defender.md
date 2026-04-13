@@ -42,7 +42,7 @@ In this task, you will explore Entity behavior analytics in Microsoft Sentinel.
 
 1. Select **Configure UEBA**.
 
-1. On the *UEBA (User and Entity Behavior Analytics)* page, on the *UEBA* tab,verify that the *UEBA feature* is enabled, and review the *connected data sources*.
+1. On the **UEBA (User and Entity Behavior Analytics)** page, on the *UEBA* tab,verify that the *UEBA feature* is enabled, and review the *connected data sources*.
 
 1. Use the *breadcrumb* links at the top of the page to go back to the *Microsoft Sentinel* settings page.
 
