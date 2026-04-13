@@ -32,7 +32,7 @@ Because this course can be offered by learning partners using any one of several
 
 In this task, you'll assign preset security policies for Exchange Online Protection (EOP) and Microsoft Defender for Office 365 in the Microsoft 365 security portal.
 
-1. Sign in to the **WIN1** virtual machine using the provided credentials.
+1. Sign in to the **WIN1** virtual machine as Admin using the provided credentials.
 
 1. Open **Microsoft Edge** browser and navigate to **Microsoft Defender XDR** at `https://security.microsoft.com`.
 
