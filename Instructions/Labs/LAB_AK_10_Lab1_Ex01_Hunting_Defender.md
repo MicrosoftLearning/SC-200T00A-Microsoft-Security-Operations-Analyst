@@ -68,7 +68,7 @@ In this task, you'll add an Azure Arc connected, on-premises machine to Microsof
 
 >**Note:** Microsoft Sentinel has been predeployed in your Azure subscription with the name **'sentinelworkspace-01'**, and the required *Content hub* solutions have been installed.
 
-1. Sign in to the **WIN1** virtual machine using the provided credentials.
+1. Sign in to the **WIN1** virtual machine as Admin using the provided credentials.
 
 1. In the **Microsoft Edge** browser, navigate to **Microsoft Defender XDR** at `https://security.microsoft.com`.
 
