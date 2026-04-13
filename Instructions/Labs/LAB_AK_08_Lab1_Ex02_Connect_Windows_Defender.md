@@ -112,7 +112,7 @@ In this task, you connect an Azure Windows virtual machine to Microsoft Sentinel
 
 >**Note:** Microsoft Sentinel has been predeployed in your Azure subscription with the name **sentinelworkspace-01**, and the required *Content hub* solutions have been installed.
 
-1. Login to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.  
+1. Sign in to the **WIN1** virtual machine as Admin using the provided credentials.  
 
 1. If necessary, open the Microsoft Edge browser, and navigate to Defender XDR at `https://security.microsoft.com`, and sign in with the provided credentials.
 
