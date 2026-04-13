@@ -24,7 +24,7 @@ In this task, you'll access your Microsoft Sentinel workspace.
 
 >**Note:** Microsoft Sentinel has been predeployed in your Azure subscription with the name **sentinelworkspace-01**, and the required *Content hub* solutions have been installed.
 
-1. Sign in to the **WIN1** virtual machine as Admin using the provided credentials.
+1. Sign in to **WIN1** virtual machine as Admin using the provided credentials.
 
 1. Open the Microsoft Edge browser.
 
