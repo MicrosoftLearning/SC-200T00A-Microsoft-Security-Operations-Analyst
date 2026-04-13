@@ -30,7 +30,7 @@ In this task, you'll connect an on-premises server to your Azure subscription. A
 
 >**Important:** The next steps are done on a different machine than the one you were previously working. Look for the Virtual Machine name in the references tab.
   
-1. Sign in to the **WINServer** virtual machine using the provided credentials.
+1. Sign in to the **WINServer** virtual machine as Administrator using the provided credentials.
 
 As described above, Azure Arc has been pre-installed on the **WINServer** machine. You will now connect this machine to your Azure subscription.
 
