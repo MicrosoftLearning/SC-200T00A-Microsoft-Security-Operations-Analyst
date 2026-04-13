@@ -26,7 +26,7 @@ In this task, you will create a detection for the first attack of the previous e
 
 >**Note:** Microsoft Sentinel has been predeployed in your Azure subscription with the name **defenderWorkspace**, and the required *Content hub* solutions have been installed.
 
-1. Sign in to the **WIN1** virtual machine using the provided credentials.
+1. Sign in to the **WIN1** virtual machine as Admin using the provided credentials.
 
 1. Open **Microsoft Edge** and navigate to **Microsoft Defender XDR** at `https://security.microsoft.com`.
 
