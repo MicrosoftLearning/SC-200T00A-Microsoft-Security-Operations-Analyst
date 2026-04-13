@@ -185,8 +185,6 @@ In this task, you will create a detection for the second attack of the previous 
         | project Acct1 = TargetSid, MachId1 = SourceComputerId, UserName1 = TargetUserName) on $left.MachId == $right.MachId1, $left.Acct == $right.Acct1
     ```
 
-       <!--- ![Screenshot](../Media/SC200_sysmon_attack3.png)--->
-
 1. Extend the row to show the resulting columns, in the last one, we see the name of the added user under the *UserName1* column we *project* within the KQL query. It is important to help the Security Operations Analyst by providing as much context about the alert as you can. This includes projecting Entities for use in the investigation graph. **Run** the following query:
 
     ```KQL
