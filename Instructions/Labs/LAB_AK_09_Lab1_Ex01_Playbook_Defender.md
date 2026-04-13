@@ -20,7 +20,7 @@ In this task, you create a Logic App that is used as a Playbook in Microsoft Sen
 
 >**Note:** Microsoft Sentinel has been predeployed and onboarded to Microsoft Defender XDR with the name **sentinelworkspace-01**, and the required *Content hub* solutions have been installed.
 
-1. Sign in to the **WIN1** virtual machine as Admin using the provided credentials.
+1. Sign in to **WIN1** virtual machine as Admin using the provided credentials.
 
 1. Open **Microsoft Edge** browser and navigate to **Microsoft Defender XDR** at `https://security.microsoft.com`.
 
