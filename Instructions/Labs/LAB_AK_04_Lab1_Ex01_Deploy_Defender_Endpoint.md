@@ -24,7 +24,7 @@ You start by initializing the Defender for Endpoint environment. Next, you onboa
 
 In this task, you'll perform the initialization of the Microsoft Defender for Endpoint.
 
-1. Sign in to the **WIN1** virtual machine using the provided credentials.
+1. Sign in to the **WIN1** virtual machine as Admin using the provided credentials.
 
 1. If you aren't already at the **Microsoft Defender XDR portal**, start the **Microsoft Edge** browser.
 
