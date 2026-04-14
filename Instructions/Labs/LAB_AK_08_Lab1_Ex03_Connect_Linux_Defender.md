@@ -1,7 +1,15 @@
 ---
 lab:
-    title: 'Exercise 3 - Connect Linux hosts to Microsoft Sentinel using data connectors'
-    module: 'Learning Path 8 - Connect logs to Microsoft Sentinel'
+  title: Exercise 3 - Connect Linux hosts to Microsoft Sentinel using data connectors
+  module: Learning Path 8 - Connect logs to Microsoft Sentinel
+  description: In this task, you will connect a Linux host to Microsoft Sentinel with the Common Event Format (CEF) via AMA data connector. You will also create a Data Collection Rule (DCR) to collect the events. Azure Arc was pre-installed on this Linux host as required for creating a DCR.
+  duration: 30 minutes
+  level: 300
+  islab: true
+  primarytopics:
+    - Azure
+    - Azure Arc
+    - Microsoft Sentinel
 ---
 
 # Learning Path 8 - Lab 1 - Exercise 3 - Connect Linux hosts to Microsoft Sentinel using data connectors
