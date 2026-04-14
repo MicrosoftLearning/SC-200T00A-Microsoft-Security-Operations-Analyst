@@ -1,7 +1,17 @@
 ---
 lab:
-    title: 'Exercise 1 - Connect data to Microsoft Sentinel using data connectors'
-    module: 'Learning Path 8 - Connect logs to Microsoft Sentinel'
+  title: Exercise 1 - Connect data to Microsoft Sentinel using data connectors
+  module: Learning Path 8 - Connect logs to Microsoft Sentinel
+  description: You're a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You must learn how to connect log data from the many data sources in your organization. The organization has data from Microsoft 365, Microsoft Defender XDR, Azure resources, nonazure virtual machines, etc. You start connecting the Microsoft sources first.
+  duration: 20 minutes
+  level: 300
+  islab: true
+  primarytopics:
+    - Azure
+    - Microsoft 365
+    - Microsoft Defender
+    - Microsoft Defender XDR
+    - Microsoft Sentinel
 ---
 
 # Learning Path 8 - Lab 1 - Exercise 1 - Connect data to Microsoft Sentinel using data connectors
