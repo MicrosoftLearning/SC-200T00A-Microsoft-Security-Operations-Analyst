@@ -8,7 +8,6 @@ lab:
   islab: true
   primarytopics:
     - Microsoft Sentinel
-    - Kusto Query Language (KQL)
 ---
 
 # Learning Path 6 - Lab 1 - Exercise 1 - Create queries for Microsoft Sentinel using Kusto Query Language (KQL)
