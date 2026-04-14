@@ -1,7 +1,15 @@
 ---
 lab:
-    title: 'Exercise 4 - Connect Defender XDR to Microsoft Sentinel using data connectors'
-    module: 'Learning Path 8 - Connect logs to Microsoft Sentinel'
+  title: Exercise 4 - Connect Defender XDR to Microsoft Sentinel using data connectors
+  module: Learning Path 8 - Connect logs to Microsoft Sentinel
+  description: In this task, you deploy the Microsoft Defender XDR connector.
+  duration: 78 minutes
+  level: 200
+  islab: true
+  primarytopics:
+    - Microsoft Defender
+    - Microsoft Defender XDR
+    - Microsoft Sentinel
 ---
 
 # Learning Path 8 - Lab 1 - Exercise 4 - Connect Defender XDR to Microsoft Sentinel using data connectors
