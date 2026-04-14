@@ -1,7 +1,11 @@
 ---
 lab:
-    title: 'Exercise 6 - Create Detections'
-    module: 'Learning Path 9 - Create detections and perform investigations using Microsoft Sentinel'
+  title: Exercise 6 - Create Detections
+  module: Learning Path 9 - Create detections and perform investigations using Microsoft Sentinel
+  description: In this task, you will create a detection for the first attack of the previous exercise.
+  duration: 45 minutes
+  level: 300
+  islab: true
 ---
 
 # Learning Path 9 - Lab 1 - Exercise 6 - Create Detections
