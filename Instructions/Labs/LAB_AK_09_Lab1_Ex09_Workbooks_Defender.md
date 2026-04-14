@@ -1,7 +1,11 @@
 ---
 lab:
-    title: 'Exercise 9 - Create workbooks'
-    module: 'Learning Path 9 - Create detections and perform investigations using Microsoft Sentinel'
+  title: Exercise 9 - Create workbooks
+  module: Learning Path 9 - Create detections and perform investigations using Microsoft Sentinel
+  description: In this task, you will create a new workbook with advanced visualizations.
+  duration: 30 minutes
+  level: 200
+  islab: true
 ---
 
 # Learning Path 9 - Lab 1 - Exercise 9 - Create workbooks
