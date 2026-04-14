@@ -1,7 +1,15 @@
 ---
 lab:
-    title: 'Exercise 1 - Explore Microsoft Defender XDR'
-    module: 'Learning Path 1 - Mitigate threats using Microsoft Defender XDR'
+  title: Exercise 1 - Explore Microsoft Defender XDR
+  module: Learning Path 1 - Mitigate threats using Microsoft Defender XDR
+  description: You're a Security Operations Analyst working at a company that is implementing Microsoft Defender XDR. You start by assigning preset security policies used in Exchange Online Protection (EOP) and Microsoft Defender for Office 365.
+  duration: 5 minutes
+  level: 200
+  islab: true
+  primarytopics:
+    - Microsoft Defender
+    - Microsoft Defender XDR
+    - Office 365
 ---
 
 # Learning Path 1 - Lab 1 - Exercise 1 - Explore Microsoft Defender XDR
