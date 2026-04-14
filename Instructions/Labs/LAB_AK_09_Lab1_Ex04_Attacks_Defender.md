@@ -1,7 +1,15 @@
 ---
 lab:
-    title: 'Exercise 4 - Prepare to perform simulated attacks'
-    module: 'Learning Path 9 - Create detections and perform investigations using Microsoft Sentinel'
+  title: Exercise 4 - Prepare to perform simulated attacks
+  module: Learning Path 9 - Create detections and perform investigations using Microsoft Sentinel
+  description: In this task, you'll connect an on-premises server to your Azure subscription. Azure Arc was pre-installed on this server. The server will be used in next exercises to run simulated attacks that you will later detect and investigate in Microsoft Sentinel.
+  duration: 30 minutes
+  level: 300
+  islab: true
+  primarytopics:
+    - Azure
+    - Azure Arc
+    - Microsoft Sentinel
 ---
 
 # Learning Path 9 - Lab 1 - Exercise 4 - Prepare to perform simulated attacks
