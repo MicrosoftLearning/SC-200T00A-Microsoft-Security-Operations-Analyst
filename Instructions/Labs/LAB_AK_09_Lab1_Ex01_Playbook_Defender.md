@@ -74,7 +74,7 @@ In this task, you update the new playbook you created with the proper connection
 
 1. Select **Automation** under the **Configuration** area and then select the **Active Playbooks** tab.
 
-1. Select **Refresh** from the command bar if you donÔÇÖt see any playbooks. The playbook created in the previous step should be displayed.
+1. Select **Refresh** from the command bar if you do not see any playbooks. The playbook created in the previous step should be displayed.
 
 1. Select the **Defender_XDR_Ransomware_Playbook_SecOps_Tasks** playbook name link.
 
@@ -86,7 +86,7 @@ In this task, you update the new playbook you created with the proper connection
 
 1. Select the **Change connection** link.
 
-1. Select **Add new** and select **Sign in**. In the new window, select your Azure subscription admin credentials when prompted. The last line of the block should now read ÔÇ£Connected to your-Student-usernameÔÇØ.
+1. Select **Add new** and select **Sign in**. In the new window, select your Azure subscription admin credentials when prompted. The last line of the block should now read “Connected to your-Student-username”.
 
     <!--- 1. Below within the logic split (+ sign), select Add an action to incident.--->
 
