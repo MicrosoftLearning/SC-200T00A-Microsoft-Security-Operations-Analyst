@@ -122,7 +122,7 @@ In this task, you will create a detection for the first attack of the previous e
 
     <!--- 1. For the *Incident settings* tab, leave the default values and select **Next: Automated response >** button. --->
 
-1. On the **Automated actions** page under *Remediation actions to take*, expand the **Devices** section and select the following:`
+1. On the **Automated actions** page under *Remediation actions to take*, expand the **Devices** section and select the following:
 
     - **Collect investigation package**
     - **Initialize investigation**
