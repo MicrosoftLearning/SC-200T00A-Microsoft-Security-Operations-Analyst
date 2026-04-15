@@ -88,7 +88,7 @@ In this task, you will create a detection for the first attack of the previous e
 
 1. The *Rule query* should be populated already with your KQL query.
 
-1. For *Frequency* you can leave the default *Continuos (NRT)* setting, or select *Custom* from the dropdown menu and enter the following:
+1. For *Frequency* you can leave the default *Continuous (NRT)* setting, or select *Custom* from the dropdown menu and enter the following:
 
     |Setting|Value|
     |---|---|
