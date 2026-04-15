@@ -63,11 +63,11 @@ In this task, you continue with the simulation and connect a Microsoft Sentinel 
 
 1. On the **Defender XDR** portal **Home** screen, you should see a banner at the top with the message, *Get your SIEM and XDR in one place*. Select the **Connect a workspaces** button.
 
-1. On the **Choose a workspace** page, select the **woodgrove-loganalyiticsworkspace** Microsoft Sentinel workspace.
+1. On the **Choose a workspace** page, select the **woodgrove-loganalyticsworkspace** Microsoft Sentinel workspace.
 
 1. Select the **Next** button.
 
-1. On the **Set a primary workspace** page, you should see the **woodgrove-loganalyiticsworkspace** Microsoft Sentinel workspace in the drop-down menu. Select the **Next** button.
+1. On the **Set a primary workspace** page, you should see the **woodgrove-loganalyticsworkspace** Microsoft Sentinel workspace in the drop-down menu. Select the **Next** button.
 
 1. On the **Review and finish** page, verify that the *Workspace* selection is correct and review the bulleted items under the *What to expect when the workspace is connected* section. Select the **Connect** button.
 
