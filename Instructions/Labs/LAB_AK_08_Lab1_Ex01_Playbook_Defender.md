@@ -1,12 +1,12 @@
 ---
 lab:
-    title: Exercise 2 - Create a Playbook
-    module: Learning Path 8 - Create detections and perform investigations using Microsoft Sentinel
-    description: You have now created a playbook and an automation rule in Microsoft Sentinel.
-    duration: 30 minutes
-    level: 200
-    islab: true
-    primarytopics:
+  title: Exercise 1 - Create a Playbook
+  module: Learning Path 8 - Create detections and perform investigations using Microsoft Sentinel
+  description: You have now created a playbook and an automation rule in Microsoft Sentinel.
+  duration: 30 minutes
+  level: 200
+  islab: true
+  primarytopics:
     - Microsoft Sentinel
 ---
 
@@ -24,13 +24,11 @@ With a playbook, you can help automate and orchestrate your threat response, int
 
 In this task, you create a Logic App that is used as a Playbook in Microsoft Sentinel.
 
->**Note:** Microsoft Sentinel has been predeployed and onboarded to Microsoft Defender XDR with the name **sentinelworkspace-01**, and the required *Content Hub* solutions have been installed.
+>**Note:** Microsoft Sentinel has been predeployed and onboarded to Microsoft Defender XDR with the name **Sentinelworkspace-01**, and the required *Content hub* solutions have been installed.
 
-1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
+1. Sign in to **WIN1** virtual machine as Admin using the provided credentials.
 
-1. Open the Microsoft Edge browser.
-
-1. In the Edge browser, navigate to Defender XDR at `https://security.microsoft.com`.
+1. Open **Microsoft Edge** browser and navigate to **Microsoft Defender XDR** at `https://security.microsoft.com`.
 
 1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
@@ -40,29 +38,25 @@ In this task, you create a Logic App that is used as a Playbook in Microsoft Sen
 
 1. In the Microsoft Defender navigation menu, scroll down and expand the **Microsoft Sentinel** section.
 
-1. Expand the *Content management* section and select **Content Hub**.
+1. Expand the **Content management** section and select **Content hub**.
 
-1. Within the search bar, look for **Sentinel SOAR Essentials**.
+1. In the search box, type **Sentinel SOAR Essentials**.
 
-1. Select the solution that appears in the results.
+1. From the results, select the **Sentinel SOAR Essentials** solution and then select **Manage**.
 
-1. Within the solution details, select **Manage**.
-
-1. Find the **Defender_XDR_Ransomware_Playbook_for_SecOps-Tasks** playbook and select the name.
+1. Find the **Defender_XDR_Ransomware_Playbook_for_SecOps-Tasks** playbook and then select the playbook name.
 
 1. Select the **Incident tasks - Microsoft Defender XDR Ransomware Playbook for SecOps** template.
 
 1. On the details pane, select **Create playbook**.
 
-1. For Resource Group, select **SentinelStatic** and select OK.
+1. For Resource Group, select **SentinelStatic** and then select **OK**.
 
-1. Remove  **for** and the extra *underscores* from the playbook name (would exceed limit of 64 characters). It should read **Defender_XDR_Ransomware_Playbook_SecOps_Tasks**.
+1. Edit the playbook name to remove *for* and the extra *underscores* (would exceed limit of 64 characters). It should read **Defender_XDR_Ransomware_Playbook_SecOps_Tasks**.
 
-1. Select **Connections**.
+1. Select **Next: Connections >** and review the default options.
 
-1. Select **Next: Review and create**.
-
-1. Now select **Create Playbook**.
+1. Select **Next: Review and create**, review the details, and then select **Create playbook**.
 
     >**Note:** Wait for the deployment to finish before proceeding to the next task.
 
@@ -74,25 +68,25 @@ In this task, you update the new playbook you created with the proper connection
 
 1. When the previous task completes you should be in the *Defender_XDR_Ransomware_Playbook_SecOps-Tasks | Logic app designer* page. If you aren't, complete steps 2-7 below.
 
-1. In the Search bar of the Azure portal, type Sentinel, then select Microsoft Sentinel.
+1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
 1. Select your Microsoft Sentinel Workspace.
 
-1. Select Automation under the Configuration area and then select the *Active Playbooks* tab.
+1. Select **Automation** under the **Configuration** area and then select the **Active Playbooks** tab.
 
-1. Select Refresh from the command bar in case you don’t see any playbooks. You should see the playbook created from the previous step.
+1. Select **Refresh** from the command bar if you do not see any playbooks. The playbook created in the previous step should be displayed.
 
 1. Select the **Defender_XDR_Ransomware_Playbook_SecOps_Tasks** playbook name link.
 
-1. On the Logic app designer page for **Defender_XDR_Ransomware_Playbook_SecOps_Tasks**, in the command menu, select Edit.
+1. On the **Logic app designer** page for **Defender_XDR_Ransomware_Playbook_SecOps_Tasks**, in the command menu, select **Edit**.
 
     >**Note:** You may need to refresh the page.
 
-1. Select the first block, Microsoft Sentinel incident.
+1. Select the first block labeled **Microsoft Sentinel incident**.
 
-1. Select the **Change connection*** link.
+1. Select the **Change connection** link.
 
-1. Select **Add new** and select **Sign in**. In the new window, select your Azure subscription admin credentials when prompted. The last line of the block should now read “Connected to your-Student-username”.
+1. Select **Add new** and select **Sign in**. In the new window, select your Azure subscription admin credentials when prompted. The last line of the block should now read "Connected to your-Student-username".
 
     <!--- 1. Below within the logic split (+ sign), select Add an action to incident.--->
 
@@ -106,11 +100,11 @@ In this task, you update the new playbook you created with the proper connection
 
 1. Select **+ Create** and choose **Automation Rule**.
 
-1. Give the rule a name
+1. Give the rule a name.
 
 1. Leave the *Trigger* as **When an incident is created**.
 
-1. Select **+ Add** and choose *Condition (And)*.
+1. Select **+ Add** and choose **Condition (And)**.
 
 1. From the drop-down, select **Tactics**.
 
@@ -134,7 +128,7 @@ In this task, you update the new playbook you created with the proper connection
 
 1. Select **Apply** at the bottom.
 
-1. Select the **X** on the *Create new automation rule* window to close it.
+   > **Note:** The **Create new automation rule** window closes automatically after the rule is created. If the window does not close, select the **X** to close it.
 
 You have now created a playbook and an automation rule in Microsoft Sentinel.
 
