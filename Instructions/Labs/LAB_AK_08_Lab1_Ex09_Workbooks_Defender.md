@@ -29,13 +29,11 @@ Microsoft Sentinel allows you to create custom workbooks across your data, and a
 
 In this task, you will explore the Microsoft Sentinel workbook templates.
 
->**Note:** Microsoft Sentinel has been predeployed in your Azure subscription with the name **defenderWorkspace**, and the required *Content Hub* solutions have been installed.
+>**Note:** Microsoft Sentinel has been predeployed in your Azure subscription with the name **sentinelworkspace-01**, and the required *Content hub* solutions have been installed.
 
-1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
+1. Sign in to **WIN1** virtual machine as Admin using the provided credentials.
 
-1. Open the Microsoft Edge browser.
-
-1. In the Edge browser, navigate to Defender XDR at `https://security.microsoft.com`.
+1. Open **Microsoft Edge** browser and navigate to **Microsoft Defender XDR** at `https://security.microsoft.com`.
 
 1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
@@ -45,15 +43,15 @@ In this task, you will explore the Microsoft Sentinel workbook templates.
 
 1. In the Microsoft Defender navigation menu, scroll down and expand the **Microsoft Sentinel** section.
 
-1. Expand the *Threat Management* section and select **Workbooks**.
+1. Expand the **Threat Management** section and select **Workbooks**.
 
-1. Select the *Templates* tab, and search for and select the **Azure Activity** template workbook.
+1. Select the **Templates** tab, and search for and select the **Azure Activity** template workbook.
 
 1. In the right details pane, scroll down and select the **View template** button.
 
 1. Review the contents of the workbook. It shows insights of your Azure subscription operations by collecting and analyzing the data from the Activity Log.
 
-1. Return to the the **Microsoft Sentinel | Threat management | Workbooks** page in the *Defender XDR* navigation menu.
+1. Return to the **Microsoft Sentinel | Threat management | Workbooks** page in the *Defender XDR* navigation menu.
 
 ### Task 2: Save and modify a workbook template
 
@@ -69,27 +67,27 @@ In this task, you will save a workbook template and modify it.
 
 1. Select **Edit** in the command bar to enable changes in the workbook.
 
-1. Scroll down to the *Caller activities* area, look at the color of the *Activities* column since we are going to format those columns. Select the **Edit** button below the grid.
+1. Scroll down to the **Caller activities** area, look at the color of the *Activities* column since we are going to format those columns. Select the **Edit** button below the grid.
 
-1. Select the **Verical layout** button, it is located to the right of the *Run Query* command bar. **Hint:** This button only appears if there is data from the KQL query.
+1. Select the **Vertical layout** button, it is located to the right of the *Run Query* command bar. **Hint:** This button only appears if there is data from the KQL query.
 
 1. Select the **Visual Formatting** tab in the command bar, it is the *bar chart* icon.
 
-1. In the *Visualization settings*  expand *Column settings*.
+1. In the **Visualization settings**, expand the **Column settings**.
 
-1.  In the *Columns* list, select **Activities**.
+1.  In the **Columns** list, select **Activities**.
 
-1. Change the value for *Column renderer* to **Heatmap**. For *Color palette*, scroll down to select **Categorical**.
+1. Change the value for **Column renderer** to **Heatmap**. For **Color palette**, scroll down to select **Categorical**.
 
-1. Notice the change in the *Activities* column.
+1. Notice the change in the **Activities** column.
 
 1. Select **Done Editing** at the bottom of the query (not the top menu).
 
 1. Now select **Done Editing** at the top menu, and then select the **Save** icon. 
 
-1. Return to the the **Microsoft Sentinel | Threat management | Workbooks** page in the *Defender XDR* navigation menu.
+1. Return to the **Microsoft Sentinel | Threat management | Workbooks** page in the *Defender XDR* navigation menu.
 
-1. You should see your new workbook under the *My workbooks* tab with the name **Azure Activity**.
+1. You should see your new workbook under the **My workbooks** tab with the name **Azure Activity**.
 
 ### Task 3: Create a Workbook
 
@@ -105,7 +103,7 @@ In this task, you will create a new workbook with advanced visualizations.
 
 1. Select the **Edit** button next to paragraph of the workbook.
 
-1. Type *# My workbook* in a new line on top of *## New workbook*.
+1. Type *# My workbook* in a new line on top of **## New workbook**.
 
 1. Select **Done Editing** on the bottom of this section, *Editing text item: text - 2*. Notice that your header increased size and name changed.
 
@@ -115,9 +113,9 @@ In this task, you will create a new workbook with advanced visualizations.
 
 1. Scroll down and select the **Cancel** on the bottom menu, for the *Editing query item: query - 2*.
 
-1. Select *Dropdown* arrow next to the *Edit* button of the barchart graph, then select **+ Add**, then select **Add data source + visualization**.
+1. Select **Dropdown** arrow next to the *Edit* button of the barchart graph, then select **+ Add**, then select **Add data source + visualization**.
 
-1. Type **SecurityEvent** into the query box.
+1. Type *SecurityEvent* into the **Logs (Analytics) Query** box.
 
 1. Change the *Time Range* to **Last hour**.
 
@@ -137,7 +135,7 @@ In this task, you will create a new workbook with advanced visualizations.
 
 1. Scroll down and select **Done Editing** on the bottom menu, for the new *Editing query item: query - 2*.
 
-1. Scroll down and at the bottom of the workbook select **+ Add**, then select **Add data source + visualization**..
+1. Scroll down and at the bottom of the workbook select **+ Add**, then select **Add data source + visualization**.
 
 1. Type **SecurityEvent** into the query box.
 
@@ -157,17 +155,17 @@ In this task, you will create a new workbook with advanced visualizations.
 
 1. Select **Done Editing** in Workbook's top command bar.
 
-1. Select the **Save** icon, 
+1. Select the **Save** icon.
 
 1. In the popup box, change the *Title* to **My Workbook**.
 
 1. Leave other values as default.
 
-1. Select **Apply** to commit the changes. 
+1. Select **Save** to commit the changes. 
 
-1. Return to the the **Microsoft Sentinel | Threat management | Workbooks** page in the *Defender XDR* navigation menu.
+1. Return to the **Microsoft Sentinel | Threat management | Workbooks** page in the *Defender XDR* navigation menu.
 
-1. Back in the *Workbooks* page, select the **My workbooks** tab.
+1. Back in the **Workbooks** page, select the **My workbooks** tab.
 
 1. Select the workbook you just created, **My workbook**.
 
