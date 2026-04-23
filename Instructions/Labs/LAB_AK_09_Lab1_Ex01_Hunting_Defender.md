@@ -1,7 +1,7 @@
 ---
 lab:
-  title: Exercise 1 - Perform Threat Hunting in Microsoft Sentinel
-  module: Learning Path 10 - Perform threat hunting in Microsoft Sentinel
+  title: 'Exercise 1 - Perform Threat Hunting with Microsoft Sentinel in Microsoft Defender XDR'
+  module: 'Learning Path 9 - Perform threat hunting in Microsoft Sentinel'
   description: The log data created in the Learning Path 9 lab exercises will not be available in this lab without rerunning the following prerequisite tasks.
   duration: 60 minutes
   level: 300
@@ -38,12 +38,12 @@ You're a Security Operations Analyst working at a company that implemented Micro
 In this task, you'll connect an on-premises server to your Azure subscription. Azure Arc was pre-installed on this server. The server will be used in next exercises to run simulated attacks that you will later detect and investigate in Microsoft Sentinel.
 
 >**Important:** The next steps are done on a different machine than the one you were previously working. Look for the Virtual Machine name in the references tab.
-
-1. Log in to **WINServer** virtual machine as Administrator with the password: **Passw0rd!** if necessary.  
+  
+1. Sign in to **WINServer** virtual machine as Administrator using the provided credentials.
 
 As described above, Azure Arc has been pre-installed on the **WINServer** machine. You will now connect this machine to your Azure subscription.
 
-1. On the *WINServer* machine, select the *search* icon and type **cmd**.
+1. On the **WINServer** virtual machine, select the **search** icon and type **cmd**.
 
 1. In search results right click *Command Prompt* and select **Run as administrator**.
 
@@ -59,7 +59,7 @@ As described above, Azure Arc has been pre-installed on the **WINServer** machin
 
     >**Note**: If you see the *How do you want to open this?* browser selection window, select **Microsoft Edge**.
 
-1. In the *Sign in* dialog box, enter your **Tenant Email** and **Tenant Password** provided by your lab hosting provider and select **Sign in**. Wait for the *Authentication complete* message, close the browser tab and return to the *Command Prompt* window.
+1. In the **Sign in** dialog box, enter your **Tenant Email** and **Tenant Password** provided by your lab hosting provider and select **Sign in**. Wait for the *Authentication complete* message, close the browser tab and return to the *Command Prompt* window.
 
     >**Note:** You may be prompted to enter the *Temporary Access Pass* (TAP) instead of a password.
 
@@ -75,11 +75,11 @@ As described above, Azure Arc has been pre-installed on the **WINServer** machin
 
 In this task, you'll add an Azure Arc connected, on-premises machine to Microsoft Sentinel.  
 
->**Note:** Microsoft Sentinel has been predeployed in your Azure subscription with the name **'sentinelworkspace-01'**, and the required *Content Hub* solutions have been installed.
+>**Note:** Microsoft Sentinel has been predeployed in your Azure subscription with the name **sentinelworkspace-01**, and the required *Content hub* solutions have been installed.
 
-1. Login to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.  
+1. Sign in to **WIN1** virtual machine as Admin using the provided credentials.
 
-1. In the Microsoft Edge browser, navigate to Defender XDR at `https://security.microsoft.com`.
+1. In the **Microsoft Edge** browser, navigate to **Microsoft Defender XDR** at `https://security.microsoft.com`.
 
 1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
@@ -91,13 +91,13 @@ In this task, you'll add an Azure Arc connected, on-premises machine to Microsof
 
 1. Expand the **Configuration** section and select **Data connectors**.
 
-1. In the *Data connectors*, search for the **Windows Security Events via AMA** solution and select it from the list.
+1. In the **Data connectors**, search for the **Windows Security Events via AMA** solution and select it from the list.
 
-1. On the *Windows Security Events via AMA* details pane, select **Open connector page**.
+1. On the **Windows Security Events via AMA** details pane, select **Open connector page**.
 
     >**Note:** The *Windows Security Events* solution installs both the *Windows Security Events via AMA* and the *Security Events via Legacy Agent* Data connectors. Plus 2 Workbooks, 20 Analytic Rules, and 43 Hunting Queries.
 
-1. In the *Configuration* section, under *Prerequisites* and *Table Management*, select **+Create data collection rule**.
+1. In the **Configuration** section, under *Prerequisites* and *Table Management*, select **+Create data collection rule**.
 
 1. Enter **AZWINDCR** for Rule Name, verify that *Subscription* is correct, select the **SentinelStatic** Resource Group.
 
@@ -119,9 +119,9 @@ In this task, you'll add an Azure Arc connected, on-premises machine to Microsof
 
 >**Important:** The next steps are done on a different machine than the one you were previously working. Look for the Virtual Machine name in the references tab.
 
-1. Log in to **WINServer** virtual machine as Administrator with the password: **Passw0rd!** if necessary.
+1. Sign in to **WINServer** virtual machine using the provided credentials.
 
-1. On the *WINServer* machine, select the *search* icon and type **cmd**.
+1. On the **WINServer** virtual machine, select the **search** icon and type **cmd**.
 
 1. In search results right click *Command Prompt* and select **Run as administrator**.
 
@@ -195,9 +195,9 @@ In this task, you'll create a hunting query, and create a Livestream.
 
 >**Note:** *Advanced hunting* doesn't support creating bookmarks in the Microsoft Defender portal, but they can be created in the *Hunting Livestreams*.
 
-1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
+1. Sign in to **WIN1** virtual machine using the provided credentials.
 
-1. In the Microsoft Edge browser, navigate to Defender XDR at `https://security.microsoft.com`.
+1. In the **Microsoft Edge** browser, navigate to **Microsoft Defender XDR** at `https://security.microsoft.com`.
 
 1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
@@ -209,13 +209,13 @@ In this task, you'll create a hunting query, and create a Livestream.
 
 1. Expand the **Hunting** section and select **Advanced hunting**.
 
-1. Enter the following KQL query in the *New Query* space:
+1. Enter the following KQL query in the *New query* tab:
 
-   >**Important:** Please paste any KQL queries first in Notepad and then copy from there to the *New Query 1* Log window to avoid any errors.
+   >**Important:** Please paste any KQL queries first in Notepad and then copy from there to the *New query* tab to avoid any errors.
 
    >**Note:** If you receive the message, "security.microsoft.com wants to.. See text and images copied to the clipboard", select **Allow**.
 
-    ```Kusto
+    ```KQL
     let lookback = 2d; 
     SecurityEvent
     | where TimeGenerated >= ago(lookback) 
@@ -230,9 +230,9 @@ In this task, you'll create a hunting query, and create a Livestream.
 
 1. Select the checkbox of the results that shows the *"-file c2.ps1"* in the *PwshParam* column.
 
-1. In the *Results* pane command bar, select the **Link to incident** icon.
+1. In the **Results** pane command bar, select the ellipsis **(...)** button and then select **Link to incident** from the drop-down menu.
 
-1. In the *Link to incident* pane, leave the **Create new incident** radio button selected.
+1. In the **Link to incident** pane, leave the **Create new incident** radio button selected.
 
 1. Fill in the following fields:
 
@@ -247,19 +247,19 @@ In this task, you'll create a hunting query, and create a Livestream.
 
 1. Select **Next**.
 
-1. On the *Entity mapping* pane, in *Impacted Assets* select **+ Add assets**.
+1. On the **Entity mapping** pane, in *Impacted Assets* select **+ Add assets**.
 
 1. For *Entity* select **Device**, then **Hostname** and **Computer** for *Identifier and Column*.
 
 1. Select **Next**.
 
-1. On the *Summary* pane, select **Submit**, then select **Done**.
+1. On the **Summary** pane, select **Submit**, then select **Done**.
 
 1. In the Microsoft Defender navigation menu, scroll down and expand the **Investigation & Response** section.
 
 1. Expand the **Incidents & Alerts** section and select **Incidents**.
 
-1. In the *Incidents* pane, you should see the **PowerShell C2 Hunt** incident listed.
+1. In the **Incidents** pane, you should see the **PowerShell C2 Hunt** incident listed.
 
 ### Task 2: Hunt with Microsoft Sentinel graph
 
@@ -267,11 +267,11 @@ In this task, you'll create a hunting query, and create a Livestream.
 
 1. Expand the **Hunting** section and select **Advanced hunting**.
 
-1. Select the *Create new graph* icon, or the *New graph* tab.
+1. Select the **Create new graph** icon, or the *New graph* tab.
 
 1. Select **Search with Predefined scenarios**.
 
-1. On the *Search Predefined scenarios* pane, select the **Users with access to Sensitive data** Scenario.
+1. On the **Search Predefined scenarios** pane, select the **Users with access to Sensitive data** Scenario.
 
 1. In the *Scenario inputs*, enter **sensitivestorageaccount** for the *Target storage account*.
 
@@ -294,7 +294,7 @@ In this task, you'll create a hunting query, and create a Livestream.
 
 1. Selecting the "+" icon on a node will expand the graph to show more relationships.
 
-1. Continuing expanding the graph, explore the different relationships and entities, and then proceed to the next task.
+1. Continue expanding the graph, explore the different relationships and entities, and then proceed to the next task.
 
 <!--- ### Task 3: Create a Microsoft Sentinel Hunt and Livestream
  
@@ -438,25 +438,25 @@ In this task, you'll create a Data lake KQL job to look for a C2 attack.
 
 >**Note:**: The *KQL job* feature allows you to run KQL queries on your data lake and create a job that will continuously monitor for specific patterns or anomalies.
 
-1. Expand *Data lake exploration* in Microsoft Sentinel and select **Jobs**.
+1. In Microsoft Sentinel expand **Data lake exploration** and select **Jobs**.
 
 1. Select the **Create a new KQL job** link.
 
 1. The *Create a new KQL job* wizard opens.
 
-    >**Note:** Review the *Consumption billing appplicable* message.
+    >**Note:** Review the *Consumption billing applicable* message.
 
 1. Enter a name for your job in the *Job name* field.
 
-1. In the *Destination table in Analytics tier* section, slect the **SentinelWorkspace-01** workspace from the *Destination workspace* drop-down menu.
+1. In the *Destination table in Analytics tier* section, select the **SentinelWorkspace-01** workspace from the *Destination workspace* drop-down menu.
 
-    >**Note:** The *_KQL_CL* is the custom log default appendice.
+    >**Note:** The *_KQL_CL* is the custom log default appendix.
 
-1. Leave the *Create a new table* radio button selected, and enter **C2ATTACKHUNT** for for the new table name.
+1. Leave the *Create a new table* radio button selected, and enter **C2ATTACKHUNT** for the new table name.
 
 1. Select the **Next** button.
 
-1. On the *Review the query* page, enter the following KQL query:
+1. On the **Review the query** page, enter the following KQL query:
 
     ```KQL
     let lookback = 2d; 
@@ -470,17 +470,17 @@ In this task, you'll create a Data lake KQL job to look for a C2 attack.
 
 1. Select the **Next** button.
 
-1. On the *Schedule the job* page, leave the *Job frequency* radio button selected to **One time**, and select the **Next** button.
+1. On the **Schedule the job** page, leave the *Job frequency* radio button selected to **One time**, and select the **Next** button.
 
-1. On the *Summary, Review and finish to run job as scheduled* page, review the job settings and select the **Submit** button.
+1. On the **Summary, Review and finish to run job as scheduled** page, review the job settings and select the **Submit** button.
 
-1. On the *Summary, Job saved* pane, select the **Done** button.
+1. On the **Summary, Job saved** pane, select the **Done** button.
 
-1. On the *Jobs* page, you can see the new job listed, and the *Last run status* shows the job as **In progress**.
+1. On the **Jobs** page, you can see the new job listed, and the *Last run status* shows the job as **In progress**.
 
     >**Note:** It may take up to 10 minutes for the job to complete.
 
-1. Select the refresh icon near the top-left of the *Jobs* page to refresh the *Last run status*.
+1. Select the refresh icon near the top-left of the **Jobs** page to refresh the *Last run status*.
 
     >**Tip:** While waiting for the new job to execute, click on any existing KQL job that has a **Succeeded** *Last run status*. Review the details, such as name, repeat frequency, date range, destination table, and the KQL query. Select view history and review the past runs. Once done, return to the job list and hit refresh.
 
@@ -490,7 +490,7 @@ In this task, you'll create a Data lake KQL job to look for a C2 attack.
 
 1. Select the *Destination table* link for **C2ATTACKHUNT_KQL_CL**.
 
-1. This opens the *Advanced hunting* page with the **C2ATTACKHUNT_KQL_CL** table populated in the *New query* form. If the table name has a red rippled underline, it means the table is unknown and it may take several minutes to be updated.
+1. This opens the **Advanced hunting** page with the **C2ATTACKHUNT_KQL_CL** table populated in the *New query* form. If the table name has a red rippled underline, it means the table is unknown and it may take several minutes to be updated.
 
     >**Note:** After the table is known to *Advanced hunting*, you can modify the query as needed to refine your search.
 
@@ -540,13 +540,13 @@ In this task, you'll create a Data lake KQL job to look for a C2 attack.
 
 1. Review which queries returned results.
 
-1. Based on the results, determine if there's enough strong evidence to validate the hypothesis. If there isn’t, close the Hunt and mark it as invalidated.
+1. Based on the results, determine if there is enough strong evidence to validate the hypothesis. If there is not, close the Hunt and mark it as invalidated.
 
 1. Alternative Steps:
-    - Go to Microsoft Sentinel.
-    - Expand Threat management.
-    - Choose Hunting.
-    - Select ‘add filter’.
+    - Go to **Microsoft Sentinel**.
+    - Expand **Threat management**.
+    - Choose **Hunting**.
+    - Select Select **add filter**.
     - Set the filter to tactics: persistence.
     - Add another filter.
     - Set the second filter to have techniques: T1098.
