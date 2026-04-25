@@ -3,10 +3,11 @@ lab:
   title: Exercise 1 - Explore use cases in Microsoft Security Copilot
   module: Learning Path 2 - Mitigate threats using Microsoft Security Copilot
   description: In this exercise, you explore all the key landmarks in the landing page of the standalone experience of Microsoft Security Copilot.
-  duration: 15 minutes
+  duration: 45 minutes
   level: 200
   islab: true
 ---
+
 
 # Learning Path 2 - Lab 1 - Exercise 1 - Explore Microsoft Security Copilot
 
@@ -41,11 +42,7 @@ In this task, you walk through the process of ensuring you have the appropriate 
 
 Once you're assigned the User Access Administrator role in Azure, you can assign a user the necessary access to provision SCUs for Copilot.  For the purpose of this exercise only, which is to show you the steps involved,  you will be assigning yourself the necessary access.  The steps that follow will guide you through the process.
 
-1. Ensure you have the User Access Administrator role assigned to your account.
-
-1. Open the simulated environment by selecting this link: <https://app.highlights.guide/start/6d7270b9-7187-456a-ac16-97bc227d5c27?token=045faae1-1078-4eac-bf56-e12472eddaf9&link=1&azure-portal=true>.
-
-    <!--- Open the simulated environment by selecting this link: **[Azure portal](https://app.highlights.guide/start/6d7270b9-7187-456a-ac16-97bc227d5c27?token=045faae1-1078-4eac-bf56-e12472eddaf9&link=1&azure-portal=true)**.--->
+1. Open the simulated environment by selecting this link: **[Azure portal](https://app.highlights.guide/start/6d7270b9-7187-456a-ac16-97bc227d5c27?token=045faae1-1078-4eac-bf56-e12472eddaf9&link=1&azure-portal=true)**.
 
 1. You'll start by enabling Access management for Azure resources. To access this setting:
     1. From the Azure portal, select **Microsoft Entra ID**.
@@ -128,13 +125,12 @@ In this task, you start your exploration in the home menu.
     1. Select filter to view the available options, then select the X to close.
     1. Select the home menu icon to open the home menu.
 
-1. From the *Home* menu, select **Owner settings**. These settings are available to you as a Copilot owner. A Copilot contributor does not have access to these menu options.
-    1. Select the drop-down for who can upload files to view the available options.
-
-1. Return to the *Home* menu and explore the *Plugin* options:
-    1. Select the *Plugin settings* for Who can add and manage their own custom plugins to view the available options.
+1. Select **Owner settings**. These settings are available to you as a Copilot owner. A Copilot contributor does not have access to these menu options.
+    1. For plugins for Security Copilot, select the drop-down for Who can add and manage their own custom plugins to view the available options.
     1. Select drop-down for Who can add and manage custom plugins for everyone in the organization to view the available options. Note, this option is greyed out if Who can add and manage their own custom plugins is set to owners only.
     1. Select the information icon next to "Allow Security Copilot to access data from your Microsoft 365 Services."  This setting must be enabled if you want to use the Microsoft Purview plugin. You'll work with this setting in a later exercise.
+    1. Select the drop-down for who can upload files to view the available options.
+    1. Select the home menu icon to open the home menu.
 
 1. Select **Role assignment**.
     1. Select Add members, then close.
@@ -168,7 +164,7 @@ In the center of the landing page, there are cards representing your most recent
 
 The next section of the Copilot landing page revolves around promptbooks. The landing page shows tiles for some Microsoft security promptbooks. Here you explore access to promptbooks and the promptbook library. In a subsequent exercise, you explore creating and running a promptbook.
 
-1. Select the *Promptbooks* button.
+1. To the right of where it says "Get started with these promptbooks" are a left and right arrow key that allows you to scroll through the tiles for Microsoft security promptbooks. Select the **right arrow >**
 
 1. Each tile shows the title of the promptbook, a brief description, the number of prompts, and a run icon. Select the title of any of the promptbook tiles to open that promptbook. Select **Vulnerability impact assessment**, as an example.
     1. The window for the selected promptbook provides information, including who created the promptbook, tags, a brief description, inputs required to run the promptbook, and a listing of the prompts.
@@ -299,7 +295,7 @@ This task is complex and requires the involvement of more senior analysts. In th
     1. The promptbook page opens and asks for the Defender Incident ID. Enter **185856** then select **Submit**.
     1. Review the information provided. By pivoting to the standalone experience and running the promptbook, the investigation is able to invoke capabilities from a broader set security solution, beyond just Defender XDR, based on the plugins enabled.
 
-1. Select the **box icon ![box icon](../Media/box-icon.png)** next to the pin icon to select all the prompts and and the corresponding responses, then select the **Pin icon ![pin icon](../Media/pin-icon.png)** to save those responses to the pin board.
+1. Select the **box icon ![box icon](../Media/box-icon.png)** next to the pin icon to select all the prompts and the corresponding responses, then select the **Pin icon ![pin icon](../Media/pin-icon.png)** to save those responses to the pin board.
 
 1. The pin board opens automatically. The pin board holds your saved prompts and responses, along with a summary of each one. You can open and close the pin board by selecting the **pin board icon ![pin board icon](../Media/pinboard-icon.png)**.
 
