@@ -57,7 +57,7 @@ You're a Security Operations Analyst working at a company that is implementing M
 
 1. Collapse the *Timeline visualization* chart for more screen space and scroll down to the **>** next to the first record to expand the information for the row.
 
-### Task 3: Run Basic KQL Statements
+### Task 2: Run Basic KQL Statements
 
 In this task, you'll build basic KQL statements.
 
@@ -142,7 +142,7 @@ In this task, you'll build basic KQL statements.
     LowActivityAccounts | where Account_s contains "sql"
     ```
 
-### Task 4: Analyze Results in KQL with the Summarize Operator
+### Task 3: Analyze Results in KQL with the Summarize Operator
 
 In this task, you'll build KQL statements to aggregate data. **Summarize** groups the rows according to the **by** group columns, and calculates aggregations over each group.
 
@@ -236,7 +236,7 @@ In this task, you'll build KQL statements to aggregate data. **Summarize** group
     | summarize make_set(Account_s) by Computer
     ```
 
-### Task 5: Create visualizations in KQL with the Render Operator
+### Task 4: Create visualizations in KQL with the Render Operator
 
 In this task, you'll use generate visualizations with KQL statements.
 
@@ -258,7 +258,7 @@ In this task, you'll use generate visualizations with KQL statements.
     | render timechart
     ```
 
-### Task 6: Build multi-table statements in KQL
+### Task 5: Build multi-table statements in KQL
 
 In this task, you'll build multi-table KQL statements.
 
@@ -317,7 +317,7 @@ In this task, you'll build multi-table KQL statements.
 
 1. You can leave the **Custom time range** you set earlier in the *Query* window.
 
-### Task 7: Work with string data in KQL
+### Task 6: Work with string data in KQL
 
 In this task, you'll work with structured and unstructured string fields with KQL statements.
 
