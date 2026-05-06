@@ -90,9 +90,9 @@ In this task, you update the new playbook you created with the proper connection
 
 1. Select the first block, Microsoft Sentinel incident.
 
-1. Select the **Change connection*** link.
+1. Select the **Change connection** link.
 
-1. Select **Add new** and select **Sign in**. In the new window, select your Azure subscription admin credentials when prompted. The last line of the block should now read “Connected to your-Student-username”.
+1. Scroll down the list of connections, select **Add new** and select **Sign in**. In the new window, select your Azure subscription admin credentials when prompted. The last line of the block should now read “Connected to your-Student-username”.
 
     <!--- 1. Below within the logic split (+ sign), select Add an action to incident.--->
 

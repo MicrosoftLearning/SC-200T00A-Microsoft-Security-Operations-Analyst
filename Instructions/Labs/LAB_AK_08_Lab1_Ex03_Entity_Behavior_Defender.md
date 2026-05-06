@@ -44,17 +44,15 @@ In this task, you will explore Entity behavior analytics in Microsoft Sentinel.
 
 1. Select **Settings**, and then select **Microsoft Sentinel**.
 
-1. Select the **sentinelworkspace-01** workspace.
+    <!--- 1. Select the **sentinelworkspace-01** workspace.
 
-1. In the popout window, select and expand the **Entity behavior analytics** section.
+    1. In the popout window, select and expand the **Entity behavior analytics** section. --->
 
-1. Select **Configure UEBA**.
+1. Select **UEBA**.
 
 1. On the *UEBA (User and Entity Behavior Analytics)* page, on the *UEBA* tab,verify that the *UEBA feature* is enabled, and review the *connected data sources*.
 
-1. Use the *breadcrumb* links at the top of the page to go back to the *Microsoft Sentinel* settings page.
-
-1. Select the **sentinelworkspace-01** workspace.
+1. At the top of the *Microsoft Sentinel* settings menu, SIEM workspaces and select the **sentinelworkspace-01** workspace.
 
 1. On the *Settings* page, scroll down and expand the *Anomalies* section. 
 

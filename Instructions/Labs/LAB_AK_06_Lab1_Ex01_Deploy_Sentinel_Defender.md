@@ -193,7 +193,7 @@ In this task, you'll change the retention period for the SecurityEvent table.
 
 1. In the Search box, type **SecurityEvent**, and then select the table **SecurityEvent** from the results.
 
-    >**Note:** There will be multiple variations of the SecurityEvent table. We recommend selecting the correct*SecurityEvent_CL* table.
+    >**Note:** There will be multiple variations of the SecurityEvent table. We recommend selecting the correct *SecurityEvent_CL* table.
 
 1. Select the **Data retention settings** gear icon.
 

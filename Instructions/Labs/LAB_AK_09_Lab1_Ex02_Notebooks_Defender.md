@@ -3,7 +3,7 @@ lab:
   title: Exercise 2 - Threat Hunting using Notebooks with Microsoft Sentinel
   module: Learning Path 10 - Perform threat hunting in Microsoft Sentinel
   description: In this task, you'll explore using notebooks in Microsoft Sentinel.
-  duration: 30 minutes
+  duration: 40 minutes
   level: 300
   islab: true
   primarytopics:
@@ -12,7 +12,6 @@ lab:
     - Jupyter Notebooks
     - Python
     - Data lake
-
 ---
 
 # Learning Path 09 - Lab 1 - Exercise 2 - Threat Hunting using Data lake Notebooks in Microsoft Sentinel
@@ -27,7 +26,7 @@ You're a Security Operations Analyst working at a company that implemented Micro
 
 >**Important:** The lab exercises for Learning Path #9 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
 
-### Estimated time to complete this lab: 30 minutes
+### Estimated time to complete this lab: 40 minutes
 
 ### Task 1: Hunt with Data lake Notebooks
 
@@ -51,11 +50,11 @@ This task explores Notebooks in Microsoft Sentinel Data lake. You will be using 
 
 1. The *Notebooks* page displays the list of steps to perform to use Data lake Jupyter notebooks, and provides links to available resources.
 
-1. Go to the task bar and select the Visual Studio Code icon.
+1. In the Windows search bar, type **Visual Studio Code**, and select the Visual Studio Code icon in the search results.
 
     >**Note:** Unless specified, always install the *Microsoft* published extensions.
 
-1. Within the left menu bar, select the Extensions icon.
+1. Within the left menu bar, select the Extensions icon (squares).
 
 1. Within the search bar of Extensions, search for *Python*, and select **Install**.
 
@@ -71,7 +70,7 @@ This task explores Notebooks in Microsoft Sentinel Data lake. You will be using 
 
 1. Look for **MCP: Add server**, and select that option.
 
-1. Choose the HTTP option and enter the URL: `https://sentinel.microsoft.com/mcp/data-exploration>`.
+1. Choose the HTTP option and enter the URL: `https://sentinel.microsoft.com/mcp/data-exploration`.
 
 1. Select **Enter** to use the default server ID.
 
@@ -87,7 +86,7 @@ This task explores Notebooks in Microsoft Sentinel Data lake. You will be using 
 
 1. If not already open in the Side Bar, select the **Toggle chat** icon on the top menu bar.
 
-    >**Hint:** Next to the search bar, or select the **Ctrl+Shift+I** keys on your keyboard.
+    >**Hint:** Next to the search bar, or select the **Ctrl+Alt+I** keys on your keyboard.
 
 1. Enter Copilot prompts such as the following examples:
 
@@ -95,28 +94,32 @@ This task explores Notebooks in Microsoft Sentinel Data lake. You will be using 
 - What columns within the SecurityEvent table are good to use in hunting queries
 - Query the last 90 days of SecurityEvent data in my workspace, summarize your findings by the top 5 most malicious activities and format the results as a table
 
+    >**Note:** If you are prompted to sign in to use *AI Features*, select *Continue with GitHub*. You will be redirected to the GitHub sign-in page. If you have an existing account, enter your GitHub credentials and complete any multi-factor authentication steps if required. If not, you can create a new GitHub account using your student credentials. Once signed in, return to Visual Studio Code. You may also skip this section and continue with the lab, but you will not be able to use GitHub Copilot.
+
 1. When prompted to authenticate the MCP server, select **Allow**, and select your lab credentials again.
 
-1. At some point if you have gotten results or suggested queries from the MCP server, try asking it to make you a Notebook with the findings and suggestions.
+2. At some point if you have gotten results or suggested queries from the MCP server, try asking it to make you a Notebook with the findings and suggestions.
 
-1. When prompted select **Allow** to create the Notebook.
+3. When prompted select **Allow** to create the Notebook.
 
-1. Select **Allow** when prompted to let the **Microsoft Sentinel** extension sign in, and select your lab credentials again
+4. Select **Allow** when prompted to let the **Microsoft Sentinel** extension sign in, and select your lab credentials again
 
-1. Once the Jupyter Notebook is created, review the code cells and markdown cells.
+5. Once the Jupyter Notebook is created, review the code cells and markdown cells.
 
-1. To save the Notebook, select **Keep** from the bottom right.
+6. To save the Notebook, select **Keep** from the bottom right.
 
-1. Select the **Microsoft Sentinel** *Shield* icon from the left menu bar.
+7. Select the **Microsoft Sentinel** (stylized "S") icon from the left menu bar.
 
-1. In the **LAKE TABLES** section, expand the **defender** table and then expand the **Security & Audits** table.
+8. In the **LAKE TABLES** section, expand the **SentinelWorkspace-01** table, and then expand the **Security & Audits** table.
 
-1. The *SecurityEvent* table schema is displayed.
+    >**Note:** Sign-in with your lab credentials if needed.
 
-1. In the **NOTEBOOK SAMPLES** section, expand *Tutorials* and select the **01_GettingStartedwithSentineldatalake** tutorial notebook.
+9. The *SecurityEvent* table schema is displayed.
 
-1. Once the Jupyter Notebook is open, review the different tabs, code cells and markdown cells.
+10. In the **NOTEBOOK SAMPLES** section, expand *Tutorials* and select the **01_GettingStartedwithSentineldatalake** tutorial notebook.
 
->**Note:** If you want to run the code cells, feel free to do so, but it is not required for this lab. The presenters can help time permitting.
+11. Once the Jupyter Notebook is open, review the different tabs, code cells and markdown cells.
+
+>**Note:** If you want to run the code cells, feel free to do so, but it is not required for this lab. You will need to select a *Kernel* before running any code cells. You should choose the *Microsoft Sentinel* Kernel with the recommended *small pool (12 vCores)* python3. The trainers can help time permitting.
 
 ## You have completed the lab
