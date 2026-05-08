@@ -28,7 +28,7 @@ You're a Security Operations Analyst working at a company that implemented Micro
 
 In this task, you create a Windows virtual machine in Azure.
 
-1. Login to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.  
+1. Sign in to **WIN1** virtual machine as Admin using the provided credentials.
 
 1. In the Microsoft Edge browser, navigate to the Azure portal at `https://portal.azure.com`.
 
@@ -88,7 +88,7 @@ In this task, you connect an on-premises server to your Azure subscription. Azur
 
     >**Note:** As described above, Azure Arc has been pre-installed on the **WINServer** machine. You will now connect this machine to your Azure subscription.
 
-1. On the *WINServer* machine, select the *search* icon and type **cmd**.
+1. On the **WINServer** machine, select the **search** icon and type **cmd**.
 
 1. In search results right click *Command Prompt* and select **Run as administrator**.
 
@@ -104,7 +104,7 @@ In this task, you connect an on-premises server to your Azure subscription. Azur
 
     >**Note**: If you see the *How do you want to open this?* browser selection window, select **Microsoft Edge**.
 
-1. In the *Sign in* dialog box, enter your **Tenant Email** and **Tenant Password** provided by your lab hosting provider and select **Sign in**. Wait for the *Authentication complete* message, close the browser tab and return to the *Command Prompt* window.
+1. In the **Sign in** dialog box, enter your **Tenant Email** and **Tenant Password** provided by your lab hosting provider and select **Sign in**. Wait for the *Authentication complete* message, close the browser tab and return to the *Command Prompt* window.
 
 1. When the commands complete running, leave the *Command Prompt* window open and type the following command to confirm that the connection was successful:
 
@@ -118,27 +118,27 @@ In this task, you connect an on-premises server to your Azure subscription. Azur
 
 In this task, you connect an Azure Windows virtual machine to Microsoft Sentinel.
 
->**Note:** Microsoft Sentinel has been predeployed in your Azure subscription with the name **sentinelworkspace-01**, and the required *Content Hub* solutions have been installed.
+>**Note:** Microsoft Sentinel has been predeployed in your Azure subscription with the name **sentinelworkspace-01**, and the required *Content hub* solutions have been installed.
 
-1. Login to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.  
+1. Sign in to **WIN1** virtual machine as Admin using the provided credentials.  
 
 1. If necessary, open the Microsoft Edge browser, and navigate to Defender XDR at `https://security.microsoft.com`, and sign in with the provided credentials.
 
 1. In the Microsoft Defender navigation menu, scroll down and expand the **Microsoft Sentinel** section.
 
-1. Expand the **Content management** section and select **Content Hub**.
+1. Expand the **Content management** section and select **Content hub**.
 
-1. In the *Content hub*, search for the **Windows Security Events** solution and select it from the list.
+1. In the **Content hub**, search for the **Windows Security Events** solution and select it from the list.
 
-1. On the *Windows Security Events* solution page select **Manage**.
+1. On the **Windows Security Events** solution page select **Manage**.
 
     >**Note:** The *Windows Security Events* solution installs both the *Windows Security Events via AMA* and the *Security Events via Legacy Agent* Data connectors. Plus 2 Workbooks, 20 Analytic Rules, and 43 Hunting Queries.
 
-1. Select the *Windows Security Events via AMA* Data connector, and select **Open connector page** on the connector information blade.
+1. Select the **Windows Security Events via AMA** Data connector, and select **Open connector page** on the connector information blade.
 
-1. On the *Setup* tab, scroll down to the *Configuration* section, and select the **+Create data collection rule** button.
+1. On the **Setup** tab, scroll down to the **Configuration** section, and select the **+Create data collection rule** button.
 
-1. Enter a unique name for the Rule Name, **Hint:** consider using your *Student* username number, for example, **AZWINXXXXXXXDCR**, then select **Next: Resources**.
+1. Enter a unique name for the *Rule Name*, **Hint:** consider using your *Student* username number, for example, **AZWINXXXXXXXDCR**, then select **Next: Resources**.
 
 1. Expand your *MOC Subscription* under *Scope* on the *Resources* tab.
 
@@ -162,7 +162,7 @@ In this task, you'll add an Azure Arc connected, non-Azure Windows virtual machi
 
 1. Make sure you are in the *Windows Security Events via AMA* data connector configuration in your Microsoft Sentinel workspace.
 
-1. In the *Configuration* section, edit the **AZWINXXXXXXXDCR** *data collection rule* by selecting the *pencil* icon.
+1. In the **Configuration** section, edit the **AZWINXXXXXXXDCR** *data collection rule* by selecting the *pencil* icon.
 
 1. Select **Next: Resources**, and expand your *MOC Subscription* under *Scope* on the *Resources* tab.
 
