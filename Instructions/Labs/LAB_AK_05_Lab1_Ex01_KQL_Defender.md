@@ -94,7 +94,7 @@ In this task, you'll build basic KQL statements.
 
     ```KQL
     SecurityEvent_CL  
-    | where TimeGenerated > ago(5d and EventID_s == 4624
+    | where TimeGenerated > ago(5d) and EventID_s == 4624
     ```
 
     ```KQL
