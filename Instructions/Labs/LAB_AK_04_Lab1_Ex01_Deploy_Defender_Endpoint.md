@@ -23,7 +23,7 @@ You start by initializing the Defender for Endpoint environment. Next, you onboa
 
 >**Important:** The lab Virtual Machines are used through different modules. SAVE your virtual machines. If you exit the lab without saving, you will be required to re-run some configurations again.
 
->**Note:** Make sure you have completed successfully Task 3 of the first module.
+>**Note:** Make sure you have successfully completed Task 3 of the first module.
 
 ### Estimated time to complete this lab: 30 minutes
 
