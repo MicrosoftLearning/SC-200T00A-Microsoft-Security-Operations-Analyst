@@ -28,6 +28,8 @@ You're a Security Operations Analyst working at a company that implemented Micro
 
 In this task, you create a Windows virtual machine in Azure.
 
+>**Note:** Your lab hosting provider may provide alternate instructions for creating an Azure virtual machine. If so, please follow those instructions instead of the ones below.
+
 1. Login to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.  
 
 1. In the Microsoft Edge browser, navigate to the Azure portal at `https://portal.azure.com`.
@@ -52,31 +54,33 @@ In this task, you create a Windows virtual machine in Azure.
 
     >**Note:** The next two steps will require you to create Azure resources with unique names. We suggest using your initials and a random number combination to ensure uniqueness, for example, *RG-XXXXX123* for the resource group and *AZWIN-XXXXX123* for the virtual machine.
 
-1. Select **Create new** for *Resource group*, enter RG-*XXXXX123* as Name and, select **OK**.
+2. Select the the appropriate subscription from the *Subscription* drop-down list.                   
+
+3. Select **Create new** for *Resource group*, enter RG-*XXXXX123* as Name and, select **OK**.
 
     >**Note:** This will be a new resource group for tracking purposes. 
 
-1. In *Virtual machine name*, enter AZWIN-*XXXXX123*.
+4. In *Virtual machine name*, enter AZWIN-*XXXXX123*.
 
-1. Leave **(US) East US** as the default value for *Region*.
+5. Leave **(US) East US** as the default value for *Region*.
 
-1. Scroll down and review the *Image* for the virtual machine. If it appears empty, select **Windows 11 Enterprise, version 24H2**.
+6. Scroll down and review the *Image* for the virtual machine. If it appears empty, select **Windows 11 Enterprise, version 24H2**.
 
-1. Review the *Size* for the virtual machine. If it appears empty, select **See all sizes**, choose the first (D-series) VM size listed and select **Select**.
+7. Review the *Size* for the virtual machine. If it appears empty, select **See all sizes**, choose the first (D-series) VM size listed and select **Select**.
 
     >**Note:** If you see the message: *This image is not supported for Azure Automanage. To disable this feature,navigate to the Management tab. Otherwise, select a supported image.* Go to the Management tab and disable "Automanage". The creation process will succeed afterwards.
 
-1. Scroll down and enter a *Username* of your choosing. **Hint:** Avoid reserved words like admin or root and consider using your *Student* username, for example, *Student-xxxxxxx*.
+8. Scroll down and enter a *Username* of your choosing. **Hint:** Avoid reserved words like admin or root and consider using your *Student* username, for example, *Student-xxxxxxx*.
 
-1. Enter a *Password* of your choosing. **Hint:** It might be easier to reuse your LabUser password. It can be found in the resources tab. You may need to enter it twice.
+9. Enter a *Password* of your choosing. **Hint:** It might be easier to reuse your LabUser password. It can be found in the resources tab. You may need to enter it twice.
 
-1. Scroll down to the bottom of the page and select the checkbox below *Licensing* to confirm you have the eligible license.
+10. Scroll down to the bottom of the page and select the checkbox below *Licensing* to confirm you have the eligible license.
 
-1. Select **Review + create** and wait until the validation is passed.
+11. Select **Review + create** and wait until the validation is passed.
 
     >**Note:** If there is a *Networking* validation failure, select that tab, review its contents and then select **Review + create** again.
 
-1. Select **Create**. Wait for the Resource to be created, this may take a few minutes.
+12. Select **Create**. Wait for the Resource to be created, this may take a few minutes.
 
 ### Task 2: Connect an on-premises Server to Azure
 

@@ -148,6 +148,8 @@ In this task, you create a *Microsoft Sentinel analytics scheduled query rule*.
 
 In this task, you test your new scheduled query rule. You start by enabling *Cloud Shell* in the Azure portal, which will trigger the rule you created in the previous task and generate an incident.
 
+>**Note:** Your lab hosting provider may provide alternate instructions for enabling Cloud Shell to trigger the rule. If so, please follow those instructions instead of the ones below.
+
 1. In the Microsoft Edge browser, navigate to the Azure portal at `https://portal.azure.com`.
 
 1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
@@ -160,7 +162,7 @@ In this task, you test your new scheduled query rule. You start by enabling *Clo
 
 1. In the *Welcome to Azure Cloud Shell* window, select **Powershell**.
 
-1. On the *Getting started* page, select **Mount storage account**, and then select your **_XXXXXXXXX-MicrosoftSentinelLabs** from the *storage account subscription* drop-down menu item and select the **Apply** button.
+1. On the *Getting started* page, select **Mount storage account**, and then select the appropriate **Azure subscription** from the *storage account subscription* drop-down menu item and select the **Apply** button.
 
     >**Important:** Do not select the *No storage account required* radio button option. This wil cause the incident creation to fail.
 
