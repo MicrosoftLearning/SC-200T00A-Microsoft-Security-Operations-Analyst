@@ -28,13 +28,11 @@ You're a Security Operations Analyst working at a company that implemented Micro
 
 In this task, you'll review the Registry Schema parsers that are included with the Microsoft Sentinel deployment.
 
->**Note:** Microsoft Sentinel has been predeployed and onboarded to Microsoft Defender XDR with the name **sentinelworkspace-01**, and the required *Content Hub* solutions have been installed.
+>**Note:** Microsoft Sentinel has been predeployed and onboarded to Microsoft Defender XDR with the name **sentinelworkspace-01**, and the required *Content hub* solutions have been installed.
 
-1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
+1. Sign in to **WIN1** virtual machine as Admin using the provided credentials.
 
-1. Open the Microsoft Edge browser.
-
-1. In the Edge browser, navigate to Defender XDR at `https://security.microsoft.com`.
+1. Open **Microsoft Edge** and navigate to **Microsoft Defender XDR** at `https://security.microsoft.com`.
 
 1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
@@ -46,11 +44,11 @@ In this task, you'll review the Registry Schema parsers that are included with t
 
 1. Expand the **Hunting** section and select **Advanced hunting**.
 
-1. Open the *Schema and Search* blade by selecting **>** if needed.
+1. Open the **Schema and Search** blade by selecting **>** if needed.
 
 1. Select the **Functions** tab (next to the Queries tab). **Hint:** You might need to select the ellipsis icon **(...)** to select the tab.
 
-1. In the *Search* bar type **registry**, and scroll down through the ASIM parser functions until you see the following *_Im_RegistryEvent_MicrosoftWindowsEventxxx*for Microsoft Windows under the *Microsoft Sentinel* heading.
+1. In the *Search* bar type **registry**, and scroll down through the ASIM parser functions until you see the following *_Im_RegistryEvent_MicrosoftWindowsEventxxx* for Microsoft Windows under the *Microsoft Sentinel* heading.
 
     >**Note:** We're using the xxx in the ASIM parser function name to account for version changes. At the time this lab was updated the function was _Im_RegistryEvent_MicrosoftWindowsEvent*V02*.
 
@@ -60,10 +58,10 @@ In this task, you'll review the Registry Schema parsers that are included with t
 
     >**Hint:** Typing ctrl+f in the code window brings up *Find* and makes searching for *EventID: 4657* much easier.
 
-1. In *Logs* Open a New Query tab.
+1. From the command bar, select **New query** to open a new query tab.
 
-1. Go back to the *Schema and Filter* blade and now hover the **_Im_RegistryEvent_MicrosoftWindowsEventxxx** *Registry Event ASIM filtering parser for Microsoft Windows Events and Security Events* and then select **Use in editor**.
+1. Go back to the **Schema** pane, hover over the **_Im_RegistryEvent_MicrosoftWindowsEventxxx** ASIM function, and then select **Use in editor**.
 
-1. **Run** the ASIM function query. If you've completed the previous lab exercises you should see results and noerror messages.
+1. Select **Run** to execute the ASIM function query. If you have completed the previous lab exercises, you should see results and no error messages.
 
 ## Proceed to Exercise 9
