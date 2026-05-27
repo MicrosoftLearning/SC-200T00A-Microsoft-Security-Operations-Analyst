@@ -3,7 +3,7 @@ lab:
   title: Exercise 6 - Create Detections
   module: Learning Path 8 - Create detections and perform investigations using Microsoft Sentinel
   description: In this task, you will create a detection for the first attack of the previous exercise.
-  duration: 30 minutes
+  duration: 45 minutes
   level: 300
   islab: true
   primarytopics:
@@ -21,7 +21,7 @@ You are a Security Operations Analyst working at a company that implemented Micr
 
 Analytics rules search for specific events or sets of events across your environment, alert you when certain event thresholds or conditions are reached, generate incidents for your SOC to triage and investigate, and respond to threats with automated tracking and reMediation processes.
 
->**Important:** The lab exercises for Learning Path #9 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
+>**Important:** The lab exercises for Learning Path #8 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
 
 ### Estimated time to complete this lab: 45 minutes
 
@@ -31,13 +31,11 @@ Analytics rules search for specific events or sets of events across your environ
 
 In this task, you will create a detection for the first attack of the previous exercise.
 
->**Note:** Microsoft Sentinel has been predeployed in your Azure subscription with the name **defenderWorkspace**, and the required *Content Hub* solutions have been installed.
+>**Note:** Microsoft Sentinel has been predeployed in your Azure subscription with the name **defenderWorkspace**, and the required *Content hub* solutions have been installed.
 
-1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
+1. Sign in to **WIN1** virtual machine as Admin using the provided credentials.
 
-1. Open the Microsoft Edge browser.
-
-1. In the Edge browser, navigate to Defender XDR at `https://security.microsoft.com`.
+1. Open **Microsoft Edge** and navigate to **Microsoft Defender XDR** at `https://security.microsoft.com`.
 
 1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
@@ -104,14 +102,14 @@ In this task, you will create a detection for the first attack of the previous e
 
 1. Leave the rest of the options with the defaults. Select the **Next** button.
 
-1. On the *Alert settings* page, in the *Alert details* section, enter the following:
+1. On the **Alert settings** page, in the **Alert details** section, enter the following:
     
     |Setting|Value|
     |---|---|
     |Alert title|**Alert from {{Computer}}**|
     |Description|**Alert from {{Process}} at {{TimeGenerated}}**|
 
-1. In the *Custom details* section, enter a key-value pair as follows:
+1. In the **Custom details** section, enter a key-value pair as follows:
 
     |Key|Parameter|
     |:----|:----|
@@ -127,7 +125,7 @@ In this task, you will create a detection for the first attack of the previous e
 
     <!--- 1. For the *Incident settings* tab, leave the default values and select **Next: Automated response >** button. --->
 
-1. On the *Automated actions* page under *Remediation actions to take*, expand the *Devices* section and select the following:`
+1. On the **Automated actions** page under *Remediation actions to take*, expand the **Devices** section and select the following:`
 
     - **Collect investigation package**
     - **Initialize investigation**
@@ -135,9 +133,9 @@ In this task, you will create a detection for the first attack of the previous e
 
 1. Select **Next**.
 
-1. On the *Review and create* page, review the detection rule settings and select the **Submit** button to create the new Custom detection rule.
+1. On the **Review and create** page, review the detection rule settings and select the **Submit** button to create the new Custom detection rule.
 
-1. You should see that the rule was saved successfully, and be back in *Advanced hunting* query page.
+1. You should see that the rule was saved successfully, and be back in **Advanced hunting** query page.
 
      <!--- 1. Use the settings in the table to configure the automation rule.
 
@@ -194,8 +192,6 @@ In this task, you will create a detection for the second attack of the previous 
         | project Acct1 = TargetSid, MachId1 = SourceComputerId, UserName1 = TargetUserName) on $left.MachId == $right.MachId1, $left.Acct == $right.Acct1
     ```
 
-       <!--- ![Screenshot](../Media/SC200_sysmon_attack3.png)--->
-
 1. Extend the row to show the resulting columns, in the last one, we see the name of the added user under the *UserName1* column we *project* within the KQL query. It is important to help the Security Operations Analyst by providing as much context about the alert as you can. This includes projecting Entities for use in the investigation graph. **Run** the following query:
 
     ```KQL
@@ -218,18 +214,19 @@ In this task, you will create a detection for the second attack of the previous 
 
 1. Select the **Create analytics rule instead** link at the upper right of the page.
 
-1. This starts the *Analytics rule wizard*. On the *General* page type:
+1. This starts the *Analytics rule wizard*. On the **General** page type:
 
     |Setting|Value|
     |---|---|
     |Name|**SecurityEvent Local Administrators User Add**|
     |Description|**User added to Local Administrators group**|
-    |MITRE ATT&CK|**Privilege Escalation**|
     |Severity|**High**|
+    |MITRE ATT&CK|**Privilege Escalation**|
+   
 
 1. Select **Next: Set rule logic >** button.
 
-1. On the *Set rule logic* page, the *Rule query* should be populated already with your KQL query.
+1. On the **Set rule logic** page, the *Rule query* should be populated already with your KQL query.
 
 1.  Under *Alert enhancement - Entity mapping*, select **+ Add new entity**, and use the following settings:
 
@@ -251,9 +248,9 @@ In this task, you will create a detection for the second attack of the previous 
 
 1. Leave the rest of the options with the defaults. Select **Next: Incident settings>** button.
 
-1. For the *Incident settings* tab, leave the default values and select **Next: Automated response >** button.
+1. For the **Incident settings** tab, leave the default values and select **Next: Automated response >** button.
 
-1. On the *Automated response* tab under *Automation rules*, select **Add new**.
+1. On the **Automated response** tab under *Automation rules*, select **Add new**.
 
 1. Use the settings in the table to configure the automation rule.
 
@@ -270,6 +267,6 @@ In this task, you will create a detection for the second attack of the previous 
 
 1. Select the **Next: Review and create >** button.
   
-1. On the *Review and create* tab, select the **Create** button to create the new Scheduled Analytics rule.
+1. On the **Review and create** tab, select the **Save** button to save the new Scheduled Analytics rule.
 
 ## Proceed to Exercise 7
