@@ -110,21 +110,23 @@ In this task, you create a watchlist in Microsoft Sentinel.
     |Description|**High Value Hosts**|
     |Watchlist alias|**HighValueHosts**|
 
-1. Select, **Next: Source >**.
+    >**Note:** As this is a shared environment, you may want to add your initials to the watchlist name and alias to avoid conflicts.
 
-1. Select **Browse for files** under *Upload file* and browse for the *HighValue.csv* file you created.
+2. Select, **Next: Source >**.
 
-1. In the *SearchKey field,* select **Hostname**.
+3. Select **Browse for files** under *Upload file* and browse for the *HighValue.csv* file you created.
 
-1. Select **Next: Review and Create >**.
+4. In the *SearchKey field,* select **Hostname**.
 
-1. Review the settings you entered and select **Create**.
+5. Select **Next: Review and Create >**.
 
-1. The screen returns to the Watchlist page.
+6. Review the settings you entered and select **Create**.
 
-1. Select **Refresh** from the menu to see the new watchlist.
+7. The screen returns to the Watchlist page.
 
-1. Select the *HighValueHosts* watchlist and on the right pane, select **View in logs**.
+8. Select **Refresh** from the menu to see the new watchlist.
+
+9. Select the *HighValueHosts* watchlist and on the right pane, select **View in logs**.
 
     >**Important:** It could take up to ten minutes for the watchlist to appear. **Please continue to with the following task and run this command on the next lab**.
 
