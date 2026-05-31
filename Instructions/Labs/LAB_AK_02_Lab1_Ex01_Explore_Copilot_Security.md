@@ -31,7 +31,7 @@ In this interactive guide, which takes approximately 10 minutes to complete, you
 
 Select the image below to get started.
 
-[![Thumbnail for the Investigate security incidents in Defender XDR interactive guide.](../media/investigate-security-incidents-thumbnail.png)](https://microsoftlearning.github.io/click-throughs/docs/IG/interactive-guide-investigate-security-incidents-in-microsoft-defender-web/story.html?azure-portal=true)
+[![Thumbnail for the Investigate security incidents in Defender XDR interactive guide.](../Media/investigate-security-incidents-thumbnail.png)](https://microsoftlearning.github.io/click-throughs/docs/IG/interactive-guide-investigate-security-incidents-in-microsoft-defender-web/story.html?azure-portal=true)
 
 ## Analyze artifacts and pivot to advanced investigation
 
@@ -41,7 +41,7 @@ In this interactive guide, which guide takes approximately 10 minutes to complet
 
 Select the image below to get started.
 
-[![Thumbnail for the Analyze artifacts and investigations in Defender XDR interactive guide.](../media/analyze-artifacts-thumbnail.png)](https://microsoftlearning.github.io/click-throughs/docs/IG/interactive-guide-analyze-artifacts-investigations-in-defender-web/story.html?azure-portal=true)
+[![Thumbnail for the Analyze artifacts and investigations in Defender XDR interactive guide.](../Media/analyze-artifacts-thumbnail.png)](https://microsoftlearning.github.io/click-throughs/docs/IG/interactive-guide-analyze-artifacts-investigations-in-defender-web/story.html?azure-portal=true)
 
 
 
