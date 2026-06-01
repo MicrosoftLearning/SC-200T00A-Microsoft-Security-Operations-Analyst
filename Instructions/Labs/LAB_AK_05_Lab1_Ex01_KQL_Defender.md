@@ -73,7 +73,7 @@ In this task, you'll build basic KQL statements.
     search "Computer"
     ```
 
-    >**Note:** Using the *Search* operator without specific tables or qualifying clauses is less efficient than table-specific and column-specific text filtering.
+    >**Note:** Using the *Search* operator without specific tables or qualifying clauses is less efficient than table-specific and column-specific text filtering. If you receive an error message that states, "An unexpected error occurred during query execution.", select the **View full query details** link for more information.
 
 1. The following statement demonstrates **search** across tables listed within the **in** clause. In the Query Window, enter the following statement and select **Run**:
 
