@@ -25,13 +25,11 @@ You are a Security Operations Analyst working at a company that implemented Micr
 
 In this task, you will enable Entity behavior analytics in Microsoft Sentinel.
 
->**Note:** Microsoft Sentinel has been predeployed in your Azure subscription with the name **sentinelworkspace-01**, and the required *Content Hub* solutions have been installed.
+>**Note:** Microsoft Sentinel has been predeployed in your Azure subscription with the name **sentinelworkspace-01**, and the required *Content hub* solutions have been installed.
 
-1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
+1. Sign in to **WIN1** virtual machine as Admin using the provided credentials.
 
-1. Open the Microsoft Edge browser.
-
-1. In the Edge browser, navigate to Defender XDR at `https://security.microsoft.com`.
+1. Open **Microsoft Edge** browser and navigate to **Microsoft Defender XDR** at `https://security.microsoft.com`.
 
 1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
@@ -59,9 +57,9 @@ In this task, you will enable Entity behavior analytics in Microsoft Sentinel.
 
 In this task, you will create an Azure DevOps repository.
 
-1. Open another tab in the browser and navigate to `https://aexprodcus1.vsaex.visualstudio.com/me?mkt=en-US>`.
+1. Open another tab in the browser and navigate to `https://aexprodcus1.vsaex.visualstudio.com/me?mkt=en-US`.
 
-1. After verifying your account, on the *We need a few more details* page, select **Continue**.
+1. After verifying your account, on the **We need a few more details** page, select **Continue**.
 
 1. You should automatically be redirected to your student profile page, and see the **My Sentinel Content-studentnumber** project listed under the *dev.azure.com/ADOCourseOrg01* organization.
 
@@ -71,7 +69,7 @@ In this task, you will create an Azure DevOps repository.
 
 1. At the bottom of the page in the area *Initialize main branch with a README or gitignore*, select **Initialize**.
 
-1. The page should show the Files for the Repo.  the only file is README.md.
+1. The page should show the Files for the Repo. The only file is README.md.
 
 1. On the Files (right side of the page) pane, Contents tab, the toolbar include options *Set up build*, *Clone*, and three vertical dots (*More options*). Select the three vertical dots to show *More options*.
 
@@ -85,7 +83,7 @@ In this task, you will create an Azure DevOps repository.
 
 1. Select **Organization settings** from the bottom left of the page.
 
-1. Select **Policies** under the *Security* area of the left blade.
+1. Select **Policies** under the **Security** area of the left blade.
 
 1. Verify that the *Third-party application access via OAuth* under the *Application connection policies* area is set to **On**.
 
@@ -93,7 +91,7 @@ In this task, you will create an Azure DevOps repository.
 
 In this task, you will connect Microsoft Sentinel to the Azure DevOps repository you created in the previous task and import the content.
 
-1. In Microsoft Sentinel, select **Repositories** in the *Content Management* section.
+1. In Microsoft Sentinel, select **Repositories** in the **Content Management** section.
 
 1. Select **+ Add new** button from the *Continuous deployment* toolbar.
 
@@ -117,9 +115,9 @@ In this task, you will connect Microsoft Sentinel to the Azure DevOps repository
 
 1. Then select **Create**.
 
-1. On the *Repositories* page, select **Refresh**. Wait until *Last deployment status* is *Succeeded*.  
+1. On the **Repositories** page, select **Refresh**. Wait until *Last deployment status* is *Succeeded*.  
 
-1. Select the *My Content* repository and in the *fly-out* window, review the *Content types* and *Last deployment status*.
+1. Select the **My Content** repository and in the **fly-out** window, review the *Content types* and *Last deployment status*.
 
 1. Select the **Delete** button from the *Continuous deployment* toolbar.
 
