@@ -215,7 +215,7 @@ In this task, you'll create a hunting query, and create a Livestream.
 
    >**Note:** If you receive the message, "security.microsoft.com wants to.. See text and images copied to the clipboard", select **Allow**.
 
-    ```Kusto
+    ```KQL
     let lookback = 2d; 
     SecurityEvent
     | where TimeGenerated >= ago(lookback) 
