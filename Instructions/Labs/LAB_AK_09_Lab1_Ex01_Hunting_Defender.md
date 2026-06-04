@@ -209,11 +209,9 @@ In this task, you'll create a hunting query, and create a Livestream.
 
 1. Expand the **Hunting** section and select **Advanced hunting**.
 
+    >**Important:** Please paste any KQL queries first in Notepad and then copy from there to the *New Query 1* Log window to avoid any errors.
+
 1. Enter the following KQL query in the *New Query* space:
-
-   >**Important:** Please paste any KQL queries first in Notepad and then copy from there to the *New Query 1* Log window to avoid any errors.
-
-   >**Note:** If you receive the message, "security.microsoft.com wants to.. See text and images copied to the clipboard", select **Allow**.
 
     ```KQL
     let lookback = 2d; 
@@ -223,6 +221,8 @@ In this task, you'll create a hunting query, and create a Livestream.
     | extend PwshParam = trim(@"[^/\\]*powershell(.exe)+" , CommandLine) 
     | project TimeGenerated, Computer, SubjectUserName, PwshParam    
     ```
+
+    >**Note:** If you receive the message, "security.microsoft.com wants to.. See text and images copied to the clipboard", select **Allow**.
 
 1. Select **Run query** from the command bar.
 
