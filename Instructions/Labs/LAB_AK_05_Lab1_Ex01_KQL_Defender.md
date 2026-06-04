@@ -382,7 +382,21 @@ In this task, you'll work with structured and unstructured string fields with KQ
     (where AuthDetails.authenticationMethod == "Password")
     ```
 
-1. A **function** is a log query that can be used in other log queries with the saved name as a command. To create a **function**, after running your query, select the **Save** button and then select **Save As function** from the drop-down. Enter the name you want (for example: *PrivLogins*) in the **Function name** box and enter a **Legacy category** (for example: *General*) and select **Save**. The function is available in KQL by using the function's alias:
+A **function** is a log query that can be used in other log queries with the saved name as a command. 
+
+1. To create a **function**, after running your query, select the **Save** button and then select **Save As function** from the drop-down. 
+
+1. Enter the name you want (for example: *PrivLogins*) in the **Function name** box.
+
+    >**Note:** We recommend using a name based on your *student username* for your function to make it easier to identify and use in other queries.
+
+1. In the **Location** field select *My functions* or *Shared functions* from the dropdown menu. You can also create a new folder by selecting the **New folder** link.
+
+1. Select **Save**. 
+
+1. Expand the *side panel* if collapsed, and use the drop down to select *Functions* and then select the folder under *My functions* or *Shared functions* where you saved your function. You should see the function you just created.
+
+1. The function is available in KQL by using the function's alias:
 
     ```KQL
     PrivLogins  
