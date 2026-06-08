@@ -7,7 +7,7 @@ lab:
   level: 200
   islab: true
   primarytopics:
-    - Azure
+    - Microsoft Defender
     - Microsoft Sentinel
     - Windows
 ---

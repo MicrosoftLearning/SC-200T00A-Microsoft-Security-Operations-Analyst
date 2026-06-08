@@ -9,6 +9,7 @@ lab:
   primarytopics:
     - Azure
     - Azure Arc
+    - Microsoft Defender
     - Microsoft Sentinel
 ---
 
