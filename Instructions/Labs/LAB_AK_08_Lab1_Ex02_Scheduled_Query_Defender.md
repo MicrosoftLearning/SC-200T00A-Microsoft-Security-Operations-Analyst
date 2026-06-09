@@ -136,7 +136,9 @@ In this task, you create a *Microsoft Sentinel analytics scheduled query rule*.
 
 1. For the *Actions*, select **Assign owner**.
 
-1. Then select **Assign to me**.
+1. Then select your **Student ID**, or assignd username from the list. It should be the first one.
+
+1. Scroll down to *Order* and enter **1**.
 
 1. Select **Apply**
 
