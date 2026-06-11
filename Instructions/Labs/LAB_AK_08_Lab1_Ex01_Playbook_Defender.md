@@ -134,8 +134,6 @@ In this task, you update the new playbook you created with the proper connection
 
 1. Select **Apply** at the bottom.
 
-1. Select the **X** on the *Create new automation rule* window to close it.
-
 You have now created a playbook and an automation rule in Microsoft Sentinel.
 
 ## Proceed to Exercise 2
