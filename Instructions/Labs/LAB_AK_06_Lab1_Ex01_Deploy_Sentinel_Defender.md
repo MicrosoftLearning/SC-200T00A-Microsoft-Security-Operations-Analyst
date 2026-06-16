@@ -112,6 +112,8 @@ In this task, you create an indicator in Microsoft Sentinel.
 
 1. For Domain, enter a domain name, for example type *contoso.com*.
 
+    >**Important:** If there are existing indicators for the same domain, you should append your initials or a unique identifier such as your student ID to avoid conflicts.
+
 1. In the **Name** field, enter the same value used for the Domain.
 
 1. In the *Indicator types*, select **malicious-activity**.

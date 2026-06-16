@@ -132,7 +132,7 @@ In this task, you create a *Microsoft Sentinel analytics scheduled query rule*.
 
 1. On the *Automated response* tab under *Automation rules*, select **+ Add new**.
 
-1. For the *Automation rule name*, enter **Tier 2**.
+1. For the *Automation rule name*, enter **Tier 2** and append your **Student ID**. This will help you identify the incident that is created.
 
 1. For the *Actions*, select **Assign owner**.
 
