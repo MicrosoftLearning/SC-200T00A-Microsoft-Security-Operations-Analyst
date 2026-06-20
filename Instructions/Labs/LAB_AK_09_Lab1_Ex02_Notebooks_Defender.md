@@ -1,7 +1,7 @@
 ---
 lab:
   title: Exercise 2 - Threat Hunting using Notebooks with Microsoft Sentinel
-  module: Learning Path 10 - Perform threat hunting in Microsoft Sentinel
+  module: Learning Path 9 - Perform threat hunting in Microsoft Sentinel
   description: In this task, you'll explore using notebooks in Microsoft Sentinel.
   duration: 40 minutes
   level: 300
