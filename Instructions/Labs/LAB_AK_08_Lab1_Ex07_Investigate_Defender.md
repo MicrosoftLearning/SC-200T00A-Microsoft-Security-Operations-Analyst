@@ -20,7 +20,7 @@ You are a Security Operations Analyst working at a company that implemented Micr
 
 An incident can include multiple alerts. It is an aggregation of all the relevant evidence for a specific investigation. The properties related to the alerts, such as severity and status, are set at the incident level. After you let Microsoft Sentinel know what kinds of threats you are looking for and how to find them, you can monitor detected threats by investigating incidents.
 
->**Important:** The lab exercises for Learning Path 8 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
+>**Important:** The lab exercises for Learning Path #8 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
 
 ### Estimated time to complete this lab: 30 minutes
 
@@ -28,13 +28,11 @@ An incident can include multiple alerts. It is an aggregation of all the relevan
 
 In this task, you will investigate an incident.
 
->**Note:** Microsoft Sentinel has been predeployed in your Azure subscription with the name **sentinelworkspace-01**, and the required *Content Hub* solutions have been installed.
+>**Note:** Microsoft Sentinel has been predeployed in your Azure subscription with the name **Sentinelworkspace-01**, and the required *Content hub* solutions have been installed.
 
-1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
+1. Sign in to **WIN1** virtual machine as Admin using the provided credentials.
 
-1. Open the Microsoft Edge browser.
-
-1. In the Edge browser, navigate to Defender XDR at `https://security.microsoft.com`.
+1. Open **Microsoft Edge** and navigate to **Microsoft Defender XDR** at `https://security.microsoft.com`.
 
 1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
@@ -56,43 +54,46 @@ In this task, you will investigate an incident.
 
 1. Select **Manage incident** from the toolbar. It will have a *pencil* icon.
 
-1. On the *Manage incident* page for the incident, very the *Status* is *Active*. If not, change the Status to **Active** and then select **Save**.
-
-1. In the *Incident tags* field, type **RegKey** and select **RegKey (Create new)**.
+1. On the **Manage incident** page, in the *Incident tags* field, type **RegKey** and select **RegKey (Create new)**.
 
 1. In the *Assign to* field, select the box and then select **Assign to me** from the dropdown.
 
-1. Select the **Save** button and the page closes.
+1. Verify the *Status* is set to **Active**. If not, change the status to **Active**.
+
+1. Select **Save** to apply the changes and close the page.
 
 1. Review the **Attack story** tab. Select the **Run playbook** from the toolbar. **Hint**: You might need to select the ellipsis icon **(...)** to see it.
 
-1. You should see the *Defender_XDR_Ransomware_Playbook_SecOps_Tasks* playbook. This option helps you to run playbooks manually.
+1. You will see the *PostMessageTeams-OnIncident* playbook. This option helps you to run playbooks manually.
+<!--- 1. You should see the *Defender_XDR_Ransomware_Playbook_SecOps_Tasks* playbook. This option helps you to run playbooks manually.--->
 
 1. Close the *Run playbook on incident* blade by selecting the **X** icon in the top right.
 
-1. Review the **Assets** window. At least the *Host* entity that we mapped within the KQL query from the previous exercise should appear. **Hint:** If no entities are shown, refresh the page.
+1. Review the **Entities** window. At least the *Host* entity that we mapped within the KQL query from the previous exercise should appear. **Hint:** If no entities are shown, refresh the page.
 
-1. Select the new **Tasks** button from the command bar.
+1. Select the ellipsis icon **(...)** from the toolbar, and then select **Tasks**.
 
-1. Select **+ Add task**, type **Review who owns the machine** in the Title box and select **Save**.
+1. Select **+ Add task**, type **Review who owns the machine** in the *Name* field and select **Save**.
 
-1. Close the *Incident tasks* page by selecting the **x** icon in the top right.
+1. Close the **Incident tasks** blade by selecting the **x** icon in the top right.
 
-1. Select the new **Activities** button from the command bar.
+1. Select the new **Activity Log** button from the command bar.
 
 1. Review the actions you have taken during this exercise.
 
-1. Close the *Activities* page by selecting the **x** icon in the top right.
+1. Close the **Incident activity log** blade by selecting the **x** icon in the top right.
 
-1. In the *Attack story* tab, collapse the *Detections & Categories* section by selecting the **<** to have more space for the *Incident graph*.
+1. From the almost hidden left blade, select the user icon named **Unassigned**. The new incident experience allows quick changes from here.
+
+1. Select **Assign to me** and then scroll down to select **Apply** to save the changes.
+
+1. Expand the left blade by selecting the **>>** icon. and then select the **Investigate** button.
 
     >**Hint:** If the icons are too small for your screen, select **(+)** to magnify them.
 
-1. Select the *WINServer* entity icon and in the pop-up window wait for *Go hunt* to load. When loaded, expand the side bar.
+1. **Hover** the WINServer entity icon and wait for new *exploration queries* to be shown. It looks that *Related Alerts* has more data on it. Select the name of the exploration query **Related Alerts** to bring them to the investigation graph or select **Events >** to investigate them with a KQL query.
 
-1. It looks that *Related Alerts* has more data on it. Select **Related Alerts** to bring them to the Incident graph or select **Events >** to investigate them with a KQL query.
-
-1. Close the query window by selecting the **X** icon at the top right to go back to the *Investigation* page.
+1. Close the query window by selecting the **X** icon at the top right to go back to the **Investigation** page.
 
 1. Now select the **WINServer** entity, a window on the right opens for more detailed information. Review the **Info** page.
 
@@ -104,6 +105,6 @@ In this task, you will investigate an incident.
 
 1. Back in the incident page, in the left pane select **Active Status** and select **Closed**. 
 
-1. In the *Select classification* drop-down review the different options. After that, select **True positive - suspicious activity** and then select **Apply**.
+1. In the **Select classification** drop-down review the different options. After that, select **True positive - suspicious activity** and then select **Apply**.
 
 ## Proceed to Exercise 8
