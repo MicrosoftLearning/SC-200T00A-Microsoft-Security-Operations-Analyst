@@ -35,7 +35,7 @@ In this interactive guide, which takes approximately 10 minutes to complete, you
 
 Select the image below to get started.
 
-[![Thumbnail for Connecting Microsoft Sentinel to Defender XDR.](../media/interactive-guide-sentinel-new.png)](https://microsoftlearning.github.io/click-throughs/docs/IG/interactive_guide_connect_microsoft_sentinel_with_microsoft_defender_xdr_web/story.html?azure-portal=true)
+[![Thumbnail for Connecting Microsoft Sentinel to Defender XDR.](../Media/interactive-guide-sentinel-new.png)](https://microsoftlearning.github.io/click-throughs/docs/IG/interactive_guide_connect_microsoft_sentinel_with_microsoft_defender_xdr_web/story.html?azure-portal=true)
 
 ### Task 2: Connect an existing Microsoft Sentinel workspace to Defender XDR
 
@@ -43,7 +43,7 @@ In this Interactive Guide, which takes approximately 10 minutes to complete, you
 
 Select the image below to get started.
 
-[![Thumbnail for Connecting an existing Microsoft Sentinel to Defender XDR.](../media/interactive-guide-sentinel-existing.png)](https://microsoftlearning.github.io/click-throughs/docs/IG/interactive_guide_connect_microsoft_sentinel_to_microsoft_defender_xdr_existing/story.html?azure-portal=true)
+[![Thumbnail for Connecting an existing Microsoft Sentinel to Defender XDR.](../Media/interactive-guide-sentinel-existing.png)](https://microsoftlearning.github.io/click-throughs/docs/IG/interactive_guide_connect_microsoft_sentinel_to_microsoft_defender_xdr_existing/story.html?azure-portal=true)
 
 You have completed the simulation exercises to connect Microsoft Sentinel to Microsoft Defender XDR. You can now explore the Microsoft Sentinel capabilities in the Microsoft Defender portal.
 
