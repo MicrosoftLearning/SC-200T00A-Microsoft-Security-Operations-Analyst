@@ -22,7 +22,11 @@ You're a Security Operations Analyst working at a company that implemented Micro
 
 ### Optional task - Connect Microsoft Sentinel to Microsoft Defender XDR
 
-To understand how Microsoft Sentinel is onboarded to Microsoft Defender XDR, you can perform the instructions for this simulated exercise - **[Connect Microsoft Sentinel to Defender XDR](https://learn.microsoft.com/training/modules/integrate-microsoft-defender-xdr-with-microsoft-sentinel/simulation-exercise-deploy-sentinel-to-defender)**.
+In this interactive guide, which takes approximately 10 minutes to complete, you onboard a new Microsoft Sentinel workspace to Defender XDR.
+
+Select the image below to get started.
+
+[![Thumbnail for Connecting Microsoft Sentinel to Defender XDR.](../media/interactive-guide-sentinel-new.png)](https://microsoftlearning.github.io/click-throughs/docs/IG/interactive_guide_connect_microsoft_sentinel_with_microsoft_defender_xdr_web/story.html?azure-portal=true)
 
 ### Task 1: Create a Watchlist
 
