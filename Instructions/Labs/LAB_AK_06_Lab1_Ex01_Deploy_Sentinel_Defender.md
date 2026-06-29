@@ -26,7 +26,7 @@ In this interactive guide, which takes approximately 10 minutes to complete, you
 
 Select the image below to get started.
 
-[![Thumbnail for Connecting Microsoft Sentinel to Defender XDR.](../media/interactive-guide-sentinel-new.png)](https://microsoftlearning.github.io/click-throughs/docs/IG/interactive_guide_connect_microsoft_sentinel_with_microsoft_defender_xdr_web/story.html?azure-portal=true)
+[![Thumbnail for Connecting Microsoft Sentinel to Defender XDR.](../Media/interactive-guide-sentinel-new.png)](https://microsoftlearning.github.io/click-throughs/docs/IG/interactive_guide_connect_microsoft_sentinel_with_microsoft_defender_xdr_web/story.html?azure-portal=true)
 
 ### Task 1: Create a Watchlist
 
