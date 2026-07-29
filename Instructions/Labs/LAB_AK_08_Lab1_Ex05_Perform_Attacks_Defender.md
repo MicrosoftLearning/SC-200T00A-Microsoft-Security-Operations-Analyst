@@ -16,7 +16,7 @@ lab:
 
 You are going to simulate the attacks that you will later use to detect and investigate in Microsoft Sentinel.
 
->**Important:** The lab exercises for Learning Path #9 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
+>**Important:** The lab exercises for Learning Path #8 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
 
 ### Estimated time to complete this lab: 30 minutes
 
@@ -25,14 +25,14 @@ You are going to simulate the attacks that you will later use to detect and inve
 >**Important:** The next steps are done on a different machine than the one you were previously working. Look for the Virtual Machine name in the references tab.
 
 In this task, you will perform attacks on the host connected with Azure Arc and that has the Azure Monitor Agent configured.
-
-1. Login to *WINServer* virtual machine as Admin with the password: **Pa55w.rd**.  
+ 
+1. Sign in to **WINServer** virtual machine as Admin using the provided credentials.
 
     >**Important:** The lab *SAVE* functionality can cause WINServer to become disconnected from Azure Arc. A reboot will solve the issue.  
 
 1. Select **Start** in Windows. Then **Power**, next **Restart**.
 
-1. Follow the instructions to log into WINServer again.
+1. Follow the instructions to log into **WINServer** again.
 
 1. In the search of the task bar, enter *Command*. Command Prompt will be displayed in the search results. Right-click on the Command Prompt and select **Run as Administrator**. Select **Yes** in the User Account Control window that appears to allow the app to run.
 

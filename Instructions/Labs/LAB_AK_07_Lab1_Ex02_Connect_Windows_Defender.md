@@ -7,7 +7,7 @@ lab:
   level: 200
   islab: true
   primarytopics:
-    - Azure
+    - Microsoft Defender
     - Microsoft Sentinel
     - Windows
 ---
@@ -28,7 +28,9 @@ You're a Security Operations Analyst working at a company that implemented Micro
 
 In this task, you create a Windows virtual machine in Azure.
 
-1. Login to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.  
+>**Note:** Your lab hosting provider may provide alternate instructions for creating an Azure virtual machine. If so, please follow those instructions instead of the ones below.
+
+1. Sign in to **WIN1** virtual machine as Admin using the provided credentials.
 
 1. In the Microsoft Edge browser, navigate to the Azure portal at `https://portal.azure.com`.
 
@@ -52,31 +54,33 @@ In this task, you create a Windows virtual machine in Azure.
 
     >**Note:** The next two steps will require you to create Azure resources with unique names. We suggest using your initials and a random number combination to ensure uniqueness, for example, *RG-XXXXX123* for the resource group and *AZWIN-XXXXX123* for the virtual machine.
 
-1. Select **Create new** for *Resource group*, enter RG-*XXXXX123* as Name and, select **OK**.
+2. Select the appropriate subscription from the *Subscription* drop-down list.
+
+3. Select **Create new** for *Resource group*, enter RG-*XXXXX123* as Name and, select **OK**.
 
     >**Note:** This will be a new resource group for tracking purposes. 
 
-1. In *Virtual machine name*, enter AZWIN-*XXXXX123*.
+4. In *Virtual machine name*, enter AZWIN-*XXXXX123*.
 
-1. Leave **(US) East US** as the default value for *Region*.
+5. Leave **(US) East US** as the default value for *Region*.
 
-1. Scroll down and review the *Image* for the virtual machine. If it appears empty, select **Windows 11 Enterprise, version 24H2**.
+6. Scroll down and review the *Image* for the virtual machine. If it appears empty, select **Windows 11 Enterprise, version 24H2**.
 
-1. Review the *Size* for the virtual machine. If it appears empty, select **See all sizes**, choose the first (D-series) VM size listed and select **Select**.
+7. Review the *Size* for the virtual machine. If it appears empty, select **See all sizes**, choose the first (D-series) VM size listed and select **Select**.
 
     >**Note:** If you see the message: *This image is not supported for Azure Automanage. To disable this feature,navigate to the Management tab. Otherwise, select a supported image.* Go to the Management tab and disable "Automanage". The creation process will succeed afterwards.
 
-1. Scroll down and enter a *Username* of your choosing. **Hint:** Avoid reserved words like admin or root and consider using your *Student* username, for example, *Student-xxxxxxx*.
+8. Scroll down and enter a *Username* of your choosing. **Hint:** Avoid reserved words like admin or root and consider using your *Student* username, for example, *Student-xxxxxxx*.
 
-1. Enter a *Password* of your choosing. **Hint:** It might be easier to reuse your LabUser password. It can be found in the resources tab. You may need to enter it twice.
+9. Enter a *Password* of your choosing. **Hint:** It might be easier to reuse your LabUser password. It can be found in the resources tab. You may need to enter it twice.
 
-1. Scroll down to the bottom of the page and select the checkbox below *Licensing* to confirm you have the eligible license.
+10. Scroll down to the bottom of the page and select the checkbox below *Licensing* to confirm you have the eligible license.
 
-1. Select **Review + create** and wait until the validation is passed.
+11. Select **Review + create** and wait until the validation is passed.
 
     >**Note:** If there is a *Networking* validation failure, select that tab, review its contents and then select **Review + create** again.
 
-1. Select **Create**. Wait for the Resource to be created, this may take a few minutes.
+12. Select **Create**. Wait for the Resource to be created, this may take a few minutes.
 
 ### Task 2: Connect an on-premises Server to Azure
 
@@ -88,7 +92,7 @@ In this task, you connect an on-premises server to your Azure subscription. Azur
 
     >**Note:** As described above, Azure Arc has been pre-installed on the **WINServer** machine. You will now connect this machine to your Azure subscription.
 
-1. On the *WINServer* machine, select the *search* icon and type **cmd**.
+1. On the **WINServer** machine, select the **search** icon and type **cmd**.
 
 1. In search results right click *Command Prompt* and select **Run as administrator**.
 
@@ -104,7 +108,7 @@ In this task, you connect an on-premises server to your Azure subscription. Azur
 
     >**Note**: If you see the *How do you want to open this?* browser selection window, select **Microsoft Edge**.
 
-1. In the *Sign in* dialog box, enter your **Tenant Email** and **Tenant Password** provided by your lab hosting provider and select **Sign in**. Wait for the *Authentication complete* message, close the browser tab and return to the *Command Prompt* window.
+1. In the **Sign in** dialog box, enter your **Tenant Email** and **Tenant Password** provided by your lab hosting provider and select **Sign in**. Wait for the *Authentication complete* message, close the browser tab and return to the *Command Prompt* window.
 
 1. When the commands complete running, leave the *Command Prompt* window open and type the following command to confirm that the connection was successful:
 
@@ -118,27 +122,27 @@ In this task, you connect an on-premises server to your Azure subscription. Azur
 
 In this task, you connect an Azure Windows virtual machine to Microsoft Sentinel.
 
->**Note:** Microsoft Sentinel has been predeployed in your Azure subscription with the name **sentinelworkspace-01**, and the required *Content Hub* solutions have been installed.
+>**Note:** Microsoft Sentinel has been predeployed in your Azure subscription with the name **sentinelworkspace-01**, and the required *Content hub* solutions have been installed.
 
-1. Login to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.  
+1. Sign in to **WIN1** virtual machine as Admin using the provided credentials.  
 
 1. If necessary, open the Microsoft Edge browser, and navigate to Defender XDR at `https://security.microsoft.com`, and sign in with the provided credentials.
 
 1. In the Microsoft Defender navigation menu, scroll down and expand the **Microsoft Sentinel** section.
 
-1. Expand the **Content management** section and select **Content Hub**.
+1. Expand the **Content management** section and select **Content hub**.
 
-1. In the *Content hub*, search for the **Windows Security Events** solution and select it from the list.
+1. In the **Content hub**, search for the **Windows Security Events** solution and select it from the list.
 
-1. On the *Windows Security Events* solution page select **Manage**.
+1. On the **Windows Security Events** solution page select **Manage**.
 
     >**Note:** The *Windows Security Events* solution installs both the *Windows Security Events via AMA* and the *Security Events via Legacy Agent* Data connectors. Plus 2 Workbooks, 20 Analytic Rules, and 43 Hunting Queries.
 
-1. Select the *Windows Security Events via AMA* Data connector, and select **Open connector page** on the connector information blade.
+1. Select the **Windows Security Events via AMA** Data connector, and select **Open connector page** on the connector information blade.
 
-1. On the *Setup* tab, scroll down to the *Configuration* section, and select the **+Create data collection rule** button.
+1. On the **Setup** tab, scroll down to the **Configuration** section, and select the **+Create data collection rule** button.
 
-1. Enter a unique name for the Rule Name, **Hint:** consider using your *Student* username number, for example, **AZWINXXXXXXXDCR**, then select **Next: Resources**.
+1. Enter a unique name for the *Rule Name*, **Hint:** consider using your *Student* username number, for example, **AZWINXXXXXXXDCR**, then select **Next: Resources**.
 
 1. Expand your *MOC Subscription* under *Scope* on the *Resources* tab.
 
@@ -162,7 +166,7 @@ In this task, you'll add an Azure Arc connected, non-Azure Windows virtual machi
 
 1. Make sure you are in the *Windows Security Events via AMA* data connector configuration in your Microsoft Sentinel workspace.
 
-1. In the *Configuration* section, edit the **AZWINXXXXXXXDCR** *data collection rule* by selecting the *pencil* icon.
+1. In the **Configuration** section, edit the **AZWINXXXXXXXDCR** *data collection rule* by selecting the *pencil* icon.
 
 1. Select **Next: Resources**, and expand your *MOC Subscription* under *Scope* on the *Resources* tab.
 
