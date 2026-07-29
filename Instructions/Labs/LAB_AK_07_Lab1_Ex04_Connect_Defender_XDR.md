@@ -47,6 +47,6 @@ Select the image below to get started.
 
 You have completed the simulation exercises to connect Microsoft Sentinel to Microsoft Defender XDR. You can now explore the Microsoft Sentinel capabilities in the Microsoft Defender portal.
 
->**Note:** Feel free to explore and compare the other Microsoft Sentinel capabilities, but as this is a simulation, your ability to explore Microsoft Sentinel in the Microsoft Defender portal is limited. In a real environment, you would be able to explore the full Microsoft Sentinel capabilities in the Microsoft Defender portal..
+>**Note:** Feel free to explore and compare the other Microsoft Sentinel capabilities, but as this is a simulation, your ability to explore Microsoft Sentinel in the Microsoft Defender portal is limited. In a real environment, you would be able to explore the full Microsoft Sentinel capabilities in the Microsoft Defender portal.
 
 ## You completed the lab - Please proceed to Learning Path 9 - Lab 1 - Exercise 1 - Modify a Microsoft Security rule
