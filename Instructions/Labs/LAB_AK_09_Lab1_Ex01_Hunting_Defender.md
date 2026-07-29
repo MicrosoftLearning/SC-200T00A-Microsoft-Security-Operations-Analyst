@@ -1,7 +1,7 @@
 ---
 lab:
-  title: 'Exercise 1 - Perform Threat Hunting with Microsoft Sentinel in Microsoft Defender XDR'
-  module: 'Learning Path 9 - Perform threat hunting in Microsoft Sentinel'
+    title: Exercise 1 - Perform Threat Hunting with Microsoft Sentinel in Microsoft Defender XDR
+  module: Learning Path 9 - Perform threat hunting in Microsoft Sentinel
   description: The log data created in the Learning Path 9 lab exercises will not be available in this lab without rerunning the following prerequisite tasks.
   duration: 60 minutes
   level: 300
@@ -223,6 +223,8 @@ In this task, you'll create a hunting query, and create a Livestream.
     | extend PwshParam = trim(@"[^/\\]*powershell(.exe)+" , CommandLine) 
     | project TimeGenerated, Computer, SubjectUserName, PwshParam    
     ```
+
+    >**Note:** If you receive the message, "security.microsoft.com wants to.. See text and images copied to the clipboard", select **Allow**.
 
 1. Select **Run query** from the command bar.
 
@@ -546,7 +548,7 @@ In this task, you'll create a Data lake KQL job to look for a C2 attack.
     - Go to **Microsoft Sentinel**.
     - Expand **Threat management**.
     - Choose **Hunting**.
-    - Select Select **add filter**.
+    - Select **add filter**.
     - Set the filter to tactics: persistence.
     - Add another filter.
     - Set the second filter to have techniques: T1098.
