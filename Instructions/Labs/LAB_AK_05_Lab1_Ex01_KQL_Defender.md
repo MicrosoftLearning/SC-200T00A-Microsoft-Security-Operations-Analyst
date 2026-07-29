@@ -67,7 +67,7 @@ In this task, you'll build basic KQL statements.
 
 1. For the remainder of the lab, change the *Time range* from the default **Last 24 hours** to **Last 7 days**, unless the time range is specified in the query.
 
-1. In the Query Window, enter the following statement and select **Run**:
+1. In the Query Window, enter the following statement and select **Run query**:
 
     ```KQL
     search "Computer"
@@ -75,15 +75,15 @@ In this task, you'll build basic KQL statements.
 
     >**Note:** Using the *Search* operator without specific tables or qualifying clauses is less efficient than table-specific and column-specific text filtering. If you receive an error message that states, "An unexpected error occurred during query execution.", select the **View full query details** link for more information.
 
-1. The following statement demonstrates **search** across tables listed within the **in** clause. In the Query Window, enter the following statement and select **Run**:
+1. The following statement demonstrates **search** across tables listed within the **in** clause. In the Query Window, enter the following statement and select **Run query**:
 
     ```KQL
     search in (SecurityEvent_CL,App*) "new"
     ```
 
-1. The following statements demonstrate the **where** operator, which filters on a specific predicate. In the Query Window, enter the following statement and select **Run**:
+1. The following statements demonstrate the **where** operator, which filters on a specific predicate. In the Query Window, enter the following statement and select **Run query**:
 
-    >**Important:** You should select **Run** after entering each query from the code blocks below.
+    >**Important:** You should select **Run query** after entering each query from the code blocks below.
 
     ```KQL
     SecurityEvent_CL  
@@ -110,7 +110,7 @@ In this task, you'll build basic KQL statements.
  
     ```
 
-1. The following statement demonstrates the use of the **let** statement to declare *variables*. In the Query Window, enter the following statement and select **Run**:
+1. The following statement demonstrates the use of the **let** statement to declare *variables*. In the Query Window, enter the following statement and select **Run query**:
 
     ```KQL
     let timeOffset = 1d;
@@ -120,7 +120,7 @@ In this task, you'll build basic KQL statements.
     | where EventID_s != discardEventID
     ```
 
-1. The following statement demonstrates the use of the **let** statement to declare a *dynamic list*. In the Query Window, enter the following statement and select **Run**:
+1. The following statement demonstrates the use of the **let** statement to declare a *dynamic list*. In the Query Window, enter the following statement and select **Run query**:
 
     ```KQL
     let suspiciousAccounts = datatable(account: string) [
@@ -129,10 +129,10 @@ In this task, you'll build basic KQL statements.
     ];
     SecurityEvent_CL
     | where TimeGenerated > ago(7d)
-    | where Account_s in (suspiciousAccounts)
+    | where Account_s in (suspiciousAccounts)
     ```
 
-1. The following statement demonstrates the use of the **let** statement to declare a *dynamic table*. In the Query Window, enter the following statement and select **Run**:
+1. The following statement demonstrates the use of the **let** statement to declare a *dynamic table*. In the Query Window, enter the following statement and select **Run query**:
 
     ```KQL
     let LowActivityAccounts =
@@ -146,7 +146,7 @@ In this task, you'll build basic KQL statements.
 
 In this task, you'll build KQL statements to aggregate data. **Summarize** groups the rows according to the **by** group columns, and calculates aggregations over each group.
 
-1. The following statement demonstrates the **count()** function, which returns a count of the group. In the Query Window enter the following statement and select **Run**:
+1. The following statement demonstrates the **count()** function, which returns a count of the group. In the Query Window enter the following statement and select **Run query**:
 
     ```KQL
     SecurityEvent_CL  
@@ -154,7 +154,7 @@ In this task, you'll build KQL statements to aggregate data. **Summarize** group
     | summarize count() by Computer
     ```
 
-1. The following statement demonstrates the **count()** function, but in this example, we name the column as *cnt*. In the Query Window, enter the following statement and select **Run**:
+1. The following statement demonstrates the **count()** function, but in this example, we name the column as *cnt*. In the Query Window, enter the following statement and select **Run query**:
 
     ```KQL
     SecurityEvent_CL  
@@ -162,27 +162,27 @@ In this task, you'll build KQL statements to aggregate data. **Summarize** group
     | summarize cnt=count() by AccountType_s, Computer
     ```
 
-1. The following statement demonstrates the **dcount()** function, which returns an approximate distinct count of the group elements. In the Query Window, enter the following statement and select **Run**:
+1. The following statement demonstrates the **dcount()** function, which returns an approximate distinct count of the group elements. In the Query Window, enter the following statement and select **Run query**:
 
     ```KQL
     SigninLogs_CL  
     | where TimeGenerated > ago(5d)
-    | summarize dcount(IPAddress)
+    | summarize dcount(IPAddress_s)
     ```
 
-1. The following statement is a rule to detect *User account is disabled* failures across multiple applications for the same account. In the Query Window, enter the following statement and select **Run**:
+1. The following statement is a rule to detect *User account is disabled* failures across multiple applications for the same account. In the Query Window, enter the following statement and select **Run query**:
 
     ```KQL
     let timeframe = 30d;
     let threshold = 1;
     SigninLogs_CL
     | where TimeGenerated >= ago(timeframe)
-    | where ResultDescription has "User account is disabled"
+    | where ResultDescription_s has "User account is disabled"
     | summarize applicationCount = dcount(AppDisplayName_s) by UserPrincipalName_s, IPAddress_s
     | where applicationCount >= threshold
     ```
 
-1. The following statement demonstrates the **arg_max()** function, which returns one or more expressions when the argument is maximized. The following statement returns the most current row from the SecurityEvent_CL table for the computer *VictimPC2*. The * in the arg_max function requests all columns for the row. In the Query Window, enter the following statement and select **Run**:
+1. The following statement demonstrates the **arg_max()** function, which returns one or more expressions when the argument is maximized. The following statement returns the most current row from the SecurityEvent_CL table for the computer *VictimPC2*. The * in the arg_max function requests all columns for the row. In the Query Window, enter the following statement and select **Run query**:
 
     ```KQL
     SecurityEvent_CL  
@@ -190,7 +190,7 @@ In this task, you'll build KQL statements to aggregate data. **Summarize** group
     | summarize arg_max(TimeGenerated,*) by Computer
     ```
 
-1. The following statement demonstrates the **arg_min()** function, which returns one or more expressions when the argument is minimized. In this statement, the oldest SecurityEvent_CL for the computer *VictimPC2* will be returned as the result set. In the Query Window, enter the following statement and select **Run**:
+1. The following statement demonstrates the **arg_min()** function, which returns one or more expressions when the argument is minimized. In this statement, the oldest SecurityEvent_CL for the computer *VictimPC2* will be returned as the result set. In the Query Window, enter the following statement and select **Run query**:
 
     ```KQL
     SecurityEvent_CL  
@@ -218,7 +218,7 @@ In this task, you'll build KQL statements to aggregate data. **Summarize** group
 
     >**Note:**  You can also review the "Total CPU" and "Data used for processed query" by selecting the "Query details" link on the lower right and compare the data between both statements.
 
-1. The following statement demonstrates the **make_list()** function, which returns a *list* of all the values within the group. This KQL query will first filter the EventID_s with the where operator. Next, for each Computer, the results are a JSON array of Accounts. The resulting JSON array will include duplicate accounts. In the Query Window, enter the following statement and select **Run**: 
+1. The following statement demonstrates the **make_list()** function, which returns a *list* of all the values within the group. This KQL query will first filter the EventID_s with the where operator. Next, for each Computer, the results are a JSON array of Accounts. The resulting JSON array will include duplicate accounts. In the Query Window, enter the following statement and select **Run query**: 
 
     ```KQL
     SecurityEvent_CL  
@@ -227,7 +227,7 @@ In this task, you'll build KQL statements to aggregate data. **Summarize** group
     | summarize make_list(Account_s) by Computer
     ```
 
-1. The following statement demonstrates the **make_set()** function, which returns a set of *distinct* values within the group. This KQL query will first filter the EventID_s with the where operator. Next, for each Computer, the results are a JSON array of unique Accounts. In the Query Window, enter the following statement and select **Run**: 
+1. The following statement demonstrates the **make_set()** function, which returns a set of *distinct* values within the group. This KQL query will first filter the EventID_s with the where operator. Next, for each Computer, the results are a JSON array of unique Accounts. In the Query Window, enter the following statement and select **Run query**: 
 
     ```KQL
     SecurityEvent_CL  
@@ -238,9 +238,9 @@ In this task, you'll build KQL statements to aggregate data. **Summarize** group
 
 ### Task 4: Create visualizations in KQL with the Render Operator
 
-In this task, you'll use generate visualizations with KQL statements.
+In this task, you'll generate visualizations with KQL statements.
 
-1. The following statement demonstrates the **render** operator (which renders results as a graphical output), using a **columnchart** visualization. In the Query Window, enter the following statement and select **Run**: 
+1. The following statement demonstrates the **render** operator (which renders results as a graphical output), using a **columnchart** visualization. In the Query Window, enter the following statement and select **Run query**: 
 
     ```KQL
     SecurityEvent_CL  
@@ -249,7 +249,7 @@ In this task, you'll use generate visualizations with KQL statements.
     | render columnchart
     ```
 
-1. The following statement demonstrates the **render** operator visualizing results with a time series. The **bin()** function rounds all values in a timeframe and groups them, used frequently in combination with **summarize**. If you have a scattered set of values, the values are grouped into a smaller set of specific values. Combining the generated results and pipe them to a **render** operator with a **timechart** provides a time series visualization. In the Query Window, enter the following statement and select **Run**: 
+1. The following statement demonstrates the **render** operator visualizing results with a time series. The **bin()** function rounds all values in a timeframe and groups them, used frequently in combination with **summarize**. If you have a scattered set of values, the values are grouped into a smaller set of specific values. Combining the generated results and pipe them to a **render** operator with a **timechart** provides a time series visualization. In the Query Window, enter the following statement and select **Run query**: 
 
     ```KQL
     SecurityEvent_CL  
@@ -264,7 +264,7 @@ In this task, you'll build multi-table KQL statements.
 
 1. Change the **Time range** to **Custom time range** in the *Query* window spanning at least 5 days for the following statements.
 
-1. The following statement demonstrates the **union** operator, which takes two or more tables and returns all their rows. Understanding how results are passed and impacted with the pipe character is essential. In the Query Window, enter the following statements and select **Run** for each query separately to see the results:
+1. The following statement demonstrates the **union** operator, which takes two or more tables and returns all their rows. Understanding how results are passed and impacted with the pipe character is essential. In the Query Window, enter the following statements and select **Run query** for each query separately to see the results:
 
     1. **Query 1** returns all rows of SecurityEvent_CL and all rows of SigninLogs_CL.
 
@@ -290,30 +290,30 @@ In this task, you'll build multi-table KQL statements.
 
     >**Note:** The 'empty row' in the results will show the summarized count of SigninLogs_CL.
 
-1. The following statement demonstrates the **union** operator support to union multiple tables with wildcards. In the Query Window, enter the following statement and select **Run**:
+1. The following statement demonstrates the **union** operator support to union multiple tables with wildcards. In the Query Window, enter the following statement and select **Run query**:
 
     ```KQL
     union Sec*  
     | summarize count() by Type
     ```
 
-1. The following statement demonstrates the **join** operator, which merges the rows of two tables to form a new table by matching values of the specified column(s) from each table. In the Query Window, enter the following statement and select **Run**:
+1. The following statement demonstrates the **join** operator, which merges the rows of two tables to form a new table by matching values of the specified column(s) from each table. In the Query Window, enter the following statement and select **Run query**:
 
     ```KQL
     SecurityEvent_CL  
     | where EventID_s == 4624 
-    | summarize LogOnCount=count() by  EventID_s, Account_s
+    | summarize LogOnCount = count() by Account_s
     | project LogOnCount, Account_s
     | join kind = inner( 
-     SecurityEvent_CL  
-    | where EventID_s == 4634 
-    | summarize LogOffCount=count() by  EventID_s, Account_s
-    | project LogOffCount, Account_s
+        SecurityEvent_CL  
+        | where EventID_s == 4634 
+        | summarize LogOffCount = count() by Account_s
+        | project LogOffCount, Account_s
     ) on Account_s
     ```
 
     >**Important:**
-     The first table specified in the join is considered the Left table. The table after the **join** operator is the right table. When working with columns from the tables, the $left.Column name and $right.Column name is to distinguish which tables column are referenced. The **join** operator supports a full range of types: flouter, inner, innerunique, leftanti, leftantisemi, leftouter, leftsemi, rightanti, rightantisemi, rightouter, rightsemi.
+     The first table specified in the join is considered the Left table. The table after the **join** operator is the right table. When working with columns from the tables, the $left.Column name and $right.Column name is to distinguish which tables column are referenced. The **join** operator supports a full range of types: fullouter, inner, innerunique, leftanti, leftantisemi, leftouter, leftsemi, rightanti, rightantisemi, rightouter, rightsemi.
 
 1. You can leave the **Custom time range** you set earlier in the *Query* window.
 
@@ -321,13 +321,13 @@ In this task, you'll build multi-table KQL statements.
 
 In this task, you'll work with structured and unstructured string fields with KQL statements.
 
-1. The following statement demonstrates the **extract** function, which gets a match for a regular expression from a source string. You have the option to convert the extracted substring to the indicated type. In the Query Window, enter the following statement and select **Run**: 
+1. The following statement demonstrates the **extract** function, which gets a match for a regular expression from a source string. You have the option to convert the extracted substring to the indicated type. In the Query Window, enter the following statement and select **Run query**: 
 
     ```KQL
     print extract("x=([0-9.]+)", 1, "hello x=45.6|wo") == "45.6"
     ```
 
-1. The following statements use the **extract** function to pull out the Account_s Name from the Account_s field of the SecurityEvent_CL table. In the Query Window, enter the following statement and select **Run**: 
+1. The following statements use the **extract** function to pull out the Account_s Name from the Account_s field of the SecurityEvent_CL table. In the Query Window, enter the following statement and select **Run query**: 
 
     ```KQL
     SecurityEvent_CL  
@@ -338,7 +338,7 @@ In this task, you'll work with structured and unstructured string fields with KQ
     | where LoginCount < 10
     ```
 
-1. The following statement demonstrates the **parse** operator, which evaluates a string expression and parses its value into one or more calculated columns. Use for structuring unstructured data. In the Query Window, enter the following statement and select **Run**:
+1. The following statement demonstrates the **parse** operator, which evaluates a string expression and parses its value into one or more calculated columns. Use for structuring unstructured data. In the Query Window, enter the following statement and select **Run query**:
 
     ```KQL
     let Traces = datatable(EventText:string)
@@ -354,13 +354,13 @@ In this task, you'll work with structured and unstructured string fields with KQ
     | project resourceName, totalSlices, sliceNumber, lockTime, releaseTime, previousLockTime
     ```
 
-1. The following statements demonstrate operators to manipulate JSON stored in string fields. Many logs submit data in JSON format, which requires you to know how to transform JSON data to fields that can be queried. In the Query Window, enter the following statement and select **Run**:
+1. The following statements demonstrate operators to manipulate JSON stored in string fields. Many logs submit data in JSON format, which requires you to know how to transform JSON data to fields that can be queried. In the Query Window, enter the following statement and select **Run query**:
 
     ```KQL
     SigninLogs_CL 
     | extend AuthDetails =  parse_json(AuthenticationDetails_s) 
     | extend AuthMethod =  AuthDetails[0].authenticationMethod 
-    | extend AuthResult = AuthDetails[0].["authenticationStepResultDetail"] 
+    | extend AuthResult = AuthDetails[0]["authenticationStepResultDetail"] 
     | project AuthMethod, AuthResult, AuthDetails 
     ```
 
