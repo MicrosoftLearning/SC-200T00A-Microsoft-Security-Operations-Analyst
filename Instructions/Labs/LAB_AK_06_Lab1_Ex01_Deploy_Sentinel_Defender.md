@@ -22,8 +22,11 @@ You're a Security Operations Analyst working at a company that implemented Micro
 
 ### Optional task - Connect Microsoft Sentinel to Microsoft Defender XDR
 
-To understand how Microsoft Sentinel is onboarded to Microsoft Defender XDR, you can perform the instructions for this simulated exercise - **[Connect Microsoft Sentinel to Defender XDR](https://learn.microsoft.com/training/modules/integrate-microsoft-defender-xdr-with-microsoft-sentinel/simulation-exercise-deploy-sentinel-to-defender)**.
+In this interactive guide, which takes approximately 10 minutes to complete, you onboard a new Microsoft Sentinel workspace to Defender XDR.
 
+Select the image below to get started.
+
+[![Thumbnail for Connecting Microsoft Sentinel to Defender XDR.](../Media/interactive-guide-sentinel-new.png)](https://microsoftlearning.github.io/click-throughs/docs/IG/interactive_guide_connect_microsoft_sentinel_with_microsoft_defender_xdr_web/story.html?azure-portal=true)
 
 ### Task 1: Create a Watchlist
 
@@ -71,6 +74,8 @@ In this task, you create a watchlist in Microsoft Sentinel.
     |Description|**High Value Hosts**|
     |Watchlist alias|**HighValueHosts**|
 
+    >**Note:** As this is a shared environment, you may want to add your initials to the watchlist name and alias to avoid conflicts.
+
 1. Select **Next: Source >**.
 
 1. Under **Upload file**, select **Browse for files**, browse to the **Documents** folder, select the **HighValue.csv** file you created, and then select **Open**.
@@ -110,6 +115,8 @@ In this task, you create an indicator in Microsoft Sentinel.
 1. Select the **+ New observable** dropdown and select **Domain name**.
 
 1. For Domain, enter a domain name, for example type *contoso.com*.
+
+    >**Important:** If there are existing indicators for the same domain, you should append your initials or a unique identifier such as your student ID to avoid conflicts.
 
 1. In the **Name** field, enter the same value used for the Domain.
 
