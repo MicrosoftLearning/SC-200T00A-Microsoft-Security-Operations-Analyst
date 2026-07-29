@@ -1,6 +1,6 @@
 ---
 lab:
-  title: Exercise 2 - Threat Hunting using Notebooks with Microsoft Sentinel
+  title: Exercise 2 - Threat Hunting using Notebooks with Microsoft Sentinel in Microsoft Defender XDR
   module: Learning Path 9 - Perform threat hunting in Microsoft Sentinel
   description: In this task, you'll explore using notebooks in Microsoft Sentinel.
   duration: 40 minutes
@@ -14,7 +14,7 @@ lab:
     - Data lake
 ---
 
-# Learning Path 09 - Lab 1 - Exercise 2 - Threat Hunting using Data lake Notebooks in Microsoft Sentinel
+# Learning Path 9 - Lab 1 - Exercise 2 - Threat Hunting using Data lake Notebooks in Microsoft Sentinel
 
 ## Lab scenario
 
@@ -34,9 +34,9 @@ This task explores Notebooks in Microsoft Sentinel Data lake. You will be using 
 
 >**Note:** Visual Studio Code is already installed on the lab VM. Prior experience with Visual Studio Code, Jupyter Notebooks and Python coding is recommended.
 
-1. Login to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.  
+1. Sign in to **WIN1** virtual machine using the provided credentials.
 
-1. In the Microsoft Edge browser, navigate to Defender XDR at `https://security.microsoft.com`.
+1. In the **Microsoft Edge** browser, navigate to **Microsoft Defender XDR** at `https://security.microsoft.com`.
 
 1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
@@ -46,11 +46,11 @@ This task explores Notebooks in Microsoft Sentinel Data lake. You will be using 
 
 1. In the Microsoft Defender navigation menu, scroll down and expand the **Microsoft Sentinel** section.
 
-1. Expand *Data lake exploration* in Microsoft Sentinel and select **Notebooks**.
+1. In Microsoft Sentinel, expand the **Data lake exploration**, and then select **Notebooks**.
 
 1. The *Notebooks* page displays the list of steps to perform to use Data lake Jupyter notebooks, and provides links to available resources.
 
-1. In the Windows search bar, type **Visual Studio Code**, and select the Visual Studio Code icon in the search results.
+1. In the Windows search bar, type **Visual Studio Code**, and select the **Visual Studio Code** icon in the search results.
 
     >**Note:** Unless specified, always install the *Microsoft* published extensions.
 
@@ -98,27 +98,27 @@ This task explores Notebooks in Microsoft Sentinel Data lake. You will be using 
 
 1. When prompted to authenticate the MCP server, select **Allow**, and select your lab credentials again.
 
-2. At some point if you have gotten results or suggested queries from the MCP server, try asking it to make you a Notebook with the findings and suggestions.
+1. At some point if you have gotten results or suggested queries from the MCP server, try asking it to make you a Notebook with the findings and suggestions.
 
-3. When prompted select **Allow** to create the Notebook.
+1. When prompted select **Allow** to create the Notebook.
 
-4. Select **Allow** when prompted to let the **Microsoft Sentinel** extension sign in, and select your lab credentials again
+1. Select **Allow** when prompted to let the **Microsoft Sentinel** extension sign in, and select your lab credentials again
 
-5. Once the Jupyter Notebook is created, review the code cells and markdown cells.
+1. Once the Jupyter Notebook is created, review the code cells and markdown cells.
 
-6. To save the Notebook, select **Keep** from the bottom right.
+1. To save the Notebook, select **Keep** from the bottom right.
 
-7. Select the **Microsoft Sentinel** (stylized "S") icon from the left menu bar.
+1. Select the **Microsoft Sentinel** (stylized "S") icon from the left menu bar.
 
-8. In the **LAKE TABLES** section, expand the **SentinelWorkspace-01** table, and then expand the **Security & Audits** table.
+1. In the **LAKE TABLES** section, expand the **SentinelWorkspace-01** table, and then expand the **Security & Audits** table.
 
     >**Note:** Sign-in with your lab credentials if needed.
 
-9. The *SecurityEvent* table schema is displayed.
+1. The *SecurityEvent* table schema is displayed.
 
-10. In the **NOTEBOOK SAMPLES** section, expand *Tutorials* and select the **01_GettingStartedwithSentineldatalake** tutorial notebook.
+1. In the **NOTEBOOK SAMPLES** section, expand **Tutorials** and select the **01_GettingStartedwithSentineldatalake** tutorial notebook.
 
-11. Once the Jupyter Notebook is open, review the different tabs, code cells and markdown cells.
+1. Once the Jupyter Notebook is open, review the different tabs, code cells and markdown cells.
 
 >**Note:** If you want to run the code cells, feel free to do so, but it is not required for this lab. You will need to select a *Kernel* before running any code cells. You should choose the *Microsoft Sentinel* Kernel with the recommended *small pool (12 vCores)* python3. The trainers can help time permitting.
 
