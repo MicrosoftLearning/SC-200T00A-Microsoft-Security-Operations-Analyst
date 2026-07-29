@@ -86,11 +86,11 @@ In this task, you update the new playbook you created with the proper connection
 
 1. Select the **Change connection** link.
 
-1. Select **Add new** and select **Sign in**. In the new window, select your Azure subscription admin credentials when prompted. The last line of the block should now read "Connected to your-Student-username".
+1. Scroll down the list of connections, select **Add new**, and then select **Sign in**. In the new window, select your Azure subscription admin credentials when prompted. The last line of the block should now read "Connected to your-Student-username".
 
     <!--- 1. Below within the logic split (+ sign), select Add an action to incident.--->
 
-1. Select **Save** on the command bar.
+1. Your changes should auto-save, but selecting **Publish** on the command bar ensures they are applied.
 
 1. Select the **X** on the window to close it. The Logic App will be used in a future lab.
 
