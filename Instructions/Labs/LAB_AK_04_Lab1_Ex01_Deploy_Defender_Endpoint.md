@@ -23,7 +23,7 @@ You start by initializing the Defender for Endpoint environment. Next, you onboa
 
 >**Important:** The lab Virtual Machines are used through different modules. SAVE your virtual machines. If you exit the lab without saving, you will be required to re-run some configurations again.
 
->**Note:** Make sure you have completed successfully Task 3 of the first module.
+>**Note:** Make sure you have successfully completed Task 3 of the first module.
 
 ### Estimated time to complete this lab: 30 minutes
 
@@ -31,11 +31,11 @@ You start by initializing the Defender for Endpoint environment. Next, you onboa
 
 In this task, you'll perform the initialization of the Microsoft Defender for Endpoint.
 
-1. Sign-in to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.  
+1. Sign in to **WIN1** virtual machine as Admin using the provided credentials.
 
-1. If you aren't already at the Microsoft Defender XDR portal, start the Microsoft Edge browser.
+1. If you aren't already at the **Microsoft Defender XDR portal**, start the **Microsoft Edge** browser.
 
-1. In the Microsoft Edge browser, go to the Defender XDR portal at (<https://security.microsoft.com>).
+1. In the Microsoft Edge browser, navigate to **Microsoft Defender XDR** at `https://security.microsoft.com`.
 
 1. In the **Sign in** dialog box, copy, and paste in the tenant Email account for the admin username provided by your lab hosting provider and then select **Next**.
 
@@ -65,22 +65,18 @@ In this task, you'll onboard a device to Microsoft Defender for Endpoint using a
 
     >**Note:** You can also perform device onboarding from the **Assets** section of the left menu bar. Expand Assets and select Devices. On the Device Inventory page, with Computers & Mobile selected, scroll down to **Onboard devices.** This takes you to the **Settings > Endpoints** page.
 
-1. Leave the default operating system selection for **Windows 10 and 11**.
+1. In the "1. Onboard a device" area make sure "Local Script (for up to 10 devices)" is displayed in the Deployment method drop-down and select the **Download onboarding package** button.
 
-1. In the *1. Onboard a device* area, leave the default *Connectivity* set to *Streamlined*, and the *Deployment method* set to *Local Script (for up to 10 devices)*.
-
-1. Select the **Download onboarding package** button.
-
-1. Under the *Downloads* pop-up, highlight the *GatewayWindowsDefenderATPOnboardingPackage.zip* file with your mouse and select the folder icon **Show in folder**. **Hint:** In case you don't see it, the file should be in the c:\users\admin\downloads directory.
+1. Under the *Downloads* pop-up, highlight the "WindowsDefenderATPOnboardingPackage.zip" file with your mouse and select the folder icon **Show in folder**. **Hint:** In case you don't see it, the file should be in the c:\users\admin\downloads directory.
 
     >**Tip:**
-    > If your browser blocks the download, take action in the browser to allow it. In the Microsoft Edge Browser, you may see the message, *GatewayWindowsDefenderATPOnboardingPackage.zip isn't commonly downloaded. Make sure you trust...*, select the ellipsis button (...) if needed and then select **Keep**. In Microsoft Edge a second pop-up appears with the message,"*Make sure you trust GatewayWindowsDefenderATPOnboardingPackage.zip before you open it*, select **Show more** to expand the selections and select **Keep anyway**.
+    > If your browser blocks the download, take action in the browser to allow it. In the Microsoft Edge Browser, you may see the message, "*WindowsDefenderATPOnboardingPackage.zip isn't commonly downloaded. Make sure you trust...*, select the ellipsis button (...) if needed and then select **Keep**. In Microsoft Edge a second pop-up appears with the message,"*Make sure you trust WindowsDefenderATPOnboardingPackage.zip before you open it*", select **Show more** to expand the selections and select **Keep anyway**.
 
 1. Right-click the downloaded zip file and select **Extract All...**, make sure that *Show extracted files when complete* is checked and select **Extract**.
 
-1. Right-click on the extracted file *WindowsDefenderATPLocalOnboardingScript.cmd* and select **Properties**. Select the **Unblock** checkbox in the bottom right of the Properties windows and select **OK**.
+1. Right-click on the extracted file "WindowsDefenderATPLocalOnboardingScript.cmd" and select **Properties**. Select the **Unblock** checkbox in the bottom right of the Properties windows and select **OK**.
 
-1. Right-click on the extracted file *WindowsDefenderATPLocalOnboardingScript.cmd* again and choose **Run as Administrator**.  **Hint:** If you encounter the Windows SmartScreen window, select on **More info**, and choose **Run anyway**.
+1. Right-click on the extracted file "WindowsDefenderATPLocalOnboardingScript.cmd" again and choose **Run as Administrator**.  **Hint:** If you encounter the Windows SmartScreen window, select on **More info**, and choose **Run anyway**.
 
 1. When the "User Account Control" window is shown, select **Yes** to allow the script to run and answer **Y** to the question presented by the script and press **Enter**. When complete you should see a message in the command screen that says *Successfully onboarded machine to Microsoft Defender for Endpoint*.
 
@@ -92,13 +88,13 @@ In this task, you'll configure roles for use with device groups.
 
 1. In the Microsoft Defender XDR portal navigation menu, expand the **System** section and select **Settings**, then select **Microsoft Defender XDR**.
 
-1. Select **Permissions and Roles** under the *General* section.
+1. Select **Permissions and Roles** under the *Account* section.
 
 1. Scroll down the page and select the **Go to Permissions and roles** link.
 
-1. On the *Permissions and roles* page, select **+ Create custom role**.
+1. On the **Permissions and roles** page, select **+ Create custom role**.
 
-1. On the *Basics* page In the Add role dialog, enter the following:
+1. On the **Basics** page In the Add role dialog, enter the following:
 
     |Basics setting|Value|
     |---|---|
@@ -118,7 +114,7 @@ In this task, you'll configure roles for use with device groups.
 
 1. On the **Assign users and data sources** page, select the **Create assignment** button.
 
-1. In the *Add assignment* dialog, enter the following:
+1. In the **Add assignment** dialog, enter the following:
 
     |Assignment setting|Value|
     |---|---|
