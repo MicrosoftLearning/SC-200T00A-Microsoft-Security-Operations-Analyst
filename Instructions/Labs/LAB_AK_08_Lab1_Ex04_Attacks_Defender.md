@@ -18,7 +18,7 @@ lab:
 
 ![Lab overview.](../Media/SC-200-Lab_Diagrams_Mod9_L1_Ex5.png)
 
->**Important**: The lab exercises for Learning Path #8 are in a *standalone, shared* environment. Other students are using the same environment. You will need to coordinate with the other students on who will perform these tasks. First, we will check to see if the environment is already configured before you proceed. Also, if you exit the lab before completing it, you will be required to re-run the configurations again.
+>**Important**: The lab exercises for Learning Path #9 are in a *standalone, shared* environment. Other students are using the same environment. You will need to coordinate with the other students on who will perform these tasks. First, we will check to see if the environment is already configured before you proceed. Also, if you exit the lab before completing it, you will be required to re-run the configurations again.
 
 ### Estimated time to complete this lab: 30 minutes
 
@@ -30,9 +30,9 @@ In this task, you'll connect an on-premises server to your Azure subscription. A
 
 As described above, the Azure Arc Connected Machine agent (azcmagent) has been pre-installed on the **WINServer** machine. Before you attempt to connect this machine to your Azure subscription we will check the connection status.
 
-1. Log in to **WINServer** virtual machine as Administrator with the password: **Passw0rd!** if necessary.  
+1. Sign in to **WINServer** virtual machine as Administrator using the provided credentials.
 
-1. On the *WINServer* machine, select the *search* icon and type **cmd**.
+1. On the **WINServer** virtual machine, select the **search** icon and type *cmd*.
 
 1. In search results right click *Command Prompt* and select **Run as administrator**.
 
@@ -43,11 +43,11 @@ As described above, the Azure Arc Connected Machine agent (azcmagent) has been p
     ```
 1. If the command output shows that *Agent status* is **Connected**. proceed to **Task 2**. 
 
-1. If it is not connected, perform the following steps before proceeding to reconnect *WINServer* to Azure Arc:
+1. If it is not connected, perform the following steps before proceeding to reconnect **WINServer** to Azure Arc:
 
-    1. Open the the Azure portal `https://portal.azure.com` in the *Edge* browser, and verify that it is *not* listed as a resource in the *SentinelStatic* resource group. If it is, select it and delete it from the resource group.
+    1. Open the the Azure portal `https://portal.azure.com` in the *Microsoft Edge* browser, and verify that it is *not* listed as a resource in the *SentinelStatic* resource group. If it is, select it and delete it from the resource group.
     
-    1. After *WINServer* is deleted from the resource group, run the following command from the *WINServer* command Prompt to make sure it is disconnected from Azure Arc:
+    1. After **WINServer** is deleted from the resource group, run the following command from the **WINServer** command Prompt to make sure it is disconnected from Azure Arc:
 
         ```cmd
         azcmagent disconnect --force-local-only
@@ -61,11 +61,11 @@ As described above, the Azure Arc Connected Machine agent (azcmagent) has been p
     ```
 1. Replace the **Subscription ID string** with the *Subscription ID* provided by your lab hoster (*Resources tab). Make sure to keep the quotes.
 
-1. Type **Enter** to run the command (this may take a couple minutes).
+1. Type *Enter* to run the command (this may take a couple minutes).
 
     >**Note**: If you see the *How do you want to open this?* browser selection window, select **Microsoft Edge**.
 
-1. In the *Sign in* dialog box, enter your **Tenant Email** and **Tenant Password** provided by your lab hosting provider and select **Sign in**. Wait for the *Authentication complete* message, close the browser tab and return to the *Command Prompt* window.
+1. In the **Sign in** dialog box, enter your **Tenant Email** and **Tenant Password** provided by your lab hosting provider and select **Sign in**. Wait for the *Authentication complete* message, close the browser tab and return to the *Command Prompt* window.
 
     >**Note:** You may be prompted to enter the *Temporary Access Pass* (TAP) instead of a password. This is also provided in the resources tab. If prompted, copy and paste the TAP value and select **Sign in**.
 
@@ -80,13 +80,11 @@ As described above, the Azure Arc Connected Machine agent (azcmagent) has been p
 
 In this task, you'll add an Azure Arc connected, on-premises machine to Microsoft Sentinel.  
 
->**Note:** Microsoft Sentinel has been predeployed in your Azure subscription with the name **sentinelworkspace-01**, and the required *Content Hub* solutions have been installed.
+>**Note:** Microsoft Sentinel has been predeployed in your Azure subscription with the name **sentinelworkspace-01**, and the required *Content hub* solutions have been installed.
 
-1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
+1. Sign in to **WIN1** virtual machine as Admin using the provided credentials.
 
-1. Open the Microsoft Edge browser.
-
-1. In the Edge browser, navigate to Defender XDR at `https://security.microsoft.com`.
+1. In the **Microsoft Edge** browser, navigate to **Microsoft Defender XDR** at `https://security.microsoft.com`.
 
 1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
@@ -98,15 +96,15 @@ In this task, you'll add an Azure Arc connected, on-premises machine to Microsof
 
 1. Expand the **Configuration** section and select **Data connectors**.
 
-1. In the *Data connectors*, search for the **Windows Security Events via AMA** solution and select it from the list.
+1. In the **Data connectors**, search for the **Windows Security Events via AMA** solution and select it from the list.
 
-1. On the *Windows Security Events via AMA* details pane, select **Open connector page**.
+1. On the **Windows Security Events via AMA** details pane, select **Open connector page**.
 
     >**Note:** The *Windows Security Events* solution installs both the *Windows Security Events via AMA* and the *Security Events via Legacy Agent* Data connectors. Plus 2 Workbooks, 20 Analytic Rules, and 43 Hunting Queries.
 
-1. In the *Configuration* section, under the *Instructions* tab, select the **Create data collection rule**.
+1. In the **Configuration** section, under the rules section, select the **Create data collection rule**.
 
-1. Enter a Rule Name like **WINSERVERDCR** for the DCR, then select **Next: Resources**.
+1. Enter a Rule Name like **WINSERVERDCR** for the DCR, then select **Next: Resources >**.
 
     >**Note:** Use a unique name for the Rule Name, consider using your *Student* username number to make it unique, for example, **WINXXXXXXXXDCR**.
 
@@ -116,9 +114,9 @@ In this task, you'll add an Azure Arc connected, on-premises machine to Microsof
 
 1. Expand **SentinelStatic** Resource Group, then select **WINServer**.
 
-1. Select **Next: Collect**, and leave the *All Security Events* selected.
+1. Select **Next: Collect >** button, and leave the *All Security Events* selected.
 
-1. Select **Next: Review + create**.
+1. Select **Next: Review + create >**.
 
 1. Select **Create** after *Validation passed* is displayed.
 

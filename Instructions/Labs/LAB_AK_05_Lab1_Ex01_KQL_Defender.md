@@ -3,8 +3,8 @@ lab:
   title: Exercise 1 - Create queries for Microsoft Sentinel using Kusto Query Language (KQL)
   module: Learning Path 5 - Create queries for Microsoft Sentinel using Kusto Query Language (KQL)
   description: You're a Security Operations Analyst working at a company that is implementing Microsoft Sentinel. You're responsible for performing log data analysis to search for malicious activity, display visualizations, and perform threat hunting. To query log data, you use the Kusto Query Language (KQL).
-  duration: 60 minutes
-  level: 400
+  duration: 45 minutes
+  level: 300
   islab: true
   primarytopics:
     - Microsoft Sentinel
@@ -21,37 +21,13 @@ You're a Security Operations Analyst working at a company that is implementing M
 
 >**Important:** The lab exercises for Learning Path #5 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run any configurations steps again.
 
->**Note:** This lab profile takes > 15 minutes to fully build as Microsoft Sentinel is being predeployed in your Azure subscription with the name **SentinelWorkspace-01**.
+<!--- >**Note:** This lab profile takes >15 minutes to fully build as Microsoft Sentinel is being predeployed in your Azure subscription with the name **SentinelWorkspace-01**. --->
 
 <!--- >**Tip:** This lab involves entering many KQL scripts into Microsoft Sentinel. The scripts were provided in a file at the beginning of this lab. An alternate location to download them is:  <https://github.com/MicrosoftLearning/SC-200T00A-Microsoft-Security-Operations-Analyst/tree/master/Allfiles> --->
 
-### Estimated time to complete this lab: 60 minutes
+### Estimated time to complete this lab: 45 minutes
 
-### Task 1: Prepare the KQL testing area
-
-In this task, you install the **Microsoft Sentinel Training Lab Solution** from the Marketplace which will populate a Log Analytics workspace with sample data that you can use to practice writing KQL statements.
-
-1. Sign in to **WIN1** virtual machine as Admin using the provided credentials. 
-
-1. In the Microsoft Edge browser, go to the Azure Portal at `https://portal.azure.com` and login with the assigned credentials.
-
-1. In the Azure search bar, type **Microsoft Sentinel Training Lab Solution** and select it from the results.
-
-    >**Hint:** It will be in the Marketplace section.
-
-1. In the **Microsoft Sentinel Training Lab Solution** page, select **Create** to install the solution.
-
-1. In the **Create Microsoft Sentinel Training Lab Solution** page, select the **SentinelStatic** Resource Group and the **SentinelWorkspace-01** workspace.
-
-1. Select **Review + Create** to deploy the solution.
-
-1. When validation is complete, select **Create** to deploy the solution.
-
-    >**Note:** It takes approximately ten minutes for the solution to be fully deployed and for all resources to be available.
-
-1. Wait for the deployment to complete, then select **Home** from the breadcrumb navigation.
-
-### Task 2: Query log data with KQL in Defender XDR
+### Task 1: Query log data with KQL in Defender XDR
 
 1. In the Microsoft Edge browser, navigate to Defender XDR at `https://security.microsoft.com`.
 
@@ -81,7 +57,7 @@ In this task, you install the **Microsoft Sentinel Training Lab Solution** from 
 
 1. Collapse the *Timeline visualization* chart for more screen space and scroll down to the **>** next to the first record to expand the information for the row.
 
-### Task 3: Run Basic KQL Statements
+### Task 2: Run Basic KQL Statements
 
 In this task, you'll build basic KQL statements.
 
@@ -97,7 +73,7 @@ In this task, you'll build basic KQL statements.
     search "Computer"
     ```
 
-    >**Note:** Using the *Search* operator without specific tables or qualifying clauses is less efficient than table-specific and column-specific text filtering.
+    >**Note:** Using the *Search* operator without specific tables or qualifying clauses is less efficient than table-specific and column-specific text filtering. If you receive an error message that states, "An unexpected error occurred during query execution.", select the **View full query details** link for more information.
 
 1. The following statement demonstrates **search** across tables listed within the **in** clause. In the Query Window, enter the following statement and select **Run query**:
 
@@ -166,7 +142,7 @@ In this task, you'll build basic KQL statements.
     LowActivityAccounts | where Account_s contains "sql"
     ```
 
-### Task 4: Analyze Results in KQL with the Summarize Operator
+### Task 3: Analyze Results in KQL with the Summarize Operator
 
 In this task, you'll build KQL statements to aggregate data. **Summarize** groups the rows according to the **by** group columns, and calculates aggregations over each group.
 
@@ -260,7 +236,7 @@ In this task, you'll build KQL statements to aggregate data. **Summarize** group
     | summarize make_set(Account_s) by Computer
     ```
 
-### Task 5: Create visualizations in KQL with the Render Operator
+### Task 4: Create visualizations in KQL with the Render Operator
 
 In this task, you'll generate visualizations with KQL statements.
 
@@ -282,7 +258,7 @@ In this task, you'll generate visualizations with KQL statements.
     | render timechart
     ```
 
-### Task 6: Build multi-table statements in KQL
+### Task 5: Build multi-table statements in KQL
 
 In this task, you'll build multi-table KQL statements.
 
@@ -341,7 +317,7 @@ In this task, you'll build multi-table KQL statements.
 
 1. You can leave the **Custom time range** you set earlier in the *Query* window.
 
-### Task 7: Work with string data in KQL
+### Task 6: Work with string data in KQL
 
 In this task, you'll work with structured and unstructured string fields with KQL statements.
 
@@ -406,7 +382,21 @@ In this task, you'll work with structured and unstructured string fields with KQ
     (where AuthDetails.authenticationMethod == "Password")
     ```
 
-1. A **function** is a log query that can be used in other log queries with the saved name as a command. To create a **function**, after running your query, select the **Save** button and then select **Save As function** from the drop-down. Enter the name you want (for example: *PrivLogins*) in the **Function name** box and enter a **Legacy category** (for example: *General*) and select **Save**. The function is available in KQL by using the function's alias:
+A **function** is a log query that can be used in other log queries with the saved name as a command. 
+
+1. To create a **function**, after running your query, select the **Save** button and then select **Save As function** from the drop-down. 
+
+1. Enter the name you want (for example: *PrivLogins*) in the **Function name** box.
+
+    >**Note:** We recommend using a name based on your *student username* for your function to make it easier to identify and use in other queries.
+
+1. In the **Location** field select *My functions* or *Shared functions* from the dropdown menu. You can also create a new folder by selecting the **New folder** link.
+
+1. Select **Save**. 
+
+1. Expand the *side panel* if collapsed, and use the drop down to select *Functions* and then select the folder under *My functions* or *Shared functions* where you saved your function. You should see the function you just created.
+
+1. The function is available in KQL by using the function's alias:
 
     ```KQL
     PrivLogins  
