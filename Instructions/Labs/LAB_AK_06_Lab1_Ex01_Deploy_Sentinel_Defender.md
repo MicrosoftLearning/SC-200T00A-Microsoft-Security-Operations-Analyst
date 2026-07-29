@@ -32,7 +32,7 @@ Select the image below to get started.
 
 In this task, you create a watchlist in Microsoft Sentinel.
 
-1. Log in to **WIN1** virtual machine as Admin with the password: **Pa55w.rd**.
+1. Sign in to **WIN1** virtual machine as Admin using the provided credentials.
 
 1. In the Microsoft Edge browser, navigate to Defender XDR at `https://security.microsoft.com`.
   
@@ -44,7 +44,7 @@ In this task, you create a watchlist in Microsoft Sentinel.
 
 1. In the search box at the bottom of the Windows 11 screen, enter *Notepad*. Select **Notepad** from the results.
 
-1. Type **Hostname** then enter for a new line.
+1. Type *Hostname* then enter for a new line.
 
 1. From row 2 of the notepad, copy the following hostnames, each one in a different line:
 
@@ -56,7 +56,7 @@ In this task, you create a watchlist in Microsoft Sentinel.
     Host5
     ```
 
-1. From the menu select, **File - Save As**, Name the file *HighValue.csv*, change the file type to **All files(*.*)** and select **Save**. **Hint:** The file can be saved in the *Documents* folder.
+1. From the **File** menu, select **Save As**, in the left pane, select **Documents**, name the file **HighValue.csv**, change the **Save as type** to **All files (*.*)**, and then select **Save**.
 
 1. Close Notepad.
 
@@ -76,23 +76,23 @@ In this task, you create a watchlist in Microsoft Sentinel.
 
     >**Note:** As this is a shared environment, you may want to add your initials to the watchlist name and alias to avoid conflicts.
 
-2. Select, **Next: Source >**.
+1. Select **Next: Source >**.
 
-3. Select **Browse for files** under *Upload file* and browse for the *HighValue.csv* file you created.
+1. Under **Upload file**, select **Browse for files**, browse to the **Documents** folder, select the **HighValue.csv** file you created, and then select **Open**.
 
-4. In the *SearchKey field,* select **Hostname**.
+1. In the *SearchKey field,* select **Hostname**.
 
-5. Select **Next: Review and Create >**.
+1. Select **Next: Review and Create >**.
 
-6. Review the settings you entered and select **Create**.
+1. Review the settings you entered and select **Create**.
 
-7. The screen returns to the Watchlist page.
+1. The screen returns to the Watchlist page.
 
-8. Select **Refresh** from the menu to see the new watchlist.
+1. Select **Refresh** from the menu to see the new watchlist.
 
-9. Select the *HighValueHosts* watchlist and on the right pane, select **View in logs**.
+1. Select the *HighValueHosts* watchlist and on the right pane, select **View in logs**.
 
-    >**Important:** It could take up to ten minutes for the watchlist to appear. **Please continue to with the following task and run this command on the next lab**.
+    >**Important:** It could take up to ten minutes for the watchlist to appear. **Please continue with the following task and run this command on the next lab**.
 
     >**Note:** You can now use the _GetWatchlist('HighValueHosts') in your own KQL statements to access the list. The column to reference would be *Hostname*.
 
@@ -100,7 +100,7 @@ In this task, you create a watchlist in Microsoft Sentinel.
 
 In this task, you create an indicator in Microsoft Sentinel.
 
-1. In Microsoft Sentinel, expand the *Threat management* menu, and select the **Threat intelligence** option.
+1. In Microsoft Sentinel, expand the **Threat management** menu, and select the **Threat intelligence** option.
 
 1. Select the **Open Intel management** button.
 
@@ -134,7 +134,7 @@ In this task, you create an indicator in Microsoft Sentinel.
 
     >**Note:** In the default *New Query 1* tab, the **_GetWatchList('HighValueHosts')** query should still be there, and will now produce results if run.
 
-1. Select the *+* sign to create a new query tab.
+1. Select the **+** sign to create a new query tab.
 
 1. Run the following KQL statement.
 
