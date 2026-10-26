@@ -51,7 +51,7 @@ In this task, you will enable Entity behavior analytics in Microsoft Sentinel.
 
 1. Select **Notepad** and then select **OK**.
 
-1. Review the Azure Resource Manager template and the close it when done.
+1. Review the Azure Resource Manager template and then close it when done.
 
 ### Task 2: Create our Azure DevOps environment
 

@@ -48,7 +48,7 @@ As described above, Azure Arc has been pre-installed on the **WINServer** machin
     azcmagent connect -g "defender-RG" -l "EastUS" -s "Subscription ID string"
     ```
 
-1. Replace the **Subscription ID string** with the *Subscription ID* provided by your lab hoster (*Resources tab). Make sure to keep the quotes.
+1. Replace the **Subscription ID string** with the *Subscription ID* provided by your lab hoster (*Resources tab*). Make sure to keep the quotes.
 
 1. Type **Enter** to run the command (this may take a couple minutes).
 
@@ -64,7 +64,7 @@ As described above, Azure Arc has been pre-installed on the **WINServer** machin
 
 1. In the command output, verify that *Agent status* is **Connected**.
 
-## Prerequisite task 2: Connect a non-Azure Windows Machine
+### Prerequisite task 2: Connect a non-Azure Windows Machine
 
 In this task, you'll add an Azure Arc connected, on-premises machine to Microsoft Sentinel.  
 

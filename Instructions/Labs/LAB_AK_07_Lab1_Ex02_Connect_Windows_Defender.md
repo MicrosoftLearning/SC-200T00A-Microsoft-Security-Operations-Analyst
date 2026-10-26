@@ -102,7 +102,7 @@ In this task, you connect an on-premises server to your Azure subscription. Azur
     azcmagent connect -g "SentinelStatic" -l "CentralUS" -s "Subscription ID string"
     ```
 
-1. Replace the **Subscription ID string** with the *Subscription ID* provided by your lab hoster (*Resources tab). Make sure to keep the quotes.
+1. Replace the **Subscription ID string** with the *Subscription ID* provided by your lab hoster (*Resources tab*). Make sure to keep the quotes.
 
 1. Type **Enter** to run the command (this may take a couple minutes).
 
@@ -172,7 +172,7 @@ In this task, you'll add an Azure Arc connected, non-Azure Windows virtual machi
 
     >**Hint:** You can expand the whole *Scope* hierarchy by selecting the ">" before the *Scope* column.
 
-1. Expand **SentinelStatic** (or the Resource Group your created), then select **WINServer**.
+1. Expand **SentinelStatic** (or the Resource Group you created), then select **WINServer**.
 
     >**Important:** If you do not see WINServer, please refer to the Learning Path 3, Exercise 1, Task 4 where you installed Azure Arc in this server.
 

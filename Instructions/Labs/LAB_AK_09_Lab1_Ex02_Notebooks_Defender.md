@@ -90,9 +90,9 @@ This task explores Notebooks in Microsoft Sentinel Data lake. You will be using 
 
 1. Enter Copilot prompts such as the following examples:
 
-- Which tables are good to use for hunting malicious activities on devices
-- What columns within the SecurityEvent table are good to use in hunting queries
-- Query the last 90 days of SecurityEvent data in my workspace, summarize your findings by the top 5 most malicious activities and format the results as a table
+    - Which tables are good to use for hunting malicious activities on devices
+    - What columns within the SecurityEvent table are good to use in hunting queries
+    - Query the last 90 days of SecurityEvent data in my workspace, summarize your findings by the top 5 most malicious activities and format the results as a table
 
     >**Note:** If you are prompted to sign in to use *AI Features*, select *Continue with GitHub*. You will be redirected to the GitHub sign-in page. If you have an existing account, enter your GitHub credentials and complete any multi-factor authentication steps if required. If not, you can create a new GitHub account using your student credentials. Once signed in, return to Visual Studio Code. You may also skip this section and continue with the lab, but you will not be able to use GitHub Copilot.
 

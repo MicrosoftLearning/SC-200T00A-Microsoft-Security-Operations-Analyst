@@ -38,7 +38,7 @@ In this task, you will explore Entity behavior analytics in Microsoft Sentinel.
 
     >**Note:** You may be prompted to enter the *Temporary Access Pass* (TAP) provided for this lab instead of a password. If prompted, enter the TAP and select **Sign in**.
 
-1. In the Microsoft Defender navigation menu, scroll down and expand the **System** section.
+1. In the Microsoft Defender navigation menu, scroll down and expand the **Setup & configuration** section.
 
 1. Select **Settings**, and then select **Microsoft Sentinel**.
 
@@ -50,7 +50,7 @@ In this task, you will explore Entity behavior analytics in Microsoft Sentinel.
 
 1. On the **UEBA (User and Entity Behavior Analytics)** page, on the *UEBA* tab,verify that the *UEBA feature* is enabled, and review the *connected data sources*.
 
-1. At the top of the *Microsoft Sentinel* settings menu, SIEM workspaces and select the **sentinelworkspace-01** workspace.
+1. At the top of the *Microsoft Sentinel* settings menu, select **SIEM workspaces** and select the **sentinelworkspace-01** workspace.
 
 1. On the **Settings** page, scroll down and expand the **Anomalies** section. 
 

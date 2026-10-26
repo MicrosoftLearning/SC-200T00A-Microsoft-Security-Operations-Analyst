@@ -75,7 +75,7 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
     azcmagent connect -g "SentinelStatic" -l "CentralUS" -s "Subscription ID string"
     ```
 
-1. Replace the **Subscription ID string** with the *Subscription ID* provided by your lab hoster (*Resources tab). Make sure to keep the quotes.
+1. Replace the **Subscription ID string** with the *Subscription ID* provided by your lab hoster (*Resources tab*). Make sure to keep the quotes.
 
 1. Type **Enter** to run the command (this may take a couple minutes).
 
@@ -183,7 +183,7 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
     azcmagent connect -g "SentinelStatic" -l "CentralUS" -s "Subscription ID string"
     ```
 
-1. Replace the **Subscription ID string** with the *Subscription ID* provided by your lab hoster (*Resources tab). Make sure to keep the quotes.
+1. Replace the **Subscription ID string** with the *Subscription ID* provided by your lab hoster (*Resources tab*). Make sure to keep the quotes.
 
 1. Type **Enter** to run the command (this may take a couple minutes).
 

@@ -29,7 +29,7 @@ Tenants must not be converted to a paid subscription. Tenants obtained as a part
 
 ### Task 1: Obtain Your Microsoft 365 Credentials
 
-Once you launch the lab, a Microsoft 365 E5 tenant is made available to you to access in the Microsoft virtual Lab environment. This tenant is automatically assigned a unique username and password. You must retrieve this username and password so that you can sign into and Microsoft 365 within the Microsoft Virtual Lab environment.
+Once you launch the lab, a Microsoft 365 E5 tenant is made available to you to access in the Microsoft virtual Lab environment. This tenant is automatically assigned a unique username and password. You must retrieve this username and password so that you can sign into Microsoft 365 within the Microsoft Virtual Lab environment.
 
 Because this course can be offered by learning partners using any one of several Authorized Lab Hosting (ALH) providers, the actual steps involved to retrieve the tenant ID associated with your tenant may vary by lab hosting provider. Therefore, your instructor will provide you with the necessary instructions for how to retrieve this information for your course. The information that you should note for later use includes:
 

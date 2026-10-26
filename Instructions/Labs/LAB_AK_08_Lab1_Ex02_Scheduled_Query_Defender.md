@@ -57,7 +57,7 @@ In this task, you create a *Microsoft Sentinel analytics scheduled query rule*.
 
 1. For the rule query, select **View query results**. You shouldn't receive any results nor any errors.
 
-1. Close the **Logs** window by selecting the upper right **X** and select **OK** to discard to save changes to go back to the wizard.
+1. Close the **Logs** window by selecting the upper right **X** and select **OK** to discard the changes to go back to the wizard.
 
 1. Scroll down and under *Query scheduling* set the following:
 

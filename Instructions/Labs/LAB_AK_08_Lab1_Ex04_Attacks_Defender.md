@@ -45,7 +45,7 @@ As described above, the Azure Arc Connected Machine agent (azcmagent) has been p
 
 1. If it is not connected, perform the following steps before proceeding to reconnect **WINServer** to Azure Arc:
 
-    1. Open the the Azure portal `https://portal.azure.com` in the *Microsoft Edge* browser, and verify that it is *not* listed as a resource in the *SentinelStatic* resource group. If it is, select it and delete it from the resource group.
+    1. Open the Azure portal `https://portal.azure.com` in the *Microsoft Edge* browser, and verify that it is *not* listed as a resource in the *SentinelStatic* resource group. If it is, select it and delete it from the resource group.
     
     1. After **WINServer** is deleted from the resource group, run the following command from the **WINServer** command Prompt to make sure it is disconnected from Azure Arc:
 
@@ -59,7 +59,7 @@ As described above, the Azure Arc Connected Machine agent (azcmagent) has been p
     ```cmd
     azcmagent connect -g "SentinelStatic" -l "CentralUS" -s "Subscription ID string"
     ```
-1. Replace the **Subscription ID string** with the *Subscription ID* provided by your lab hoster (*Resources tab). Make sure to keep the quotes.
+1. Replace the **Subscription ID string** with the *Subscription ID* provided by your lab hoster (*Resources tab*). Make sure to keep the quotes.
 
 1. Type *Enter* to run the command (this may take a couple minutes).
 
@@ -76,7 +76,7 @@ As described above, the Azure Arc Connected Machine agent (azcmagent) has been p
     ```
 1. In the command output, verify that *Agent status* is **Connected**.
 
-## Task 2: Connect a non-Azure Windows Machine
+### Task 2: Connect a non-Azure Windows Machine
 
 In this task, you'll add an Azure Arc connected, on-premises machine to Microsoft Sentinel.  
 

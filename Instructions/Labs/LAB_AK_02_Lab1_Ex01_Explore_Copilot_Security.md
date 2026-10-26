@@ -37,7 +37,7 @@ Select the image below to get started.
 
 After you understand the overall incident context, the next step is to analyze individual alerts and investigate specific artifacts. Security Copilot helps you examine alert details, review device and user context, and identify risks with recommended actions.
 
-In this interactive guide, which guide takes approximately 10 minutes to complete, you continue your investigation by analyzing alerts in Microsoft Defender XDR. You review alert details, examine device and user context, and use Security Copilot to support advanced investigation.
+In this interactive guide, which takes approximately 10 minutes to complete, you continue your investigation by analyzing alerts in Microsoft Defender XDR. You review alert details, examine device and user context, and use Security Copilot to support advanced investigation.
 
 Select the image below to get started.
 
@@ -47,4 +47,4 @@ Select the image below to get started.
 
 In this exercise, you explored the first run experience of Microsoft Security Copilot, provisioned capacity, and explored the standalone and embedded experiences of Copilot. You investigated an incident in Microsoft Defender XDR, explored the incident summary, device summary, script analysis, and more. You also pivoted your investigation to the standalone experience and used the pin board as a way to share details of your investigation with your colleagues.
 
-To run additional Microsoft Security Copilot use case simulations, browse to [Explore Microsoft Security Copilot use case simulations](/training/modules/security-copilot-exercises/)
+To run additional Microsoft Security Copilot use case simulations, browse to [Explore Microsoft Security Copilot use case simulations](https://learn.microsoft.com/training/modules/security-copilot-exercises/)

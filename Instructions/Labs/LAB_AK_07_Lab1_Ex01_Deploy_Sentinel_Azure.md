@@ -32,7 +32,7 @@ Create a Log Analytics workspace, including region option. Learn more about [onb
 
 1. In the **Enter password** dialog box, copy, and paste in the admin's tenant password provided by your lab hosting provider and then select **Sign in**.
 
-1. In the Search bar of the Azure portal, type "Microsoft Sentinel," then select
+1. In the Search bar of the Azure portal, type "Microsoft Sentinel," then select **Microsoft Sentinel**.
 
 1. Select **+ Create**.
 
@@ -136,7 +136,7 @@ In this task, you create a watchlist in Microsoft Sentinel.
 
 1. Select the *HighValueHosts* watchlist and on the right pane, select **View in logs**.
 
-    >**Important:** It could take up to ten minutes for the watchlist to appear. **Please continue to with the following task and run this command on the next lab**.
+    >**Important:** It could take up to ten minutes for the watchlist to appear. **Please continue with the following task and run this command on the next lab**.
 
     >**Note:** You can now use the _GetWatchlist('HighValueHosts') in your own KQL statements to access the list. The column to reference would be *Hostname*.
 
